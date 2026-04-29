@@ -1,0 +1,16 @@
+# app-ads.txt for Vaslix Games — TEMPLATE
+#
+# IMPORTANT: replace the contents of this file with the content from the
+# Appodeal dashboard once onboarding is complete:
+#   https://app.appodeal.com -> Gridlix -> "App-ads.txt" tab -> Copy
+#
+# 1) The Appodeal dashboard generates the full, current list of demand
+#    partners with the correct seller IDs for YOUR app. The partial list
+#    below is just a placeholder so the file isn't empty.
+#
+# 2) Once an AdMob account exists, uncomment the line below and put in
+#    the real AdMob Publisher ID (format: pub-XXXXXXXXXXXXXXXX).
+
+# TODO: google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+
+appodeal.com, 1, DIRECT
