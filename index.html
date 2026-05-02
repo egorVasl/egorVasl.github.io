@@ -479,6 +479,77 @@
       }
       .reveal { opacity: 1; transform: none; }
     }
+
+    /* ── Touch & mobile interactivity ──────────────────────── */
+    a, button, .brand, .nav-link, .game, .privacy-cta,
+    .privacy-cta-btn, .trust-item, footer a {
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+      cursor: pointer;
+    }
+
+    @media (hover: none) {
+      /* Neutralize sticky :hover state after tap */
+      a:hover { text-decoration: none; }
+      .brand:hover { background: transparent; }
+      .nav-link:hover { color: var(--muted); background: transparent; }
+      .nav-link.privacy:hover {
+        background: color-mix(in srgb, var(--accent) 12%, transparent);
+        color: var(--accent);
+      }
+      .game:hover { transform: none; box-shadow: var(--shadow-md); }
+      .privacy-cta:hover {
+        transform: none;
+        box-shadow: 0 28px 64px rgba(74, 131, 245, 0.35);
+      }
+      .privacy-cta:hover .privacy-cta-btn svg { transform: none; }
+      .privacy-cta:hover .privacy-cta-text strong { letter-spacing: -0.005em; }
+      .trust-item:hover { transform: none; box-shadow: var(--shadow-sm); }
+      footer a:hover { color: var(--text-soft); background: transparent; }
+
+      /* Strong tap feedback */
+      .brand:active {
+        background: var(--surface-2);
+        transform: scale(0.96);
+      }
+      .nav-link:active {
+        color: var(--text);
+        background: var(--surface-2);
+        transform: scale(0.95);
+      }
+      .nav-link.privacy:active {
+        background: color-mix(in srgb, var(--accent) 24%, transparent);
+        color: var(--accent);
+        transform: scale(0.95);
+      }
+      .game:active {
+        transform: scale(0.985);
+        box-shadow: var(--shadow-sm);
+        transition-timing-function: var(--ease-spring);
+      }
+      .privacy-cta:active {
+        transform: scale(0.97);
+        box-shadow: 0 18px 40px rgba(74, 131, 245, 0.32);
+      }
+      .privacy-cta:active .privacy-cta-btn svg { transform: translateX(2px); }
+      .trust-item:active {
+        transform: scale(0.985);
+        background: var(--surface-2);
+        box-shadow: var(--shadow-sm);
+      }
+      footer a:active {
+        color: var(--accent);
+        background: var(--surface-2);
+        transform: scale(0.94);
+      }
+    }
+
+    @media (max-width: 720px) {
+      /* Bigger touch targets on phones */
+      .nav-link { padding: 10px 14px; }
+      footer a { padding: 8px 10px; margin: -8px -10px; }
+      .privacy-cta-btn { padding: 16px 22px; }
+    }
   </style>
 </head>
 <body>

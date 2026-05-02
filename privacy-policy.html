@@ -488,6 +488,62 @@
       }
       section.card { opacity: 1; transform: none; }
     }
+
+    /* ── Touch & mobile interactivity ──────────────────────── */
+    * { -webkit-tap-highlight-color: transparent; }
+    a, button, .brand, .nav-link, .toc-list a, footer a {
+      touch-action: manipulation;
+      cursor: pointer;
+      -webkit-touch-callout: none;
+    }
+
+    @media (hover: none), (pointer: coarse) {
+      /* Kill focus ring on touch — keyboard users keep it via (hover: hover) */
+      :focus, :focus-visible {
+        outline: none !important;
+        box-shadow: none !important;
+      }
+      a, button, .brand, .nav-link, .toc-list a, footer a {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+      }
+      /* Neutralize sticky :hover state after tap */
+      a:hover { text-decoration: none; }
+      .brand:hover { background: transparent; }
+      .nav-link:hover { color: var(--muted); background: transparent; }
+      .toc-list a:hover { background: transparent; }
+      footer a:hover { color: var(--text-soft); background: transparent; }
+
+      /* Strong tap feedback */
+      .brand:active {
+        background: var(--surface-2);
+        transform: scale(0.96);
+      }
+      .nav-link:active {
+        color: var(--text);
+        background: var(--surface-2);
+        transform: scale(0.95);
+      }
+      .toc-list a:active {
+        background: var(--surface-2);
+        transform: translateX(3px);
+      }
+      footer a:active {
+        color: var(--accent);
+        background: var(--surface-2);
+        transform: scale(0.94);
+      }
+
+      /* In-body links: subtle press tint instead of underline */
+      p a:active, li a:active {
+        opacity: 0.7;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-link { padding: 10px 14px; }
+      footer a { padding: 8px 10px; margin: -8px -10px; }
+      .toc-list a { padding: 10px 14px; }
+    }
   </style>
 </head>
 <body>
