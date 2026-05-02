@@ -490,13 +490,22 @@
     }
 
     /* ── Touch & mobile interactivity ──────────────────────── */
+    * { -webkit-tap-highlight-color: transparent; }
     a, button, .brand, .nav-link, .toc-list a, footer a {
-      -webkit-tap-highlight-color: transparent;
       touch-action: manipulation;
       cursor: pointer;
+      -webkit-touch-callout: none;
     }
 
-    @media (hover: none) {
+    @media (hover: none), (pointer: coarse) {
+      /* Kill focus ring on touch — keyboard users keep it via (hover: hover) */
+      :focus, :focus-visible {
+        outline: none !important;
+        box-shadow: none !important;
+      }
+      a, button, .brand, .nav-link, .toc-list a, footer a {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+      }
       /* Neutralize sticky :hover state after tap */
       a:hover { text-decoration: none; }
       .brand:hover { background: transparent; }
