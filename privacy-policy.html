@@ -10,7 +10,8 @@
   <meta property="og:title" content="Privacy Policy — Vaslix Games" />
   <meta property="og:description" content="What Vaslix Games stores, what we don't, and how Gridlix uses Google Play Billing and ad mediation." />
   <meta property="og:type" content="website" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%234AC8EA'/%3E%3Cstop offset='1' stop-color='%236C5DD3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='10' y='10' width='80' height='80' rx='22' fill='url(%23g)'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%234AC8EA'/%3E%3Cstop offset='100%25' stop-color='%236C5DD3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Cpath d='M18 30 L34 72 L50 30' stroke='%23ffffff' stroke-width='13' fill='none' stroke-linejoin='round' stroke-linecap='round'/%3E%3Cpath d='M56 30 L84 72 M84 30 L56 72' stroke='%23ffffff' stroke-width='13' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%234AC8EA'/%3E%3Cstop offset='100%25' stop-color='%236C5DD3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Cpath d='M18 30 L34 72 L50 30' stroke='%23ffffff' stroke-width='13' fill='none' stroke-linejoin='round' stroke-linecap='round'/%3E%3Cpath d='M56 30 L84 72 M84 30 L56 72' stroke='%23ffffff' stroke-width='13' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
   <style>
     /* ── Tokens ────────────────────────────────────────────── */
     :root {
@@ -37,6 +38,12 @@
       --radius-lg: 22px;
       --content:   1180px;
       --header-h:  64px;
+
+      /* Motion */
+      --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --press:  140ms;
+      --reveal: 480ms;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -95,6 +102,22 @@
       font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
     }
 
+    /* ── Universal interactivity ───────────────────────────── */
+    a, button, .nav-link, .brand, .toc-list a, .chip {
+      transition:
+        transform var(--press) var(--ease-out),
+        box-shadow var(--press) var(--ease-out),
+        background var(--press) var(--ease-out),
+        color var(--press) var(--ease-out),
+        border-color var(--press) var(--ease-out);
+    }
+    :focus { outline: none; }
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: inherit;
+    }
+
     /* ── Top nav ───────────────────────────────────────────── */
     .nav {
       position: sticky; top: 0;
@@ -117,21 +140,43 @@
       font-weight: 700; font-size: 0.95rem;
       color: var(--text);
       letter-spacing: 0.2px;
+      padding: 6px 8px 6px 4px;
+      border-radius: 12px;
     }
+    .brand:hover { text-decoration: none; background: var(--surface-2); }
+    .brand:active { transform: scale(0.97); }
     .brand-mark {
       width: 28px; height: 28px;
       border-radius: 8px;
-      background: var(--grad);
+      background: linear-gradient(135deg, #4AC8EA 0%, #6C5DD3 100%);
       box-shadow: 0 6px 14px rgba(108, 93, 211, 0.35);
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 900;
+      font-size: 0.66rem;
+      letter-spacing: 0.4px;
+      line-height: 1;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto,
+                   "Helvetica Neue", Arial, sans-serif;
+      user-select: none;
+    }
+    .brand-mark.sm {
+      width: 22px; height: 22px;
+      border-radius: 7px;
+      box-shadow: 0 4px 10px rgba(108, 93, 211, 0.30);
+      font-size: 0.54rem;
+      letter-spacing: 0.3px;
     }
     .nav-spacer { flex: 1; }
     .nav-link {
       color: var(--muted);
       font-size: 0.88rem; font-weight: 500;
       padding: 8px 12px; border-radius: 999px;
-      transition: color .2s ease, background .2s ease;
     }
     .nav-link:hover { color: var(--text); background: var(--surface-2); text-decoration: none; }
+    .nav-link:active { transform: scale(0.96); }
     .nav-pill {
       font-size: 0.72rem; font-weight: 700; letter-spacing: 1.4px;
       text-transform: uppercase;
@@ -157,6 +202,11 @@
       width: 6px; height: 6px; border-radius: 50%;
       background: var(--good);
       box-shadow: 0 0 0 4px color-mix(in srgb, var(--good) 22%, transparent);
+      animation: live-pulse 1.8s ease-in-out infinite;
+    }
+    @keyframes live-pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%      { opacity: 0.65; transform: scale(1.25); }
     }
     h1.title {
       font-size: clamp(2.4rem, 5.4vw, 3.8rem);
@@ -165,9 +215,15 @@
       font-weight: 800;
       margin: 16px 0 18px;
       background: var(--grad);
+      background-size: 200% 200%;
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
+      animation: title-shift 12s ease-in-out infinite;
+    }
+    @keyframes title-shift {
+      0%, 100% { background-position: 0% 50%; }
+      50%      { background-position: 100% 50%; }
     }
     .lede {
       max-width: 760px;
@@ -263,9 +319,9 @@
       font-size: 0.92rem;
       border-radius: 10px;
       border-left: 2px solid transparent;
-      transition: background .15s ease, color .15s ease, border-color .15s ease;
     }
     .toc-list a:hover { background: var(--surface-2); text-decoration: none; }
+    .toc-list a:active { transform: translateX(2px); }
     .toc-list a.active {
       color: var(--accent);
       background: color-mix(in srgb, var(--accent) 8%, transparent);
@@ -294,8 +350,11 @@
       box-shadow: var(--shadow-md);
       scroll-margin-top: calc(var(--header-h) + 16px);
       opacity: 0;
-      transform: translateY(8px);
-      transition: opacity .55s ease, transform .55s ease;
+      transform: translateY(14px);
+      transition:
+        opacity var(--reveal) var(--ease-out),
+        transform var(--reveal) var(--ease-out);
+      transition-delay: var(--stagger, 0ms);
     }
     section.card.in-view { opacity: 1; transform: none; }
 
@@ -349,25 +408,18 @@
       background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236C5DD3' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='5,12 10,17 19,7'/></svg>");
       background-repeat: no-repeat; background-position: center; background-size: 12px;
     }
-    ul.feat.cross li::before {
-      background: color-mix(in srgb, var(--bad) 14%, transparent);
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23EF4444' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><line x1='6' y1='6' x2='18' y2='18'/><line x1='18' y1='6' x2='6' y2='18'/></svg>");
-    }
 
-    ul.partners {
-      list-style: none; padding: 0; margin: 12px 0;
-      display: grid; gap: 8px;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    }
-    ul.partners li {
-      padding: 12px 14px;
+    .partner-line {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 12px 16px;
       background: var(--surface-2);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 8px 0 0;
     }
-    ul.partners li a { color: var(--text); font-weight: 600; }
-    ul.partners li a:hover { color: var(--accent); }
+    .partner-line a { color: var(--accent); }
 
     .callout {
       margin: 16px 0 4px;
@@ -407,8 +459,14 @@
     }
     footer .left { display: flex; align-items: center; gap: 12px; }
     footer .right { display: flex; gap: 18px; flex-wrap: wrap; }
-    footer a { color: var(--text-soft); }
-    footer a:hover { color: var(--accent); }
+    footer a {
+      color: var(--text-soft);
+      padding: 4px 8px;
+      border-radius: 8px;
+      margin: -4px -8px;
+    }
+    footer a:hover { color: var(--accent); background: var(--surface-2); text-decoration: none; }
+    footer a:active { transform: scale(0.96); }
 
     /* ── Print ─────────────────────────────────────────────── */
     @media print {
@@ -423,7 +481,12 @@
     /* ── Reduced motion ────────────────────────────────────── */
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      section.card { opacity: 1; transform: none; transition: none; }
+      *, *::before, *::after {
+        animation-duration: 0ms !important;
+        animation-delay: 0ms !important;
+        transition-duration: 0ms !important;
+      }
+      section.card { opacity: 1; transform: none; }
     }
   </style>
 </head>
@@ -432,7 +495,7 @@
 <header class="nav">
   <div class="nav-inner">
     <a class="brand" href="./index.html">
-      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-mark" aria-hidden="true">VX</span>
       <span>Vaslix Games</span>
     </a>
     <span class="nav-pill">Privacy</span>
@@ -554,17 +617,13 @@
         <div class="section-num">2</div>
         <h2 class="section-title">Advertising partners (free / non-premium users)</h2>
       </div>
-      <p>For users who have <strong>not</strong> purchased the Premium subscription, the app displays banner ads, rewarded video ads (used to unlock boosters and to continue after game-over), and occasional interstitial ads. We use <a href="https://www.appodeal.com/" target="_blank" rel="noopener">Appodeal</a> as our advertising mediation partner. Appodeal's privacy policy is at <a href="https://www.appodeal.com/privacy-policy" target="_blank" rel="noopener">appodeal.com/privacy-policy</a>.</p>
-      <p>Appodeal works with multiple ad networks, each with its own privacy policy:</p>
-      <ul class="partners">
-        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AdMob ↗</a></li>
-        <li><a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">AppLovin ↗</a></li>
-        <li><a href="https://www.facebook.com/about/privacy/" target="_blank" rel="noopener">Meta Audience Network ↗</a></li>
-        <li><a href="https://www.mintegral.com/en/privacy/" target="_blank" rel="noopener">Mintegral ↗</a></li>
-        <li><a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity Ads ↗</a></li>
-        <li><a href="https://liftoff.io/privacy-policy/" target="_blank" rel="noopener">Vungle (Liftoff) ↗</a></li>
-        <li><a href="https://bidmachine.io/privacy-policy/" target="_blank" rel="noopener">Bidmachine ↗</a></li>
-      </ul>
+      <p>For users who have <strong>not</strong> purchased the Premium subscription, the app displays banner ads, rewarded video ads (used to unlock boosters and to continue after game-over), and occasional interstitial ads. We use <a href="https://www.appodeal.com/" target="_blank" rel="noopener">Appodeal</a> as our advertising mediation partner. Appodeal's privacy policy is at <a href="https://www.appodeal.com/privacy-policy" target="_blank" rel="noopener">appodeal.com/privacy-policy ↗</a>.</p>
+      <p>Appodeal mediates demand from a large number of advertising networks, and the active set evolves as Appodeal updates its SDK and as we change our build configuration. The current, authoritative list is published by Appodeal:</p>
+      <p class="partner-line">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent);"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        <a href="https://www.appodeal.com/partners/" target="_blank" rel="noopener">appodeal.com/partners ↗</a>
+      </p>
+      <p>Each network on that page links to its own privacy policy. Privacy questions specific to ad personalisation can be raised directly with Appodeal at the same site.</p>
       <div class="callout">
         <p><strong>Premium subscribers do not see ads</strong> and the advertising SDK is not used to load, request, or display ad content for them. Limited initialisation traffic to the ad mediation provider may still occur on app start before subscription state is resolved; once premium status is confirmed, no further ad calls are made for the duration of that session.</p>
       </div>
@@ -650,7 +709,7 @@
 
 <footer>
   <div class="left">
-    <span class="brand-mark" aria-hidden="true" style="width:22px;height:22px;border-radius:7px;"></span>
+    <span class="brand-mark sm" aria-hidden="true">VX</span>
     <span>&copy; Vaslix Games · Independent Android publisher</span>
   </div>
   <div class="right">
@@ -661,16 +720,22 @@
 </footer>
 
 <script>
-  // Fade-in on scroll + active TOC highlight
+  // Stagger fade-in + active TOC highlight
   (function () {
-    if (!('IntersectionObserver' in window)) {
-      document.querySelectorAll('section.card').forEach(function (el) { el.classList.add('in-view'); });
-      return;
-    }
+    var prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var sections = document.querySelectorAll('section.card');
     var tocLinks = document.querySelectorAll('.toc-list a');
     var byId = {};
     tocLinks.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+
+    if (prefersReduce || !('IntersectionObserver' in window)) {
+      sections.forEach(function (s) { s.classList.add('in-view'); });
+      return;
+    }
+
+    sections.forEach(function (s, i) {
+      s.style.setProperty('--stagger', (i * 60) + 'ms');
+    });
 
     var revealer = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
