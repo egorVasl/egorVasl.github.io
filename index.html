@@ -3,26 +3,501 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vaslix Games</title>
+  <title>Vaslix Games — Small Android games, made with care</title>
+  <meta name="description" content="Vaslix Games is an indie Android publisher. We build small, focused puzzle games. Currently shipping Gridlix." />
+  <meta name="theme-color" content="#F5F6FA" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#13161F" media="(prefers-color-scheme: dark)" />
+  <meta property="og:title" content="Vaslix Games" />
+  <meta property="og:description" content="Indie Android publisher. Small, focused puzzle games." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%234AC8EA'/%3E%3Cstop offset='1' stop-color='%236C5DD3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='10' y='10' width='80' height='80' rx='22' fill='url(%23g)'/%3E%3C/svg%3E" />
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 4rem auto; padding: 0 1.25rem; line-height: 1.6; color: #1a1a1a; text-align: center; }
-    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    .tagline { color: #666; margin-bottom: 3rem; }
-    .game { padding: 1.25rem; border: 1px solid #eee; border-radius: 8px; margin: 1rem 0; }
-    a { color: #0a66c2; }
-    footer { margin-top: 4rem; color: #888; font-size: 0.9rem; }
+    /* ── Tokens ────────────────────────────────────────────── */
+    :root {
+      --bg:        #F5F6FA;
+      --bg-soft:   #EAEBF3;
+      --surface:   #FFFFFF;
+      --surface-2: #F9FAFD;
+      --border:    rgba(184, 188, 202, 0.32);
+      --text:      #2D3142;
+      --text-soft: #4A4F63;
+      --muted:     #8E94A4;
+      --accent:    #6C5DD3;
+      --accent-2:  #4F83F5;
+      --accent-3:  #4AC8EA;
+      --good:      #20C997;
+      --shadow-sm: 0 1px 2px rgba(45, 49, 66, 0.06);
+      --shadow-md: 0 6px 24px rgba(45, 49, 66, 0.08), 0 1px 3px rgba(45, 49, 66, 0.05);
+      --shadow-lg: 0 24px 60px rgba(45, 49, 66, 0.12), 0 2px 6px rgba(45, 49, 66, 0.06);
+      --grad:      linear-gradient(135deg, #4AC8EA 0%, #4F83F5 50%, #6C5DD3 100%);
+      --radius:    18px;
+      --radius-lg: 24px;
+      --header-h:  64px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:        #13161F;
+        --bg-soft:   #1A1E2A;
+        --surface:   #1F2330;
+        --surface-2: #252A38;
+        --border:    rgba(255, 255, 255, 0.06);
+        --text:      #EAECF5;
+        --text-soft: #C8CCDA;
+        --muted:     #8088A0;
+        --accent:    #9689E5;
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.45);
+        --shadow-md: 0 8px 28px rgba(0, 0, 0, 0.55), 0 1px 3px rgba(0, 0, 0, 0.4);
+        --shadow-lg: 0 26px 64px rgba(0, 0, 0, 0.65), 0 2px 6px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 12px); }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto,
+                   "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+    }
+    body::before {
+      content: "";
+      position: fixed; inset: 0;
+      background:
+        radial-gradient(900px 480px at 12% -10%, rgba(74, 200, 234, 0.18), transparent 60%),
+        radial-gradient(820px 460px at 95% -8%, rgba(108, 93, 211, 0.16), transparent 65%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    @media (prefers-color-scheme: dark) {
+      body::before {
+        background:
+          radial-gradient(900px 480px at 12% -10%, rgba(74, 200, 234, 0.10), transparent 60%),
+          radial-gradient(820px 460px at 95% -8%, rgba(108, 93, 211, 0.14), transparent 65%);
+      }
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+    /* ── Top nav ───────────────────────────────────────────── */
+    .nav {
+      position: sticky; top: 0;
+      height: var(--header-h);
+      background: color-mix(in srgb, var(--bg) 78%, transparent);
+      backdrop-filter: saturate(160%) blur(14px);
+      -webkit-backdrop-filter: saturate(160%) blur(14px);
+      border-bottom: 1px solid var(--border);
+      z-index: 50;
+    }
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 100%;
+      display: flex; align-items: center; gap: 16px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 0.95rem;
+      color: var(--text);
+      letter-spacing: 0.2px;
+    }
+    .brand-mark {
+      width: 28px; height: 28px;
+      border-radius: 8px;
+      background: var(--grad);
+      box-shadow: 0 6px 14px rgba(108, 93, 211, 0.35);
+    }
+    .nav-spacer { flex: 1; }
+    .nav-link {
+      color: var(--muted);
+      font-size: 0.88rem; font-weight: 500;
+      padding: 8px 14px; border-radius: 999px;
+      transition: color .2s ease, background .2s ease;
+    }
+    .nav-link:hover { color: var(--text); background: var(--surface-2); text-decoration: none; }
+    .nav-link.privacy {
+      color: var(--accent);
+      background: color-mix(in srgb, var(--accent) 12%, transparent);
+      font-weight: 600;
+    }
+    .nav-link.privacy:hover {
+      background: color-mix(in srgb, var(--accent) 20%, transparent);
+      color: var(--accent);
+    }
+
+    /* ── Hero ──────────────────────────────────────────────── */
+    main {
+      flex: 1;
+      max-width: 1080px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 64px 24px 32px;
+      position: relative; z-index: 1;
+    }
+    .hero { text-align: center; max-width: 720px; margin: 0 auto 64px; }
+    .brand-tile {
+      width: 88px; height: 88px;
+      border-radius: 24px;
+      background: var(--grad);
+      margin: 0 auto 28px;
+      box-shadow: 0 22px 50px rgba(108, 93, 211, 0.35);
+      display: grid; place-items: center;
+      color: #fff;
+      font-weight: 800; font-size: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+    h1 {
+      font-size: clamp(2.4rem, 5.4vw, 3.4rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      font-weight: 800;
+      margin: 0 0 12px;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .tagline {
+      color: var(--text-soft);
+      font-size: 1.08rem;
+      margin: 0;
+    }
+
+    /* ── Section heading ───────────────────────────────────── */
+    .section-eyebrow {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 2.4px;
+      text-transform: uppercase; color: var(--muted);
+      margin: 0 0 10px;
+    }
+    h2.section-title {
+      margin: 0 0 28px;
+      font-size: 1.6rem; font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--text);
+    }
+
+    /* ── Games grid ────────────────────────────────────────── */
+    .games {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin: 0 auto 72px;
+    }
+    .game {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-md);
+      display: grid;
+      grid-template-columns: 96px 1fr auto;
+      gap: 22px;
+      align-items: center;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .game:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+    .game-icon {
+      width: 96px; height: 96px;
+      border-radius: 22px;
+      box-shadow: 0 16px 32px rgba(74, 131, 245, 0.30);
+      object-fit: cover;
+      display: block;
+    }
+    .game-body h3 {
+      margin: 0;
+      font-size: 1.32rem;
+      font-weight: 700;
+      letter-spacing: -0.005em;
+      color: var(--text);
+    }
+    .game-body p {
+      margin: 4px 0 12px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .feat-row { display: flex; flex-wrap: wrap; gap: 6px; }
+    .feat-row span {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.6px;
+      color: var(--text-soft);
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+    .badge.live {
+      align-self: flex-start;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--good);
+      padding: 6px 12px;
+      border-radius: 999px;
+      box-shadow: 0 4px 12px rgba(32, 201, 151, 0.35);
+    }
+    @media (max-width: 600px) {
+      .game { grid-template-columns: 80px 1fr; row-gap: 14px; }
+      .game-icon { width: 80px; height: 80px; border-radius: 18px; }
+      .badge.live { grid-column: 1 / -1; justify-self: start; margin-top: 4px; }
+    }
+
+    /* ── Privacy CTA — prominent ───────────────────────────── */
+    .privacy-cta {
+      position: relative;
+      border-radius: var(--radius-lg);
+      padding: 36px 36px;
+      margin-bottom: 40px;
+      overflow: hidden;
+      color: #fff;
+      background: var(--grad);
+      box-shadow: 0 28px 64px rgba(74, 131, 245, 0.35);
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+    .privacy-cta::after {
+      content: "";
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(420px 220px at 90% 10%, rgba(255, 255, 255, 0.18), transparent 60%),
+        radial-gradient(420px 220px at 10% 110%, rgba(0, 0, 0, 0.14), transparent 60%);
+      pointer-events: none;
+    }
+    .privacy-cta > * { position: relative; z-index: 1; }
+    .privacy-cta-icon {
+      width: 64px; height: 64px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      display: grid; place-items: center;
+      flex-shrink: 0;
+    }
+    .privacy-cta-icon svg {
+      width: 32px; height: 32px;
+      stroke: #fff;
+      fill: none;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .privacy-cta-text strong {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.005em;
+      margin-bottom: 4px;
+    }
+    .privacy-cta-text span {
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 0.95rem;
+    }
+    .privacy-cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 22px;
+      border-radius: 14px;
+      background: #fff;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.2px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+      transition: transform .2s ease, box-shadow .2s ease;
+      white-space: nowrap;
+    }
+    .privacy-cta-btn:hover {
+      text-decoration: none;
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.24);
+    }
+    .privacy-cta-btn svg {
+      width: 16px; height: 16px;
+      fill: none; stroke: currentColor;
+      stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round;
+    }
+    @media (max-width: 720px) {
+      .privacy-cta {
+        grid-template-columns: auto 1fr;
+        padding: 28px 24px;
+      }
+      .privacy-cta-btn {
+        grid-column: 1 / -1;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    /* ── Trust strip ───────────────────────────────────────── */
+    .trust {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin: 0 auto 64px;
+    }
+    .trust-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      box-shadow: var(--shadow-sm);
+      display: flex; gap: 14px; align-items: flex-start;
+    }
+    .trust-icon {
+      width: 38px; height: 38px;
+      border-radius: 11px;
+      background: color-mix(in srgb, var(--accent) 14%, transparent);
+      color: var(--accent);
+      display: grid; place-items: center;
+      flex-shrink: 0;
+    }
+    .trust-icon svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .trust-text strong {
+      display: block;
+      color: var(--text);
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .trust-text span { color: var(--muted); font-size: 0.85rem; }
+
+    /* ── Footer ────────────────────────────────────────────── */
+    footer {
+      padding: 28px 24px 40px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+      max-width: 1080px;
+      width: 100%;
+      margin: 24px auto 0;
+      position: relative; z-index: 1;
+    }
+    .footer-inner {
+      display: flex; flex-wrap: wrap; gap: 14px 28px;
+      align-items: center; justify-content: space-between;
+    }
+    footer .links { display: flex; gap: 18px; flex-wrap: wrap; }
+    footer a { color: var(--text-soft); }
+    footer a:hover { color: var(--accent); }
+    footer a.privacy-link {
+      color: var(--accent);
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
-  <h1>Vaslix Games</h1>
-  <p class="tagline">Small Android games, made with care.</p>
-  <div class="game">
-    <h2 style="margin:0 0 0.5rem;">Gridlix</h2>
-    <p style="margin:0; color:#666;">A grid puzzle game for Android.</p>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="./index.html">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>Vaslix Games</span>
+    </a>
+    <span class="nav-spacer"></span>
+    <a class="nav-link" href="mailto:vaslixofficial@protonmail.com">Contact</a>
+    <a class="nav-link privacy" href="./privacy-policy.html">Privacy</a>
   </div>
-  <footer>
-    <p><a href="./privacy-policy.html">Privacy Policy</a></p>
-    <p>&copy; Vaslix Games</p>
-  </footer>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="brand-tile" aria-hidden="true">VX</div>
+    <h1>Vaslix Games</h1>
+    <p class="tagline">Small Android games, made with care.</p>
+  </section>
+
+  <p class="section-eyebrow">Our games</p>
+  <h2 class="section-title">What we ship</h2>
+
+  <section class="games" aria-label="Our games">
+    <article class="game">
+      <img class="game-icon" src="./gridlix-icon.webp" alt="Gridlix app icon" width="96" height="96" />
+      <div class="game-body">
+        <h3>Gridlix</h3>
+        <p>A neumorphic 4×4 grid puzzle for Android. 2048-style merging, four boosters, dark mode, optional ad-free Premium.</p>
+        <div class="feat-row">
+          <span>Android 8+</span>
+          <span>Free w/ ads</span>
+          <span>Premium subscription</span>
+          <span>Light · Dark</span>
+        </div>
+      </div>
+      <span class="badge live">Live</span>
+    </article>
+  </section>
+
+  <p class="section-eyebrow">Your data</p>
+  <h2 class="section-title">Privacy &amp; transparency</h2>
+
+  <a class="privacy-cta" href="./privacy-policy.html" aria-label="Read our Privacy Policy">
+    <div class="privacy-cta-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6l-8-4z"/><polyline points="9 12 11 14 15 10"/></svg>
+    </div>
+    <div class="privacy-cta-text">
+      <strong>Read our Privacy Policy</strong>
+      <span>Plain-language summary, full details on what we store locally, how Google Play Billing works, and the ad networks we use for free users.</span>
+    </div>
+    <span class="privacy-cta-btn">
+      Open policy
+      <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+    </span>
+  </a>
+
+  <section class="trust" aria-label="Privacy commitments">
+    <div class="trust-item">
+      <div class="trust-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/><polyline points="8 12 11 15 16 9"/></svg>
+      </div>
+      <div class="trust-text">
+        <strong>No accounts</strong>
+        <span>We don't make you sign up. Game state lives on your device.</span>
+      </div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      </div>
+      <div class="trust-text">
+        <strong>No payment data stored</strong>
+        <span>All billing flows through Google Play. We never see your card.</span>
+      </div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+      </div>
+      <div class="trust-text">
+        <strong>GDPR · CCPA · COPPA</strong>
+        <span>Standards-aligned consent, opt-outs, and data rights.</span>
+      </div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 4 6 4 12 12 22 20 12 20 6 12 2"/><line x1="12" y1="22" x2="12" y2="2"/></svg>
+      </div>
+      <div class="trust-text">
+        <strong>Premium = ad-free</strong>
+        <span>Subscribers see no ads. Ad SDK is not used to load content for them.</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>&copy; Vaslix Games · Independent Android publisher</span>
+    <div class="links">
+      <a href="./index.html">Home</a>
+      <a class="privacy-link" href="./privacy-policy.html">Privacy Policy</a>
+      <a href="mailto:vaslixofficial@protonmail.com">Contact</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
