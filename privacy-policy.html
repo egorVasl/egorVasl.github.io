@@ -6,9 +6,10 @@
   <title>Privacy Policy — Vaslix Games</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1.25rem; line-height: 1.6; color: #1a1a1a; }
-    h1, h2 { color: #111; }
+    h1, h2, h3 { color: #111; }
     h1 { border-bottom: 2px solid #eee; padding-bottom: 0.5rem; }
     h2 { margin-top: 2rem; }
+    h3 { margin-top: 1.25rem; font-size: 1.05rem; }
     a { color: #0a66c2; }
     code { background: #f4f4f4; padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.95em; }
     .updated { color: #666; font-size: 0.9rem; }
@@ -17,22 +18,35 @@
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: 2026-04-29</p>
+<p class="updated">Last updated: 2026-05-02</p>
 
 <p>This Privacy Policy describes how Vaslix Games (“we”, “us”, “our”) handles information in the mobile applications we publish, including <strong>Gridlix</strong> (package <code>com.vaslix.games.gridlix</code>) and any future titles.</p>
 
 <h2>1. Information We Collect</h2>
-<p>Our apps do not require account creation and we do not knowingly collect personal information directly. The third-party services described below may collect technical and advertising-related information automatically, including:</p>
+<p>Our apps do not require account creation and we do not knowingly collect personal information directly. Information falls into two groups:</p>
+
+<h3>1a. Stored locally on your device</h3>
+<p>The app stores the following on-device only (in a local Room/SQLite database). This data never leaves your device and is removed when the app is uninstalled:</p>
 <ul>
-  <li>Device advertising identifier (Google Advertising ID)</li>
+  <li>Current game state (board, score, boosters, continues used)</li>
+  <li>Best-game history (local leaderboard) and best score</li>
+  <li>App settings (sound on/off, haptics on/off, theme mode)</li>
+  <li>A first-launch flag used to decide whether to show the welcome paywall</li>
+  <li>A cached summary of your subscription status (active/inactive, plan, product ID, base plan ID) — used so the app can apply your premium entitlement immediately at launch without waiting for the network. <strong>Payment details, purchase tokens, and Google account identifiers are <em>not</em> stored.</strong></li>
+</ul>
+
+<h3>1b. Collected by third parties on our behalf</h3>
+<p>The third-party services described below may collect technical and advertising-related information automatically, including:</p>
+<ul>
+  <li>Device advertising identifier (Google Advertising ID) — for non-premium users only</li>
   <li>IP address and approximate geographic location derived from it</li>
   <li>Device model, operating system version, language, and time zone</li>
   <li>App version, session timestamps, and crash diagnostics</li>
   <li>Aggregated, non-personally-identifying usage events</li>
 </ul>
 
-<h2>2. Advertising Partners</h2>
-<p>We use <a href="https://www.appodeal.com/" target="_blank" rel="noopener">Appodeal</a> as our advertising mediation partner. Appodeal’s privacy policy is at <a href="https://www.appodeal.com/privacy-policy" target="_blank" rel="noopener">https://www.appodeal.com/privacy-policy</a>.</p>
+<h2>2. Advertising Partners (Free / Non-Premium Users)</h2>
+<p>For users who have <strong>not</strong> purchased the Premium subscription, the app displays banner ads, rewarded video ads (used to unlock boosters and to continue after game-over), and occasional interstitial ads. We use <a href="https://www.appodeal.com/" target="_blank" rel="noopener">Appodeal</a> as our advertising mediation partner. Appodeal’s privacy policy is at <a href="https://www.appodeal.com/privacy-policy" target="_blank" rel="noopener">https://www.appodeal.com/privacy-policy</a>.</p>
 <p>Appodeal works with multiple ad networks, each with its own privacy policy:</p>
 <ul>
   <li>Google AdMob — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></li>
@@ -43,26 +57,36 @@
   <li>Vungle (Liftoff) — <a href="https://liftoff.io/privacy-policy/" target="_blank" rel="noopener">https://liftoff.io/privacy-policy/</a></li>
   <li>Bidmachine — <a href="https://bidmachine.io/privacy-policy/" target="_blank" rel="noopener">https://bidmachine.io/privacy-policy/</a></li>
 </ul>
+<p><strong>Premium subscribers do not see ads and the advertising SDK is not used to load, request, or display ad content for them.</strong> Limited initialisation traffic to the advertising mediation provider may still occur on app start before subscription state is resolved; once premium status is confirmed, no further ad calls are made for the duration of that session.</p>
 
-<h2>3. Legal Basis and Consent (GDPR / EEA, UK, Switzerland)</h2>
-<p>If you are located in the EEA, the UK, or Switzerland, the legal basis for advertising-related processing is your consent, collected via an IAB Transparency &amp; Consent Framework (TCF) dialog presented when you first launch the app. You may withdraw or change your consent at any time from within the app.</p>
+<h2>3. Subscriptions and In-App Purchases (Google Play Billing)</h2>
+<p>The app offers an optional Premium subscription (monthly and yearly auto-renewing plans, with an introductory free trial on the yearly plan for eligible new subscribers) that removes ads and unlocks unlimited use of in-game boosters. Subscriptions are sold and processed by Google through the Google Play Billing service.</p>
+<ul>
+  <li>All payment, billing, account, and tax information is collected and processed by Google. We do not see, store, or transmit your payment method, your Google account email, or any government identifiers.</li>
+  <li>The app receives only a non-identifying entitlement signal from Google indicating whether an active subscription exists for your installation, the product ID, and the base plan ID (e.g. monthly or yearly). This signal is cached locally as described in section 1a.</li>
+  <li>Subscription management, cancellation, refund requests, and renewal dates are handled entirely on Google Play. The “Manage” button inside the app deep-links to the Google Play subscriptions page.</li>
+  <li>Google Play’s privacy policy applies to all billing-related processing: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>.</li>
+</ul>
 
-<h2>4. CCPA / US State Privacy Laws</h2>
-<p>If you are a California resident (or in another applicable US state), you have the right to opt out of the “sale” or “sharing” of your personal information for behavioral advertising. The in-app consent dialog provides this opt-out where required.</p>
+<h2>4. Legal Basis and Consent (GDPR / EEA, UK, Switzerland)</h2>
+<p>If you are located in the EEA, the UK, or Switzerland, the legal basis for advertising-related processing is your consent, collected via an IAB Transparency &amp; Consent Framework (TCF) dialog presented when you first launch the app. You may withdraw or change your consent at any time from within the app. The legal basis for processing subscription data via Google Play Billing is the performance of the contract you enter into when purchasing a subscription.</p>
 
-<h2>5. Children’s Privacy (COPPA)</h2>
-<p>Our apps are not directed at children under 13 (or the equivalent minimum age in your jurisdiction). We do not knowingly collect personal information from children.</p>
+<h2>5. CCPA / US State Privacy Laws</h2>
+<p>If you are a California resident (or in another applicable US state), you have the right to opt out of the “sale” or “sharing” of your personal information for behavioral advertising. The in-app consent dialog provides this opt-out where required. Subscription processing by Google Play is not a “sale” of personal information.</p>
 
-<h2>6. Data Retention</h2>
-<p>We do not retain personal information directly. The advertising partners listed above retain data per their own policies.</p>
+<h2>6. Children’s Privacy (COPPA)</h2>
+<p>Our apps are not directed at children under 13 (or the equivalent minimum age in your jurisdiction). We do not knowingly collect personal information from children. The Premium subscription is intended for adult purchasers; in-app purchases require a Google Play account with the appropriate purchase permissions.</p>
 
-<h2>7. Your Rights</h2>
-<p>Depending on your jurisdiction, you may have the right to access, correct, delete, restrict, or port your personal data, and to lodge a complaint with a supervisory authority. Because we do not directly hold this data, requests should be directed to the advertising partner concerned.</p>
+<h2>7. Data Retention</h2>
+<p>Locally stored data described in section 1a is retained on your device until you clear the app’s data or uninstall the app. We do not retain personal information on our own servers. The advertising partners and Google Play retain data per their own policies.</p>
 
-<h2>8. Changes to This Policy</h2>
+<h2>8. Your Rights</h2>
+<p>Depending on your jurisdiction, you may have the right to access, correct, delete, restrict, or port your personal data, and to lodge a complaint with a supervisory authority. Because we do not directly hold this data, requests should be directed to the advertising partner concerned, or — for billing data — to Google Play. To remove all locally stored data, uninstall the app or clear its storage from your device’s settings.</p>
+
+<h2>9. Changes to This Policy</h2>
 <p>We may update this Privacy Policy from time to time. The “Last updated” date above indicates when the most recent change was made.</p>
 
-<h2>9. Contact</h2>
+<h2>10. Contact</h2>
 <p>For privacy questions: <a href="mailto:vaslixofficial@protonmail.com">vaslixofficial@protonmail.com</a></p>
 
 </body>
