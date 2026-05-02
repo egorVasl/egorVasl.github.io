@@ -10,7 +10,8 @@
   <meta property="og:title" content="Vaslix Games" />
   <meta property="og:description" content="Indie Android publisher. Small, focused puzzle games." />
   <meta property="og:type" content="website" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%234AC8EA'/%3E%3Cstop offset='1' stop-color='%236C5DD3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='10' y='10' width='80' height='80' rx='22' fill='url(%23g)'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%234AC8EA'/%3E%3Cstop offset='100%25' stop-color='%236C5DD3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Cpath d='M18 30 L34 72 L50 30' stroke='%23ffffff' stroke-width='13' fill='none' stroke-linejoin='round' stroke-linecap='round'/%3E%3Cpath d='M56 30 L84 72 M84 30 L56 72' stroke='%23ffffff' stroke-width='13' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%234AC8EA'/%3E%3Cstop offset='100%25' stop-color='%236C5DD3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Cpath d='M18 30 L34 72 L50 30' stroke='%23ffffff' stroke-width='13' fill='none' stroke-linejoin='round' stroke-linecap='round'/%3E%3Cpath d='M56 30 L84 72 M84 30 L56 72' stroke='%23ffffff' stroke-width='13' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
   <style>
     /* ── Tokens ────────────────────────────────────────────── */
     :root {
@@ -33,6 +34,12 @@
       --radius:    18px;
       --radius-lg: 24px;
       --header-h:  64px;
+
+      /* Motion */
+      --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --press:  140ms;
+      --reveal: 420ms;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -83,6 +90,23 @@
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
+    /* ── Universal interactivity ───────────────────────────── */
+    a, button, .game, .privacy-cta, .privacy-cta-btn, .nav-link,
+    .brand, .toc-list a, .trust-item, .callout {
+      transition:
+        transform var(--press) var(--ease-out),
+        box-shadow var(--press) var(--ease-out),
+        background var(--press) var(--ease-out),
+        color var(--press) var(--ease-out),
+        letter-spacing var(--press) var(--ease-out);
+    }
+    :focus { outline: none; }
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: inherit;
+    }
+
     /* ── Top nav ───────────────────────────────────────────── */
     .nav {
       position: sticky; top: 0;
@@ -105,28 +129,43 @@
       font-weight: 700; font-size: 0.95rem;
       color: var(--text);
       letter-spacing: 0.2px;
+      padding: 6px 8px 6px 4px;
+      border-radius: 12px;
     }
+    .brand:hover { text-decoration: none; background: var(--surface-2); }
+    .brand:active { transform: scale(0.97); }
     .brand-mark {
       width: 28px; height: 28px;
       border-radius: 8px;
-      background: var(--grad);
+      background: linear-gradient(135deg, #4AC8EA 0%, #6C5DD3 100%);
       box-shadow: 0 6px 14px rgba(108, 93, 211, 0.35);
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 900;
+      font-size: 0.66rem;
+      letter-spacing: 0.4px;
+      line-height: 1;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto,
+                   "Helvetica Neue", Arial, sans-serif;
+      user-select: none;
     }
     .nav-spacer { flex: 1; }
     .nav-link {
       color: var(--muted);
       font-size: 0.88rem; font-weight: 500;
       padding: 8px 14px; border-radius: 999px;
-      transition: color .2s ease, background .2s ease;
     }
     .nav-link:hover { color: var(--text); background: var(--surface-2); text-decoration: none; }
+    .nav-link:active { transform: scale(0.96); }
     .nav-link.privacy {
       color: var(--accent);
       background: color-mix(in srgb, var(--accent) 12%, transparent);
       font-weight: 600;
     }
     .nav-link.privacy:hover {
-      background: color-mix(in srgb, var(--accent) 20%, transparent);
+      background: color-mix(in srgb, var(--accent) 22%, transparent);
       color: var(--accent);
     }
 
@@ -150,6 +189,11 @@
       color: #fff;
       font-weight: 800; font-size: 1.5rem;
       letter-spacing: -0.02em;
+      animation: hero-float 6s ease-in-out infinite;
+    }
+    @keyframes hero-float {
+      0%, 100% { transform: translateY(0); box-shadow: 0 22px 50px rgba(108, 93, 211, 0.35); }
+      50%      { transform: translateY(-4px); box-shadow: 0 28px 60px rgba(108, 93, 211, 0.42); }
     }
     h1 {
       font-size: clamp(2.4rem, 5.4vw, 3.4rem);
@@ -181,6 +225,17 @@
       color: var(--text);
     }
 
+    /* ── Reveal animation ─────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition:
+        opacity var(--reveal) var(--ease-out),
+        transform var(--reveal) var(--ease-out);
+      transition-delay: var(--stagger, 0ms);
+    }
+    .reveal.in-view { opacity: 1; transform: none; }
+
     /* ── Games grid ────────────────────────────────────────── */
     .games {
       display: grid;
@@ -198,14 +253,13 @@
       grid-template-columns: 96px 1fr auto;
       gap: 22px;
       align-items: center;
-      transition: transform .25s ease, box-shadow .25s ease;
     }
-    .game:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+    .game:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .game:active { transform: translateY(-1px) scale(0.995); transition-timing-function: var(--ease-spring); }
     .game-icon {
       width: 96px; height: 96px;
       border-radius: 22px;
       box-shadow: 0 16px 32px rgba(74, 131, 245, 0.30);
-      object-fit: cover;
       display: block;
     }
     .game-body h3 {
@@ -240,6 +294,20 @@
       padding: 6px 12px;
       border-radius: 999px;
       box-shadow: 0 4px 12px rgba(32, 201, 151, 0.35);
+      position: relative;
+    }
+    .badge.live::before {
+      content: "";
+      display: inline-block;
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #fff;
+      margin-right: 6px;
+      vertical-align: middle;
+      animation: live-pulse 1.8s ease-in-out infinite;
+    }
+    @keyframes live-pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%      { opacity: 0.6; transform: scale(1.2); }
     }
     @media (max-width: 600px) {
       .game { grid-template-columns: 80px 1fr; row-gap: 14px; }
@@ -251,16 +319,22 @@
     .privacy-cta {
       position: relative;
       border-radius: var(--radius-lg);
-      padding: 36px 36px;
+      padding: 36px;
       margin-bottom: 40px;
       overflow: hidden;
       color: #fff;
-      background: var(--grad);
+      background: linear-gradient(135deg, #4AC8EA 0%, #4F83F5 50%, #6C5DD3 100%);
+      background-size: 200% 200%;
       box-shadow: 0 28px 64px rgba(74, 131, 245, 0.35);
       display: grid;
       grid-template-columns: auto 1fr auto;
       gap: 24px;
       align-items: center;
+      animation: cta-shift 9s ease-in-out infinite;
+    }
+    @keyframes cta-shift {
+      0%, 100% { background-position: 0% 50%; }
+      50%      { background-position: 100% 50%; }
     }
     .privacy-cta::after {
       content: "";
@@ -271,6 +345,10 @@
       pointer-events: none;
     }
     .privacy-cta > * { position: relative; z-index: 1; }
+    .privacy-cta:hover { transform: translateY(-2px); box-shadow: 0 36px 80px rgba(74, 131, 245, 0.45); text-decoration: none; }
+    .privacy-cta:active { transform: scale(0.985); transition-timing-function: var(--ease-spring); }
+    .privacy-cta:hover .privacy-cta-btn svg { transform: translateX(4px); }
+    .privacy-cta:hover .privacy-cta-text strong { letter-spacing: 0.2px; }
     .privacy-cta-icon {
       width: 64px; height: 64px;
       border-radius: 18px;
@@ -308,18 +386,13 @@
       font-size: 0.95rem;
       letter-spacing: 0.2px;
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
-      transition: transform .2s ease, box-shadow .2s ease;
       white-space: nowrap;
-    }
-    .privacy-cta-btn:hover {
-      text-decoration: none;
-      transform: translateY(-1px);
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.24);
     }
     .privacy-cta-btn svg {
       width: 16px; height: 16px;
       fill: none; stroke: currentColor;
       stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round;
+      transition: transform var(--press) var(--ease-out);
     }
     @media (max-width: 720px) {
       .privacy-cta {
@@ -348,6 +421,7 @@
       box-shadow: var(--shadow-sm);
       display: flex; gap: 14px; align-items: flex-start;
     }
+    .trust-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
     .trust-icon {
       width: 38px; height: 38px;
       border-radius: 11px;
@@ -382,11 +456,28 @@
       align-items: center; justify-content: space-between;
     }
     footer .links { display: flex; gap: 18px; flex-wrap: wrap; }
-    footer a { color: var(--text-soft); }
-    footer a:hover { color: var(--accent); }
+    footer a {
+      color: var(--text-soft);
+      padding: 4px 8px;
+      border-radius: 8px;
+      margin: -4px -8px;
+    }
+    footer a:hover { color: var(--accent); background: var(--surface-2); text-decoration: none; }
+    footer a:active { transform: scale(0.96); }
     footer a.privacy-link {
       color: var(--accent);
       font-weight: 600;
+    }
+
+    /* ── Reduced motion ────────────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0ms !important;
+        animation-delay: 0ms !important;
+        transition-duration: 0ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
     }
   </style>
 </head>
@@ -395,7 +486,7 @@
 <header class="nav">
   <div class="nav-inner">
     <a class="brand" href="./index.html">
-      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-mark" aria-hidden="true">VX</span>
       <span>Vaslix Games</span>
     </a>
     <span class="nav-spacer"></span>
@@ -415,8 +506,22 @@
   <h2 class="section-title">What we ship</h2>
 
   <section class="games" aria-label="Our games">
-    <article class="game">
-      <img class="game-icon" src="./gridlix-icon.webp" alt="Gridlix app icon" width="96" height="96" />
+    <article class="game reveal">
+      <svg class="game-icon" viewBox="0 0 100 100" role="img" aria-label="Gridlix app icon">
+        <defs>
+          <linearGradient id="gridlix-grad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"   stop-color="#4AC8EA"/>
+            <stop offset="100%" stop-color="#4F83F5"/>
+          </linearGradient>
+        </defs>
+        <rect x="2" y="2" width="96" height="96" rx="22" fill="url(#gridlix-grad)"/>
+        <text x="50" y="48" text-anchor="middle"
+              font-family="-apple-system, BlinkMacSystemFont, system-ui, Segoe UI, Roboto, sans-serif"
+              font-weight="800" font-size="26" fill="#fff" letter-spacing="-1">2048</text>
+        <text x="50" y="74" text-anchor="middle"
+              font-family="-apple-system, BlinkMacSystemFont, system-ui, Segoe UI, Roboto, sans-serif"
+              font-weight="600" font-size="16" fill="#fff" font-style="italic" opacity="0.95">Gridlix</text>
+      </svg>
       <div class="game-body">
         <h3>Gridlix</h3>
         <p>A neumorphic 4×4 grid puzzle for Android. 2048-style merging, four boosters, dark mode, optional ad-free Premium.</p>
@@ -434,7 +539,7 @@
   <p class="section-eyebrow">Your data</p>
   <h2 class="section-title">Privacy &amp; transparency</h2>
 
-  <a class="privacy-cta" href="./privacy-policy.html" aria-label="Read our Privacy Policy">
+  <a class="privacy-cta reveal" href="./privacy-policy.html" aria-label="Read our Privacy Policy">
     <div class="privacy-cta-icon" aria-hidden="true">
       <svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6l-8-4z"/><polyline points="9 12 11 14 15 10"/></svg>
     </div>
@@ -449,7 +554,7 @@
   </a>
 
   <section class="trust" aria-label="Privacy commitments">
-    <div class="trust-item">
+    <div class="trust-item reveal">
       <div class="trust-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/><polyline points="8 12 11 15 16 9"/></svg>
       </div>
@@ -458,7 +563,7 @@
         <span>We don't make you sign up. Game state lives on your device.</span>
       </div>
     </div>
-    <div class="trust-item">
+    <div class="trust-item reveal">
       <div class="trust-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
       </div>
@@ -467,7 +572,7 @@
         <span>All billing flows through Google Play. We never see your card.</span>
       </div>
     </div>
-    <div class="trust-item">
+    <div class="trust-item reveal">
       <div class="trust-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
       </div>
@@ -476,7 +581,7 @@
         <span>Standards-aligned consent, opt-outs, and data rights.</span>
       </div>
     </div>
-    <div class="trust-item">
+    <div class="trust-item reveal">
       <div class="trust-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24"><polygon points="12 2 4 6 4 12 12 22 20 12 20 6 12 2"/><line x1="12" y1="22" x2="12" y2="2"/></svg>
       </div>
@@ -498,6 +603,29 @@
     </div>
   </div>
 </footer>
+
+<script>
+  (function () {
+    var prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var nodes = document.querySelectorAll('.reveal');
+    if (prefersReduce || !('IntersectionObserver' in window)) {
+      nodes.forEach(function (n) { n.classList.add('in-view'); });
+      return;
+    }
+    nodes.forEach(function (n, i) {
+      n.style.setProperty('--stagger', (i * 70) + 'ms');
+    });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('in-view');
+          io.unobserve(e.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    nodes.forEach(function (n) { io.observe(n); });
+  })();
+</script>
 
 </body>
 </html>
