@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — Vaslix Games</title>
-  <meta name="description" content="How Vaslix Games handles data in our Android titles, including Gridlix. Plain-language summary, full policy, GDPR/CCPA/COPPA notes." />
+  <meta name="description" content="How Vaslix Games handles data across all our Android apps — games and audio/podcast titles. Plain-language summary, full policy, GDPR/CCPA/COPPA notes." />
   <meta name="theme-color" content="#F5F6FA" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#13161F" media="(prefers-color-scheme: dark)" />
   <meta property="og:title" content="Privacy Policy — Vaslix Games" />
-  <meta property="og:description" content="What Vaslix Games stores, what we don't, and how Gridlix uses Google Play Billing and ad mediation." />
+  <meta property="og:description" content="What Vaslix Games stores, what we don't, and how our apps use Google Play Billing and ad mediation." />
   <meta property="og:type" content="website" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%234AC8EA'/%3E%3Cstop offset='100%25' stop-color='%236C5DD3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Cpath d='M18 30 L34 72 L50 30' stroke='%23ffffff' stroke-width='13' fill='none' stroke-linejoin='round' stroke-linecap='round'/%3E%3Cpath d='M56 30 L84 72 M84 30 L56 72' stroke='%23ffffff' stroke-width='13' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
-  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%234AC8EA'/%3E%3Cstop offset='100%25' stop-color='%236C5DD3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Cpath d='M18 30 L34 72 L50 30' stroke='%23ffffff' stroke-width='13' fill='none' stroke-linejoin='round' stroke-linecap='round'/%3E%3Cpath d='M56 30 L84 72 M84 30 L56 72' stroke='%23ffffff' stroke-width='13' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%234AC8EA'/><stop offset='100%25' stop-color='%236C5DD3'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='url(%23g)'/><g fill='%23fff'><path transform='translate(16.03 68.18) scale(0.0518 -0.0518)' d='M721 702 472 0H258L9 702H191L365 172L540 702Z'/><path transform='translate(47.71 68.18) scale(0.0518 -0.0518)' d='M492 0 349 215 223 0H29L254 357L24 702H223L364 490L488 702H682L459 348L691 0Z'/></g></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%234AC8EA'/><stop offset='100%25' stop-color='%236C5DD3'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='url(%23g)'/><g fill='%23fff'><path transform='translate(16.03 68.18) scale(0.0518 -0.0518)' d='M721 702 472 0H258L9 702H191L365 172L540 702Z'/><path transform='translate(47.71 68.18) scale(0.0518 -0.0518)' d='M492 0 349 215 223 0H29L254 357L24 702H223L364 490L488 702H682L459 348L691 0Z'/></g></svg>" />
   <style>
     /* ── Tokens ────────────────────────────────────────────── */
     :root {
@@ -39,7 +39,6 @@
       --content:   1180px;
       --header-h:  64px;
 
-      /* Motion */
       --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
       --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
       --press:  140ms;
@@ -62,7 +61,6 @@
       }
     }
 
-    /* ── Reset / base ──────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 12px); }
     body {
@@ -78,19 +76,27 @@
     }
     body::before {
       content: "";
-      position: fixed; inset: 0;
+      position: fixed; inset: -8%;
       background:
         radial-gradient(900px 480px at 12% -10%, rgba(74, 200, 234, 0.18), transparent 60%),
-        radial-gradient(820px 460px at 95% -8%, rgba(108, 93, 211, 0.16), transparent 65%);
+        radial-gradient(820px 460px at 95% -8%, rgba(108, 93, 211, 0.16), transparent 65%),
+        radial-gradient(700px 540px at 50% 110%, rgba(74, 131, 245, 0.10), transparent 65%);
       pointer-events: none;
       z-index: 0;
+      animation: mesh-drift 40s ease-in-out infinite alternate;
+      will-change: transform;
     }
     @media (prefers-color-scheme: dark) {
       body::before {
         background:
           radial-gradient(900px 480px at 12% -10%, rgba(74, 200, 234, 0.10), transparent 60%),
-          radial-gradient(820px 460px at 95% -8%, rgba(108, 93, 211, 0.14), transparent 65%);
+          radial-gradient(820px 460px at 95% -8%, rgba(108, 93, 211, 0.14), transparent 65%),
+          radial-gradient(700px 540px at 50% 110%, rgba(74, 131, 245, 0.08), transparent 65%);
       }
+    }
+    @keyframes mesh-drift {
+      from { transform: translate3d(-1.5%, -1%, 0) scale(1.00); }
+      to   { transform: translate3d( 1.5%,  1%, 0) scale(1.06); }
     }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; text-underline-offset: 3px; }
@@ -102,7 +108,6 @@
       font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
     }
 
-    /* ── Universal interactivity ───────────────────────────── */
     a, button, .nav-link, .brand, .toc-list a, .chip {
       transition:
         transform var(--press) var(--ease-out),
@@ -145,37 +150,40 @@
     }
     .brand:hover { text-decoration: none; background: var(--surface-2); }
     .brand:active { transform: scale(0.97); }
+
+    /* SVG-based brand mark — matches the final logo exactly */
     .brand-mark {
       width: 28px; height: 28px;
-      border-radius: 8px;
-      background: linear-gradient(135deg, #4AC8EA 0%, #6C5DD3 100%);
-      box-shadow: 0 6px 14px rgba(108, 93, 211, 0.35);
       flex-shrink: 0;
-      display: grid;
-      place-items: center;
-      color: #fff;
-      font-weight: 900;
-      font-size: 0.66rem;
-      letter-spacing: 0.4px;
-      line-height: 1;
-      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto,
-                   "Helvetica Neue", Arial, sans-serif;
-      user-select: none;
+      display: block;
+      filter: drop-shadow(0 6px 14px rgba(108, 93, 211, 0.35));
     }
+    .brand-mark svg { display: block; width: 100%; height: 100%; }
     .brand-mark.sm {
       width: 22px; height: 22px;
-      border-radius: 7px;
-      box-shadow: 0 4px 10px rgba(108, 93, 211, 0.30);
-      font-size: 0.54rem;
-      letter-spacing: 0.3px;
+      filter: drop-shadow(0 4px 10px rgba(108, 93, 211, 0.30));
     }
+
     .nav-spacer { flex: 1; }
     .nav-link {
+      position: relative;
       color: var(--muted);
       font-size: 0.88rem; font-weight: 500;
       padding: 8px 12px; border-radius: 999px;
+      overflow: hidden;
+      isolation: isolate;
     }
-    .nav-link:hover { color: var(--text); background: var(--surface-2); text-decoration: none; }
+    .nav-link::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: var(--surface-2);
+      border-radius: 999px;
+      transform: scaleX(0); transform-origin: left center;
+      transition: transform 360ms var(--ease-spring);
+      z-index: -1;
+    }
+    .nav-link:hover { color: var(--text); text-decoration: none; }
+    .nav-link:hover::after { transform: scaleX(1); }
     .nav-link:active { transform: scale(0.96); }
     .nav-pill {
       font-size: 0.72rem; font-weight: 700; letter-spacing: 1.4px;
@@ -184,6 +192,110 @@
       padding: 6px 12px; border-radius: 999px;
       background: var(--grad);
       box-shadow: 0 6px 16px rgba(108, 93, 211, 0.30);
+    }
+
+    /* ── Language switcher ─────────────────────────────────── */
+    .lang-wrap { position: relative; }
+    .lang-switcher {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: inherit;
+      font-size: 0.85rem; font-weight: 600;
+      color: var(--text-soft);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 7px 12px; border-radius: 999px;
+      cursor: pointer;
+      transition:
+        transform var(--press) var(--ease-spring),
+        border-color var(--press) var(--ease-out),
+        background var(--press) var(--ease-out),
+        color var(--press) var(--ease-out);
+    }
+    .lang-switcher .lang-flag { font-size: 1rem; line-height: 1; }
+    .lang-switcher .lang-caret {
+      width: 12px; height: 12px;
+      stroke: currentColor; fill: none; stroke-width: 2.4;
+      stroke-linecap: round; stroke-linejoin: round;
+      transition: transform 220ms var(--ease-spring);
+    }
+    .lang-switcher:hover {
+      color: var(--text);
+      border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+      transform: scale(1.04);
+    }
+    .lang-switcher[aria-expanded="true"] {
+      color: #fff;
+      background: var(--grad);
+      border-color: transparent;
+    }
+    .lang-switcher[aria-expanded="true"] .lang-caret { transform: rotate(180deg); }
+    .lang-menu {
+      position: absolute; top: calc(100% + 8px); right: 0;
+      min-width: 200px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow-lg);
+      padding: 6px;
+      list-style: none; margin: 0;
+      z-index: 100;
+      opacity: 0;
+      transform: scale(0.92) translateY(-4px);
+      transform-origin: top right;
+      pointer-events: none;
+      transition:
+        opacity 200ms var(--ease-out),
+        transform 220ms var(--ease-spring);
+    }
+    .lang-menu.open {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+      pointer-events: auto;
+    }
+    .lang-menu li {
+      display: flex; align-items: center; gap: 10px;
+      padding: 9px 12px;
+      font-size: 0.88rem; font-weight: 500;
+      color: var(--text-soft);
+      border-radius: 10px;
+      cursor: pointer;
+      transition:
+        background var(--press) var(--ease-out),
+        color var(--press) var(--ease-out),
+        transform 200ms var(--ease-spring);
+      opacity: 0; transform: translateY(-4px);
+    }
+    .lang-menu.open li {
+      opacity: 1; transform: none;
+      transition:
+        opacity 240ms var(--ease-out) var(--li-delay, 0ms),
+        transform 280ms var(--ease-spring) var(--li-delay, 0ms),
+        background var(--press) var(--ease-out),
+        color var(--press) var(--ease-out);
+    }
+    .lang-menu li:hover {
+      background: var(--surface-2);
+      color: var(--text);
+    }
+    .lang-menu li[aria-selected="true"] {
+      background: color-mix(in srgb, var(--accent) 14%, transparent);
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .lang-menu li .lang-flag { font-size: 1.05rem; line-height: 1; }
+    .lang-menu li .lang-code { font-weight: 700; min-width: 26px; }
+    .lang-menu li .lang-native { color: var(--muted); font-size: 0.84rem; }
+    .lang-menu li[aria-selected="true"] .lang-native { color: var(--accent); }
+    .lang-menu li .lang-check {
+      margin-left: auto;
+      width: 14px; height: 14px;
+      stroke: currentColor; fill: none; stroke-width: 2.6;
+      stroke-linecap: round; stroke-linejoin: round;
+      opacity: 0; transform: scale(0.6);
+      transition: opacity 200ms var(--ease-out), transform 220ms var(--ease-spring);
+    }
+    .lang-menu li[aria-selected="true"] .lang-check {
+      opacity: 1; transform: scale(1);
     }
 
     /* ── Hero ──────────────────────────────────────────────── */
@@ -478,7 +590,6 @@
       .summary-card { box-shadow: none; }
     }
 
-    /* ── Reduced motion ────────────────────────────────────── */
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after {
@@ -489,7 +600,6 @@
       section.card { opacity: 1; transform: none; }
     }
 
-    /* ── Touch & mobile interactivity ──────────────────────── */
     * { -webkit-tap-highlight-color: transparent; }
     a, button, .brand, .nav-link, .toc-list a, footer a {
       touch-action: manipulation;
@@ -498,45 +608,21 @@
     }
 
     @media (hover: none), (pointer: coarse) {
-      /* Kill focus ring on touch — keyboard users keep it via (hover: hover) */
-      :focus, :focus-visible {
-        outline: none !important;
-        box-shadow: none !important;
-      }
+      :focus, :focus-visible { outline: none !important; box-shadow: none !important; }
       a, button, .brand, .nav-link, .toc-list a, footer a {
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
       }
-      /* Neutralize sticky :hover state after tap */
       a:hover { text-decoration: none; }
       .brand:hover { background: transparent; }
       .nav-link:hover { color: var(--muted); background: transparent; }
       .toc-list a:hover { background: transparent; }
       footer a:hover { color: var(--text-soft); background: transparent; }
 
-      /* Strong tap feedback */
-      .brand:active {
-        background: var(--surface-2);
-        transform: scale(0.96);
-      }
-      .nav-link:active {
-        color: var(--text);
-        background: var(--surface-2);
-        transform: scale(0.95);
-      }
-      .toc-list a:active {
-        background: var(--surface-2);
-        transform: translateX(3px);
-      }
-      footer a:active {
-        color: var(--accent);
-        background: var(--surface-2);
-        transform: scale(0.94);
-      }
-
-      /* In-body links: subtle press tint instead of underline */
-      p a:active, li a:active {
-        opacity: 0.7;
-      }
+      .brand:active { background: var(--surface-2); transform: scale(0.96); }
+      .nav-link:active { color: var(--text); background: var(--surface-2); transform: scale(0.95); }
+      .toc-list a:active { background: var(--surface-2); transform: translateX(3px); }
+      footer a:active { color: var(--accent); background: var(--surface-2); transform: scale(0.94); }
+      p a:active, li a:active { opacity: 0.7; }
     }
 
     @media (max-width: 720px) {
@@ -551,49 +637,78 @@
 <header class="nav">
   <div class="nav-inner">
     <a class="brand" href="./index.html">
-      <span class="brand-mark" aria-hidden="true">VX</span>
-      <span>Vaslix Games</span>
+      <span class="brand-mark" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+          <defs>
+            <linearGradient id="vx-nav" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#4AC8EA"/>
+              <stop offset="100%" stop-color="#6C5DD3"/>
+            </linearGradient>
+          </defs>
+          <rect width="100" height="100" rx="22" fill="url(#vx-nav)"/>
+          <g fill="#fff">
+            <path transform="translate(16.03 68.18) scale(0.0518 -0.0518)" d="M721 702 472 0H258L9 702H191L365 172L540 702Z"/>
+            <path transform="translate(47.71 68.18) scale(0.0518 -0.0518)" d="M492 0 349 215 223 0H29L254 357L24 702H223L364 490L488 702H682L459 348L691 0Z"/>
+          </g>
+        </svg>
+      </span>
+      <span data-i18n="nav.brand">Vaslix Games</span>
     </a>
-    <span class="nav-pill">Privacy</span>
+    <span class="nav-pill" data-i18n="nav.pill">Privacy</span>
     <span class="nav-spacer"></span>
-    <a class="nav-link" href="./index.html">← Back to home</a>
+    <div class="lang-wrap">
+      <button type="button" class="lang-switcher" id="langSwitcher" aria-haspopup="listbox" aria-expanded="false" aria-label="Change language">
+        <span class="lang-flag" id="langCurrentFlag" aria-hidden="true">🇬🇧</span>
+        <span class="lang-code" id="langCurrentCode">EN</span>
+        <svg class="lang-caret" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <ul class="lang-menu" id="langMenu" role="listbox" aria-label="Language">
+        <li role="option" data-lang="en" tabindex="-1"><span class="lang-flag" aria-hidden="true">🇬🇧</span><span class="lang-code">EN</span><span class="lang-native">English</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg></li>
+        <li role="option" data-lang="ru" tabindex="-1"><span class="lang-flag" aria-hidden="true">🇷🇺</span><span class="lang-code">RU</span><span class="lang-native">Русский</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg></li>
+        <li role="option" data-lang="es" tabindex="-1"><span class="lang-flag" aria-hidden="true">🇪🇸</span><span class="lang-code">ES</span><span class="lang-native">Español</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg></li>
+        <li role="option" data-lang="de" tabindex="-1"><span class="lang-flag" aria-hidden="true">🇩🇪</span><span class="lang-code">DE</span><span class="lang-native">Deutsch</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg></li>
+        <li role="option" data-lang="fr" tabindex="-1"><span class="lang-flag" aria-hidden="true">🇫🇷</span><span class="lang-code">FR</span><span class="lang-native">Français</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg></li>
+      </ul>
+    </div>
+    <a class="nav-link" href="./index.html" data-i18n="nav.back">← Back to home</a>
   </div>
 </header>
 
 <section class="hero">
-  <span class="eyebrow"><span class="eyebrow-dot"></span> Plain-language summary, full legal text below</span>
-  <h1 class="title">Privacy Policy</h1>
-  <p class="lede">
-    How Vaslix Games handles information in our Android titles, including
-    <strong>Gridlix</strong> (<code>com.vaslix.games.gridlix</code>) and any future games we publish.
+  <span class="eyebrow"><span class="eyebrow-dot"></span> <span data-i18n="hero.eyebrow">Plain-language summary, full legal text below</span></span>
+  <h1 class="title" data-i18n="hero.title">Privacy Policy</h1>
+  <p class="lede" data-i18n-html="hero.lede">
+    How Vaslix Games handles information across all our Android apps — games and audio/podcast titles.
+    This policy applies the same way to every app we release, regardless of genre or format.
     No accounts, no servers of our own, no nonsense.
+    <strong>Currently includes Gridlix and Blocklix; podcast/audio titles in development.</strong>
   </p>
   <div class="meta-row">
     <span class="chip">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      Last updated: 2026-05-02
+      <span><span data-i18n="hero.chip.updated">Last updated</span>: 2026-05-18</span>
     </span>
     <span class="chip">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6l-8-4z"/></svg>
-      GDPR / CCPA / COPPA aware
+      <span data-i18n="hero.chip.gdpr">GDPR / CCPA / COPPA aware</span>
     </span>
     <span class="chip">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 10h18"/></svg>
-      Google Play Billing
+      <span data-i18n="hero.chip.billing">Google Play Billing</span>
     </span>
   </div>
 </section>
 
-<section class="summary" aria-label="Summary">
+<section class="summary" aria-label="Summary" data-i18n-attr="aria-label:summary.aria">
   <div class="summary-card">
-    <h2>The short version</h2>
+    <h2 data-i18n="summary.heading">The short version</h2>
     <div class="summary-item">
       <div class="summary-icon good" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 7"/></svg>
       </div>
       <div class="summary-text">
-        <strong>What stays on your device</strong>
-        <span>Game state, settings, best scores, and a cached premium-status flag — never uploaded.</span>
+        <strong data-i18n="summary.1.title">What stays on your device</strong>
+        <span data-i18n="summary.1.desc">Game state, settings, best scores, and a cached premium-status flag — never uploaded.</span>
       </div>
     </div>
     <div class="summary-item">
@@ -601,8 +716,8 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
       </div>
       <div class="summary-text">
-        <strong>What we never see</strong>
-        <span>Payment details, your Google account email, account IDs, contacts, photos, or location beyond the IP-based estimate ad networks use.</span>
+        <strong data-i18n="summary.2.title">What we never see</strong>
+        <span data-i18n="summary.2.desc">Payment details, your Google account email, account IDs, contacts, photos, or location beyond the IP-based estimate ad networks use.</span>
       </div>
     </div>
     <div class="summary-item">
@@ -610,8 +725,8 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="13"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
       </div>
       <div class="summary-text">
-        <strong>Ads vs Premium</strong>
-        <span>Free users see ads via Appodeal mediation. Premium subscribers see no ads — the ad SDK is not used to load or display ads for them.</span>
+        <strong data-i18n="summary.3.title">Ads vs Premium</strong>
+        <span data-i18n="summary.3.desc">Free users see ads via Appodeal mediation and Google AdMob. Premium subscribers see no ads — the ad SDKs are not used to load or display ads for them.</span>
       </div>
     </div>
   </div>
@@ -619,19 +734,19 @@
 
 <div class="layout">
 
-  <aside class="toc" aria-label="Table of contents">
-    <p class="toc-title">On this page</p>
+  <aside class="toc" aria-label="Table of contents" data-i18n-attr="aria-label:toc.aria">
+    <p class="toc-title" data-i18n="toc.title">On this page</p>
     <ul class="toc-list">
-      <li><a href="#sec-1">1. Information we collect</a></li>
-      <li><a href="#sec-2">2. Advertising partners</a></li>
-      <li><a href="#sec-3">3. Subscriptions &amp; Play Billing</a></li>
-      <li><a href="#sec-4">4. Legal basis (GDPR)</a></li>
-      <li><a href="#sec-5">5. CCPA / US state laws</a></li>
-      <li><a href="#sec-6">6. Children's privacy</a></li>
-      <li><a href="#sec-7">7. Data retention</a></li>
-      <li><a href="#sec-8">8. Your rights</a></li>
-      <li><a href="#sec-9">9. Changes to this policy</a></li>
-      <li><a href="#sec-10">10. Contact</a></li>
+      <li><a href="#sec-1" data-i18n="toc.1">1. Information we collect</a></li>
+      <li><a href="#sec-2" data-i18n="toc.2">2. Advertising partners</a></li>
+      <li><a href="#sec-3" data-i18n="toc.3">3. Subscriptions &amp; Play Billing</a></li>
+      <li><a href="#sec-4" data-i18n="toc.4">4. Legal basis (GDPR)</a></li>
+      <li><a href="#sec-5" data-i18n="toc.5">5. CCPA / US state laws</a></li>
+      <li><a href="#sec-6" data-i18n="toc.6">6. Children's privacy</a></li>
+      <li><a href="#sec-7" data-i18n="toc.7">7. Data retention</a></li>
+      <li><a href="#sec-8" data-i18n="toc.8">8. Your rights</a></li>
+      <li><a href="#sec-9" data-i18n="toc.9">9. Changes to this policy</a></li>
+      <li><a href="#sec-10" data-i18n="toc.10">10. Contact</a></li>
     </ul>
   </aside>
 
@@ -640,122 +755,129 @@
     <section class="card" id="sec-1">
       <div class="section-head">
         <div class="section-num">1</div>
-        <h2 class="section-title">Information we collect</h2>
+        <h2 class="section-title" data-i18n="sec1.title">Information we collect</h2>
       </div>
-      <p>Our apps do not require account creation and we do not knowingly collect personal information directly. Information falls into two groups.</p>
+      <p data-i18n="sec1.intro">Our apps do not require account creation and we do not knowingly collect personal information directly. Information falls into two groups.</p>
 
-      <h3>1a. Stored locally on your device</h3>
-      <p>The app stores the following on-device only (in a local Room/SQLite database). This data never leaves your device and is removed when the app is uninstalled:</p>
+      <h3 data-i18n="sec1.h3a">1a. Stored locally on your device</h3>
+      <p data-i18n="sec1.body1a">Each app stores the following on-device only (in a local Room/SQLite database, or an equivalent local store). This data never leaves your device and is removed when the app is uninstalled:</p>
       <ul class="feat">
-        <li>Current game state (board, score, boosters, continues used)</li>
-        <li>Best-game history (local leaderboard) and best score</li>
-        <li>App settings: sound on/off, haptics on/off, theme mode</li>
-        <li>A first-launch flag used to decide whether to show the welcome paywall</li>
-        <li>A cached summary of your subscription status — active/inactive, plan, product ID, base plan ID — so the app applies your premium entitlement immediately at launch without waiting for the network</li>
+        <li data-i18n="sec1.list1a.1">App-specific state — e.g. game board, score, boosters, and continues for puzzle titles; playback position, subscribed feeds, queue, and the offline download cache for podcast/audio titles</li>
+        <li data-i18n="sec1.list1a.2">Best-game history and best score (puzzle titles), or listening history (audio titles), kept as a local-only record</li>
+        <li data-i18n="sec1.list1a.3">App settings: sound on/off, haptics on/off, theme mode, playback speed, and similar per-app preferences</li>
+        <li data-i18n="sec1.list1a.4">A first-launch flag used to decide whether to show the welcome paywall</li>
+        <li data-i18n="sec1.list1a.5">A cached summary of your subscription status — active/inactive, plan, product ID, base plan ID — so the app applies your premium entitlement immediately at launch without waiting for the network</li>
       </ul>
       <div class="callout">
-        <p><strong>What is not stored locally:</strong> payment details, purchase tokens, and Google account identifiers. None of this leaves Google Play.</p>
+        <p data-i18n-html="sec1.callout"><strong>What is not stored locally:</strong> payment details, purchase tokens, and Google account identifiers. None of this leaves Google Play.</p>
       </div>
 
-      <h3>1b. Collected by third parties on our behalf</h3>
-      <p>The third-party services described below may collect technical and advertising-related information automatically:</p>
+      <h3 data-i18n="sec1.h3b">1b. Collected by third parties on our behalf</h3>
+      <p data-i18n="sec1.body1b">The third-party services described below may collect technical and advertising-related information automatically:</p>
       <ul class="feat">
-        <li>Device advertising identifier (Google Advertising ID) — non-premium users only</li>
-        <li>IP address and approximate geographic location derived from it</li>
-        <li>Device model, operating system version, language, and time zone</li>
-        <li>App version, session timestamps, and crash diagnostics</li>
-        <li>Aggregated, non-personally-identifying usage events</li>
+        <li data-i18n="sec1.list1b.1">Device advertising identifier (Google Advertising ID) — non-premium users only</li>
+        <li data-i18n="sec1.list1b.2">IP address and approximate geographic location derived from it</li>
+        <li data-i18n="sec1.list1b.3">Device model, operating system version, language, and time zone</li>
+        <li data-i18n="sec1.list1b.4">App version, session timestamps, and crash diagnostics</li>
+        <li data-i18n="sec1.list1b.5">Aggregated, non-personally-identifying usage events — including podcast/audio playback events (episode started, completed, skipped) for audio titles, used only in aggregate form</li>
       </ul>
     </section>
 
     <section class="card" id="sec-2">
       <div class="section-head">
         <div class="section-num">2</div>
-        <h2 class="section-title">Advertising partners (free / non-premium users)</h2>
+        <h2 class="section-title" data-i18n="sec2.title">Advertising partners (free / non-premium users)</h2>
       </div>
-      <p>For users who have <strong>not</strong> purchased the Premium subscription, the app displays banner ads, rewarded video ads (used to unlock boosters and to continue after game-over), and occasional interstitial ads. We use <a href="https://www.appodeal.com/" target="_blank" rel="noopener">Appodeal</a> as our advertising mediation partner. Appodeal's privacy policy is at <a href="https://www.appodeal.com/privacy-policy" target="_blank" rel="noopener">appodeal.com/privacy-policy ↗</a>.</p>
-      <p>Appodeal mediates demand from a large number of advertising networks, and the active set evolves as Appodeal updates its SDK and as we change our build configuration. The current, authoritative list is published by Appodeal:</p>
+      <p data-i18n-html="sec2.intro">For users who have <strong>not</strong> purchased the Premium subscription, our apps may display banner ads, rewarded video ads (used to unlock boosters, continue after game-over, or unlock similar perks in audio titles), and occasional interstitial ads. We work with two advertising providers, used either together or independently depending on the app.</p>
+
+      <h3 data-i18n="sec2.h3a">Appodeal mediation</h3>
+      <p data-i18n-html="sec2.appodeal1">We use <a href="https://www.appodeal.com/" target="_blank" rel="noopener">Appodeal</a> as our primary advertising mediation partner. Appodeal's privacy policy is at <a href="https://www.appodeal.com/privacy-policy" target="_blank" rel="noopener">appodeal.com/privacy-policy ↗</a>.</p>
+      <p data-i18n="sec2.appodeal2">Appodeal mediates demand from a large number of advertising networks, and the active set evolves as Appodeal updates its SDK and as we change our build configuration. The current, authoritative list is published by Appodeal:</p>
       <p class="partner-line">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent);"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
         <a href="https://www.appodeal.com/partners/" target="_blank" rel="noopener">appodeal.com/partners ↗</a>
       </p>
-      <p>Each network on that page links to its own privacy policy. Privacy questions specific to ad personalisation can be raised directly with Appodeal at the same site.</p>
+      <p data-i18n="sec2.appodeal3">Each network on that page links to its own privacy policy. Privacy questions specific to ad personalisation can be raised directly with Appodeal at the same site.</p>
+
+      <h3 data-i18n="sec2.h3b">Google AdMob</h3>
+      <p data-i18n-html="sec2.admob">Some of our apps also serve display, native, or rewarded ads through Google AdMob directly. Google's advertising data practices are described at <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads ↗</a>, and the Google Privacy Policy is at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy ↗</a>. You can opt out of personalised Google ads at <a href="https://adssettings.google.com/" target="_blank" rel="noopener">adssettings.google.com ↗</a>.</p>
+
       <div class="callout">
-        <p><strong>Premium subscribers do not see ads</strong> and the advertising SDK is not used to load, request, or display ad content for them. Limited initialisation traffic to the ad mediation provider may still occur on app start before subscription state is resolved; once premium status is confirmed, no further ad calls are made for the duration of that session.</p>
+        <p data-i18n-html="sec2.callout"><strong>Premium subscribers do not see ads</strong> and the advertising SDKs (Appodeal and Google AdMob) are not used to load, request, or display ad content for them. Limited initialisation traffic to the ad providers may still occur on app start before subscription state is resolved; once premium status is confirmed, no further ad calls are made for the duration of that session.</p>
       </div>
     </section>
 
     <section class="card" id="sec-3">
       <div class="section-head">
         <div class="section-num">3</div>
-        <h2 class="section-title">Subscriptions and in-app purchases (Google Play Billing)</h2>
+        <h2 class="section-title" data-i18n="sec3.title">Subscriptions and in-app purchases (Google Play Billing)</h2>
       </div>
-      <p>The app offers an optional Premium subscription — monthly and yearly auto-renewing plans, with an introductory free trial on the yearly plan for eligible new subscribers — that removes ads and unlocks unlimited use of in-game boosters. Subscriptions are sold and processed by Google through Google Play Billing.</p>
+      <p data-i18n="sec3.intro">Each of our apps may offer an optional Premium subscription — typically with monthly and yearly auto-renewing plans, and an introductory free trial on the yearly plan for eligible new subscribers — that removes ads and unlocks premium features specific to that app (for example, unlimited in-game boosters in puzzle titles, or offline downloads and ad-free playback in podcast/audio titles). Subscriptions are sold and processed by Google through Google Play Billing.</p>
       <ul class="feat">
-        <li>All payment, billing, account, and tax information is collected and processed by Google. We do not see, store, or transmit your payment method, your Google account email, or any government identifiers.</li>
-        <li>The app receives only a non-identifying entitlement signal from Google indicating whether an active subscription exists for your installation, the product ID, and the base plan ID (e.g. monthly or yearly). This signal is cached locally as described in §1a.</li>
-        <li>Subscription management, cancellation, refund requests, and renewal dates are handled entirely on Google Play. The "Manage" button inside the app deep-links to the Google Play subscriptions page.</li>
-        <li>Google Play's privacy policy applies to all billing-related processing: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy ↗</a></li>
+        <li data-i18n="sec3.list.1">All payment, billing, account, and tax information is collected and processed by Google. We do not see, store, or transmit your payment method, your Google account email, or any government identifiers.</li>
+        <li data-i18n="sec3.list.2">The app receives only a non-identifying entitlement signal from Google indicating whether an active subscription exists for your installation, the product ID, and the base plan ID (e.g. monthly or yearly). This signal is cached locally as described in §1a.</li>
+        <li data-i18n="sec3.list.3">Subscription management, cancellation, refund requests, and renewal dates are handled entirely on Google Play. The "Manage" button inside the app deep-links to the Google Play subscriptions page.</li>
+        <li data-i18n-html="sec3.list.4">Google Play's privacy policy applies to all billing-related processing: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy ↗</a></li>
       </ul>
     </section>
 
     <section class="card" id="sec-4">
       <div class="section-head">
         <div class="section-num">4</div>
-        <h2 class="section-title">Legal basis and consent (GDPR / EEA, UK, Switzerland)</h2>
+        <h2 class="section-title" data-i18n="sec4.title">Legal basis and consent (GDPR / EEA, UK, Switzerland)</h2>
       </div>
-      <p>If you are located in the EEA, the UK, or Switzerland, the legal basis for advertising-related processing is your consent, collected via an IAB Transparency &amp; Consent Framework (TCF) dialog presented when you first launch the app. You may withdraw or change your consent at any time from within the app. The legal basis for processing subscription data via Google Play Billing is the performance of the contract you enter into when purchasing a subscription.</p>
+      <p data-i18n="sec4.body">If you are located in the EEA, the UK, or Switzerland, the legal basis for advertising-related processing is your consent, collected via an IAB Transparency &amp; Consent Framework (TCF) dialog presented when you first launch the app. You may withdraw or change your consent at any time from within the app. The legal basis for processing subscription data via Google Play Billing is the performance of the contract you enter into when purchasing a subscription.</p>
     </section>
 
     <section class="card" id="sec-5">
       <div class="section-head">
         <div class="section-num">5</div>
-        <h2 class="section-title">CCPA / US state privacy laws</h2>
+        <h2 class="section-title" data-i18n="sec5.title">CCPA / US state privacy laws</h2>
       </div>
-      <p>If you are a California resident, or in another applicable US state, you have the right to opt out of the "sale" or "sharing" of your personal information for behavioral advertising. The in-app consent dialog provides this opt-out where required. Subscription processing by Google Play is not a "sale" of personal information.</p>
+      <p data-i18n="sec5.body">If you are a California resident, or in another applicable US state, you have the right to opt out of the "sale" or "sharing" of your personal information for behavioral advertising. The in-app consent dialog provides this opt-out where required. Subscription processing by Google Play is not a "sale" of personal information.</p>
     </section>
 
     <section class="card" id="sec-6">
       <div class="section-head">
         <div class="section-num">6</div>
-        <h2 class="section-title">Children's privacy (COPPA)</h2>
+        <h2 class="section-title" data-i18n="sec6.title">Children's privacy (COPPA)</h2>
       </div>
-      <p>Our apps are not directed at children under 13 (or the equivalent minimum age in your jurisdiction). We do not knowingly collect personal information from children. The Premium subscription is intended for adult purchasers; in-app purchases require a Google Play account with the appropriate purchase permissions.</p>
+      <p data-i18n="sec6.body">Our apps are not directed at children under 13 (or the equivalent minimum age in your jurisdiction). We do not knowingly collect personal information from children. The Premium subscription is intended for adult purchasers; in-app purchases require a Google Play account with the appropriate purchase permissions.</p>
     </section>
 
     <section class="card" id="sec-7">
       <div class="section-head">
         <div class="section-num">7</div>
-        <h2 class="section-title">Data retention</h2>
+        <h2 class="section-title" data-i18n="sec7.title">Data retention</h2>
       </div>
-      <p>Locally stored data described in §1a is retained on your device until you clear the app's data or uninstall the app. We do not retain personal information on our own servers. The advertising partners and Google Play retain data per their own policies.</p>
+      <p data-i18n="sec7.body">Locally stored data described in §1a is retained on your device until you clear the app's data or uninstall the app. We do not retain personal information on our own servers. The advertising partners and Google Play retain data per their own policies.</p>
     </section>
 
     <section class="card" id="sec-8">
       <div class="section-head">
         <div class="section-num">8</div>
-        <h2 class="section-title">Your rights</h2>
+        <h2 class="section-title" data-i18n="sec8.title">Your rights</h2>
       </div>
-      <p>Depending on your jurisdiction, you may have the right to access, correct, delete, restrict, or port your personal data, and to lodge a complaint with a supervisory authority. Because we do not directly hold this data, requests should be directed to the advertising partner concerned, or — for billing data — to Google Play.</p>
+      <p data-i18n="sec8.body">Depending on your jurisdiction, you may have the right to access, correct, delete, restrict, or port your personal data, and to lodge a complaint with a supervisory authority. Because we do not directly hold this data, requests should be directed to the advertising partner concerned, or — for billing data — to Google Play.</p>
       <div class="callout warn">
-        <p>To remove all locally stored data, uninstall the app or clear its storage from your device's settings (<em>Settings → Apps → Gridlix → Storage → Clear data</em>).</p>
+        <p data-i18n-html="sec8.callout">To remove all locally stored data for any of our apps, uninstall the app or clear its storage from your device's settings (<em>Settings → Apps → [the app] → Storage → Clear data</em>).</p>
       </div>
     </section>
 
     <section class="card" id="sec-9">
       <div class="section-head">
         <div class="section-num">9</div>
-        <h2 class="section-title">Changes to this policy</h2>
+        <h2 class="section-title" data-i18n="sec9.title">Changes to this policy</h2>
       </div>
-      <p>We may update this Privacy Policy from time to time. The "Last updated" date at the top of the page indicates when the most recent change was made. Material changes will be reflected in-app on next launch.</p>
+      <p data-i18n="sec9.body">We may update this Privacy Policy from time to time — for example when we add new titles, change advertising partners, or update subscription mechanics. The "Last updated" date at the top of the page indicates when the most recent change was made. Material changes will be reflected in-app on next launch.</p>
     </section>
 
     <section class="card" id="sec-10">
       <div class="section-head">
         <div class="section-num">10</div>
-        <h2 class="section-title">Contact</h2>
+        <h2 class="section-title" data-i18n="sec10.title">Contact</h2>
       </div>
-      <p>For privacy questions, write to us at
+      <p data-i18n-html="sec10.body">For privacy questions about any of our apps, write to us at
         <a href="mailto:vaslixofficial@protonmail.com">vaslixofficial@protonmail.com</a>.
         We try to reply within a reasonable time.</p>
     </section>
@@ -765,18 +887,560 @@
 
 <footer>
   <div class="left">
-    <span class="brand-mark sm" aria-hidden="true">VX</span>
-    <span>&copy; Vaslix Games · Independent Android publisher</span>
+    <span class="brand-mark sm" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <defs>
+          <linearGradient id="vx-foot" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#4AC8EA"/>
+            <stop offset="100%" stop-color="#6C5DD3"/>
+          </linearGradient>
+        </defs>
+        <rect width="100" height="100" rx="22" fill="url(#vx-foot)"/>
+        <g fill="#fff">
+          <path transform="translate(16.03 68.18) scale(0.0518 -0.0518)" d="M721 702 472 0H258L9 702H191L365 172L540 702Z"/>
+          <path transform="translate(47.71 68.18) scale(0.0518 -0.0518)" d="M492 0 349 215 223 0H29L254 357L24 702H223L364 490L488 702H682L459 348L691 0Z"/>
+        </g>
+      </svg>
+    </span>
+    <span data-i18n="footer.copyright">&copy; Vaslix Games · Independent Android publisher</span>
   </div>
   <div class="right">
-    <a href="./index.html">Home</a>
-    <a href="mailto:vaslixofficial@protonmail.com">Contact</a>
-    <a href="#">Back to top ↑</a>
+    <a href="./index.html" data-i18n="footer.home">Home</a>
+    <a href="mailto:vaslixofficial@protonmail.com" data-i18n="footer.contact">Contact</a>
+    <a href="#" data-i18n="footer.backToTop">Back to top ↑</a>
   </div>
 </footer>
 
 <script>
-  // Stagger fade-in + active TOC highlight
+  // ─────────────────────────────────────────────────────────
+  // i18n dictionary (5 locales) — privacy page
+  // ─────────────────────────────────────────────────────────
+  const I18N = {
+    en: {
+      meta: {
+        title: "Privacy Policy — Vaslix Games",
+        description: "How Vaslix Games handles data across all our Android apps — games and audio/podcast titles. Plain-language summary, full policy, GDPR/CCPA/COPPA notes.",
+        ogTitle: "Privacy Policy — Vaslix Games",
+        ogDesc: "What Vaslix Games stores, what we don't, and how our apps use Google Play Billing and ad mediation."
+      },
+      nav: { brand: "Vaslix Games", pill: "Privacy", back: "← Back to home", langLabel: "Change language" },
+      hero: {
+        eyebrow: "Plain-language summary, full legal text below",
+        title: "Privacy Policy",
+        lede: "How Vaslix Games handles information across all our Android apps — games and audio/podcast titles. This policy applies the same way to every app we release, regardless of genre or format. No accounts, no servers of our own, no nonsense. <strong>Currently includes Gridlix and Blocklix; podcast/audio titles in development.</strong>",
+        chip: { updated: "Last updated", gdpr: "GDPR / CCPA / COPPA aware", billing: "Google Play Billing" }
+      },
+      summary: {
+        aria: "Summary",
+        heading: "The short version",
+        1: { title: "What stays on your device", desc: "Game state, settings, best scores, and a cached premium-status flag — never uploaded." },
+        2: { title: "What we never see", desc: "Payment details, your Google account email, account IDs, contacts, photos, or location beyond the IP-based estimate ad networks use." },
+        3: { title: "Ads vs Premium", desc: "Free users see ads via Appodeal mediation and Google AdMob. Premium subscribers see no ads — the ad SDKs are not used to load or display ads for them." }
+      },
+      toc: {
+        aria: "Table of contents", title: "On this page",
+        1: "1. Information we collect", 2: "2. Advertising partners", 3: "3. Subscriptions & Play Billing",
+        4: "4. Legal basis (GDPR)", 5: "5. CCPA / US state laws", 6: "6. Children's privacy",
+        7: "7. Data retention", 8: "8. Your rights", 9: "9. Changes to this policy", 10: "10. Contact"
+      },
+      sec1: {
+        title: "Information we collect",
+        intro: "Our apps do not require account creation and we do not knowingly collect personal information directly. Information falls into two groups.",
+        h3a: "1a. Stored locally on your device",
+        body1a: "Each app stores the following on-device only (in a local Room/SQLite database, or an equivalent local store). This data never leaves your device and is removed when the app is uninstalled:",
+        list1a: {
+          1: "App-specific state — e.g. game board, score, boosters, and continues for puzzle titles; playback position, subscribed feeds, queue, and the offline download cache for podcast/audio titles",
+          2: "Best-game history and best score (puzzle titles), or listening history (audio titles), kept as a local-only record",
+          3: "App settings: sound on/off, haptics on/off, theme mode, playback speed, and similar per-app preferences",
+          4: "A first-launch flag used to decide whether to show the welcome paywall",
+          5: "A cached summary of your subscription status — active/inactive, plan, product ID, base plan ID — so the app applies your premium entitlement immediately at launch without waiting for the network"
+        },
+        callout: "<strong>What is not stored locally:</strong> payment details, purchase tokens, and Google account identifiers. None of this leaves Google Play.",
+        h3b: "1b. Collected by third parties on our behalf",
+        body1b: "The third-party services described below may collect technical and advertising-related information automatically:",
+        list1b: {
+          1: "Device advertising identifier (Google Advertising ID) — non-premium users only",
+          2: "IP address and approximate geographic location derived from it",
+          3: "Device model, operating system version, language, and time zone",
+          4: "App version, session timestamps, and crash diagnostics",
+          5: "Aggregated, non-personally-identifying usage events — including podcast/audio playback events (episode started, completed, skipped) for audio titles, used only in aggregate form"
+        }
+      },
+      sec2: {
+        title: "Advertising partners (free / non-premium users)",
+        intro: "For users who have <strong>not</strong> purchased the Premium subscription, our apps may display banner ads, rewarded video ads (used to unlock boosters, continue after game-over, or unlock similar perks in audio titles), and occasional interstitial ads. We work with two advertising providers, used either together or independently depending on the app.",
+        h3a: "Appodeal mediation",
+        appodeal1: "We use <a href=\"https://www.appodeal.com/\" target=\"_blank\" rel=\"noopener\">Appodeal</a> as our primary advertising mediation partner. Appodeal's privacy policy is at <a href=\"https://www.appodeal.com/privacy-policy\" target=\"_blank\" rel=\"noopener\">appodeal.com/privacy-policy ↗</a>.",
+        appodeal2: "Appodeal mediates demand from a large number of advertising networks, and the active set evolves as Appodeal updates its SDK and as we change our build configuration. The current, authoritative list is published by Appodeal:",
+        appodeal3: "Each network on that page links to its own privacy policy. Privacy questions specific to ad personalisation can be raised directly with Appodeal at the same site.",
+        h3b: "Google AdMob",
+        admob: "Some of our apps also serve display, native, or rewarded ads through Google AdMob directly. Google's advertising data practices are described at <a href=\"https://policies.google.com/technologies/ads\" target=\"_blank\" rel=\"noopener\">policies.google.com/technologies/ads ↗</a>, and the Google Privacy Policy is at <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>. You can opt out of personalised Google ads at <a href=\"https://adssettings.google.com/\" target=\"_blank\" rel=\"noopener\">adssettings.google.com ↗</a>.",
+        callout: "<strong>Premium subscribers do not see ads</strong> and the advertising SDKs (Appodeal and Google AdMob) are not used to load, request, or display ad content for them. Limited initialisation traffic to the ad providers may still occur on app start before subscription state is resolved; once premium status is confirmed, no further ad calls are made for the duration of that session."
+      },
+      sec3: {
+        title: "Subscriptions and in-app purchases (Google Play Billing)",
+        intro: "Each of our apps may offer an optional Premium subscription — typically with monthly and yearly auto-renewing plans, and an introductory free trial on the yearly plan for eligible new subscribers — that removes ads and unlocks premium features specific to that app (for example, unlimited in-game boosters in puzzle titles, or offline downloads and ad-free playback in podcast/audio titles). Subscriptions are sold and processed by Google through Google Play Billing.",
+        list: {
+          1: "All payment, billing, account, and tax information is collected and processed by Google. We do not see, store, or transmit your payment method, your Google account email, or any government identifiers.",
+          2: "The app receives only a non-identifying entitlement signal from Google indicating whether an active subscription exists for your installation, the product ID, and the base plan ID (e.g. monthly or yearly). This signal is cached locally as described in §1a.",
+          3: "Subscription management, cancellation, refund requests, and renewal dates are handled entirely on Google Play. The \"Manage\" button inside the app deep-links to the Google Play subscriptions page.",
+          4: "Google Play's privacy policy applies to all billing-related processing: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>"
+        }
+      },
+      sec4: { title: "Legal basis and consent (GDPR / EEA, UK, Switzerland)", body: "If you are located in the EEA, the UK, or Switzerland, the legal basis for advertising-related processing is your consent, collected via an IAB Transparency & Consent Framework (TCF) dialog presented when you first launch the app. You may withdraw or change your consent at any time from within the app. The legal basis for processing subscription data via Google Play Billing is the performance of the contract you enter into when purchasing a subscription." },
+      sec5: { title: "CCPA / US state privacy laws", body: "If you are a California resident, or in another applicable US state, you have the right to opt out of the \"sale\" or \"sharing\" of your personal information for behavioral advertising. The in-app consent dialog provides this opt-out where required. Subscription processing by Google Play is not a \"sale\" of personal information." },
+      sec6: { title: "Children's privacy (COPPA)", body: "Our apps are not directed at children under 13 (or the equivalent minimum age in your jurisdiction). We do not knowingly collect personal information from children. The Premium subscription is intended for adult purchasers; in-app purchases require a Google Play account with the appropriate purchase permissions." },
+      sec7: { title: "Data retention", body: "Locally stored data described in §1a is retained on your device until you clear the app's data or uninstall the app. We do not retain personal information on our own servers. The advertising partners and Google Play retain data per their own policies." },
+      sec8: { title: "Your rights", body: "Depending on your jurisdiction, you may have the right to access, correct, delete, restrict, or port your personal data, and to lodge a complaint with a supervisory authority. Because we do not directly hold this data, requests should be directed to the advertising partner concerned, or — for billing data — to Google Play.", callout: "To remove all locally stored data for any of our apps, uninstall the app or clear its storage from your device's settings (<em>Settings → Apps → [the app] → Storage → Clear data</em>)." },
+      sec9: { title: "Changes to this policy", body: "We may update this Privacy Policy from time to time — for example when we add new titles, change advertising partners, or update subscription mechanics. The \"Last updated\" date at the top of the page indicates when the most recent change was made. Material changes will be reflected in-app on next launch." },
+      sec10: { title: "Contact", body: "For privacy questions about any of our apps, write to us at <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a>. We try to reply within a reasonable time." },
+      footer: { copyright: "© Vaslix Games · Independent Android publisher", home: "Home", contact: "Contact", backToTop: "Back to top ↑" }
+    },
+    ru: {
+      meta: {
+        title: "Политика конфиденциальности — Vaslix Games",
+        description: "Как Vaslix Games обращается с данными во всех наших Android-приложениях — играх и аудио/подкаст-приложениях. Краткое объяснение, полный текст, заметки по GDPR/CCPA/COPPA.",
+        ogTitle: "Политика конфиденциальности — Vaslix Games",
+        ogDesc: "Что Vaslix Games хранит, чего не хранит, и как наши приложения используют Google Play Billing и рекламную медиацию."
+      },
+      nav: { brand: "Vaslix Games", pill: "Конфиденциальность", back: "← На главную", langLabel: "Сменить язык" },
+      hero: {
+        eyebrow: "Краткое объяснение простым языком, полный юридический текст ниже",
+        title: "Политика конфиденциальности",
+        lede: "Как Vaslix Games обращается с информацией во всех наших Android-приложениях — играх и аудио/подкаст-приложениях. Политика применяется одинаково ко всем выпускаемым нами приложениям, независимо от жанра и формата. Без аккаунтов, без своих серверов, без сюрпризов. <strong>Сейчас включает Gridlix и Blocklix; подкаст/аудио-приложения в разработке.</strong>",
+        chip: { updated: "Обновлено", gdpr: "С учётом GDPR / CCPA / COPPA", billing: "Google Play Billing" }
+      },
+      summary: {
+        aria: "Краткая сводка",
+        heading: "Краткая версия",
+        1: { title: "Что остаётся на вашем устройстве", desc: "Прогресс игры, настройки, лучшие результаты и кэшированный признак Premium-статуса — никуда не выгружаются." },
+        2: { title: "Чего мы никогда не видим", desc: "Платёжные данные, email вашего Google-аккаунта, ID аккаунтов, контакты, фото и геолокацию точнее, чем приблизительная оценка по IP, которой пользуются рекламные сети." },
+        3: { title: "Реклама и Premium", desc: "Бесплатные пользователи видят рекламу через медиацию Appodeal и Google AdMob. Подписчики Premium рекламы не видят — рекламные SDK не подгружают и не показывают им контент." }
+      },
+      toc: {
+        aria: "Содержание", title: "На этой странице",
+        1: "1. Какую информацию мы собираем", 2: "2. Рекламные партнёры", 3: "3. Подписки и Play Billing",
+        4: "4. Правовая основа (GDPR)", 5: "5. CCPA / законы штатов США", 6: "6. Конфиденциальность детей",
+        7: "7. Хранение данных", 8: "8. Ваши права", 9: "9. Изменения политики", 10: "10. Контакты"
+      },
+      sec1: {
+        title: "Какую информацию мы собираем",
+        intro: "Наши приложения не требуют создания аккаунта, и мы не собираем персональные данные напрямую. Информация делится на две группы.",
+        h3a: "1a. Хранится локально на вашем устройстве",
+        body1a: "Каждое приложение хранит на устройстве (в локальной базе Room/SQLite или эквивалентном локальном хранилище). Эти данные не покидают устройство и удаляются при удалении приложения:",
+        list1a: {
+          1: "Состояние, специфичное для приложения — например, поле, счёт, бустеры и продолжения для пазлов; позиция воспроизведения, подписки на ленты, очередь и кэш офлайн-загрузок для подкаст/аудио-приложений",
+          2: "История лучших игр и лучший результат (пазлы) или история прослушивания (аудио) — только локально",
+          3: "Настройки приложения: звук вкл/выкл, вибрация вкл/выкл, тема, скорость воспроизведения и т.п.",
+          4: "Флаг первого запуска — чтобы решить, показывать ли приветственное окно подписки",
+          5: "Кэшированная сводка статуса подписки — активна/нет, план, ID продукта, ID базового плана — чтобы при запуске сразу применить Premium-права без ожидания сети"
+        },
+        callout: "<strong>Что локально не хранится:</strong> платёжные данные, токены покупки и идентификаторы Google-аккаунта. Эта информация не покидает Google Play.",
+        h3b: "1b. Собирается третьими сторонами от нашего имени",
+        body1b: "Указанные ниже сторонние сервисы могут автоматически собирать технические и рекламные данные:",
+        list1b: {
+          1: "Рекламный идентификатор устройства (Google Advertising ID) — только для пользователей без Premium",
+          2: "IP-адрес и приблизительное географическое положение, полученное из него",
+          3: "Модель устройства, версия ОС, язык и часовой пояс",
+          4: "Версия приложения, метки времени сессий и диагностика сбоев",
+          5: "Агрегированные обезличенные события использования, включая события воспроизведения подкастов/аудио (эпизод начат, завершён, пропущен) для аудио-приложений — только в агрегированном виде"
+        }
+      },
+      sec2: {
+        title: "Рекламные партнёры (бесплатные пользователи)",
+        intro: "Пользователям, которые <strong>не</strong> оформили Premium-подписку, приложения могут показывать баннеры, видео с вознаграждением (для разблокировки бустеров, продолжения после проигрыша или похожих опций в аудио-приложениях) и редкие межстраничные объявления. Мы работаем с двумя рекламными провайдерами — вместе или по отдельности в зависимости от приложения.",
+        h3a: "Медиация Appodeal",
+        appodeal1: "Мы используем <a href=\"https://www.appodeal.com/\" target=\"_blank\" rel=\"noopener\">Appodeal</a> в качестве основного партнёра по рекламной медиации. Политика конфиденциальности Appodeal: <a href=\"https://www.appodeal.com/privacy-policy\" target=\"_blank\" rel=\"noopener\">appodeal.com/privacy-policy ↗</a>.",
+        appodeal2: "Appodeal агрегирует спрос множества рекламных сетей; активный список меняется по мере обновления SDK Appodeal и нашей конфигурации сборки. Актуальный авторитетный список публикует Appodeal:",
+        appodeal3: "Каждая сеть на этой странице ведёт к своей политике конфиденциальности. Вопросы по персонализации рекламы можно задавать напрямую Appodeal по тому же адресу.",
+        h3b: "Google AdMob",
+        admob: "Часть наших приложений также показывает баннерные, нативные или видео-с-вознаграждением через Google AdMob напрямую. Практики Google в области рекламных данных описаны на <a href=\"https://policies.google.com/technologies/ads\" target=\"_blank\" rel=\"noopener\">policies.google.com/technologies/ads ↗</a>, политика конфиденциальности Google — на <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>. Отказаться от персонализированной рекламы Google можно на <a href=\"https://adssettings.google.com/\" target=\"_blank\" rel=\"noopener\">adssettings.google.com ↗</a>.",
+        callout: "<strong>Подписчики Premium не видят рекламы</strong>, и рекламные SDK (Appodeal и Google AdMob) не используются для загрузки, запроса и показа им рекламы. Ограниченный инициализационный трафик к провайдерам рекламы при запуске возможен до определения статуса подписки; как только статус Premium подтверждён, в этой сессии больше рекламных вызовов не происходит."
+      },
+      sec3: {
+        title: "Подписки и встроенные покупки (Google Play Billing)",
+        intro: "Каждое наше приложение может предлагать опциональную Premium-подписку — обычно с месячным и годовым автопродлением и вводным бесплатным периодом на годовом плане для новых подписчиков — которая отключает рекламу и открывает премиум-функции, специфичные для приложения (например, неограниченные бустеры в пазлах или офлайн-загрузки и воспроизведение без рекламы в подкаст/аудио-приложениях). Подписки продаёт и обрабатывает Google через Google Play Billing.",
+        list: {
+          1: "Все платёжные, биллинговые, аккаунтные и налоговые данные собирает и обрабатывает Google. Мы не видим, не храним и не передаём ваш способ оплаты, email Google-аккаунта или государственные идентификаторы.",
+          2: "Приложение получает от Google только обезличенный сигнал о наличии активной подписки для вашей установки, ID продукта и ID базового плана (например, месячный или годовой). Этот сигнал кэшируется локально, как описано в §1a.",
+          3: "Управление подпиской, отмена, запросы возврата и даты продления полностью обрабатываются на Google Play. Кнопка «Управление» в приложении ведёт на страницу подписок Google Play.",
+          4: "На все процессы, связанные с биллингом, распространяется политика конфиденциальности Google Play: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>"
+        }
+      },
+      sec4: { title: "Правовая основа и согласие (GDPR / ЕЭЗ, Великобритания, Швейцария)", body: "Если вы находитесь в ЕЭЗ, Великобритании или Швейцарии, правовой основой обработки рекламных данных является ваше согласие, собираемое через диалог IAB Transparency & Consent Framework (TCF) при первом запуске приложения. Вы можете отозвать или изменить согласие в любой момент внутри приложения. Правовая основа обработки данных подписки через Google Play Billing — исполнение договора, который вы заключаете при покупке подписки." },
+      sec5: { title: "CCPA / законы о конфиденциальности штатов США", body: "Если вы житель Калифорнии или другого подходящего штата США, у вас есть право отказаться от «продажи» или «передачи» вашей персональной информации для поведенческой рекламы. Внутренний диалог согласия предоставляет такой опт-аут там, где это требуется. Обработка подписки через Google Play не является «продажей» персональной информации." },
+      sec6: { title: "Конфиденциальность детей (COPPA)", body: "Наши приложения не предназначены для детей младше 13 лет (или эквивалентного минимального возраста в вашей юрисдикции). Мы сознательно не собираем персональные данные детей. Premium-подписка предназначена для взрослых покупателей; для встроенных покупок требуется Google-аккаунт с соответствующими правами." },
+      sec7: { title: "Хранение данных", body: "Локально хранимые данные из §1a сохраняются на вашем устройстве до очистки данных приложения или его удаления. Мы не храним персональные данные на собственных серверах. Рекламные партнёры и Google Play хранят данные согласно своим политикам." },
+      sec8: { title: "Ваши права", body: "В зависимости от вашей юрисдикции у вас могут быть права на доступ, исправление, удаление, ограничение или перенос ваших персональных данных, а также право подать жалобу в надзорный орган. Поскольку мы напрямую этих данных не храним, запросы следует направлять соответствующему рекламному партнёру или — по данным биллинга — Google Play.", callout: "Чтобы удалить все локально сохранённые данные любого из наших приложений, удалите приложение или очистите его данные в настройках устройства (<em>Настройки → Приложения → [приложение] → Память → Очистить данные</em>)." },
+      sec9: { title: "Изменения политики", body: "Мы можем периодически обновлять эту Политику конфиденциальности — например, при добавлении новых тайтлов, смене рекламных партнёров или обновлении механики подписки. Дата «Обновлено» вверху страницы указывает, когда внесено последнее изменение. Существенные изменения отражаются в приложении при следующем запуске." },
+      sec10: { title: "Контакты", body: "По вопросам конфиденциальности любого из наших приложений пишите на <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a>. Стараемся отвечать в разумные сроки." },
+      footer: { copyright: "© Vaslix Games · Независимый Android-издатель", home: "Главная", contact: "Контакты", backToTop: "Наверх ↑" }
+    },
+    es: {
+      meta: {
+        title: "Política de Privacidad — Vaslix Games",
+        description: "Cómo Vaslix Games gestiona los datos en todas nuestras apps Android — juegos y títulos de audio/podcast. Resumen claro, política completa, notas sobre GDPR/CCPA/COPPA.",
+        ogTitle: "Política de Privacidad — Vaslix Games",
+        ogDesc: "Qué almacena Vaslix Games, qué no, y cómo nuestras apps usan Google Play Billing y la mediación publicitaria."
+      },
+      nav: { brand: "Vaslix Games", pill: "Privacidad", back: "← Volver al inicio", langLabel: "Cambiar idioma" },
+      hero: {
+        eyebrow: "Resumen en lenguaje claro, texto legal completo abajo",
+        title: "Política de Privacidad",
+        lede: "Cómo Vaslix Games gestiona la información en todas nuestras apps Android — juegos y títulos de audio/podcast. Esta política se aplica igual a cada app que publicamos, sin importar género o formato. Sin cuentas, sin servidores propios, sin tonterías. <strong>Actualmente incluye Gridlix y Blocklix; títulos de podcast/audio en desarrollo.</strong>",
+        chip: { updated: "Actualizado", gdpr: "Cumple GDPR / CCPA / COPPA", billing: "Google Play Billing" }
+      },
+      summary: {
+        aria: "Resumen",
+        heading: "Versión corta",
+        1: { title: "Qué se queda en tu dispositivo", desc: "El estado del juego, ajustes, mejores puntuaciones y una marca cacheada de Premium — nunca se sube." },
+        2: { title: "Qué nunca vemos", desc: "Datos de pago, tu email de Google, identificadores de cuenta, contactos, fotos o ubicación más allá del estimado por IP que usan las redes publicitarias." },
+        3: { title: "Anuncios vs Premium", desc: "Los usuarios gratuitos ven anuncios vía mediación Appodeal y Google AdMob. Los suscriptores Premium no ven anuncios — los SDK de publicidad no se usan para cargarlos o mostrarlos." }
+      },
+      toc: {
+        aria: "Tabla de contenidos", title: "En esta página",
+        1: "1. Información que recopilamos", 2: "2. Socios publicitarios", 3: "3. Suscripciones y Play Billing",
+        4: "4. Base legal (GDPR)", 5: "5. CCPA / leyes estatales EE. UU.", 6: "6. Privacidad infantil",
+        7: "7. Retención de datos", 8: "8. Tus derechos", 9: "9. Cambios a esta política", 10: "10. Contacto"
+      },
+      sec1: {
+        title: "Información que recopilamos",
+        intro: "Nuestras apps no requieren crear una cuenta y no recopilamos a sabiendas información personal directamente. La información se divide en dos grupos.",
+        h3a: "1a. Almacenado localmente en tu dispositivo",
+        body1a: "Cada app almacena lo siguiente solo en el dispositivo (en una base local Room/SQLite o equivalente). Estos datos no salen del dispositivo y se eliminan al desinstalar la app:",
+        list1a: {
+          1: "Estado específico de la app — p. ej. tablero, puntuación, boosters y continues en títulos de puzzle; posición de reproducción, feeds suscritos, cola y caché de descargas offline en títulos de podcast/audio",
+          2: "Historial de mejores partidas y mejor puntuación (puzzles) o historial de escucha (audio), guardado solo localmente",
+          3: "Ajustes de la app: sonido on/off, háptica on/off, tema, velocidad de reproducción y similares",
+          4: "Una marca de primer arranque para decidir si mostrar el paywall de bienvenida",
+          5: "Resumen cacheado del estado de tu suscripción — activa/inactiva, plan, ID de producto, ID de plan base — para que la app aplique tu Premium al iniciar sin esperar a la red"
+        },
+        callout: "<strong>Lo que no se guarda localmente:</strong> datos de pago, tokens de compra e identificadores de cuenta Google. Nada de eso sale de Google Play.",
+        h3b: "1b. Recopilado por terceros en nuestro nombre",
+        body1b: "Los servicios externos descritos abajo pueden recopilar información técnica y publicitaria automáticamente:",
+        list1b: {
+          1: "Identificador publicitario del dispositivo (Google Advertising ID) — solo usuarios no Premium",
+          2: "Dirección IP y ubicación geográfica aproximada derivada",
+          3: "Modelo de dispositivo, versión de SO, idioma y zona horaria",
+          4: "Versión de la app, marcas de tiempo de sesión y diagnósticos de fallos",
+          5: "Eventos de uso agregados y no identificables — incluidos eventos de reproducción de podcast/audio (episodio iniciado, completado, omitido) en títulos de audio, usados solo de forma agregada"
+        }
+      },
+      sec2: {
+        title: "Socios publicitarios (usuarios gratuitos / no Premium)",
+        intro: "A los usuarios que <strong>no</strong> han comprado la suscripción Premium, nuestras apps pueden mostrar banners, anuncios rewarded (para desbloquear boosters, continuar tras game-over o similar en títulos de audio) e intersticiales ocasionales. Trabajamos con dos proveedores publicitarios, juntos o por separado según la app.",
+        h3a: "Mediación de Appodeal",
+        appodeal1: "Usamos <a href=\"https://www.appodeal.com/\" target=\"_blank\" rel=\"noopener\">Appodeal</a> como nuestro principal socio de mediación publicitaria. La política de privacidad de Appodeal está en <a href=\"https://www.appodeal.com/privacy-policy\" target=\"_blank\" rel=\"noopener\">appodeal.com/privacy-policy ↗</a>.",
+        appodeal2: "Appodeal media demanda de muchas redes publicitarias; el conjunto activo cambia con las actualizaciones del SDK y nuestra configuración. La lista actualizada y autoritativa la publica Appodeal:",
+        appodeal3: "Cada red enlazada en esa página remite a su propia política de privacidad. Las preguntas sobre personalización de anuncios pueden dirigirse directamente a Appodeal en el mismo sitio.",
+        h3b: "Google AdMob",
+        admob: "Algunas de nuestras apps también muestran anuncios display, nativos o rewarded vía Google AdMob directamente. Las prácticas de Google sobre datos publicitarios se describen en <a href=\"https://policies.google.com/technologies/ads\" target=\"_blank\" rel=\"noopener\">policies.google.com/technologies/ads ↗</a>, y la Política de Privacidad de Google en <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>. Puedes excluirte de la publicidad personalizada de Google en <a href=\"https://adssettings.google.com/\" target=\"_blank\" rel=\"noopener\">adssettings.google.com ↗</a>.",
+        callout: "<strong>Los suscriptores Premium no ven anuncios</strong> y los SDK de publicidad (Appodeal y Google AdMob) no se usan para cargar, solicitar o mostrar contenido publicitario. Es posible un tráfico de inicialización limitado a los proveedores al arrancar antes de resolver el estado de suscripción; una vez confirmado Premium, no se hacen más llamadas publicitarias en esa sesión."
+      },
+      sec3: {
+        title: "Suscripciones y compras dentro de la app (Google Play Billing)",
+        intro: "Cada una de nuestras apps puede ofrecer una suscripción Premium opcional — generalmente con planes mensuales y anuales con renovación automática y una prueba gratuita introductoria en el plan anual para nuevos suscriptores elegibles — que elimina anuncios y desbloquea funciones premium específicas (p. ej. boosters ilimitados en puzzles, o descargas offline y reproducción sin anuncios en podcast/audio). Las suscripciones las vende y procesa Google a través de Google Play Billing.",
+        list: {
+          1: "Toda la información de pago, facturación, cuenta e impuestos la recopila y procesa Google. No vemos, almacenamos ni transmitimos tu método de pago, email de Google ni identificadores oficiales.",
+          2: "La app solo recibe de Google una señal no identificadora sobre si existe una suscripción activa, el ID de producto y el ID de plan base (mensual o anual). Esta señal se cachea localmente como en §1a.",
+          3: "La gestión, cancelación, reembolsos y fechas de renovación se gestionan íntegramente en Google Play. El botón «Gestionar» dentro de la app enlaza a la página de suscripciones de Google Play.",
+          4: "La política de privacidad de Google Play se aplica a todo el procesamiento de facturación: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>"
+        }
+      },
+      sec4: { title: "Base legal y consentimiento (GDPR / EEE, Reino Unido, Suiza)", body: "Si te encuentras en el EEE, Reino Unido o Suiza, la base legal para el procesamiento publicitario es tu consentimiento, recogido mediante un diálogo IAB Transparency & Consent Framework (TCF) en el primer arranque de la app. Puedes retirar o cambiar tu consentimiento en cualquier momento dentro de la app. La base legal del procesamiento de datos de suscripción vía Google Play Billing es la ejecución del contrato al comprar la suscripción." },
+      sec5: { title: "CCPA / leyes estatales de privacidad de EE. UU.", body: "Si resides en California u otro estado aplicable, tienes derecho a oponerte a la \"venta\" o \"compartición\" de tu información personal con fines publicitarios conductuales. El diálogo de consentimiento ofrece este opt-out donde sea necesario. El procesamiento de suscripciones por Google Play no es una \"venta\" de información personal." },
+      sec6: { title: "Privacidad infantil (COPPA)", body: "Nuestras apps no están dirigidas a menores de 13 años (o la edad mínima equivalente en tu jurisdicción). No recopilamos a sabiendas información personal de menores. La suscripción Premium está pensada para compradores adultos; las compras requieren una cuenta de Google Play con los permisos adecuados." },
+      sec7: { title: "Retención de datos", body: "Los datos almacenados localmente descritos en §1a se conservan en tu dispositivo hasta que borres los datos de la app o la desinstales. No retenemos información personal en servidores propios. Los socios publicitarios y Google Play conservan los datos según sus propias políticas." },
+      sec8: { title: "Tus derechos", body: "Según tu jurisdicción puedes tener derecho a acceder, corregir, eliminar, restringir o portar tus datos personales, y a presentar una reclamación ante una autoridad de control. Como no almacenamos directamente estos datos, las solicitudes deben dirigirse al socio publicitario correspondiente o — para datos de facturación — a Google Play.", callout: "Para eliminar todos los datos almacenados localmente de cualquiera de nuestras apps, desinstálala o borra su almacenamiento desde los ajustes del dispositivo (<em>Ajustes → Aplicaciones → [la app] → Almacenamiento → Borrar datos</em>)." },
+      sec9: { title: "Cambios a esta política", body: "Podemos actualizar esta Política de Privacidad de vez en cuando — por ejemplo cuando añadamos nuevos títulos, cambiemos socios publicitarios o actualicemos la mecánica de suscripción. La fecha «Actualizado» en la parte superior indica cuándo se hizo el último cambio. Los cambios sustanciales se reflejarán en la app en el siguiente arranque." },
+      sec10: { title: "Contacto", body: "Para preguntas de privacidad sobre cualquiera de nuestras apps, escríbenos a <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a>. Intentamos responder en un plazo razonable." },
+      footer: { copyright: "© Vaslix Games · Editor independiente de Android", home: "Inicio", contact: "Contacto", backToTop: "Arriba ↑" }
+    },
+    de: {
+      meta: {
+        title: "Datenschutzerklärung — Vaslix Games",
+        description: "Wie Vaslix Games Daten in allen unseren Android-Apps verarbeitet — Spielen und Audio-/Podcast-Titeln. Klartext-Zusammenfassung, vollständige Erklärung, GDPR/CCPA/COPPA-Hinweise.",
+        ogTitle: "Datenschutzerklärung — Vaslix Games",
+        ogDesc: "Was Vaslix Games speichert, was nicht, und wie unsere Apps Google Play Billing und Werbe-Mediation nutzen."
+      },
+      nav: { brand: "Vaslix Games", pill: "Datenschutz", back: "← Zurück zur Startseite", langLabel: "Sprache ändern" },
+      hero: {
+        eyebrow: "Klartext-Zusammenfassung, vollständiger Rechtstext unten",
+        title: "Datenschutzerklärung",
+        lede: "Wie Vaslix Games Informationen in allen unseren Android-Apps verarbeitet — Spielen und Audio-/Podcast-Titeln. Diese Erklärung gilt einheitlich für jede App, die wir veröffentlichen, unabhängig von Genre oder Format. Keine Konten, keine eigenen Server, kein Unsinn. <strong>Aktuell enthält: Gridlix und Blocklix; Podcast-/Audio-Titel in Entwicklung.</strong>",
+        chip: { updated: "Zuletzt aktualisiert", gdpr: "GDPR / CCPA / COPPA-konform", billing: "Google Play Billing" }
+      },
+      summary: {
+        aria: "Zusammenfassung",
+        heading: "Die Kurzfassung",
+        1: { title: "Was auf deinem Gerät bleibt", desc: "Spielstand, Einstellungen, Bestleistungen und ein gecachter Premium-Status-Flag — wird nie hochgeladen." },
+        2: { title: "Was wir nie sehen", desc: "Zahlungsdetails, deine Google-Konto-E-Mail, Konto-IDs, Kontakte, Fotos oder Standort über die IP-basierte Schätzung der Werbenetzwerke hinaus." },
+        3: { title: "Werbung vs. Premium", desc: "Free-Nutzer sehen Werbung über Appodeal-Mediation und Google AdMob. Premium-Abonnenten sehen keine Werbung — die Ad-SDKs werden für sie nicht zum Laden oder Anzeigen genutzt." }
+      },
+      toc: {
+        aria: "Inhaltsverzeichnis", title: "Auf dieser Seite",
+        1: "1. Welche Informationen wir erfassen", 2: "2. Werbepartner", 3: "3. Abos & Play Billing",
+        4: "4. Rechtsgrundlage (GDPR)", 5: "5. CCPA / US-Gesetze", 6: "6. Kinder-Datenschutz",
+        7: "7. Datenspeicherung", 8: "8. Deine Rechte", 9: "9. Änderungen dieser Erklärung", 10: "10. Kontakt"
+      },
+      sec1: {
+        title: "Welche Informationen wir erfassen",
+        intro: "Unsere Apps erfordern keine Kontoerstellung, und wir erheben nicht wissentlich personenbezogene Daten direkt. Informationen verteilen sich auf zwei Gruppen.",
+        h3a: "1a. Lokal auf deinem Gerät gespeichert",
+        body1a: "Jede App speichert Folgendes nur auf dem Gerät (in einer lokalen Room/SQLite-Datenbank oder einem äquivalenten lokalen Speicher). Diese Daten verlassen das Gerät nie und werden bei Deinstallation entfernt:",
+        list1a: {
+          1: "App-spezifischer Zustand — z. B. Spielfeld, Punkte, Booster und Continues bei Puzzle-Titeln; Wiedergabeposition, abonnierte Feeds, Warteschlange und Offline-Download-Cache bei Podcast/Audio-Titeln",
+          2: "Bestenliste und Bestleistung (Puzzle), oder Hörverlauf (Audio), als rein lokaler Datensatz",
+          3: "App-Einstellungen: Ton an/aus, Haptik an/aus, Theme-Modus, Wiedergabegeschwindigkeit und vergleichbare Voreinstellungen",
+          4: "Ein First-Launch-Flag zur Entscheidung, ob das Willkommens-Paywall angezeigt wird",
+          5: "Eine gecachte Zusammenfassung deines Abo-Status — aktiv/inaktiv, Plan, Produkt-ID, Basis-Plan-ID — damit die App dein Premium-Recht sofort beim Start anwendet, ohne aufs Netzwerk zu warten"
+        },
+        callout: "<strong>Was nicht lokal gespeichert wird:</strong> Zahlungsdaten, Kauf-Tokens und Google-Konto-Identifikatoren. Nichts davon verlässt Google Play.",
+        h3b: "1b. Von Dritten in unserem Auftrag erfasst",
+        body1b: "Die unten beschriebenen Drittdienste können automatisch technische und werbebezogene Informationen erfassen:",
+        list1b: {
+          1: "Werbe-ID des Geräts (Google Advertising ID) — nur Nicht-Premium-Nutzer",
+          2: "IP-Adresse und daraus abgeleiteter ungefährer Standort",
+          3: "Gerätemodell, Betriebssystemversion, Sprache und Zeitzone",
+          4: "App-Version, Sitzungs-Zeitstempel und Absturzdiagnosen",
+          5: "Aggregierte, nicht personenbezogene Nutzungsereignisse — einschließlich Podcast/Audio-Wiedergabeereignisse (Episode gestartet, abgeschlossen, übersprungen) bei Audio-Titeln, nur in aggregierter Form genutzt"
+        }
+      },
+      sec2: {
+        title: "Werbepartner (Free / Nicht-Premium-Nutzer)",
+        intro: "Für Nutzer, die das Premium-Abo <strong>nicht</strong> erworben haben, können unsere Apps Banner, Rewarded-Videos (zum Freischalten von Boostern, zum Weiterspielen nach Game-over oder ähnlichen Vorteilen in Audio-Titeln) und gelegentliche Interstitials anzeigen. Wir arbeiten mit zwei Werbedienstleistern, je nach App gemeinsam oder getrennt.",
+        h3a: "Appodeal-Mediation",
+        appodeal1: "Wir nutzen <a href=\"https://www.appodeal.com/\" target=\"_blank\" rel=\"noopener\">Appodeal</a> als unseren primären Werbe-Mediation-Partner. Die Datenschutzerklärung von Appodeal findest du unter <a href=\"https://www.appodeal.com/privacy-policy\" target=\"_blank\" rel=\"noopener\">appodeal.com/privacy-policy ↗</a>.",
+        appodeal2: "Appodeal vermittelt Nachfrage einer großen Zahl von Werbenetzwerken; die aktive Liste ändert sich mit SDK-Updates von Appodeal und unserer Build-Konfiguration. Die aktuelle, autoritative Liste veröffentlicht Appodeal:",
+        appodeal3: "Jedes auf dieser Seite verlinkte Netzwerk verweist auf seine eigene Datenschutzerklärung. Datenschutzfragen zur Werbe-Personalisierung können direkt bei Appodeal auf derselben Seite gestellt werden.",
+        h3b: "Google AdMob",
+        admob: "Einige unserer Apps schalten Display-, Native- oder Rewarded-Ads direkt über Google AdMob. Die Werbedaten-Praktiken von Google sind unter <a href=\"https://policies.google.com/technologies/ads\" target=\"_blank\" rel=\"noopener\">policies.google.com/technologies/ads ↗</a> beschrieben, die Google-Datenschutzerklärung unter <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>. Personalisierte Google-Werbung kannst du unter <a href=\"https://adssettings.google.com/\" target=\"_blank\" rel=\"noopener\">adssettings.google.com ↗</a> deaktivieren.",
+        callout: "<strong>Premium-Abonnenten sehen keine Werbung</strong>, und die Ad-SDKs (Appodeal und Google AdMob) werden für sie nicht zum Laden, Anfordern oder Anzeigen von Werbeinhalten genutzt. Begrenzter Initialisierungs-Traffic zu den Werbeprovidern beim App-Start ist möglich, bevor der Abo-Status aufgelöst ist; ist Premium bestätigt, finden in dieser Sitzung keine weiteren Werbeaufrufe statt."
+      },
+      sec3: {
+        title: "Abos und In-App-Käufe (Google Play Billing)",
+        intro: "Jede unserer Apps kann ein optionales Premium-Abo anbieten — typischerweise mit monatlicher und jährlicher automatischer Verlängerung und einer einführenden Gratis-Testphase im Jahresplan für berechtigte Neu-Abonnenten — das Werbung entfernt und app-spezifische Premium-Funktionen freischaltet (z. B. unbegrenzte In-Game-Booster bei Puzzle-Titeln oder Offline-Downloads und werbefreie Wiedergabe bei Podcast/Audio-Titeln). Abos werden von Google über Google Play Billing verkauft und verarbeitet.",
+        list: {
+          1: "Alle Zahlungs-, Abrechnungs-, Konto- und Steuerdaten werden von Google erfasst und verarbeitet. Wir sehen, speichern und übertragen weder dein Zahlungsmittel noch deine Google-Konto-E-Mail oder amtliche Identifikatoren.",
+          2: "Die App erhält von Google nur ein nicht identifizierendes Berechtigungssignal, ob ein aktives Abo für deine Installation besteht, die Produkt-ID und die Basis-Plan-ID (z. B. monatlich oder jährlich). Dieses Signal wird lokal gecached wie in §1a beschrieben.",
+          3: "Abo-Verwaltung, Kündigung, Erstattungsanfragen und Verlängerungstermine werden vollständig in Google Play abgewickelt. Die „Verwalten\"-Schaltfläche in der App verlinkt zur Google-Play-Abo-Seite.",
+          4: "Die Datenschutzerklärung von Google Play gilt für alle abrechnungsbezogenen Verarbeitungen: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>"
+        }
+      },
+      sec4: { title: "Rechtsgrundlage und Einwilligung (GDPR / EWR, UK, Schweiz)", body: "Wenn du dich im EWR, Vereinigten Königreich oder in der Schweiz befindest, ist die Rechtsgrundlage für werbebezogene Verarbeitungen deine Einwilligung, eingeholt über einen IAB Transparency & Consent Framework (TCF)-Dialog beim ersten App-Start. Du kannst deine Einwilligung jederzeit innerhalb der App widerrufen oder ändern. Rechtsgrundlage der Verarbeitung von Abo-Daten via Google Play Billing ist die Erfüllung des beim Abo-Kauf geschlossenen Vertrags." },
+      sec5: { title: "CCPA / US-Datenschutzgesetze der Bundesstaaten", body: "Wenn du in Kalifornien oder einem anderen einschlägigen US-Bundesstaat ansässig bist, hast du das Recht, dem „Verkauf\" oder „Teilen\" deiner personenbezogenen Informationen für verhaltensbasierte Werbung zu widersprechen. Der In-App-Einwilligungsdialog stellt diesen Opt-out bereit, wo erforderlich. Die Abo-Abwicklung durch Google Play ist kein „Verkauf\" personenbezogener Informationen." },
+      sec6: { title: "Datenschutz für Kinder (COPPA)", body: "Unsere Apps richten sich nicht an Kinder unter 13 Jahren (oder das entsprechende Mindestalter deiner Jurisdiktion). Wir erfassen nicht wissentlich personenbezogene Daten von Kindern. Das Premium-Abo richtet sich an erwachsene Käufer; In-App-Käufe erfordern ein Google-Play-Konto mit entsprechenden Berechtigungen." },
+      sec7: { title: "Datenspeicherung", body: "Lokal gespeicherte Daten gemäß §1a bleiben auf deinem Gerät, bis du die App-Daten löschst oder die App deinstallierst. Wir bewahren keine personenbezogenen Daten auf eigenen Servern auf. Werbepartner und Google Play speichern Daten gemäß ihren eigenen Richtlinien." },
+      sec8: { title: "Deine Rechte", body: "Je nach Jurisdiktion kannst du das Recht haben, deine personenbezogenen Daten einzusehen, zu berichtigen, zu löschen, zu beschränken oder zu übertragen, sowie Beschwerde bei einer Aufsichtsbehörde einzulegen. Da wir diese Daten nicht selbst halten, sollten Anfragen an den betreffenden Werbepartner oder — für Abrechnungsdaten — an Google Play gerichtet werden.", callout: "Um sämtliche lokal gespeicherten Daten einer unserer Apps zu entfernen, deinstalliere die App oder lösche ihren Speicher in den Geräteeinstellungen (<em>Einstellungen → Apps → [die App] → Speicher → Daten löschen</em>)." },
+      sec9: { title: "Änderungen dieser Erklärung", body: "Wir können diese Datenschutzerklärung gelegentlich aktualisieren — z. B. wenn wir neue Titel hinzufügen, Werbepartner wechseln oder Abo-Mechaniken anpassen. Das Datum „Zuletzt aktualisiert\" oben gibt an, wann die letzte Änderung erfolgte. Wesentliche Änderungen werden in der App beim nächsten Start widergespiegelt." },
+      sec10: { title: "Kontakt", body: "Für Datenschutzfragen zu einer unserer Apps schreib uns an <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a>. Wir versuchen, in angemessener Zeit zu antworten." },
+      footer: { copyright: "© Vaslix Games · Unabhängiger Android-Publisher", home: "Startseite", contact: "Kontakt", backToTop: "Nach oben ↑" }
+    },
+    fr: {
+      meta: {
+        title: "Politique de confidentialité — Vaslix Games",
+        description: "Comment Vaslix Games traite les données dans toutes nos apps Android — jeux et titres audio/podcast. Résumé clair, politique complète, notes GDPR/CCPA/COPPA.",
+        ogTitle: "Politique de confidentialité — Vaslix Games",
+        ogDesc: "Ce que Vaslix Games stocke, ce qu'il ne stocke pas, et comment nos apps utilisent Google Play Billing et la médiation publicitaire."
+      },
+      nav: { brand: "Vaslix Games", pill: "Confidentialité", back: "← Retour à l'accueil", langLabel: "Changer de langue" },
+      hero: {
+        eyebrow: "Résumé en langage clair, texte légal complet ci-dessous",
+        title: "Politique de confidentialité",
+        lede: "Comment Vaslix Games traite les informations dans toutes nos apps Android — jeux et titres audio/podcast. Cette politique s'applique de la même façon à chaque app que nous publions, quel que soit le genre ou le format. Pas de compte, pas de serveur maison, pas de surprise. <strong>Inclut actuellement Gridlix et Blocklix ; titres podcast/audio en développement.</strong>",
+        chip: { updated: "Mis à jour", gdpr: "Conforme GDPR / CCPA / COPPA", billing: "Google Play Billing" }
+      },
+      summary: {
+        aria: "Résumé",
+        heading: "La version courte",
+        1: { title: "Ce qui reste sur votre appareil", desc: "État de jeu, réglages, meilleurs scores et un drapeau Premium mis en cache — jamais envoyé." },
+        2: { title: "Ce que nous ne voyons jamais", desc: "Données de paiement, votre e-mail Google, identifiants de compte, contacts, photos ou localisation au-delà de l'estimation par IP des régies publicitaires." },
+        3: { title: "Pubs vs Premium", desc: "Les utilisateurs gratuits voient des pubs via la médiation Appodeal et Google AdMob. Les abonnés Premium ne voient pas de pubs — les SDK publicitaires ne sont pas utilisés pour charger ou afficher du contenu pour eux." }
+      },
+      toc: {
+        aria: "Table des matières", title: "Sur cette page",
+        1: "1. Informations collectées", 2: "2. Partenaires publicitaires", 3: "3. Abonnements & Play Billing",
+        4: "4. Base légale (GDPR)", 5: "5. CCPA / lois d'État US", 6: "6. Vie privée des enfants",
+        7: "7. Conservation des données", 8: "8. Vos droits", 9: "9. Modifications de cette politique", 10: "10. Contact"
+      },
+      sec1: {
+        title: "Informations collectées",
+        intro: "Nos apps ne nécessitent pas de création de compte et nous ne collectons pas sciemment d'informations personnelles directement. Les informations se répartissent en deux groupes.",
+        h3a: "1a. Stocké localement sur votre appareil",
+        body1a: "Chaque app stocke ce qui suit uniquement sur l'appareil (dans une base Room/SQLite locale ou équivalent). Ces données ne quittent jamais l'appareil et sont supprimées à la désinstallation :",
+        list1a: {
+          1: "État spécifique à l'app — par ex. plateau, score, boosters et continues pour les puzzles ; position de lecture, flux suivis, file d'attente et cache de téléchargement hors-ligne pour les titres podcast/audio",
+          2: "Historique des meilleures parties et meilleur score (puzzles), ou historique d'écoute (audio), conservé uniquement en local",
+          3: "Réglages de l'app : son on/off, retours haptiques on/off, mode thème, vitesse de lecture et préférences similaires",
+          4: "Un drapeau de premier lancement pour décider d'afficher la page d'accueil de paywall",
+          5: "Un résumé en cache de votre statut d'abonnement — actif/inactif, plan, ID de produit, ID de plan de base — pour appliquer immédiatement vos droits Premium au lancement sans attendre le réseau"
+        },
+        callout: "<strong>Ce qui n'est pas stocké localement :</strong> données de paiement, jetons d'achat et identifiants de compte Google. Rien de tout cela ne quitte Google Play.",
+        h3b: "1b. Collecté par des tiers pour notre compte",
+        body1b: "Les services tiers décrits ci-dessous peuvent collecter automatiquement des informations techniques et publicitaires :",
+        list1b: {
+          1: "Identifiant publicitaire de l'appareil (Google Advertising ID) — utilisateurs non-Premium uniquement",
+          2: "Adresse IP et localisation géographique approximative qui en dérive",
+          3: "Modèle d'appareil, version du système, langue et fuseau horaire",
+          4: "Version de l'app, horodatage des sessions et diagnostics de plantage",
+          5: "Événements d'usage agrégés et non identifiants — y compris les événements de lecture podcast/audio (épisode démarré, terminé, sauté) pour les titres audio, utilisés uniquement sous forme agrégée"
+        }
+      },
+      sec2: {
+        title: "Partenaires publicitaires (utilisateurs gratuits / non-Premium)",
+        intro: "Pour les utilisateurs qui n'ont <strong>pas</strong> acheté l'abonnement Premium, nos apps peuvent afficher des bannières, des publicités vidéo rewarded (utilisées pour débloquer des boosters, continuer après game-over, ou débloquer des avantages similaires dans les titres audio), et des interstitiels occasionnels. Nous travaillons avec deux fournisseurs publicitaires, ensemble ou indépendamment selon l'app.",
+        h3a: "Médiation Appodeal",
+        appodeal1: "Nous utilisons <a href=\"https://www.appodeal.com/\" target=\"_blank\" rel=\"noopener\">Appodeal</a> comme partenaire principal de médiation publicitaire. La politique de confidentialité d'Appodeal est sur <a href=\"https://www.appodeal.com/privacy-policy\" target=\"_blank\" rel=\"noopener\">appodeal.com/privacy-policy ↗</a>.",
+        appodeal2: "Appodeal médie la demande d'un grand nombre de régies publicitaires ; l'ensemble actif évolue avec les mises à jour du SDK Appodeal et notre configuration de build. La liste actuelle et faisant foi est publiée par Appodeal :",
+        appodeal3: "Chaque régie sur cette page renvoie à sa propre politique. Les questions de personnalisation publicitaire peuvent être adressées directement à Appodeal sur le même site.",
+        h3b: "Google AdMob",
+        admob: "Certaines de nos apps diffusent aussi des pubs display, natives ou rewarded directement via Google AdMob. Les pratiques de Google sur les données publicitaires sont décrites sur <a href=\"https://policies.google.com/technologies/ads\" target=\"_blank\" rel=\"noopener\">policies.google.com/technologies/ads ↗</a>, et la Politique de Confidentialité Google sur <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>. Vous pouvez vous désinscrire de la publicité personnalisée Google sur <a href=\"https://adssettings.google.com/\" target=\"_blank\" rel=\"noopener\">adssettings.google.com ↗</a>.",
+        callout: "<strong>Les abonnés Premium ne voient pas de pubs</strong> et les SDK publicitaires (Appodeal et Google AdMob) ne sont pas utilisés pour charger, demander ou afficher du contenu publicitaire pour eux. Un trafic d'initialisation limité vers les fournisseurs de pub peut encore se produire au démarrage avant la résolution de l'état d'abonnement ; une fois Premium confirmé, aucun autre appel publicitaire n'est effectué dans cette session."
+      },
+      sec3: {
+        title: "Abonnements et achats in-app (Google Play Billing)",
+        intro: "Chacune de nos apps peut proposer un abonnement Premium optionnel — généralement avec des forfaits mensuel et annuel à renouvellement automatique, et un essai gratuit introductif sur le forfait annuel pour les nouveaux abonnés éligibles — qui supprime les pubs et débloque des fonctions premium spécifiques à l'app (par ex. boosters illimités dans les puzzles, ou téléchargements hors-ligne et lecture sans pub dans les podcasts/audio). Les abonnements sont vendus et traités par Google via Google Play Billing.",
+        list: {
+          1: "Toutes les informations de paiement, facturation, compte et fiscalité sont collectées et traitées par Google. Nous ne voyons, ne stockons, ni ne transmettons votre moyen de paiement, votre e-mail Google ou des identifiants officiels.",
+          2: "L'app reçoit uniquement de Google un signal non identifiant indiquant l'existence d'un abonnement actif pour votre installation, l'ID de produit et l'ID du forfait de base (par ex. mensuel ou annuel). Ce signal est mis en cache localement comme décrit en §1a.",
+          3: "La gestion de l'abonnement, l'annulation, les demandes de remboursement et les dates de renouvellement sont entièrement gérées sur Google Play. Le bouton « Gérer » dans l'app renvoie vers la page d'abonnements Google Play.",
+          4: "La politique de confidentialité de Google Play s'applique à tout le traitement lié à la facturation : <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>"
+        }
+      },
+      sec4: { title: "Base légale et consentement (GDPR / EEE, Royaume-Uni, Suisse)", body: "Si vous vous trouvez dans l'EEE, au Royaume-Uni ou en Suisse, la base légale du traitement publicitaire est votre consentement, recueilli via un dialogue IAB Transparency & Consent Framework (TCF) au premier lancement de l'app. Vous pouvez retirer ou modifier votre consentement à tout moment depuis l'app. La base légale du traitement des données d'abonnement via Google Play Billing est l'exécution du contrat conclu à l'achat de l'abonnement." },
+      sec5: { title: "CCPA / lois d'État américaines sur la confidentialité", body: "Si vous êtes résident de Californie ou d'un autre État applicable, vous avez le droit de refuser la « vente » ou le « partage » de vos informations personnelles à des fins publicitaires comportementales. Le dialogue de consentement dans l'app fournit cet opt-out là où il est requis. Le traitement de l'abonnement par Google Play n'est pas une « vente » d'informations personnelles." },
+      sec6: { title: "Vie privée des enfants (COPPA)", body: "Nos apps ne s'adressent pas aux enfants de moins de 13 ans (ou l'âge minimum équivalent dans votre juridiction). Nous ne collectons pas sciemment d'informations personnelles d'enfants. L'abonnement Premium est destiné à des acheteurs adultes ; les achats in-app nécessitent un compte Google Play avec les permissions adéquates." },
+      sec7: { title: "Conservation des données", body: "Les données stockées localement décrites en §1a sont conservées sur votre appareil jusqu'à ce que vous effaciez les données de l'app ou la désinstalliez. Nous ne conservons aucune information personnelle sur nos propres serveurs. Les partenaires publicitaires et Google Play conservent les données selon leurs propres politiques." },
+      sec8: { title: "Vos droits", body: "Selon votre juridiction, vous pouvez avoir le droit d'accéder à vos données personnelles, les rectifier, les supprimer, les restreindre ou les porter, et de déposer une plainte auprès d'une autorité de contrôle. Comme nous ne détenons pas ces données directement, les demandes doivent être adressées au partenaire publicitaire concerné ou — pour les données de facturation — à Google Play.", callout: "Pour supprimer toutes les données stockées localement par l'une de nos apps, désinstallez l'app ou videz son stockage depuis les paramètres de l'appareil (<em>Paramètres → Applications → [l'app] → Stockage → Effacer les données</em>)." },
+      sec9: { title: "Modifications de cette politique", body: "Nous pouvons mettre à jour cette Politique de confidentialité de temps à autre — par exemple lorsque nous ajoutons de nouveaux titres, changeons de partenaires publicitaires ou mettons à jour la mécanique d'abonnement. La date « Mis à jour » en haut de la page indique quand le dernier changement a été effectué. Les changements importants sont reflétés dans l'app au prochain lancement." },
+      sec10: { title: "Contact", body: "Pour toute question de confidentialité sur l'une de nos apps, écrivez-nous à <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a>. Nous essayons de répondre dans un délai raisonnable." },
+      footer: { copyright: "© Vaslix Games · Éditeur Android indépendant", home: "Accueil", contact: "Contact", backToTop: "Haut de page ↑" }
+    }
+  };
+
+  // ─────────────────────────────────────────────────────────
+  // Locale apply + switcher
+  // ─────────────────────────────────────────────────────────
+  const LANG_LIST = ['en', 'ru', 'es', 'de', 'fr'];
+  const LANG_FLAGS = { en: '🇬🇧', ru: '🇷🇺', es: '🇪🇸', de: '🇩🇪', fr: '🇫🇷' };
+  const LANG_KEY = 'vaslix.lang';
+
+  function get(dict, path) {
+    return path.split('.').reduce(function (o, k) { return (o == null) ? null : o[k]; }, dict);
+  }
+
+  function applyLocale(loc) {
+    const dict = I18N[loc] || I18N.en;
+    document.documentElement.lang = loc;
+    document.documentElement.dir = (loc === 'ar') ? 'rtl' : 'ltr';
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      const val = get(dict, el.getAttribute('data-i18n'));
+      if (val != null) el.textContent = val;
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+      const val = get(dict, el.getAttribute('data-i18n-html'));
+      if (val != null) el.innerHTML = val;
+    });
+    document.querySelectorAll('[data-i18n-attr]').forEach(function (el) {
+      el.getAttribute('data-i18n-attr').split(',').forEach(function (pair) {
+        const parts = pair.split(':');
+        const attr = parts[0].trim();
+        const key = parts[1] && parts[1].trim();
+        if (!attr || !key) return;
+        const val = get(dict, key);
+        if (val != null) el.setAttribute(attr, val);
+      });
+    });
+    if (dict.meta && dict.meta.title) document.title = dict.meta.title;
+    const md = document.querySelector('meta[name="description"]');
+    if (md && dict.meta && dict.meta.description) md.setAttribute('content', dict.meta.description);
+    const ogT = document.querySelector('meta[property="og:title"]');
+    if (ogT && dict.meta && dict.meta.ogTitle) ogT.setAttribute('content', dict.meta.ogTitle);
+    const ogD = document.querySelector('meta[property="og:description"]');
+    if (ogD && dict.meta && dict.meta.ogDesc) ogD.setAttribute('content', dict.meta.ogDesc);
+    const flagEl = document.getElementById('langCurrentFlag');
+    const codeEl = document.getElementById('langCurrentCode');
+    if (flagEl) flagEl.textContent = LANG_FLAGS[loc] || LANG_FLAGS.en;
+    if (codeEl) codeEl.textContent = loc.toUpperCase();
+    const btn = document.getElementById('langSwitcher');
+    if (btn && dict.nav && dict.nav.langLabel) btn.setAttribute('aria-label', dict.nav.langLabel);
+    document.querySelectorAll('#langMenu li').forEach(function (li) {
+      const isActive = li.getAttribute('data-lang') === loc;
+      li.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+    try { localStorage.setItem(LANG_KEY, loc); } catch (e) {}
+  }
+
+  function detectInitialLocale() {
+    let saved = null;
+    try { saved = localStorage.getItem(LANG_KEY); } catch (e) {}
+    if (saved && LANG_LIST.indexOf(saved) >= 0) return saved;
+    const nav = (navigator.language || 'en').slice(0, 2).toLowerCase();
+    return (LANG_LIST.indexOf(nav) >= 0) ? nav : 'en';
+  }
+
+  (function initSwitcher() {
+    const btn = document.getElementById('langSwitcher');
+    const menu = document.getElementById('langMenu');
+    if (!btn || !menu) return;
+    const items = Array.prototype.slice.call(menu.querySelectorAll('li'));
+
+    items.forEach(function (li, i) {
+      li.style.setProperty('--li-delay', (i * 40) + 'ms');
+    });
+
+    function openMenu() {
+      menu.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      const sel = menu.querySelector('li[aria-selected="true"]') || items[0];
+      if (sel) sel.focus();
+    }
+    function closeMenu(returnFocus) {
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      if (returnFocus) btn.focus();
+    }
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (btn.getAttribute('aria-expanded') === 'true') closeMenu(false);
+      else openMenu();
+    });
+    items.forEach(function (li, idx) {
+      li.addEventListener('click', function (e) {
+        e.stopPropagation();
+        applyLocale(li.getAttribute('data-lang'));
+        closeMenu(true);
+      });
+      li.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          applyLocale(li.getAttribute('data-lang'));
+          closeMenu(true);
+        } else if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          (items[idx + 1] || items[0]).focus();
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          (items[idx - 1] || items[items.length - 1]).focus();
+        } else if (e.key === 'Escape') {
+          e.preventDefault();
+          closeMenu(true);
+        }
+      });
+    });
+    document.addEventListener('click', function (e) {
+      if (menu.classList.contains('open') && !menu.contains(e.target) && e.target !== btn) closeMenu(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && menu.classList.contains('open')) closeMenu(true);
+    });
+
+    applyLocale(detectInitialLocale());
+  })();
+
+  // ─────────────────────────────────────────────────────────
+  // Reveal + TOC spy
+  // ─────────────────────────────────────────────────────────
   (function () {
     var prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var sections = document.querySelectorAll('section.card');

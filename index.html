@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vaslix Games — Small Android games, made with care</title>
-  <meta name="description" content="Vaslix Games is an indie Android publisher. We build small, focused puzzle games. Currently shipping Gridlix." />
+  <meta name="description" content="Vaslix Games is an indie Android publisher building small, focused apps across genres — puzzle games today, audio/podcast titles next. Currently shipping Gridlix, with Blocklix in development." />
   <meta name="theme-color" content="#F5F6FA" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#13161F" media="(prefers-color-scheme: dark)" />
   <meta property="og:title" content="Vaslix Games" />
-  <meta property="og:description" content="Indie Android publisher. Small, focused puzzle games." />
+  <meta property="og:description" content="Indie Android publisher. Small, focused games across genres." />
   <meta property="og:type" content="website" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%234AC8EA'/%3E%3Cstop offset='100%25' stop-color='%236C5DD3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Cpath d='M18 30 L34 72 L50 30' stroke='%23ffffff' stroke-width='13' fill='none' stroke-linejoin='round' stroke-linecap='round'/%3E%3Cpath d='M56 30 L84 72 M84 30 L56 72' stroke='%23ffffff' stroke-width='13' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
-  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%234AC8EA'/%3E%3Cstop offset='100%25' stop-color='%236C5DD3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Cpath d='M18 30 L34 72 L50 30' stroke='%23ffffff' stroke-width='13' fill='none' stroke-linejoin='round' stroke-linecap='round'/%3E%3Cpath d='M56 30 L84 72 M84 30 L56 72' stroke='%23ffffff' stroke-width='13' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%234AC8EA'/><stop offset='100%25' stop-color='%236C5DD3'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='url(%23g)'/><g fill='%23fff'><path transform='translate(16.03 68.18) scale(0.0518 -0.0518)' d='M721 702 472 0H258L9 702H191L365 172L540 702Z'/><path transform='translate(47.71 68.18) scale(0.0518 -0.0518)' d='M492 0 349 215 223 0H29L254 357L24 702H223L364 490L488 702H682L459 348L691 0Z'/></g></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%234AC8EA'/><stop offset='100%25' stop-color='%236C5DD3'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='url(%23g)'/><g fill='%23fff'><path transform='translate(16.03 68.18) scale(0.0518 -0.0518)' d='M721 702 472 0H258L9 702H191L365 172L540 702Z'/><path transform='translate(47.71 68.18) scale(0.0518 -0.0518)' d='M492 0 349 215 223 0H29L254 357L24 702H223L364 490L488 702H682L459 348L691 0Z'/></g></svg>" />
   <style>
     /* ── Tokens ────────────────────────────────────────────── */
     :root {
@@ -73,19 +73,27 @@
     }
     body::before {
       content: "";
-      position: fixed; inset: 0;
+      position: fixed; inset: -8%;
       background:
         radial-gradient(900px 480px at 12% -10%, rgba(74, 200, 234, 0.18), transparent 60%),
-        radial-gradient(820px 460px at 95% -8%, rgba(108, 93, 211, 0.16), transparent 65%);
+        radial-gradient(820px 460px at 95% -8%, rgba(108, 93, 211, 0.16), transparent 65%),
+        radial-gradient(700px 540px at 50% 110%, rgba(74, 131, 245, 0.10), transparent 65%);
       pointer-events: none;
       z-index: 0;
+      animation: mesh-drift 40s ease-in-out infinite alternate;
+      will-change: transform;
     }
     @media (prefers-color-scheme: dark) {
       body::before {
         background:
           radial-gradient(900px 480px at 12% -10%, rgba(74, 200, 234, 0.10), transparent 60%),
-          radial-gradient(820px 460px at 95% -8%, rgba(108, 93, 211, 0.14), transparent 65%);
+          radial-gradient(820px 460px at 95% -8%, rgba(108, 93, 211, 0.14), transparent 65%),
+          radial-gradient(700px 540px at 50% 110%, rgba(74, 131, 245, 0.08), transparent 65%);
       }
+    }
+    @keyframes mesh-drift {
+      from { transform: translate3d(-1.5%, -1%, 0) scale(1.00); }
+      to   { transform: translate3d( 1.5%,  1%, 0) scale(1.06); }
     }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; text-underline-offset: 3px; }
@@ -134,39 +142,149 @@
     }
     .brand:hover { text-decoration: none; background: var(--surface-2); }
     .brand:active { transform: scale(0.97); }
+
+    /* New: SVG-based brand mark (matches our final logo exactly) */
     .brand-mark {
       width: 28px; height: 28px;
-      border-radius: 8px;
-      background: linear-gradient(135deg, #4AC8EA 0%, #6C5DD3 100%);
-      box-shadow: 0 6px 14px rgba(108, 93, 211, 0.35);
       flex-shrink: 0;
-      display: grid;
-      place-items: center;
-      color: #fff;
-      font-weight: 900;
-      font-size: 0.66rem;
-      letter-spacing: 0.4px;
-      line-height: 1;
-      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto,
-                   "Helvetica Neue", Arial, sans-serif;
-      user-select: none;
+      display: block;
+      filter: drop-shadow(0 6px 14px rgba(108, 93, 211, 0.35));
     }
+    .brand-mark svg { display: block; width: 100%; height: 100%; }
+
     .nav-spacer { flex: 1; }
     .nav-link {
+      position: relative;
       color: var(--muted);
       font-size: 0.88rem; font-weight: 500;
       padding: 8px 14px; border-radius: 999px;
+      overflow: hidden;
+      isolation: isolate;
     }
-    .nav-link:hover { color: var(--text); background: var(--surface-2); text-decoration: none; }
+    .nav-link::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: var(--surface-2);
+      border-radius: 999px;
+      transform: scaleX(0); transform-origin: left center;
+      transition: transform 360ms var(--ease-spring);
+      z-index: -1;
+    }
+    .nav-link:hover { color: var(--text); text-decoration: none; }
+    .nav-link:hover::after { transform: scaleX(1); }
     .nav-link:active { transform: scale(0.96); }
     .nav-link.privacy {
       color: var(--accent);
       background: color-mix(in srgb, var(--accent) 12%, transparent);
       font-weight: 600;
     }
-    .nav-link.privacy:hover {
+    .nav-link.privacy::after {
       background: color-mix(in srgb, var(--accent) 22%, transparent);
+    }
+    .nav-link.privacy:hover { color: var(--accent); }
+
+    /* ── Language switcher ─────────────────────────────────── */
+    .lang-wrap { position: relative; }
+    .lang-switcher {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: inherit;
+      font-size: 0.85rem; font-weight: 600;
+      color: var(--text-soft);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 7px 12px; border-radius: 999px;
+      cursor: pointer;
+      transition:
+        transform var(--press) var(--ease-spring),
+        border-color var(--press) var(--ease-out),
+        background var(--press) var(--ease-out),
+        color var(--press) var(--ease-out);
+    }
+    .lang-switcher .lang-flag { font-size: 1rem; line-height: 1; }
+    .lang-switcher .lang-caret {
+      width: 12px; height: 12px;
+      stroke: currentColor; fill: none; stroke-width: 2.4;
+      stroke-linecap: round; stroke-linejoin: round;
+      transition: transform 220ms var(--ease-spring);
+    }
+    .lang-switcher:hover {
+      color: var(--text);
+      border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+      transform: scale(1.04);
+    }
+    .lang-switcher[aria-expanded="true"] {
+      color: #fff;
+      background: var(--grad);
+      border-color: transparent;
+    }
+    .lang-switcher[aria-expanded="true"] .lang-caret { transform: rotate(180deg); }
+    .lang-menu {
+      position: absolute; top: calc(100% + 8px); right: 0;
+      min-width: 200px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow-lg);
+      padding: 6px;
+      list-style: none; margin: 0;
+      z-index: 100;
+      opacity: 0;
+      transform: scale(0.92) translateY(-4px);
+      transform-origin: top right;
+      pointer-events: none;
+      transition:
+        opacity 200ms var(--ease-out),
+        transform 220ms var(--ease-spring);
+    }
+    .lang-menu.open {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+      pointer-events: auto;
+    }
+    .lang-menu li {
+      display: flex; align-items: center; gap: 10px;
+      padding: 9px 12px;
+      font-size: 0.88rem; font-weight: 500;
+      color: var(--text-soft);
+      border-radius: 10px;
+      cursor: pointer;
+      transition:
+        background var(--press) var(--ease-out),
+        color var(--press) var(--ease-out),
+        transform 200ms var(--ease-spring);
+      opacity: 0; transform: translateY(-4px);
+    }
+    .lang-menu.open li {
+      opacity: 1; transform: none;
+      transition:
+        opacity 240ms var(--ease-out) var(--li-delay, 0ms),
+        transform 280ms var(--ease-spring) var(--li-delay, 0ms),
+        background var(--press) var(--ease-out),
+        color var(--press) var(--ease-out);
+    }
+    .lang-menu li:hover {
+      background: var(--surface-2);
+      color: var(--text);
+    }
+    .lang-menu li[aria-selected="true"] {
+      background: color-mix(in srgb, var(--accent) 14%, transparent);
       color: var(--accent);
+      font-weight: 700;
+    }
+    .lang-menu li .lang-flag { font-size: 1.05rem; line-height: 1; }
+    .lang-menu li .lang-code { font-weight: 700; min-width: 26px; }
+    .lang-menu li .lang-native { color: var(--muted); font-size: 0.84rem; }
+    .lang-menu li[aria-selected="true"] .lang-native { color: var(--accent); }
+    .lang-menu li .lang-check {
+      margin-left: auto;
+      width: 14px; height: 14px;
+      stroke: currentColor; fill: none; stroke-width: 2.6;
+      stroke-linecap: round; stroke-linejoin: round;
+      opacity: 0; transform: scale(0.6);
+      transition: opacity 200ms var(--ease-out), transform 220ms var(--ease-spring);
+    }
+    .lang-menu li[aria-selected="true"] .lang-check {
+      opacity: 1; transform: scale(1);
     }
 
     /* ── Hero ──────────────────────────────────────────────── */
@@ -178,23 +296,84 @@
       padding: 64px 24px 32px;
       position: relative; z-index: 1;
     }
-    .hero { text-align: center; max-width: 720px; margin: 0 auto 64px; }
+    .hero {
+      text-align: center; max-width: 720px;
+      margin: 0 auto 64px;
+      position: relative;
+      padding: 36px 8px 0;
+    }
+    .hero > * { position: relative; z-index: 2; }
+
+    /* Floating decorative cubes */
+    .hero-cubes {
+      position: absolute; inset: -24px 0 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: visible;
+    }
+    .hero-cubes .cube {
+      position: absolute;
+      width: 38px; height: 38px;
+      border-radius: 9px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16), inset 0 -3px 0 rgba(0, 0, 0, 0.18);
+      opacity: 0.32;
+      transform-origin: center;
+      will-change: transform;
+    }
+    .hero-cubes .cube::after {
+      content: "";
+      position: absolute; inset: 4px;
+      border-radius: 5px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.35), transparent 60%);
+    }
+    @media (prefers-color-scheme: dark) {
+      .hero-cubes .cube { opacity: 0.22; }
+    }
+    .hero-cubes .c1 { background: #FF6B6B; top:   8%; left:  4%; width: 44px; height: 44px; animation: cube-float-a 13s ease-in-out infinite; }
+    .hero-cubes .c2 { background: #FFD93D; top:  68%; left: 10%; width: 32px; height: 32px; animation: cube-float-b 17s ease-in-out infinite 1.2s; }
+    .hero-cubes .c3 { background: #6BCB77; top:  18%; right: 6%; width: 40px; height: 40px; animation: cube-float-c 11s ease-in-out infinite 0.6s; }
+    .hero-cubes .c4 { background: #4D96FF; top:  72%; right: 14%; width: 36px; height: 36px; animation: cube-float-d 15s ease-in-out infinite 2.1s; }
+    .hero-cubes .c5 { background: #C780FA; top:  44%; left: 24%; width: 26px; height: 26px; animation: cube-float-e 14s ease-in-out infinite 0.3s; }
+    .hero-cubes .c6 { background: #FFA45B; top:  46%; right: 22%; width: 28px; height: 28px; animation: cube-float-a 12s ease-in-out infinite 1.8s; }
+
+    @keyframes cube-float-a {
+      0%, 100% { transform: translate3d(0, 0, 0) rotate(-6deg); }
+      50%      { transform: translate3d(8px, -14px, 0) rotate(7deg); }
+    }
+    @keyframes cube-float-b {
+      0%, 100% { transform: translate3d(0, 0, 0) rotate(4deg); }
+      50%      { transform: translate3d(-10px, -18px, 0) rotate(-8deg); }
+    }
+    @keyframes cube-float-c {
+      0%, 100% { transform: translate3d(0, 0, 0) rotate(-3deg); }
+      50%      { transform: translate3d(-6px, 12px, 0) rotate(6deg); }
+    }
+    @keyframes cube-float-d {
+      0%, 100% { transform: translate3d(0, 0, 0) rotate(5deg); }
+      50%      { transform: translate3d(12px, -10px, 0) rotate(-6deg); }
+    }
+    @keyframes cube-float-e {
+      0%, 100% { transform: translate3d(0, 0, 0) rotate(-8deg); }
+      50%      { transform: translate3d(-8px, 14px, 0) rotate(8deg); }
+    }
+    @media (max-width: 720px) {
+      .hero-cubes .c5, .hero-cubes .c6 { display: none; }
+    }
+
+    /* Big hero brand tile — one-shot scale-in on load */
     .brand-tile {
       width: 88px; height: 88px;
-      border-radius: 24px;
-      background: var(--grad);
       margin: 0 auto 28px;
-      box-shadow: 0 22px 50px rgba(108, 93, 211, 0.35);
-      display: grid; place-items: center;
-      color: #fff;
-      font-weight: 800; font-size: 1.5rem;
-      letter-spacing: -0.02em;
-      animation: hero-float 6s ease-in-out infinite;
+      display: block;
+      filter: drop-shadow(0 22px 50px rgba(108, 93, 211, 0.35));
+      animation: hero-enter 700ms var(--ease-out) both;
     }
-    @keyframes hero-float {
-      0%, 100% { transform: translateY(0); box-shadow: 0 22px 50px rgba(108, 93, 211, 0.35); }
-      50%      { transform: translateY(-4px); box-shadow: 0 28px 60px rgba(108, 93, 211, 0.42); }
+    .brand-tile svg { display: block; width: 100%; height: 100%; }
+    @keyframes hero-enter {
+      from { opacity: 0; transform: scale(0.85); }
+      to   { opacity: 1; transform: scale(1); }
     }
+
     h1 {
       font-size: clamp(2.4rem, 5.4vw, 3.4rem);
       line-height: 1.05;
@@ -205,11 +384,17 @@
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
+      animation: title-rise 600ms var(--ease-out) 120ms both;
     }
     .tagline {
       color: var(--text-soft);
       font-size: 1.08rem;
       margin: 0;
+      animation: title-rise 600ms var(--ease-out) 200ms both;
+    }
+    @keyframes title-rise {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: none; }
     }
 
     /* ── Section heading ───────────────────────────────────── */
@@ -219,10 +404,16 @@
       margin: 0 0 10px;
     }
     h2.section-title {
-      margin: 0 0 28px;
+      margin: 0 0 12px;
       font-size: 1.6rem; font-weight: 700;
       letter-spacing: -0.01em;
       color: var(--text);
+    }
+    .section-intro {
+      margin: 0 0 28px;
+      max-width: 680px;
+      color: var(--text-soft);
+      font-size: 1rem;
     }
 
     /* ── Reveal animation ─────────────────────────────────── */
@@ -236,67 +427,80 @@
     }
     .reveal.in-view { opacity: 1; transform: none; }
 
-    /* ── Games grid ────────────────────────────────────────── */
+    /* ── Games grid (multi-game ready) ─────────────────────── */
     .games {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
       gap: 18px;
       margin: 0 auto 72px;
     }
+    @media (max-width: 520px) {
+      .games { grid-template-columns: 1fr; }
+    }
+
     .game {
+      --tx: 0; --ty: 0; --lift: 0px;
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 28px;
+      padding: 24px;
       box-shadow: var(--shadow-md);
+      display: flex; flex-direction: column; gap: 16px;
+      transform-style: preserve-3d;
+      transform:
+        perspective(900px)
+        translateY(var(--lift))
+        rotateY(calc(var(--tx) * 6deg))
+        rotateX(calc(var(--ty) * -4deg));
+      transition:
+        transform 360ms var(--ease-out),
+        box-shadow var(--press) var(--ease-out);
+      will-change: transform;
+    }
+    .game:hover { --lift: -4px; box-shadow: var(--shadow-lg); }
+    .game:active { --lift: -1px; transition: transform 160ms var(--ease-spring); }
+    .game-head, .game-feat { transform: translateZ(0); }
+
+    .game-head {
       display: grid;
-      grid-template-columns: 96px 1fr auto;
-      gap: 22px;
-      align-items: center;
+      grid-template-columns: 72px 1fr;
+      gap: 16px;
+      align-items: flex-start;
     }
-    .game:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
-    .game:active { transform: translateY(-1px) scale(0.995); transition-timing-function: var(--ease-spring); }
     .game-icon {
-      width: 96px; height: 96px;
-      border-radius: 22px;
-      box-shadow: 0 16px 32px rgba(74, 131, 245, 0.30);
+      width: 72px; height: 72px;
+      border-radius: 18px;
+      box-shadow: 0 12px 24px rgba(74, 131, 245, 0.28);
       display: block;
-    }
-    .game-body h3 {
-      margin: 0;
-      font-size: 1.32rem;
-      font-weight: 700;
-      letter-spacing: -0.005em;
-      color: var(--text);
-    }
-    .game-body p {
-      margin: 4px 0 12px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-    .feat-row { display: flex; flex-wrap: wrap; gap: 6px; }
-    .feat-row span {
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.6px;
-      color: var(--text-soft);
+      flex-shrink: 0;
+      object-fit: cover;
       background: var(--surface-2);
-      border: 1px solid var(--border);
+      transition: transform 240ms var(--ease-spring);
+    }
+    .game:hover .game-icon { transform: scale(1.06) rotate(-2deg); }
+    .game-head-right { min-width: 0; }
+    .game-pills {
+      display: flex; flex-wrap: wrap; gap: 6px;
+      margin: 0 0 6px;
+    }
+    .pill {
+      display: inline-flex; align-items: center;
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase;
       padding: 4px 10px;
       border-radius: 999px;
+      white-space: nowrap;
     }
-    .badge.live {
-      align-self: flex-start;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 1.4px;
-      text-transform: uppercase;
+    .pill.genre {
+      color: var(--accent);
+      background: color-mix(in srgb, var(--accent) 12%, transparent);
+    }
+    .pill.status.live {
       color: #fff;
       background: var(--good);
-      padding: 6px 12px;
-      border-radius: 999px;
       box-shadow: 0 4px 12px rgba(32, 201, 151, 0.35);
-      position: relative;
     }
-    .badge.live::before {
+    .pill.status.live::before {
       content: "";
       display: inline-block;
       width: 6px; height: 6px; border-radius: 50%;
@@ -305,14 +509,39 @@
       vertical-align: middle;
       animation: live-pulse 1.8s ease-in-out infinite;
     }
+    .pill.status.soon {
+      color: var(--text-soft);
+      background: color-mix(in srgb, var(--muted) 18%, transparent);
+      border: 1px solid var(--border);
+    }
     @keyframes live-pulse {
       0%, 100% { opacity: 1; transform: scale(1); }
       50%      { opacity: 0.6; transform: scale(1.2); }
     }
-    @media (max-width: 600px) {
-      .game { grid-template-columns: 80px 1fr; row-gap: 14px; }
-      .game-icon { width: 80px; height: 80px; border-radius: 18px; }
-      .badge.live { grid-column: 1 / -1; justify-self: start; margin-top: 4px; }
+
+    .game h3 {
+      margin: 2px 0 4px;
+      font-size: 1.22rem;
+      font-weight: 700;
+      letter-spacing: -0.005em;
+      color: var(--text);
+    }
+    .game-desc {
+      margin: 0;
+      color: var(--text-soft);
+      font-size: 0.94rem;
+    }
+    .game-feat {
+      display: flex; flex-wrap: wrap; gap: 6px;
+      margin: 2px 0 0;
+    }
+    .game-feat span {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.6px;
+      color: var(--text-soft);
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 999px;
     }
 
     /* ── Privacy CTA — prominent ───────────────────────────── */
@@ -324,17 +553,11 @@
       overflow: hidden;
       color: #fff;
       background: linear-gradient(135deg, #4AC8EA 0%, #4F83F5 50%, #6C5DD3 100%);
-      background-size: 200% 200%;
       box-shadow: 0 28px 64px rgba(74, 131, 245, 0.35);
       display: grid;
       grid-template-columns: auto 1fr auto;
       gap: 24px;
       align-items: center;
-      animation: cta-shift 9s ease-in-out infinite;
-    }
-    @keyframes cta-shift {
-      0%, 100% { background-position: 0% 50%; }
-      50%      { background-position: 100% 50%; }
     }
     .privacy-cta::after {
       content: "";
@@ -481,77 +704,6 @@
     }
 
     /* ── Touch & mobile interactivity ──────────────────────── */
-    a, button, .brand, .nav-link, .game, .privacy-cta,
-    .privacy-cta-btn, .trust-item, footer a {
-      -webkit-tap-highlight-color: transparent;
-      touch-action: manipulation;
-      cursor: pointer;
-    }
-
-    @media (hover: none) {
-      /* Neutralize sticky :hover state after tap */
-      a:hover { text-decoration: none; }
-      .brand:hover { background: transparent; }
-      .nav-link:hover { color: var(--muted); background: transparent; }
-      .nav-link.privacy:hover {
-        background: color-mix(in srgb, var(--accent) 12%, transparent);
-        color: var(--accent);
-      }
-      .game:hover { transform: none; box-shadow: var(--shadow-md); }
-      .privacy-cta:hover {
-        transform: none;
-        box-shadow: 0 28px 64px rgba(74, 131, 245, 0.35);
-      }
-      .privacy-cta:hover .privacy-cta-btn svg { transform: none; }
-      .privacy-cta:hover .privacy-cta-text strong { letter-spacing: -0.005em; }
-      .trust-item:hover { transform: none; box-shadow: var(--shadow-sm); }
-      footer a:hover { color: var(--text-soft); background: transparent; }
-
-      /* Strong tap feedback */
-      .brand:active {
-        background: var(--surface-2);
-        transform: scale(0.96);
-      }
-      .nav-link:active {
-        color: var(--text);
-        background: var(--surface-2);
-        transform: scale(0.95);
-      }
-      .nav-link.privacy:active {
-        background: color-mix(in srgb, var(--accent) 24%, transparent);
-        color: var(--accent);
-        transform: scale(0.95);
-      }
-      .game:active {
-        transform: scale(0.985);
-        box-shadow: var(--shadow-sm);
-        transition-timing-function: var(--ease-spring);
-      }
-      .privacy-cta:active {
-        transform: scale(0.97);
-        box-shadow: 0 18px 40px rgba(74, 131, 245, 0.32);
-      }
-      .privacy-cta:active .privacy-cta-btn svg { transform: translateX(2px); }
-      .trust-item:active {
-        transform: scale(0.985);
-        background: var(--surface-2);
-        box-shadow: var(--shadow-sm);
-      }
-      footer a:active {
-        color: var(--accent);
-        background: var(--surface-2);
-        transform: scale(0.94);
-      }
-    }
-
-    @media (max-width: 720px) {
-      /* Bigger touch targets on phones */
-      .nav-link { padding: 10px 14px; }
-      footer a { padding: 8px 10px; margin: -8px -10px; }
-      .privacy-cta-btn { padding: 16px 22px; }
-    }
-
-    /* ── Touch & mobile interactivity ──────────────────────── */
     * { -webkit-tap-highlight-color: transparent; }
     a, button, .brand, .nav-link, .game, .privacy-cta,
     .privacy-cta-btn, .trust-item, footer a {
@@ -561,7 +713,6 @@
     }
 
     @media (hover: none), (pointer: coarse) {
-      /* Kill focus ring on touch — keyboard users still get it via (hover: hover) */
       :focus, :focus-visible {
         outline: none !important;
         box-shadow: none !important;
@@ -570,7 +721,6 @@
       .privacy-cta-btn, .trust-item, footer a {
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
       }
-      /* Neutralize sticky :hover state after tap */
       a:hover { text-decoration: none; }
       .brand:hover { background: transparent; }
       .nav-link:hover { color: var(--muted); background: transparent; }
@@ -578,7 +728,9 @@
         background: color-mix(in srgb, var(--accent) 12%, transparent);
         color: var(--accent);
       }
-      .game:hover { transform: none; box-shadow: var(--shadow-md); }
+      .game { --tx: 0 !important; --ty: 0 !important; }
+      .game:hover { --lift: 0px; box-shadow: var(--shadow-md); }
+      .game:hover .game-icon { transform: none; }
       .privacy-cta:hover {
         transform: none;
         box-shadow: 0 28px 64px rgba(74, 131, 245, 0.35);
@@ -588,45 +740,20 @@
       .trust-item:hover { transform: none; box-shadow: var(--shadow-sm); }
       footer a:hover { color: var(--text-soft); background: transparent; }
 
-      /* Strong tap feedback */
-      .brand:active {
-        background: var(--surface-2);
-        transform: scale(0.96);
-      }
-      .nav-link:active {
-        color: var(--text);
-        background: var(--surface-2);
-        transform: scale(0.95);
-      }
+      .brand:active { background: var(--surface-2); transform: scale(0.96); }
+      .nav-link:active { color: var(--text); background: var(--surface-2); transform: scale(0.95); }
       .nav-link.privacy:active {
         background: color-mix(in srgb, var(--accent) 24%, transparent);
-        color: var(--accent);
-        transform: scale(0.95);
+        color: var(--accent); transform: scale(0.95);
       }
-      .game:active {
-        transform: scale(0.985);
-        box-shadow: var(--shadow-sm);
-        transition-timing-function: var(--ease-spring);
-      }
-      .privacy-cta:active {
-        transform: scale(0.97);
-        box-shadow: 0 18px 40px rgba(74, 131, 245, 0.32);
-      }
+      .game:active { transform: scale(0.985); box-shadow: var(--shadow-sm); transition-timing-function: var(--ease-spring); }
+      .privacy-cta:active { transform: scale(0.97); box-shadow: 0 18px 40px rgba(74, 131, 245, 0.32); }
       .privacy-cta:active .privacy-cta-btn svg { transform: translateX(2px); }
-      .trust-item:active {
-        transform: scale(0.985);
-        background: var(--surface-2);
-        box-shadow: var(--shadow-sm);
-      }
-      footer a:active {
-        color: var(--accent);
-        background: var(--surface-2);
-        transform: scale(0.94);
-      }
+      .trust-item:active { transform: scale(0.985); background: var(--surface-2); box-shadow: var(--shadow-sm); }
+      footer a:active { color: var(--accent); background: var(--surface-2); transform: scale(0.94); }
     }
 
     @media (max-width: 720px) {
-      /* Bigger touch targets on phones */
       .nav-link { padding: 10px 14px; }
       footer a { padding: 8px 10px; margin: -8px -10px; }
       .privacy-cta-btn { padding: 16px 22px; }
@@ -638,81 +765,160 @@
 <header class="nav">
   <div class="nav-inner">
     <a class="brand" href="./index.html">
-      <span class="brand-mark" aria-hidden="true">VX</span>
-      <span>Vaslix Games</span>
+      <span class="brand-mark" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+          <defs>
+            <linearGradient id="vx-nav" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#4AC8EA"/>
+              <stop offset="100%" stop-color="#6C5DD3"/>
+            </linearGradient>
+          </defs>
+          <rect width="100" height="100" rx="22" fill="url(#vx-nav)"/>
+          <g fill="#fff">
+            <path transform="translate(16.03 68.18) scale(0.0518 -0.0518)" d="M721 702 472 0H258L9 702H191L365 172L540 702Z"/>
+            <path transform="translate(47.71 68.18) scale(0.0518 -0.0518)" d="M492 0 349 215 223 0H29L254 357L24 702H223L364 490L488 702H682L459 348L691 0Z"/>
+          </g>
+        </svg>
+      </span>
+      <span data-i18n="nav.brand">Vaslix Games</span>
     </a>
     <span class="nav-spacer"></span>
-    <a class="nav-link" href="mailto:vaslixofficial@protonmail.com">Contact</a>
-    <a class="nav-link privacy" href="./privacy-policy.html">Privacy</a>
+    <a class="nav-link" href="mailto:vaslixofficial@protonmail.com" data-i18n="nav.contact">Contact</a>
+    <div class="lang-wrap">
+      <button type="button" class="lang-switcher" id="langSwitcher" aria-haspopup="listbox" aria-expanded="false" aria-label="Change language">
+        <span class="lang-flag" id="langCurrentFlag" aria-hidden="true">🇬🇧</span>
+        <span class="lang-code" id="langCurrentCode">EN</span>
+        <svg class="lang-caret" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <ul class="lang-menu" id="langMenu" role="listbox" aria-label="Language">
+        <li role="option" data-lang="en" tabindex="-1"><span class="lang-flag" aria-hidden="true">🇬🇧</span><span class="lang-code">EN</span><span class="lang-native">English</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg></li>
+        <li role="option" data-lang="ru" tabindex="-1"><span class="lang-flag" aria-hidden="true">🇷🇺</span><span class="lang-code">RU</span><span class="lang-native">Русский</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg></li>
+        <li role="option" data-lang="es" tabindex="-1"><span class="lang-flag" aria-hidden="true">🇪🇸</span><span class="lang-code">ES</span><span class="lang-native">Español</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg></li>
+        <li role="option" data-lang="de" tabindex="-1"><span class="lang-flag" aria-hidden="true">🇩🇪</span><span class="lang-code">DE</span><span class="lang-native">Deutsch</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg></li>
+        <li role="option" data-lang="fr" tabindex="-1"><span class="lang-flag" aria-hidden="true">🇫🇷</span><span class="lang-code">FR</span><span class="lang-native">Français</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg></li>
+      </ul>
+    </div>
+    <a class="nav-link privacy" href="./privacy-policy.html" data-i18n="nav.privacy">Privacy</a>
   </div>
 </header>
 
 <main>
   <section class="hero">
-    <div class="brand-tile" aria-hidden="true">VX</div>
-    <h1>Vaslix Games</h1>
-    <p class="tagline">Small Android games, made with care.</p>
-  </section>
-
-  <p class="section-eyebrow">Our games</p>
-  <h2 class="section-title">What we ship</h2>
-
-  <section class="games" aria-label="Our games">
-    <article class="game reveal">
-      <svg class="game-icon" viewBox="0 0 100 100" role="img" aria-label="Gridlix app icon">
+    <div class="hero-cubes" aria-hidden="true">
+      <span class="cube c1"></span>
+      <span class="cube c2"></span>
+      <span class="cube c3"></span>
+      <span class="cube c4"></span>
+      <span class="cube c5"></span>
+      <span class="cube c6"></span>
+    </div>
+    <span class="brand-tile" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
         <defs>
-          <linearGradient id="gridlix-grad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%"   stop-color="#4AC8EA"/>
-            <stop offset="100%" stop-color="#4F83F5"/>
+          <linearGradient id="vx-hero" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#4AC8EA"/>
+            <stop offset="100%" stop-color="#6C5DD3"/>
           </linearGradient>
         </defs>
-        <rect x="2" y="2" width="96" height="96" rx="22" fill="url(#gridlix-grad)"/>
-        <text x="50" y="48" text-anchor="middle"
-              font-family="-apple-system, BlinkMacSystemFont, system-ui, Segoe UI, Roboto, sans-serif"
-              font-weight="800" font-size="26" fill="#fff" letter-spacing="-1">2048</text>
-        <text x="50" y="74" text-anchor="middle"
-              font-family="-apple-system, BlinkMacSystemFont, system-ui, Segoe UI, Roboto, sans-serif"
-              font-weight="600" font-size="16" fill="#fff" font-style="italic" opacity="0.95">Gridlix</text>
+        <rect width="100" height="100" rx="22" fill="url(#vx-hero)"/>
+        <g fill="#fff">
+          <path transform="translate(16.03 68.18) scale(0.0518 -0.0518)" d="M721 702 472 0H258L9 702H191L365 172L540 702Z"/>
+          <path transform="translate(47.71 68.18) scale(0.0518 -0.0518)" d="M492 0 349 215 223 0H29L254 357L24 702H223L364 490L488 702H682L459 348L691 0Z"/>
+        </g>
       </svg>
-      <div class="game-body">
-        <h3>Gridlix</h3>
-        <p>A neumorphic 4×4 grid puzzle for Android. 2048-style merging, four boosters, dark mode, optional ad-free Premium.</p>
-        <div class="feat-row">
-          <span>Android 8+</span>
-          <span>Free w/ ads</span>
-          <span>Premium subscription</span>
-          <span>Light · Dark</span>
-        </div>
-      </div>
-      <span class="badge live">Live</span>
-    </article>
+    </span>
+    <h1 data-i18n="hero.h1">Vaslix Games</h1>
+    <p class="tagline" data-i18n="hero.tagline">Small Android games, made with care.</p>
   </section>
 
-  <p class="section-eyebrow">Your data</p>
-  <h2 class="section-title">Privacy &amp; transparency</h2>
+  <p class="section-eyebrow" data-i18n="games.eyebrow">Our games</p>
+  <h2 class="section-title" data-i18n="games.title">What we ship</h2>
+  <p class="section-intro" data-i18n="games.intro">A small indie label building focused Android apps across genres — puzzle, word, arcade, and podcast/audio. Currently shipping Gridlix; Blocklix and audio/podcast titles in active development.</p>
 
-  <a class="privacy-cta reveal" href="./privacy-policy.html" aria-label="Read our Privacy Policy">
+  <section class="games" aria-label="Our games" data-i18n-attr="aria-label:games.aria">
+
+    <article class="game reveal">
+      <div class="game-head">
+        <svg class="game-icon" viewBox="0 0 100 100" role="img" aria-label="Gridlix app icon" data-i18n-attr="aria-label:card.gridlix.iconAlt">
+          <defs>
+            <linearGradient id="gridlix-grad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"   stop-color="#4AC8EA"/>
+              <stop offset="100%" stop-color="#4F83F5"/>
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="96" height="96" rx="22" fill="url(#gridlix-grad)"/>
+          <text x="50" y="48" text-anchor="middle"
+                font-family="-apple-system, BlinkMacSystemFont, system-ui, Segoe UI, Roboto, sans-serif"
+                font-weight="800" font-size="26" fill="#fff" letter-spacing="-1">2048</text>
+          <text x="50" y="74" text-anchor="middle"
+                font-family="-apple-system, BlinkMacSystemFont, system-ui, Segoe UI, Roboto, sans-serif"
+                font-weight="600" font-size="16" fill="#fff" font-style="italic" opacity="0.95">Gridlix</text>
+        </svg>
+        <div class="game-head-right">
+          <div class="game-pills">
+            <span class="pill genre" data-i18n="card.gridlix.genre">Puzzle</span>
+            <span class="pill status live" data-i18n="card.gridlix.status">Live</span>
+          </div>
+          <h3 data-i18n="card.gridlix.title">Gridlix</h3>
+          <p class="game-desc" data-i18n="card.gridlix.desc">A neumorphic 4×4 grid puzzle for Android. 2048-style merging, four boosters, dark mode, optional ad-free Premium.</p>
+        </div>
+      </div>
+      <div class="game-feat">
+        <span data-i18n="card.gridlix.feat.1">Android 8+</span>
+        <span data-i18n="card.gridlix.feat.2">Free w/ ads</span>
+        <span data-i18n="card.gridlix.feat.3">Premium subscription</span>
+        <span data-i18n="card.gridlix.feat.4">Light · Dark</span>
+      </div>
+    </article>
+
+    <article class="game reveal">
+      <div class="game-head">
+        <img class="game-icon" src="./blocklix-icon.png" alt="Blocklix app icon" width="72" height="72" loading="lazy" data-i18n-attr="alt:card.blocklix.iconAlt" />
+        <div class="game-head-right">
+          <div class="game-pills">
+            <span class="pill genre" data-i18n="card.blocklix.genre">Puzzle</span>
+            <span class="pill status soon" data-i18n="card.blocklix.status">In development</span>
+          </div>
+          <h3 data-i18n="card.blocklix.title">Blocklix</h3>
+          <p class="game-desc" data-i18n="card.blocklix.desc">A free 8×8 block puzzle for Android. Drop colorful shapes, clear lines and squares, chain combos for big multipliers. 25 unlockable themes, 10 ranks across 15 achievement tracks, a 7-day daily-reward chest, hammer and bomb boosters, and an optional ad-free Premium with 2× coin earn.</p>
+        </div>
+      </div>
+      <div class="game-feat">
+        <span data-i18n="card.blocklix.feat.1">Android 8+</span>
+        <span data-i18n="card.blocklix.feat.2">25 themes</span>
+        <span data-i18n="card.blocklix.feat.3">10 ranks</span>
+        <span data-i18n="card.blocklix.feat.4">Daily chest</span>
+        <span data-i18n="card.blocklix.feat.5">Premium · 2× coins</span>
+      </div>
+    </article>
+
+  </section>
+
+  <p class="section-eyebrow" data-i18n="privacy.eyebrow">Your data</p>
+  <h2 class="section-title" data-i18n="privacy.title">Privacy &amp; transparency</h2>
+
+  <a class="privacy-cta reveal" href="./privacy-policy.html" aria-label="Read our Privacy Policy" data-i18n-attr="aria-label:privacyCta.aria">
     <div class="privacy-cta-icon" aria-hidden="true">
       <svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6l-8-4z"/><polyline points="9 12 11 14 15 10"/></svg>
     </div>
     <div class="privacy-cta-text">
-      <strong>Read our Privacy Policy</strong>
-      <span>Plain-language summary, full details on what we store locally, how Google Play Billing works, and the ad networks we use for free users.</span>
+      <strong data-i18n="privacyCta.title">Read our Privacy Policy</strong>
+      <span data-i18n="privacyCta.text">Plain-language summary, full details on what we store locally, how Google Play Billing works, and the ad networks we use for free users. Applies to all our published titles.</span>
     </div>
     <span class="privacy-cta-btn">
-      Open policy
+      <span data-i18n="privacyCta.btn">Open policy</span>
       <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
     </span>
   </a>
 
-  <section class="trust" aria-label="Privacy commitments">
+  <section class="trust" aria-label="Privacy commitments" data-i18n-attr="aria-label:trust.aria">
     <div class="trust-item reveal">
       <div class="trust-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/><polyline points="8 12 11 15 16 9"/></svg>
       </div>
       <div class="trust-text">
-        <strong>No accounts</strong>
-        <span>We don't make you sign up. Game state lives on your device.</span>
+        <strong data-i18n="trust.1.title">No accounts</strong>
+        <span data-i18n="trust.1.desc">We don't make you sign up. Game state lives on your device.</span>
       </div>
     </div>
     <div class="trust-item reveal">
@@ -720,8 +926,8 @@
         <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
       </div>
       <div class="trust-text">
-        <strong>No payment data stored</strong>
-        <span>All billing flows through Google Play. We never see your card.</span>
+        <strong data-i18n="trust.2.title">No payment data stored</strong>
+        <span data-i18n="trust.2.desc">All billing flows through Google Play. We never see your card.</span>
       </div>
     </div>
     <div class="trust-item reveal">
@@ -729,8 +935,8 @@
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
       </div>
       <div class="trust-text">
-        <strong>GDPR · CCPA · COPPA</strong>
-        <span>Standards-aligned consent, opt-outs, and data rights.</span>
+        <strong data-i18n="trust.3.title">GDPR · CCPA · COPPA</strong>
+        <span data-i18n="trust.3.desc">Standards-aligned consent, opt-outs, and data rights.</span>
       </div>
     </div>
     <div class="trust-item reveal">
@@ -738,8 +944,8 @@
         <svg viewBox="0 0 24 24"><polygon points="12 2 4 6 4 12 12 22 20 12 20 6 12 2"/><line x1="12" y1="22" x2="12" y2="2"/></svg>
       </div>
       <div class="trust-text">
-        <strong>Premium = ad-free</strong>
-        <span>Subscribers see no ads. Ad SDK is not used to load content for them.</span>
+        <strong data-i18n="trust.4.title">Premium = ad-free</strong>
+        <span data-i18n="trust.4.desc">Subscribers see no ads. Ad SDK is not used to load content for them.</span>
       </div>
     </div>
   </section>
@@ -747,19 +953,373 @@
 
 <footer>
   <div class="footer-inner">
-    <span>&copy; Vaslix Games · Independent Android publisher</span>
+    <span data-i18n="footer.copyright">&copy; Vaslix Games · Independent Android publisher</span>
     <div class="links">
-      <a href="./index.html">Home</a>
-      <a class="privacy-link" href="./privacy-policy.html">Privacy Policy</a>
-      <a href="mailto:vaslixofficial@protonmail.com">Contact</a>
+      <a href="./index.html" data-i18n="footer.home">Home</a>
+      <a class="privacy-link" href="./privacy-policy.html" data-i18n="footer.privacyLink">Privacy Policy</a>
+      <a href="mailto:vaslixofficial@protonmail.com" data-i18n="footer.contact">Contact</a>
     </div>
   </div>
 </footer>
 
 <script>
+  // ─────────────────────────────────────────────────────────
+  // i18n dictionary (5 locales)
+  // ─────────────────────────────────────────────────────────
+  const I18N = {
+    en: {
+      meta: {
+        title: "Vaslix Games — Small Android games, made with care",
+        description: "Vaslix Games is an indie Android publisher building small, focused apps across genres — puzzle games today, audio/podcast titles next. Currently shipping Gridlix, with Blocklix in development.",
+        ogTitle: "Vaslix Games",
+        ogDesc: "Indie Android publisher. Small, focused games across genres."
+      },
+      nav: { brand: "Vaslix Games", contact: "Contact", privacy: "Privacy", langLabel: "Change language" },
+      hero: { h1: "Vaslix Games", tagline: "Small Android games, made with care." },
+      games: {
+        eyebrow: "Our games",
+        title: "What we ship",
+        intro: "A small indie label building focused Android apps across genres — puzzle, word, arcade, and podcast/audio. Currently shipping Gridlix; Blocklix and audio/podcast titles in active development.",
+        aria: "Our games"
+      },
+      card: {
+        gridlix: {
+          iconAlt: "Gridlix app icon",
+          genre: "Puzzle", status: "Live", title: "Gridlix",
+          desc: "A neumorphic 4×4 grid puzzle for Android. 2048-style merging, four boosters, dark mode, optional ad-free Premium.",
+          feat: { 1: "Android 8+", 2: "Free w/ ads", 3: "Premium subscription", 4: "Light · Dark" }
+        },
+        blocklix: {
+          iconAlt: "Blocklix app icon",
+          genre: "Puzzle", status: "In development", title: "Blocklix",
+          desc: "A free 8×8 block puzzle for Android. Drop colorful shapes, clear lines and squares, chain combos for big multipliers. 25 unlockable themes, 10 ranks across 15 achievement tracks, a 7-day daily-reward chest, hammer and bomb boosters, and an optional ad-free Premium with 2× coin earn.",
+          feat: { 1: "Android 8+", 2: "25 themes", 3: "10 ranks", 4: "Daily chest", 5: "Premium · 2× coins" }
+        }
+      },
+      privacy: { eyebrow: "Your data", title: "Privacy & transparency" },
+      privacyCta: {
+        aria: "Read our Privacy Policy",
+        title: "Read our Privacy Policy",
+        text: "Plain-language summary, full details on what we store locally, how Google Play Billing works, and the ad networks we use for free users. Applies to all our published titles.",
+        btn: "Open policy"
+      },
+      trust: {
+        aria: "Privacy commitments",
+        1: { title: "No accounts", desc: "We don't make you sign up. Game state lives on your device." },
+        2: { title: "No payment data stored", desc: "All billing flows through Google Play. We never see your card." },
+        3: { title: "GDPR · CCPA · COPPA", desc: "Standards-aligned consent, opt-outs, and data rights." },
+        4: { title: "Premium = ad-free", desc: "Subscribers see no ads. Ad SDK is not used to load content for them." }
+      },
+      footer: { copyright: "© Vaslix Games · Independent Android publisher", home: "Home", privacyLink: "Privacy Policy", contact: "Contact" }
+    },
+    ru: {
+      meta: {
+        title: "Vaslix Games — небольшие Android-игры, сделанные с любовью",
+        description: "Vaslix Games — независимый Android-издатель, выпускающий компактные, продуманные приложения в разных жанрах: пазлы сегодня, аудио и подкасты дальше. Сейчас выходит Gridlix, в разработке Blocklix.",
+        ogTitle: "Vaslix Games",
+        ogDesc: "Независимый Android-издатель. Небольшие, продуманные игры в разных жанрах."
+      },
+      nav: { brand: "Vaslix Games", contact: "Контакты", privacy: "Конфиденциальность", langLabel: "Сменить язык" },
+      hero: { h1: "Vaslix Games", tagline: "Небольшие Android-игры, сделанные с любовью." },
+      games: {
+        eyebrow: "Наши игры",
+        title: "Что мы выпускаем",
+        intro: "Маленькая независимая студия, делающая компактные Android-приложения в разных жанрах — пазлы, слова, аркады, аудио и подкасты. Сейчас выходит Gridlix, в активной разработке Blocklix и аудио/подкаст-приложения.",
+        aria: "Наши игры"
+      },
+      card: {
+        gridlix: {
+          iconAlt: "Иконка приложения Gridlix",
+          genre: "Пазл", status: "В продаже", title: "Gridlix",
+          desc: "Неоморфный пазл 4×4 для Android. Слияние плиток в стиле 2048, четыре бустера, тёмная тема, опциональная Premium-подписка без рекламы.",
+          feat: { 1: "Android 8+", 2: "Бесплатно с рекламой", 3: "Premium-подписка", 4: "Светлая · Тёмная" }
+        },
+        blocklix: {
+          iconAlt: "Иконка приложения Blocklix",
+          genre: "Пазл", status: "В разработке", title: "Blocklix",
+          desc: "Бесплатный блочный пазл 8×8 для Android. Размещайте цветные фигуры, очищайте линии и квадраты, собирайте комбо для больших множителей. 25 разблокируемых тем, 10 рангов по 15 категориям достижений, 7-дневный сундук ежедневной награды, бустеры «молот» и «бомба», и опциональная Premium-подписка без рекламы с двойным начислением монет.",
+          feat: { 1: "Android 8+", 2: "25 тем", 3: "10 рангов", 4: "Ежедневный сундук", 5: "Premium · ×2 монет" }
+        }
+      },
+      privacy: { eyebrow: "Ваши данные", title: "Конфиденциальность и прозрачность" },
+      privacyCta: {
+        aria: "Открыть Политику конфиденциальности",
+        title: "Прочитать Политику конфиденциальности",
+        text: "Краткое объяснение простым языком, полный текст о том, что хранится локально, как работает Google Play Billing и какие рекламные сети мы используем для бесплатных пользователей. Действует для всех наших опубликованных приложений.",
+        btn: "Открыть политику"
+      },
+      trust: {
+        aria: "Обязательства по конфиденциальности",
+        1: { title: "Без аккаунтов", desc: "Регистрация не нужна. Прогресс хранится на вашем устройстве." },
+        2: { title: "Без хранения платёжных данных", desc: "Все платежи проходят через Google Play. Мы не видим вашу карту." },
+        3: { title: "GDPR · CCPA · COPPA", desc: "Согласия, отказы и права на данные по стандартам." },
+        4: { title: "Premium = без рекламы", desc: "У подписчиков рекламы нет. Рекламный SDK не подгружает контент для них." }
+      },
+      footer: { copyright: "© Vaslix Games · Независимый Android-издатель", home: "Главная", privacyLink: "Политика конфиденциальности", contact: "Контакты" }
+    },
+    es: {
+      meta: {
+        title: "Vaslix Games — pequeños juegos para Android, hechos con cariño",
+        description: "Vaslix Games es un editor independiente de Android que crea apps pequeñas y enfocadas en distintos géneros — juegos de puzzle hoy, audio y podcasts después. Actualmente publicamos Gridlix y desarrollamos Blocklix.",
+        ogTitle: "Vaslix Games",
+        ogDesc: "Editor independiente de Android. Juegos pequeños y enfocados en varios géneros."
+      },
+      nav: { brand: "Vaslix Games", contact: "Contacto", privacy: "Privacidad", langLabel: "Cambiar idioma" },
+      hero: { h1: "Vaslix Games", tagline: "Pequeños juegos para Android, hechos con cariño." },
+      games: {
+        eyebrow: "Nuestros juegos",
+        title: "Lo que publicamos",
+        intro: "Pequeño sello independiente que desarrolla apps Android enfocadas en varios géneros — puzzle, palabras, arcade y audio/podcasts. Actualmente publicamos Gridlix; Blocklix y títulos de audio/podcasts en desarrollo activo.",
+        aria: "Nuestros juegos"
+      },
+      card: {
+        gridlix: {
+          iconAlt: "Icono de la app Gridlix",
+          genre: "Puzzle", status: "Disponible", title: "Gridlix",
+          desc: "Un puzzle 4×4 neumórfico para Android. Fusión estilo 2048, cuatro boosters, modo oscuro, Premium opcional sin anuncios.",
+          feat: { 1: "Android 8+", 2: "Gratis con anuncios", 3: "Suscripción Premium", 4: "Claro · Oscuro" }
+        },
+        blocklix: {
+          iconAlt: "Icono de la app Blocklix",
+          genre: "Puzzle", status: "En desarrollo", title: "Blocklix",
+          desc: "Un puzzle de bloques 8×8 gratuito para Android. Coloca figuras de colores, limpia líneas y cuadrados, encadena combos con grandes multiplicadores. 25 temas desbloqueables, 10 rangos en 15 categorías de logros, cofre de recompensa diaria de 7 días, boosters martillo y bomba, y una Premium opcional sin anuncios con monedas ×2.",
+          feat: { 1: "Android 8+", 2: "25 temas", 3: "10 rangos", 4: "Cofre diario", 5: "Premium · monedas ×2" }
+        }
+      },
+      privacy: { eyebrow: "Tus datos", title: "Privacidad y transparencia" },
+      privacyCta: {
+        aria: "Leer nuestra Política de Privacidad",
+        title: "Lee nuestra Política de Privacidad",
+        text: "Resumen en lenguaje claro, detalles completos sobre lo que almacenamos localmente, cómo funciona Google Play Billing y las redes publicitarias que usamos para usuarios gratuitos. Se aplica a todos nuestros títulos publicados.",
+        btn: "Abrir política"
+      },
+      trust: {
+        aria: "Compromisos de privacidad",
+        1: { title: "Sin cuentas", desc: "No hace falta registrarse. Tu progreso vive en tu dispositivo." },
+        2: { title: "Sin guardar datos de pago", desc: "Toda facturación pasa por Google Play. Nunca vemos tu tarjeta." },
+        3: { title: "GDPR · CCPA · COPPA", desc: "Consentimientos, opt-outs y derechos alineados con los estándares." },
+        4: { title: "Premium = sin anuncios", desc: "Los suscriptores no ven anuncios. El SDK no carga contenido para ellos." }
+      },
+      footer: { copyright: "© Vaslix Games · Editor independiente de Android", home: "Inicio", privacyLink: "Política de Privacidad", contact: "Contacto" }
+    },
+    de: {
+      meta: {
+        title: "Vaslix Games — kleine Android-Spiele, mit Sorgfalt gemacht",
+        description: "Vaslix Games ist ein unabhängiger Android-Publisher, der kleine, fokussierte Apps in verschiedenen Genres entwickelt — heute Puzzle-Spiele, demnächst Audio- und Podcast-Titel. Aktuell erscheint Gridlix, Blocklix ist in Entwicklung.",
+        ogTitle: "Vaslix Games",
+        ogDesc: "Unabhängiger Android-Publisher. Kleine, fokussierte Spiele über Genres hinweg."
+      },
+      nav: { brand: "Vaslix Games", contact: "Kontakt", privacy: "Datenschutz", langLabel: "Sprache ändern" },
+      hero: { h1: "Vaslix Games", tagline: "Kleine Android-Spiele, mit Sorgfalt gemacht." },
+      games: {
+        eyebrow: "Unsere Spiele",
+        title: "Was wir veröffentlichen",
+        intro: "Ein kleines unabhängiges Label, das fokussierte Android-Apps in verschiedenen Genres baut — Puzzle, Wort, Arcade und Audio/Podcasts. Aktuell erscheint Gridlix; Blocklix und Audio-/Podcast-Titel sind in aktiver Entwicklung.",
+        aria: "Unsere Spiele"
+      },
+      card: {
+        gridlix: {
+          iconAlt: "Gridlix App-Symbol",
+          genre: "Puzzle", status: "Verfügbar", title: "Gridlix",
+          desc: "Ein neumorphes 4×4-Raster-Puzzle für Android. 2048-artiges Zusammenfügen, vier Booster, Dark Mode, optionales werbefreies Premium.",
+          feat: { 1: "Android 8+", 2: "Kostenlos mit Werbung", 3: "Premium-Abo", 4: "Hell · Dunkel" }
+        },
+        blocklix: {
+          iconAlt: "Blocklix App-Symbol",
+          genre: "Puzzle", status: "In Entwicklung", title: "Blocklix",
+          desc: "Ein kostenloses 8×8-Block-Puzzle für Android. Lege bunte Formen ab, räume Reihen und Quadrate, verkette Combos für große Multiplikatoren. 25 freischaltbare Themes, 10 Ränge in 15 Erfolgs-Kategorien, eine 7-Tage-Tageschest, Hammer- und Bomben-Booster und ein optionales werbefreies Premium mit 2× Münz-Verdienst.",
+          feat: { 1: "Android 8+", 2: "25 Themes", 3: "10 Ränge", 4: "Tageschest", 5: "Premium · 2× Münzen" }
+        }
+      },
+      privacy: { eyebrow: "Deine Daten", title: "Datenschutz & Transparenz" },
+      privacyCta: {
+        aria: "Unsere Datenschutzerklärung lesen",
+        title: "Lies unsere Datenschutzerklärung",
+        text: "Klartext-Zusammenfassung, vollständige Details zu lokal gespeicherten Daten, zu Google Play Billing und zu den Werbenetzwerken, die wir für Free-Nutzer einsetzen. Gilt für alle veröffentlichten Titel.",
+        btn: "Erklärung öffnen"
+      },
+      trust: {
+        aria: "Datenschutz-Versprechen",
+        1: { title: "Keine Konten", desc: "Du musst dich nicht registrieren. Der Spielstand bleibt auf deinem Gerät." },
+        2: { title: "Keine Zahlungsdaten gespeichert", desc: "Alle Zahlungen laufen über Google Play. Wir sehen deine Karte nie." },
+        3: { title: "GDPR · CCPA · COPPA", desc: "Standardkonforme Einwilligungen, Opt-outs und Datenrechte." },
+        4: { title: "Premium = werbefrei", desc: "Abonnenten sehen keine Werbung. Das Ad-SDK lädt für sie keine Inhalte." }
+      },
+      footer: { copyright: "© Vaslix Games · Unabhängiger Android-Publisher", home: "Startseite", privacyLink: "Datenschutzerklärung", contact: "Kontakt" }
+    },
+    fr: {
+      meta: {
+        title: "Vaslix Games — petits jeux Android, faits avec soin",
+        description: "Vaslix Games est un éditeur indépendant Android qui crée des apps compactes et soignées dans différents genres — jeux de puzzle aujourd'hui, audio et podcasts ensuite. Gridlix est publié, Blocklix est en développement.",
+        ogTitle: "Vaslix Games",
+        ogDesc: "Éditeur indépendant Android. Petits jeux soignés, tous genres."
+      },
+      nav: { brand: "Vaslix Games", contact: "Contact", privacy: "Confidentialité", langLabel: "Changer de langue" },
+      hero: { h1: "Vaslix Games", tagline: "Petits jeux Android, faits avec soin." },
+      games: {
+        eyebrow: "Nos jeux",
+        title: "Ce que nous publions",
+        intro: "Un petit label indé qui développe des apps Android soignées dans plusieurs genres — puzzle, mots, arcade et audio/podcasts. Gridlix est en ligne ; Blocklix et les titres audio/podcasts sont en développement actif.",
+        aria: "Nos jeux"
+      },
+      card: {
+        gridlix: {
+          iconAlt: "Icône de l'app Gridlix",
+          genre: "Puzzle", status: "Disponible", title: "Gridlix",
+          desc: "Un puzzle 4×4 neumorphique pour Android. Fusion façon 2048, quatre boosters, mode sombre, Premium optionnel sans pub.",
+          feat: { 1: "Android 8+", 2: "Gratuit avec pubs", 3: "Abonnement Premium", 4: "Clair · Sombre" }
+        },
+        blocklix: {
+          iconAlt: "Icône de l'app Blocklix",
+          genre: "Puzzle", status: "En développement", title: "Blocklix",
+          desc: "Un puzzle de blocs 8×8 gratuit pour Android. Posez des formes colorées, videz lignes et carrés, enchaînez les combos pour de gros multiplicateurs. 25 thèmes à débloquer, 10 rangs sur 15 pistes de succès, un coffre de récompense quotidien sur 7 jours, des boosters marteau et bombe, et un Premium optionnel sans pub avec gains de pièces ×2.",
+          feat: { 1: "Android 8+", 2: "25 thèmes", 3: "10 rangs", 4: "Coffre quotidien", 5: "Premium · pièces ×2" }
+        }
+      },
+      privacy: { eyebrow: "Vos données", title: "Confidentialité et transparence" },
+      privacyCta: {
+        aria: "Lire notre Politique de confidentialité",
+        title: "Lisez notre Politique de confidentialité",
+        text: "Résumé en langage clair, détails complets sur ce qui est stocké localement, sur Google Play Billing et les réseaux publicitaires utilisés pour les utilisateurs gratuits. S'applique à tous nos titres publiés.",
+        btn: "Ouvrir la politique"
+      },
+      trust: {
+        aria: "Engagements de confidentialité",
+        1: { title: "Pas de compte", desc: "Aucune inscription. Votre progression reste sur l'appareil." },
+        2: { title: "Aucune donnée de paiement stockée", desc: "Tous les paiements passent par Google Play. Nous ne voyons jamais votre carte." },
+        3: { title: "GDPR · CCPA · COPPA", desc: "Consentements, opt-outs et droits sur les données alignés aux standards." },
+        4: { title: "Premium = sans pub", desc: "Les abonnés ne voient aucune pub. Le SDK ne charge rien pour eux." }
+      },
+      footer: { copyright: "© Vaslix Games · Éditeur Android indépendant", home: "Accueil", privacyLink: "Politique de confidentialité", contact: "Contact" }
+    }
+  };
+
+  // ─────────────────────────────────────────────────────────
+  // Locale apply + switcher
+  // ─────────────────────────────────────────────────────────
+  const LANG_LIST = ['en', 'ru', 'es', 'de', 'fr'];
+  const LANG_FLAGS = { en: '🇬🇧', ru: '🇷🇺', es: '🇪🇸', de: '🇩🇪', fr: '🇫🇷' };
+  const LANG_KEY = 'vaslix.lang';
+
+  function get(dict, path) {
+    return path.split('.').reduce(function (o, k) { return (o == null) ? null : o[k]; }, dict);
+  }
+
+  function applyLocale(loc) {
+    const dict = I18N[loc] || I18N.en;
+    document.documentElement.lang = loc;
+    document.documentElement.dir = (loc === 'ar') ? 'rtl' : 'ltr';
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      const val = get(dict, el.getAttribute('data-i18n'));
+      if (val != null) el.textContent = val;
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+      const val = get(dict, el.getAttribute('data-i18n-html'));
+      if (val != null) el.innerHTML = val;
+    });
+    document.querySelectorAll('[data-i18n-attr]').forEach(function (el) {
+      el.getAttribute('data-i18n-attr').split(',').forEach(function (pair) {
+        const parts = pair.split(':');
+        const attr = parts[0].trim();
+        const key = parts[1] && parts[1].trim();
+        if (!attr || !key) return;
+        const val = get(dict, key);
+        if (val != null) el.setAttribute(attr, val);
+      });
+    });
+    if (dict.meta && dict.meta.title) document.title = dict.meta.title;
+    const md = document.querySelector('meta[name="description"]');
+    if (md && dict.meta && dict.meta.description) md.setAttribute('content', dict.meta.description);
+    const ogT = document.querySelector('meta[property="og:title"]');
+    if (ogT && dict.meta && dict.meta.ogTitle) ogT.setAttribute('content', dict.meta.ogTitle);
+    const ogD = document.querySelector('meta[property="og:description"]');
+    if (ogD && dict.meta && dict.meta.ogDesc) ogD.setAttribute('content', dict.meta.ogDesc);
+    const flagEl = document.getElementById('langCurrentFlag');
+    const codeEl = document.getElementById('langCurrentCode');
+    if (flagEl) flagEl.textContent = LANG_FLAGS[loc] || LANG_FLAGS.en;
+    if (codeEl) codeEl.textContent = loc.toUpperCase();
+    const btn = document.getElementById('langSwitcher');
+    if (btn && dict.nav && dict.nav.langLabel) btn.setAttribute('aria-label', dict.nav.langLabel);
+    document.querySelectorAll('#langMenu li').forEach(function (li) {
+      const isActive = li.getAttribute('data-lang') === loc;
+      li.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+    try { localStorage.setItem(LANG_KEY, loc); } catch (e) {}
+  }
+
+  function detectInitialLocale() {
+    let saved = null;
+    try { saved = localStorage.getItem(LANG_KEY); } catch (e) {}
+    if (saved && LANG_LIST.indexOf(saved) >= 0) return saved;
+    const nav = (navigator.language || 'en').slice(0, 2).toLowerCase();
+    return (LANG_LIST.indexOf(nav) >= 0) ? nav : 'en';
+  }
+
+  (function initSwitcher() {
+    const btn = document.getElementById('langSwitcher');
+    const menu = document.getElementById('langMenu');
+    if (!btn || !menu) return;
+    const items = Array.prototype.slice.call(menu.querySelectorAll('li'));
+
+    items.forEach(function (li, i) {
+      li.style.setProperty('--li-delay', (i * 40) + 'ms');
+    });
+
+    function openMenu() {
+      menu.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      const sel = menu.querySelector('li[aria-selected="true"]') || items[0];
+      if (sel) sel.focus();
+    }
+    function closeMenu(returnFocus) {
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      if (returnFocus) btn.focus();
+    }
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (btn.getAttribute('aria-expanded') === 'true') closeMenu(false);
+      else openMenu();
+    });
+    items.forEach(function (li, idx) {
+      li.addEventListener('click', function (e) {
+        e.stopPropagation();
+        applyLocale(li.getAttribute('data-lang'));
+        closeMenu(true);
+      });
+      li.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          applyLocale(li.getAttribute('data-lang'));
+          closeMenu(true);
+        } else if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          (items[idx + 1] || items[0]).focus();
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          (items[idx - 1] || items[items.length - 1]).focus();
+        } else if (e.key === 'Escape') {
+          e.preventDefault();
+          closeMenu(true);
+        }
+      });
+    });
+    document.addEventListener('click', function (e) {
+      if (menu.classList.contains('open') && !menu.contains(e.target) && e.target !== btn) closeMenu(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && menu.classList.contains('open')) closeMenu(true);
+    });
+
+    applyLocale(detectInitialLocale());
+  })();
+
+  // ─────────────────────────────────────────────────────────
+  // Reveal-on-scroll
+  // ─────────────────────────────────────────────────────────
   (function () {
-    var prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var nodes = document.querySelectorAll('.reveal');
+    const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const nodes = document.querySelectorAll('.reveal');
     if (prefersReduce || !('IntersectionObserver' in window)) {
       nodes.forEach(function (n) { n.classList.add('in-view'); });
       return;
@@ -767,7 +1327,7 @@
     nodes.forEach(function (n, i) {
       n.style.setProperty('--stagger', (i * 70) + 'ms');
     });
-    var io = new IntersectionObserver(function (entries) {
+    const io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) {
           e.target.classList.add('in-view');
@@ -776,6 +1336,33 @@
       });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
     nodes.forEach(function (n) { io.observe(n); });
+  })();
+
+  // ─────────────────────────────────────────────────────────
+  // Mouse-parallax tilt on game cards
+  // ─────────────────────────────────────────────────────────
+  (function () {
+    const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const coarse = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+    if (prefersReduce || coarse) return;
+    document.querySelectorAll('.game').forEach(function (card) {
+      let raf = 0;
+      card.addEventListener('mousemove', function (e) {
+        if (raf) return;
+        raf = requestAnimationFrame(function () {
+          raf = 0;
+          const r = card.getBoundingClientRect();
+          const x = (e.clientX - r.left) / r.width  - 0.5;
+          const y = (e.clientY - r.top)  / r.height - 0.5;
+          card.style.setProperty('--tx', x.toFixed(3));
+          card.style.setProperty('--ty', y.toFixed(3));
+        });
+      });
+      card.addEventListener('mouseleave', function () {
+        card.style.setProperty('--tx', '0');
+        card.style.setProperty('--ty', '0');
+      });
+    });
   })();
 </script>
 
