@@ -794,8 +794,29 @@
       padding: 18px 20px;
       box-shadow: var(--shadow-sm);
       display: flex; gap: 14px; align-items: flex-start;
+      transition:
+        transform 380ms var(--ease-spring),
+        box-shadow 380ms var(--ease-out),
+        border-color 220ms var(--ease-out);
     }
-    .trust-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .trust-item:hover {
+      transform: translateY(-3px);
+      box-shadow:
+        0 16px 32px color-mix(in srgb, var(--accent) 18%, transparent),
+        var(--shadow-md);
+      border-color: color-mix(in srgb, var(--accent) 38%, var(--border));
+    }
+    .trust-item:active {
+      transform: translateY(-1px);
+      transition: transform 180ms var(--ease-spring);
+    }
+    .trust-item:hover .trust-icon {
+      transform: scale(1.1) rotate(-6deg);
+      background: color-mix(in srgb, var(--accent) 24%, transparent);
+    }
+    .trust-item:hover .trust-text strong {
+      color: var(--accent);
+    }
     .trust-icon {
       width: 38px; height: 38px;
       border-radius: 11px;
@@ -803,6 +824,9 @@
       color: var(--accent);
       display: grid; place-items: center;
       flex-shrink: 0;
+      transition:
+        transform 440ms var(--ease-spring),
+        background 220ms var(--ease-out);
     }
     .trust-icon svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
     .trust-text strong {
