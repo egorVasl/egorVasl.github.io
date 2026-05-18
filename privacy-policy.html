@@ -62,8 +62,9 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 12px); }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 12px); overflow-x: clip; }
     body {
+      overflow-x: clip;
       margin: 0;
       background: var(--bg);
       color: var(--text);
@@ -193,6 +194,7 @@
       background: var(--grad);
       box-shadow: 0 6px 16px rgba(108, 93, 211, 0.30);
     }
+    .nav-icon { display: none; }
 
     /* ── Language switcher ─────────────────────────────────── */
     .lang-wrap { position: relative; }
@@ -231,7 +233,8 @@
     .lang-switcher[aria-expanded="true"] .lang-caret { transform: rotate(180deg); }
     .lang-menu {
       position: absolute; top: calc(100% + 8px); right: 0;
-      min-width: 200px;
+      min-width: 180px;
+      max-width: calc(100vw - 24px);
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 14px;
@@ -629,6 +632,85 @@
       .nav-link { padding: 10px 14px; }
       footer a { padding: 8px 10px; margin: -8px -10px; }
       .toc-list a { padding: 10px 14px; }
+      section.card { padding: 22px 20px; }
+      section.card h3 { font-size: 0.95rem; margin-top: 18px; }
+      .section-num { width: 30px; height: 30px; font-size: 0.8rem; }
+      h2.section-title { font-size: 1.15rem; }
+      ul.feat li { padding: 10px 12px; font-size: 0.9rem; }
+      .callout { padding: 14px 16px; font-size: 0.9rem; }
+      .partner-line { padding: 10px 14px; }
+    }
+
+    /* ── Mobile nav: icon-only ───────────────────────────── */
+    @media (max-width: 640px) {
+      .nav-inner { gap: 8px; padding: 0 16px; }
+      .brand-label,
+      .nav-link .nav-label,
+      .lang-switcher .lang-code,
+      .nav-pill { display: none; }
+      .nav-icon { display: block; }
+      .nav-link {
+        width: 40px; height: 40px;
+        padding: 0;
+        display: inline-flex;
+        align-items: center; justify-content: center;
+      }
+      .nav-icon { width: 18px; height: 18px; }
+      .lang-switcher { padding: 7px 10px; gap: 4px; }
+      .lang-menu { min-width: 180px; }
+    }
+
+    /* ── TOC collapsible on tablet/phone ────────────────── */
+    .toc-summary { display: none; }
+    .toc-collapse > .toc-list { display: block; }
+    @media (max-width: 900px) {
+      .toc { padding: 8px 6px; }
+      .toc .toc-title { display: none; }
+      .toc-collapse > summary.toc-summary {
+        display: flex; align-items: center; justify-content: space-between;
+        gap: 12px;
+        cursor: pointer;
+        padding: 12px 14px;
+        list-style: none;
+        font-size: 0.78rem; letter-spacing: 2.6px; text-transform: uppercase;
+        color: var(--muted); font-weight: 700;
+        border-radius: 10px;
+        transition: background var(--press) var(--ease-out);
+      }
+      .toc-collapse > summary.toc-summary:hover { background: var(--surface-2); color: var(--text); }
+      .toc-collapse > summary.toc-summary::-webkit-details-marker { display: none; }
+      .toc-chevron {
+        width: 14px; height: 14px;
+        transition: transform 240ms var(--ease-spring);
+      }
+      details[open] > .toc-summary .toc-chevron { transform: rotate(180deg); }
+      .toc-collapse > .toc-list { display: none; padding: 4px 4px 8px; }
+      details[open] > .toc-list {
+        display: block;
+        animation: toc-open 280ms var(--ease-out);
+      }
+      @keyframes toc-open {
+        from { opacity: 0; transform: translateY(-4px); }
+        to   { opacity: 1; transform: none; }
+      }
+    }
+
+    /* ── Compact hero + summary + footer on phone ───────── */
+    @media (max-width: 520px) {
+      .hero { margin: 32px auto 12px; padding: 0 16px; }
+      h1.title { font-size: clamp(2rem, 8vw, 2.4rem); }
+      .lede { font-size: 1rem; }
+      .chip { font-size: 0.76rem; padding: 6px 12px; }
+      .summary { margin: 16px auto 40px; padding: 0 16px; }
+      .summary-card { padding: 20px 18px; gap: 16px; grid-template-columns: 1fr; }
+      .summary-text strong { font-size: 0.94rem; }
+      .layout { padding: 0 16px; gap: 18px; margin-bottom: 40px; }
+      footer {
+        flex-direction: column; align-items: flex-start;
+        gap: 14px; padding: 22px 16px;
+        margin: 24px auto 32px;
+      }
+      footer .right { gap: 14px; }
     }
   </style>
 </head>
@@ -652,7 +734,7 @@
           </g>
         </svg>
       </span>
-      <span data-i18n="nav.brand">Vaslix Games</span>
+      <span class="brand-label" data-i18n="nav.brand">Vaslix Games</span>
     </a>
     <span class="nav-pill" data-i18n="nav.pill">Privacy</span>
     <span class="nav-spacer"></span>
@@ -670,7 +752,10 @@
         <li role="option" data-lang="fr" tabindex="-1"><span class="lang-flag" aria-hidden="true">🇫🇷</span><span class="lang-code">FR</span><span class="lang-native">Français</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg></li>
       </ul>
     </div>
-    <a class="nav-link" href="./index.html" data-i18n="nav.back">← Back to home</a>
+    <a class="nav-link" href="./index.html" aria-label="Back to home" data-i18n-attr="aria-label:nav.back">
+      <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      <span class="nav-label" data-i18n="nav.back">← Back to home</span>
+    </a>
   </div>
 </header>
 
@@ -735,19 +820,25 @@
 <div class="layout">
 
   <aside class="toc" aria-label="Table of contents" data-i18n-attr="aria-label:toc.aria">
-    <p class="toc-title" data-i18n="toc.title">On this page</p>
-    <ul class="toc-list">
-      <li><a href="#sec-1" data-i18n="toc.1">1. Information we collect</a></li>
-      <li><a href="#sec-2" data-i18n="toc.2">2. Advertising partners</a></li>
-      <li><a href="#sec-3" data-i18n="toc.3">3. Subscriptions &amp; Play Billing</a></li>
-      <li><a href="#sec-4" data-i18n="toc.4">4. Legal basis (GDPR)</a></li>
-      <li><a href="#sec-5" data-i18n="toc.5">5. CCPA / US state laws</a></li>
-      <li><a href="#sec-6" data-i18n="toc.6">6. Children's privacy</a></li>
-      <li><a href="#sec-7" data-i18n="toc.7">7. Data retention</a></li>
-      <li><a href="#sec-8" data-i18n="toc.8">8. Your rights</a></li>
-      <li><a href="#sec-9" data-i18n="toc.9">9. Changes to this policy</a></li>
-      <li><a href="#sec-10" data-i18n="toc.10">10. Contact</a></li>
-    </ul>
+    <details class="toc-collapse" open>
+      <summary class="toc-summary">
+        <span data-i18n="toc.title">On this page</span>
+        <svg class="toc-chevron" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <p class="toc-title" data-i18n="toc.title">On this page</p>
+      <ul class="toc-list">
+        <li><a href="#sec-1" data-i18n="toc.1">1. Information we collect</a></li>
+        <li><a href="#sec-2" data-i18n="toc.2">2. Advertising partners</a></li>
+        <li><a href="#sec-3" data-i18n="toc.3">3. Subscriptions &amp; Play Billing</a></li>
+        <li><a href="#sec-4" data-i18n="toc.4">4. Legal basis (GDPR)</a></li>
+        <li><a href="#sec-5" data-i18n="toc.5">5. CCPA / US state laws</a></li>
+        <li><a href="#sec-6" data-i18n="toc.6">6. Children's privacy</a></li>
+        <li><a href="#sec-7" data-i18n="toc.7">7. Data retention</a></li>
+        <li><a href="#sec-8" data-i18n="toc.8">8. Your rights</a></li>
+        <li><a href="#sec-9" data-i18n="toc.9">9. Changes to this policy</a></li>
+        <li><a href="#sec-10" data-i18n="toc.10">10. Contact</a></li>
+      </ul>
+    </details>
   </aside>
 
   <main class="content">
@@ -1436,6 +1527,22 @@
     });
 
     applyLocale(detectInitialLocale());
+  })();
+
+  // ─────────────────────────────────────────────────────────
+  // TOC details: open on desktop, collapsed on ≤900px
+  // ─────────────────────────────────────────────────────────
+  (function () {
+    const tocDetails = document.querySelector('.toc-collapse');
+    if (!tocDetails) return;
+    const mq = window.matchMedia('(max-width: 900px)');
+    function sync() {
+      if (mq.matches) tocDetails.removeAttribute('open');
+      else tocDetails.setAttribute('open', '');
+    }
+    sync();
+    if (mq.addEventListener) mq.addEventListener('change', sync);
+    else if (mq.addListener) mq.addListener(sync);
   })();
 
   // ─────────────────────────────────────────────────────────

@@ -59,8 +59,9 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 12px); }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 12px); overflow-x: clip; }
     body {
+      overflow-x: clip;
       margin: 0;
       background: var(--bg);
       color: var(--text);
@@ -182,6 +183,7 @@
       background: color-mix(in srgb, var(--accent) 22%, transparent);
     }
     .nav-link.privacy:hover { color: var(--accent); }
+    .nav-icon { display: none; }
 
     /* ── Language switcher ─────────────────────────────────── */
     .lang-wrap { position: relative; }
@@ -220,7 +222,8 @@
     .lang-switcher[aria-expanded="true"] .lang-caret { transform: rotate(180deg); }
     .lang-menu {
       position: absolute; top: calc(100% + 8px); right: 0;
-      min-width: 200px;
+      min-width: 180px;
+      max-width: calc(100vw - 24px);
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 14px;
@@ -758,6 +761,61 @@
       footer a { padding: 8px 10px; margin: -8px -10px; }
       .privacy-cta-btn { padding: 16px 22px; }
     }
+
+    /* ── Mobile nav: icon-only ───────────────────────────── */
+    @media (max-width: 640px) {
+      .nav-inner { gap: 8px; padding: 0 16px; }
+      .brand-label,
+      .nav-link .nav-label,
+      .lang-switcher .lang-code { display: none; }
+      .nav-icon { display: block; }
+      .nav-link {
+        width: 40px; height: 40px;
+        padding: 0;
+        display: inline-flex;
+        align-items: center; justify-content: center;
+      }
+      .nav-icon { width: 18px; height: 18px; }
+      .lang-switcher { padding: 7px 10px; gap: 4px; }
+      .lang-menu { min-width: 180px; }
+    }
+
+    /* ── Cards + hero compact ───────────────────────────── */
+    @media (max-width: 520px) {
+      main { padding: 40px 16px 24px; }
+      .hero { padding: 24px 0 0; margin-bottom: 48px; }
+      .brand-tile { width: 72px; height: 72px; margin-bottom: 20px; }
+      h1 { font-size: clamp(2rem, 8vw, 2.6rem); }
+      .tagline { font-size: 1rem; }
+      h2.section-title { font-size: 1.4rem; }
+      .section-intro { font-size: 0.95rem; margin-bottom: 22px; }
+      .games { margin-bottom: 48px; gap: 14px; }
+      .game { padding: 18px; gap: 12px; }
+      .game-head { grid-template-columns: 56px 1fr; gap: 12px; }
+      .game-icon { width: 56px; height: 56px; border-radius: 14px; }
+      .game h3 { font-size: 1.12rem; }
+      .game-desc { font-size: 0.9rem; }
+      .game-feat { gap: 5px; }
+      .game-feat span { font-size: 0.68rem; padding: 3px 8px; }
+      .pill { font-size: 0.64rem; padding: 3px 8px; letter-spacing: 1px; }
+      .trust { margin-bottom: 48px; }
+      .trust-item { padding: 14px 16px; }
+      .privacy-cta { padding: 22px 18px; }
+      .privacy-cta-text strong { font-size: 1.05rem; }
+      .privacy-cta-text span { font-size: 0.88rem; }
+      .privacy-cta-icon { width: 52px; height: 52px; }
+      .privacy-cta-icon svg { width: 26px; height: 26px; }
+      footer { padding: 22px 16px 28px; }
+      footer .links { gap: 12px; }
+    }
+
+    /* ── Tighter cube set on phone ──────────────────────── */
+    @media (max-width: 480px) {
+      .hero-cubes .c2, .hero-cubes .c4 { display: none; }
+      .hero-cubes .c1 { width: 36px; height: 36px; }
+      .hero-cubes .c3 { width: 32px; height: 32px; }
+      .lang-menu { min-width: 160px; }
+    }
   </style>
 </head>
 <body>
@@ -780,10 +838,13 @@
           </g>
         </svg>
       </span>
-      <span data-i18n="nav.brand">Vaslix Games</span>
+      <span class="brand-label" data-i18n="nav.brand">Vaslix Games</span>
     </a>
     <span class="nav-spacer"></span>
-    <a class="nav-link" href="mailto:vaslixofficial@protonmail.com" data-i18n="nav.contact">Contact</a>
+    <a class="nav-link" href="mailto:vaslixofficial@protonmail.com" aria-label="Contact" data-i18n-attr="aria-label:nav.contact">
+      <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+      <span class="nav-label" data-i18n="nav.contact">Contact</span>
+    </a>
     <div class="lang-wrap">
       <button type="button" class="lang-switcher" id="langSwitcher" aria-haspopup="listbox" aria-expanded="false" aria-label="Change language">
         <span class="lang-flag" id="langCurrentFlag" aria-hidden="true">🇬🇧</span>
@@ -798,7 +859,10 @@
         <li role="option" data-lang="fr" tabindex="-1"><span class="lang-flag" aria-hidden="true">🇫🇷</span><span class="lang-code">FR</span><span class="lang-native">Français</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg></li>
       </ul>
     </div>
-    <a class="nav-link privacy" href="./privacy-policy.html" data-i18n="nav.privacy">Privacy</a>
+    <a class="nav-link privacy" href="./privacy-policy.html" aria-label="Privacy" data-i18n-attr="aria-label:nav.privacy">
+      <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6l-8-4z"/><polyline points="9 12 11 14 15 10"/></svg>
+      <span class="nav-label" data-i18n="nav.privacy">Privacy</span>
+    </a>
   </div>
 </header>
 
