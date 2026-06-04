@@ -603,6 +603,34 @@
       section.card { opacity: 1; transform: none; }
     }
 
+    /* ── Overflow safety: long URLs, RU compound words ─────── */
+    .content { min-width: 0; }
+    section.card p, section.card li, section.card h3, .callout p {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+    }
+    section.card a, .callout a, .partner-line a {
+      overflow-wrap: anywhere;
+      word-break: break-all;
+    }
+    .partner-line {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      min-width: 0;
+    }
+    .partner-line svg { flex-shrink: 0; }
+    .summary-item { min-width: 0; }
+    .summary-text { min-width: 0; flex: 1 1 0; }
+    .summary-text strong, .summary-text span {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    .chip { max-width: 100%; }
+    .chip span { overflow-wrap: anywhere; min-width: 0; }
+
     * { -webkit-tap-highlight-color: transparent; }
     a, button, .brand, .nav-link, .toc-list a, footer a {
       touch-action: manipulation;
@@ -712,6 +740,27 @@
       }
       footer .right { gap: 14px; }
     }
+
+    /* ── Ultra-narrow phones (≤380px) — long-script langs ── */
+    @media (max-width: 380px) {
+      .nav-inner { gap: 6px; padding: 0 12px; }
+      .hero { padding: 0 12px; }
+      h1.title { font-size: clamp(1.7rem, 9vw, 2.05rem); }
+      .lede { font-size: 0.94rem; }
+      .summary { padding: 0 12px; }
+      .summary-card { padding: 18px 14px; }
+      .summary-icon { width: 36px; height: 36px; border-radius: 10px; }
+      .layout { padding: 0 12px; gap: 16px; }
+      section.card { padding: 18px 14px; }
+      .section-num { width: 28px; height: 28px; font-size: 0.75rem; }
+      h2.section-title { font-size: 1.02rem; }
+      section.card h3 { font-size: 0.9rem; }
+      ul.feat li { padding: 10px 11px; font-size: 0.86rem; gap: 10px; }
+      .meta-row { gap: 8px; }
+      .partner-line { padding: 10px 12px; gap: 8px; }
+      .callout { padding: 12px 14px; font-size: 0.88rem; }
+      footer { padding: 18px 12px; margin-bottom: 28px; }
+    }
   </style>
 </head>
 <body>
@@ -814,6 +863,15 @@
         <span data-i18n="summary.3.desc">Free users see ads via Appodeal mediation and Google AdMob. Premium subscribers see no ads — the ad SDKs are not used to load or display ads for them.</span>
       </div>
     </div>
+    <div class="summary-item">
+      <div class="summary-icon note" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 11c1.5-2.5 1.5-5 0-7"/><path d="M9 12c-2-3-2-6 0-9"/><path d="M15 12c2-3 2-6 0-9"/><path d="M6 14c-3-3-3-7 0-11"/><path d="M18 14c3-3 3-7 0-11"/><path d="M5 21c-1-3-1-6 1-9 2-3 3-3 6-3s4 0 6 3c2 3 2 6 1 9"/></svg>
+      </div>
+      <div class="summary-text">
+        <strong data-i18n="summary.4.title">Device identifiers</strong>
+        <span data-i18n="summary.4.desc">Your Google Advertising ID and Android device ID are read so ad networks can serve and frequency-cap ads, and so Google Play Billing can verify your subscription entitlement. Both IDs are resettable in Android Settings.</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -866,12 +924,16 @@
       <h3 data-i18n="sec1.h3b">1b. Collected by third parties on our behalf</h3>
       <p data-i18n="sec1.body1b">The third-party services described below may collect technical and advertising-related information automatically:</p>
       <ul class="feat">
-        <li data-i18n="sec1.list1b.1">Device advertising identifier (Google Advertising ID) — non-premium users only</li>
-        <li data-i18n="sec1.list1b.2">IP address and approximate geographic location derived from it</li>
-        <li data-i18n="sec1.list1b.3">Device model, operating system version, language, and time zone</li>
-        <li data-i18n="sec1.list1b.4">App version, session timestamps, and crash diagnostics</li>
-        <li data-i18n="sec1.list1b.5">Aggregated, non-personally-identifying usage events — including podcast/audio playback events (episode started, completed, skipped) for audio titles, used only in aggregate form</li>
+        <li data-i18n="sec1.list1b.1">Google Advertising ID (GAID) — read on free / non-Premium installs so ad networks can deliver ads, frequency-cap them, and attribute installs. The GAID of Premium subscribers is not sent to any ad network.</li>
+        <li data-i18n="sec1.list1b.2">Android device ID (SSAID) — read on every launch as a stable, app-scoped device identifier. Used by Google Play Billing to verify your subscription entitlement and by the ad mediation SDK for fraud and invalid-traffic signals. It is scoped to this app's signing key and is not linked to your Google account.</li>
+        <li data-i18n="sec1.list1b.3">IP address and approximate geographic location derived from it</li>
+        <li data-i18n="sec1.list1b.4">Device model, operating system version, language, and time zone</li>
+        <li data-i18n="sec1.list1b.5">App version, session timestamps, and crash diagnostics</li>
+        <li data-i18n="sec1.list1b.6">Aggregated, non-personally-identifying usage events — including podcast/audio playback events (episode started, completed, skipped) for audio titles, used only in aggregate form</li>
       </ul>
+      <div class="callout">
+        <p data-i18n-html="sec1.deviceIdCallout"><strong>Why we disclose this:</strong> Google Play's Data safety form requires every read of the Advertising ID and the Android device ID to be declared, regardless of whether the value leaves your device. You can reset the Advertising ID at any time from <em>Android Settings → Privacy → Ads</em>, and the Android ID is regenerated when you factory-reset the device.</p>
+      </div>
     </section>
 
     <section class="card" id="sec-2">
@@ -1026,7 +1088,8 @@
         heading: "The short version",
         1: { title: "What stays on your device", desc: "Game state, settings, best scores, and a cached premium-status flag — never uploaded." },
         2: { title: "What we never see", desc: "Payment details, your Google account email, account IDs, contacts, photos, or location beyond the IP-based estimate ad networks use." },
-        3: { title: "Ads vs Premium", desc: "Free users see ads via Appodeal mediation and Google AdMob. Premium subscribers see no ads — the ad SDKs are not used to load or display ads for them." }
+        3: { title: "Ads vs Premium", desc: "Free users see ads via Appodeal mediation and Google AdMob. Premium subscribers see no ads — the ad SDKs are not used to load or display ads for them." },
+        4: { title: "Device identifiers", desc: "Your Google Advertising ID and Android device ID are read so ad networks can serve and frequency-cap ads, and so Google Play Billing can verify your subscription entitlement. Both IDs are resettable in Android Settings." }
       },
       toc: {
         aria: "Table of contents", title: "On this page",
@@ -1050,12 +1113,14 @@
         h3b: "1b. Collected by third parties on our behalf",
         body1b: "The third-party services described below may collect technical and advertising-related information automatically:",
         list1b: {
-          1: "Device advertising identifier (Google Advertising ID) — non-premium users only",
-          2: "IP address and approximate geographic location derived from it",
-          3: "Device model, operating system version, language, and time zone",
-          4: "App version, session timestamps, and crash diagnostics",
-          5: "Aggregated, non-personally-identifying usage events — including podcast/audio playback events (episode started, completed, skipped) for audio titles, used only in aggregate form"
-        }
+          1: "Google Advertising ID (GAID) — read on free / non-Premium installs so ad networks can deliver ads, frequency-cap them, and attribute installs. The GAID of Premium subscribers is not sent to any ad network.",
+          2: "Android device ID (SSAID) — read on every launch as a stable, app-scoped device identifier. Used by Google Play Billing to verify your subscription entitlement and by the ad mediation SDK for fraud and invalid-traffic signals. It is scoped to this app's signing key and is not linked to your Google account.",
+          3: "IP address and approximate geographic location derived from it",
+          4: "Device model, operating system version, language, and time zone",
+          5: "App version, session timestamps, and crash diagnostics",
+          6: "Aggregated, non-personally-identifying usage events — including podcast/audio playback events (episode started, completed, skipped) for audio titles, used only in aggregate form"
+        },
+        deviceIdCallout: "<strong>Why we disclose this:</strong> Google Play's Data safety form requires every read of the Advertising ID and the Android device ID to be declared, regardless of whether the value leaves your device. You can reset the Advertising ID at any time from <em>Android Settings → Privacy → Ads</em>, and the Android ID is regenerated when you factory-reset the device."
       },
       sec2: {
         title: "Advertising partners (free / non-premium users)",
@@ -1106,7 +1171,8 @@
         heading: "Краткая версия",
         1: { title: "Что остаётся на вашем устройстве", desc: "Прогресс игры, настройки, лучшие результаты и кэшированный признак Premium-статуса — никуда не выгружаются." },
         2: { title: "Чего мы никогда не видим", desc: "Платёжные данные, email вашего Google-аккаунта, ID аккаунтов, контакты, фото и геолокацию точнее, чем приблизительная оценка по IP, которой пользуются рекламные сети." },
-        3: { title: "Реклама и Premium", desc: "Бесплатные пользователи видят рекламу через медиацию Appodeal и Google AdMob. Подписчики Premium рекламы не видят — рекламные SDK не подгружают и не показывают им контент." }
+        3: { title: "Реклама и Premium", desc: "Бесплатные пользователи видят рекламу через медиацию Appodeal и Google AdMob. Подписчики Premium рекламы не видят — рекламные SDK не подгружают и не показывают им контент." },
+        4: { title: "Идентификаторы устройства", desc: "Мы считываем Google Advertising ID и Android ID устройства, чтобы рекламные сети могли показывать рекламу и ограничивать её частоту, а Google Play Billing — проверять статус вашей подписки. Оба идентификатора можно сбросить в настройках Android." }
       },
       toc: {
         aria: "Содержание", title: "На этой странице",
@@ -1130,12 +1196,14 @@
         h3b: "1b. Собирается третьими сторонами от нашего имени",
         body1b: "Указанные ниже сторонние сервисы могут автоматически собирать технические и рекламные данные:",
         list1b: {
-          1: "Рекламный идентификатор устройства (Google Advertising ID) — только для пользователей без Premium",
-          2: "IP-адрес и приблизительное географическое положение, полученное из него",
-          3: "Модель устройства, версия ОС, язык и часовой пояс",
-          4: "Версия приложения, метки времени сессий и диагностика сбоев",
-          5: "Агрегированные обезличенные события использования, включая события воспроизведения подкастов/аудио (эпизод начат, завершён, пропущен) для аудио-приложений — только в агрегированном виде"
-        }
+          1: "Google Advertising ID (GAID) — считывается на бесплатных / не-Premium установках, чтобы рекламные сети могли показывать рекламу, ограничивать её частоту и атрибутировать установки. GAID подписчиков Premium ни одной рекламной сети не передаётся.",
+          2: "Android ID устройства (SSAID) — считывается при каждом запуске как стабильный идентификатор, привязанный к этому приложению. Используется Google Play Billing для проверки прав на подписку и SDK рекламной медиации — для сигналов о фроде и невалидном трафике. Привязан к ключу подписи этого приложения и не связан с вашим Google-аккаунтом.",
+          3: "IP-адрес и приблизительное географическое положение, полученное из него",
+          4: "Модель устройства, версия ОС, язык и часовой пояс",
+          5: "Версия приложения, метки времени сессий и диагностика сбоев",
+          6: "Агрегированные обезличенные события использования, включая события воспроизведения подкастов/аудио (эпизод начат, завершён, пропущен) для аудио-приложений — только в агрегированном виде"
+        },
+        deviceIdCallout: "<strong>Почему мы это раскрываем:</strong> форма Google Play «Безопасность данных» требует декларировать любое чтение Advertising ID и Android ID устройства, независимо от того, покидает ли значение устройство. Advertising ID можно сбросить в любой момент в <em>Настройки Android → Конфиденциальность → Реклама</em>; Android ID пересоздаётся при сбросе устройства к заводским настройкам."
       },
       sec2: {
         title: "Рекламные партнёры (бесплатные пользователи)",
@@ -1186,7 +1254,8 @@
         heading: "Versión corta",
         1: { title: "Qué se queda en tu dispositivo", desc: "El estado del juego, ajustes, mejores puntuaciones y una marca cacheada de Premium — nunca se sube." },
         2: { title: "Qué nunca vemos", desc: "Datos de pago, tu email de Google, identificadores de cuenta, contactos, fotos o ubicación más allá del estimado por IP que usan las redes publicitarias." },
-        3: { title: "Anuncios vs Premium", desc: "Los usuarios gratuitos ven anuncios vía mediación Appodeal y Google AdMob. Los suscriptores Premium no ven anuncios — los SDK de publicidad no se usan para cargarlos o mostrarlos." }
+        3: { title: "Anuncios vs Premium", desc: "Los usuarios gratuitos ven anuncios vía mediación Appodeal y Google AdMob. Los suscriptores Premium no ven anuncios — los SDK de publicidad no se usan para cargarlos o mostrarlos." },
+        4: { title: "Identificadores de dispositivo", desc: "Leemos tu Google Advertising ID y el ID de dispositivo Android para que las redes publicitarias puedan servir y limitar la frecuencia de anuncios, y para que Google Play Billing verifique tu suscripción. Ambos identificadores se pueden restablecer en los ajustes de Android." }
       },
       toc: {
         aria: "Tabla de contenidos", title: "En esta página",
@@ -1210,12 +1279,14 @@
         h3b: "1b. Recopilado por terceros en nuestro nombre",
         body1b: "Los servicios externos descritos abajo pueden recopilar información técnica y publicitaria automáticamente:",
         list1b: {
-          1: "Identificador publicitario del dispositivo (Google Advertising ID) — solo usuarios no Premium",
-          2: "Dirección IP y ubicación geográfica aproximada derivada",
-          3: "Modelo de dispositivo, versión de SO, idioma y zona horaria",
-          4: "Versión de la app, marcas de tiempo de sesión y diagnósticos de fallos",
-          5: "Eventos de uso agregados y no identificables — incluidos eventos de reproducción de podcast/audio (episodio iniciado, completado, omitido) en títulos de audio, usados solo de forma agregada"
-        }
+          1: "Google Advertising ID (GAID) — se lee en instalaciones gratuitas / no Premium para que las redes publicitarias puedan servir anuncios, limitar su frecuencia y atribuir instalaciones. El GAID de los suscriptores Premium no se envía a ninguna red publicitaria.",
+          2: "ID de dispositivo Android (SSAID) — se lee en cada arranque como identificador estable acotado a esta app. Lo usa Google Play Billing para verificar tu derecho a la suscripción y el SDK de mediación publicitaria para señales de fraude y tráfico inválido. Está acotado a la clave de firma de esta app y no se vincula con tu cuenta de Google.",
+          3: "Dirección IP y ubicación geográfica aproximada derivada",
+          4: "Modelo de dispositivo, versión de SO, idioma y zona horaria",
+          5: "Versión de la app, marcas de tiempo de sesión y diagnósticos de fallos",
+          6: "Eventos de uso agregados y no identificables — incluidos eventos de reproducción de podcast/audio (episodio iniciado, completado, omitido) en títulos de audio, usados solo de forma agregada"
+        },
+        deviceIdCallout: "<strong>Por qué lo divulgamos:</strong> el formulario «Seguridad de los datos» de Google Play exige declarar toda lectura del Advertising ID y del ID de dispositivo Android, salga o no del dispositivo. Puedes restablecer el Advertising ID en cualquier momento desde <em>Ajustes de Android → Privacidad → Anuncios</em>; el Android ID se regenera al restablecer el dispositivo a valores de fábrica."
       },
       sec2: {
         title: "Socios publicitarios (usuarios gratuitos / no Premium)",
@@ -1266,7 +1337,8 @@
         heading: "Die Kurzfassung",
         1: { title: "Was auf deinem Gerät bleibt", desc: "Spielstand, Einstellungen, Bestleistungen und ein gecachter Premium-Status-Flag — wird nie hochgeladen." },
         2: { title: "Was wir nie sehen", desc: "Zahlungsdetails, deine Google-Konto-E-Mail, Konto-IDs, Kontakte, Fotos oder Standort über die IP-basierte Schätzung der Werbenetzwerke hinaus." },
-        3: { title: "Werbung vs. Premium", desc: "Free-Nutzer sehen Werbung über Appodeal-Mediation und Google AdMob. Premium-Abonnenten sehen keine Werbung — die Ad-SDKs werden für sie nicht zum Laden oder Anzeigen genutzt." }
+        3: { title: "Werbung vs. Premium", desc: "Free-Nutzer sehen Werbung über Appodeal-Mediation und Google AdMob. Premium-Abonnenten sehen keine Werbung — die Ad-SDKs werden für sie nicht zum Laden oder Anzeigen genutzt." },
+        4: { title: "Geräte-Identifikatoren", desc: "Wir lesen deine Google Advertising ID und die Android-Geräte-ID, damit Werbenetzwerke Werbung ausliefern und in der Häufigkeit begrenzen können und damit Google Play Billing dein Abo-Recht prüfen kann. Beide IDs lassen sich in den Android-Einstellungen zurücksetzen." }
       },
       toc: {
         aria: "Inhaltsverzeichnis", title: "Auf dieser Seite",
@@ -1290,12 +1362,14 @@
         h3b: "1b. Von Dritten in unserem Auftrag erfasst",
         body1b: "Die unten beschriebenen Drittdienste können automatisch technische und werbebezogene Informationen erfassen:",
         list1b: {
-          1: "Werbe-ID des Geräts (Google Advertising ID) — nur Nicht-Premium-Nutzer",
-          2: "IP-Adresse und daraus abgeleiteter ungefährer Standort",
-          3: "Gerätemodell, Betriebssystemversion, Sprache und Zeitzone",
-          4: "App-Version, Sitzungs-Zeitstempel und Absturzdiagnosen",
-          5: "Aggregierte, nicht personenbezogene Nutzungsereignisse — einschließlich Podcast/Audio-Wiedergabeereignisse (Episode gestartet, abgeschlossen, übersprungen) bei Audio-Titeln, nur in aggregierter Form genutzt"
-        }
+          1: "Google Advertising ID (GAID) — wird auf Free / Nicht-Premium-Installationen gelesen, damit Werbenetzwerke Werbung ausliefern, sie in der Häufigkeit begrenzen und Installationen attribuieren können. Die GAID von Premium-Abonnenten wird an kein Werbenetzwerk übermittelt.",
+          2: "Android-Geräte-ID (SSAID) — wird bei jedem Start als stabiler, app-scoped Geräte-Identifikator gelesen. Wird von Google Play Billing zur Prüfung deiner Abo-Berechtigung und vom Ad-Mediation-SDK für Betrugs- und Invalid-Traffic-Signale genutzt. Sie ist an den Signaturschlüssel dieser App gebunden und nicht mit deinem Google-Konto verknüpft.",
+          3: "IP-Adresse und daraus abgeleiteter ungefährer Standort",
+          4: "Gerätemodell, Betriebssystemversion, Sprache und Zeitzone",
+          5: "App-Version, Sitzungs-Zeitstempel und Absturzdiagnosen",
+          6: "Aggregierte, nicht personenbezogene Nutzungsereignisse — einschließlich Podcast/Audio-Wiedergabeereignisse (Episode gestartet, abgeschlossen, übersprungen) bei Audio-Titeln, nur in aggregierter Form genutzt"
+        },
+        deviceIdCallout: "<strong>Warum wir das offenlegen:</strong> Das Google-Play-Formular „Datensicherheit\" verlangt, dass jeder Lesezugriff auf die Advertising ID und die Android-Geräte-ID deklariert wird — unabhängig davon, ob der Wert das Gerät verlässt. Du kannst die Advertising ID jederzeit unter <em>Android-Einstellungen → Datenschutz → Werbung</em> zurücksetzen; die Android-ID wird bei einem Werksreset des Geräts neu erzeugt."
       },
       sec2: {
         title: "Werbepartner (Free / Nicht-Premium-Nutzer)",
@@ -1346,7 +1420,8 @@
         heading: "La version courte",
         1: { title: "Ce qui reste sur votre appareil", desc: "État de jeu, réglages, meilleurs scores et un drapeau Premium mis en cache — jamais envoyé." },
         2: { title: "Ce que nous ne voyons jamais", desc: "Données de paiement, votre e-mail Google, identifiants de compte, contacts, photos ou localisation au-delà de l'estimation par IP des régies publicitaires." },
-        3: { title: "Pubs vs Premium", desc: "Les utilisateurs gratuits voient des pubs via la médiation Appodeal et Google AdMob. Les abonnés Premium ne voient pas de pubs — les SDK publicitaires ne sont pas utilisés pour charger ou afficher du contenu pour eux." }
+        3: { title: "Pubs vs Premium", desc: "Les utilisateurs gratuits voient des pubs via la médiation Appodeal et Google AdMob. Les abonnés Premium ne voient pas de pubs — les SDK publicitaires ne sont pas utilisés pour charger ou afficher du contenu pour eux." },
+        4: { title: "Identifiants de l'appareil", desc: "Votre Google Advertising ID et l'identifiant d'appareil Android sont lus afin que les régies puissent diffuser les pubs, limiter leur fréquence, et que Google Play Billing vérifie votre abonnement. Les deux identifiants se réinitialisent dans les paramètres Android." }
       },
       toc: {
         aria: "Table des matières", title: "Sur cette page",
@@ -1370,12 +1445,14 @@
         h3b: "1b. Collecté par des tiers pour notre compte",
         body1b: "Les services tiers décrits ci-dessous peuvent collecter automatiquement des informations techniques et publicitaires :",
         list1b: {
-          1: "Identifiant publicitaire de l'appareil (Google Advertising ID) — utilisateurs non-Premium uniquement",
-          2: "Adresse IP et localisation géographique approximative qui en dérive",
-          3: "Modèle d'appareil, version du système, langue et fuseau horaire",
-          4: "Version de l'app, horodatage des sessions et diagnostics de plantage",
-          5: "Événements d'usage agrégés et non identifiants — y compris les événements de lecture podcast/audio (épisode démarré, terminé, sauté) pour les titres audio, utilisés uniquement sous forme agrégée"
-        }
+          1: "Google Advertising ID (GAID) — lu sur les installations gratuites / non-Premium afin que les régies puissent diffuser des pubs, en limiter la fréquence et attribuer les installations. Le GAID des abonnés Premium n'est envoyé à aucune régie.",
+          2: "Identifiant d'appareil Android (SSAID) — lu à chaque lancement comme identifiant stable propre à cette app. Utilisé par Google Play Billing pour vérifier votre droit à l'abonnement et par le SDK de médiation publicitaire pour les signaux de fraude et de trafic invalide. Il est lié à la clé de signature de cette app et n'est pas associé à votre compte Google.",
+          3: "Adresse IP et localisation géographique approximative qui en dérive",
+          4: "Modèle d'appareil, version du système, langue et fuseau horaire",
+          5: "Version de l'app, horodatage des sessions et diagnostics de plantage",
+          6: "Événements d'usage agrégés et non identifiants — y compris les événements de lecture podcast/audio (épisode démarré, terminé, sauté) pour les titres audio, utilisés uniquement sous forme agrégée"
+        },
+        deviceIdCallout: "<strong>Pourquoi nous le déclarons :</strong> le formulaire « Sécurité des données » de Google Play exige de déclarer toute lecture de l'Advertising ID et de l'identifiant d'appareil Android, que la valeur quitte ou non l'appareil. Vous pouvez réinitialiser l'Advertising ID à tout moment depuis <em>Paramètres Android → Confidentialité → Annonces</em> ; l'Android ID est régénéré lors d'une réinitialisation aux paramètres d'usine."
       },
       sec2: {
         title: "Partenaires publicitaires (utilisateurs gratuits / non-Premium)",

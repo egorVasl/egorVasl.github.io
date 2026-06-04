@@ -542,6 +542,402 @@
     }
     .reveal.in-view { opacity: 1; transform: none; }
 
+    /* ── About / studio story ──────────────────────────────── */
+    .about {
+      margin: 0 auto 72px;
+      max-width: 880px;
+    }
+    .about-lede {
+      margin: 0 0 28px;
+      color: var(--text-soft);
+      font-size: 1.04rem;
+      line-height: 1.7;
+    }
+    .about-lede strong { color: var(--text); font-weight: 700; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 14px;
+    }
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 18px;
+      box-shadow: var(--shadow-sm);
+      text-align: left;
+      transition:
+        transform 380ms var(--ease-spring),
+        box-shadow 380ms var(--ease-out),
+        border-color 220ms var(--ease-out);
+    }
+    .stat:hover {
+      transform: translateY(-3px);
+      box-shadow:
+        0 16px 32px color-mix(in srgb, var(--accent) 18%, transparent),
+        var(--shadow-md);
+      border-color: color-mix(in srgb, var(--accent) 38%, var(--border));
+    }
+    .stat-num {
+      display: block;
+      font-size: 2.1rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-variant-numeric: tabular-nums;
+      line-height: 1.05;
+      margin-bottom: 4px;
+    }
+    .stat-label {
+      display: block;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.4px;
+    }
+    @media (max-width: 520px) {
+      .about { margin-bottom: 48px; }
+      .about-lede { font-size: 0.98rem; }
+      .stat { padding: 16px 14px; }
+      .stat-num { font-size: 1.7rem; }
+    }
+
+    /* ── Roadmap timeline ──────────────────────────────────── */
+    .roadmap { margin: 0 auto 72px; max-width: 880px; }
+    .timeline {
+      list-style: none;
+      padding: 8px 0 0;
+      margin: 4px 0 0;
+      position: relative;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 11px; top: 8px; bottom: 8px;
+      width: 2px;
+      background: linear-gradient(180deg,
+        color-mix(in srgb, var(--accent) 50%, transparent),
+        color-mix(in srgb, var(--accent) 18%, transparent) 60%,
+        transparent);
+      border-radius: 2px;
+    }
+    .tl-item {
+      position: relative;
+      padding: 0 0 26px 38px;
+      min-width: 0;
+    }
+    .tl-item:last-child { padding-bottom: 0; }
+    .tl-dot {
+      position: absolute;
+      left: 4px; top: 6px;
+      width: 16px; height: 16px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      box-shadow: 0 0 0 4px var(--bg);
+    }
+    .tl-item.shipped .tl-dot {
+      background: var(--good);
+      box-shadow: 0 0 0 4px var(--bg), 0 0 0 6px color-mix(in srgb, var(--good) 28%, transparent);
+    }
+    .tl-item.active .tl-dot {
+      background: var(--accent);
+      box-shadow: 0 0 0 4px var(--bg), 0 0 0 6px color-mix(in srgb, var(--accent) 32%, transparent);
+      animation: live-pulse 1.8s ease-in-out infinite;
+    }
+    .tl-item.planned .tl-dot {
+      background: var(--surface);
+      border: 2px solid var(--muted);
+      box-shadow: 0 0 0 4px var(--bg);
+    }
+    .tl-body {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-sm);
+      transition:
+        transform 380ms var(--ease-spring),
+        box-shadow 380ms var(--ease-out),
+        border-color 220ms var(--ease-out);
+    }
+    .tl-item:hover .tl-body {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: color-mix(in srgb, var(--accent) 28%, var(--border));
+    }
+    .tl-meta {
+      display: inline-block;
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .tl-item.shipped .tl-meta { color: var(--good); }
+    .tl-item.active .tl-meta { color: var(--accent); }
+    .tl-body h3 {
+      margin: 0 0 6px;
+      font-size: 1.08rem; font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.005em;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    .tl-body p {
+      margin: 0;
+      color: var(--text-soft);
+      font-size: 0.92rem;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    @media (max-width: 520px) {
+      .roadmap { margin-bottom: 48px; }
+      .tl-item { padding-left: 32px; padding-bottom: 20px; }
+      .tl-body { padding: 14px 14px; }
+      .tl-body h3 { font-size: 1rem; }
+      .timeline::before { left: 8px; }
+      .tl-dot { left: 1px; width: 14px; height: 14px; }
+    }
+
+    /* ── FAQ — native details/summary ──────────────────────── */
+    .faq { margin: 0 auto 72px; max-width: 880px; }
+    .faq-list { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      transition:
+        border-color 220ms var(--ease-out),
+        background 220ms var(--ease-out),
+        box-shadow 220ms var(--ease-out);
+    }
+    .faq-item[open] {
+      border-color: color-mix(in srgb, var(--accent) 38%, var(--border));
+      box-shadow:
+        0 12px 28px color-mix(in srgb, var(--accent) 14%, transparent),
+        var(--shadow-sm);
+    }
+    .faq-item > summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+      font-size: 0.98rem;
+      color: var(--text);
+      min-width: 0;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      transition: color var(--press) var(--ease-out);
+    }
+    .faq-item > summary::-webkit-details-marker { display: none; }
+    .faq-item > summary::marker { content: ""; }
+    .faq-q { flex: 1 1 auto; min-width: 0; }
+    .faq-chevron {
+      flex: 0 0 auto;
+      width: 18px; height: 18px;
+      stroke: currentColor; fill: none; stroke-width: 2.4;
+      stroke-linecap: round; stroke-linejoin: round;
+      color: var(--muted);
+      transition: transform 280ms var(--ease-spring), color var(--press) var(--ease-out);
+    }
+    .faq-item[open] > summary .faq-chevron { transform: rotate(180deg); color: var(--accent); }
+    .faq-item:hover > summary { color: var(--accent); }
+    .faq-item:hover > summary .faq-chevron { color: var(--accent); }
+    .faq-answer {
+      padding: 0 18px 18px;
+      color: var(--text-soft);
+      font-size: 0.94rem;
+      line-height: 1.65;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    .faq-answer p { margin: 0; }
+    .faq-answer a { color: var(--accent); font-weight: 600; }
+    .faq-item[open] .faq-answer { animation: faq-open 280ms var(--ease-out); }
+    @keyframes faq-open {
+      from { opacity: 0; transform: translateY(-4px); }
+      to   { opacity: 1; transform: none; }
+    }
+    @media (max-width: 520px) {
+      .faq { margin-bottom: 48px; }
+      .faq-item > summary { padding: 14px 14px; font-size: 0.92rem; }
+      .faq-answer { padding: 0 14px 14px; font-size: 0.9rem; }
+    }
+
+    /* ── Press kit ─────────────────────────────────────────── */
+    .press { margin: 0 auto 56px; }
+    .press-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 8px;
+    }
+    .press-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 22px 20px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-width: 0;
+      transition:
+        transform 380ms var(--ease-spring),
+        box-shadow 380ms var(--ease-out),
+        border-color 220ms var(--ease-out);
+    }
+    .press-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: color-mix(in srgb, var(--accent) 28%, var(--border));
+    }
+    .press-card h3 {
+      margin: 0;
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.005em;
+    }
+    .press-card p {
+      margin: 0;
+      color: var(--text-soft);
+      font-size: 0.92rem;
+      line-height: 1.6;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    .press-card p a { color: var(--accent); font-weight: 600; }
+    .press-card.press-copy { grid-column: span 2; }
+    @media (max-width: 720px) {
+      .press-card.press-copy { grid-column: auto; }
+    }
+    .press-copy-btn {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--accent) 12%, transparent);
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.2px;
+      border: 1px solid color-mix(in srgb, var(--accent) 32%, var(--border));
+      cursor: pointer;
+      font-family: inherit;
+      transition:
+        transform var(--press) var(--ease-spring),
+        background var(--press) var(--ease-out),
+        color var(--press) var(--ease-out),
+        border-color var(--press) var(--ease-out);
+    }
+    .press-copy-btn:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: transparent;
+      transform: translateY(-1px);
+    }
+    .press-copy-btn:active { transform: scale(0.96); }
+    .press-copy-btn svg {
+      width: 14px; height: 14px;
+      stroke: currentColor; fill: none;
+      stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round;
+    }
+    .press-copy-btn.copied { background: var(--good); color: #fff; border-color: transparent; }
+    .press-assets ul {
+      list-style: none; padding: 0; margin: 0;
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    .press-assets ul a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 12px;
+      border-radius: 10px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      color: var(--text-soft);
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition:
+        background var(--press) var(--ease-out),
+        color var(--press) var(--ease-out),
+        border-color var(--press) var(--ease-out),
+        transform var(--press) var(--ease-spring);
+    }
+    .press-assets ul a:hover {
+      background: color-mix(in srgb, var(--accent) 10%, var(--surface-2));
+      color: var(--accent);
+      border-color: color-mix(in srgb, var(--accent) 32%, var(--border));
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+    .press-assets ul a svg {
+      width: 14px; height: 14px;
+      stroke: currentColor; fill: none;
+      stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round;
+    }
+    .brand-colors {
+      display: flex; gap: 8px; flex-wrap: wrap;
+      margin: 4px 0 0 !important;
+    }
+    .brand-colors span {
+      display: inline-flex;
+      align-items: center; justify-content: center;
+      min-width: 84px;
+      padding: 8px 10px;
+      border-radius: 8px;
+      color: #fff;
+      font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+    }
+    .press-sla { font-size: 0.84rem !important; color: var(--muted) !important; }
+    @media (max-width: 520px) {
+      .press { margin-bottom: 40px; }
+      .press-card { padding: 18px 16px; }
+    }
+
+    /* ── Scroll progress bar ───────────────────────────────── */
+    .scroll-progress {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--grad);
+      transform-origin: 0 50%;
+      transform: scaleX(var(--scroll, 0));
+      z-index: 200;
+      pointer-events: none;
+      box-shadow: 0 0 12px color-mix(in srgb, var(--accent) 35%, transparent);
+      transition: transform 80ms linear;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-progress { display: none; }
+    }
+
+    /* ── Magnetic CTA (smooth via translate var) ───────────── */
+    .magnetic {
+      transition:
+        transform 280ms cubic-bezier(0.16, 1, 0.3, 1),
+        background var(--press) var(--ease-out),
+        color var(--press) var(--ease-out),
+        border-color var(--press) var(--ease-out),
+        box-shadow var(--press) var(--ease-out);
+      transform: translate3d(var(--mx, 0px), var(--my, 0px), 0);
+    }
+
     /* ── Games grid (multi-game ready) ─────────────────────── */
     .games {
       display: grid;
@@ -878,6 +1274,20 @@
       .reveal { opacity: 1; transform: none; }
     }
 
+    /* ── Overflow safety: long words / RU compounds ────────── */
+    .game-head, .game-head-right, .privacy-cta-text { min-width: 0; }
+    .game-desc, .game h3, .privacy-cta-text strong, .privacy-cta-text span {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+    }
+    .trust-text strong, .trust-text span {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    .trust-text { min-width: 0; }
+
     /* ── Touch & mobile interactivity ──────────────────────── */
     * { -webkit-tap-highlight-color: transparent; }
     a, button, .brand, .nav-link, .game, .privacy-cta,
@@ -994,6 +1404,8 @@
 </head>
 <body>
 
+<div class="scroll-progress" aria-hidden="true"></div>
+
 <header class="nav">
   <div class="nav-inner">
     <a class="brand" href="./index.html">
@@ -1093,6 +1505,30 @@
     <p class="tagline" data-i18n="hero.tagline">Small Android games, made with care.</p>
   </section>
 
+  <section class="about reveal" aria-label="About Vaslix Games" data-i18n-attr="aria-label:about.aria">
+    <p class="section-eyebrow" data-i18n="about.eyebrow">About</p>
+    <h2 class="section-title" data-i18n="about.title">A small studio with a long view</h2>
+    <p class="about-lede" data-i18n-html="about.lede">Vaslix Games is a one-person Android publisher with a simple thesis: <strong>small apps, made carefully, that respect your device and your attention.</strong> No accounts to sign into, no servers of ours storing your scores, no investor pressure to crank up the monetisation knob. Just focused puzzles today, audio and arcade titles next.</p>
+    <div class="stats reveal" aria-hidden="true">
+      <div class="stat">
+        <span class="stat-num" data-count="2">0</span>
+        <span class="stat-label" data-i18n="about.stats.apps">apps shipped</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-count="7">0</span>
+        <span class="stat-label" data-i18n="about.stats.langs">supported languages</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-count="0">0</span>
+        <span class="stat-label" data-i18n="about.stats.trackers">first-party trackers</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-count="100" data-suffix="%">0</span>
+        <span class="stat-label" data-i18n="about.stats.billing">via Google Play Billing</span>
+      </div>
+    </div>
+  </section>
+
   <p class="section-eyebrow" data-i18n="games.eyebrow">Our games</p>
   <h2 class="section-title" data-i18n="games.title">What we ship</h2>
   <p class="section-intro" data-i18n="games.intro">A small indie label building focused Android apps across genres — puzzle, word, arcade, and podcast/audio. Currently shipping Gridlix:2048; Blocklix and audio/podcast titles in active development.</p>
@@ -1156,6 +1592,46 @@
 
   </section>
 
+  <section class="roadmap" aria-label="Roadmap" data-i18n-attr="aria-label:roadmap.aria">
+    <p class="section-eyebrow" data-i18n="roadmap.eyebrow">Roadmap</p>
+    <h2 class="section-title" data-i18n="roadmap.title">Where we're going</h2>
+    <p class="section-intro" data-i18n="roadmap.intro">No promises on dates, but here's the working order. Things move when they're ready and not before.</p>
+    <ol class="timeline">
+      <li class="tl-item shipped reveal">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <div class="tl-body">
+          <span class="tl-meta" data-i18n="roadmap.r1.meta">Shipped · 2026</span>
+          <h3 data-i18n="roadmap.r1.title">Gridlix:2048</h3>
+          <p data-i18n="roadmap.r1.desc">Live on Google Play. 4×4 merge puzzle with five themes, four named boosters and an optional ad-free Premium.</p>
+        </div>
+      </li>
+      <li class="tl-item active reveal">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <div class="tl-body">
+          <span class="tl-meta" data-i18n="roadmap.r2.meta">In development</span>
+          <h3 data-i18n="roadmap.r2.title">Blocklix</h3>
+          <p data-i18n="roadmap.r2.desc">8×8 drop-and-clear puzzle. Themes, ranks, daily chest, hammer + bomb boosters, Premium with 2× coins. In closed testing.</p>
+        </div>
+      </li>
+      <li class="tl-item planned reveal">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <div class="tl-body">
+          <span class="tl-meta" data-i18n="roadmap.r3.meta">Next up</span>
+          <h3 data-i18n="roadmap.r3.title">First audio / podcast title</h3>
+          <p data-i18n="roadmap.r3.desc">A focused listening app with offline downloads, queue management and the same no-account approach. Genre-agnostic catalogue.</p>
+        </div>
+      </li>
+      <li class="tl-item planned reveal">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <div class="tl-body">
+          <span class="tl-meta" data-i18n="roadmap.r4.meta">Later</span>
+          <h3 data-i18n="roadmap.r4.title">Word puzzle prototype</h3>
+          <p data-i18n="roadmap.r4.desc">An idea on paper. Same shape as Gridlix: small, focused, no accounts, optional ad-free Premium.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
   <p class="section-eyebrow" data-i18n="privacy.eyebrow">Your data</p>
   <h2 class="section-title" data-i18n="privacy.title">Privacy &amp; transparency</h2>
 
@@ -1167,7 +1643,7 @@
       <strong data-i18n="privacyCta.title">Read our Privacy Policy</strong>
       <span data-i18n="privacyCta.text">Plain-language summary, full details on what we store locally, how Google Play Billing works, and the ad networks we use for free users. Applies to all our published titles.</span>
     </div>
-    <span class="privacy-cta-btn">
+    <span class="privacy-cta-btn magnetic">
       <span data-i18n="privacyCta.btn">Open policy</span>
       <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
     </span>
@@ -1211,6 +1687,104 @@
       </div>
     </div>
   </section>
+
+  <section class="faq" aria-label="FAQ" data-i18n-attr="aria-label:faq.aria">
+    <p class="section-eyebrow" data-i18n="faq.eyebrow">FAQ</p>
+    <h2 class="section-title" data-i18n="faq.title">Common questions</h2>
+    <div class="faq-list">
+      <details class="faq-item reveal">
+        <summary>
+          <span class="faq-q" data-i18n="faq.q1">How do I cancel my subscription?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="faq-answer"><p data-i18n-html="faq.a1">Cancel from <strong>Google Play → Subscriptions</strong>, or use the "Manage" button inside the app — it deep-links to the same page. Cancellation takes effect at the end of your current billing period.</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>
+          <span class="faq-q" data-i18n="faq.q2">What happens to my game progress if I uninstall?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="faq-answer"><p data-i18n="faq.a2">Progress lives on your device — uninstalling clears it. We never upload your save to our servers, so there's no cloud backup. Premium status restores automatically once you reinstall and sign in to the same Google account.</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>
+          <span class="faq-q" data-i18n="faq.q3">Why do you ask for the Advertising ID?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="faq-answer"><p data-i18n-html="faq.a3">Only on free / non-Premium installs, and only so ad networks can frequency-cap and serve relevant ads. Premium subscribers' Advertising ID is not sent to any ad network. Full details in the <a href="./privacy-policy.html">Privacy Policy</a>.</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>
+          <span class="faq-q" data-i18n="faq.q4">Which Android versions are supported?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="faq-answer"><p data-i18n="faq.a4">Android 8.0 (API 26) and above. We target older devices on purpose so the games are still playable on hand-me-down phones.</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>
+          <span class="faq-q" data-i18n="faq.q5">Which languages do the apps support?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="faq-answer"><p data-i18n="faq.a5">English, Russian, Spanish, Portuguese (Brazil), German, French and Simplified Chinese. The system language is auto-detected on first launch and can be overridden in app settings.</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>
+          <span class="faq-q" data-i18n="faq.q6">I found a bug or want to suggest a feature.</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="faq-answer"><p data-i18n-html="faq.a6">Write to <a href="mailto:vaslixofficial@protonmail.com">vaslixofficial@protonmail.com</a> with a short description. Screenshots and device model help a lot. We read every message.</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>
+          <span class="faq-q" data-i18n="faq.q7">Will there ever be an iOS version?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="faq-answer"><p data-i18n="faq.a7">Not on the current roadmap. We're a one-person studio and Android lets us ship and update faster. We may revisit once the catalogue grows.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="press" aria-label="Press kit" data-i18n-attr="aria-label:press.aria">
+    <p class="section-eyebrow" data-i18n="press.eyebrow">Press kit</p>
+    <h2 class="section-title" data-i18n="press.title">For press &amp; partners</h2>
+    <div class="press-grid">
+      <div class="press-card press-copy reveal">
+        <h3 data-i18n="press.aboutTitle">About the studio</h3>
+        <p data-i18n="press.aboutBody" id="pressBlurb">Vaslix Games is an independent Android publisher founded in 2025. We build small, focused apps across genres — puzzle today, audio and arcade titles next — with a privacy-first stance: no accounts, no proprietary servers storing user data, no in-house analytics. Currently shipping Gridlix:2048 on Google Play; Blocklix is in closed testing.</p>
+        <button type="button" class="press-copy-btn magnetic" id="pressCopyBtn" data-copy-target="#pressBlurb" aria-label="Copy press blurb">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span class="press-copy-label" data-i18n="press.copyBtn">Copy blurb</span>
+        </button>
+      </div>
+      <div class="press-card press-assets reveal">
+        <h3 data-i18n="press.assetsTitle">Brand assets</h3>
+        <ul>
+          <li><a href="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%234AC8EA%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%236C5DD3%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2222%22%20fill%3D%22url(%23g)%22%2F%3E%3Cg%20fill%3D%22%23fff%22%3E%3Cpath%20transform%3D%22translate(16.03%2068.18)%20scale(0.0518%20-0.0518)%22%20d%3D%22M721%20702%20472%200H258L9%20702H191L365%20172L540%20702Z%22%2F%3E%3Cpath%20transform%3D%22translate(47.71%2068.18)%20scale(0.0518%20-0.0518)%22%20d%3D%22M492%200%20349%20215%20223%200H29L254%20357L24%20702H223L364%20490L488%20702H682L459%20348L691%200Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E" download="vaslix-logo.svg">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v14"/><polyline points="6 11 12 17 18 11"/><path d="M4 21h16"/></svg>
+            <span data-i18n="press.assetLogo">Vaslix logo (SVG)</span>
+          </a></li>
+          <li><a href="./gridlix-icon.webp" download>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v14"/><polyline points="6 11 12 17 18 11"/><path d="M4 21h16"/></svg>
+            <span data-i18n="press.assetGridlix">Gridlix icon (WebP)</span>
+          </a></li>
+          <li><a href="./blocklix-icon.png" download>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v14"/><polyline points="6 11 12 17 18 11"/><path d="M4 21h16"/></svg>
+            <span data-i18n="press.assetBlocklix">Blocklix icon (PNG)</span>
+          </a></li>
+        </ul>
+        <p class="brand-colors" aria-label="Brand palette">
+          <span style="background:#4AC8EA">#4AC8EA</span>
+          <span style="background:#4F83F5">#4F83F5</span>
+          <span style="background:#6C5DD3">#6C5DD3</span>
+        </p>
+      </div>
+      <div class="press-card press-contact reveal">
+        <h3 data-i18n="press.contactTitle">Press contact</h3>
+        <p><a href="mailto:vaslixofficial@protonmail.com?subject=Press%20inquiry">vaslixofficial@protonmail.com</a></p>
+        <p class="press-sla" data-i18n="press.sla">Reply within ~5 business days. Include your outlet, deadline, and what you need.</p>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -1241,6 +1815,13 @@
         theme: { light: "Switch to light theme", dark: "Switch to dark theme", auto: "Switch to automatic theme" }
       },
       hero: { h1: "Vaslix Games", tagline: "Small Android games. Focused, fast, built to last." },
+      about: {
+        aria: "About Vaslix Games",
+        eyebrow: "About",
+        title: "A small studio with a long view",
+        lede: "Vaslix Games is a one-person Android publisher with a simple thesis: <strong>small apps, made carefully, that respect your device and your attention.</strong> No accounts to sign into, no servers of ours storing your scores, no investor pressure to crank the monetisation up. Just focused puzzles today, audio and arcade titles next.",
+        stats: { apps: "apps shipped", langs: "supported languages", trackers: "first-party trackers", billing: "via Google Play Billing" }
+      },
       games: {
         eyebrow: "Our games",
         title: "What we ship",
@@ -1261,6 +1842,16 @@
           feat: { 1: "Android 8+", 2: "25 themes", 3: "10 ranks", 4: "Daily chest", 5: "Premium · 2× coins" }
         }
       },
+      roadmap: {
+        aria: "Roadmap",
+        eyebrow: "Roadmap",
+        title: "Where we're going",
+        intro: "No promises on dates, but here's the working order. Things move when they're ready and not before.",
+        r1: { meta: "Shipped · 2026", title: "Gridlix:2048", desc: "Live on Google Play. A 4×4 merge puzzle with five themes, four named boosters and an optional ad-free Premium." },
+        r2: { meta: "In development", title: "Blocklix", desc: "8×8 drop-and-clear puzzle. Themes, ranks, daily chest, hammer + bomb boosters, Premium with 2× coins. In closed testing." },
+        r3: { meta: "Next up", title: "First audio / podcast title", desc: "A focused listening app with offline downloads, queue management and the same no-account approach. Genre-agnostic catalogue." },
+        r4: { meta: "Later", title: "Word puzzle prototype", desc: "An idea on paper. Same shape as Gridlix: small, focused, no accounts, optional ad-free Premium." }
+      },
       privacy: { eyebrow: "Your data", title: "Privacy & transparency" },
       privacyCta: {
         aria: "Read our Privacy Policy",
@@ -1274,6 +1865,40 @@
         2: { title: "No payment data stored", desc: "Payments run through Google Play. We never see your card." },
         3: { title: "GDPR · CCPA · COPPA", desc: "Consent, opt-outs, and data rights, aligned to the standards." },
         4: { title: "Premium = ad-free", desc: "Subscribers see zero ads. The ad SDK doesn't load for them at all." }
+      },
+      faq: {
+        aria: "FAQ",
+        eyebrow: "FAQ",
+        title: "Common questions",
+        q1: "How do I cancel my subscription?",
+        a1: "Cancel from <strong>Google Play → Subscriptions</strong>, or use the \"Manage\" button inside the app — it deep-links to the same page. Cancellation takes effect at the end of your current billing period.",
+        q2: "What happens to my game progress if I uninstall?",
+        a2: "Progress lives on your device — uninstalling clears it. We never upload your save to our servers, so there's no cloud backup. Premium status restores automatically once you reinstall and sign in to the same Google account.",
+        q3: "Why do you ask for the Advertising ID?",
+        a3: "Only on free / non-Premium installs, and only so ad networks can frequency-cap and serve relevant ads. Premium subscribers' Advertising ID is not sent to any ad network. Full details in the <a href=\"./privacy-policy.html\">Privacy Policy</a>.",
+        q4: "Which Android versions are supported?",
+        a4: "Android 8.0 (API 26) and above. We target older devices on purpose so the games are still playable on hand-me-down phones.",
+        q5: "Which languages do the apps support?",
+        a5: "English, Russian, Spanish, Portuguese (Brazil), German, French and Simplified Chinese. The system language is auto-detected on first launch and can be overridden in app settings.",
+        q6: "I found a bug or want to suggest a feature.",
+        a6: "Write to <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> with a short description. Screenshots and device model help a lot. We read every message.",
+        q7: "Will there ever be an iOS version?",
+        a7: "Not on the current roadmap. We're a one-person studio and Android lets us ship and update faster. We may revisit once the catalogue grows."
+      },
+      press: {
+        aria: "Press kit",
+        eyebrow: "Press kit",
+        title: "For press & partners",
+        aboutTitle: "About the studio",
+        aboutBody: "Vaslix Games is an independent Android publisher founded in 2025. We build small, focused apps across genres — puzzle today, audio and arcade titles next — with a privacy-first stance: no accounts, no proprietary servers storing user data, no in-house analytics. Currently shipping Gridlix:2048 on Google Play; Blocklix is in closed testing.",
+        copyBtn: "Copy blurb",
+        copied: "Copied",
+        assetsTitle: "Brand assets",
+        assetLogo: "Vaslix logo (SVG)",
+        assetGridlix: "Gridlix icon (WebP)",
+        assetBlocklix: "Blocklix icon (PNG)",
+        contactTitle: "Press contact",
+        sla: "Reply within ~5 business days. Include your outlet, deadline, and what you need."
       },
       footer: { copyright: "© Vaslix Games · Independent Android studio", home: "Home", privacyLink: "Privacy Policy", contact: "Contact" }
     },
@@ -1289,6 +1914,13 @@
         theme: { light: "Включить светлую тему", dark: "Включить тёмную тему", auto: "Включить автотему" }
       },
       hero: { h1: "Vaslix Games", tagline: "Небольшие Android-игры. Сфокусированные, быстрые, сделанные надолго." },
+      about: {
+        aria: "О студии Vaslix Games",
+        eyebrow: "О студии",
+        title: "Маленькая студия с длинным горизонтом",
+        lede: "Vaslix Games — это Android-издатель из одного человека с простым принципом: <strong>небольшие приложения, сделанные аккуратно, уважающие ваше устройство и ваше внимание.</strong> Никаких аккаунтов, никаких наших серверов, хранящих ваши результаты, никакого давления инвесторов крутить монетизацию вверх. Сегодня сфокусированные пазлы, дальше аудио и аркады.",
+        stats: { apps: "выпущенных приложений", langs: "поддерживаемых языков", trackers: "своих трекеров", billing: "через Google Play Billing" }
+      },
       games: {
         eyebrow: "Наши игры",
         title: "Что мы выпускаем",
@@ -1309,6 +1941,16 @@
           feat: { 1: "Android 8+", 2: "25 тем", 3: "10 рангов", 4: "Ежедневный сундук", 5: "Premium · ×2 монет" }
         }
       },
+      roadmap: {
+        aria: "Дорожная карта",
+        eyebrow: "Дорожная карта",
+        title: "Куда мы идём",
+        intro: "Без обещаний по датам, но порядок работы такой. Релиз происходит, когда готово, и не раньше.",
+        r1: { meta: "Выпущено · 2026", title: "Gridlix:2048", desc: "Доступен в Google Play. Пазл-слияние 4×4 с пятью темами, четырьмя именованными бустерами и опциональным Premium без рекламы." },
+        r2: { meta: "В разработке", title: "Blocklix", desc: "Пазл 8×8 «положи и очищай». Темы, ранги, ежедневный сундук, бустеры «молот» и «бомба», Premium с двойными монетами. В закрытом тестировании." },
+        r3: { meta: "Следующее", title: "Первое аудио / подкаст-приложение", desc: "Сфокусированный плеер с офлайн-загрузками, очередью и тем же подходом без аккаунтов. Каталог не привязан к жанру." },
+        r4: { meta: "Позже", title: "Прототип словесного пазла", desc: "Пока только идея на бумаге. Та же форма, что и Gridlix: маленький, сфокусированный, без аккаунтов, опциональный Premium без рекламы." }
+      },
       privacy: { eyebrow: "Ваши данные", title: "Конфиденциальность и прозрачность" },
       privacyCta: {
         aria: "Открыть Политику конфиденциальности",
@@ -1322,6 +1964,40 @@
         2: { title: "Без хранения платёжных данных", desc: "Платежи идут через Google Play. Мы никогда не видим вашу карту." },
         3: { title: "GDPR · CCPA · COPPA", desc: "Согласия, отказы и права на данные — по стандартам." },
         4: { title: "Premium = без рекламы", desc: "Подписчики не видят ни одной рекламы. Рекламный SDK для них вообще не загружается." }
+      },
+      faq: {
+        aria: "Частые вопросы",
+        eyebrow: "FAQ",
+        title: "Частые вопросы",
+        q1: "Как отменить подписку?",
+        a1: "Отменить можно в <strong>Google Play → Подписки</strong> или через кнопку «Управление» внутри приложения — она ведёт на ту же страницу. Отмена вступает в силу в конце текущего периода оплаты.",
+        q2: "Что будет с прогрессом, если я удалю приложение?",
+        a2: "Прогресс хранится на устройстве — удаление приложения стирает его. Мы не выгружаем сохранения на свои серверы, поэтому облачной копии нет. Premium-статус автоматически восстановится при переустановке и входе в тот же Google-аккаунт.",
+        q3: "Зачем вам Advertising ID?",
+        a3: "Только на бесплатных / не-Premium установках и только для того, чтобы рекламные сети ограничивали частоту и показывали релевантную рекламу. Advertising ID подписчиков Premium ни одной сети не отправляется. Подробнее — в <a href=\"./privacy-policy.html\">Политике конфиденциальности</a>.",
+        q4: "Какие версии Android поддерживаются?",
+        a4: "Android 8.0 (API 26) и выше. Мы намеренно целимся в старые устройства, чтобы игры были доступны на «вторых руках».",
+        q5: "Какие языки поддерживаются?",
+        a5: "Английский, русский, испанский, португальский (Бразилия), немецкий, французский и упрощённый китайский. Системный язык определяется при первом запуске и переключается в настройках приложения.",
+        q6: "Нашёл баг или хочу предложить функцию.",
+        a6: "Пишите на <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> с коротким описанием. Скриншоты и модель устройства сильно помогают. Мы читаем каждое сообщение.",
+        q7: "Будет ли версия для iOS?",
+        a7: "В текущей дорожной карте — нет. Мы — студия из одного человека, и Android позволяет выпускать и обновлять быстрее. Возможно, вернёмся к вопросу, когда каталог вырастет."
+      },
+      press: {
+        aria: "Пресс-кит",
+        eyebrow: "Пресс-кит",
+        title: "Для прессы и партнёров",
+        aboutTitle: "О студии",
+        aboutBody: "Vaslix Games — независимый Android-издатель, основанный в 2025 году. Мы делаем небольшие сфокусированные приложения в разных жанрах — сегодня пазлы, дальше аудио и аркады — с подходом «privacy-first»: без аккаунтов, без собственных серверов, хранящих данные пользователей, без внутренней аналитики. Сейчас в Google Play выпущен Gridlix:2048; Blocklix — в закрытом тестировании.",
+        copyBtn: "Скопировать текст",
+        copied: "Скопировано",
+        assetsTitle: "Брендовые ресурсы",
+        assetLogo: "Логотип Vaslix (SVG)",
+        assetGridlix: "Иконка Gridlix (WebP)",
+        assetBlocklix: "Иконка Blocklix (PNG)",
+        contactTitle: "Контакт для прессы",
+        sla: "Отвечаем в течение ~5 рабочих дней. Укажите издание, дедлайн и что именно нужно."
       },
       footer: { copyright: "© Vaslix Games · Независимая Android-студия", home: "Главная", privacyLink: "Политика конфиденциальности", contact: "Контакты" }
     },
@@ -1337,6 +2013,13 @@
         theme: { light: "Cambiar a tema claro", dark: "Cambiar a tema oscuro", auto: "Cambiar a tema automático" }
       },
       hero: { h1: "Vaslix Games", tagline: "Pequeños juegos Android. Enfocados, rápidos, hechos para durar." },
+      about: {
+        aria: "Sobre Vaslix Games",
+        eyebrow: "Acerca de",
+        title: "Un estudio pequeño con visión a largo plazo",
+        lede: "Vaslix Games es un editor Android de una sola persona con una tesis simple: <strong>apps pequeñas, hechas con cuidado, que respetan tu dispositivo y tu atención.</strong> Sin cuentas, sin servidores nuestros guardando tus puntuaciones, sin presión de inversores para subir la monetización. Hoy puzzles cuidados, después audio y arcade.",
+        stats: { apps: "apps publicadas", langs: "idiomas soportados", trackers: "trackers propios", billing: "vía Google Play Billing" }
+      },
       games: {
         eyebrow: "Nuestros juegos",
         title: "Lo que publicamos",
@@ -1357,6 +2040,16 @@
           feat: { 1: "Android 8+", 2: "25 temas", 3: "10 rangos", 4: "Cofre diario", 5: "Premium · monedas ×2" }
         }
       },
+      roadmap: {
+        aria: "Hoja de ruta",
+        eyebrow: "Hoja de ruta",
+        title: "Hacia dónde vamos",
+        intro: "Sin promesas de fechas, pero este es el orden de trabajo. Cada cosa sale cuando está lista, no antes.",
+        r1: { meta: "Publicado · 2026", title: "Gridlix:2048", desc: "Disponible en Google Play. Puzzle de fusión 4×4 con cinco temas, cuatro boosters con nombre y un Premium opcional sin anuncios." },
+        r2: { meta: "En desarrollo", title: "Blocklix", desc: "Puzzle 8×8 de colocar y limpiar. Temas, rangos, cofre diario, boosters martillo + bomba, Premium con monedas ×2. En testeo cerrado." },
+        r3: { meta: "Siguiente", title: "Primer título de audio / podcast", desc: "Una app de escucha enfocada con descargas offline, gestión de cola y el mismo enfoque sin cuenta. Catálogo sin género fijo." },
+        r4: { meta: "Más adelante", title: "Prototipo de puzzle de palabras", desc: "Una idea sobre papel. Misma forma que Gridlix: pequeño, enfocado, sin cuentas, Premium opcional sin anuncios." }
+      },
       privacy: { eyebrow: "Tus datos", title: "Privacidad y transparencia" },
       privacyCta: {
         aria: "Leer nuestra Política de Privacidad",
@@ -1370,6 +2063,40 @@
         2: { title: "Sin guardar datos de pago", desc: "Los pagos pasan por Google Play. Nunca vemos tu tarjeta." },
         3: { title: "GDPR · CCPA · COPPA", desc: "Consentimientos, opt-outs y derechos sobre los datos, alineados a los estándares." },
         4: { title: "Premium = sin anuncios", desc: "Los suscriptores no ven ningún anuncio. El SDK de anuncios no se carga para ellos." }
+      },
+      faq: {
+        aria: "Preguntas frecuentes",
+        eyebrow: "FAQ",
+        title: "Preguntas frecuentes",
+        q1: "¿Cómo cancelo mi suscripción?",
+        a1: "Cancela desde <strong>Google Play → Suscripciones</strong>, o usa el botón «Gestionar» dentro de la app — enlaza a la misma página. La cancelación se aplica al final del período de facturación actual.",
+        q2: "¿Qué pasa con mi progreso si desinstalo?",
+        a2: "El progreso vive en tu dispositivo — desinstalar lo borra. No subimos partidas a nuestros servidores, así que no hay copia en la nube. El estado Premium se restaura automáticamente al reinstalar y entrar con la misma cuenta de Google.",
+        q3: "¿Por qué piden el Advertising ID?",
+        a3: "Solo en instalaciones gratuitas / no Premium, y únicamente para que las redes publicitarias limiten la frecuencia y sirvan anuncios relevantes. El Advertising ID de los suscriptores Premium no se envía a ninguna red. Detalles en la <a href=\"./privacy-policy.html\">Política de Privacidad</a>.",
+        q4: "¿Qué versiones de Android se soportan?",
+        a4: "Android 8.0 (API 26) y superiores. Apuntamos deliberadamente a dispositivos antiguos para que los juegos sigan funcionando en teléfonos de segunda mano.",
+        q5: "¿Qué idiomas soportan las apps?",
+        a5: "Inglés, ruso, español, portugués (Brasil), alemán, francés y chino simplificado. El idioma del sistema se detecta al primer arranque y se puede cambiar en los ajustes.",
+        q6: "Encontré un bug o quiero sugerir una función.",
+        a6: "Escribe a <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> con una breve descripción. Las capturas y el modelo del dispositivo ayudan mucho. Leemos cada mensaje.",
+        q7: "¿Habrá versión para iOS?",
+        a7: "No está en la hoja de ruta actual. Somos un estudio de una persona y Android nos permite publicar y actualizar más rápido. Quizá lo revisemos cuando el catálogo crezca."
+      },
+      press: {
+        aria: "Press kit",
+        eyebrow: "Press kit",
+        title: "Para prensa y socios",
+        aboutTitle: "Sobre el estudio",
+        aboutBody: "Vaslix Games es un editor Android independiente fundado en 2025. Hacemos apps pequeñas y enfocadas en varios géneros — hoy puzzle, después audio y arcade — con un enfoque privacy-first: sin cuentas, sin servidores propios guardando datos de usuario, sin analítica casera. Actualmente publicamos Gridlix:2048 en Google Play; Blocklix está en testeo cerrado.",
+        copyBtn: "Copiar texto",
+        copied: "Copiado",
+        assetsTitle: "Recursos de marca",
+        assetLogo: "Logo Vaslix (SVG)",
+        assetGridlix: "Icono Gridlix (WebP)",
+        assetBlocklix: "Icono Blocklix (PNG)",
+        contactTitle: "Contacto de prensa",
+        sla: "Respondemos en ~5 días hábiles. Incluye tu medio, deadline y lo que necesitas."
       },
       footer: { copyright: "© Vaslix Games · Estudio Android independiente", home: "Inicio", privacyLink: "Política de Privacidad", contact: "Contacto" }
     },
@@ -1385,6 +2112,13 @@
         theme: { light: "Zum hellen Theme wechseln", dark: "Zum dunklen Theme wechseln", auto: "Zum automatischen Theme wechseln" }
       },
       hero: { h1: "Vaslix Games", tagline: "Kleine Android-Spiele. Fokussiert, schnell, gebaut um zu bleiben." },
+      about: {
+        aria: "Über Vaslix Games",
+        eyebrow: "Über uns",
+        title: "Ein kleines Studio mit langem Atem",
+        lede: "Vaslix Games ist ein Ein-Personen-Android-Publisher mit einer einfachen These: <strong>kleine Apps, mit Sorgfalt gebaut, die dein Gerät und deine Aufmerksamkeit respektieren.</strong> Keine Konten zum Anmelden, keine eigenen Server, die deine Scores speichern, kein Investorendruck, die Monetarisierung hochzudrehen. Heute fokussierte Puzzles, als Nächstes Audio- und Arcade-Titel.",
+        stats: { apps: "veröffentlichte Apps", langs: "unterstützte Sprachen", trackers: "eigene Tracker", billing: "über Google Play Billing" }
+      },
       games: {
         eyebrow: "Unsere Spiele",
         title: "Was wir veröffentlichen",
@@ -1405,6 +2139,16 @@
           feat: { 1: "Android 8+", 2: "25 Themes", 3: "10 Ränge", 4: "Tageschest", 5: "Premium · 2× Münzen" }
         }
       },
+      roadmap: {
+        aria: "Roadmap",
+        eyebrow: "Roadmap",
+        title: "Wohin wir gehen",
+        intro: "Keine Datumsversprechen, aber das ist die Arbeitsreihenfolge. Releases kommen, wenn sie fertig sind, und nicht früher.",
+        r1: { meta: "Veröffentlicht · 2026", title: "Gridlix:2048", desc: "Live auf Google Play. Ein 4×4-Merge-Puzzle mit fünf Themes, vier benannten Boostern und einem optionalen werbefreien Premium." },
+        r2: { meta: "In Entwicklung", title: "Blocklix", desc: "8×8-Drop-and-Clear-Puzzle. Themes, Ränge, Tageschest, Hammer- und Bomben-Booster, Premium mit 2× Münzen. In geschlossenem Test." },
+        r3: { meta: "Als Nächstes", title: "Erster Audio-/Podcast-Titel", desc: "Eine fokussierte Hör-App mit Offline-Downloads, Queue-Management und demselben Ansatz ohne Konto. Genre-unabhängiger Katalog." },
+        r4: { meta: "Später", title: "Wortpuzzle-Prototyp", desc: "Eine Idee auf Papier. Gleiche Form wie Gridlix: klein, fokussiert, ohne Konten, optionales werbefreies Premium." }
+      },
       privacy: { eyebrow: "Deine Daten", title: "Datenschutz & Transparenz" },
       privacyCta: {
         aria: "Unsere Datenschutzerklärung lesen",
@@ -1418,6 +2162,40 @@
         2: { title: "Keine Zahlungsdaten gespeichert", desc: "Zahlungen laufen über Google Play. Wir sehen deine Karte nie." },
         3: { title: "GDPR · CCPA · COPPA", desc: "Einwilligungen, Opt-outs und Datenrechte — am Standard ausgerichtet." },
         4: { title: "Premium = werbefrei", desc: "Abonnenten sehen null Werbung. Das Ad-SDK wird für sie gar nicht erst geladen." }
+      },
+      faq: {
+        aria: "Häufige Fragen",
+        eyebrow: "FAQ",
+        title: "Häufige Fragen",
+        q1: "Wie kündige ich mein Abo?",
+        a1: "Kündige in <strong>Google Play → Abos</strong> oder über die Schaltfläche „Verwalten\" in der App — sie verlinkt zur selben Seite. Die Kündigung greift am Ende deines aktuellen Abrechnungszeitraums.",
+        q2: "Was passiert mit meinem Spielfortschritt beim Deinstallieren?",
+        a2: "Der Fortschritt liegt auf deinem Gerät — Deinstallieren löscht ihn. Wir laden Spielstände nicht auf Server hoch, es gibt also kein Cloud-Backup. Der Premium-Status wird beim Neuinstallieren mit demselben Google-Konto automatisch wiederhergestellt.",
+        q3: "Warum fragt ihr nach der Advertising ID?",
+        a3: "Nur auf Free- / Nicht-Premium-Installationen und nur damit Werbenetzwerke Häufigkeit begrenzen und relevante Werbung ausspielen können. Die Advertising ID von Premium-Abonnenten wird an keine Werbenetzwerk übermittelt. Details in der <a href=\"./privacy-policy.html\">Datenschutzerklärung</a>.",
+        q4: "Welche Android-Versionen werden unterstützt?",
+        a4: "Android 8.0 (API 26) und höher. Wir zielen bewusst auch auf ältere Geräte, damit die Spiele auf gebrauchten Handys spielbar bleiben.",
+        q5: "Welche Sprachen werden unterstützt?",
+        a5: "Englisch, Russisch, Spanisch, Portugiesisch (Brasilien), Deutsch, Französisch und vereinfachtes Chinesisch. Die Systemsprache wird beim ersten Start automatisch erkannt und lässt sich in den App-Einstellungen ändern.",
+        q6: "Ich habe einen Bug gefunden oder einen Vorschlag.",
+        a6: "Schreib an <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> mit einer kurzen Beschreibung. Screenshots und Gerätemodell helfen sehr. Wir lesen jede Nachricht.",
+        q7: "Wird es jemals eine iOS-Version geben?",
+        a7: "Nicht auf der aktuellen Roadmap. Wir sind ein Ein-Personen-Studio, und Android erlaubt uns schnellere Releases und Updates. Wir denken vielleicht neu darüber nach, wenn der Katalog wächst."
+      },
+      press: {
+        aria: "Pressekit",
+        eyebrow: "Pressekit",
+        title: "Für Presse & Partner",
+        aboutTitle: "Über das Studio",
+        aboutBody: "Vaslix Games ist ein unabhängiger Android-Publisher, gegründet 2025. Wir bauen kleine, fokussierte Apps in verschiedenen Genres — heute Puzzle, als Nächstes Audio- und Arcade-Titel — mit einer Privacy-First-Haltung: keine Konten, keine eigenen Server, die Nutzerdaten speichern, keine Inhouse-Analytics. Aktuell veröffentlicht auf Google Play: Gridlix:2048; Blocklix ist in geschlossenem Test.",
+        copyBtn: "Text kopieren",
+        copied: "Kopiert",
+        assetsTitle: "Brand-Assets",
+        assetLogo: "Vaslix-Logo (SVG)",
+        assetGridlix: "Gridlix-Icon (WebP)",
+        assetBlocklix: "Blocklix-Icon (PNG)",
+        contactTitle: "Pressekontakt",
+        sla: "Wir antworten innerhalb von ~5 Werktagen. Bitte Medium, Deadline und Anfrage angeben."
       },
       footer: { copyright: "© Vaslix Games · Unabhängiges Android-Studio", home: "Startseite", privacyLink: "Datenschutzerklärung", contact: "Kontakt" }
     },
@@ -1433,6 +2211,13 @@
         theme: { light: "Passer au thème clair", dark: "Passer au thème sombre", auto: "Passer au thème automatique" }
       },
       hero: { h1: "Vaslix Games", tagline: "Petits jeux Android. Concentrés, rapides, faits pour durer." },
+      about: {
+        aria: "À propos de Vaslix Games",
+        eyebrow: "À propos",
+        title: "Un petit studio avec une vue lointaine",
+        lede: "Vaslix Games est un éditeur Android d'une seule personne avec une thèse simple : <strong>de petites apps, faites avec soin, qui respectent votre appareil et votre attention.</strong> Pas de compte à créer, pas de serveur chez nous qui stocke vos scores, aucune pression d'investisseur pour pousser la monétisation. Aujourd'hui des puzzles concentrés, ensuite des titres audio et arcade.",
+        stats: { apps: "apps publiées", langs: "langues prises en charge", trackers: "trackers maison", billing: "via Google Play Billing" }
+      },
       games: {
         eyebrow: "Nos jeux",
         title: "Ce que nous publions",
@@ -1453,6 +2238,16 @@
           feat: { 1: "Android 8+", 2: "25 thèmes", 3: "10 rangs", 4: "Coffre quotidien", 5: "Premium · pièces ×2" }
         }
       },
+      roadmap: {
+        aria: "Feuille de route",
+        eyebrow: "Feuille de route",
+        title: "Où nous allons",
+        intro: "Pas de promesses sur les dates, mais voici l'ordre de travail. Une sortie arrive quand elle est prête, pas avant.",
+        r1: { meta: "Publié · 2026", title: "Gridlix:2048", desc: "Disponible sur Google Play. Un puzzle de fusion 4×4 avec cinq thèmes, quatre boosters nommés et un Premium sans pub en option." },
+        r2: { meta: "En développement", title: "Blocklix", desc: "Puzzle 8×8 « pose et nettoie ». Thèmes, rangs, coffre quotidien, boosters marteau + bombe, Premium avec pièces ×2. En test fermé." },
+        r3: { meta: "Prochainement", title: "Premier titre audio / podcast", desc: "Une app d'écoute concentrée avec téléchargements hors-ligne, gestion de file et la même approche sans compte. Catalogue ouvert à tous genres." },
+        r4: { meta: "Plus tard", title: "Prototype de puzzle de mots", desc: "Une idée sur papier. Même forme que Gridlix : petit, concentré, sans compte, Premium sans pub en option." }
+      },
       privacy: { eyebrow: "Vos données", title: "Confidentialité et transparence" },
       privacyCta: {
         aria: "Lire notre Politique de confidentialité",
@@ -1466,6 +2261,40 @@
         2: { title: "Aucune donnée de paiement stockée", desc: "Les paiements passent par Google Play. Nous ne voyons jamais votre carte." },
         3: { title: "GDPR · CCPA · COPPA", desc: "Consentements, opt-outs et droits sur les données — alignés aux standards." },
         4: { title: "Premium = sans pub", desc: "Les abonnés ne voient aucune pub. Le SDK ne se charge même pas pour eux." }
+      },
+      faq: {
+        aria: "Questions fréquentes",
+        eyebrow: "FAQ",
+        title: "Questions fréquentes",
+        q1: "Comment résilier mon abonnement ?",
+        a1: "Résiliez depuis <strong>Google Play → Abonnements</strong>, ou via le bouton « Gérer » dans l'app — il pointe vers la même page. La résiliation prend effet à la fin de votre période de facturation en cours.",
+        q2: "Que devient ma progression si je désinstalle ?",
+        a2: "La progression vit sur votre appareil — la désinstallation l'efface. Nous n'envoyons pas les sauvegardes sur des serveurs, il n'y a donc pas de sauvegarde cloud. Le statut Premium est restauré automatiquement à la réinstallation avec le même compte Google.",
+        q3: "Pourquoi demander l'Advertising ID ?",
+        a3: "Uniquement sur les installations gratuites / non-Premium, et seulement pour que les régies limitent la fréquence et diffusent des pubs pertinentes. L'Advertising ID des abonnés Premium n'est envoyé à aucune régie. Détails dans la <a href=\"./privacy-policy.html\">Politique de confidentialité</a>.",
+        q4: "Quelles versions d'Android sont prises en charge ?",
+        a4: "Android 8.0 (API 26) et plus. Nous visons délibérément les appareils plus anciens pour que les jeux restent jouables sur les téléphones de seconde main.",
+        q5: "Quelles langues sont prises en charge ?",
+        a5: "Anglais, russe, espagnol, portugais (Brésil), allemand, français et chinois simplifié. La langue système est détectée au premier lancement et modifiable dans les réglages de l'app.",
+        q6: "J'ai trouvé un bug ou j'ai une suggestion.",
+        a6: "Écrivez à <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> avec une brève description. Les captures et le modèle d'appareil aident beaucoup. Nous lisons chaque message.",
+        q7: "Y aura-t-il une version iOS ?",
+        a7: "Pas dans la feuille de route actuelle. Nous sommes un studio d'une personne et Android nous permet de publier et mettre à jour plus vite. Nous y reviendrons peut-être quand le catalogue grandira."
+      },
+      press: {
+        aria: "Kit presse",
+        eyebrow: "Kit presse",
+        title: "Pour la presse et les partenaires",
+        aboutTitle: "À propos du studio",
+        aboutBody: "Vaslix Games est un éditeur Android indépendant fondé en 2025. Nous faisons de petites apps concentrées dans plusieurs genres — aujourd'hui le puzzle, ensuite l'audio et l'arcade — avec une approche privacy-first : pas de comptes, pas de serveurs maison stockant des données utilisateurs, pas d'analytics maison. Actuellement disponible sur Google Play : Gridlix:2048 ; Blocklix est en test fermé.",
+        copyBtn: "Copier le texte",
+        copied: "Copié",
+        assetsTitle: "Ressources de marque",
+        assetLogo: "Logo Vaslix (SVG)",
+        assetGridlix: "Icône Gridlix (WebP)",
+        assetBlocklix: "Icône Blocklix (PNG)",
+        contactTitle: "Contact presse",
+        sla: "Réponse sous ~5 jours ouvrés. Précisez votre média, deadline et ce dont vous avez besoin."
       },
       footer: { copyright: "© Vaslix Games · Studio Android indépendant", home: "Accueil", privacyLink: "Politique de confidentialité", contact: "Contact" }
     },
@@ -1481,6 +2310,13 @@
         theme: { light: "Mudar para tema claro", dark: "Mudar para tema escuro", auto: "Mudar para tema automático" }
       },
       hero: { h1: "Vaslix Games", tagline: "Pequenos jogos Android. Focados, rápidos, feitos para durar." },
+      about: {
+        aria: "Sobre a Vaslix Games",
+        eyebrow: "Sobre",
+        title: "Um estúdio pequeno com visão de longo prazo",
+        lede: "Vaslix Games é um publisher Android de uma pessoa só com uma tese simples: <strong>apps pequenos, feitos com cuidado, que respeitam seu aparelho e sua atenção.</strong> Sem contas para entrar, sem servidores nossos guardando seus placares, sem pressão de investidor para puxar a monetização. Hoje puzzles focados, depois títulos de áudio e arcade.",
+        stats: { apps: "apps publicados", langs: "idiomas suportados", trackers: "trackers próprios", billing: "via Google Play Billing" }
+      },
       games: {
         eyebrow: "Nossos jogos",
         title: "O que publicamos",
@@ -1501,6 +2337,16 @@
           feat: { 1: "Android 8+", 2: "25 temas", 3: "10 patentes", 4: "Baú diário", 5: "Premium · moedas ×2" }
         }
       },
+      roadmap: {
+        aria: "Roteiro",
+        eyebrow: "Roteiro",
+        title: "Para onde vamos",
+        intro: "Sem promessa de datas, mas esta é a ordem do trabalho. Cada coisa sai quando está pronta, não antes.",
+        r1: { meta: "Publicado · 2026", title: "Gridlix:2048", desc: "Ao vivo no Google Play. Um puzzle de fusão 4×4 com cinco temas, quatro boosters nomeados e um Premium opcional sem anúncios." },
+        r2: { meta: "Em desenvolvimento", title: "Blocklix", desc: "Puzzle 8×8 de encaixar e limpar. Temas, patentes, baú diário, boosters martelo + bomba, Premium com moedas ×2. Em teste fechado." },
+        r3: { meta: "A seguir", title: "Primeiro título de áudio / podcast", desc: "Um app de escuta focado com downloads offline, gerenciamento de fila e a mesma abordagem sem conta. Catálogo aberto a qualquer gênero." },
+        r4: { meta: "Mais adiante", title: "Protótipo de puzzle de palavras", desc: "Ideia no papel. Mesma forma do Gridlix: pequeno, focado, sem contas, Premium opcional sem anúncios." }
+      },
       privacy: { eyebrow: "Seus dados", title: "Privacidade e transparência" },
       privacyCta: {
         aria: "Ler nossa Política de Privacidade",
@@ -1514,6 +2360,40 @@
         2: { title: "Sem dados de pagamento", desc: "Pagamentos passam pelo Google Play. Nunca vemos seu cartão." },
         3: { title: "GDPR · CCPA · COPPA", desc: "Consentimentos, opt-outs e direitos sobre os dados — alinhados aos padrões." },
         4: { title: "Premium = sem anúncios", desc: "Assinantes não veem nenhum anúncio. O SDK de anúncios nem carrega para eles." }
+      },
+      faq: {
+        aria: "Perguntas frequentes",
+        eyebrow: "FAQ",
+        title: "Perguntas frequentes",
+        q1: "Como cancelo minha assinatura?",
+        a1: "Cancele em <strong>Google Play → Assinaturas</strong> ou pelo botão «Gerenciar» dentro do app — leva à mesma página. O cancelamento entra em vigor ao final do período de cobrança atual.",
+        q2: "O que acontece com meu progresso se eu desinstalar?",
+        a2: "O progresso fica no seu aparelho — desinstalar apaga. Não enviamos saves para nossos servidores, então não há backup na nuvem. O status Premium é restaurado automaticamente ao reinstalar e entrar com a mesma conta Google.",
+        q3: "Por que vocês pedem o Advertising ID?",
+        a3: "Só em instalações gratuitas / não Premium, e apenas para que as redes de anúncios limitem a frequência e exibam anúncios relevantes. O Advertising ID de assinantes Premium não é enviado a nenhuma rede. Detalhes na <a href=\"./privacy-policy.html\">Política de Privacidade</a>.",
+        q4: "Quais versões do Android são suportadas?",
+        a4: "Android 8.0 (API 26) e superior. Miramos aparelhos mais antigos de propósito, para que os jogos continuem jogáveis em celulares de segunda mão.",
+        q5: "Quais idiomas são suportados?",
+        a5: "Inglês, russo, espanhol, português (Brasil), alemão, francês e chinês simplificado. O idioma do sistema é detectado no primeiro arranque e pode ser trocado nas configurações.",
+        q6: "Achei um bug ou quero sugerir um recurso.",
+        a6: "Escreva para <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> com uma descrição curta. Capturas e modelo do aparelho ajudam muito. Lemos cada mensagem.",
+        q7: "Haverá versão para iOS?",
+        a7: "Não está no roteiro atual. Somos um estúdio de uma pessoa e o Android nos permite lançar e atualizar mais rápido. Talvez revisitemos quando o catálogo crescer."
+      },
+      press: {
+        aria: "Press kit",
+        eyebrow: "Press kit",
+        title: "Para imprensa e parceiros",
+        aboutTitle: "Sobre o estúdio",
+        aboutBody: "Vaslix Games é um publisher Android independente fundado em 2025. Fazemos apps pequenos e focados em vários gêneros — hoje puzzle, depois áudio e arcade — com postura privacy-first: sem contas, sem servidores próprios guardando dados de usuário, sem analytics interno. Atualmente publicado no Google Play: Gridlix:2048; Blocklix em teste fechado.",
+        copyBtn: "Copiar texto",
+        copied: "Copiado",
+        assetsTitle: "Recursos de marca",
+        assetLogo: "Logo Vaslix (SVG)",
+        assetGridlix: "Ícone Gridlix (WebP)",
+        assetBlocklix: "Ícone Blocklix (PNG)",
+        contactTitle: "Contato de imprensa",
+        sla: "Respondemos em ~5 dias úteis. Inclua veículo, prazo e o que precisa."
       },
       footer: { copyright: "© Vaslix Games · Estúdio Android independente", home: "Início", privacyLink: "Política de Privacidade", contact: "Contato" }
     },
@@ -1529,6 +2409,13 @@
         theme: { light: "切换到浅色主题", dark: "切换到深色主题", auto: "切换到自动主题" }
       },
       hero: { h1: "Vaslix Games", tagline: "Android 小游戏。专注、迅捷、经得起时间。" },
+      about: {
+        aria: "关于 Vaslix Games",
+        eyebrow: "关于",
+        title: "一家有长远眼光的小工作室",
+        lede: "Vaslix Games 是一家一人 Android 发行工作室，理念很简单：<strong>用心打造的小型应用，尊重你的设备与注意力。</strong>无需注册账号，没有我们自己的服务器保存你的成绩，没有投资人催着上调商业化。当下是专注的拼图，下一步是音频与街机。",
+        stats: { apps: "已发布应用", langs: "支持语言", trackers: "自有追踪器", billing: "通过 Google Play Billing" }
+      },
       games: {
         eyebrow: "我们的游戏",
         title: "我们发布的作品",
@@ -1549,6 +2436,16 @@
           feat: { 1: "Android 8+", 2: "25 种主题", 3: "10 个段位", 4: "每日宝箱", 5: "Premium · 双倍金币" }
         }
       },
+      roadmap: {
+        aria: "路线图",
+        eyebrow: "路线图",
+        title: "我们的方向",
+        intro: "不承诺日期，但工作顺序如下。准备好了才发布，绝不提前。",
+        r1: { meta: "已发布 · 2026", title: "Gridlix:2048", desc: "已在 Google Play 上线。4×4 合并拼图，五种主题、四个具名加成，可选无广告 Premium。" },
+        r2: { meta: "开发中", title: "Blocklix", desc: "8×8 放置消除拼图。主题、段位、每日宝箱、锤子与炸弹加成，双倍金币的 Premium。封闭测试中。" },
+        r3: { meta: "下一步", title: "首个音频 / 播客作品", desc: "一款专注的播放应用，支持离线下载、队列管理，沿用无账号的方式。内容类型不限。" },
+        r4: { meta: "稍后", title: "文字拼图原型", desc: "目前只是纸上构想。形式与 Gridlix 一致：小巧、专注、无账号、可选无广告 Premium。" }
+      },
       privacy: { eyebrow: "你的数据", title: "隐私与透明" },
       privacyCta: {
         aria: "阅读我们的隐私政策",
@@ -1562,6 +2459,40 @@
         2: { title: "不存付款数据", desc: "全部付款走 Google Play，我们看不到你的银行卡。" },
         3: { title: "GDPR · CCPA · COPPA", desc: "授权、退出与数据权利，按主流标准对齐。" },
         4: { title: "Premium = 无广告", desc: "订阅用户看不到任何广告，广告 SDK 不会为他们加载任何内容。" }
+      },
+      faq: {
+        aria: "常见问题",
+        eyebrow: "FAQ",
+        title: "常见问题",
+        q1: "如何取消订阅？",
+        a1: "在 <strong>Google Play → 订阅</strong> 中取消，或使用应用内的「管理」按钮——它会跳转到同一页面。取消会在当前计费周期结束时生效。",
+        q2: "卸载应用后游戏进度怎么办？",
+        a2: "进度只保存在你的设备上——卸载就会清除。我们不会把存档上传到我们的服务器，因此没有云端备份。重新安装并使用同一个 Google 账号登录后，Premium 状态会自动恢复。",
+        q3: "为什么要读取广告 ID？",
+        a3: "仅在免费 / 非 Premium 安装中读取，且只用于让广告网络做频次限制并投放更相关的广告。Premium 订阅用户的广告 ID 不会发送给任何广告网络。详情见<a href=\"./privacy-policy.html\">隐私政策</a>。",
+        q4: "支持哪些 Android 版本？",
+        a4: "Android 8.0（API 26）及以上。我们刻意兼容更老的设备，让游戏在二手手机上也能玩。",
+        q5: "应用支持哪些语言？",
+        a5: "英语、俄语、西班牙语、葡萄牙语（巴西）、德语、法语和简体中文。首次启动时自动识别系统语言，也可以在应用设置中切换。",
+        q6: "发现了 bug 或想提建议。",
+        a6: "请写信到 <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a>，附上简短描述。截图和设备型号会很有帮助。我们会阅读每一条消息。",
+        q7: "会有 iOS 版本吗？",
+        a7: "当前路线图中没有。我们是一人工作室，Android 让我们能更快地发布和更新。等作品库扩大后可能会重新考虑。"
+      },
+      press: {
+        aria: "媒体资料",
+        eyebrow: "媒体资料",
+        title: "面向媒体与合作方",
+        aboutTitle: "关于工作室",
+        aboutBody: "Vaslix Games 是一家成立于 2025 年的独立 Android 发行工作室。我们做跨类型的小型应用——当下是拼图，下一步是音频与街机——坚持隐私优先：无需账号、没有我们自己的服务器存储用户数据、没有内部分析。当前 Google Play 上已发布 Gridlix:2048；Blocklix 正在封闭测试。",
+        copyBtn: "复制简介",
+        copied: "已复制",
+        assetsTitle: "品牌素材",
+        assetLogo: "Vaslix Logo（SVG）",
+        assetGridlix: "Gridlix 图标（WebP）",
+        assetBlocklix: "Blocklix 图标（PNG）",
+        contactTitle: "媒体联系",
+        sla: "5 个工作日内回复。请注明媒体、截稿时间与所需内容。"
       },
       footer: { copyright: "© Vaslix Games · 独立 Android 工作室", home: "首页", privacyLink: "隐私政策", contact: "联系" }
     }
@@ -1872,6 +2803,152 @@
         cta.style.removeProperty('--cta-mx');
         cta.style.removeProperty('--cta-my');
       });
+    });
+  })();
+
+  // ─────────────────────────────────────────────────────────
+  // Press: copy blurb button
+  // ─────────────────────────────────────────────────────────
+  (function () {
+    const btn = document.getElementById('pressCopyBtn');
+    if (!btn) return;
+    const label = btn.querySelector('.press-copy-label');
+    let revertTimer = 0;
+    btn.addEventListener('click', function () {
+      const targetSel = btn.getAttribute('data-copy-target');
+      const target = targetSel && document.querySelector(targetSel);
+      if (!target) return;
+      const text = (target.textContent || '').trim();
+      const loc = document.documentElement.lang || 'en';
+      const dict = I18N[loc] || I18N.en;
+      const copyLabel = dict.press && dict.press.copyBtn;
+      const copiedLabel = dict.press && dict.press.copied;
+      const apply = function () {
+        btn.classList.add('copied');
+        if (label && copiedLabel) label.textContent = copiedLabel;
+        clearTimeout(revertTimer);
+        revertTimer = setTimeout(function () {
+          btn.classList.remove('copied');
+          if (label && copyLabel) label.textContent = copyLabel;
+        }, 1600);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(apply).catch(function () {
+          fallbackCopy(text); apply();
+        });
+      } else {
+        fallbackCopy(text); apply();
+      }
+    });
+    function fallbackCopy(text) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+  })();
+
+  // ─────────────────────────────────────────────────────────
+  // Scroll progress bar
+  // ─────────────────────────────────────────────────────────
+  (function () {
+    const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduce) return;
+    const root = document.documentElement;
+    let raf = 0;
+    function update() {
+      raf = 0;
+      const scrollTop = window.scrollY || root.scrollTop;
+      const max = Math.max(1, root.scrollHeight - window.innerHeight);
+      const p = Math.min(1, Math.max(0, scrollTop / max));
+      root.style.setProperty('--scroll', p.toFixed(4));
+    }
+    function onScroll() {
+      if (raf) return;
+      raf = requestAnimationFrame(update);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    update();
+  })();
+
+  // ─────────────────────────────────────────────────────────
+  // Animated number counters (data-count, optional data-suffix)
+  // ─────────────────────────────────────────────────────────
+  (function () {
+    const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const nums = document.querySelectorAll('.stat-num[data-count]');
+    if (!nums.length) return;
+    function setFinal(el) {
+      const target = parseFloat(el.getAttribute('data-count')) || 0;
+      const suffix = el.getAttribute('data-suffix') || '';
+      el.textContent = (Math.round(target)).toLocaleString() + suffix;
+    }
+    if (prefersReduce || !('IntersectionObserver' in window)) {
+      nums.forEach(setFinal);
+      return;
+    }
+    function animate(el) {
+      const target = parseFloat(el.getAttribute('data-count')) || 0;
+      const suffix = el.getAttribute('data-suffix') || '';
+      const duration = 1400;
+      const start = performance.now();
+      function ease(t) { return 1 - Math.pow(1 - t, 3); }
+      function step(now) {
+        const t = Math.min(1, (now - start) / duration);
+        const v = Math.round(ease(t) * target);
+        el.textContent = v.toLocaleString() + suffix;
+        if (t < 1) requestAnimationFrame(step);
+        else el.textContent = Math.round(target).toLocaleString() + suffix;
+      }
+      requestAnimationFrame(step);
+    }
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          animate(e.target);
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.35 });
+    nums.forEach(function (n) { io.observe(n); });
+  })();
+
+  // ─────────────────────────────────────────────────────────
+  // Magnetic hover (desktop only)
+  // ─────────────────────────────────────────────────────────
+  (function () {
+    const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const coarse = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+    if (prefersReduce || coarse) return;
+    const STRENGTH = 0.28;
+    const MAX = 10;
+    document.querySelectorAll('.magnetic').forEach(function (el) {
+      let raf = 0;
+      function onMove(e) {
+        if (raf) return;
+        raf = requestAnimationFrame(function () {
+          raf = 0;
+          const r = el.getBoundingClientRect();
+          const cx = r.left + r.width / 2;
+          const cy = r.top + r.height / 2;
+          const dx = (e.clientX - cx) * STRENGTH;
+          const dy = (e.clientY - cy) * STRENGTH;
+          const mx = Math.max(-MAX, Math.min(MAX, dx));
+          const my = Math.max(-MAX, Math.min(MAX, dy));
+          el.style.setProperty('--mx', mx.toFixed(2) + 'px');
+          el.style.setProperty('--my', my.toFixed(2) + 'px');
+        });
+      }
+      function onLeave() {
+        el.style.setProperty('--mx', '0px');
+        el.style.setProperty('--my', '0px');
+      }
+      el.addEventListener('mousemove', onMove);
+      el.addEventListener('mouseleave', onLeave);
     });
   })();
 </script>
