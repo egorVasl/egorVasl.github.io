@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vaslix Games — Small Android games, made with care</title>
-  <meta name="description" content="Vaslix Games is an indie Android publisher building small, focused apps across genres — puzzle games today, audio/podcast titles next. Currently shipping Gridlix:2048, with Blocklix in development." />
+  <meta name="description" content="Vaslix Games is an independent Android studio shipping small, focused apps across genres — puzzle today, audio and arcade next. Gridlix:2048 and Blocklix are both live on Google Play." />
   <meta name="theme-color" content="#F5F6FA" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#13161F" media="(prefers-color-scheme: dark)" />
   <meta property="og:title" content="Vaslix Games" />
@@ -969,6 +969,21 @@
       will-change: transform;
     }
     .game:hover { --lift: -4px; box-shadow: var(--shadow-lg); }
+    /* The whole card is the store link (В4); the official badge is what says so (В1). */
+    a.game { text-decoration: none; color: inherit; }
+    a.game:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 4px; }
+    .gp-badge {
+      align-self: flex-start;
+      height: 72px; width: auto;
+      /* auto pushes the badge to the card's bottom edge, so both badges share one
+         baseline however long the descriptions run. The asset ships with Google's own
+         clear space baked in; trim 8px of it at the bottom so the badge sits on the
+         card's rhythm — the card's 24px padding still leaves far more clear space
+         than the brand guidelines ask for. */
+      margin: auto 0 -8px;
+      transition: transform 200ms var(--ease-spring);
+    }
+    .game:hover .gp-badge { transform: scale(1.03); }
     .game:active { --lift: -1px; transition: transform 160ms var(--ease-spring); }
     .game-head, .game-feat { transform: translateZ(0); }
 
@@ -1515,7 +1530,7 @@
         <span class="stat-label" data-i18n="about.stats.apps">apps shipped</span>
       </div>
       <div class="stat">
-        <span class="stat-num" data-count="7">0</span>
+        <span class="stat-num" data-count="12">0</span>
         <span class="stat-label" data-i18n="about.stats.langs">supported languages</span>
       </div>
       <div class="stat">
@@ -1531,11 +1546,14 @@
 
   <p class="section-eyebrow" data-i18n="games.eyebrow">Our games</p>
   <h2 class="section-title" data-i18n="games.title">What we ship</h2>
-  <p class="section-intro" data-i18n="games.intro">A small indie label building focused Android apps across genres — puzzle, word, arcade, and podcast/audio. Currently shipping Gridlix:2048; Blocklix and audio/podcast titles in active development.</p>
+  <p class="section-intro" data-i18n="games.intro">An independent studio shipping small Android apps across genres — puzzle now, audio and arcade next. Gridlix:2048 and Blocklix are both live on Google Play; audio titles are in development.</p>
 
   <section class="games" aria-label="Our games" data-i18n-attr="aria-label:games.aria">
 
-    <article class="game reveal">
+    <a class="game reveal" href="https://play.google.com/store/apps/details?id=com.vaslix.games.gridlix"
+       target="_blank" rel="noopener"
+       data-i18n-attr="aria-label:card.gridlix.playAria"
+       aria-label="Gridlix:2048 on Google Play">
       <div class="game-head">
         <svg class="game-icon" viewBox="0 0 100 100" role="img" aria-label="Gridlix:2048 app icon" data-i18n-attr="aria-label:card.gridlix.iconAlt">
           <defs>
@@ -1567,28 +1585,37 @@
         <span data-i18n="card.gridlix.feat.3">Premium subscription</span>
         <span data-i18n="card.gridlix.feat.4">Light · Dark</span>
       </div>
-    </article>
+      <img class="gp-badge" src="./badges/google-play-en.png"
+           alt="Get it on Google Play" width="646" height="250" loading="lazy"
+           data-i18n-attr="src:card.gridlix.badge,alt:card.gridlix.badgeAlt" />
+    </a>
 
-    <article class="game reveal">
+    <a class="game reveal" href="https://play.google.com/store/apps/details?id=com.vaslix.games.blocklix"
+       target="_blank" rel="noopener"
+       data-i18n-attr="aria-label:card.blocklix.playAria"
+       aria-label="Blocklix on Google Play">
       <div class="game-head">
         <img class="game-icon" src="./blocklix-icon.png" alt="Blocklix app icon" width="72" height="72" loading="lazy" data-i18n-attr="alt:card.blocklix.iconAlt" />
         <div class="game-head-right">
           <div class="game-pills">
             <span class="pill genre" data-i18n="card.blocklix.genre">Puzzle</span>
-            <span class="pill status soon" data-i18n="card.blocklix.status">In development</span>
+            <span class="pill status live" data-i18n="card.blocklix.status">Live</span>
           </div>
           <h3 data-i18n="card.blocklix.title">Blocklix</h3>
-          <p class="game-desc" data-i18n="card.blocklix.desc">A free 8×8 block puzzle for Android. Drop colorful shapes, clear lines and squares, chain combos for big multipliers. 25 unlockable themes, 10 ranks across 15 achievement tracks, a 7-day daily-reward chest, hammer and bomb boosters, and an optional ad-free Premium with 2× coin earn.</p>
+          <p class="game-desc" data-i18n="card.blocklix.desc">Drop shapes into an 8×8 board, clear lines and squares, chain combos for big multipliers. Six difficulty levels, 38 themes, 60 ranks across 21 achievement chains, four boosters, daily and weekly missions with a streak chest, and a cosmetics wardrobe. Optional ad-free Premium with 2× stars and a daily gift.</p>
         </div>
       </div>
       <div class="game-feat">
         <span data-i18n="card.blocklix.feat.1">Android 8+</span>
-        <span data-i18n="card.blocklix.feat.2">25 themes</span>
-        <span data-i18n="card.blocklix.feat.3">10 ranks</span>
-        <span data-i18n="card.blocklix.feat.4">Daily chest</span>
-        <span data-i18n="card.blocklix.feat.5">Premium · 2× coins</span>
+        <span data-i18n="card.blocklix.feat.2">38 themes</span>
+        <span data-i18n="card.blocklix.feat.3">60 ranks</span>
+        <span data-i18n="card.blocklix.feat.4">6 difficulties</span>
+        <span data-i18n="card.blocklix.feat.5">Premium · 2× stars</span>
       </div>
-    </article>
+      <img class="gp-badge" src="./badges/google-play-en.png"
+           alt="Get it on Google Play" width="646" height="250" loading="lazy"
+           data-i18n-attr="src:card.blocklix.badge,alt:card.blocklix.badgeAlt" />
+    </a>
 
   </section>
 
@@ -1605,12 +1632,12 @@
           <p data-i18n="roadmap.r1.desc">Live on Google Play. 4×4 merge puzzle with five themes, four named boosters and an optional ad-free Premium.</p>
         </div>
       </li>
-      <li class="tl-item active reveal">
+      <li class="tl-item shipped reveal">
         <span class="tl-dot" aria-hidden="true"></span>
         <div class="tl-body">
-          <span class="tl-meta" data-i18n="roadmap.r2.meta">In development</span>
+          <span class="tl-meta" data-i18n="roadmap.r2.meta">Shipped · 2026</span>
           <h3 data-i18n="roadmap.r2.title">Blocklix</h3>
-          <p data-i18n="roadmap.r2.desc">8×8 drop-and-clear puzzle. Themes, ranks, daily chest, hammer + bomb boosters, Premium with 2× coins. In closed testing.</p>
+          <p data-i18n="roadmap.r2.desc">Live on Google Play. An 8×8 drop-and-clear puzzle with six difficulty levels, 38 themes, 60 ranks, four boosters, daily and weekly missions, and an optional ad-free Premium.</p>
         </div>
       </li>
       <li class="tl-item planned reveal">
@@ -1682,8 +1709,8 @@
         <svg viewBox="0 0 24 24"><polygon points="12 2 4 6 4 12 12 22 20 12 20 6 12 2"/><line x1="12" y1="22" x2="12" y2="2"/></svg>
       </div>
       <div class="trust-text">
-        <strong data-i18n="trust.4.title">Premium = ad-free</strong>
-        <span data-i18n="trust.4.desc">Subscribers see no ads. Ad SDK is not used to load content for them.</span>
+        <strong data-i18n="trust.4.title">Premium removes ads</strong>
+        <span data-i18n="trust.4.desc">Banners, interstitials and app-open ads switch off for Premium and Remove Ads. Rewarded videos stay opt-in for everyone — they only play when you tap one.</span>
       </div>
     </div>
   </section>
@@ -1704,14 +1731,14 @@
           <span class="faq-q" data-i18n="faq.q2">What happens to my game progress if I uninstall?</span>
           <svg class="faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div class="faq-answer"><p data-i18n="faq.a2">Progress lives on your device — uninstalling clears it. We never upload your save to our servers, so there's no cloud backup. Premium status restores automatically once you reinstall and sign in to the same Google account.</p></div>
+        <div class="faq-answer"><p data-i18n="faq.a2">Progress lives on your device, and Android's own backup service copies it into your Google account — so reinstalling on the same account usually brings it back. We never upload your save to a server of ours. Blocklix also has an optional cloud save on Google Play Games, rolling out gradually. Premium restores automatically once you reinstall and sign in to the same Google account.</p></div>
       </details>
       <details class="faq-item reveal">
         <summary>
           <span class="faq-q" data-i18n="faq.q3">Why do you ask for the Advertising ID?</span>
           <svg class="faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div class="faq-answer"><p data-i18n-html="faq.a3">Only on free / non-Premium installs, and only so ad networks can frequency-cap and serve relevant ads. Premium subscribers' Advertising ID is not sent to any ad network. Full details in the <a href="./privacy-policy.html">Privacy Policy</a>.</p></div>
+        <div class="faq-answer"><p data-i18n-html="faq.a3">So ad networks can frequency-cap and serve relevant ads, and attribute installs. With Premium or the Remove Ads purchase it is no longer used for banners, interstitials or app-open ads; it is still processed if you choose to watch a rewarded video. Full details in the <a href="./privacy-policy.html">Privacy Policy</a>.</p></div>
       </details>
       <details class="faq-item reveal">
         <summary>
@@ -1725,7 +1752,7 @@
           <span class="faq-q" data-i18n="faq.q5">Which languages do the apps support?</span>
           <svg class="faq-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div class="faq-answer"><p data-i18n="faq.a5">English, Russian, Spanish, Portuguese (Brazil), German, French and Simplified Chinese. The system language is auto-detected on first launch and can be overridden in app settings.</p></div>
+        <div class="faq-answer"><p data-i18n="faq.a5">Blocklix ships in 12: English, Russian, German, Spanish, French, Italian, Japanese, Korean, Portuguese (Brazil), Turkish, Arabic and Simplified Chinese. Gridlix:2048 covers a smaller set. The system language is auto-detected on first launch and can be overridden in app settings.</p></div>
       </details>
       <details class="faq-item reveal">
         <summary>
@@ -1750,7 +1777,7 @@
     <div class="press-grid">
       <div class="press-card press-copy reveal">
         <h3 data-i18n="press.aboutTitle">About the studio</h3>
-        <p data-i18n="press.aboutBody" id="pressBlurb">Vaslix Games is an independent Android publisher founded in 2025. We build small, focused apps across genres — puzzle today, audio and arcade titles next — with a privacy-first stance: no accounts, no proprietary servers storing user data, no in-house analytics. Currently shipping Gridlix:2048 on Google Play; Blocklix is in closed testing.</p>
+        <p data-i18n="press.aboutBody" id="pressBlurb">Vaslix Games is an independent Android publisher founded in 2025. We build small, focused apps across genres — puzzle today, audio and arcade titles next — with a privacy-first stance: no accounts, no proprietary servers storing user data, no in-house analytics. Two titles are live on Google Play: Gridlix:2048 and Blocklix, an 8×8 block puzzle with six difficulty levels, 38 themes and 60 ranks, localised into 12 languages.</p>
         <button type="button" class="press-copy-btn magnetic" id="pressCopyBtn" data-copy-target="#pressBlurb" aria-label="Copy press blurb">
           <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
           <span class="press-copy-label" data-i18n="press.copyBtn">Copy blurb</span>
@@ -1806,7 +1833,7 @@
     en: {
       meta: {
         title: "Vaslix Games — small Android games, built to last",
-        description: "Vaslix Games is an independent Android studio shipping small, focused apps across genres — puzzle today, audio and arcade next. Gridlix:2048 is live; Blocklix is in active development.",
+        description: "Vaslix Games is an independent Android studio shipping small, focused apps across genres — puzzle today, audio and arcade next. Gridlix:2048 and Blocklix are both live on Google Play.",
         ogTitle: "Vaslix Games",
         ogDesc: "Independent Android studio. Small, focused games across genres."
       },
@@ -1825,7 +1852,7 @@
       games: {
         eyebrow: "Our games",
         title: "What we ship",
-        intro: "An independent studio shipping small Android apps across genres — puzzle now, audio and arcade next. Gridlix:2048 is live; Blocklix and audio titles are in active development.",
+        intro: "An independent studio shipping small Android apps across genres — puzzle now, audio and arcade next. Gridlix:2048 and Blocklix are both live on Google Play; audio titles are in development.",
         aria: "Our games"
       },
       card: {
@@ -1833,13 +1860,19 @@
           iconAlt: "Gridlix:2048 app icon",
           genre: "Puzzle", status: "Live", title: "Gridlix:2048",
           desc: "A 4×4 merge puzzle for Android. Four named boosters — Undo, Delete, Shuffle, Spawn — and a Continue when the board fills. Five color themes, tuned haptics and sound, and an optional ad-free Premium that refreshes your boosters.",
-          feat: { 1: "Android 8+", 2: "5 themes", 3: "Sound + haptics", 4: "Premium · ad-free" }
+          feat: { 1: "Android 8+", 2: "5 themes", 3: "Sound + haptics", 4: "Premium · ad-free" },
+          badge: "./badges/google-play-en.png",
+          badgeAlt: "Get it on Google Play",
+          playAria: "Gridlix:2048 on Google Play"
         },
         blocklix: {
           iconAlt: "Blocklix app icon",
-          genre: "Puzzle", status: "In development", title: "Blocklix",
-          desc: "Drop shapes, clear lines and squares, chain combos for big multipliers. 25 unlockable themes, 10 ranks across 15 achievement tracks, a 7-day daily chest, hammer and bomb boosters, and ad-free Premium with 2× coins.",
-          feat: { 1: "Android 8+", 2: "25 themes", 3: "10 ranks", 4: "Daily chest", 5: "Premium · 2× coins" }
+          genre: "Puzzle", status: "Live", title: "Blocklix",
+          desc: "Drop shapes into an 8×8 board, clear lines and squares, chain combos for big multipliers. Six difficulty levels, 38 themes, 60 ranks across 21 achievement chains, four boosters, daily and weekly missions with a streak chest, and a cosmetics wardrobe. Optional ad-free Premium with 2× stars and a daily gift.",
+          feat: { 1: "Android 8+", 2: "38 themes", 3: "60 ranks", 4: "6 difficulties", 5: "Premium · 2× stars" },
+          badge: "./badges/google-play-en.png",
+          badgeAlt: "Get it on Google Play",
+          playAria: "Blocklix on Google Play"
         }
       },
       roadmap: {
@@ -1848,7 +1881,7 @@
         title: "Where we're going",
         intro: "No promises on dates, but here's the working order. Things move when they're ready and not before.",
         r1: { meta: "Shipped · 2026", title: "Gridlix:2048", desc: "Live on Google Play. A 4×4 merge puzzle with five themes, four named boosters and an optional ad-free Premium." },
-        r2: { meta: "In development", title: "Blocklix", desc: "8×8 drop-and-clear puzzle. Themes, ranks, daily chest, hammer + bomb boosters, Premium with 2× coins. In closed testing." },
+        r2: { meta: "Shipped · 2026", title: "Blocklix", desc: "Live on Google Play. An 8×8 drop-and-clear puzzle with six difficulty levels, 38 themes, 60 ranks, four boosters, daily and weekly missions, and an optional ad-free Premium." },
         r3: { meta: "Next up", title: "First audio / podcast title", desc: "A focused listening app with offline downloads, queue management and the same no-account approach. Genre-agnostic catalogue." },
         r4: { meta: "Later", title: "Word puzzle prototype", desc: "An idea on paper. Same shape as Gridlix: small, focused, no accounts, optional ad-free Premium." }
       },
@@ -1864,7 +1897,7 @@
         1: { title: "No accounts", desc: "No sign-up. Your progress stays on your device." },
         2: { title: "No payment data stored", desc: "Payments run through Google Play. We never see your card." },
         3: { title: "GDPR · CCPA · COPPA", desc: "Consent, opt-outs, and data rights, aligned to the standards." },
-        4: { title: "Premium = ad-free", desc: "Subscribers see zero ads. The ad SDK doesn't load for them at all." }
+        4: { title: "Premium removes ads", desc: "Banners, interstitials and app-open ads switch off for Premium and Remove Ads. Rewarded videos stay opt-in for everyone — they only play when you tap one." }
       },
       faq: {
         aria: "FAQ",
@@ -1873,13 +1906,13 @@
         q1: "How do I cancel my subscription?",
         a1: "Cancel from <strong>Google Play → Subscriptions</strong>, or use the \"Manage\" button inside the app — it deep-links to the same page. Cancellation takes effect at the end of your current billing period.",
         q2: "What happens to my game progress if I uninstall?",
-        a2: "Progress lives on your device — uninstalling clears it. We never upload your save to our servers, so there's no cloud backup. Premium status restores automatically once you reinstall and sign in to the same Google account.",
+        a2: "Progress lives on your device, and Android's own backup service copies it into your Google account — so reinstalling on the same account usually brings it back. We never upload your save to a server of ours. Blocklix also has an optional cloud save on Google Play Games, rolling out gradually. Premium restores automatically once you reinstall and sign in to the same Google account.",
         q3: "Why do you ask for the Advertising ID?",
-        a3: "Only on free / non-Premium installs, and only so ad networks can frequency-cap and serve relevant ads. Premium subscribers' Advertising ID is not sent to any ad network. Full details in the <a href=\"./privacy-policy.html\">Privacy Policy</a>.",
+        a3: "So ad networks can frequency-cap and serve relevant ads, and attribute installs. With Premium or the Remove Ads purchase it is no longer used for banners, interstitials or app-open ads; it is still processed if you choose to watch a rewarded video. Full details in the <a href=\"./privacy-policy.html\">Privacy Policy</a>.",
         q4: "Which Android versions are supported?",
         a4: "Android 8.0 (API 26) and above. We target older devices on purpose so the games are still playable on hand-me-down phones.",
         q5: "Which languages do the apps support?",
-        a5: "English, Russian, Spanish, Portuguese (Brazil), German, French and Simplified Chinese. The system language is auto-detected on first launch and can be overridden in app settings.",
+        a5: "Blocklix ships in 12: English, Russian, German, Spanish, French, Italian, Japanese, Korean, Portuguese (Brazil), Turkish, Arabic and Simplified Chinese. Gridlix:2048 covers a smaller set. The system language is auto-detected on first launch and can be overridden in app settings.",
         q6: "I found a bug or want to suggest a feature.",
         a6: "Write to <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> with a short description. Screenshots and device model help a lot. We read every message.",
         q7: "Will there ever be an iOS version?",
@@ -1890,7 +1923,7 @@
         eyebrow: "Press kit",
         title: "For press & partners",
         aboutTitle: "About the studio",
-        aboutBody: "Vaslix Games is an independent Android publisher founded in 2025. We build small, focused apps across genres — puzzle today, audio and arcade titles next — with a privacy-first stance: no accounts, no proprietary servers storing user data, no in-house analytics. Currently shipping Gridlix:2048 on Google Play; Blocklix is in closed testing.",
+        aboutBody: "Vaslix Games is an independent Android publisher founded in 2025. We build small, focused apps across genres — puzzle today, audio and arcade titles next — with a privacy-first stance: no accounts, no proprietary servers storing user data, no in-house analytics. Two titles are live on Google Play: Gridlix:2048 and Blocklix, an 8×8 block puzzle with six difficulty levels, 38 themes and 60 ranks, localised into 12 languages.",
         copyBtn: "Copy blurb",
         copied: "Copied",
         assetsTitle: "Brand assets",
@@ -1905,7 +1938,7 @@
     ru: {
       meta: {
         title: "Vaslix Games — небольшие Android-игры, сделанные надолго",
-        description: "Vaslix Games — независимая Android-студия, выпускающая компактные, сфокусированные приложения в разных жанрах: сегодня пазлы, дальше аудио и аркады. Gridlix:2048 уже доступен, Blocklix в активной разработке.",
+        description: "Vaslix Games — независимая Android-студия, выпускающая компактные, сфокусированные приложения в разных жанрах: сегодня пазлы, дальше аудио и аркады. Gridlix:2048 и Blocklix уже доступны в Google Play.",
         ogTitle: "Vaslix Games",
         ogDesc: "Независимая Android-студия. Небольшие, сфокусированные игры в разных жанрах."
       },
@@ -1924,7 +1957,7 @@
       games: {
         eyebrow: "Наши игры",
         title: "Что мы выпускаем",
-        intro: "Независимая студия, выпускающая компактные Android-приложения в разных жанрах — сегодня пазлы, дальше аудио и аркады. Gridlix:2048 уже доступен; Blocklix и аудио-проекты в активной разработке.",
+        intro: "Независимая студия, выпускающая компактные Android-приложения в разных жанрах — сегодня пазлы, дальше аудио и аркады. Gridlix:2048 и Blocklix уже доступны в Google Play; аудио-проекты в разработке.",
         aria: "Наши игры"
       },
       card: {
@@ -1932,13 +1965,19 @@
           iconAlt: "Иконка приложения Gridlix:2048",
           genre: "Пазл", status: "Доступен", title: "Gridlix:2048",
           desc: "Пазл-слияние 4×4 для Android. Четыре именных бустера — Откат, Удаление, Перемешать, Спавн — и Продолжение, когда доска заполнится. Пять цветовых тем, выверенные тактильные отклики и звук, опциональная Premium-подписка без рекламы, обновляющая ваши бустеры.",
-          feat: { 1: "Android 8+", 2: "5 тем", 3: "Звук + тактильные", 4: "Premium · без рекламы" }
+          feat: { 1: "Android 8+", 2: "5 тем", 3: "Звук + тактильные", 4: "Premium · без рекламы" },
+          badge: "./badges/google-play-ru.png",
+          badgeAlt: "Доступно в Google Play",
+          playAria: "Gridlix:2048 в Google Play"
         },
         blocklix: {
           iconAlt: "Иконка приложения Blocklix",
-          genre: "Пазл", status: "В разработке", title: "Blocklix",
-          desc: "Размещайте фигуры, очищайте линии и квадраты, собирайте комбо для больших множителей. 25 разблокируемых тем, 10 рангов по 15 категориям достижений, 7-дневный ежедневный сундук, бустеры «молот» и «бомба», и Premium-подписка без рекламы с двойным начислением монет.",
-          feat: { 1: "Android 8+", 2: "25 тем", 3: "10 рангов", 4: "Ежедневный сундук", 5: "Premium · ×2 монет" }
+          genre: "Пазл", status: "Доступен", title: "Blocklix",
+          desc: "Кладите фигуры на поле 8×8, очищайте линии и квадраты, собирайте комбо ради больших множителей. Шесть уровней сложности, 38 тем, 60 рангов и 21 цепочка достижений, четыре бустера, ежедневные и недельные задания со стрик-сундуком и гардероб косметики. Опциональный Premium без рекламы, с удвоением звёзд и ежедневным подарком.",
+          feat: { 1: "Android 8+", 2: "38 тем", 3: "60 рангов", 4: "6 сложностей", 5: "Premium · ×2 звёзд" },
+          badge: "./badges/google-play-ru.png",
+          badgeAlt: "Доступно в Google Play",
+          playAria: "Blocklix в Google Play"
         }
       },
       roadmap: {
@@ -1947,7 +1986,7 @@
         title: "Куда мы идём",
         intro: "Без обещаний по датам, но порядок работы такой. Релиз происходит, когда готово, и не раньше.",
         r1: { meta: "Выпущено · 2026", title: "Gridlix:2048", desc: "Доступен в Google Play. Пазл-слияние 4×4 с пятью темами, четырьмя именованными бустерами и опциональным Premium без рекламы." },
-        r2: { meta: "В разработке", title: "Blocklix", desc: "Пазл 8×8 «положи и очищай». Темы, ранги, ежедневный сундук, бустеры «молот» и «бомба», Premium с двойными монетами. В закрытом тестировании." },
+        r2: { meta: "Выпущен · 2026", title: "Blocklix", desc: "Доступен в Google Play. Пазл 8×8 «положи и очищай»: шесть уровней сложности, 38 тем, 60 рангов, четыре бустера, ежедневные и недельные задания и опциональный Premium без рекламы." },
         r3: { meta: "Следующее", title: "Первое аудио / подкаст-приложение", desc: "Сфокусированный плеер с офлайн-загрузками, очередью и тем же подходом без аккаунтов. Каталог не привязан к жанру." },
         r4: { meta: "Позже", title: "Прототип словесного пазла", desc: "Пока только идея на бумаге. Та же форма, что и Gridlix: маленький, сфокусированный, без аккаунтов, опциональный Premium без рекламы." }
       },
@@ -1963,7 +2002,7 @@
         1: { title: "Без аккаунтов", desc: "Без регистрации. Ваш прогресс остаётся на устройстве." },
         2: { title: "Без хранения платёжных данных", desc: "Платежи идут через Google Play. Мы никогда не видим вашу карту." },
         3: { title: "GDPR · CCPA · COPPA", desc: "Согласия, отказы и права на данные — по стандартам." },
-        4: { title: "Premium = без рекламы", desc: "Подписчики не видят ни одной рекламы. Рекламный SDK для них вообще не загружается." }
+        4: { title: "Premium убирает рекламу", desc: "Баннеры, межстраничные и app-open отключаются для Premium и покупки «Без рекламы». Видео за награду остаются добровольными для всех — они запускаются только по вашему нажатию." }
       },
       faq: {
         aria: "Частые вопросы",
@@ -1972,13 +2011,13 @@
         q1: "Как отменить подписку?",
         a1: "Отменить можно в <strong>Google Play → Подписки</strong> или через кнопку «Управление» внутри приложения — она ведёт на ту же страницу. Отмена вступает в силу в конце текущего периода оплаты.",
         q2: "Что будет с прогрессом, если я удалю приложение?",
-        a2: "Прогресс хранится на устройстве — удаление приложения стирает его. Мы не выгружаем сохранения на свои серверы, поэтому облачной копии нет. Premium-статус автоматически восстановится при переустановке и входе в тот же Google-аккаунт.",
+        a2: "Прогресс хранится на устройстве, а собственная служба резервного копирования Android копирует его в ваш аккаунт Google — поэтому переустановка на том же аккаунте обычно возвращает его. На свои серверы мы сохранения не выгружаем. В Blocklix есть ещё необязательное облачное сохранение через Google Play Games, оно включается постепенно. Premium-статус восстанавливается автоматически при переустановке и входе в тот же аккаунт Google.",
         q3: "Зачем вам Advertising ID?",
-        a3: "Только на бесплатных / не-Premium установках и только для того, чтобы рекламные сети ограничивали частоту и показывали релевантную рекламу. Advertising ID подписчиков Premium ни одной сети не отправляется. Подробнее — в <a href=\"./privacy-policy.html\">Политике конфиденциальности</a>.",
+        a3: "Чтобы рекламные сети ограничивали частоту показов, показывали релевантную рекламу и атрибутировали установки. С Premium или покупкой «Без рекламы» он больше не используется для баннеров, межстраничных и app-open; он всё ещё обрабатывается, если вы сами решите посмотреть видео за награду. Подробнее — в <a href=\"./privacy-policy.html\">Политике конфиденциальности</a>.",
         q4: "Какие версии Android поддерживаются?",
         a4: "Android 8.0 (API 26) и выше. Мы намеренно целимся в старые устройства, чтобы игры были доступны на «вторых руках».",
         q5: "Какие языки поддерживаются?",
-        a5: "Английский, русский, испанский, португальский (Бразилия), немецкий, французский и упрощённый китайский. Системный язык определяется при первом запуске и переключается в настройках приложения.",
+        a5: "Blocklix выходит на 12 языках: английский, русский, немецкий, испанский, французский, итальянский, японский, корейский, португальский (Бразилия), турецкий, арабский и упрощённый китайский. У Gridlix:2048 набор меньше. Системный язык определяется при первом запуске и переключается в настройках приложения.",
         q6: "Нашёл баг или хочу предложить функцию.",
         a6: "Пишите на <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> с коротким описанием. Скриншоты и модель устройства сильно помогают. Мы читаем каждое сообщение.",
         q7: "Будет ли версия для iOS?",
@@ -1989,7 +2028,7 @@
         eyebrow: "Пресс-кит",
         title: "Для прессы и партнёров",
         aboutTitle: "О студии",
-        aboutBody: "Vaslix Games — независимый Android-издатель, основанный в 2025 году. Мы делаем небольшие сфокусированные приложения в разных жанрах — сегодня пазлы, дальше аудио и аркады — с подходом «privacy-first»: без аккаунтов, без собственных серверов, хранящих данные пользователей, без внутренней аналитики. Сейчас в Google Play выпущен Gridlix:2048; Blocklix — в закрытом тестировании.",
+        aboutBody: "Vaslix Games — независимый Android-издатель, основанный в 2025 году. Мы делаем небольшие сфокусированные приложения в разных жанрах — сегодня пазлы, дальше аудио и аркады — с подходом «privacy-first»: без аккаунтов, без собственных серверов, хранящих данные пользователей, без внутренней аналитики. В Google Play выпущены две игры: Gridlix:2048 и Blocklix — пазл 8×8 с шестью уровнями сложности, 38 темами и 60 рангами, локализованный на 12 языков.",
         copyBtn: "Скопировать текст",
         copied: "Скопировано",
         assetsTitle: "Брендовые ресурсы",
@@ -2004,7 +2043,7 @@
     es: {
       meta: {
         title: "Vaslix Games — pequeños juegos para Android, hechos para durar",
-        description: "Vaslix Games es un estudio Android independiente que crea apps pequeñas y enfocadas en varios géneros — puzzle hoy, audio y arcade después. Gridlix:2048 ya disponible, Blocklix en desarrollo activo.",
+        description: "Vaslix Games es un estudio Android independiente que crea apps pequeñas y enfocadas en varios géneros — puzzle hoy, audio y arcade después. Gridlix:2048 y Blocklix ya están en Google Play.",
         ogTitle: "Vaslix Games",
         ogDesc: "Estudio Android independiente. Juegos pequeños y enfocados en varios géneros."
       },
@@ -2023,7 +2062,7 @@
       games: {
         eyebrow: "Nuestros juegos",
         title: "Lo que publicamos",
-        intro: "Estudio independiente que publica apps Android compactas en varios géneros — hoy puzzle, después audio y arcade. Gridlix:2048 está disponible; Blocklix y los títulos de audio están en desarrollo activo.",
+        intro: "Estudio independiente que publica apps Android compactas en varios géneros — hoy puzzle, después audio y arcade. Gridlix:2048 y Blocklix ya están en Google Play; los títulos de audio están en desarrollo.",
         aria: "Nuestros juegos"
       },
       card: {
@@ -2031,13 +2070,19 @@
           iconAlt: "Icono de la app Gridlix:2048",
           genre: "Puzzle", status: "Disponible", title: "Gridlix:2048",
           desc: "Un puzzle de fusión 4×4 para Android. Cuatro boosters con nombre — Deshacer, Borrar, Barajar, Aparecer — y un Continue cuando el tablero se llena. Cinco temas de color, hápticos y sonido ajustados, y un Premium opcional sin anuncios que recarga tus boosters.",
-          feat: { 1: "Android 8+", 2: "5 temas", 3: "Sonido + hápticos", 4: "Premium · sin anuncios" }
+          feat: { 1: "Android 8+", 2: "5 temas", 3: "Sonido + hápticos", 4: "Premium · sin anuncios" },
+          badge: "./badges/google-play-es.png",
+          badgeAlt: "Disponible en Google Play",
+          playAria: "Gridlix:2048 en Google Play"
         },
         blocklix: {
           iconAlt: "Icono de la app Blocklix",
-          genre: "Puzzle", status: "En desarrollo", title: "Blocklix",
-          desc: "Coloca figuras, limpia líneas y cuadrados, encadena combos con grandes multiplicadores. 25 temas desbloqueables, 10 rangos en 15 pistas de logros, un cofre diario de 7 días, boosters martillo y bomba, y Premium sin anuncios con monedas ×2.",
-          feat: { 1: "Android 8+", 2: "25 temas", 3: "10 rangos", 4: "Cofre diario", 5: "Premium · monedas ×2" }
+          genre: "Puzzle", status: "Disponible", title: "Blocklix",
+          desc: "Coloca formas en un tablero 8×8, limpia líneas y cuadrados, encadena combos para multiplicadores grandes. Seis niveles de dificultad, 38 temas, 60 rangos en 21 cadenas de logros, cuatro boosters, misiones diarias y semanales con cofre de racha, y un vestuario de cosméticos. Premium opcional sin anuncios, con estrellas ×2 y regalo diario.",
+          feat: { 1: "Android 8+", 2: "38 temas", 3: "60 rangos", 4: "6 dificultades", 5: "Premium · estrellas ×2" },
+          badge: "./badges/google-play-es.png",
+          badgeAlt: "Disponible en Google Play",
+          playAria: "Blocklix en Google Play"
         }
       },
       roadmap: {
@@ -2046,7 +2091,7 @@
         title: "Hacia dónde vamos",
         intro: "Sin promesas de fechas, pero este es el orden de trabajo. Cada cosa sale cuando está lista, no antes.",
         r1: { meta: "Publicado · 2026", title: "Gridlix:2048", desc: "Disponible en Google Play. Puzzle de fusión 4×4 con cinco temas, cuatro boosters con nombre y un Premium opcional sin anuncios." },
-        r2: { meta: "En desarrollo", title: "Blocklix", desc: "Puzzle 8×8 de colocar y limpiar. Temas, rangos, cofre diario, boosters martillo + bomba, Premium con monedas ×2. En testeo cerrado." },
+        r2: { meta: "Publicado · 2026", title: "Blocklix", desc: "Disponible en Google Play. Puzzle 8×8 de colocar y limpiar: seis niveles de dificultad, 38 temas, 60 rangos, cuatro boosters, misiones diarias y semanales, y Premium opcional sin anuncios." },
         r3: { meta: "Siguiente", title: "Primer título de audio / podcast", desc: "Una app de escucha enfocada con descargas offline, gestión de cola y el mismo enfoque sin cuenta. Catálogo sin género fijo." },
         r4: { meta: "Más adelante", title: "Prototipo de puzzle de palabras", desc: "Una idea sobre papel. Misma forma que Gridlix: pequeño, enfocado, sin cuentas, Premium opcional sin anuncios." }
       },
@@ -2062,7 +2107,7 @@
         1: { title: "Sin cuentas", desc: "Sin registro. Tu progreso vive en tu dispositivo." },
         2: { title: "Sin guardar datos de pago", desc: "Los pagos pasan por Google Play. Nunca vemos tu tarjeta." },
         3: { title: "GDPR · CCPA · COPPA", desc: "Consentimientos, opt-outs y derechos sobre los datos, alineados a los estándares." },
-        4: { title: "Premium = sin anuncios", desc: "Los suscriptores no ven ningún anuncio. El SDK de anuncios no se carga para ellos." }
+        4: { title: "Premium quita los anuncios", desc: "Banners, intersticiales y app-open se desactivan con Premium y con Quitar Anuncios. Los vídeos con recompensa siguen siendo opcionales para todos: solo se reproducen si los tocas." }
       },
       faq: {
         aria: "Preguntas frecuentes",
@@ -2071,13 +2116,13 @@
         q1: "¿Cómo cancelo mi suscripción?",
         a1: "Cancela desde <strong>Google Play → Suscripciones</strong>, o usa el botón «Gestionar» dentro de la app — enlaza a la misma página. La cancelación se aplica al final del período de facturación actual.",
         q2: "¿Qué pasa con mi progreso si desinstalo?",
-        a2: "El progreso vive en tu dispositivo — desinstalar lo borra. No subimos partidas a nuestros servidores, así que no hay copia en la nube. El estado Premium se restaura automáticamente al reinstalar y entrar con la misma cuenta de Google.",
+        a2: "El progreso vive en tu dispositivo, y el servicio de copia de seguridad del propio Android lo copia a tu cuenta de Google — así que reinstalar con la misma cuenta suele recuperarlo. No subimos partidas a ningún servidor nuestro. Blocklix además tiene un guardado en la nube opcional vía Google Play Games, en despliegue gradual. El estado Premium se restaura automáticamente al reinstalar y entrar con la misma cuenta de Google.",
         q3: "¿Por qué piden el Advertising ID?",
-        a3: "Solo en instalaciones gratuitas / no Premium, y únicamente para que las redes publicitarias limiten la frecuencia y sirvan anuncios relevantes. El Advertising ID de los suscriptores Premium no se envía a ninguna red. Detalles en la <a href=\"./privacy-policy.html\">Política de Privacidad</a>.",
+        a3: "Para que las redes publicitarias limiten la frecuencia, sirvan anuncios relevantes y atribuyan instalaciones. Con Premium o la compra de Quitar Anuncios deja de usarse para banners, intersticiales y app-open; se sigue procesando si eliges ver un vídeo con recompensa. Detalles en la <a href=\"./privacy-policy.html\">Política de Privacidad</a>.",
         q4: "¿Qué versiones de Android se soportan?",
         a4: "Android 8.0 (API 26) y superiores. Apuntamos deliberadamente a dispositivos antiguos para que los juegos sigan funcionando en teléfonos de segunda mano.",
         q5: "¿Qué idiomas soportan las apps?",
-        a5: "Inglés, ruso, español, portugués (Brasil), alemán, francés y chino simplificado. El idioma del sistema se detecta al primer arranque y se puede cambiar en los ajustes.",
+        a5: "Blocklix llega en 12 idiomas: inglés, ruso, alemán, español, francés, italiano, japonés, coreano, portugués (Brasil), turco, árabe y chino simplificado. Gridlix:2048 cubre un conjunto menor. El idioma del sistema se detecta al primer arranque y se puede cambiar en los ajustes.",
         q6: "Encontré un bug o quiero sugerir una función.",
         a6: "Escribe a <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> con una breve descripción. Las capturas y el modelo del dispositivo ayudan mucho. Leemos cada mensaje.",
         q7: "¿Habrá versión para iOS?",
@@ -2088,7 +2133,7 @@
         eyebrow: "Press kit",
         title: "Para prensa y socios",
         aboutTitle: "Sobre el estudio",
-        aboutBody: "Vaslix Games es un editor Android independiente fundado en 2025. Hacemos apps pequeñas y enfocadas en varios géneros — hoy puzzle, después audio y arcade — con un enfoque privacy-first: sin cuentas, sin servidores propios guardando datos de usuario, sin analítica casera. Actualmente publicamos Gridlix:2048 en Google Play; Blocklix está en testeo cerrado.",
+        aboutBody: "Vaslix Games es un editor Android independiente fundado en 2025. Hacemos apps pequeñas y enfocadas en varios géneros — hoy puzzle, después audio y arcade — con un enfoque privacy-first: sin cuentas, sin servidores propios guardando datos de usuario, sin analítica casera. Dos títulos están en Google Play: Gridlix:2048 y Blocklix, un puzzle 8×8 con seis niveles de dificultad, 38 temas y 60 rangos, localizado a 12 idiomas.",
         copyBtn: "Copiar texto",
         copied: "Copiado",
         assetsTitle: "Recursos de marca",
@@ -2103,7 +2148,7 @@
     de: {
       meta: {
         title: "Vaslix Games — kleine Android-Spiele, gebaut um zu bleiben",
-        description: "Vaslix Games ist ein unabhängiges Android-Studio, das kleine, fokussierte Apps in verschiedenen Genres veröffentlicht — heute Puzzle, als nächstes Audio und Arcade. Gridlix:2048 ist live, Blocklix in aktiver Entwicklung.",
+        description: "Vaslix Games ist ein unabhängiges Android-Studio, das kleine, fokussierte Apps in verschiedenen Genres veröffentlicht — heute Puzzle, als nächstes Audio und Arcade. Gridlix:2048 und Blocklix sind beide auf Google Play.",
         ogTitle: "Vaslix Games",
         ogDesc: "Unabhängiges Android-Studio. Kleine, fokussierte Spiele über Genres hinweg."
       },
@@ -2122,7 +2167,7 @@
       games: {
         eyebrow: "Unsere Spiele",
         title: "Was wir veröffentlichen",
-        intro: "Unabhängiges Studio, das kompakte Android-Apps in verschiedenen Genres veröffentlicht — heute Puzzle, als nächstes Audio und Arcade. Gridlix:2048 ist live; Blocklix und Audio-Titel sind in aktiver Entwicklung.",
+        intro: "Unabhängiges Studio, das kompakte Android-Apps in verschiedenen Genres veröffentlicht — heute Puzzle, als nächstes Audio und Arcade. Gridlix:2048 und Blocklix sind beide auf Google Play; Audio-Titel sind in Entwicklung.",
         aria: "Unsere Spiele"
       },
       card: {
@@ -2130,13 +2175,19 @@
           iconAlt: "Gridlix:2048 App-Symbol",
           genre: "Puzzle", status: "Verfügbar", title: "Gridlix:2048",
           desc: "Ein 4×4-Merge-Puzzle für Android. Vier benannte Booster — Rückgängig, Löschen, Mischen, Spawn — und ein Continue, wenn das Brett voll ist. Fünf Farbthemes, fein abgestimmte Haptik und Sound, und ein optionales werbefreies Premium, das deine Booster auffrischt.",
-          feat: { 1: "Android 8+", 2: "5 Themes", 3: "Sound + Haptik", 4: "Premium · werbefrei" }
+          feat: { 1: "Android 8+", 2: "5 Themes", 3: "Sound + Haptik", 4: "Premium · werbefrei" },
+          badge: "./badges/google-play-de.png",
+          badgeAlt: "Jetzt bei Google Play",
+          playAria: "Gridlix:2048 bei Google Play"
         },
         blocklix: {
           iconAlt: "Blocklix App-Symbol",
-          genre: "Puzzle", status: "In Entwicklung", title: "Blocklix",
-          desc: "Lege Formen ab, räume Reihen und Quadrate, verkette Combos für große Multiplikatoren. 25 freischaltbare Themes, 10 Ränge in 15 Erfolgs-Kategorien, eine 7-Tage-Tageschest, Hammer- und Bomben-Booster und werbefreies Premium mit 2× Münzen.",
-          feat: { 1: "Android 8+", 2: "25 Themes", 3: "10 Ränge", 4: "Tageschest", 5: "Premium · 2× Münzen" }
+          genre: "Puzzle", status: "Verfügbar", title: "Blocklix",
+          desc: "Setze Formen auf ein 8×8-Feld, räume Linien und Quadrate ab, kette Combos für große Multiplikatoren. Sechs Schwierigkeitsstufen, 38 Themes, 60 Ränge in 21 Erfolgsketten, vier Booster, Tages- und Wochenmissionen mit Serien-Truhe und eine Kosmetik-Garderobe. Optionales werbefreies Premium mit 2× Sternen und einem Tagesgeschenk.",
+          feat: { 1: "Android 8+", 2: "38 Themes", 3: "60 Ränge", 4: "6 Schwierigkeiten", 5: "Premium · 2× Sterne" },
+          badge: "./badges/google-play-de.png",
+          badgeAlt: "Jetzt bei Google Play",
+          playAria: "Blocklix bei Google Play"
         }
       },
       roadmap: {
@@ -2145,7 +2196,7 @@
         title: "Wohin wir gehen",
         intro: "Keine Datumsversprechen, aber das ist die Arbeitsreihenfolge. Releases kommen, wenn sie fertig sind, und nicht früher.",
         r1: { meta: "Veröffentlicht · 2026", title: "Gridlix:2048", desc: "Live auf Google Play. Ein 4×4-Merge-Puzzle mit fünf Themes, vier benannten Boostern und einem optionalen werbefreien Premium." },
-        r2: { meta: "In Entwicklung", title: "Blocklix", desc: "8×8-Drop-and-Clear-Puzzle. Themes, Ränge, Tageschest, Hammer- und Bomben-Booster, Premium mit 2× Münzen. In geschlossenem Test." },
+        r2: { meta: "Veröffentlicht · 2026", title: "Blocklix", desc: "Live auf Google Play. 8×8-Drop-and-Clear-Puzzle mit sechs Schwierigkeitsstufen, 38 Themes, 60 Rängen, vier Boostern, Tages- und Wochenmissionen und optionalem werbefreiem Premium." },
         r3: { meta: "Als Nächstes", title: "Erster Audio-/Podcast-Titel", desc: "Eine fokussierte Hör-App mit Offline-Downloads, Queue-Management und demselben Ansatz ohne Konto. Genre-unabhängiger Katalog." },
         r4: { meta: "Später", title: "Wortpuzzle-Prototyp", desc: "Eine Idee auf Papier. Gleiche Form wie Gridlix: klein, fokussiert, ohne Konten, optionales werbefreies Premium." }
       },
@@ -2161,7 +2212,7 @@
         1: { title: "Keine Konten", desc: "Keine Anmeldung. Dein Fortschritt bleibt auf deinem Gerät." },
         2: { title: "Keine Zahlungsdaten gespeichert", desc: "Zahlungen laufen über Google Play. Wir sehen deine Karte nie." },
         3: { title: "GDPR · CCPA · COPPA", desc: "Einwilligungen, Opt-outs und Datenrechte — am Standard ausgerichtet." },
-        4: { title: "Premium = werbefrei", desc: "Abonnenten sehen null Werbung. Das Ad-SDK wird für sie gar nicht erst geladen." }
+        4: { title: "Premium entfernt Werbung", desc: "Banner, Interstitials und App-Open-Anzeigen sind mit Premium und mit „Werbung entfernen“ aus. Rewarded Videos bleiben für alle freiwillig — sie laufen nur, wenn du sie antippst." }
       },
       faq: {
         aria: "Häufige Fragen",
@@ -2170,13 +2221,13 @@
         q1: "Wie kündige ich mein Abo?",
         a1: "Kündige in <strong>Google Play → Abos</strong> oder über die Schaltfläche „Verwalten\" in der App — sie verlinkt zur selben Seite. Die Kündigung greift am Ende deines aktuellen Abrechnungszeitraums.",
         q2: "Was passiert mit meinem Spielfortschritt beim Deinstallieren?",
-        a2: "Der Fortschritt liegt auf deinem Gerät — Deinstallieren löscht ihn. Wir laden Spielstände nicht auf Server hoch, es gibt also kein Cloud-Backup. Der Premium-Status wird beim Neuinstallieren mit demselben Google-Konto automatisch wiederhergestellt.",
+        a2: "Der Fortschritt liegt auf deinem Gerät, und Androids eigener Sicherungsdienst kopiert ihn in dein Google-Konto — eine Neuinstallation mit demselben Konto holt ihn also meist zurück. Auf einen Server von uns laden wir Spielstände nicht hoch. Blocklix hat zusätzlich einen optionalen Cloud-Spielstand über Google Play Games, der schrittweise aktiviert wird. Der Premium-Status wird beim Neuinstallieren mit demselben Google-Konto automatisch wiederhergestellt.",
         q3: "Warum fragt ihr nach der Advertising ID?",
-        a3: "Nur auf Free- / Nicht-Premium-Installationen und nur damit Werbenetzwerke Häufigkeit begrenzen und relevante Werbung ausspielen können. Die Advertising ID von Premium-Abonnenten wird an keine Werbenetzwerk übermittelt. Details in der <a href=\"./privacy-policy.html\">Datenschutzerklärung</a>.",
+        a3: "Damit Werbenetzwerke die Häufigkeit begrenzen, relevante Werbung ausspielen und Installationen zuordnen können. Mit Premium oder dem Kauf „Werbung entfernen“ wird sie nicht mehr für Banner, Interstitials oder App-Open-Anzeigen verwendet; sie wird weiterhin verarbeitet, wenn du dich für ein Rewarded Video entscheidest. Details in der <a href=\"./privacy-policy.html\">Datenschutzerklärung</a>.",
         q4: "Welche Android-Versionen werden unterstützt?",
         a4: "Android 8.0 (API 26) und höher. Wir zielen bewusst auch auf ältere Geräte, damit die Spiele auf gebrauchten Handys spielbar bleiben.",
         q5: "Welche Sprachen werden unterstützt?",
-        a5: "Englisch, Russisch, Spanisch, Portugiesisch (Brasilien), Deutsch, Französisch und vereinfachtes Chinesisch. Die Systemsprache wird beim ersten Start automatisch erkannt und lässt sich in den App-Einstellungen ändern.",
+        a5: "Blocklix erscheint in 12 Sprachen: Englisch, Russisch, Deutsch, Spanisch, Französisch, Italienisch, Japanisch, Koreanisch, Portugiesisch (Brasilien), Türkisch, Arabisch und vereinfachtes Chinesisch. Gridlix:2048 deckt weniger ab. Die Systemsprache wird beim ersten Start erkannt und lässt sich in den App-Einstellungen ändern.",
         q6: "Ich habe einen Bug gefunden oder einen Vorschlag.",
         a6: "Schreib an <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> mit einer kurzen Beschreibung. Screenshots und Gerätemodell helfen sehr. Wir lesen jede Nachricht.",
         q7: "Wird es jemals eine iOS-Version geben?",
@@ -2187,7 +2238,7 @@
         eyebrow: "Pressekit",
         title: "Für Presse & Partner",
         aboutTitle: "Über das Studio",
-        aboutBody: "Vaslix Games ist ein unabhängiger Android-Publisher, gegründet 2025. Wir bauen kleine, fokussierte Apps in verschiedenen Genres — heute Puzzle, als Nächstes Audio- und Arcade-Titel — mit einer Privacy-First-Haltung: keine Konten, keine eigenen Server, die Nutzerdaten speichern, keine Inhouse-Analytics. Aktuell veröffentlicht auf Google Play: Gridlix:2048; Blocklix ist in geschlossenem Test.",
+        aboutBody: "Vaslix Games ist ein unabhängiger Android-Publisher, gegründet 2025. Wir bauen kleine, fokussierte Apps in verschiedenen Genres — heute Puzzle, als Nächstes Audio- und Arcade-Titel — mit einer Privacy-First-Haltung: keine Konten, keine eigenen Server, die Nutzerdaten speichern, keine Inhouse-Analytics. Zwei Titel sind auf Google Play: Gridlix:2048 und Blocklix, ein 8×8-Blockpuzzle mit sechs Schwierigkeitsstufen, 38 Themes und 60 Rängen, lokalisiert in 12 Sprachen.",
         copyBtn: "Text kopieren",
         copied: "Kopiert",
         assetsTitle: "Brand-Assets",
@@ -2202,7 +2253,7 @@
     fr: {
       meta: {
         title: "Vaslix Games — petits jeux Android, faits pour durer",
-        description: "Vaslix Games est un studio Android indépendant qui publie des apps compactes et soignées dans plusieurs genres — puzzle aujourd'hui, audio et arcade ensuite. Gridlix:2048 est en ligne, Blocklix en développement actif.",
+        description: "Vaslix Games est un studio Android indépendant qui publie des apps compactes et soignées dans plusieurs genres — puzzle aujourd'hui, audio et arcade ensuite. Gridlix:2048 et Blocklix sont tous deux sur Google Play.",
         ogTitle: "Vaslix Games",
         ogDesc: "Studio Android indépendant. Petits jeux concentrés, tous genres."
       },
@@ -2221,7 +2272,7 @@
       games: {
         eyebrow: "Nos jeux",
         title: "Ce que nous publions",
-        intro: "Studio indépendant qui publie des apps Android compactes dans plusieurs genres — aujourd'hui le puzzle, ensuite l'audio et l'arcade. Gridlix:2048 est en ligne ; Blocklix et les titres audio sont en développement actif.",
+        intro: "Studio indépendant qui publie des apps Android compactes dans plusieurs genres — aujourd'hui le puzzle, ensuite l'audio et l'arcade. Gridlix:2048 et Blocklix sont tous deux sur Google Play ; les titres audio sont en développement.",
         aria: "Nos jeux"
       },
       card: {
@@ -2229,13 +2280,19 @@
           iconAlt: "Icône de l'app Gridlix:2048",
           genre: "Puzzle", status: "Disponible", title: "Gridlix:2048",
           desc: "Un puzzle de fusion 4×4 pour Android. Quatre boosters nommés — Annuler, Supprimer, Mélanger, Apparaître — et un Continue quand le plateau se remplit. Cinq thèmes de couleur, retours haptiques et son réglés, et un Premium optionnel sans pub qui recharge vos boosters.",
-          feat: { 1: "Android 8+", 2: "5 thèmes", 3: "Son + haptique", 4: "Premium · sans pub" }
+          feat: { 1: "Android 8+", 2: "5 thèmes", 3: "Son + haptique", 4: "Premium · sans pub" },
+          badge: "./badges/google-play-fr.png",
+          badgeAlt: "Disponible sur Google Play",
+          playAria: "Gridlix:2048 sur Google Play"
         },
         blocklix: {
           iconAlt: "Icône de l'app Blocklix",
-          genre: "Puzzle", status: "En développement", title: "Blocklix",
-          desc: "Posez des formes, videz lignes et carrés, enchaînez les combos pour de gros multiplicateurs. 25 thèmes à débloquer, 10 rangs sur 15 pistes de succès, un coffre quotidien de 7 jours, des boosters marteau et bombe, et un Premium sans pub avec pièces ×2.",
-          feat: { 1: "Android 8+", 2: "25 thèmes", 3: "10 rangs", 4: "Coffre quotidien", 5: "Premium · pièces ×2" }
+          genre: "Puzzle", status: "Disponible", title: "Blocklix",
+          desc: "Posez des formes sur un plateau 8×8, nettoyez lignes et carrés, enchaînez les combos pour de gros multiplicateurs. Six niveaux de difficulté, 38 thèmes, 60 rangs sur 21 chaînes de succès, quatre boosters, missions quotidiennes et hebdomadaires avec coffre de série, et un vestiaire de cosmétiques. Premium optionnel sans pub, étoiles ×2 et cadeau quotidien.",
+          feat: { 1: "Android 8+", 2: "38 thèmes", 3: "60 rangs", 4: "6 difficultés", 5: "Premium · étoiles ×2" },
+          badge: "./badges/google-play-fr.png",
+          badgeAlt: "Disponible sur Google Play",
+          playAria: "Blocklix sur Google Play"
         }
       },
       roadmap: {
@@ -2244,7 +2301,7 @@
         title: "Où nous allons",
         intro: "Pas de promesses sur les dates, mais voici l'ordre de travail. Une sortie arrive quand elle est prête, pas avant.",
         r1: { meta: "Publié · 2026", title: "Gridlix:2048", desc: "Disponible sur Google Play. Un puzzle de fusion 4×4 avec cinq thèmes, quatre boosters nommés et un Premium sans pub en option." },
-        r2: { meta: "En développement", title: "Blocklix", desc: "Puzzle 8×8 « pose et nettoie ». Thèmes, rangs, coffre quotidien, boosters marteau + bombe, Premium avec pièces ×2. En test fermé." },
+        r2: { meta: "Sorti · 2026", title: "Blocklix", desc: "Disponible sur Google Play. Puzzle 8×8 « pose et nettoie » : six niveaux de difficulté, 38 thèmes, 60 rangs, quatre boosters, missions quotidiennes et hebdomadaires, et Premium optionnel sans pub." },
         r3: { meta: "Prochainement", title: "Premier titre audio / podcast", desc: "Une app d'écoute concentrée avec téléchargements hors-ligne, gestion de file et la même approche sans compte. Catalogue ouvert à tous genres." },
         r4: { meta: "Plus tard", title: "Prototype de puzzle de mots", desc: "Une idée sur papier. Même forme que Gridlix : petit, concentré, sans compte, Premium sans pub en option." }
       },
@@ -2260,7 +2317,7 @@
         1: { title: "Pas de compte", desc: "Aucune inscription. Votre progression reste sur l'appareil." },
         2: { title: "Aucune donnée de paiement stockée", desc: "Les paiements passent par Google Play. Nous ne voyons jamais votre carte." },
         3: { title: "GDPR · CCPA · COPPA", desc: "Consentements, opt-outs et droits sur les données — alignés aux standards." },
-        4: { title: "Premium = sans pub", desc: "Les abonnés ne voient aucune pub. Le SDK ne se charge même pas pour eux." }
+        4: { title: "Premium enlève les pubs", desc: "Bannières, interstitiels et pubs à l'ouverture sont coupés avec Premium et l'achat Sans pub. Les vidéos récompensées restent facultatives pour tous : elles ne démarrent que si vous les lancez." }
       },
       faq: {
         aria: "Questions fréquentes",
@@ -2269,13 +2326,13 @@
         q1: "Comment résilier mon abonnement ?",
         a1: "Résiliez depuis <strong>Google Play → Abonnements</strong>, ou via le bouton « Gérer » dans l'app — il pointe vers la même page. La résiliation prend effet à la fin de votre période de facturation en cours.",
         q2: "Que devient ma progression si je désinstalle ?",
-        a2: "La progression vit sur votre appareil — la désinstallation l'efface. Nous n'envoyons pas les sauvegardes sur des serveurs, il n'y a donc pas de sauvegarde cloud. Le statut Premium est restauré automatiquement à la réinstallation avec le même compte Google.",
+        a2: "La progression vit sur votre appareil, et le service de sauvegarde d'Android la copie dans votre compte Google — réinstaller avec le même compte la récupère donc généralement. Nous n'envoyons pas les sauvegardes sur un serveur à nous. Blocklix propose en plus une sauvegarde cloud facultative via Google Play Games, déployée progressivement. Le statut Premium est restauré automatiquement à la réinstallation avec le même compte Google.",
         q3: "Pourquoi demander l'Advertising ID ?",
-        a3: "Uniquement sur les installations gratuites / non-Premium, et seulement pour que les régies limitent la fréquence et diffusent des pubs pertinentes. L'Advertising ID des abonnés Premium n'est envoyé à aucune régie. Détails dans la <a href=\"./privacy-policy.html\">Politique de confidentialité</a>.",
+        a3: "Pour que les régies limitent la fréquence, diffusent des pubs pertinentes et attribuent les installations. Avec Premium ou l'achat Sans pub, il n'est plus utilisé pour les bannières, interstitiels ou pubs à l'ouverture ; il reste traité si vous choisissez de regarder une vidéo récompensée. Détails dans la <a href=\"./privacy-policy.html\">Politique de confidentialité</a>.",
         q4: "Quelles versions d'Android sont prises en charge ?",
         a4: "Android 8.0 (API 26) et plus. Nous visons délibérément les appareils plus anciens pour que les jeux restent jouables sur les téléphones de seconde main.",
         q5: "Quelles langues sont prises en charge ?",
-        a5: "Anglais, russe, espagnol, portugais (Brésil), allemand, français et chinois simplifié. La langue système est détectée au premier lancement et modifiable dans les réglages de l'app.",
+        a5: "Blocklix sort en 12 langues : anglais, russe, allemand, espagnol, français, italien, japonais, coréen, portugais (Brésil), turc, arabe et chinois simplifié. Gridlix:2048 en couvre moins. La langue système est détectée au premier lancement et modifiable dans les réglages de l'app.",
         q6: "J'ai trouvé un bug ou j'ai une suggestion.",
         a6: "Écrivez à <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> avec une brève description. Les captures et le modèle d'appareil aident beaucoup. Nous lisons chaque message.",
         q7: "Y aura-t-il une version iOS ?",
@@ -2286,7 +2343,7 @@
         eyebrow: "Kit presse",
         title: "Pour la presse et les partenaires",
         aboutTitle: "À propos du studio",
-        aboutBody: "Vaslix Games est un éditeur Android indépendant fondé en 2025. Nous faisons de petites apps concentrées dans plusieurs genres — aujourd'hui le puzzle, ensuite l'audio et l'arcade — avec une approche privacy-first : pas de comptes, pas de serveurs maison stockant des données utilisateurs, pas d'analytics maison. Actuellement disponible sur Google Play : Gridlix:2048 ; Blocklix est en test fermé.",
+        aboutBody: "Vaslix Games est un éditeur Android indépendant fondé en 2025. Nous faisons de petites apps concentrées dans plusieurs genres — aujourd'hui le puzzle, ensuite l'audio et l'arcade — avec une approche privacy-first : pas de comptes, pas de serveurs maison stockant des données utilisateurs, pas d'analytics maison. Deux titres sont sur Google Play : Gridlix:2048 et Blocklix, un puzzle de blocs 8×8 avec six niveaux de difficulté, 38 thèmes et 60 rangs, localisé en 12 langues.",
         copyBtn: "Copier le texte",
         copied: "Copié",
         assetsTitle: "Ressources de marque",
@@ -2301,7 +2358,7 @@
     'pt-BR': {
       meta: {
         title: "Vaslix Games — pequenos jogos Android, feitos para durar",
-        description: "Vaslix Games é um estúdio Android independente que publica apps compactos e cuidadosos em vários gêneros — puzzle hoje, áudio e arcade depois. Gridlix:2048 já está no ar, Blocklix em desenvolvimento ativo.",
+        description: "Vaslix Games é um estúdio Android independente que publica apps compactos e cuidadosos em vários gêneros — puzzle hoje, áudio e arcade depois. Gridlix:2048 e Blocklix já estão na Google Play.",
         ogTitle: "Vaslix Games",
         ogDesc: "Estúdio Android independente. Pequenos jogos focados, em vários gêneros."
       },
@@ -2320,7 +2377,7 @@
       games: {
         eyebrow: "Nossos jogos",
         title: "O que publicamos",
-        intro: "Estúdio independente publicando apps Android compactos em vários gêneros — hoje puzzle, depois áudio e arcade. Gridlix:2048 está no ar; Blocklix e títulos de áudio estão em desenvolvimento ativo.",
+        intro: "Estúdio independente publicando apps Android compactos em vários gêneros — hoje puzzle, depois áudio e arcade. Gridlix:2048 e Blocklix já estão na Google Play; títulos de áudio estão em desenvolvimento.",
         aria: "Nossos jogos"
       },
       card: {
@@ -2328,13 +2385,19 @@
           iconAlt: "Ícone do app Gridlix:2048",
           genre: "Puzzle", status: "Disponível", title: "Gridlix:2048",
           desc: "Um puzzle de fusão 4×4 para Android. Quatro boosters nomeados — Desfazer, Apagar, Embaralhar, Surgir — e um Continue quando o tabuleiro enche. Cinco temas de cor, hápticos e som ajustados, e um Premium opcional sem anúncios que recarrega seus boosters.",
-          feat: { 1: "Android 8+", 2: "5 temas", 3: "Som + hápticos", 4: "Premium · sem anúncios" }
+          feat: { 1: "Android 8+", 2: "5 temas", 3: "Som + hápticos", 4: "Premium · sem anúncios" },
+          badge: "./badges/google-play-pt-BR.png",
+          badgeAlt: "Disponível no Google Play",
+          playAria: "Gridlix:2048 no Google Play"
         },
         blocklix: {
           iconAlt: "Ícone do app Blocklix",
-          genre: "Puzzle", status: "Em desenvolvimento", title: "Blocklix",
-          desc: "Encaixe formas, limpe linhas e quadrados, encadeie combos para grandes multiplicadores. 25 temas para desbloquear, 10 patentes em 15 trilhas de conquistas, um baú diário de 7 dias, boosters martelo e bomba, e Premium sem anúncios com moedas ×2.",
-          feat: { 1: "Android 8+", 2: "25 temas", 3: "10 patentes", 4: "Baú diário", 5: "Premium · moedas ×2" }
+          genre: "Puzzle", status: "Disponível", title: "Blocklix",
+          desc: "Coloque formas num tabuleiro 8×8, limpe linhas e quadrados, encadeie combos para multiplicadores altos. Seis níveis de dificuldade, 38 temas, 60 patentes em 21 cadeias de conquistas, quatro boosters, missões diárias e semanais com baú de sequência, e um guarda-roupa de cosméticos. Premium opcional sem anúncios, com estrelas ×2 e presente diário.",
+          feat: { 1: "Android 8+", 2: "38 temas", 3: "60 patentes", 4: "6 dificuldades", 5: "Premium · estrelas ×2" },
+          badge: "./badges/google-play-pt-BR.png",
+          badgeAlt: "Disponível no Google Play",
+          playAria: "Blocklix no Google Play"
         }
       },
       roadmap: {
@@ -2343,7 +2406,7 @@
         title: "Para onde vamos",
         intro: "Sem promessa de datas, mas esta é a ordem do trabalho. Cada coisa sai quando está pronta, não antes.",
         r1: { meta: "Publicado · 2026", title: "Gridlix:2048", desc: "Ao vivo no Google Play. Um puzzle de fusão 4×4 com cinco temas, quatro boosters nomeados e um Premium opcional sem anúncios." },
-        r2: { meta: "Em desenvolvimento", title: "Blocklix", desc: "Puzzle 8×8 de encaixar e limpar. Temas, patentes, baú diário, boosters martelo + bomba, Premium com moedas ×2. Em teste fechado." },
+        r2: { meta: "Lançado · 2026", title: "Blocklix", desc: "No ar na Google Play. Puzzle 8×8 de encaixar e limpar: seis níveis de dificuldade, 38 temas, 60 patentes, quatro boosters, missões diárias e semanais e Premium opcional sem anúncios." },
         r3: { meta: "A seguir", title: "Primeiro título de áudio / podcast", desc: "Um app de escuta focado com downloads offline, gerenciamento de fila e a mesma abordagem sem conta. Catálogo aberto a qualquer gênero." },
         r4: { meta: "Mais adiante", title: "Protótipo de puzzle de palavras", desc: "Ideia no papel. Mesma forma do Gridlix: pequeno, focado, sem contas, Premium opcional sem anúncios." }
       },
@@ -2359,7 +2422,7 @@
         1: { title: "Sem contas", desc: "Sem cadastro. Seu progresso fica no seu dispositivo." },
         2: { title: "Sem dados de pagamento", desc: "Pagamentos passam pelo Google Play. Nunca vemos seu cartão." },
         3: { title: "GDPR · CCPA · COPPA", desc: "Consentimentos, opt-outs e direitos sobre os dados — alinhados aos padrões." },
-        4: { title: "Premium = sem anúncios", desc: "Assinantes não veem nenhum anúncio. O SDK de anúncios nem carrega para eles." }
+        4: { title: "Premium tira os anúncios", desc: "Banners, intersticiais e app-open desligam com Premium e com Remover Anúncios. Vídeos recompensados continuam opcionais para todos — só tocam quando você toca neles." }
       },
       faq: {
         aria: "Perguntas frequentes",
@@ -2368,13 +2431,13 @@
         q1: "Como cancelo minha assinatura?",
         a1: "Cancele em <strong>Google Play → Assinaturas</strong> ou pelo botão «Gerenciar» dentro do app — leva à mesma página. O cancelamento entra em vigor ao final do período de cobrança atual.",
         q2: "O que acontece com meu progresso se eu desinstalar?",
-        a2: "O progresso fica no seu aparelho — desinstalar apaga. Não enviamos saves para nossos servidores, então não há backup na nuvem. O status Premium é restaurado automaticamente ao reinstalar e entrar com a mesma conta Google.",
+        a2: "O progresso fica no seu aparelho, e o serviço de backup do próprio Android o copia para a sua conta Google — então reinstalar com a mesma conta normalmente traz tudo de volta. Não enviamos saves para nenhum servidor nosso. O Blocklix ainda tem um save na nuvem opcional via Google Play Games, sendo liberado gradualmente. O status Premium é restaurado automaticamente ao reinstalar e entrar com a mesma conta Google.",
         q3: "Por que vocês pedem o Advertising ID?",
-        a3: "Só em instalações gratuitas / não Premium, e apenas para que as redes de anúncios limitem a frequência e exibam anúncios relevantes. O Advertising ID de assinantes Premium não é enviado a nenhuma rede. Detalhes na <a href=\"./privacy-policy.html\">Política de Privacidade</a>.",
+        a3: "Para que as redes de anúncios limitem a frequência, exibam anúncios relevantes e atribuam instalações. Com Premium ou a compra Remover Anúncios ele deixa de ser usado para banners, intersticiais e app-open; ainda é processado se você escolher assistir a um vídeo recompensado. Detalhes na <a href=\"./privacy-policy.html\">Política de Privacidade</a>.",
         q4: "Quais versões do Android são suportadas?",
         a4: "Android 8.0 (API 26) e superior. Miramos aparelhos mais antigos de propósito, para que os jogos continuem jogáveis em celulares de segunda mão.",
         q5: "Quais idiomas são suportados?",
-        a5: "Inglês, russo, espanhol, português (Brasil), alemão, francês e chinês simplificado. O idioma do sistema é detectado no primeiro arranque e pode ser trocado nas configurações.",
+        a5: "O Blocklix sai em 12 idiomas: inglês, russo, alemão, espanhol, francês, italiano, japonês, coreano, português (Brasil), turco, árabe e chinês simplificado. O Gridlix:2048 cobre um conjunto menor. O idioma do sistema é detectado no primeiro arranque e pode ser trocado nas configurações.",
         q6: "Achei um bug ou quero sugerir um recurso.",
         a6: "Escreva para <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> com uma descrição curta. Capturas e modelo do aparelho ajudam muito. Lemos cada mensagem.",
         q7: "Haverá versão para iOS?",
@@ -2385,7 +2448,7 @@
         eyebrow: "Press kit",
         title: "Para imprensa e parceiros",
         aboutTitle: "Sobre o estúdio",
-        aboutBody: "Vaslix Games é um publisher Android independente fundado em 2025. Fazemos apps pequenos e focados em vários gêneros — hoje puzzle, depois áudio e arcade — com postura privacy-first: sem contas, sem servidores próprios guardando dados de usuário, sem analytics interno. Atualmente publicado no Google Play: Gridlix:2048; Blocklix em teste fechado.",
+        aboutBody: "Vaslix Games é um publisher Android independente fundado em 2025. Fazemos apps pequenos e focados em vários gêneros — hoje puzzle, depois áudio e arcade — com postura privacy-first: sem contas, sem servidores próprios guardando dados de usuário, sem analytics interno. Dois títulos estão na Google Play: Gridlix:2048 e Blocklix, um puzzle de blocos 8×8 com seis níveis de dificuldade, 38 temas e 60 patentes, localizado em 12 idiomas.",
         copyBtn: "Copiar texto",
         copied: "Copiado",
         assetsTitle: "Recursos de marca",
@@ -2400,7 +2463,7 @@
     zh: {
       meta: {
         title: "Vaslix Games — 经得起时间的 Android 小游戏",
-        description: "Vaslix Games 是一家独立 Android 工作室，专注开发紧凑、用心的应用，跨越多种类型——今日 Puzzle，未来音频与街机。Gridlix:2048 已上线，Blocklix 正在积极开发。",
+        description: "Vaslix Games 是一家独立 Android 工作室，专注开发紧凑、用心的应用，跨越多种类型——今日 Puzzle，未来音频与街机。Gridlix:2048 与 Blocklix 均已在 Google Play 上线。",
         ogTitle: "Vaslix Games",
         ogDesc: "独立 Android 工作室。小巧、专注的游戏，跨越多种类型。"
       },
@@ -2419,7 +2482,7 @@
       games: {
         eyebrow: "我们的游戏",
         title: "我们发布的作品",
-        intro: "独立工作室，发布跨多种类型的紧凑 Android 应用——当下是 Puzzle，接下来是音频与街机。Gridlix:2048 已上线；Blocklix 与音频作品正在积极开发中。",
+        intro: "独立工作室，发布跨多种类型的紧凑 Android 应用——当下是 Puzzle，接下来是音频与街机。Gridlix:2048 与 Blocklix 均已在 Google Play 上线；音频作品正在开发中。",
         aria: "我们的游戏"
       },
       card: {
@@ -2427,13 +2490,19 @@
           iconAlt: "Gridlix:2048 应用图标",
           genre: "益智", status: "已上线", title: "Gridlix:2048",
           desc: "Android 上的 4×4 合并 Puzzle。四个具名加成——撤销、删除、洗牌、生成——以及棋盘填满时的 Continue。五种配色主题，精心调校的振动与声音，可选无广告 Premium，并会刷新你的加成。",
-          feat: { 1: "Android 8+", 2: "5 种主题", 3: "声音 + 振动", 4: "Premium · 无广告" }
+          feat: { 1: "Android 8+", 2: "5 种主题", 3: "声音 + 振动", 4: "Premium · 无广告" },
+          badge: "./badges/google-play-zh.png",
+          badgeAlt: "现已上架 Google Play",
+          playAria: "在 Google Play 上获取 Gridlix:2048"
         },
         blocklix: {
           iconAlt: "Blocklix 应用图标",
-          genre: "益智", status: "开发中", title: "Blocklix",
-          desc: "放下方块，消除横竖线与方阵，连击拿大倍率。25 种可解锁主题、15 条成就线上的 10 个段位、为期 7 天的每日宝箱、锤子与炸弹加成，以及双倍金币的无广告 Premium。",
-          feat: { 1: "Android 8+", 2: "25 种主题", 3: "10 个段位", 4: "每日宝箱", 5: "Premium · 双倍金币" }
+          genre: "益智", status: "已上线", title: "Blocklix",
+          desc: "在 8×8 棋盘上放置方块，消除整行整列，连击可获得高倍数。六个难度等级、38 种主题、21 条成就链中的 60 个段位、四种道具、带连续签到宝箱的每日与每周任务，以及一套外观衣橱。可选的无广告 Premium，双倍星星与每日礼物。",
+          feat: { 1: "Android 8+", 2: "38 种主题", 3: "60 个段位", 4: "6 个难度", 5: "Premium · 双倍星星" },
+          badge: "./badges/google-play-zh.png",
+          badgeAlt: "现已上架 Google Play",
+          playAria: "在 Google Play 上获取 Blocklix"
         }
       },
       roadmap: {
@@ -2442,7 +2511,7 @@
         title: "我们的方向",
         intro: "不承诺日期，但工作顺序如下。准备好了才发布，绝不提前。",
         r1: { meta: "已发布 · 2026", title: "Gridlix:2048", desc: "已在 Google Play 上线。4×4 合并拼图，五种主题、四个具名加成，可选无广告 Premium。" },
-        r2: { meta: "开发中", title: "Blocklix", desc: "8×8 放置消除拼图。主题、段位、每日宝箱、锤子与炸弹加成，双倍金币的 Premium。封闭测试中。" },
+        r2: { meta: "已发布 · 2026", title: "Blocklix", desc: "已在 Google Play 上线。8×8 放置消除拼图：六个难度等级、38 种主题、60 个段位、四种道具、每日与每周任务，以及可选的无广告 Premium。" },
         r3: { meta: "下一步", title: "首个音频 / 播客作品", desc: "一款专注的播放应用，支持离线下载、队列管理，沿用无账号的方式。内容类型不限。" },
         r4: { meta: "稍后", title: "文字拼图原型", desc: "目前只是纸上构想。形式与 Gridlix 一致：小巧、专注、无账号、可选无广告 Premium。" }
       },
@@ -2458,7 +2527,7 @@
         1: { title: "无需账号", desc: "不需要注册。你的进度只留在设备上。" },
         2: { title: "不存付款数据", desc: "全部付款走 Google Play，我们看不到你的银行卡。" },
         3: { title: "GDPR · CCPA · COPPA", desc: "授权、退出与数据权利，按主流标准对齐。" },
-        4: { title: "Premium = 无广告", desc: "订阅用户看不到任何广告，广告 SDK 不会为他们加载任何内容。" }
+        4: { title: "Premium 去除广告", desc: "开通 Premium 或购买「去广告」后，横幅、插屏与冷启动广告都会关闭。激励视频对所有人都是自愿的——只有你主动点击才会播放。" }
       },
       faq: {
         aria: "常见问题",
@@ -2467,13 +2536,13 @@
         q1: "如何取消订阅？",
         a1: "在 <strong>Google Play → 订阅</strong> 中取消，或使用应用内的「管理」按钮——它会跳转到同一页面。取消会在当前计费周期结束时生效。",
         q2: "卸载应用后游戏进度怎么办？",
-        a2: "进度只保存在你的设备上——卸载就会清除。我们不会把存档上传到我们的服务器，因此没有云端备份。重新安装并使用同一个 Google 账号登录后，Premium 状态会自动恢复。",
+        a2: "进度保存在你的设备上，Android 自带的备份服务会把它复制到你的 Google 账号——所以用同一账号重新安装通常能找回。我们不会把存档上传到我们自己的服务器。Blocklix 另外提供基于 Google Play Games 的可选云存档，正在逐步开放。重新安装并使用同一 Google 账号登录后，Premium 状态会自动恢复。",
         q3: "为什么要读取广告 ID？",
-        a3: "仅在免费 / 非 Premium 安装中读取，且只用于让广告网络做频次限制并投放更相关的广告。Premium 订阅用户的广告 ID 不会发送给任何广告网络。详情见<a href=\"./privacy-policy.html\">隐私政策</a>。",
+        a3: "用于让广告网络做频次限制、投放更相关的广告并归因安装。开通 Premium 或购买「去广告」后，它不再用于横幅、插屏与冷启动广告；如果你主动选择观看激励视频，它仍会被处理。详情见<a href=\"./privacy-policy.html\">隐私政策</a>。",
         q4: "支持哪些 Android 版本？",
         a4: "Android 8.0（API 26）及以上。我们刻意兼容更老的设备，让游戏在二手手机上也能玩。",
         q5: "应用支持哪些语言？",
-        a5: "英语、俄语、西班牙语、葡萄牙语（巴西）、德语、法语和简体中文。首次启动时自动识别系统语言，也可以在应用设置中切换。",
+        a5: "Blocklix 支持 12 种语言：英语、俄语、德语、西班牙语、法语、意大利语、日语、韩语、葡萄牙语（巴西）、土耳其语、阿拉伯语和简体中文。Gridlix:2048 覆盖的语言较少。首次启动时自动识别系统语言，也可以在应用设置中切换。",
         q6: "发现了 bug 或想提建议。",
         a6: "请写信到 <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a>，附上简短描述。截图和设备型号会很有帮助。我们会阅读每一条消息。",
         q7: "会有 iOS 版本吗？",
@@ -2484,7 +2553,7 @@
         eyebrow: "媒体资料",
         title: "面向媒体与合作方",
         aboutTitle: "关于工作室",
-        aboutBody: "Vaslix Games 是一家成立于 2025 年的独立 Android 发行工作室。我们做跨类型的小型应用——当下是拼图，下一步是音频与街机——坚持隐私优先：无需账号、没有我们自己的服务器存储用户数据、没有内部分析。当前 Google Play 上已发布 Gridlix:2048；Blocklix 正在封闭测试。",
+        aboutBody: "Vaslix Games 是一家成立于 2025 年的独立 Android 发行工作室。我们做跨类型的小型应用——当下是拼图，下一步是音频与街机——坚持隐私优先：无需账号、没有我们自己的服务器存储用户数据、没有内部分析。Google Play 上已发布两款作品：Gridlix:2048 与 Blocklix——一款 8×8 方块拼图，含六个难度等级、38 种主题与 60 个段位，已本地化为 12 种语言。",
         copyBtn: "复制简介",
         copied: "已复制",
         assetsTitle: "品牌素材",
