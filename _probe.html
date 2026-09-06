@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=d75e1d28">
+<link rel="stylesheet" href="assets/site.css?v=b6467812">
 <script>/* theme and language before first paint, so nothing flashes */
 document.documentElement.classList.add('js');
 (function(){try{var t=localStorage.getItem('vaslix.theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;
@@ -615,8 +615,41 @@ var l=localStorage.getItem('vaslix.lang');if(l)document.documentElement.lang=l;}
       <span class="foot-note" data-i18n="footer.builtWith">Hand-written HTML. No trackers on this site.</span>
     </div>
   </footer>
-<script src="assets/i18n.js?v=d75e1d28"></script>
-<script src="assets/game-data.js?v=d75e1d28"></script>
-<script src="assets/site.js?v=d75e1d28" defer></script>
-</body>
+<script src="assets/i18n.js?v=b6467812"></script>
+<script src="assets/game-data.js?v=b6467812"></script>
+<script src="assets/site.js?v=b6467812" defer></script>
+<script>
+(function(){
+  var log = {env:{reduced: matchMedia('(prefers-reduced-motion: reduce)').matches, io: 'IntersectionObserver' in window, w: innerWidth, h: innerHeight}};
+  function watch(el, name){
+    var L = log[name] = {clears:0, rowBeams:0, colBeams:0, lands:0, flat:0, gloss:0, delays:[], blocks:0};
+    new MutationObserver(function(muts){
+      muts.forEach(function(m){
+        var t = m.target;
+        if (t.classList && t.classList.contains('is-clearing')) {
+          L.clears++;
+          var d = parseInt(t.style.animationDelay) || 0;
+          if (L.delays.indexOf(d) < 0) L.delays.push(d);
+          if (getComputedStyle(t).backgroundImage === 'none') L.flat++; else L.gloss++;
+        }
+        if (t.classList && t.classList.contains('is-landing')) L.lands++;
+        m.addedNodes && Array.prototype.forEach.call(m.addedNodes, function(nn){
+          if (!nn.classList) return;
+          if (nn.classList.contains('bx-beam-row')) L.rowBeams++;
+          if (nn.classList.contains('bx-beam-col')) L.colBeams++;
+        });
+      });
+    }).observe(el, {subtree:true, attributes:true, attributeFilter:['class'], childList:true});
+    setTimeout(function(){ L.blocks = el.querySelectorAll('.blk').length; }, 9500);
+  }
+  watch(document.querySelector('.board-hero'), 'hero');
+  document.querySelectorAll('[data-demo]').forEach(function(el){ watch(el, el.dataset.demo); });
+  setTimeout(function(){
+    Object.keys(log).forEach(function(k){ if (log[k].delays) log[k].delays.sort(function(a,b){return a-b;}); });
+    var p=document.createElement('pre'); p.id='probe';
+    p.textContent = JSON.stringify(log);
+    document.body.appendChild(p);
+  }, 10000);
+})();
+</script></body>
 </html>

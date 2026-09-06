@@ -114,10 +114,16 @@ h1, h2, h3 { font-family: var(--font-d); letter-spacing: -.03em; text-wrap: bala
 }
 .nav {
   position: sticky; top: 0; z-index: 50; height: var(--nav-h);
+  transition: box-shadow 260ms var(--ease-out), background 260ms var(--ease-out);
   backdrop-filter: blur(14px) saturate(1.4); -webkit-backdrop-filter: blur(14px) saturate(1.4);
   background: color-mix(in srgb, var(--bg) 78%, transparent);
   border-bottom: 1px solid var(--bd);
 }
+body.scrolled .nav {
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  box-shadow: 0 1px 0 var(--bd), 0 10px 30px rgba(23,27,48,.06);
+}
+:root[data-theme="dark"] body.scrolled .nav { box-shadow: 0 1px 0 var(--bd), 0 12px 34px rgba(0,0,0,.4); }
 .nav-in { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); height: 100%; display: flex; align-items: center; gap: 18px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; font: 800 15px/1 var(--font-d); letter-spacing: -.02em; view-transition-name: brand; }
 /* The studio mark: one file behind every placement — nav, footer, favicon,
@@ -192,7 +198,23 @@ h1, h2, h3 { font-family: var(--font-d); letter-spacing: -.03em; text-wrap: bala
 .mobile-menu a { padding: 12px 10px; border-radius: 10px; font-weight: 700; }
 .mobile-menu a:hover, .mobile-menu a[aria-current="page"] { background: var(--sur-2); }
 
-::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+/* Navigation: the outgoing page settles a little and fades, the incoming one
+   rises into place. Short enough that it never stands between a reader and
+   the thing they clicked. */
+::view-transition-old(root), ::view-transition-new(root) { mix-blend-mode: normal; }
+::view-transition-old(root) { animation: vt-page-out 200ms var(--ease-out) both; }
+::view-transition-new(root) { animation: vt-page-in 340ms var(--ease-out) both; }
+@keyframes vt-page-out { to { opacity: 0; transform: translateY(-8px) scale(.994); } }
+@keyframes vt-page-in { from { opacity: 0; transform: translateY(14px) scale(.994); } }
+
+/* Anything named carries over: the mark in the header, and — the good one —
+   a game's icon and title, which fly out of their panel on the shelf and land
+   as the heading of that game's page. */
+::view-transition-group(*) { animation-duration: 420ms; animation-timing-function: var(--ease-spring); }
+::view-transition-group(brand) { animation-duration: 320ms; }
+
+/* The theme flip is a different animal: a circle opening from the button. */
+.vt-theme::view-transition-old(root), .vt-theme::view-transition-new(root) { animation: none; }
 .vt-theme::view-transition-new(root) { clip-path: circle(0 at var(--reveal-x) var(--reveal-y)); animation: vt-reveal 520ms var(--ease-out) forwards; }
 @keyframes vt-reveal { to { clip-path: circle(var(--reveal-r) at var(--reveal-x) var(--reveal-y)); } }
 body.theme-flipping * { transition: background-color 200ms, color 200ms, border-color 200ms !important; }
@@ -208,6 +230,17 @@ body.theme-flipping * { transition: background-color 200ms, color 200ms, border-
   transform: translate(var(--mx, 0), var(--my, 0));
   transition: transform var(--press), box-shadow var(--press);
 }
+.btn { position: relative; overflow: hidden; isolation: isolate; }
+/* A highlight that crosses the face on hover — the button reads as a surface
+   with a light on it rather than a rectangle that changes colour. */
+.btn::after {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(105deg, transparent 36%, rgba(255,255,255,.55) 50%, transparent 64%);
+  transform: translateX(-120%);
+}
+.btn:hover::after { animation: btn-sheen 720ms var(--ease-out); }
+@keyframes btn-sheen { to { transform: translateX(120%); } }
+.btn.ghost::after { background: linear-gradient(105deg, transparent 36%, color-mix(in srgb, var(--acc) 22%, transparent) 50%, transparent 64%); }
 .btn:hover { transform: translate(var(--mx, 0), calc(var(--my, 0) + 1px)); box-shadow: 0 5px 0 var(--edge), 0 14px 26px rgba(23,27,48,.16); }
 .btn:active { transform: translate(var(--mx, 0), calc(var(--my, 0) + 5px)); box-shadow: 0 1px 0 var(--edge), 0 6px 12px rgba(23,27,48,.14); }
 .btn.ghost { --face: var(--sur); --ink: var(--tx); --edge: var(--bd-2); border: 1px solid var(--bd); box-shadow: 0 5px 0 var(--edge), 0 10px 24px rgba(23,27,48,.08); }
@@ -303,16 +336,29 @@ body.theme-flipping * { transition: background-color 200ms, color 200ms, border-
 .rail::-webkit-scrollbar { display: none; }
 .rail.dragging { cursor: grabbing; scroll-snap-type: none; }
 .panel {
+  --lift: 0px; --rx: 0deg; --ry: 0deg;
   position: relative; flex: 0 0 min(82vw, 400px); scroll-snap-align: start; isolation: isolate;
   border: 1px solid var(--bd); border-radius: var(--r-l); background: var(--sur);
   box-shadow: var(--sh-1); overflow: hidden;
+  transform: perspective(900px) translateY(var(--lift)) rotateX(var(--rx)) rotateY(var(--ry));
   transition: transform 320ms var(--ease-out), box-shadow 320ms var(--ease-out), border-color 320ms;
 }
+/* While the pointer is on the card the tilt tracks it directly; a transition
+   here would make the card lag behind the hand, which reads as cheap. */
+.panel.is-tilting { transition: box-shadow 320ms var(--ease-out), border-color 320ms; }
+/* A soft light that follows the pointer across the card. */
+.panel::after {
+  content: ""; position: absolute; inset: 0; z-index: 3; pointer-events: none;
+  border-radius: inherit; opacity: 0; transition: opacity 300ms var(--ease-out);
+  background: radial-gradient(420px circle at var(--px, 50%) var(--py, 0%),
+              color-mix(in srgb, var(--acc) 26%, transparent), transparent 62%);
+}
+.panel:hover::after { opacity: 1; }
 .panel::before {
   content: ""; position: absolute; inset: 0; z-index: 0;
   background: linear-gradient(168deg, color-mix(in srgb, var(--acc) 20%, transparent) 0%, transparent 58%);
 }
-.panel:hover { transform: translateY(-6px); box-shadow: var(--sh-2); border-color: color-mix(in srgb, var(--acc) 45%, var(--bd)); }
+.panel:hover { --lift: -6px; box-shadow: var(--sh-2); border-color: color-mix(in srgb, var(--acc) 45%, var(--bd)); }
 .panel:focus-within { border-color: color-mix(in srgb, var(--acc) 60%, var(--bd)); }
 .panel-art { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
 .panel-in { position: relative; z-index: 1; padding: 22px; display: flex; flex-direction: column; gap: 14px; min-height: 520px; }
@@ -402,25 +448,195 @@ body.theme-flipping * { transition: background-color 200ms, color 200ms, border-
 :root[data-theme="dark"] { --mb: #242A3D; --mb-d: #1A1F2E; --mb-l: #303751; }
 
 .board {
-  --n: 8; display: grid; grid-template-columns: repeat(var(--n), 1fr); gap: 4px; padding: 10px;
+  --n: 8; --bg: 4px; --pad: 10px;
+  display: grid; grid-template-columns: repeat(var(--n), 1fr); gap: var(--bg); padding: var(--pad);
   border-radius: var(--r-m); aspect-ratio: 1 / 1;
   background: linear-gradient(180deg, var(--sky-1), var(--sky-2));
   box-shadow: inset 0 2px 12px rgba(0,0,0,.42);
 }
 .board[data-board="merge"] {
-  --n: 4; gap: 8px; padding: 11px; background: var(--mb);
+  /* The game's proportions: 18dp of padding and a 10dp gap around a 61.5dp
+     cell, kept as ratios so they hold at any size the page gives the board. */
+  --n: 4; --g: 3.63%; --pad: 5.78%; background: var(--mb);
   box-shadow: inset 3px 3px 8px var(--mb-d), inset -3px -3px 8px var(--mb-l);
 }
-.cell { border-radius: 6px; background: rgba(255,255,255,.055); }
-.blk { border-radius: 6px; box-shadow: inset 0 -4px 0 rgba(0,0,0,.28), inset 0 2px 0 rgba(255,255,255,.3); transition: background 420ms var(--ease-out); }
-.blk.pop { animation: pop 420ms var(--ease-spring); }
-@keyframes pop { 0% { transform: scale(.2); opacity: 0; } 100% { transform: none; opacity: 1; } }
-.blk.clear { animation: clr 380ms var(--ease-out) forwards; }
-@keyframes clr { 40% { transform: scale(1.12); filter: brightness(1.7); } 100% { transform: scale(.2); opacity: 0; } }
-.tile { border-radius: 9px; display: grid; place-items: center; font: 800 clamp(12px, 2vw, 20px)/1 var(--font-d); letter-spacing: -.03em; box-shadow: 2px 2px 6px rgba(0,0,0,.12); }
-.tile.empty { background: rgba(0,0,0,.05); box-shadow: none; }
-:root[data-theme="dark"] .tile.empty { background: rgba(255,255,255,.05); }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tile.empty { background: rgba(255,255,255,.05); } }
+/* ── Blocklix: the block, and the way a line goes out ──────────────────────
+   Numbers taken from the game. The clear is a wave with a 30ms step along the
+   line, each cell 200ms; the block loses its gloss the moment it starts to go,
+   which is what makes the collapse read as a collapse and not as a fade. */
+.cell { border-radius: 12%; background: rgba(255,255,255,.055); }
+.blk {
+  position: relative; border-radius: 12%;
+  background-image:
+    linear-gradient(180deg, rgba(255,255,255,.333) 0%, rgba(255,255,255,0) 55%),
+    linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.25) 100%);
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,.18);
+  transition: background-color 420ms var(--ease-out);
+}
+/* The white bloom a cell carries: 0.25 on landing, a half-sine on the way out. */
+.blk::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+  background: #fff; opacity: 0; pointer-events: none;
+}
+
+/* Landing: no drop, no stagger — the piece arrives at 1.12 and settles. */
+.blk.is-landing { animation: bx-land 190ms cubic-bezier(.215, .61, .355, 1); }
+@keyframes bx-land { from { transform: scale(1.12); } to { transform: none; } }
+.blk.is-landing::after { animation: bx-land-flash 190ms linear; }
+@keyframes bx-land-flash { from { opacity: .25; } to { opacity: 0; } }
+
+/* First paint: the board builds itself in a diagonal sweep, blocks riding a
+   little overshoot, the way the game restores a saved board. */
+.blk.is-entering { animation: bx-enter 252ms cubic-bezier(.34, 1.56, .64, 1) both; }
+@keyframes bx-enter { from { transform: scale(.6); opacity: 0; } to { transform: none; opacity: 1; } }
+
+/* Going out: up to 1.10, then a quadratic collapse to nothing. Sampled from
+   the game's own curve rather than approximated with an easing keyword. */
+.blk.is-clearing {
+  animation: bx-clear 200ms linear both;
+  background-image: none; box-shadow: none;
+}
+@keyframes bx-clear {
+  0%    { transform: scale(1);    opacity: 1; }
+  12.5% { transform: scale(1.05); opacity: .998; }
+  25%   { transform: scale(1.10); opacity: .984; }
+  37.5% { transform: scale(.764); opacity: .947; }
+  50%   { transform: scale(.489); opacity: .875; }
+  62.5% { transform: scale(.275); opacity: .756; }
+  75%   { transform: scale(.122); opacity: .578; }
+  87.5% { transform: scale(.031); opacity: .330; }
+  100%  { transform: scale(0);    opacity: 0; }
+}
+.blk.is-clearing::after { animation: bx-clear-flash 200ms linear both; animation-delay: inherit; }
+@keyframes bx-clear-flash {
+  0% { opacity: 0; } 25% { opacity: .389; } 50% { opacity: .55; } 75% { opacity: .389; } 100% { opacity: 0; }
+}
+
+/* The beam down the line: a coloured bloom that grows and a white core that
+   thins, both fading on (1-t)². 230ms, ahead of the cells. */
+.bx { position: relative; }
+.bx-beams { position: absolute; inset: var(--pad); pointer-events: none; z-index: 2; }
+.bx-beam { position: absolute; }
+.bx-beam::before, .bx-beam::after { content: ""; position: absolute; inset: 0; border-radius: 30%; }
+.bx-beam::before { background: #F5B232; filter: blur(2px); }
+.bx-beam::after { background: #fff; }
+.bx-beam-row {
+  left: 0; right: 0; top: 0;
+  height: calc((100% - (var(--n) - 1) * var(--bg)) / var(--n));
+  transform: translateY(calc(var(--i) * (100% + var(--bg))));
+}
+.bx-beam-col {
+  top: 0; bottom: 0; left: 0;
+  width: calc((100% - (var(--n) - 1) * var(--bg)) / var(--n));
+  transform: translateX(calc(var(--i) * (100% + var(--bg))));
+}
+.bx-beam-row::before { animation: bx-bloom-y 230ms linear both; }
+.bx-beam-row::after  { animation: bx-core-y 230ms linear both; }
+.bx-beam-col::before { animation: bx-bloom-x 230ms linear both; }
+.bx-beam-col::after  { animation: bx-core-x 230ms linear both; }
+@keyframes bx-bloom-y {
+  0% { transform: scaleY(.84); opacity: .45; } 25% { transform: scaleY(1.265); opacity: .253; }
+  50% { transform: scaleY(1.69); opacity: .113; } 75% { transform: scaleY(2.115); opacity: .028; }
+  100% { transform: scaleY(2.54); opacity: 0; }
+}
+@keyframes bx-core-y {
+  0% { transform: scaleY(.56); opacity: .8; } 25% { transform: scaleY(.504); opacity: .45; }
+  50% { transform: scaleY(.448); opacity: .2; } 75% { transform: scaleY(.392); opacity: .05; }
+  100% { transform: scaleY(.336); opacity: 0; }
+}
+@keyframes bx-bloom-x {
+  0% { transform: scaleX(.84); opacity: .45; } 25% { transform: scaleX(1.265); opacity: .253; }
+  50% { transform: scaleX(1.69); opacity: .113; } 75% { transform: scaleX(2.115); opacity: .028; }
+  100% { transform: scaleX(2.54); opacity: 0; }
+}
+@keyframes bx-core-x {
+  0% { transform: scaleX(.56); opacity: .8; } 25% { transform: scaleX(.504); opacity: .45; }
+  50% { transform: scaleX(.448); opacity: .2; } 75% { transform: scaleX(.392); opacity: .05; }
+  100% { transform: scaleX(.336); opacity: 0; }
+}
+
+/* ── Gridlix: tiles that travel ────────────────────────────────────────────
+   Not a grid with numbers written into it — a grid of empty wells with tiles
+   floating above, so a tile can go from where it was to where it went and the
+   eye can follow it. The box slides, the face inside it scales: one transform
+   cannot run a transition and a keyframe at once. */
+.mb {
+  /* Gap divided by cell, from the game: 10dp between 61.5dp cells. Wells and
+     tiles are laid out by this one number, so a tile cannot land between two
+     sockets — which is exactly what happened when the grid and the tiles each
+     did their own arithmetic and a percentage meant two different things. */
+  --k: .1626;
+  position: relative; display: block; padding: 0;
+}
+.mb .mb-cells, .mb .mb-tiles { position: absolute; inset: var(--pad); }
+.mb .mb-tiles { pointer-events: none; }
+.mb-cell, .mb-tile {
+  position: absolute; top: 0; left: 0;
+  width: calc(100% / (var(--n) + (var(--n) - 1) * var(--k)));
+  aspect-ratio: 1 / 1; border-radius: 26%;
+  transform: translate(
+    calc(var(--c) * (100% + var(--k) * 100%)),
+    calc(var(--r) * (100% + var(--k) * 100%)));
+}
+.mb-cell { background: rgba(0,0,0,.05); box-shadow: inset 0 0 0 1px rgba(128,137,160,.35); }
+:root[data-theme="dark"] .mb-cell { background: rgba(255,255,255,.05); box-shadow: inset 0 0 0 1px rgba(5,6,10,.35); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .mb-cell { background: rgba(255,255,255,.05); box-shadow: inset 0 0 0 1px rgba(5,6,10,.35); }
+}
+
+/* The outer box only ever travels. Everything you can see — the colour, the
+   corner, the shadow, the number — lives on the face, because the pop has to
+   scale the tile and not just the digits printed on it. */
+.mb-tile {
+  transition: transform 140ms cubic-bezier(.42, 0, .58, 1);
+  will-change: transform;
+}
+/* The game sizes a number at 0.4 of the cell and shrinks it to fit. The tile
+   is the container here, so one rule covers the 4×4 hero and the 3×3 steps. */
+.mb-tile { container-type: inline-size; }
+.mb-face {
+  display: grid; place-items: center; width: 100%; height: 100%;
+  border-radius: 26%; box-shadow: 0 2px 6px rgba(128,137,160,.45);
+  font: 700 clamp(10px, 38cqw, 26px)/1 var(--font-b); letter-spacing: -.02em;
+}
+:root[data-theme="dark"] .mb-face { box-shadow: 0 2px 6px rgba(5,6,10,.55); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .mb-face { box-shadow: 0 2px 6px rgba(5,6,10,.55); } }
+.mb-tile.is-high .mb-face { font-size: clamp(9px, 30cqw, 22px); }
+
+/* The tile that is about to be eaten rides over the survivor and fades as it
+   arrives — it is not deleted where it stood. */
+.mb-tile.is-ghost { z-index: 2; animation: mb-ghost 140ms linear both; }
+@keyframes mb-ghost { 0%, 42.86% { opacity: 1; } 100% { opacity: 0; } }
+
+.mb-face.is-new { animation: mb-spawn 220ms cubic-bezier(0, 0, .2, 1) both; }
+@keyframes mb-spawn { from { transform: scale(.6); opacity: 0; } to { transform: none; opacity: 1; } }
+.mb-face.is-entering { animation: mb-enter 260ms cubic-bezier(.34, 1.45, .64, 1) both; }
+@keyframes mb-enter { from { transform: scale(.6); opacity: 0; } to { transform: none; opacity: 1; } }
+.mb-face.is-going { animation: mb-go 220ms cubic-bezier(0, 0, .2, 1) both; }
+@keyframes mb-go { to { transform: scale(.6); opacity: 0; } }
+
+/* 1 → 1.25 on a decelerating curve, then an underdamped spring that dips to
+   0.96 before it settles. Sampled from the game's spring, not eyeballed. */
+.mb-face.is-merged { animation: mb-merge 147ms linear both; }
+@keyframes mb-merge {
+  0%    { transform: scale(1); }
+  13.6% { transform: scale(1.1375); }
+  27.2% { transform: scale(1.2075); }
+  40.8% { transform: scale(1.24); }
+  54.4% { transform: scale(1.25); }
+  57.6% { transform: scale(1.224); }
+  61.2% { transform: scale(1.165); }
+  64.4% { transform: scale(1.097); }
+  68%   { transform: scale(1.037); }
+  71.3% { transform: scale(.994); }
+  74.8% { transform: scale(.969); }
+  78.1% { transform: scale(.96); }
+  81.6% { transform: scale(.962); }
+  85%   { transform: scale(.97); }
+  91.8% { transform: scale(.991); }
+  100%  { transform: scale(1); }
+}
+
 .board-hero { max-width: 420px; margin-inline: auto; }
 .board-dressed { max-width: 280px; }
 
@@ -442,8 +658,8 @@ body.theme-flipping * { transition: background-color 200ms, color 200ms, border-
 .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .step { position: relative; padding: 22px; border: 1px solid var(--bd); border-radius: var(--r-l); background: var(--sur); box-shadow: var(--sh-1); }
 .step-n { position: absolute; right: 20px; top: 18px; font: 800 13px/1 var(--font-d); color: var(--mu); }
-.step-demo { --n: 5; display: grid; grid-template-columns: repeat(var(--n), 1fr); gap: 3px; padding: 8px; border-radius: var(--r-s); aspect-ratio: 1 / 1; max-width: 148px; background: linear-gradient(180deg, var(--sky-1), var(--sky-2)); margin-bottom: 16px; }
-.step-demo[data-demo^="merge"] { --n: 3; gap: 5px; background: var(--mb); box-shadow: inset 2px 2px 6px var(--mb-d), inset -2px -2px 6px var(--mb-l); }
+.step-demo { --n: 5; --bg: 3px; --pad: 8px; display: grid; grid-template-columns: repeat(var(--n), 1fr); gap: 3px; padding: 8px; border-radius: var(--r-s); aspect-ratio: 1 / 1; max-width: 148px; background: linear-gradient(180deg, var(--sky-1), var(--sky-2)); margin-bottom: 16px; }
+.step-demo[data-demo^="merge"] { --n: 3; --g: 4.5%; --pad: 6%; background: var(--mb); box-shadow: inset 2px 2px 6px var(--mb-d), inset -2px -2px 6px var(--mb-l); }
 .step h3 { font-size: 18px; font-weight: 800; margin-bottom: 6px; }
 .step p { margin: 0; color: var(--tx-2); font-size: 14.5px; }
 @media (max-width: 860px) { .steps { grid-template-columns: 1fr; } }
@@ -600,7 +816,7 @@ body.theme-flipping * { transition: background-color 200ms, color 200ms, border-
 
 .nf { padding: 90px 0 110px; text-align: center; }
 .nf .wrap { display: grid; justify-items: center; gap: 4px; }
-.nf-board { --n: 5; display: grid; grid-template-columns: repeat(var(--n), 1fr); gap: 6px; padding: 12px; width: 220px; aspect-ratio: 1/1; border-radius: var(--r-m); background: linear-gradient(180deg, var(--sky-1), var(--sky-2)); margin-bottom: 26px; }
+.nf-board { --n: 5; --bg: 6px; --pad: 12px; display: grid; grid-template-columns: repeat(var(--n), 1fr); gap: var(--bg); padding: var(--pad); width: 220px; aspect-ratio: 1/1; border-radius: var(--r-m); background: linear-gradient(180deg, var(--sky-1), var(--sky-2)); margin-bottom: 26px; }
 .nf .page-lede { text-align: center; }
 .nf .hero-ctas { justify-content: center; margin-top: 30px; }
 
@@ -623,6 +839,46 @@ body.theme-flipping * { transition: background-color 200ms, color 200ms, border-
 .js .reveal.in {
   opacity: 1; transform: none;
   transition: opacity 620ms var(--ease-out) calc(var(--d, 0) * 70ms), transform 620ms var(--ease-out) calc(var(--d, 0) * 70ms);
+}
+/* Where the browser can drive an animation from the scroll position itself,
+   it does: the section arrives in step with the wheel instead of firing a
+   fixed-length transition the moment a threshold is crossed. The class-based
+   version above stays for everyone else. */
+@supports (animation-timeline: view()) {
+  .js .reveal {
+    opacity: 1; transform: none; transition: none;
+    animation: reveal-up linear both;
+    animation-timeline: view();
+    /* Finished by the time the element is fully in view, so nothing can be
+       left half-revealed on a page that has no more room to scroll. */
+    animation-range: entry 5% entry 90%;
+  }
+  @keyframes reveal-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+  /* A rail scrolls sideways inside the page; a scroll-linked reveal on its
+     panels would read the wrong axis. */
+  .rail .reveal { animation: none; }
+
+  /* Depth on the shelf: the panel in front of you is the bright one, the ones
+     either side hold back. Driven by the rail's own scroll, so it tracks a
+     drag exactly rather than snapping at a threshold. */
+  .rail .panel {
+    animation: panel-focus linear both;
+    animation-timeline: view(inline);
+    animation-range: entry 0% exit 100%;
+  }
+  @keyframes panel-focus {
+    0%, 100% { opacity: .62; }
+    28%, 72% { opacity: 1; }
+  }
+  .rail .panel:hover { opacity: 1; }
+
+  /* The art behind a hero drifts a little slower than the page. It is given
+     headroom first, so drifting never uncovers the bottom of the section. */
+  .hero-art {
+    top: -7%; height: 114%;
+    animation: hero-drift linear both; animation-timeline: view(); animation-range: cover;
+  }
+  @keyframes hero-drift { from { transform: translateY(3%); } to { transform: translateY(-6%); } }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

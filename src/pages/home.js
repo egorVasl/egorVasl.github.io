@@ -13,8 +13,12 @@ const idx = (n) => String(n + 1).padStart(2, '0');
 function panel(game, i) {
   const isLive = game.status === LIVE;
   const statusKey = `status.${game.status}`;
+  /* Named so it survives the navigation: this icon and this title are the
+     same objects as the ones the game's own page opens with, and the browser
+     flies them there instead of cutting. */
   const icon = game.icon
-    ? `<img class="panel-icon" src="${game.icon}" alt="" width="96" height="96" loading="lazy" decoding="async">`
+    ? `<img class="panel-icon" src="${game.icon}" alt="" width="96" height="96" loading="lazy" decoding="async"
+           style="view-transition-name: vt-icon-${game.id}">`
     : `<span class="panel-icon panel-icon-empty" aria-hidden="true"></span>`;
 
   return `
@@ -27,7 +31,7 @@ function panel(game, i) {
               ${el('span', statusKey, { class: `status status-${game.status}` })}
             </div>
             ${icon}
-            <h3 class="panel-name">${esc(game.name)}</h3>
+            <h3 class="panel-name" style="view-transition-name: vt-name-${game.id}">${esc(game.name)}</h3>
             ${el('p', `g.${game.id}.tagline`, { class: 'panel-tag' })}
             ${factGrid(game.facts, { size: 's' })}
             ${chips(Array.from({ length: game.chips }, (_, n) => `g.${game.id}.chip.${n + 1}`))}

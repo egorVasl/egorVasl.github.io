@@ -207,9 +207,10 @@ function hero(g) {
       <div class="game-hero-in">
         <div class="game-hero-text">
           <div class="game-top">
-            <img class="game-icon" src="${g.icon}" alt="" width="128" height="128" decoding="async">
+            <img class="game-icon" src="${g.icon}" alt="" width="128" height="128" decoding="async"
+                 style="view-transition-name: vt-icon-${g.id}">
             <div>
-              <h1 class="game-h1" id="game-title">${esc(g.name)}</h1>
+              <h1 class="game-h1" id="game-title" style="view-transition-name: vt-name-${g.id}">${esc(g.name)}</h1>
               <div class="game-meta">
                 ${el('span', 'status.live', { class: 'status status-live' })}
                 ${el('span', k(g, 'genre'), { class: 'chip' })}

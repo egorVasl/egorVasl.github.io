@@ -281,10 +281,24 @@
     [[0, 0], [0, 1], [1, 1]], [[0, 1], [1, 0], [1, 1]],
   ];
 
-  /** An 8×8 that plays itself: place a piece, clear what fills up, repeat. */
-  function dropBoard(el, size) {
+  /**
+   * Blocklix's own numbers, read out of the game rather than guessed. The
+   * clear is a wave, not a blink: each cell along the line starts 30 ms after
+   * the one before it and takes 200 ms to go, so a full line takes 410.
+   */
+  const BX = { settle: 190, cell: 200, stagger: 30, beam: 230, tick: 700 };
+
+  /**
+   * An 8×8 that plays itself. `role` decides what it is trying to show:
+   * 'free' plays the game, and the three step demos each demonstrate the one
+   * move their caption names — a step captioned Clear that never clears is
+   * not a demo, it is decoration.
+   */
+  function dropBoard(el, size, role) {
     const n = size || 8;
     el.style.setProperty('--n', n);
+    el.classList.add('bx');
+
     const grid = Array.from({ length: n }, () => Array(n).fill(null));
     const cells = [];
     for (let i = 0; i < n * n; i++) {
@@ -293,153 +307,513 @@
       el.appendChild(c);
       cells.push(c);
     }
+    const beams = document.createElement('div');
+    beams.className = 'bx-beams';
+    el.appendChild(beams);
     const at = (r, c) => cells[r * n + c];
 
-    const paint = (r, c, colour, cls) => {
+    function paint(r, c, colour) {
       const cell = at(r, c);
-      cell.className = colour ? 'blk' + (cls ? ' ' + cls : '') : 'cell';
-      cell.style.background = colour || '';
-    };
-
-    function fits(shape, r, c) {
-      return shape.every(([dr, dc]) =>
-        r + dr < n && c + dc < n && !grid[r + dr][c + dc]);
+      cell.className = colour ? 'blk' : 'cell';
+      cell.style.backgroundColor = colour || '';
+      cell.style.removeProperty('animation-delay');
     }
 
-    function place() {
-      for (let tries = 0; tries < 60; tries++) {
+    const fits = (shape, r, c) => shape.every(([dr, dc]) =>
+      r + dr < n && c + dc < n && !grid[r + dr][c + dc]);
+
+    /** Which lines a shape at (r,c) would complete — the game checks first. */
+    function wouldClear(shape, r, c) {
+      const test = grid.map((row) => row.map(Boolean));
+      for (const [dr, dc] of shape) test[r + dr][c + dc] = true;
+      let lines = 0;
+      for (let i = 0; i < n; i++) {
+        if (test[i].every(Boolean)) lines++;
+        if (test.every((row) => row[i])) lines++;
+      }
+      return lines;
+    }
+
+    /**
+     * How good a drop is. Completed lines dominate; short of that, a drop is
+     * worth what it does to the fullest row and column it touches, cubed so
+     * that finishing a line beats spreading over three. Placing at random —
+     * which is what this demo used to do — completes a line roughly never, so
+     * the clear animation was something almost nobody ever saw.
+     */
+    function scoreOf(shape, r, c) {
+      const test = grid.map((row) => row.map(Boolean));
+      for (const [dr, dc] of shape) test[r + dr][c + dc] = true;
+      let lines = 0, fill = 0;
+      for (let i = 0; i < n; i++) {
+        let row = 0, col = 0;
+        for (let j = 0; j < n; j++) { if (test[i][j]) row++; if (test[j][i]) col++; }
+        if (row === n) lines++;
+        if (col === n) lines++;
+        if (row < n) fill += Math.pow(row / n, 3);
+        if (col < n) fill += Math.pow(col / n, 3);
+      }
+      return lines * 12 + fill;
+    }
+
+    function place(quiet) {
+      let best = null, bestScore = -Infinity;
+      for (let tries = 0; tries < 120; tries++) {
         const shape = pick(SHAPES), r = rand(n), c = rand(n);
         if (!fits(shape, r, c)) continue;
-        const colour = pick(BLOCKS);
-        for (const [dr, dc] of shape) {
-          grid[r + dr][c + dc] = colour;
-          paint(r + dr, c + dc, colour, 'pop');
-        }
-        return true;
+        if (quiet && wouldClear(shape, r, c)) continue;   // the Drop step never clears
+        const score = scoreOf(shape, r, c) + Math.random() * 0.5;
+        if (score > bestScore) { bestScore = score; best = [shape, r, c]; }
       }
-      return false;
+      if (!best) return false;
+      const [shape, r, c] = best;
+      const colour = pick(BLOCKS);            // a piece is one colour, as in the game
+      const clearing = wouldClear(shape, r, c) > 0;
+      for (const [dr, dc] of shape) {
+        grid[r + dr][c + dc] = colour;
+        paint(r + dr, c + dc, colour);
+        // The landing pop does not play on a drop that clears lines — the game
+        // skips it too, and the clear reads better without it.
+        if (!clearing) at(r + dr, c + dc).classList.add('is-landing');
+      }
+      if (!clearing) setTimeout(() => {
+        for (const [dr, dc] of shape) at(r + dr, c + dc).classList.remove('is-landing');
+      }, BX.settle + 30);
+      return true;
+    }
+
+    /** A bar of light down the line, ahead of the cells going out. */
+    function beam(kind, i) {
+      const b = document.createElement('span');
+      b.className = 'bx-beam bx-beam-' + kind;
+      b.style.setProperty('--i', i);
+      beams.appendChild(b);
+      setTimeout(() => b.remove(), BX.beam + 40);
     }
 
     function clearFull() {
       const rows = [], cols = [];
       for (let r = 0; r < n; r++) if (grid[r].every(Boolean)) rows.push(r);
       for (let c = 0; c < n; c++) if (grid.every((row) => row[c])) cols.push(c);
-      if (!rows.length && !cols.length) return false;
-      for (const r of rows) for (let c = 0; c < n; c++) at(r, c).classList.add('clear');
-      for (const c of cols) for (let r = 0; r < n; r++) at(r, c).classList.add('clear');
+      if (!rows.length && !cols.length) return 0;
+
+      /* Delay per cell: a row runs left to right, a column top to bottom, and
+         a cell on both leaves with whichever wave reaches it first. */
+      const delay = new Map();
+      const mark = (r, c, d) => {
+        const key = r + ',' + c;
+        delay.set(key, Math.min(delay.has(key) ? delay.get(key) : Infinity, d));
+      };
+      for (const r of rows) for (let c = 0; c < n; c++) mark(r, c, c * BX.stagger);
+      for (const c of cols) for (let r = 0; r < n; r++) mark(r, c, r * BX.stagger);
+
+      for (const r of rows) beam('row', r);
+      for (const c of cols) beam('col', c);
+
+      let last = 0;
+      for (const [key, d] of delay) {
+        const [r, c] = key.split(',').map(Number);
+        const cell = at(r, c);
+        cell.style.animationDelay = d + 'ms';
+        cell.classList.add('is-clearing');
+        last = Math.max(last, d);
+      }
+      const total = last + BX.cell;
       setTimeout(() => {
-        for (const r of rows) for (let c = 0; c < n; c++) { grid[r][c] = null; paint(r, c, null); }
-        for (const c of cols) for (let r = 0; r < n; r++) { grid[r][c] = null; paint(r, c, null); }
-      }, 380);
-      return true;
+        for (const key of delay.keys()) {
+          const [r, c] = key.split(',').map(Number);
+          grid[r][c] = null;
+          paint(r, c, null);
+        }
+      }, total);
+      return total;
     }
 
-    /** When nothing fits any more, sweep the board and start over. */
-    function reset() {
+    /** Everything goes out on a diagonal, and the board starts again. */
+    function sweep() {
+      let last = 0;
       for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) {
-        if (grid[r][c]) at(r, c).classList.add('clear');
+        if (!grid[r][c]) continue;
+        const cell = at(r, c), d = (r + c) * 14;
+        cell.style.animationDelay = d + 'ms';
+        cell.classList.add('is-clearing');
+        last = Math.max(last, d);
       }
       setTimeout(() => {
         for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) { grid[r][c] = null; paint(r, c, null); }
-      }, 380);
+      }, last + BX.cell);
+      return last + BX.cell;
     }
 
-    for (let i = 0; i < 14; i++) place();
-    clearFull();
+    /** Put a block down without a piece around it, for the scripted steps. */
+    function seed(r, c, colour, delay) {
+      grid[r][c] = colour;
+      paint(r, c, colour);
+      const cell = at(r, c);
+      cell.style.animationDelay = delay + 'ms';
+      cell.classList.add('is-entering');
+      setTimeout(() => {
+        cell.classList.remove('is-entering');
+        cell.style.removeProperty('animation-delay');
+      }, delay + 400);
+    }
+
+    /**
+     * Set up one line — or a line and a column crossing it — with a single
+     * hole left in it, so the next drop is the one that completes it.
+     */
+    let hole = null;
+    function arrange(cross) {
+      const r = rand(n), c = rand(n);
+      let i = 0;
+      for (let j = 0; j < n; j++) if (j !== c) seed(r, j, pick(BLOCKS), (i++) * 45);
+      if (cross) {
+        for (let j = 0; j < n; j++) if (j !== r) seed(j, c, pick(BLOCKS), (i++) * 45);
+      } else {
+        for (let k = 0; k < Math.max(2, n - 2); k++) {          // a little company
+          const rr = rand(n), cc = rand(n);
+          if (rr !== r && !grid[rr][cc]) seed(rr, cc, pick(BLOCKS), (i++) * 45);
+        }
+      }
+      hole = [r, c];
+      // long enough that the last block has finished arriving before it goes
+      return i * 45 + 560;
+    }
+
+    /* The job ticks with a frame delta, not with its own interval, so a wait
+       is kept as a deadline rather than counted down. */
+    let until = 0, phase = 0;
+    const wait = (ms) => { until = performance.now() + ms; };
+
+    /** The scripted steps: build, complete, admire, wipe, repeat. */
+    function scripted(cross) {
+      if (phase === 0) { wait(arrange(cross)); phase = 1; return; }
+      if (phase === 1) {
+        const [r, c] = hole;
+        grid[r][c] = pick(BLOCKS);
+        paint(r, c, grid[r][c]);
+        wait(clearFull() + 260);
+        phase = 2;
+        return;
+      }
+      wait(sweep() + 200);
+      phase = 0;
+    }
+
+    if (role === 'clear' || role === 'combo') {
+      wait(300);
+    } else {
+      // The game opens with a diagonal sweep across the board; so does this.
+      for (let i = 0; i < Math.round(n * n * 0.22); i++) place(role === 'drop');
+      for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) {
+        if (!grid[r][c]) continue;
+        const cell = at(r, c);
+        cell.classList.remove('is-landing');
+        cell.style.animationDelay = Math.round((r + c) / (2 * n - 2) * 308) + 'ms';
+        cell.classList.add('is-entering');
+        setTimeout(() => {
+          cell.classList.remove('is-entering');
+          cell.style.removeProperty('animation-delay');
+        }, 640);
+      }
+      wait(700);
+    }
 
     return addJob(el, () => {
-      if (!place()) { reset(); return; }
-      clearFull();
-    }, { every: 620, dress: (colours) => {
+      if (performance.now() < until) return;
+      if (role === 'clear') return scripted(false);
+      if (role === 'combo') return scripted(true);
+      if (role === 'drop') {                    // this step is about the landing
+        if (!place(true)) { wait(sweep() + 200); return; }
+        wait(0);
+        return;
+      }
+      if (!place()) { wait(sweep() + 200); return; }
+      wait(clearFull());
+    }, { every: BX.tick, dress: (colours) => {
       for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) {
         if (!grid[r][c]) continue;
         const next = colours[(r * n + c) % colours.length];
         grid[r][c] = next;
-        at(r, c).style.background = next;
+        at(r, c).style.backgroundColor = next;
       }
     } });
   }
 
+  /** Gridlix's real table. 32 and up were invented here before; they are not now. */
   const TILE_COLOURS = {
     2: ['#E3F2FD', '#4F83F5'], 4: ['#BBDEFB', '#2196F3'], 8: ['#BBC0FB', '#2136F3'],
-    16: ['#9B82FF', '#2A00D2'], 32: ['#8A6BFF', '#FFFFFF'], 64: ['#7B5BF0', '#FFFFFF'],
-    128: ['#6C5DD3', '#FFFFFF'], 256: ['#5E4FC7', '#FFFFFF'], 512: ['#5142BB', '#FFFFFF'],
-    1024: ['#4437A8', '#FFFFFF'], 2048: ['#FFD84D', '#171B30'],
+    16: ['#9B82FF', '#2A00D2'], 32: ['#FFCBA3', '#C95820'], 64: ['#C8E6C9', '#20C997'],
+    128: ['#FFF9C4', '#FBC02D'], 256: ['#F8BBFB', '#F321EF'], 512: ['#FFBCBC', '#F32121'],
+    1024: ['#35D0FF', '#FFFFFF'],
+  };
+  /** 2048 and above is a gradient with white numerals and a coloured glow. */
+  const TILE_HIGH = {
+    2048: ['#4B9FE5', '#4023C5', '#4B67E5'], 4096: ['#63E5C9', '#2C60D5', '#63C6E5'],
+    8192: ['#AF61E4', '#D22C90', '#E361E4'], 16384: ['#E6D75C', '#62D428', '#C1E65C'],
   };
 
-  /** A 4×4 that plays itself: pick a direction, slide, merge, spawn. */
-  function mergeBoard(el, size) {
+  /**
+   * Gridlix's own numbers. The order is the point: the slide finishes, the
+   * number flips, and only then — after a deliberate 60 ms of nothing — the
+   * merged tile pops. Reading them off the game is what stops this looking
+   * like a web page pretending to be a game.
+   */
+  const MERGE = {
+    slide: 140, ghostHold: 60, ghostFade: 80, ghostLinger: 20,
+    popDelay: 200, pop: 147, spawnDelay: 140, spawn: 220, tick: 820,
+  };
+
+  /**
+   * A 4×4 that plays itself. Tiles are absolutely positioned and travel by
+   * transform, because that is what makes it read as one board rather than a
+   * grid being repainted: the eye follows a tile from where it was to where it
+   * went. The box slides, the face inside it scales — one transform cannot run
+   * a transition and a keyframe at the same time.
+   */
+  function mergeBoard(el, size, role) {
     const n = size || 4;
     el.style.setProperty('--n', n);
-    let grid = Array.from({ length: n }, () => Array(n).fill(0));
-    const cells = [];
-    for (let i = 0; i < n * n; i++) {
-      const c = document.createElement('i');
-      el.appendChild(c);
-      cells.push(c);
-    }
+    el.classList.add('mb');
 
-    function render(popped) {
-      for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) {
-        const cell = cells[r * n + c], v = grid[r][c];
-        if (!v) { cell.className = 'tile empty'; cell.textContent = ''; cell.style.background = ''; cell.style.color = ''; continue; }
-        const [bg, fg] = TILE_COLOURS[v] || TILE_COLOURS[2048];
-        cell.className = 'tile' + (popped && popped.has(r + ',' + c) ? ' pop' : '');
-        cell.textContent = v;
-        cell.style.background = bg;
-        cell.style.color = fg;
+    const cells = document.createElement('div');
+    cells.className = 'mb-cells';
+    for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) {
+      const well = document.createElement('i');
+      well.className = 'mb-cell';
+      well.style.setProperty('--r', r);
+      well.style.setProperty('--c', c);
+      cells.appendChild(well);
+    }
+    const layer = document.createElement('div');
+    layer.className = 'mb-tiles';
+    el.append(cells, layer);
+
+    let tiles = [], busy = false;
+
+    const place = (t) => {
+      t.el.style.setProperty('--r', t.r);
+      t.el.style.setProperty('--c', t.c);
+    };
+
+    function paint(t) {
+      const high = TILE_HIGH[t.v];
+      const [bg, fg] = TILE_COLOURS[t.v] || [];
+      t.face.textContent = t.v;
+      t.el.classList.toggle('is-high', Boolean(high));
+      if (high) {
+        t.face.style.background = `linear-gradient(180deg, ${high[0]}, ${high[1]})`;
+        t.face.style.color = '#FFFFFF';
+        t.face.style.boxShadow = `0 4px 14px ${high[2]}66`;
+      } else {
+        t.face.style.background = bg || '#F5F6FA';
+        t.face.style.color = fg || '#2D3142';
+        t.face.style.removeProperty('box-shadow');
       }
     }
 
+    function add(r, c, v, how) {
+      const box = document.createElement('div');
+      box.className = 'mb-tile';
+      const face = document.createElement('span');
+      face.className = 'mb-face';
+      box.appendChild(face);
+      layer.appendChild(box);
+      const t = { r, c, v, el: box, face };
+      place(t); paint(t);
+      // A tile is born where it belongs. Without this it would inherit the
+      // transition and slide in diagonally from the board's top-left corner.
+      box.style.transition = 'none';
+      requestAnimationFrame(() => requestAnimationFrame(() => box.style.removeProperty('transition')));
+      tiles.push(t);
+      if (how) {
+        face.classList.add(how);
+        setTimeout(() => face.classList.remove(how), (how === 'is-new' ? MERGE.spawn : 700) + 60);
+      }
+      return t;
+    }
+
+    const occupied = () => {
+      const g = Array.from({ length: n }, () => Array(n).fill(null));
+      for (const t of tiles) g[t.r][t.c] = t;
+      return g;
+    };
+
     function spawn() {
-      const free = [];
-      for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) if (!grid[r][c]) free.push([r, c]);
+      const g = occupied(), free = [];
+      for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) if (!g[r][c]) free.push([r, c]);
       if (!free.length) return null;
       const [r, c] = pick(free);
-      grid[r][c] = Math.random() < 0.85 ? 2 : 4;
-      return r + ',' + c;
+      return add(r, c, Math.random() < 0.9 ? 2 : 4, 'is-new');
     }
 
-    const rotate = (g) => g[0].map((_, i) => g.map((row) => row[i]).reverse());
-
-    function slide(g) {
+    /**
+     * Where everything ends up, worked out before anything moves. Directions
+     * are 0 left, 1 up, 2 right, 3 down; each line is read from the wall the
+     * tiles travel towards, so the first tile met survives a merge and the
+     * second slides on top of it and goes.
+     */
+    function plan(dir) {
+      const g = occupied();
+      const horizontal = dir === 0 || dir === 2;
+      const reverse = dir === 2 || dir === 3;
+      const moves = [], merges = [];
       let moved = false;
-      const next = g.map((row) => {
-        const vals = row.filter(Boolean);
-        const out = [];
-        for (let i = 0; i < vals.length; i++) {
-          if (vals[i] === vals[i + 1]) { out.push(vals[i] * 2); i++; }
-          else out.push(vals[i]);
+
+      for (let line = 0; line < n; line++) {
+        const seq = [];
+        for (let i = 0; i < n; i++) {
+          const idx = reverse ? n - 1 - i : i;
+          const t = horizontal ? g[line][idx] : g[idx][line];
+          if (t) seq.push(t);
         }
-        while (out.length < n) out.push(0);
-        if (out.some((v, i) => v !== row[i])) moved = true;
-        return out;
+        let out = 0;
+        for (let i = 0; i < seq.length; i++, out++) {
+          const t = seq[i];
+          let eaten = null;
+          if (i + 1 < seq.length && seq[i + 1].v === t.v) { eaten = seq[i + 1]; i++; }
+          const idx = reverse ? n - 1 - out : out;
+          const r = horizontal ? line : idx;
+          const c = horizontal ? idx : line;
+          if (t.r !== r || t.c !== c) moved = true;
+          moves.push([t, r, c]);
+          if (eaten) { moves.push([eaten, r, c]); merges.push([t, eaten]); moved = true; }
+        }
+      }
+      return { moves, merges, moved };
+    }
+
+    function sweep(refill) {
+      busy = true;
+      tiles.forEach((t, i) => {
+        t.face.style.animationDelay = (i * 24) + 'ms';
+        t.face.classList.add('is-going');
       });
-      return { next, moved };
+      const done = tiles.length * 24 + 220;
+      setTimeout(() => {
+        for (const t of tiles) t.el.remove();
+        tiles = [];
+        if (refill) { spawn(); spawn(); }
+        busy = false;
+      }, done);
+      return done;
     }
 
-    function move(dir) {
-      let g = grid;
-      for (let i = 0; i < dir; i++) g = rotate(g);
-      const { next, moved } = slide(g);
-      g = next;
-      for (let i = dir; i < 4; i++) g = rotate(g);
-      if (moved) grid = g;
-      return moved;
+    /**
+     * Carry out a planned swipe on the game's own clock: slide, flip the
+     * number, retire the ghost, and only then pop. `andSpawn` is false for the
+     * scripted steps, where a stray new tile would just be noise.
+     */
+    function apply(p, andSpawn) {
+      busy = true;
+      for (const [, eaten] of p.merges) eaten.el.classList.add('is-ghost');
+      for (const [t, r, c] of p.moves) { t.r = r; t.c = c; place(t); }
+
+      setTimeout(() => {                                   // slide is over
+        for (const [survivor] of p.merges) { survivor.v *= 2; paint(survivor); }
+        if (andSpawn) spawn();
+      }, MERGE.slide);
+
+      setTimeout(() => {
+        for (const [, eaten] of p.merges) {
+          eaten.el.remove();
+          const i = tiles.indexOf(eaten);
+          if (i > -1) tiles.splice(i, 1);
+        }
+      }, MERGE.slide + MERGE.ghostLinger);
+
+      setTimeout(() => {                                   // and only now, the pop
+        for (const [survivor] of p.merges) {
+          survivor.face.classList.add('is-merged');
+          setTimeout(() => survivor.face.classList.remove('is-merged'), MERGE.pop + 40);
+        }
+        busy = false;
+      }, MERGE.popDelay);
     }
 
-    grid[rand(n)][rand(n)] = 2;
-    spawn();
-    render();
+    /** The whole game, played to merge as often as it can. */
+    function free() {
+      /* Prefer the swipe that merges the most. A demo that picks a direction
+         at random shuffles tiles around and rarely builds anything, which
+         shows the board without showing the game. */
+      let p = null, best = -1;
+      for (const d of [0, 1, 2, 3]) {
+        const q = plan(d);
+        if (!q.moved) continue;
+        const score = q.merges.length * 2 + Math.random();
+        if (score > best) { best = score; p = q; }
+      }
+      if (!p) { sweep(true); return; }
+      apply(p, true);
+    }
+
+    let until = 0, phase = 0, ladder = 2;
+    const wait = (ms) => { until = performance.now() + ms; };
+    const spots = () => {
+      const all = [];
+      for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) all.push([r, c]);
+      return all.sort(() => Math.random() - 0.5);
+    };
+
+    /** Swipe: one direction moves everything at once, and nothing merges. */
+    function driveSwipe() {
+      if (phase === 0) {
+        const free3 = spots();
+        [2, 4, 8].forEach((v, i) => add(free3[i][0], free3[i][1], v, 'is-new'));
+        wait(MERGE.spawn + 260); phase = 1; return;
+      }
+      let p = null, best = -1;
+      for (const d of [0, 1, 2, 3]) {
+        const q = plan(d);
+        if (!q.moved || q.merges.length) continue;
+        const n0 = q.moves.filter(([t, r, c]) => t.r !== r || t.c !== c).length;
+        if (n0 > best) { best = n0; p = q; }
+      }
+      if (!p) { wait(sweep(false) + 160); phase = 0; return; }
+      apply(p, false);
+      wait(MERGE.slide + 420);
+    }
+
+    /**
+     * Merge: two equal tiles, one swipe, one number. The pair doubles each
+     * cycle so the step also shows what merging is for.
+     */
+    function driveMerge(top) {
+      if (phase === 0) {
+        const r = rand(n), c = rand(n - 1);
+        add(r, c, ladder, 'is-new');
+        add(r, c + 1, ladder, 'is-new');
+        wait(MERGE.spawn + 300); phase = 1; return;
+      }
+      if (phase === 1) {
+        const p = plan(0);
+        if (p.moved) apply(p, false);
+        wait(MERGE.popDelay + MERGE.pop + 420); phase = 2; return;
+      }
+      wait(sweep(false) + 160);
+      ladder = ladder >= top ? 2 : ladder * 2;
+      phase = 0;
+    }
+
+    if (role === 'swipe' || role === 'merge' || role === 'target') {
+      if (role === 'target') ladder = 64;
+      wait(260);
+    } else {
+      // The game opens with a diagonal cascade; so does this.
+      const seeds = spots().slice(0, 2);
+      for (const [r, c] of seeds) {
+        const t = add(r, c, 2, 'is-entering');
+        t.face.style.animationDelay = (160 + (r + c) * 50) + 'ms';
+      }
+    }
 
     return addJob(el, () => {
-      const dirs = [0, 1, 2, 3].sort(() => Math.random() - 0.5);
-      let moved = false;
-      for (const d of dirs) if ((moved = move(d))) break;
-      if (!moved) { grid = Array.from({ length: n }, () => Array(n).fill(0)); spawn(); spawn(); render(); return; }
-      const born = spawn();
-      render(new Set(born ? [born] : []));
-    }, { every: 780 });
+      if (busy || performance.now() < until) return;
+      if (role === 'swipe') return driveSwipe();
+      if (role === 'merge') return driveMerge(64);
+      if (role === 'target') return driveMerge(1024);
+      free();
+    }, { every: MERGE.tick });
   }
 
   function initBoards() {
@@ -449,10 +823,16 @@
       else if (kind === 'nf') dropBoard(el, 5);
       else dropBoard(el, 8);
     }
+    /* The three steps under "how it plays" are captioned, and each one now
+       demonstrates the move its caption names rather than all three running
+       the same loop. */
+    const MERGE_STEPS = ['swipe', 'merge', 'target'];
+    const DROP_STEPS = ['drop', 'clear', 'combo'];
     for (const el of $$('[data-demo]')) {
-      const [kind] = el.dataset.demo.split('-');
-      if (kind === 'merge') mergeBoard(el, 3);
-      else dropBoard(el, 5);
+      const [kind, i] = el.dataset.demo.split('-');
+      const step = Math.max(1, Math.min(3, +i || 1)) - 1;
+      if (kind === 'merge') mergeBoard(el, 3, MERGE_STEPS[step]);
+      else dropBoard(el, 5, DROP_STEPS[step]);
     }
   }
 
@@ -670,6 +1050,8 @@
     const update = () => {
       const max = document.documentElement.scrollHeight - innerHeight;
       document.documentElement.style.setProperty('--scroll', max > 0 ? clamp(scrollY / max, 0, 1) : 0);
+      // The header only earns its edge once the page has actually moved.
+      document.body.classList.toggle('scrolled', scrollY > 8);
     };
     addEventListener('scroll', update, { passive: true });
     addEventListener('resize', update);
@@ -765,6 +1147,31 @@
     }
   }
 
+  /**
+   * The shelf panels lean toward the pointer and carry a soft light under it.
+   * Pointer devices only, and never when the reader has asked for less motion:
+   * a card that tilts on a phone just fights the scroll.
+   */
+  function initTilt() {
+    if (reduced.matches || !matchMedia('(hover: hover)').matches) return;
+    for (const card of $$('.panel')) {
+      card.addEventListener('pointermove', (e) => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+        card.classList.add('is-tilting');
+        card.style.setProperty('--ry', ((x - .5) * 7).toFixed(2) + 'deg');
+        card.style.setProperty('--rx', ((.5 - y) * 5).toFixed(2) + 'deg');
+        card.style.setProperty('--px', (x * 100).toFixed(1) + '%');
+        card.style.setProperty('--py', (y * 100).toFixed(1) + '%');
+      });
+      card.addEventListener('pointerleave', () => {
+        card.classList.remove('is-tilting');
+        card.style.removeProperty('--rx');
+        card.style.removeProperty('--ry');
+      });
+    }
+  }
+
   function initCopy() {
     for (const btn of $$('[data-copy]')) {
       btn.addEventListener('click', async () => {
@@ -800,6 +1207,7 @@
     initCounters();
     initMagnetic();
     initCopy();
+    initTilt();
     initDocToc();
     initMotifs();
     initBoards();
