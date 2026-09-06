@@ -799,6 +799,8 @@
         <li role="option" data-lang="es" tabindex="-1"><span class="lang-flag" aria-hidden="true">🇪🇸</span><span class="lang-code">ES</span><span class="lang-native">Español</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg></li>
         <li role="option" data-lang="de" tabindex="-1"><span class="lang-flag" aria-hidden="true">🇩🇪</span><span class="lang-code">DE</span><span class="lang-native">Deutsch</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg></li>
         <li role="option" data-lang="fr" tabindex="-1"><span class="lang-flag" aria-hidden="true">🇫🇷</span><span class="lang-code">FR</span><span class="lang-native">Français</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg></li>
+        <li role="option" data-lang="pt-BR" tabindex="-1"><span class="lang-flag" aria-hidden="true">🇧🇷</span><span class="lang-code">PT</span><span class="lang-native">Português (BR)</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg></li>
+        <li role="option" data-lang="zh" tabindex="-1"><span class="lang-flag" aria-hidden="true">🇨🇳</span><span class="lang-code">ZH</span><span class="lang-native">中文</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5 12 10 17 19 7"/></svg></li>
       </ul>
     </div>
     <a class="nav-link" href="./index.html" aria-label="Back to home" data-i18n-attr="aria-label:nav.back">
@@ -1509,14 +1511,230 @@
       sec9: { title: "Modifications de cette politique", body: "Nous pouvons mettre à jour cette Politique de confidentialité de temps à autre — par exemple lorsque nous ajoutons de nouveaux titres, changeons de partenaires publicitaires ou mettons à jour la mécanique d'abonnement. La date « Mis à jour » en haut de la page indique quand le dernier changement a été effectué. Les changements importants sont reflétés dans l'app au prochain lancement." },
       sec10: { title: "Contact", body: "Pour toute question de confidentialité sur l'une de nos apps, écrivez-nous à <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a>. Nous essayons de répondre dans un délai raisonnable." },
       footer: { copyright: "© Vaslix Games · Éditeur Android indépendant", home: "Accueil", contact: "Contact", backToTop: "Haut de page ↑" }
+    },
+    "pt-BR": {
+      meta: {
+        title: "Política de Privacidade — Vaslix Games",
+        description: "Como a Vaslix Games trata dados em todos os nossos apps Android — jogos e títulos de áudio/podcast. Resumo em linguagem simples, política completa, notas sobre GDPR/CCPA/COPPA.",
+        ogTitle: "Política de Privacidade — Vaslix Games",
+        ogDesc: "O que a Vaslix Games armazena, o que não armazena, e como nossos apps usam o Google Play Billing e a mediação de anúncios."
+      },
+      nav: { brand: "Vaslix Games", pill: "Privacidade", back: "← Voltar ao início", langLabel: "Mudar idioma" },
+      hero: {
+        eyebrow: "Resumo em linguagem simples; texto legal completo abaixo",
+        title: "Política de Privacidade",
+        lede: "Como a Vaslix Games trata informações em todos os nossos apps Android — jogos e títulos de áudio/podcast. Esta política se aplica da mesma forma a cada app que publicamos, independentemente de gênero ou formato. Sem contas, sem servidores próprios, sem surpresas. <strong>Atualmente cobre Gridlix:2048 e Blocklix, ambos disponíveis na Google Play; títulos de áudio/podcast em desenvolvimento.</strong>",
+        chip: { updated: "Última atualização", gdpr: "Alinhada a GDPR / CCPA / COPPA", billing: "Google Play Billing" }
+      },
+      summary: {
+        1: { title: "O que fica no seu aparelho", desc: "Estado do jogo, configurações, melhores pontuações e uma marca de status Premium em cache. Nada disso chega a um servidor nosso — o backup do próprio Android pode copiar tudo para a sua própria conta Google (§1d)." },
+        2: { title: "O que nunca vemos", desc: "Dados de pagamento, o e-mail da sua conta Google, identificadores de conta, contatos, fotos ou localização além da estimativa por IP que as redes de anúncios usam." },
+        3: {
+          title: "Anúncios vs Premium",
+          desc: "Usuários gratuitos veem banners, intersticiais e anúncios ocasionais na abertura do app via mediação Appodeal (e Google AdMob em alguns títulos). O Premium e a compra única Remover Anúncios os desligam. Vídeos recompensados são opcionais para todos: só tocam quando você aceita uma oferta de assistir para ganhar."
+        },
+        4: {
+          title: "Identificadores do aparelho",
+          desc: "Seu Google Advertising ID e o ID do aparelho Android são lidos para que as redes de anúncios exibam e limitem a frequência dos anúncios, e para que o Google Play Billing verifique o direito à sua assinatura. Ambos podem ser redefinidos nas Configurações do Android."
+        },
+        aria: "Resumo",
+        heading: "A versão curta"
+      },
+      toc: {
+        1: "1. Informações que coletamos",
+        2: "2. Parceiros de publicidade",
+        3: "3. Assinaturas e Play Billing",
+        4: "4. Base legal (GDPR)",
+        5: "5. CCPA / leis estaduais dos EUA",
+        6: "6. Privacidade de crianças",
+        7: "7. Retenção de dados",
+        8: "8. Seus direitos",
+        9: "9. Alterações nesta política",
+        10: "10. Contato",
+        aria: "Sumário",
+        title: "Nesta página"
+      },
+      sec1: {
+        title: "Informações que coletamos",
+        intro: "Nossos apps não exigem criação de conta e não coletamos intencionalmente informações pessoais de forma direta. As informações se dividem em dois grupos.",
+        h3a: "1a. Armazenadas localmente no seu aparelho",
+        body1a: "Cada app armazena o seguinte em um banco de dados Room/SQLite local (ou um armazenamento local equivalente) no seu aparelho. Nunca enviamos isso a um servidor nosso; o serviço de backup do próprio Android pode copiá-lo para a sua conta Google pessoal, como descrito em 1d:",
+        list1a: {
+          1: "Estado específico do app — por exemplo tabuleiro, pontuação, boosters e continuações nos títulos de puzzle; posição de reprodução, feeds assinados, fila e cache de downloads offline nos títulos de podcast/áudio",
+          2: "Histórico da melhor partida e melhor pontuação (títulos de puzzle), ou histórico de escuta (títulos de áudio), mantidos como registro apenas local",
+          3: "Configurações do app: som ligado/desligado, vibração ligada/desligada, modo de tema, velocidade de reprodução e preferências semelhantes de cada app",
+          4: "Uma marca de primeiro lançamento usada para decidir se a tela de boas-vindas do Premium deve ser exibida",
+          5: "Um resumo em cache do status da sua assinatura — ativa/inativa, plano, ID do produto, ID do plano base — para que o app aplique seu direito Premium imediatamente na abertura, sem esperar pela rede"
+        },
+        callout: "<strong>O que não fica armazenado localmente:</strong> dados de pagamento, tokens de compra e identificadores da conta Google. Nada disso sai do Google Play.",
+        h3b: "1b. Coletadas por terceiros em nosso nome",
+        body1b: "Os serviços de terceiros descritos abaixo podem coletar automaticamente informações técnicas e relacionadas a publicidade:",
+        list1b: {
+          1: "Google Advertising ID (GAID) — lido para que as redes de anúncios entreguem anúncios, limitem sua frequência e atribuam instalações. Enquanto o Premium ou o Remover Anúncios estiver ativo, ele não é usado para banners, intersticiais nem anúncios de abertura; ele ainda é processado quando você escolhe explicitamente assistir a um vídeo recompensado.",
+          2: "ID do aparelho Android (SSAID) — lido a cada abertura como identificador estável e restrito ao app. Usado pelo Google Play Billing para verificar o direito à sua assinatura e pelo SDK de mediação de anúncios para sinais de fraude e tráfego inválido. Ele é limitado à chave de assinatura deste app e não está vinculado à sua conta Google.",
+          3: "Endereço IP e localização geográfica aproximada derivada dele",
+          4: "Modelo do aparelho, versão do sistema operacional, idioma e fuso horário",
+          5: "Versão do app, carimbos de data/hora de sessão e diagnósticos de falhas",
+          6: "Eventos de uso agregados e não identificáveis pessoalmente — incluindo eventos de reprodução de podcast/áudio (episódio iniciado, concluído, pulado) nos títulos de áudio, usados apenas de forma agregada"
+        },
+        deviceIdCallout: "<strong>Por que divulgamos isso:</strong> o formulário de Segurança de dados do Google Play exige que toda leitura do Advertising ID e do ID do aparelho Android seja declarada, independentemente de o valor sair do seu aparelho. Você pode redefinir o Advertising ID a qualquer momento em <em>Configurações do Android → Privacidade → Anúncios</em>, e o Android ID é gerado novamente quando você restaura o aparelho para os padrões de fábrica.",
+        h3c: "1c. Análise, relatórios de falhas e configuração remota (Google Firebase)",
+        firebase: "Alguns dos nossos apps (atualmente o Blocklix) incluem <strong>Google Firebase Analytics</strong> e <strong>Firebase Remote Config</strong>. O Firebase Analytics coleta um ID de instância aleatório do app, informações do aparelho e do sistema e eventos agregados dentro do app (por exemplo \"partida concluída\", \"compra concluída\", \"anúncio assistido\") para que possamos entender o uso geral e equilibrar a economia do jogo; não o usamos para montar perfis publicitários. O Firebase Remote Config baixa um pequeno conjunto de valores de configuração (sinalizadores de recursos e números de balanceamento do jogo) e não envia dados pessoais além dos metadados técnicos da requisição. O <strong>Firebase Crashlytics</strong> envia um relatório quando o app trava ou congela: a pilha de chamadas, o modelo do aparelho, a versão do sistema e do app e um identificador de instalação aleatório — o suficiente para encontrar o erro, e nada do que você digitou ou jogou. Detalhes: <a href=\"https://firebase.google.com/support/privacy\" target=\"_blank\" rel=\"noopener\">firebase.google.com/support/privacy ↗</a>.",
+        h3d: "1d. Backup e salvamento na nuvem",
+        backup: "<strong>O backup do próprio Android está ativado para nossos apps.</strong> Se o backup estiver ligado no seu aparelho, o Android copia os dados locais listados em 1a — tabuleiro, pontuações, configurações, desbloqueios — para a sua conta Google pessoal e os restaura quando você reinstala com a mesma conta ou configura um aparelho novo. Essa cópia é sua: o Android a gerencia e criptografa, e nós não podemos lê-la nem apagá-la. Você a controla em <em>Configurações do Android → Google → Backup</em>. Separadamente, <strong>o Blocklix inclui um salvamento na nuvem opcional baseado no Google Play Games Saved Games</strong>: um único arquivo de save no seu próprio espaço do Play Games, para que a partida acompanhe você entre aparelhos. Ele nunca funciona sem login no Play Games, carrega apenas o progresso do jogo — nunca o estado da assinatura ou dados de compra — e é servido pelo Google, não por um servidor nosso. O recurso sai desativado e está sendo liberado gradualmente; se você fez login e prefere não usá-lo, saia do Play Games dentro do app."
+      },
+      sec2: {
+        title: "Parceiros de publicidade",
+        intro: "Nossos apps podem exibir banners, intersticiais ocasionais — incluindo anúncios de abertura ao voltar para o app — e vídeos recompensados que você escolhe explicitamente assistir em troca de um benefício no jogo (um booster, uma continuação após o fim de jogo, moedas bônus e afins). Uma assinatura Premium ou a compra única Remover Anúncios desliga banners, intersticiais e anúncios de abertura; os vídeos recompensados continuam disponíveis para todos e só tocam depois que você toca na oferta. Trabalhamos com os provedores de anúncios abaixo, usados juntos ou separadamente dependendo do app.",
+        h3a: "Mediação Appodeal",
+        appodeal1: "Usamos a <a href=\"https://www.appodeal.com/\" target=\"_blank\" rel=\"noopener\">Appodeal</a> como nosso principal parceiro de mediação de anúncios. A política de privacidade da Appodeal está em <a href=\"https://www.appodeal.com/privacy-policy\" target=\"_blank\" rel=\"noopener\">appodeal.com/privacy-policy ↗</a>.",
+        appodeal2: "A Appodeal intermedeia a demanda de um grande número de redes de anúncios, e o conjunto ativo muda conforme a Appodeal atualiza seu SDK e conforme alteramos nossa configuração de build. A lista atual e oficial é publicada pela Appodeal:",
+        appodeal3: "Cada rede nessa página tem link para a própria política de privacidade. Dúvidas de privacidade específicas sobre personalização de anúncios podem ser levadas diretamente à Appodeal no mesmo site.",
+        h3b: "Google AdMob",
+        admob: "Alguns dos nossos apps também exibem anúncios display, nativos ou recompensados diretamente pelo Google AdMob. As práticas de dados publicitários do Google estão descritas em <a href=\"https://policies.google.com/technologies/ads\" target=\"_blank\" rel=\"noopener\">policies.google.com/technologies/ads ↗</a>, e a Política de Privacidade do Google está em <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>. Você pode desativar os anúncios personalizados do Google em <a href=\"https://adssettings.google.com/\" target=\"_blank\" rel=\"noopener\">adssettings.google.com ↗</a>.",
+        callout: "<strong>Assinantes Premium e quem comprou Remover Anúncios não veem banners, intersticiais nem anúncios de abertura.</strong> Vídeos recompensados nunca são impostos a ninguém — gratuito ou pagante, eles só começam com um toque explícito em uma oferta de assistir para ganhar. Um tráfego limitado de inicialização para os provedores de anúncios ainda pode ocorrer na abertura do app, antes de o direito ser resolvido."
+      },
+      sec3: {
+        title: "Assinaturas e compras no app (Google Play Billing)",
+        intro: "Cada um dos nossos apps pode oferecer uma assinatura Premium opcional — com planos semanal, mensal e anual de renovação automática, dependendo do título, e um período de teste gratuito introdutório no plano anual para novos assinantes elegíveis — que desliga banners, intersticiais e anúncios de abertura e libera recursos premium específicos daquele app (por exemplo moedas ×2 e um presente diário nos títulos de puzzle, ou downloads offline e reprodução sem anúncios nos títulos de podcast/áudio). Alguns títulos também vendem produtos únicos: pacotes de moedas, um pacote inicial, o resgate de um cofrinho e um desbloqueio permanente Remover Anúncios com o mesmo alcance de anúncios do Premium. Tudo é vendido e processado pelo Google por meio do Google Play Billing.",
+        list: {
+          1: "Todas as informações de pagamento, cobrança, conta e impostos são coletadas e processadas pelo Google. Não vemos, armazenamos nem transmitimos sua forma de pagamento, o e-mail da sua conta Google ou qualquer identificador governamental.",
+          2: "O app recebe do Google apenas um sinal de direito não identificável: se existe uma assinatura ativa para a sua instalação (ID do produto e ID do plano base) e quais produtos únicos foram comprados. Esse sinal fica em cache local, como descrito em §1a.",
+          3: "Gerenciamento da assinatura, cancelamento, pedidos de reembolso e datas de renovação são tratados inteiramente no Google Play. O botão \"Gerenciar\" dentro do app leva diretamente à página de assinaturas do Google Play.",
+          4: "A política de privacidade do Google Play se aplica a todo o processamento relacionado a cobrança: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>"
+        }
+      },
+      sec4: {
+        title: "Base legal e consentimento (GDPR / EEE, Reino Unido, Suíça)",
+        body: "Se você está no EEE, no Reino Unido ou na Suíça, a base legal para o processamento relacionado a publicidade é o seu consentimento, coletado por meio de um diálogo do IAB Transparency & Consent Framework (TCF) exibido na primeira abertura do app. Você pode retirar ou alterar seu consentimento a qualquer momento — nas configurações de privacidade dentro do app, onde o app as oferece, ou limpando os dados do app (Configurações → Apps), o que exibe o diálogo de consentimento novamente na próxima abertura. A base legal para o processamento de dados de assinatura via Google Play Billing é a execução do contrato firmado quando você compra uma assinatura."
+      },
+      sec5: {
+        title: "CCPA / leis estaduais de privacidade dos EUA",
+        body: "Se você é residente da Califórnia, ou de outro estado dos EUA onde se aplique, você tem o direito de recusar a \"venda\" ou o \"compartilhamento\" das suas informações pessoais para publicidade comportamental. O diálogo de consentimento dentro do app oferece essa recusa onde exigido. O processamento de assinaturas pelo Google Play não é uma \"venda\" de informações pessoais."
+      },
+      sec6: {
+        title: "Privacidade de crianças (COPPA)",
+        body: "Nossos apps não são direcionados a crianças menores de 13 anos (ou a idade mínima equivalente na sua jurisdição). Não coletamos intencionalmente informações pessoais de crianças. A assinatura Premium é destinada a compradores adultos; compras no app exigem uma conta do Google Play com as permissões de compra adequadas."
+      },
+      sec7: {
+        title: "Retenção de dados",
+        body: "Os dados armazenados localmente descritos em §1a permanecem no seu aparelho até que você limpe os dados do app ou o desinstale. Não retemos informações pessoais em servidores próprios. As cópias feitas pelo serviço de backup do próprio Android — e um salvamento na nuvem do Play Games, se você o ativou — ficam na sua própria conta Google: remova-as em Configurações do Android → Google → Backup e na sua conta do Play Games, respectivamente. Os parceiros de publicidade e o Google Play retêm dados de acordo com as próprias políticas."
+      },
+      sec8: {
+        title: "Seus direitos",
+        body: "Dependendo da sua jurisdição, você pode ter o direito de acessar, corrigir, apagar, restringir ou portar seus dados pessoais, e de apresentar uma reclamação a uma autoridade de controle. Como não detemos esses dados diretamente, as solicitações devem ser dirigidas ao parceiro de publicidade em questão ou — no caso de dados de cobrança — ao Google Play.",
+        callout: "Para remover todos os dados armazenados localmente por qualquer um dos nossos apps, desinstale o app ou limpe seu armazenamento nas configurações do aparelho (<em>Configurações → Apps → [o app] → Armazenamento → Limpar dados</em>). Isso apaga a cópia no aparelho; um backup que o Android já fez é removido em <em>Configurações do Android → Google → Backup</em>, e um salvamento na nuvem do Play Games, na sua conta do Play Games."
+      },
+      sec9: {
+        title: "Alterações nesta política",
+        body: "Podemos atualizar esta Política de Privacidade de tempos em tempos — por exemplo quando adicionamos novos títulos, mudamos de parceiros de publicidade ou atualizamos a mecânica de assinatura. A data \"Última atualização\" no topo da página indica quando a mudança mais recente foi feita. Mudanças relevantes são refletidas no app na próxima abertura."
+      },
+      sec10: { title: "Contato", body: "Para dúvidas de privacidade sobre qualquer um dos nossos apps, escreva para <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a>. Tentamos responder em um prazo razoável." },
+      footer: { copyright: "© Vaslix Games · Publisher Android independente", home: "Início", contact: "Contato", backToTop: "Voltar ao topo ↑" }
+    },
+    zh: {
+      meta: { title: "隐私政策 — Vaslix Games", description: "Vaslix Games 如何处理旗下所有 Android 应用（游戏及音频/播客类）中的数据。通俗摘要、完整政策，以及 GDPR/CCPA/COPPA 说明。", ogTitle: "隐私政策 — Vaslix Games", ogDesc: "Vaslix Games 存储什么、不存储什么，以及我们的应用如何使用 Google Play 结算与广告聚合。" },
+      nav: { brand: "Vaslix Games", pill: "隐私", back: "← 返回首页", langLabel: "切换语言" },
+      hero: {
+        eyebrow: "通俗摘要在前，完整法律文本在后",
+        title: "隐私政策",
+        lede: "Vaslix Games 如何处理旗下所有 Android 应用中的信息——包括游戏与音频/播客类作品。无论类型或形式，本政策对我们发布的每一款应用同样适用。无需账号，没有我们自己的服务器，不玩花样。<strong>目前覆盖 Gridlix:2048 与 Blocklix，两者均已在 Google Play 上线；音频/播客类作品正在开发中。</strong>",
+        chip: { updated: "最近更新", gdpr: "遵循 GDPR / CCPA / COPPA", billing: "Google Play 结算" }
+      },
+      summary: {
+        1: { title: "留在你设备上的内容", desc: "游戏状态、设置、最佳成绩，以及缓存的 Premium 状态标记。这些都不会到达我们的任何服务器——Android 自带的备份可能会把它们复制到你自己的 Google 账号中（§1d）。" },
+        2: { title: "我们永远看不到的内容", desc: "支付信息、你的 Google 账号邮箱、账号标识、联系人、照片，或除广告网络基于 IP 的粗略估算之外的位置信息。" },
+        3: { title: "广告与 Premium", desc: "免费用户会通过 Appodeal 聚合（部分作品还包括 Google AdMob）看到横幅、插屏及偶尔的冷启动广告。Premium 与一次性购买「去广告」会关闭这些广告。激励视频对所有人都是自愿的：只有当你点击「观看以获取奖励」的提示时才会播放。" },
+        4: { title: "设备标识符", desc: "系统会读取你的 Google 广告 ID 与 Android 设备 ID，以便广告网络投放并限制广告频次，以及让 Google Play 结算核验你的订阅权益。两者都可在 Android 设置中重置。" },
+        aria: "摘要",
+        heading: "简短版本"
+      },
+      toc: {
+        1: "1. 我们收集的信息",
+        2: "2. 广告合作方",
+        3: "3. 订阅与 Play 结算",
+        4: "4. 法律依据（GDPR）",
+        5: "5. CCPA / 美国州级法律",
+        6: "6. 儿童隐私",
+        7: "7. 数据保留",
+        8: "8. 你的权利",
+        9: "9. 本政策的变更",
+        10: "10. 联系方式",
+        aria: "目录",
+        title: "本页内容"
+      },
+      sec1: {
+        title: "我们收集的信息",
+        intro: "我们的应用无需创建账号，我们也不会有意直接收集个人信息。信息分为两类。",
+        h3a: "1a. 本地存储在你的设备上",
+        body1a: "每款应用都会在你设备上的本地 Room/SQLite 数据库（或等效的本地存储）中保存以下内容。我们绝不会将其上传到我们的任何服务器；Android 自带的备份服务可能会将其复制到你的个人 Google 账号中，详见 1d：",
+        list1a: {
+          1: "应用专属状态——例如拼图类作品中的棋盘、分数、道具与续命次数；播客/音频类作品中的播放进度、已订阅的源、播放队列与离线下载缓存",
+          2: "最佳对局历史与最高分（拼图类作品），或收听历史（音频类作品），仅作为本地记录保存",
+          3: "应用设置：声音开关、振动开关、主题模式、播放速度及类似的各应用偏好",
+          4: "用于决定是否显示欢迎付费页的首次启动标记",
+          5: "你订阅状态的缓存摘要——有效/无效、方案、商品 ID、基础方案 ID——以便应用在启动时立即应用你的 Premium 权益，而无需等待网络"
+        },
+        callout: "<strong>不会在本地存储的内容：</strong>支付信息、购买令牌与 Google 账号标识。这些都不会离开 Google Play。",
+        h3b: "1b. 由第三方代我们收集",
+        body1b: "下文所述的第三方服务可能会自动收集技术信息及与广告相关的信息：",
+        list1b: {
+          1: "Google 广告 ID（GAID）——读取它是为了让广告网络投放广告、限制频次并归因安装。当 Premium 或「去广告」生效时，它不再用于横幅、插屏或冷启动广告；如果你主动选择观看激励视频，它仍会被处理。",
+          2: "Android 设备 ID（SSAID）——每次启动时读取，作为稳定的、限于本应用的设备标识。Google Play 结算用它核验你的订阅权益，广告聚合 SDK 用它识别欺诈与无效流量。它仅与本应用的签名密钥关联，不会与你的 Google 账号绑定。",
+          3: "IP 地址及由此推算的大致地理位置",
+          4: "设备型号、操作系统版本、语言与时区",
+          5: "应用版本、会话时间戳与崩溃诊断信息",
+          6: "聚合的、无法识别个人的使用事件——包括音频类作品中的播客/音频播放事件（单集开始、完成、跳过），仅以聚合形式使用"
+        },
+        deviceIdCallout: "<strong>我们为何披露这一点：</strong>Google Play 的「数据安全」表单要求申报每一次对广告 ID 与 Android 设备 ID 的读取，无论该值是否离开你的设备。你可以随时在<em>Android 设置 → 隐私 → 广告</em>中重置广告 ID；Android ID 会在设备恢复出厂设置时重新生成。",
+        h3c: "1c. 分析、崩溃报告与远程配置（Google Firebase）",
+        firebase: "我们的部分应用（目前为 Blocklix）集成了 <strong>Google Firebase Analytics</strong> 与 <strong>Firebase Remote Config</strong>。Firebase Analytics 收集一个随机的应用实例 ID、设备与系统信息，以及聚合的应用内事件（例如「对局结束」「购买完成」「广告已观看」），以便我们了解整体使用情况并平衡游戏经济；我们不会用它建立广告画像。Firebase Remote Config 下载一小组配置值（功能开关与游戏平衡数值），除请求的技术元数据外不发送任何个人数据。<strong>Firebase Crashlytics</strong> 会在应用崩溃或卡死时发送一份报告：调用栈、设备型号、系统与应用版本，以及一个随机的安装标识——足以定位问题，且不包含你输入或游玩的任何内容。详情：<a href=\"https://firebase.google.com/support/privacy\" target=\"_blank\" rel=\"noopener\">firebase.google.com/support/privacy ↗</a>。",
+        h3d: "1d. 备份与云存档",
+        backup: "<strong>我们的应用已启用 Android 自带的备份。</strong>如果你的设备开启了备份，Android 会把 1a 中列出的本地数据——棋盘、分数、设置、解锁内容——复制到你的个人 Google 账号，并在你用同一账号重新安装或设置新设备时恢复。这份副本属于你：由 Android 管理并加密，我们既无法读取也无法删除。你可以在<em>Android 设置 → Google → 备份</em>中管理它。另外，<strong>Blocklix 提供基于 Google Play Games 存档服务（Saved Games）的可选云存档</strong>：在你自己的 Play Games 存储空间中保存一份存档文件，让进度可以跟随你在设备间切换。它在未登录 Play Games 时绝不会运行，只包含游戏进度——绝不包含订阅状态或购买数据——并且由 Google 提供服务，而非我们的服务器。该功能发布时处于关闭状态，正在逐步开放；如果你已登录但不想使用，请在应用内退出 Play Games。"
+      },
+      sec2: {
+        title: "广告合作方",
+        intro: "我们的应用可能会展示横幅广告、偶尔的插屏广告——包括返回应用时的冷启动广告——以及你主动选择观看以换取游戏内奖励（道具、失败后续命、奖励金币等）的激励视频广告。Premium 订阅或一次性购买「去广告」会关闭横幅、插屏与冷启动广告；激励视频对所有用户仍然可用，且只在你点击其提示后才会播放。我们与下列广告服务商合作，视应用不同而同时或单独使用。",
+        h3a: "Appodeal 聚合",
+        appodeal1: "我们使用 <a href=\"https://www.appodeal.com/\" target=\"_blank\" rel=\"noopener\">Appodeal</a> 作为主要的广告聚合合作方。Appodeal 的隐私政策见 <a href=\"https://www.appodeal.com/privacy-policy\" target=\"_blank\" rel=\"noopener\">appodeal.com/privacy-policy ↗</a>。",
+        appodeal2: "Appodeal 聚合了大量广告网络的需求，实际启用的网络会随着 Appodeal 更新其 SDK 以及我们调整构建配置而变化。当前的权威列表由 Appodeal 发布：",
+        appodeal3: "该页面上的每个网络都链接到各自的隐私政策。与广告个性化相关的具体隐私问题，可直接在同一网站向 Appodeal 提出。",
+        h3b: "Google AdMob",
+        admob: "我们的部分应用也会直接通过 Google AdMob 投放展示、原生或激励广告。Google 的广告数据实践见 <a href=\"https://policies.google.com/technologies/ads\" target=\"_blank\" rel=\"noopener\">policies.google.com/technologies/ads ↗</a>，Google 隐私政策见 <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>。你可以在 <a href=\"https://adssettings.google.com/\" target=\"_blank\" rel=\"noopener\">adssettings.google.com ↗</a> 关闭 Google 个性化广告。",
+        callout: "<strong>Premium 订阅用户与购买了「去广告」的用户不会看到横幅、插屏或冷启动广告。</strong>激励视频绝不会强加给任何人——无论免费还是付费，都只在明确点击「观看以获取奖励」的提示后才开始播放。在应用启动、权益尚未确认之前，仍可能与广告服务商发生少量初始化通信。"
+      },
+      sec3: {
+        title: "订阅与应用内购买（Google Play 结算）",
+        intro: "我们的每款应用都可能提供可选的 Premium 订阅——视作品不同提供按周、按月、按年自动续订的方案，年度方案对符合条件的新订阅者提供入门免费试用——它会关闭横幅、插屏与冷启动广告，并解锁该应用特有的高级功能（例如拼图类作品中的双倍金币与每日礼物，或播客/音频类作品中的离线下载与无广告播放）。部分作品还销售一次性商品：金币包、新手礼包、存钱罐提取，以及与 Premium 广告范围相同的永久「去广告」解锁。所有商品均由 Google 通过 Google Play 结算销售和处理。",
+        list: {
+          1: "所有支付、账单、账户与税务信息均由 Google 收集和处理。我们不会看到、存储或传输你的支付方式、Google 账号邮箱或任何政府身份标识。",
+          2: "应用只从 Google 收到一个无法识别个人的权益信号：你的安装是否存在有效订阅（商品 ID 与基础方案 ID），以及购买了哪些一次性商品。该信号按 §1a 所述缓存在本地。",
+          3: "订阅管理、取消、退款申请与续订日期全部在 Google Play 中处理。应用内的「管理」按钮会直接跳转到 Google Play 订阅页面。",
+          4: "Google Play 的隐私政策适用于所有与结算相关的处理：<a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>"
+        }
+      },
+      sec4: { title: "法律依据与同意（GDPR / 欧洲经济区、英国、瑞士）", body: "如果你位于欧洲经济区、英国或瑞士，与广告相关的处理的法律依据是你的同意，该同意通过首次启动应用时显示的 IAB 透明度与同意框架（TCF）对话框收集。你可以随时撤回或更改同意——在应用提供的应用内隐私设置中操作，或清除应用数据（设置 → 应用），下次启动时会再次显示同意对话框。通过 Google Play 结算处理订阅数据的法律依据，是你购买订阅时所订立合同的履行。" },
+      sec5: { title: "CCPA / 美国州级隐私法", body: "如果你是加利福尼亚州居民，或位于其他适用的美国州，你有权拒绝为行为广告目的「出售」或「共享」你的个人信息。应用内的同意对话框会在法律要求的地方提供这一拒绝选项。Google Play 对订阅的处理不构成个人信息的「出售」。" },
+      sec6: { title: "儿童隐私（COPPA）", body: "我们的应用并非面向 13 岁以下儿童（或你所在司法辖区的同等最低年龄）。我们不会有意收集儿童的个人信息。Premium 订阅面向成年购买者；应用内购买需要具备相应购买权限的 Google Play 账号。" },
+      sec7: { title: "数据保留", body: "§1a 所述的本地存储数据会保留在你的设备上，直到你清除应用数据或卸载应用。我们不会在自己的服务器上保留个人信息。Android 自带备份服务生成的副本——以及你若启用了的 Play Games 云存档——保存在你自己的 Google 账号中：分别在 Android 设置 → Google → 备份 和你的 Play Games 账号中删除。广告合作方与 Google Play 按各自的政策保留数据。" },
+      sec8: {
+        title: "你的权利",
+        body: "根据你所在的司法辖区，你可能有权访问、更正、删除、限制或转移你的个人数据，并向监管机构提出投诉。由于我们并不直接持有这些数据，相关请求应提交给对应的广告合作方，或——对于结算数据——提交给 Google Play。",
+        callout: "要删除我们任一应用在本地存储的全部数据，请卸载该应用，或在设备设置中清除其存储（<em>设置 → 应用 → [该应用] → 存储 → 清除数据</em>）。这会清除设备上的副本；Android 已生成的备份可在<em>Android 设置 → Google → 备份</em>中删除，Play Games 云存档则在你的 Play Games 账号中删除。"
+      },
+      sec9: { title: "本政策的变更", body: "我们可能会不时更新本隐私政策——例如新增作品、更换广告合作方或调整订阅机制时。页面顶部的「最近更新」日期表示最近一次变更的时间。重大变更会在下次启动时在应用内体现。" },
+      sec10: { title: "联系方式", body: "关于我们任一应用的隐私问题，请发送邮件至 <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a>。我们会尽量在合理时间内回复。" },
+      footer: { copyright: "© Vaslix Games · 独立 Android 发行工作室", home: "首页", contact: "联系", backToTop: "回到顶部 ↑" }
     }
   };
 
   // ─────────────────────────────────────────────────────────
   // Locale apply + switcher
   // ─────────────────────────────────────────────────────────
-  const LANG_LIST = ['en', 'ru', 'es', 'de', 'fr'];
-  const LANG_FLAGS = { en: '🇬🇧', ru: '🇷🇺', es: '🇪🇸', de: '🇩🇪', fr: '🇫🇷' };
+  const LANG_LIST = ['en', 'ru', 'es', 'de', 'fr', 'pt-BR', 'zh'];
+  const LANG_FLAGS = { en: '🇬🇧', ru: '🇷🇺', es: '🇪🇸', de: '🇩🇪', fr: '🇫🇷', 'pt-BR': '🇧🇷', zh: '🇨🇳' };
+  // The pill shows a two-letter code; 'pt-BR' would otherwise render as PT-BR.
+  const LANG_CODES = { 'pt-BR': 'PT' };
   const LANG_KEY = 'vaslix.lang';
 
   function get(dict, path) {
@@ -1555,7 +1773,7 @@
     const flagEl = document.getElementById('langCurrentFlag');
     const codeEl = document.getElementById('langCurrentCode');
     if (flagEl) flagEl.textContent = LANG_FLAGS[loc] || LANG_FLAGS.en;
-    if (codeEl) codeEl.textContent = loc.toUpperCase();
+    if (codeEl) codeEl.textContent = LANG_CODES[loc] || loc.toUpperCase();
     const btn = document.getElementById('langSwitcher');
     if (btn && dict.nav && dict.nav.langLabel) btn.setAttribute('aria-label', dict.nav.langLabel);
     document.querySelectorAll('#langMenu li').forEach(function (li) {
@@ -1569,8 +1787,18 @@
     let saved = null;
     try { saved = localStorage.getItem(LANG_KEY); } catch (e) {}
     if (saved && LANG_LIST.indexOf(saved) >= 0) return saved;
-    const nav = (navigator.language || 'en').slice(0, 2).toLowerCase();
-    return (LANG_LIST.indexOf(nav) >= 0) ? nav : 'en';
+    const raw = (navigator.language || 'en');
+    // Try full BCP47 first (catches 'pt-BR', 'zh-CN', etc. — normalize case),
+    // then the bare language; Chinese variants all collapse to 'zh'.
+    const full = raw.split('-');
+    const candidates = [];
+    if (full.length > 1) candidates.push(full[0].toLowerCase() + '-' + full[1].toUpperCase());
+    candidates.push(full[0].toLowerCase());
+    if (full[0].toLowerCase() === 'zh') candidates.push('zh');
+    for (let i = 0; i < candidates.length; i++) {
+      if (LANG_LIST.indexOf(candidates[i]) >= 0) return candidates[i];
+    }
+    return 'en';
   }
 
   (function initSwitcher() {
