@@ -7,7 +7,7 @@ const { el, tx, esc, attrsOf, i18nAttr, t } = require('./html');
 const { LOCALES } = require('./i18n');
 const { games, live, storeUrl, pageUrl, LIVE } = require('../data/games');
 
-const SITE = 'https://vaslixgames.com';
+const SITE = 'https://egorvasl.github.io';
 
 /** The language menu names each language in that language, so it is not translated. */
 const LANGUAGES = [
