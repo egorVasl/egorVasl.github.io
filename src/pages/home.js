@@ -4,7 +4,7 @@
  * generated from the catalogue, including the panel that has no game in it.
  */
 const { el, tx, esc, t, i18nAttr } = require('../lib/html');
-const { sectionHead, playBadge, factGrid, chips, button, playGlyph } = require('../lib/layout');
+const { sectionHead, playBadge, factGrid, chips, button, chevronDown, arrowRight } = require('../lib/layout');
 const { games, live, storeUrl, pageUrl, studioNumbers, LIVE, DEV } = require('../data/games');
 
 const idx = (n) => String(n + 1).padStart(2, '0');
@@ -35,7 +35,7 @@ function panel(game, i) {
               ${isLive
                 ? `<a class="gp-link" href="${storeUrl(game)}" target="_blank" rel="noopener"
                      ${i18nAttr({ 'aria-label': `g.${game.id}.playAria` })}>${playBadge(game)}</a>
-                   <span class="panel-more">${el('span', 'shelf.more')}<span class="arrow" aria-hidden="true">→</span></span>`
+                   <span class="panel-more">${el('span', 'shelf.more')}${arrowRight}</span>`
                 : el('span', `g.${game.id}.when`, { class: 'panel-when' })}
             </div>
           </div>
@@ -124,7 +124,7 @@ function hero() {
         </h1>
         ${el('p', 'hero.lede', { class: 'hero-lede' })}
         <div class="hero-ctas">
-          ${button('hero.cta.shelf', '#shelf', { icon: playGlyph })}
+          ${button('hero.cta.games', '#shelf', { icon: chevronDown })}
           ${button('hero.cta.studio', 'studio.html', { variant: 'ghost' })}
         </div>
         <div class="hero-games">${buttons}</div>

@@ -4,7 +4,7 @@
  * colour and localised label comes out of the data extracted from the app.
  */
 const { el, tx, esc, t, i18nAttr } = require('../lib/html');
-const { sectionHead, playBadge, factGrid, chips, button } = require('../lib/layout');
+const { sectionHead, playBadge, factGrid, chips, button, arrowLeft } = require('../lib/layout');
 const { games, live, storeUrl, pageUrl, data, LIVE } = require('../data/games');
 
 /** Section wrapper with the standard header. */
@@ -202,7 +202,7 @@ function hero(g) {
     <canvas class="hero-art" data-motif="${g.motif}" aria-hidden="true"></canvas>
     <div class="wrap">
       <a class="back" href="index.html#shelf">
-        <span class="arrow" aria-hidden="true">←</span>${el('span', 'gp.back')}
+        ${arrowLeft}${el('span', 'gp.back')}
       </a>
       <div class="game-hero-in">
         <div class="game-hero-text">

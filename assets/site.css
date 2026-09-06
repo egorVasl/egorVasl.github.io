@@ -212,7 +212,11 @@ body.theme-flipping * { transition: background-color 200ms, color 200ms, border-
 .btn:active { transform: translate(var(--mx, 0), calc(var(--my, 0) + 5px)); box-shadow: 0 1px 0 var(--edge), 0 6px 12px rgba(23,27,48,.14); }
 .btn.ghost { --face: var(--sur); --ink: var(--tx); --edge: var(--bd-2); border: 1px solid var(--bd); box-shadow: 0 5px 0 var(--edge), 0 10px 24px rgba(23,27,48,.08); }
 .btn svg { width: 18px; height: 18px; }
-.btn .play-glyph { width: 15px; height: 17px; }
+/* Line glyphs, drawn once: a chevron on a button that scrolls, an arrow on a
+   link that goes somewhere. They inherit the ink of whatever carries them. */
+.glyph { width: 16px; height: 16px; fill: none; stroke: currentColor;
+         stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.btn .chev { width: 17px; height: 17px; stroke-width: 2.6; }
 .gp-badge { height: 58px; width: auto; }
 .gp-link { display: inline-block; border-radius: 8px; transition: transform var(--press) var(--ease-spring); }
 .gp-link:hover { transform: translateY(-2px); }
@@ -324,7 +328,7 @@ body.theme-flipping * { transition: background-color 200ms, color 200ms, border-
 .panel-tag { margin: -6px 0 0; color: var(--tx-2); font-size: 15px; }
 .panel-foot { position: relative; z-index: 3; margin-top: auto; display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
 .panel-more { display: inline-flex; align-items: center; gap: 8px; font: 800 13px/1 var(--font-b); color: var(--acc); }
-.panel-more .arrow { transition: transform 220ms var(--ease-out); }
+.panel-more .arrow { width: 15px; height: 15px; transition: transform 220ms var(--ease-out); }
 .panel:hover .panel-more .arrow { transform: translateX(4px); }
 .panel-when { font: 700 12.5px/1 var(--font-b); color: var(--mu); padding: 10px 0; }
 .panel-hit { position: absolute; inset: 0; z-index: 2; border-radius: var(--r-l); }
@@ -423,7 +427,7 @@ body.theme-flipping * { transition: background-color 200ms, color 200ms, border-
 /* ── game page: hero, steps ────────────────────────────────────────────── */
 .back { display: inline-flex; align-items: center; gap: 8px; font: 700 13px/1 var(--font-b); color: var(--mu); padding: 8px 0; }
 .back:hover { color: var(--tx); }
-.back .arrow { transition: transform 200ms var(--ease-out); }
+.back .arrow { width: 15px; height: 15px; transition: transform 200ms var(--ease-out); }
 .back:hover .arrow { transform: translateX(-3px); }
 .game-hero-in { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 420px); gap: 44px; align-items: center; margin-top: 18px; }
 .game-top { display: flex; align-items: center; gap: 18px; }

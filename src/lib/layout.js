@@ -65,11 +65,19 @@ function button(key, href, { variant = 'cta', icon = '', attrs = {} } = {}) {
   return `<a class="${cls}" href="${esc(href)}"${attrsOf(attrs)}>${icon}${el('span', key)}</a>`;
 }
 
-const playGlyph = `<svg class="play-glyph" viewBox="0 0 20 22" aria-hidden="true">` +
-  `<path d="M1 1.4v19.2a1 1 0 0 0 1.5.87l16.2-9.6a1 1 0 0 0 0-1.74L2.5.53A1 1 0 0 0 1 1.4Z" fill="url(#pg)"/>` +
-  `<defs><linearGradient id="pg" x1="0" y1="0" x2="20" y2="22" gradientUnits="userSpaceOnUse">` +
-  `<stop stop-color="#00D2FF"/><stop offset=".5" stop-color="#4F83F5"/><stop offset="1" stop-color="#FFCE00"/>` +
-  `</linearGradient></defs></svg>`;
+/**
+ * The line glyphs. One stroke family across the site: the rail buttons, the
+ * language caret, the arrow on a panel and the chevron on a button are all
+ * drawn the same way, so a link never has to borrow a text character to point
+ * somewhere. A glyph says what its control does — a chevron pointing down
+ * belongs on something that scrolls down, and nothing else does.
+ */
+const glyph = (d, cls = 'glyph') =>
+  `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true"><path d="${d}"/></svg>`;
+
+const chevronDown = glyph('m5 9 7 7 7-7', 'glyph chev');
+const arrowRight = glyph('M4 12h15m-6-6 6 6-6 6', 'glyph arrow');
+const arrowLeft = glyph('M20 12H5m6-6-6 6 6 6', 'glyph arrow');
 
 // ── navigation ──────────────────────────────────────────────────────────────
 
@@ -221,6 +229,7 @@ ${scripts.map((s) => `<script src="${s}?v=__V__"></script>`).join("\n")}
 }
 
 module.exports = {
-  page, nav, footer, sectionHead, playBadge, factGrid, chips, button, playGlyph,
+  page, nav, footer, sectionHead, playBadge, factGrid, chips, button,
+  glyph, chevronDown, arrowRight, arrowLeft,
   LANGUAGES, SITE, badgeSrc, externalAttrs,
 };
