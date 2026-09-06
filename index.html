@@ -2500,7 +2500,7 @@
     window.addEventListener('resize', size, { passive: true });
     function rr(x, y, w, h, r) { ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath(); }
     jobs.push(function (dt) {
-      const cw = cv.getBoundingClientRect().width; if (Math.abs(cw - W) > 2) { const k = cw / (W || cw); size(); blocks.forEach(function (b) { b.x = Math.min(W, b.x * k); }); }
+      const cw = cv.getBoundingClientRect().width; if (Math.abs(cw - W) > 2) { const w0 = W; size(); blocks.forEach(function (b) { b.x = w0 > 0 ? Math.min(W, b.x * (W / w0)) : Math.random() * W; }); }
       ctx.clearRect(0, 0, W, H);
       const k = dt / 16.7;
       for (let i = 0; i < blocks.length; i++) {
