@@ -1,0 +1,749 @@
+{
+  "meta.privacy.title": {
+    "en": "Privacy Policy — Vaslix Games",
+    "ru": "Политика конфиденциальности — Vaslix Games",
+    "es": "Política de Privacidad — Vaslix Games",
+    "de": "Datenschutzerklärung — Vaslix Games",
+    "fr": "Politique de confidentialité — Vaslix Games",
+    "pt-BR": "Política de Privacidade — Vaslix Games",
+    "zh": "隐私政策 — Vaslix Games"
+  },
+  "meta.privacy.desc": {
+    "en": "How Vaslix Games handles data across all our Android apps — games and audio/podcast titles. Plain-language summary, full policy, GDPR/CCPA/COPPA notes.",
+    "ru": "Как Vaslix Games обращается с данными во всех наших Android-приложениях — играх и аудио/подкаст-приложениях. Краткое объяснение, полный текст, заметки по GDPR/CCPA/COPPA.",
+    "es": "Cómo Vaslix Games gestiona los datos en todas nuestras apps Android — juegos y títulos de audio/podcast. Resumen claro, política completa, notas sobre GDPR/CCPA/COPPA.",
+    "de": "Wie Vaslix Games Daten in allen unseren Android-Apps verarbeitet — Spielen und Audio-/Podcast-Titeln. Klartext-Zusammenfassung, vollständige Erklärung, GDPR/CCPA/COPPA-Hinweise.",
+    "fr": "Comment Vaslix Games traite les données dans toutes nos apps Android — jeux et titres audio/podcast. Résumé clair, politique complète, notes GDPR/CCPA/COPPA.",
+    "pt-BR": "Como a Vaslix Games trata dados em todos os nossos apps Android — jogos e títulos de áudio/podcast. Resumo em linguagem simples, política completa, notas sobre GDPR/CCPA/COPPA.",
+    "zh": "Vaslix Games 如何处理旗下所有 Android 应用（游戏及音频/播客类）中的数据。通俗摘要、完整政策，以及 GDPR/CCPA/COPPA 说明。"
+  },
+  "p.hero.eyebrow": {
+    "en": "Plain-language summary, full legal text below",
+    "ru": "Краткое объяснение простым языком, полный юридический текст ниже",
+    "es": "Resumen en lenguaje claro, texto legal completo abajo",
+    "de": "Klartext-Zusammenfassung, vollständiger Rechtstext unten",
+    "fr": "Résumé en langage clair, texte légal complet ci-dessous",
+    "pt-BR": "Resumo em linguagem simples; texto legal completo abaixo",
+    "zh": "通俗摘要在前，完整法律文本在后"
+  },
+  "p.hero.title": {
+    "en": "Privacy Policy",
+    "ru": "Политика конфиденциальности",
+    "es": "Política de Privacidad",
+    "de": "Datenschutzerklärung",
+    "fr": "Politique de confidentialité",
+    "pt-BR": "Política de Privacidade",
+    "zh": "隐私政策"
+  },
+  "p.hero.lede": {
+    "en": "How Vaslix Games handles information across all our Android apps — games and audio/podcast titles. This policy applies the same way to every app we release, regardless of genre or format. No accounts, no servers of our own, no nonsense. <strong>Currently covers Gridlix:2048 and Blocklix, both live on Google Play; audio/podcast titles in development.</strong>",
+    "ru": "Как Vaslix Games обращается с информацией во всех наших Android-приложениях — играх и аудио/подкаст-приложениях. Политика применяется одинаково ко всем выпускаемым нами приложениям, независимо от жанра и формата. Без аккаунтов, без своих серверов, без сюрпризов. <strong>Сейчас распространяется на Gridlix:2048 и Blocklix — оба доступны в Google Play; аудио/подкаст-приложения в разработке.</strong>",
+    "es": "Cómo Vaslix Games gestiona la información en todas nuestras apps Android — juegos y títulos de audio/podcast. Esta política se aplica igual a cada app que publicamos, sin importar género o formato. Sin cuentas, sin servidores propios, sin tonterías. <strong>Actualmente cubre Gridlix:2048 y Blocklix, ambos disponibles en Google Play; títulos de audio/podcast en desarrollo.</strong>",
+    "de": "Wie Vaslix Games Informationen in allen unseren Android-Apps verarbeitet — Spielen und Audio-/Podcast-Titeln. Diese Erklärung gilt einheitlich für jede App, die wir veröffentlichen, unabhängig von Genre oder Format. Keine Konten, keine eigenen Server, kein Unsinn. <strong>Gilt aktuell für Gridlix:2048 und Blocklix, beide auf Google Play verfügbar; Audio-/Podcast-Titel in Entwicklung.</strong>",
+    "fr": "Comment Vaslix Games traite les informations dans toutes nos apps Android — jeux et titres audio/podcast. Cette politique s'applique de la même façon à chaque app que nous publions, quel que soit le genre ou le format. Pas de compte, pas de serveur maison, pas de surprise. <strong>Couvre actuellement Gridlix:2048 et Blocklix, tous deux disponibles sur Google Play ; titres audio/podcast en développement.</strong>",
+    "pt-BR": "Como a Vaslix Games trata informações em todos os nossos apps Android — jogos e títulos de áudio/podcast. Esta política se aplica da mesma forma a cada app que publicamos, independentemente de gênero ou formato. Sem contas, sem servidores próprios, sem surpresas. <strong>Atualmente cobre Gridlix:2048 e Blocklix, ambos disponíveis na Google Play; títulos de áudio/podcast em desenvolvimento.</strong>",
+    "zh": "Vaslix Games 如何处理旗下所有 Android 应用中的信息——包括游戏与音频/播客类作品。无论类型或形式，本政策对我们发布的每一款应用同样适用。无需账号，没有我们自己的服务器，不玩花样。<strong>目前覆盖 Gridlix:2048 与 Blocklix，两者均已在 Google Play 上线；音频/播客类作品正在开发中。</strong>"
+  },
+  "p.hero.chip.updated": {
+    "en": "Last updated",
+    "ru": "Обновлено",
+    "es": "Actualizado",
+    "de": "Zuletzt aktualisiert",
+    "fr": "Mis à jour",
+    "pt-BR": "Última atualização",
+    "zh": "最近更新"
+  },
+  "p.hero.chip.gdpr": {
+    "en": "GDPR / CCPA / COPPA aware",
+    "ru": "С учётом GDPR / CCPA / COPPA",
+    "es": "Cumple GDPR / CCPA / COPPA",
+    "de": "GDPR / CCPA / COPPA-konform",
+    "fr": "Conforme GDPR / CCPA / COPPA",
+    "pt-BR": "Alinhada a GDPR / CCPA / COPPA",
+    "zh": "遵循 GDPR / CCPA / COPPA"
+  },
+  "p.hero.chip.billing": {
+    "en": "Google Play Billing",
+    "ru": "Google Play Billing",
+    "es": "Google Play Billing",
+    "de": "Google Play Billing",
+    "fr": "Google Play Billing",
+    "pt-BR": "Google Play Billing",
+    "zh": "Google Play 结算"
+  },
+  "p.summary.1.title": {
+    "en": "What stays on your device",
+    "ru": "Что остаётся на вашем устройстве",
+    "es": "Qué se queda en tu dispositivo",
+    "de": "Was auf deinem Gerät bleibt",
+    "fr": "Ce qui reste sur votre appareil",
+    "pt-BR": "O que fica no seu aparelho",
+    "zh": "留在你设备上的内容"
+  },
+  "p.summary.1.desc": {
+    "en": "Game state, settings, best scores, and a cached premium-status flag. None of it reaches a server of ours — Android's own backup may copy it into your own Google account (§1d).",
+    "ru": "Прогресс игры, настройки, лучшие результаты и кэшированный признак Premium-статуса. Ни на один наш сервер это не попадает — но собственный бэкап Android может скопировать их в ваш же аккаунт Google (§1d).",
+    "es": "El estado del juego, ajustes, mejores puntuaciones y una marca cacheada de Premium. Nada de esto llega a un servidor nuestro — la copia de seguridad del propio Android puede llevarlo a tu propia cuenta de Google (§1d).",
+    "de": "Spielstand, Einstellungen, Bestleistungen und ein gecachtes Premium-Status-Flag. Nichts davon erreicht einen Server von uns — Androids eigene Sicherung kann es in dein eigenes Google-Konto kopieren (§1d).",
+    "fr": "État de jeu, réglages, meilleurs scores et un drapeau Premium mis en cache. Rien de tout cela n'atteint un serveur à nous — la sauvegarde d'Android peut en revanche le copier dans votre propre compte Google (§1d).",
+    "pt-BR": "Estado do jogo, configurações, melhores pontuações e uma marca de status Premium em cache. Nada disso chega a um servidor nosso — o backup do próprio Android pode copiar tudo para a sua própria conta Google (§1d).",
+    "zh": "游戏状态、设置、最佳成绩，以及缓存的 Premium 状态标记。这些都不会到达我们的任何服务器——Android 自带的备份可能会把它们复制到你自己的 Google 账号中（§1d）。"
+  },
+  "p.summary.2.title": {
+    "en": "What we never see",
+    "ru": "Чего мы никогда не видим",
+    "es": "Qué nunca vemos",
+    "de": "Was wir nie sehen",
+    "fr": "Ce que nous ne voyons jamais",
+    "pt-BR": "O que nunca vemos",
+    "zh": "我们永远看不到的内容"
+  },
+  "p.summary.2.desc": {
+    "en": "Payment details, your Google account email, account IDs, contacts, photos, or location beyond the IP-based estimate ad networks use.",
+    "ru": "Платёжные данные, email вашего Google-аккаунта, ID аккаунтов, контакты, фото и геолокацию точнее, чем приблизительная оценка по IP, которой пользуются рекламные сети.",
+    "es": "Datos de pago, tu email de Google, identificadores de cuenta, contactos, fotos o ubicación más allá del estimado por IP que usan las redes publicitarias.",
+    "de": "Zahlungsdetails, deine Google-Konto-E-Mail, Konto-IDs, Kontakte, Fotos oder Standort über die IP-basierte Schätzung der Werbenetzwerke hinaus.",
+    "fr": "Données de paiement, votre e-mail Google, identifiants de compte, contacts, photos ou localisation au-delà de l'estimation par IP des régies publicitaires.",
+    "pt-BR": "Dados de pagamento, o e-mail da sua conta Google, identificadores de conta, contatos, fotos ou localização além da estimativa por IP que as redes de anúncios usam.",
+    "zh": "支付信息、你的 Google 账号邮箱、账号标识、联系人、照片，或除广告网络基于 IP 的粗略估算之外的位置信息。"
+  },
+  "p.summary.3.title": {
+    "en": "Ads vs Premium",
+    "ru": "Реклама и Premium",
+    "es": "Anuncios vs Premium",
+    "de": "Werbung vs. Premium",
+    "fr": "Pubs vs Premium",
+    "pt-BR": "Anúncios vs Premium",
+    "zh": "广告与 Premium"
+  },
+  "p.summary.3.desc": {
+    "en": "Free users see banner, interstitial and occasional app-open ads via Appodeal mediation (plus Google AdMob in some titles). Premium and the one-time Remove Ads purchase turn those off. Rewarded videos are opt-in for everyone: they play only when you tap a watch-to-earn offer.",
+    "ru": "Бесплатные пользователи видят баннеры, межстраничные и изредка app-open объявления через медиацию Appodeal (в части приложений — также Google AdMob). Premium и разовая покупка «Без рекламы» отключают их. Видео с вознаграждением — по желанию для всех: они запускаются только после нажатия на предложение «посмотреть за награду».",
+    "es": "Los usuarios gratuitos ven banners, intersticiales y ocasionales anuncios app-open vía mediación Appodeal (y Google AdMob en algunos títulos). Premium y la compra única de Quitar Anuncios los desactivan. Los vídeos rewarded son opcionales para todos: solo se reproducen cuando tocas una oferta de recompensa.",
+    "de": "Free-Nutzer sehen Banner, Interstitials und gelegentliche App-Open-Anzeigen über Appodeal-Mediation (in einigen Titeln auch Google AdMob). Premium und der einmalige Werbung-entfernen-Kauf schalten diese ab. Rewarded-Videos sind für alle opt-in: Sie laufen nur, wenn du ein Belohnungsangebot antippst.",
+    "fr": "Les utilisateurs gratuits voient des bannières, des interstitiels et d'occasionnels app-open via la médiation Appodeal (et Google AdMob dans certains titres). Premium et l'achat unique Supprimer les pubs les désactivent. Les vidéos rewarded sont opt-in pour tous : elles ne se lancent que lorsque vous touchez une offre de récompense.",
+    "pt-BR": "Usuários gratuitos veem banners, intersticiais e anúncios ocasionais na abertura do app via mediação Appodeal (e Google AdMob em alguns títulos). O Premium e a compra única Remover Anúncios os desligam. Vídeos recompensados são opcionais para todos: só tocam quando você aceita uma oferta de assistir para ganhar.",
+    "zh": "免费用户会通过 Appodeal 聚合（部分作品还包括 Google AdMob）看到横幅、插屏及偶尔的冷启动广告。Premium 与一次性购买「去广告」会关闭这些广告。激励视频对所有人都是自愿的：只有当你点击「观看以获取奖励」的提示时才会播放。"
+  },
+  "p.summary.4.title": {
+    "en": "Device identifiers",
+    "ru": "Идентификаторы устройства",
+    "es": "Identificadores de dispositivo",
+    "de": "Geräte-Identifikatoren",
+    "fr": "Identifiants de l'appareil",
+    "pt-BR": "Identificadores do aparelho",
+    "zh": "设备标识符"
+  },
+  "p.summary.4.desc": {
+    "en": "Your Google Advertising ID and Android device ID are read so ad networks can serve and frequency-cap ads, and so Google Play Billing can verify your subscription entitlement. Both IDs are resettable in Android Settings.",
+    "ru": "Мы считываем Google Advertising ID и Android ID устройства, чтобы рекламные сети могли показывать рекламу и ограничивать её частоту, а Google Play Billing — проверять статус вашей подписки. Оба идентификатора можно сбросить в настройках Android.",
+    "es": "Leemos tu Google Advertising ID y el ID de dispositivo Android para que las redes publicitarias puedan servir y limitar la frecuencia de anuncios, y para que Google Play Billing verifique tu suscripción. Ambos identificadores se pueden restablecer en los ajustes de Android.",
+    "de": "Wir lesen deine Google Advertising ID und die Android-Geräte-ID, damit Werbenetzwerke Werbung ausliefern und in der Häufigkeit begrenzen können und damit Google Play Billing dein Abo-Recht prüfen kann. Beide IDs lassen sich in den Android-Einstellungen zurücksetzen.",
+    "fr": "Votre Google Advertising ID et l'identifiant d'appareil Android sont lus afin que les régies puissent diffuser les pubs, limiter leur fréquence, et que Google Play Billing vérifie votre abonnement. Les deux identifiants se réinitialisent dans les paramètres Android.",
+    "pt-BR": "Seu Google Advertising ID e o ID do aparelho Android são lidos para que as redes de anúncios exibam e limitem a frequência dos anúncios, e para que o Google Play Billing verifique o direito à sua assinatura. Ambos podem ser redefinidos nas Configurações do Android.",
+    "zh": "系统会读取你的 Google 广告 ID 与 Android 设备 ID，以便广告网络投放并限制广告频次，以及让 Google Play 结算核验你的订阅权益。两者都可在 Android 设置中重置。"
+  },
+  "p.summary.aria": {
+    "en": "Summary",
+    "ru": "Краткая сводка",
+    "es": "Resumen",
+    "de": "Zusammenfassung",
+    "fr": "Résumé",
+    "pt-BR": "Resumo",
+    "zh": "摘要"
+  },
+  "p.summary.heading": {
+    "en": "The short version",
+    "ru": "Краткая версия",
+    "es": "Versión corta",
+    "de": "Die Kurzfassung",
+    "fr": "La version courte",
+    "pt-BR": "A versão curta",
+    "zh": "简短版本"
+  },
+  "p.toc.1": {
+    "en": "1. Information we collect",
+    "ru": "1. Какую информацию мы собираем",
+    "es": "1. Información que recopilamos",
+    "de": "1. Welche Informationen wir erfassen",
+    "fr": "1. Informations collectées",
+    "pt-BR": "1. Informações que coletamos",
+    "zh": "1. 我们收集的信息"
+  },
+  "p.toc.2": {
+    "en": "2. Advertising partners",
+    "ru": "2. Рекламные партнёры",
+    "es": "2. Socios publicitarios",
+    "de": "2. Werbepartner",
+    "fr": "2. Partenaires publicitaires",
+    "pt-BR": "2. Parceiros de publicidade",
+    "zh": "2. 广告合作方"
+  },
+  "p.toc.3": {
+    "en": "3. Subscriptions & Play Billing",
+    "ru": "3. Подписки и Play Billing",
+    "es": "3. Suscripciones y Play Billing",
+    "de": "3. Abos & Play Billing",
+    "fr": "3. Abonnements & Play Billing",
+    "pt-BR": "3. Assinaturas e Play Billing",
+    "zh": "3. 订阅与 Play 结算"
+  },
+  "p.toc.4": {
+    "en": "4. Legal basis (GDPR)",
+    "ru": "4. Правовая основа (GDPR)",
+    "es": "4. Base legal (GDPR)",
+    "de": "4. Rechtsgrundlage (GDPR)",
+    "fr": "4. Base légale (GDPR)",
+    "pt-BR": "4. Base legal (GDPR)",
+    "zh": "4. 法律依据（GDPR）"
+  },
+  "p.toc.5": {
+    "en": "5. CCPA / US state laws",
+    "ru": "5. CCPA / законы штатов США",
+    "es": "5. CCPA / leyes estatales EE. UU.",
+    "de": "5. CCPA / US-Gesetze",
+    "fr": "5. CCPA / lois d'État US",
+    "pt-BR": "5. CCPA / leis estaduais dos EUA",
+    "zh": "5. CCPA / 美国州级法律"
+  },
+  "p.toc.6": {
+    "en": "6. Children's privacy",
+    "ru": "6. Конфиденциальность детей",
+    "es": "6. Privacidad infantil",
+    "de": "6. Kinder-Datenschutz",
+    "fr": "6. Vie privée des enfants",
+    "pt-BR": "6. Privacidade de crianças",
+    "zh": "6. 儿童隐私"
+  },
+  "p.toc.7": {
+    "en": "7. Data retention",
+    "ru": "7. Хранение данных",
+    "es": "7. Retención de datos",
+    "de": "7. Datenspeicherung",
+    "fr": "7. Conservation des données",
+    "pt-BR": "7. Retenção de dados",
+    "zh": "7. 数据保留"
+  },
+  "p.toc.8": {
+    "en": "8. Your rights",
+    "ru": "8. Ваши права",
+    "es": "8. Tus derechos",
+    "de": "8. Deine Rechte",
+    "fr": "8. Vos droits",
+    "pt-BR": "8. Seus direitos",
+    "zh": "8. 你的权利"
+  },
+  "p.toc.9": {
+    "en": "9. Changes to this policy",
+    "ru": "9. Изменения политики",
+    "es": "9. Cambios a esta política",
+    "de": "9. Änderungen dieser Erklärung",
+    "fr": "9. Modifications de cette politique",
+    "pt-BR": "9. Alterações nesta política",
+    "zh": "9. 本政策的变更"
+  },
+  "p.toc.10": {
+    "en": "10. Contact",
+    "ru": "10. Контакты",
+    "es": "10. Contacto",
+    "de": "10. Kontakt",
+    "fr": "10. Contact",
+    "pt-BR": "10. Contato",
+    "zh": "10. 联系方式"
+  },
+  "p.toc.aria": {
+    "en": "Table of contents",
+    "ru": "Содержание",
+    "es": "Tabla de contenidos",
+    "de": "Inhaltsverzeichnis",
+    "fr": "Table des matières",
+    "pt-BR": "Sumário",
+    "zh": "目录"
+  },
+  "p.toc.title": {
+    "en": "On this page",
+    "ru": "На этой странице",
+    "es": "En esta página",
+    "de": "Auf dieser Seite",
+    "fr": "Sur cette page",
+    "pt-BR": "Nesta página",
+    "zh": "本页内容"
+  },
+  "p.sec1.title": {
+    "en": "Information we collect",
+    "ru": "Какую информацию мы собираем",
+    "es": "Información que recopilamos",
+    "de": "Welche Informationen wir erfassen",
+    "fr": "Informations collectées",
+    "pt-BR": "Informações que coletamos",
+    "zh": "我们收集的信息"
+  },
+  "p.sec1.intro": {
+    "en": "Our apps do not require account creation and we do not knowingly collect personal information directly. Information falls into two groups.",
+    "ru": "Наши приложения не требуют создания аккаунта, и мы не собираем персональные данные напрямую. Информация делится на две группы.",
+    "es": "Nuestras apps no requieren crear una cuenta y no recopilamos a sabiendas información personal directamente. La información se divide en dos grupos.",
+    "de": "Unsere Apps erfordern keine Kontoerstellung, und wir erheben nicht wissentlich personenbezogene Daten direkt. Informationen verteilen sich auf zwei Gruppen.",
+    "fr": "Nos apps ne nécessitent pas de création de compte et nous ne collectons pas sciemment d'informations personnelles directement. Les informations se répartissent en deux groupes.",
+    "pt-BR": "Nossos apps não exigem criação de conta e não coletamos intencionalmente informações pessoais de forma direta. As informações se dividem em dois grupos.",
+    "zh": "我们的应用无需创建账号，我们也不会有意直接收集个人信息。信息分为两类。"
+  },
+  "p.sec1.h3a": {
+    "en": "1a. Stored locally on your device",
+    "ru": "1a. Хранится локально на вашем устройстве",
+    "es": "1a. Almacenado localmente en tu dispositivo",
+    "de": "1a. Lokal auf deinem Gerät gespeichert",
+    "fr": "1a. Stocké localement sur votre appareil",
+    "pt-BR": "1a. Armazenadas localmente no seu aparelho",
+    "zh": "1a. 本地存储在你的设备上"
+  },
+  "p.sec1.body1a": {
+    "en": "Each app stores the following in a local Room/SQLite database (or an equivalent local store) on your device. We never upload it to a server of ours; Android’s own backup service may copy it into your personal Google account, as described in 1d:",
+    "ru": "Каждое приложение хранит перечисленное ниже в локальной базе Room/SQLite (или эквивалентном локальном хранилище) на вашем устройстве. Мы не выгружаем это ни на один свой сервер; собственная служба резервного копирования Android может скопировать эти данные в ваш личный аккаунт Google — см. 1d:",
+    "es": "Cada app almacena lo siguiente en una base local Room/SQLite (o equivalente) de tu dispositivo. Nosotros no lo subimos a ningún servidor propio; el servicio de copia de seguridad del propio Android puede copiarlo a tu cuenta de Google personal, como se describe en 1d:",
+    "de": "Jede App speichert Folgendes in einer lokalen Room/SQLite-Datenbank (oder einem äquivalenten lokalen Speicher) auf deinem Gerät. Wir laden es auf keinen eigenen Server hoch; Androids eigener Sicherungsdienst kann es in dein persönliches Google-Konto kopieren, wie in 1d beschrieben:",
+    "fr": "Chaque app stocke ce qui suit dans une base Room/SQLite locale (ou équivalent) sur votre appareil. Nous ne l'envoyons sur aucun serveur à nous ; le service de sauvegarde d'Android lui-même peut le copier dans votre compte Google personnel, comme décrit en 1d :",
+    "pt-BR": "Cada app armazena o seguinte em um banco de dados Room/SQLite local (ou um armazenamento local equivalente) no seu aparelho. Nunca enviamos isso a um servidor nosso; o serviço de backup do próprio Android pode copiá-lo para a sua conta Google pessoal, como descrito em 1d:",
+    "zh": "每款应用都会在你设备上的本地 Room/SQLite 数据库（或等效的本地存储）中保存以下内容。我们绝不会将其上传到我们的任何服务器；Android 自带的备份服务可能会将其复制到你的个人 Google 账号中，详见 1d："
+  },
+  "p.sec1.list1a.1": {
+    "en": "App-specific state — e.g. game board, score, boosters, and continues for puzzle titles; playback position, subscribed feeds, queue, and the offline download cache for podcast/audio titles",
+    "ru": "Состояние, специфичное для приложения — например, поле, счёт, бустеры и продолжения для пазлов; позиция воспроизведения, подписки на ленты, очередь и кэш офлайн-загрузок для подкаст/аудио-приложений",
+    "es": "Estado específico de la app — p. ej. tablero, puntuación, boosters y continues en títulos de puzzle; posición de reproducción, feeds suscritos, cola y caché de descargas offline en títulos de podcast/audio",
+    "de": "App-spezifischer Zustand — z. B. Spielfeld, Punkte, Booster und Continues bei Puzzle-Titeln; Wiedergabeposition, abonnierte Feeds, Warteschlange und Offline-Download-Cache bei Podcast/Audio-Titeln",
+    "fr": "État spécifique à l'app — par ex. plateau, score, boosters et continues pour les puzzles ; position de lecture, flux suivis, file d'attente et cache de téléchargement hors-ligne pour les titres podcast/audio",
+    "pt-BR": "Estado específico do app — por exemplo tabuleiro, pontuação, boosters e continuações nos títulos de puzzle; posição de reprodução, feeds assinados, fila e cache de downloads offline nos títulos de podcast/áudio",
+    "zh": "应用专属状态——例如拼图类作品中的棋盘、分数、道具与续命次数；播客/音频类作品中的播放进度、已订阅的源、播放队列与离线下载缓存"
+  },
+  "p.sec1.list1a.2": {
+    "en": "Best-game history and best score (puzzle titles), or listening history (audio titles), kept as a local-only record",
+    "ru": "История лучших игр и лучший результат (пазлы) или история прослушивания (аудио) — только локально",
+    "es": "Historial de mejores partidas y mejor puntuación (puzzles) o historial de escucha (audio), guardado solo localmente",
+    "de": "Bestenliste und Bestleistung (Puzzle), oder Hörverlauf (Audio), als rein lokaler Datensatz",
+    "fr": "Historique des meilleures parties et meilleur score (puzzles), ou historique d'écoute (audio), conservé uniquement en local",
+    "pt-BR": "Histórico da melhor partida e melhor pontuação (títulos de puzzle), ou histórico de escuta (títulos de áudio), mantidos como registro apenas local",
+    "zh": "最佳对局历史与最高分（拼图类作品），或收听历史（音频类作品），仅作为本地记录保存"
+  },
+  "p.sec1.list1a.3": {
+    "en": "App settings: sound on/off, haptics on/off, theme mode, playback speed, and similar per-app preferences",
+    "ru": "Настройки приложения: звук вкл/выкл, вибрация вкл/выкл, тема, скорость воспроизведения и т.п.",
+    "es": "Ajustes de la app: sonido on/off, háptica on/off, tema, velocidad de reproducción y similares",
+    "de": "App-Einstellungen: Ton an/aus, Haptik an/aus, Theme-Modus, Wiedergabegeschwindigkeit und vergleichbare Voreinstellungen",
+    "fr": "Réglages de l'app : son on/off, retours haptiques on/off, mode thème, vitesse de lecture et préférences similaires",
+    "pt-BR": "Configurações do app: som ligado/desligado, vibração ligada/desligada, modo de tema, velocidade de reprodução e preferências semelhantes de cada app",
+    "zh": "应用设置：声音开关、振动开关、主题模式、播放速度及类似的各应用偏好"
+  },
+  "p.sec1.list1a.4": {
+    "en": "A first-launch flag used to decide whether to show the welcome paywall",
+    "ru": "Флаг первого запуска — чтобы решить, показывать ли приветственное окно подписки",
+    "es": "Una marca de primer arranque para decidir si mostrar el paywall de bienvenida",
+    "de": "Ein First-Launch-Flag zur Entscheidung, ob das Willkommens-Paywall angezeigt wird",
+    "fr": "Un drapeau de premier lancement pour décider d'afficher la page d'accueil de paywall",
+    "pt-BR": "Uma marca de primeiro lançamento usada para decidir se a tela de boas-vindas do Premium deve ser exibida",
+    "zh": "用于决定是否显示欢迎付费页的首次启动标记"
+  },
+  "p.sec1.list1a.5": {
+    "en": "A cached summary of your subscription status — active/inactive, plan, product ID, base plan ID — so the app applies your premium entitlement immediately at launch without waiting for the network",
+    "ru": "Кэшированная сводка статуса подписки — активна/нет, план, ID продукта, ID базового плана — чтобы при запуске сразу применить Premium-права без ожидания сети",
+    "es": "Resumen cacheado del estado de tu suscripción — activa/inactiva, plan, ID de producto, ID de plan base — para que la app aplique tu Premium al iniciar sin esperar a la red",
+    "de": "Eine gecachte Zusammenfassung deines Abo-Status — aktiv/inaktiv, Plan, Produkt-ID, Basis-Plan-ID — damit die App dein Premium-Recht sofort beim Start anwendet, ohne aufs Netzwerk zu warten",
+    "fr": "Un résumé en cache de votre statut d'abonnement — actif/inactif, plan, ID de produit, ID de plan de base — pour appliquer immédiatement vos droits Premium au lancement sans attendre le réseau",
+    "pt-BR": "Um resumo em cache do status da sua assinatura — ativa/inativa, plano, ID do produto, ID do plano base — para que o app aplique seu direito Premium imediatamente na abertura, sem esperar pela rede",
+    "zh": "你订阅状态的缓存摘要——有效/无效、方案、商品 ID、基础方案 ID——以便应用在启动时立即应用你的 Premium 权益，而无需等待网络"
+  },
+  "p.sec1.callout": {
+    "en": "<strong>What is not stored locally:</strong> payment details, purchase tokens, and Google account identifiers. None of this leaves Google Play.",
+    "ru": "<strong>Что локально не хранится:</strong> платёжные данные, токены покупки и идентификаторы Google-аккаунта. Эта информация не покидает Google Play.",
+    "es": "<strong>Lo que no se guarda localmente:</strong> datos de pago, tokens de compra e identificadores de cuenta Google. Nada de eso sale de Google Play.",
+    "de": "<strong>Was nicht lokal gespeichert wird:</strong> Zahlungsdaten, Kauf-Tokens und Google-Konto-Identifikatoren. Nichts davon verlässt Google Play.",
+    "fr": "<strong>Ce qui n'est pas stocké localement :</strong> données de paiement, jetons d'achat et identifiants de compte Google. Rien de tout cela ne quitte Google Play.",
+    "pt-BR": "<strong>O que não fica armazenado localmente:</strong> dados de pagamento, tokens de compra e identificadores da conta Google. Nada disso sai do Google Play.",
+    "zh": "<strong>不会在本地存储的内容：</strong>支付信息、购买令牌与 Google 账号标识。这些都不会离开 Google Play。"
+  },
+  "p.sec1.h3b": {
+    "en": "1b. Collected by third parties on our behalf",
+    "ru": "1b. Собирается третьими сторонами от нашего имени",
+    "es": "1b. Recopilado por terceros en nuestro nombre",
+    "de": "1b. Von Dritten in unserem Auftrag erfasst",
+    "fr": "1b. Collecté par des tiers pour notre compte",
+    "pt-BR": "1b. Coletadas por terceiros em nosso nome",
+    "zh": "1b. 由第三方代我们收集"
+  },
+  "p.sec1.body1b": {
+    "en": "The third-party services described below may collect technical and advertising-related information automatically:",
+    "ru": "Указанные ниже сторонние сервисы могут автоматически собирать технические и рекламные данные:",
+    "es": "Los servicios externos descritos abajo pueden recopilar información técnica y publicitaria automáticamente:",
+    "de": "Die unten beschriebenen Drittdienste können automatisch technische und werbebezogene Informationen erfassen:",
+    "fr": "Les services tiers décrits ci-dessous peuvent collecter automatiquement des informations techniques et publicitaires :",
+    "pt-BR": "Os serviços de terceiros descritos abaixo podem coletar automaticamente informações técnicas e relacionadas a publicidade:",
+    "zh": "下文所述的第三方服务可能会自动收集技术信息及与广告相关的信息："
+  },
+  "p.sec1.list1b.1": {
+    "en": "Google Advertising ID (GAID) — read so ad networks can deliver ads, frequency-cap them, and attribute installs. While Premium or Remove Ads is active it is not used for banner, interstitial or app-open advertising; it is still processed when you explicitly choose to watch a rewarded video.",
+    "ru": "Google Advertising ID (GAID) — считывается, чтобы рекламные сети могли показывать рекламу, ограничивать её частоту и атрибутировать установки. При активном Premium или «Без рекламы» он не используется для баннеров, межстраничных и app-open объявлений, но обрабатывается, если вы сами решаете посмотреть видео с вознаграждением.",
+    "es": "Google Advertising ID (GAID) — se lee para que las redes publicitarias puedan servir anuncios, limitar su frecuencia y atribuir instalaciones. Con Premium o Quitar Anuncios activo no se usa para banners, intersticiales ni app-open; sí se procesa cuando eliges explícitamente ver un vídeo rewarded.",
+    "de": "Google Advertising ID (GAID) — wird gelesen, damit Werbenetzwerke Werbung ausliefern, sie in der Häufigkeit begrenzen und Installationen attribuieren können. Bei aktivem Premium oder Werbung entfernen wird sie nicht für Banner-, Interstitial- oder App-Open-Werbung genutzt; sie wird aber verarbeitet, wenn du dich ausdrücklich für ein Rewarded-Video entscheidest.",
+    "fr": "Google Advertising ID (GAID) — lu afin que les régies puissent diffuser des pubs, en limiter la fréquence et attribuer les installations. Avec Premium ou Supprimer les pubs actif, il n'est pas utilisé pour les bannières, interstitiels ou app-open ; il est toutefois traité lorsque vous choisissez explicitement de regarder une vidéo rewarded.",
+    "pt-BR": "Google Advertising ID (GAID) — lido para que as redes de anúncios entreguem anúncios, limitem sua frequência e atribuam instalações. Enquanto o Premium ou o Remover Anúncios estiver ativo, ele não é usado para banners, intersticiais nem anúncios de abertura; ele ainda é processado quando você escolhe explicitamente assistir a um vídeo recompensado.",
+    "zh": "Google 广告 ID（GAID）——读取它是为了让广告网络投放广告、限制频次并归因安装。当 Premium 或「去广告」生效时，它不再用于横幅、插屏或冷启动广告；如果你主动选择观看激励视频，它仍会被处理。"
+  },
+  "p.sec1.list1b.2": {
+    "en": "Android device ID (SSAID) — read on every launch as a stable, app-scoped device identifier. Used by Google Play Billing to verify your subscription entitlement and by the ad mediation SDK for fraud and invalid-traffic signals. It is scoped to this app's signing key and is not linked to your Google account.",
+    "ru": "Android ID устройства (SSAID) — считывается при каждом запуске как стабильный идентификатор, привязанный к этому приложению. Используется Google Play Billing для проверки прав на подписку и SDK рекламной медиации — для сигналов о фроде и невалидном трафике. Привязан к ключу подписи этого приложения и не связан с вашим Google-аккаунтом.",
+    "es": "ID de dispositivo Android (SSAID) — se lee en cada arranque como identificador estable acotado a esta app. Lo usa Google Play Billing para verificar tu derecho a la suscripción y el SDK de mediación publicitaria para señales de fraude y tráfico inválido. Está acotado a la clave de firma de esta app y no se vincula con tu cuenta de Google.",
+    "de": "Android-Geräte-ID (SSAID) — wird bei jedem Start als stabiler, app-scoped Geräte-Identifikator gelesen. Wird von Google Play Billing zur Prüfung deiner Abo-Berechtigung und vom Ad-Mediation-SDK für Betrugs- und Invalid-Traffic-Signale genutzt. Sie ist an den Signaturschlüssel dieser App gebunden und nicht mit deinem Google-Konto verknüpft.",
+    "fr": "Identifiant d'appareil Android (SSAID) — lu à chaque lancement comme identifiant stable propre à cette app. Utilisé par Google Play Billing pour vérifier votre droit à l'abonnement et par le SDK de médiation publicitaire pour les signaux de fraude et de trafic invalide. Il est lié à la clé de signature de cette app et n'est pas associé à votre compte Google.",
+    "pt-BR": "ID do aparelho Android (SSAID) — lido a cada abertura como identificador estável e restrito ao app. Usado pelo Google Play Billing para verificar o direito à sua assinatura e pelo SDK de mediação de anúncios para sinais de fraude e tráfego inválido. Ele é limitado à chave de assinatura deste app e não está vinculado à sua conta Google.",
+    "zh": "Android 设备 ID（SSAID）——每次启动时读取，作为稳定的、限于本应用的设备标识。Google Play 结算用它核验你的订阅权益，广告聚合 SDK 用它识别欺诈与无效流量。它仅与本应用的签名密钥关联，不会与你的 Google 账号绑定。"
+  },
+  "p.sec1.list1b.3": {
+    "en": "IP address and approximate geographic location derived from it",
+    "ru": "IP-адрес и приблизительное географическое положение, полученное из него",
+    "es": "Dirección IP y ubicación geográfica aproximada derivada",
+    "de": "IP-Adresse und daraus abgeleiteter ungefährer Standort",
+    "fr": "Adresse IP et localisation géographique approximative qui en dérive",
+    "pt-BR": "Endereço IP e localização geográfica aproximada derivada dele",
+    "zh": "IP 地址及由此推算的大致地理位置"
+  },
+  "p.sec1.list1b.4": {
+    "en": "Device model, operating system version, language, and time zone",
+    "ru": "Модель устройства, версия ОС, язык и часовой пояс",
+    "es": "Modelo de dispositivo, versión de SO, idioma y zona horaria",
+    "de": "Gerätemodell, Betriebssystemversion, Sprache und Zeitzone",
+    "fr": "Modèle d'appareil, version du système, langue et fuseau horaire",
+    "pt-BR": "Modelo do aparelho, versão do sistema operacional, idioma e fuso horário",
+    "zh": "设备型号、操作系统版本、语言与时区"
+  },
+  "p.sec1.list1b.5": {
+    "en": "App version, session timestamps, and crash diagnostics",
+    "ru": "Версия приложения, метки времени сессий и диагностика сбоев",
+    "es": "Versión de la app, marcas de tiempo de sesión y diagnósticos de fallos",
+    "de": "App-Version, Sitzungs-Zeitstempel und Absturzdiagnosen",
+    "fr": "Version de l'app, horodatage des sessions et diagnostics de plantage",
+    "pt-BR": "Versão do app, carimbos de data/hora de sessão e diagnósticos de falhas",
+    "zh": "应用版本、会话时间戳与崩溃诊断信息"
+  },
+  "p.sec1.list1b.6": {
+    "en": "Aggregated, non-personally-identifying usage events — including podcast/audio playback events (episode started, completed, skipped) for audio titles, used only in aggregate form",
+    "ru": "Агрегированные обезличенные события использования, включая события воспроизведения подкастов/аудио (эпизод начат, завершён, пропущен) для аудио-приложений — только в агрегированном виде",
+    "es": "Eventos de uso agregados y no identificables — incluidos eventos de reproducción de podcast/audio (episodio iniciado, completado, omitido) en títulos de audio, usados solo de forma agregada",
+    "de": "Aggregierte, nicht personenbezogene Nutzungsereignisse — einschließlich Podcast/Audio-Wiedergabeereignisse (Episode gestartet, abgeschlossen, übersprungen) bei Audio-Titeln, nur in aggregierter Form genutzt",
+    "fr": "Événements d'usage agrégés et non identifiants — y compris les événements de lecture podcast/audio (épisode démarré, terminé, sauté) pour les titres audio, utilisés uniquement sous forme agrégée",
+    "pt-BR": "Eventos de uso agregados e não identificáveis pessoalmente — incluindo eventos de reprodução de podcast/áudio (episódio iniciado, concluído, pulado) nos títulos de áudio, usados apenas de forma agregada",
+    "zh": "聚合的、无法识别个人的使用事件——包括音频类作品中的播客/音频播放事件（单集开始、完成、跳过），仅以聚合形式使用"
+  },
+  "p.sec1.deviceIdCallout": {
+    "en": "<strong>Why we disclose this:</strong> Google Play's Data safety form requires every read of the Advertising ID and the Android device ID to be declared, regardless of whether the value leaves your device. You can reset the Advertising ID at any time from <em>Android Settings → Privacy → Ads</em>, and the Android ID is regenerated when you factory-reset the device.",
+    "ru": "<strong>Почему мы это раскрываем:</strong> форма Google Play «Безопасность данных» требует декларировать любое чтение Advertising ID и Android ID устройства, независимо от того, покидает ли значение устройство. Advertising ID можно сбросить в любой момент в <em>Настройки Android → Конфиденциальность → Реклама</em>; Android ID пересоздаётся при сбросе устройства к заводским настройкам.",
+    "es": "<strong>Por qué lo divulgamos:</strong> el formulario «Seguridad de los datos» de Google Play exige declarar toda lectura del Advertising ID y del ID de dispositivo Android, salga o no del dispositivo. Puedes restablecer el Advertising ID en cualquier momento desde <em>Ajustes de Android → Privacidad → Anuncios</em>; el Android ID se regenera al restablecer el dispositivo a valores de fábrica.",
+    "de": "<strong>Warum wir das offenlegen:</strong> Das Google-Play-Formular „Datensicherheit\" verlangt, dass jeder Lesezugriff auf die Advertising ID und die Android-Geräte-ID deklariert wird — unabhängig davon, ob der Wert das Gerät verlässt. Du kannst die Advertising ID jederzeit unter <em>Android-Einstellungen → Datenschutz → Werbung</em> zurücksetzen; die Android-ID wird bei einem Werksreset des Geräts neu erzeugt.",
+    "fr": "<strong>Pourquoi nous le déclarons :</strong> le formulaire « Sécurité des données » de Google Play exige de déclarer toute lecture de l'Advertising ID et de l'identifiant d'appareil Android, que la valeur quitte ou non l'appareil. Vous pouvez réinitialiser l'Advertising ID à tout moment depuis <em>Paramètres Android → Confidentialité → Annonces</em> ; l'Android ID est régénéré lors d'une réinitialisation aux paramètres d'usine.",
+    "pt-BR": "<strong>Por que divulgamos isso:</strong> o formulário de Segurança de dados do Google Play exige que toda leitura do Advertising ID e do ID do aparelho Android seja declarada, independentemente de o valor sair do seu aparelho. Você pode redefinir o Advertising ID a qualquer momento em <em>Configurações do Android → Privacidade → Anúncios</em>, e o Android ID é gerado novamente quando você restaura o aparelho para os padrões de fábrica.",
+    "zh": "<strong>我们为何披露这一点：</strong>Google Play 的「数据安全」表单要求申报每一次对广告 ID 与 Android 设备 ID 的读取，无论该值是否离开你的设备。你可以随时在<em>Android 设置 → 隐私 → 广告</em>中重置广告 ID；Android ID 会在设备恢复出厂设置时重新生成。"
+  },
+  "p.sec1.h3c": {
+    "en": "1c. Analytics, crash reports and remote configuration (Google Firebase)",
+    "ru": "1c. Аналитика, отчёты о сбоях и удалённая конфигурация (Google Firebase)",
+    "es": "1c. Analítica, informes de fallos y configuración remota (Google Firebase)",
+    "de": "1c. Analyse, Absturzberichte und Remote-Konfiguration (Google Firebase)",
+    "fr": "1c. Analyse, rapports de plantage et configuration à distance (Google Firebase)",
+    "pt-BR": "1c. Análise, relatórios de falhas e configuração remota (Google Firebase)",
+    "zh": "1c. 分析、崩溃报告与远程配置（Google Firebase）"
+  },
+  "p.sec1.firebase": {
+    "en": "Some of our apps (currently Blocklix) include <strong>Google Firebase Analytics</strong> and <strong>Firebase Remote Config</strong>. Firebase Analytics collects a random app-instance ID, device and OS information, and aggregated in-app events (for example \"game finished\", \"purchase completed\", \"ad watched\") so we can understand overall usage and balance the game economy; we do not use it to build advertising profiles. Firebase Remote Config downloads a small set of configuration values (feature flags and game-balance numbers) and sends no personal data beyond the technical request metadata. <strong>Firebase Crashlytics</strong> sends a report when the app crashes or freezes: the stack trace, the device model, the OS and app version, and a random installation identifier — enough to find the bug, and nothing you typed or played. Details: <a href=\"https://firebase.google.com/support/privacy\" target=\"_blank\" rel=\"noopener\">firebase.google.com/support/privacy ↗</a>.",
+    "ru": "Часть наших приложений (сейчас — Blocklix) использует <strong>Google Firebase Analytics</strong> и <strong>Firebase Remote Config</strong>. Firebase Analytics собирает случайный идентификатор экземпляра приложения, сведения об устройстве и ОС и агрегированные внутриигровые события (например, «игра завершена», «покупка совершена», «реклама просмотрена»), чтобы мы понимали общее использование и балансировали игровую экономику; для построения рекламных профилей мы его не используем. Firebase Remote Config загружает небольшой набор конфигурационных значений (фиче-флаги и параметры баланса) и не передаёт персональных данных, кроме технических метаданных запроса. <strong>Firebase Crashlytics</strong> отправляет отчёт, когда приложение падает или зависает: стек вызовов, модель устройства, версии ОС и приложения и случайный идентификатор установки — этого хватает, чтобы найти ошибку, и там нет ни того, что вы вводили, ни вашего прогресса. Подробнее: <a href=\"https://firebase.google.com/support/privacy\" target=\"_blank\" rel=\"noopener\">firebase.google.com/support/privacy ↗</a>.",
+    "es": "Algunas de nuestras apps (actualmente Blocklix) incluyen <strong>Google Firebase Analytics</strong> y <strong>Firebase Remote Config</strong>. Firebase Analytics recopila un ID de instancia aleatorio, información del dispositivo y del SO y eventos agregados dentro de la app (por ejemplo «partida terminada», «compra completada», «anuncio visto») para entender el uso global y equilibrar la economía del juego; no lo usamos para crear perfiles publicitarios. Firebase Remote Config descarga un pequeño conjunto de valores de configuración (feature flags y números de balance) y no envía datos personales más allá de los metadatos técnicos de la petición. <strong>Firebase Crashlytics</strong> envía un informe cuando la app se cierra o se bloquea: la traza de la pila, el modelo del dispositivo, la versión del SO y de la app y un identificador de instalación aleatorio — lo justo para encontrar el fallo, y nada de lo que escribiste o jugaste. Detalles: <a href=\"https://firebase.google.com/support/privacy\" target=\"_blank\" rel=\"noopener\">firebase.google.com/support/privacy ↗</a>.",
+    "de": "Einige unserer Apps (derzeit Blocklix) enthalten <strong>Google Firebase Analytics</strong> und <strong>Firebase Remote Config</strong>. Firebase Analytics erfasst eine zufällige App-Instanz-ID, Geräte- und OS-Informationen sowie aggregierte In-App-Ereignisse (z. B. „Spiel beendet\", „Kauf abgeschlossen\", „Werbung angesehen\"), damit wir die Gesamtnutzung verstehen und die Spielökonomie ausbalancieren können; zur Bildung von Werbeprofilen nutzen wir es nicht. Firebase Remote Config lädt einen kleinen Satz Konfigurationswerte (Feature-Flags und Balancing-Zahlen) und sendet außer technischen Anfrage-Metadaten keine personenbezogenen Daten. <strong>Firebase Crashlytics</strong> sendet einen Bericht, wenn die App abstürzt oder einfriert: den Stack-Trace, das Gerätemodell, die OS- und App-Version und eine zufällige Installations-ID — genug, um den Fehler zu finden, und nichts von dem, was du eingegeben oder gespielt hast. Details: <a href=\"https://firebase.google.com/support/privacy\" target=\"_blank\" rel=\"noopener\">firebase.google.com/support/privacy ↗</a>.",
+    "fr": "Certaines de nos apps (actuellement Blocklix) intègrent <strong>Google Firebase Analytics</strong> et <strong>Firebase Remote Config</strong>. Firebase Analytics collecte un identifiant d'instance aléatoire, des informations sur l'appareil et le système, et des événements agrégés dans l'app (par exemple « partie terminée », « achat effectué », « pub regardée ») afin de comprendre l'usage global et d'équilibrer l'économie du jeu ; nous ne l'utilisons pas pour constituer des profils publicitaires. Firebase Remote Config télécharge un petit ensemble de valeurs de configuration (feature flags et chiffres d'équilibrage) et n'envoie aucune donnée personnelle au-delà des métadonnées techniques de la requête. <strong>Firebase Crashlytics</strong> envoie un rapport quand l'app plante ou se fige : la pile d'appels, le modèle de l'appareil, la version de l'OS et de l'app et un identifiant d'installation aléatoire — de quoi trouver le bug, et rien de ce que vous avez saisi ou joué. Détails : <a href=\"https://firebase.google.com/support/privacy\" target=\"_blank\" rel=\"noopener\">firebase.google.com/support/privacy ↗</a>.",
+    "pt-BR": "Alguns dos nossos apps (atualmente o Blocklix) incluem <strong>Google Firebase Analytics</strong> e <strong>Firebase Remote Config</strong>. O Firebase Analytics coleta um ID de instância aleatório do app, informações do aparelho e do sistema e eventos agregados dentro do app (por exemplo \"partida concluída\", \"compra concluída\", \"anúncio assistido\") para que possamos entender o uso geral e equilibrar a economia do jogo; não o usamos para montar perfis publicitários. O Firebase Remote Config baixa um pequeno conjunto de valores de configuração (sinalizadores de recursos e números de balanceamento do jogo) e não envia dados pessoais além dos metadados técnicos da requisição. O <strong>Firebase Crashlytics</strong> envia um relatório quando o app trava ou congela: a pilha de chamadas, o modelo do aparelho, a versão do sistema e do app e um identificador de instalação aleatório — o suficiente para encontrar o erro, e nada do que você digitou ou jogou. Detalhes: <a href=\"https://firebase.google.com/support/privacy\" target=\"_blank\" rel=\"noopener\">firebase.google.com/support/privacy ↗</a>.",
+    "zh": "我们的部分应用（目前为 Blocklix）集成了 <strong>Google Firebase Analytics</strong> 与 <strong>Firebase Remote Config</strong>。Firebase Analytics 收集一个随机的应用实例 ID、设备与系统信息，以及聚合的应用内事件（例如「对局结束」「购买完成」「广告已观看」），以便我们了解整体使用情况并平衡游戏经济；我们不会用它建立广告画像。Firebase Remote Config 下载一小组配置值（功能开关与游戏平衡数值），除请求的技术元数据外不发送任何个人数据。<strong>Firebase Crashlytics</strong> 会在应用崩溃或卡死时发送一份报告：调用栈、设备型号、系统与应用版本，以及一个随机的安装标识——足以定位问题，且不包含你输入或游玩的任何内容。详情：<a href=\"https://firebase.google.com/support/privacy\" target=\"_blank\" rel=\"noopener\">firebase.google.com/support/privacy ↗</a>。"
+  },
+  "p.sec1.h3d": {
+    "en": "1d. Backup and cloud save",
+    "ru": "1d. Резервное копирование и облачное сохранение",
+    "es": "1d. Copia de seguridad y guardado en la nube",
+    "de": "1d. Sicherung und Cloud-Spielstand",
+    "fr": "1d. Sauvegarde et sauvegarde cloud",
+    "pt-BR": "1d. Backup e salvamento na nuvem",
+    "zh": "1d. 备份与云存档"
+  },
+  "p.sec1.backup": {
+    "en": "<strong>Android's own backup is enabled for our apps.</strong> If backup is turned on for your device, Android copies the local data listed in 1a — board, scores, settings, unlocks — into your personal Google account and restores it when you reinstall on the same account or set up a new device. That copy belongs to you: Android handles and encrypts it, and we can neither read it nor delete it. You control it in <em>Android Settings → Google → Backup</em>. Separately, <strong>Blocklix includes an optional cloud save built on Google Play Games Saved Games</strong>: one save file in your own Play Games storage, so a run can follow you between devices. It never runs without a Play Games sign-in, it carries game progress only — never subscription state or purchase data — and it is served by Google, not by a server of ours. The feature ships switched off and is being enabled gradually; if you have signed in and would rather not use it, sign out of Play Games in the app.",
+    "ru": "<strong>Собственное резервное копирование Android для наших приложений включено.</strong> Если бэкап включён на вашем устройстве, Android копирует локальные данные из пункта 1a — доску, результаты, настройки, открытое — в ваш личный аккаунт Google и восстанавливает их при переустановке на том же аккаунте или на новом устройстве. Эта копия принадлежит вам: ею управляет и её шифрует сам Android, мы не можем ни прочитать её, ни удалить. Управление — в <em>Настройки Android → Google → Резервное копирование</em>. Отдельно: <strong>в Blocklix есть необязательное облачное сохранение на базе Google Play Games Saved Games</strong> — один файл сохранения в вашем собственном хранилище Play Games, чтобы прогресс переходил между устройствами. Оно не работает без входа в Play Games, содержит только игровой прогресс — никогда статус подписки и данные о покупках — и обслуживается Google, а не нашим сервером. Функция выходит выключенной и включается постепенно; если вы вошли и предпочитаете обойтись без неё, выйдите из Play Games в приложении.",
+    "es": "<strong>La copia de seguridad propia de Android está activada para nuestras apps.</strong> Si la copia está activada en tu dispositivo, Android copia los datos locales del punto 1a — tablero, puntuaciones, ajustes, desbloqueos — a tu cuenta de Google personal y los restaura al reinstalar con la misma cuenta o al configurar un dispositivo nuevo. Esa copia es tuya: Android la gestiona y la cifra, y nosotros no podemos leerla ni borrarla. La controlas en <em>Ajustes de Android → Google → Copia de seguridad</em>. Aparte, <strong>Blocklix incluye un guardado en la nube opcional basado en Google Play Games Saved Games</strong>: un único archivo de guardado en tu propio almacenamiento de Play Games, para que la partida te siga entre dispositivos. No funciona sin iniciar sesión en Play Games, contiene solo progreso de juego — nunca estado de suscripción ni datos de compra — y lo sirve Google, no un servidor nuestro. La función sale desactivada y se activa de forma gradual; si has iniciado sesión y prefieres no usarla, cierra sesión de Play Games en la app.",
+    "de": "<strong>Androids eigene Sicherung ist für unsere Apps aktiviert.</strong> Wenn die Sicherung auf deinem Gerät eingeschaltet ist, kopiert Android die in 1a genannten lokalen Daten — Spielfeld, Punkte, Einstellungen, Freischaltungen — in dein persönliches Google-Konto und stellt sie wieder her, wenn du mit demselben Konto neu installierst oder ein neues Gerät einrichtest. Diese Kopie gehört dir: Android verwaltet und verschlüsselt sie, wir können sie weder lesen noch löschen. Du steuerst sie unter <em>Android-Einstellungen → Google → Sicherung</em>. Davon getrennt enthält <strong>Blocklix einen optionalen Cloud-Spielstand auf Basis von Google Play Games Saved Games</strong>: eine einzige Speicherdatei in deinem eigenen Play-Games-Speicher, damit eine Runde dir zwischen Geräten folgt. Ohne Play-Games-Anmeldung läuft sie nie, sie enthält nur den Spielfortschritt — niemals Abostatus oder Kaufdaten — und sie wird von Google bereitgestellt, nicht von einem Server von uns. Die Funktion wird ausgeschaltet ausgeliefert und schrittweise aktiviert; wenn du angemeldet bist und lieber darauf verzichtest, melde dich in der App von Play Games ab.",
+    "fr": "<strong>La sauvegarde propre à Android est activée pour nos apps.</strong> Si la sauvegarde est activée sur votre appareil, Android copie les données locales listées en 1a — plateau, scores, réglages, déblocages — dans votre compte Google personnel et les restaure quand vous réinstallez avec le même compte ou configurez un nouvel appareil. Cette copie vous appartient : Android la gère et la chiffre, et nous ne pouvons ni la lire ni la supprimer. Vous la contrôlez dans <em>Paramètres Android → Google → Sauvegarde</em>. Séparément, <strong>Blocklix propose une sauvegarde cloud facultative basée sur Google Play Games Saved Games</strong> : un seul fichier de sauvegarde dans votre propre espace Play Games, pour qu'une partie vous suive d'un appareil à l'autre. Elle ne fonctionne jamais sans connexion à Play Games, elle ne contient que la progression de jeu — jamais l'état d'abonnement ni les données d'achat — et elle est servie par Google, pas par un serveur à nous. La fonctionnalité est livrée désactivée et sera activée progressivement ; si vous êtes connecté et préférez vous en passer, déconnectez-vous de Play Games dans l'app.",
+    "pt-BR": "<strong>O backup do próprio Android está ativado para nossos apps.</strong> Se o backup estiver ligado no seu aparelho, o Android copia os dados locais listados em 1a — tabuleiro, pontuações, configurações, desbloqueios — para a sua conta Google pessoal e os restaura quando você reinstala com a mesma conta ou configura um aparelho novo. Essa cópia é sua: o Android a gerencia e criptografa, e nós não podemos lê-la nem apagá-la. Você a controla em <em>Configurações do Android → Google → Backup</em>. Separadamente, <strong>o Blocklix inclui um salvamento na nuvem opcional baseado no Google Play Games Saved Games</strong>: um único arquivo de save no seu próprio espaço do Play Games, para que a partida acompanhe você entre aparelhos. Ele nunca funciona sem login no Play Games, carrega apenas o progresso do jogo — nunca o estado da assinatura ou dados de compra — e é servido pelo Google, não por um servidor nosso. O recurso sai desativado e está sendo liberado gradualmente; se você fez login e prefere não usá-lo, saia do Play Games dentro do app.",
+    "zh": "<strong>我们的应用已启用 Android 自带的备份。</strong>如果你的设备开启了备份，Android 会把 1a 中列出的本地数据——棋盘、分数、设置、解锁内容——复制到你的个人 Google 账号，并在你用同一账号重新安装或设置新设备时恢复。这份副本属于你：由 Android 管理并加密，我们既无法读取也无法删除。你可以在<em>Android 设置 → Google → 备份</em>中管理它。另外，<strong>Blocklix 提供基于 Google Play Games 存档服务（Saved Games）的可选云存档</strong>：在你自己的 Play Games 存储空间中保存一份存档文件，让进度可以跟随你在设备间切换。它在未登录 Play Games 时绝不会运行，只包含游戏进度——绝不包含订阅状态或购买数据——并且由 Google 提供服务，而非我们的服务器。该功能发布时处于关闭状态，正在逐步开放；如果你已登录但不想使用，请在应用内退出 Play Games。"
+  },
+  "p.sec2.title": {
+    "en": "Advertising partners",
+    "ru": "Рекламные партнёры",
+    "es": "Socios publicitarios",
+    "de": "Werbepartner",
+    "fr": "Partenaires publicitaires",
+    "pt-BR": "Parceiros de publicidade",
+    "zh": "广告合作方"
+  },
+  "p.sec2.intro": {
+    "en": "Our apps may display banner ads, occasional interstitial ads — including app-open ads when returning to the app — and rewarded video ads that you explicitly choose to watch in exchange for an in-game perk (a booster, a continue after game-over, bonus coins and similar). A Premium subscription or the one-time Remove Ads purchase turns off banner, interstitial and app-open ads; rewarded videos remain available to every user and only ever play after you tap their offer. We work with the advertising providers below, used together or independently depending on the app.",
+    "ru": "Наши приложения могут показывать баннеры, редкие межстраничные объявления — включая app-open при возврате в приложение — и видео с вознаграждением, которые вы сами выбираете посмотреть в обмен на игровой бонус (бустер, продолжение после проигрыша, бонусные монеты и т.п.). Premium-подписка или разовая покупка «Без рекламы» отключает баннеры, межстраничные и app-open объявления; видео с вознаграждением остаются доступны всем и запускаются только после нажатия на предложение. Мы работаем с провайдерами ниже — вместе или по отдельности в зависимости от приложения.",
+    "es": "Nuestras apps pueden mostrar banners, intersticiales ocasionales — incluidos anuncios app-open al volver a la app — y vídeos rewarded que eliges ver explícitamente a cambio de una ventaja en el juego (un booster, continuar tras game-over, monedas extra y similares). La suscripción Premium o la compra única de Quitar Anuncios desactiva banners, intersticiales y app-open; los vídeos rewarded siguen disponibles para todos y solo se reproducen tras tocar su oferta. Trabajamos con los proveedores de abajo, juntos o por separado según la app.",
+    "de": "Unsere Apps können Banner, gelegentliche Interstitials — einschließlich App-Open-Anzeigen bei der Rückkehr in die App — und Rewarded-Videos anzeigen, die du ausdrücklich ansiehst, um einen Spielvorteil zu erhalten (einen Booster, ein Weiterspielen nach Game-over, Bonusmünzen u. Ä.). Ein Premium-Abo oder der einmalige Werbung-entfernen-Kauf schaltet Banner, Interstitials und App-Open-Anzeigen ab; Rewarded-Videos bleiben allen Nutzern verfügbar und starten ausschließlich nach dem Antippen des Angebots. Wir arbeiten mit den unten genannten Werbedienstleistern, je nach App gemeinsam oder getrennt.",
+    "fr": "Nos apps peuvent afficher des bannières, des interstitiels occasionnels — y compris des app-open au retour dans l'app — et des vidéos rewarded que vous choisissez explicitement de regarder en échange d'un avantage en jeu (un booster, un continue après game-over, des pièces bonus, etc.). L'abonnement Premium ou l'achat unique Supprimer les pubs désactive bannières, interstitiels et app-open ; les vidéos rewarded restent disponibles pour tous et ne se lancent qu'après avoir touché leur offre. Nous travaillons avec les fournisseurs ci-dessous, ensemble ou séparément selon l'app.",
+    "pt-BR": "Nossos apps podem exibir banners, intersticiais ocasionais — incluindo anúncios de abertura ao voltar para o app — e vídeos recompensados que você escolhe explicitamente assistir em troca de um benefício no jogo (um booster, uma continuação após o fim de jogo, moedas bônus e afins). Uma assinatura Premium ou a compra única Remover Anúncios desliga banners, intersticiais e anúncios de abertura; os vídeos recompensados continuam disponíveis para todos e só tocam depois que você toca na oferta. Trabalhamos com os provedores de anúncios abaixo, usados juntos ou separadamente dependendo do app.",
+    "zh": "我们的应用可能会展示横幅广告、偶尔的插屏广告——包括返回应用时的冷启动广告——以及你主动选择观看以换取游戏内奖励（道具、失败后续命、奖励金币等）的激励视频广告。Premium 订阅或一次性购买「去广告」会关闭横幅、插屏与冷启动广告；激励视频对所有用户仍然可用，且只在你点击其提示后才会播放。我们与下列广告服务商合作，视应用不同而同时或单独使用。"
+  },
+  "p.sec2.h3a": {
+    "en": "Appodeal mediation",
+    "ru": "Медиация Appodeal",
+    "es": "Mediación de Appodeal",
+    "de": "Appodeal-Mediation",
+    "fr": "Médiation Appodeal",
+    "pt-BR": "Mediação Appodeal",
+    "zh": "Appodeal 聚合"
+  },
+  "p.sec2.appodeal1": {
+    "en": "We use <a href=\"https://www.appodeal.com/\" target=\"_blank\" rel=\"noopener\">Appodeal</a> as our primary advertising mediation partner. Appodeal's privacy policy is at <a href=\"https://www.appodeal.com/privacy-policy\" target=\"_blank\" rel=\"noopener\">appodeal.com/privacy-policy ↗</a>.",
+    "ru": "Мы используем <a href=\"https://www.appodeal.com/\" target=\"_blank\" rel=\"noopener\">Appodeal</a> в качестве основного партнёра по рекламной медиации. Политика конфиденциальности Appodeal: <a href=\"https://www.appodeal.com/privacy-policy\" target=\"_blank\" rel=\"noopener\">appodeal.com/privacy-policy ↗</a>.",
+    "es": "Usamos <a href=\"https://www.appodeal.com/\" target=\"_blank\" rel=\"noopener\">Appodeal</a> como nuestro principal socio de mediación publicitaria. La política de privacidad de Appodeal está en <a href=\"https://www.appodeal.com/privacy-policy\" target=\"_blank\" rel=\"noopener\">appodeal.com/privacy-policy ↗</a>.",
+    "de": "Wir nutzen <a href=\"https://www.appodeal.com/\" target=\"_blank\" rel=\"noopener\">Appodeal</a> als unseren primären Werbe-Mediation-Partner. Die Datenschutzerklärung von Appodeal findest du unter <a href=\"https://www.appodeal.com/privacy-policy\" target=\"_blank\" rel=\"noopener\">appodeal.com/privacy-policy ↗</a>.",
+    "fr": "Nous utilisons <a href=\"https://www.appodeal.com/\" target=\"_blank\" rel=\"noopener\">Appodeal</a> comme partenaire principal de médiation publicitaire. La politique de confidentialité d'Appodeal est sur <a href=\"https://www.appodeal.com/privacy-policy\" target=\"_blank\" rel=\"noopener\">appodeal.com/privacy-policy ↗</a>.",
+    "pt-BR": "Usamos a <a href=\"https://www.appodeal.com/\" target=\"_blank\" rel=\"noopener\">Appodeal</a> como nosso principal parceiro de mediação de anúncios. A política de privacidade da Appodeal está em <a href=\"https://www.appodeal.com/privacy-policy\" target=\"_blank\" rel=\"noopener\">appodeal.com/privacy-policy ↗</a>.",
+    "zh": "我们使用 <a href=\"https://www.appodeal.com/\" target=\"_blank\" rel=\"noopener\">Appodeal</a> 作为主要的广告聚合合作方。Appodeal 的隐私政策见 <a href=\"https://www.appodeal.com/privacy-policy\" target=\"_blank\" rel=\"noopener\">appodeal.com/privacy-policy ↗</a>。"
+  },
+  "p.sec2.appodeal2": {
+    "en": "Appodeal mediates demand from a large number of advertising networks, and the active set evolves as Appodeal updates its SDK and as we change our build configuration. The current, authoritative list is published by Appodeal:",
+    "ru": "Appodeal агрегирует спрос множества рекламных сетей; активный список меняется по мере обновления SDK Appodeal и нашей конфигурации сборки. Актуальный авторитетный список публикует Appodeal:",
+    "es": "Appodeal media demanda de muchas redes publicitarias; el conjunto activo cambia con las actualizaciones del SDK y nuestra configuración. La lista actualizada y autoritativa la publica Appodeal:",
+    "de": "Appodeal vermittelt Nachfrage einer großen Zahl von Werbenetzwerken; die aktive Liste ändert sich mit SDK-Updates von Appodeal und unserer Build-Konfiguration. Die aktuelle, autoritative Liste veröffentlicht Appodeal:",
+    "fr": "Appodeal médie la demande d'un grand nombre de régies publicitaires ; l'ensemble actif évolue avec les mises à jour du SDK Appodeal et notre configuration de build. La liste actuelle et faisant foi est publiée par Appodeal :",
+    "pt-BR": "A Appodeal intermedeia a demanda de um grande número de redes de anúncios, e o conjunto ativo muda conforme a Appodeal atualiza seu SDK e conforme alteramos nossa configuração de build. A lista atual e oficial é publicada pela Appodeal:",
+    "zh": "Appodeal 聚合了大量广告网络的需求，实际启用的网络会随着 Appodeal 更新其 SDK 以及我们调整构建配置而变化。当前的权威列表由 Appodeal 发布："
+  },
+  "p.sec2.appodeal3": {
+    "en": "Each network on that page links to its own privacy policy. Privacy questions specific to ad personalisation can be raised directly with Appodeal at the same site.",
+    "ru": "Каждая сеть на этой странице ведёт к своей политике конфиденциальности. Вопросы по персонализации рекламы можно задавать напрямую Appodeal по тому же адресу.",
+    "es": "Cada red enlazada en esa página remite a su propia política de privacidad. Las preguntas sobre personalización de anuncios pueden dirigirse directamente a Appodeal en el mismo sitio.",
+    "de": "Jedes auf dieser Seite verlinkte Netzwerk verweist auf seine eigene Datenschutzerklärung. Datenschutzfragen zur Werbe-Personalisierung können direkt bei Appodeal auf derselben Seite gestellt werden.",
+    "fr": "Chaque régie sur cette page renvoie à sa propre politique. Les questions de personnalisation publicitaire peuvent être adressées directement à Appodeal sur le même site.",
+    "pt-BR": "Cada rede nessa página tem link para a própria política de privacidade. Dúvidas de privacidade específicas sobre personalização de anúncios podem ser levadas diretamente à Appodeal no mesmo site.",
+    "zh": "该页面上的每个网络都链接到各自的隐私政策。与广告个性化相关的具体隐私问题，可直接在同一网站向 Appodeal 提出。"
+  },
+  "p.sec2.h3b": {
+    "en": "Google AdMob",
+    "ru": "Google AdMob",
+    "es": "Google AdMob",
+    "de": "Google AdMob",
+    "fr": "Google AdMob",
+    "pt-BR": "Google AdMob",
+    "zh": "Google AdMob"
+  },
+  "p.sec2.admob": {
+    "en": "Some of our apps also serve display, native, or rewarded ads through Google AdMob directly. Google's advertising data practices are described at <a href=\"https://policies.google.com/technologies/ads\" target=\"_blank\" rel=\"noopener\">policies.google.com/technologies/ads ↗</a>, and the Google Privacy Policy is at <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>. You can opt out of personalised Google ads at <a href=\"https://adssettings.google.com/\" target=\"_blank\" rel=\"noopener\">adssettings.google.com ↗</a>.",
+    "ru": "Часть наших приложений также показывает баннерные, нативные или видео-с-вознаграждением через Google AdMob напрямую. Практики Google в области рекламных данных описаны на <a href=\"https://policies.google.com/technologies/ads\" target=\"_blank\" rel=\"noopener\">policies.google.com/technologies/ads ↗</a>, политика конфиденциальности Google — на <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>. Отказаться от персонализированной рекламы Google можно на <a href=\"https://adssettings.google.com/\" target=\"_blank\" rel=\"noopener\">adssettings.google.com ↗</a>.",
+    "es": "Algunas de nuestras apps también muestran anuncios display, nativos o rewarded vía Google AdMob directamente. Las prácticas de Google sobre datos publicitarios se describen en <a href=\"https://policies.google.com/technologies/ads\" target=\"_blank\" rel=\"noopener\">policies.google.com/technologies/ads ↗</a>, y la Política de Privacidad de Google en <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>. Puedes excluirte de la publicidad personalizada de Google en <a href=\"https://adssettings.google.com/\" target=\"_blank\" rel=\"noopener\">adssettings.google.com ↗</a>.",
+    "de": "Einige unserer Apps schalten Display-, Native- oder Rewarded-Ads direkt über Google AdMob. Die Werbedaten-Praktiken von Google sind unter <a href=\"https://policies.google.com/technologies/ads\" target=\"_blank\" rel=\"noopener\">policies.google.com/technologies/ads ↗</a> beschrieben, die Google-Datenschutzerklärung unter <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>. Personalisierte Google-Werbung kannst du unter <a href=\"https://adssettings.google.com/\" target=\"_blank\" rel=\"noopener\">adssettings.google.com ↗</a> deaktivieren.",
+    "fr": "Certaines de nos apps diffusent aussi des pubs display, natives ou rewarded directement via Google AdMob. Les pratiques de Google sur les données publicitaires sont décrites sur <a href=\"https://policies.google.com/technologies/ads\" target=\"_blank\" rel=\"noopener\">policies.google.com/technologies/ads ↗</a>, et la Politique de Confidentialité Google sur <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>. Vous pouvez vous désinscrire de la publicité personnalisée Google sur <a href=\"https://adssettings.google.com/\" target=\"_blank\" rel=\"noopener\">adssettings.google.com ↗</a>.",
+    "pt-BR": "Alguns dos nossos apps também exibem anúncios display, nativos ou recompensados diretamente pelo Google AdMob. As práticas de dados publicitários do Google estão descritas em <a href=\"https://policies.google.com/technologies/ads\" target=\"_blank\" rel=\"noopener\">policies.google.com/technologies/ads ↗</a>, e a Política de Privacidade do Google está em <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>. Você pode desativar os anúncios personalizados do Google em <a href=\"https://adssettings.google.com/\" target=\"_blank\" rel=\"noopener\">adssettings.google.com ↗</a>.",
+    "zh": "我们的部分应用也会直接通过 Google AdMob 投放展示、原生或激励广告。Google 的广告数据实践见 <a href=\"https://policies.google.com/technologies/ads\" target=\"_blank\" rel=\"noopener\">policies.google.com/technologies/ads ↗</a>，Google 隐私政策见 <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>。你可以在 <a href=\"https://adssettings.google.com/\" target=\"_blank\" rel=\"noopener\">adssettings.google.com ↗</a> 关闭 Google 个性化广告。"
+  },
+  "p.sec2.callout": {
+    "en": "<strong>Premium subscribers and Remove-Ads purchasers are not shown banner, interstitial or app-open ads.</strong> Rewarded videos are never forced on anyone — free or paying, they start only from an explicit tap on a watch-to-earn offer. Limited initialisation traffic to the ad providers may still occur on app start before the entitlement is resolved.",
+    "ru": "<strong>Подписчикам Premium и покупателям «Без рекламы» не показываются баннеры, межстраничные и app-open объявления.</strong> Видео с вознаграждением никому не навязываются — и бесплатным, и платящим пользователям они запускаются только по явному нажатию на предложение «посмотреть за награду». Ограниченный инициализационный трафик к рекламным провайдерам при запуске возможен, пока статус покупки не определён.",
+    "es": "<strong>A los suscriptores Premium y compradores de Quitar Anuncios no se les muestran banners, intersticiales ni anuncios app-open.</strong> Los vídeos rewarded no se imponen a nadie — gratuito o de pago, solo se inician con un toque explícito en una oferta de recompensa. Es posible un tráfico de inicialización limitado a los proveedores al arrancar, antes de resolverse el estado de la compra.",
+    "de": "<strong>Premium-Abonnenten und Käufern von Werbung entfernen werden keine Banner, Interstitials oder App-Open-Anzeigen gezeigt.</strong> Rewarded-Videos werden niemandem aufgezwungen — ob Free oder zahlend, sie starten nur nach einem ausdrücklichen Tipp auf ein Belohnungsangebot. Begrenzter Initialisierungs-Traffic zu den Werbeprovidern beim App-Start ist möglich, bevor der Kaufstatus aufgelöst ist.",
+    "fr": "<strong>Les abonnés Premium et les acheteurs de Supprimer les pubs ne voient ni bannières, ni interstitiels, ni app-open.</strong> Les vidéos rewarded ne sont imposées à personne — gratuit ou payant, elles ne démarrent qu'après un appui explicite sur une offre de récompense. Un trafic d'initialisation limité vers les fournisseurs reste possible au démarrage, avant la résolution du statut d'achat.",
+    "pt-BR": "<strong>Assinantes Premium e quem comprou Remover Anúncios não veem banners, intersticiais nem anúncios de abertura.</strong> Vídeos recompensados nunca são impostos a ninguém — gratuito ou pagante, eles só começam com um toque explícito em uma oferta de assistir para ganhar. Um tráfego limitado de inicialização para os provedores de anúncios ainda pode ocorrer na abertura do app, antes de o direito ser resolvido.",
+    "zh": "<strong>Premium 订阅用户与购买了「去广告」的用户不会看到横幅、插屏或冷启动广告。</strong>激励视频绝不会强加给任何人——无论免费还是付费，都只在明确点击「观看以获取奖励」的提示后才开始播放。在应用启动、权益尚未确认之前，仍可能与广告服务商发生少量初始化通信。"
+  },
+  "p.sec3.title": {
+    "en": "Subscriptions and in-app purchases (Google Play Billing)",
+    "ru": "Подписки и встроенные покупки (Google Play Billing)",
+    "es": "Suscripciones y compras dentro de la app (Google Play Billing)",
+    "de": "Abos und In-App-Käufe (Google Play Billing)",
+    "fr": "Abonnements et achats in-app (Google Play Billing)",
+    "pt-BR": "Assinaturas e compras no app (Google Play Billing)",
+    "zh": "订阅与应用内购买（Google Play 结算）"
+  },
+  "p.sec3.intro": {
+    "en": "Each of our apps may offer an optional Premium subscription — with weekly, monthly and yearly auto-renewing plans depending on the title, and an introductory free trial on the yearly plan for eligible new subscribers — that turns off banner, interstitial and app-open ads and unlocks premium features specific to that app (for example x2 coins and a daily gift in puzzle titles, or offline downloads and ad-free playback in podcast/audio titles). Some titles also sell one-time products: coin packs, a starter bundle, a piggy-bank payout, and a permanent Remove Ads unlock with the same ad scope as Premium. Everything is sold and processed by Google through Google Play Billing.",
+    "ru": "Каждое наше приложение может предлагать опциональную Premium-подписку — с недельным, месячным и годовым автопродлением в зависимости от приложения и вводным бесплатным периодом на годовом плане для подходящих новых подписчиков — которая отключает баннеры, межстраничные и app-open объявления и открывает премиум-функции конкретного приложения (например, ×2 монеты и ежедневный подарок в пазлах или офлайн-загрузки и воспроизведение без рекламы в подкаст/аудио-приложениях). Часть приложений также продаёт разовые товары: наборы монет, стартовый набор, вскрытие копилки и постоянное отключение рекламы с тем же охватом, что у Premium. Всё это продаёт и обрабатывает Google через Google Play Billing.",
+    "es": "Cada una de nuestras apps puede ofrecer una suscripción Premium opcional — con planes semanal, mensual y anual de renovación automática según el título, y una prueba gratuita introductoria en el plan anual para nuevos suscriptores elegibles — que desactiva banners, intersticiales y app-open y desbloquea funciones premium específicas (p. ej. monedas x2 y un regalo diario en los puzzles, o descargas offline y reproducción sin anuncios en podcast/audio). Algunos títulos también venden productos únicos: packs de monedas, un lote inicial, el cobro de la hucha y un desbloqueo permanente de Quitar Anuncios con el mismo alcance publicitario que Premium. Todo lo vende y procesa Google a través de Google Play Billing.",
+    "de": "Jede unserer Apps kann ein optionales Premium-Abo anbieten — je nach Titel mit wöchentlicher, monatlicher und jährlicher automatischer Verlängerung und einer einführenden Gratis-Testphase im Jahresplan für berechtigte Neu-Abonnenten — das Banner, Interstitials und App-Open-Anzeigen abschaltet und app-spezifische Premium-Funktionen freischaltet (z. B. x2 Münzen und ein tägliches Geschenk bei Puzzle-Titeln oder Offline-Downloads und werbefreie Wiedergabe bei Podcast/Audio-Titeln). Einige Titel verkaufen auch Einmal-Produkte: Münzpakete, ein Starterpaket, die Sparschwein-Auszahlung und ein dauerhaftes Werbung entfernen mit demselben Werbeumfang wie Premium. Alles wird von Google über Google Play Billing verkauft und verarbeitet.",
+    "fr": "Chacune de nos apps peut proposer un abonnement Premium optionnel — avec des forfaits hebdomadaire, mensuel et annuel à renouvellement automatique selon le titre, et un essai gratuit introductif sur le forfait annuel pour les nouveaux abonnés éligibles — qui désactive bannières, interstitiels et app-open et débloque des fonctions premium propres à l'app (par exemple pièces x2 et cadeau quotidien dans les puzzles, ou téléchargements hors-ligne et lecture sans pub dans les podcasts/audio). Certains titres vendent aussi des produits à l'unité : packs de pièces, lot de démarrage, encaissement de la tirelire et un déblocage permanent Supprimer les pubs avec la même portée publicitaire que Premium. Le tout est vendu et traité par Google via Google Play Billing.",
+    "pt-BR": "Cada um dos nossos apps pode oferecer uma assinatura Premium opcional — com planos semanal, mensal e anual de renovação automática, dependendo do título, e um período de teste gratuito introdutório no plano anual para novos assinantes elegíveis — que desliga banners, intersticiais e anúncios de abertura e libera recursos premium específicos daquele app (por exemplo moedas ×2 e um presente diário nos títulos de puzzle, ou downloads offline e reprodução sem anúncios nos títulos de podcast/áudio). Alguns títulos também vendem produtos únicos: pacotes de moedas, um pacote inicial, o resgate de um cofrinho e um desbloqueio permanente Remover Anúncios com o mesmo alcance de anúncios do Premium. Tudo é vendido e processado pelo Google por meio do Google Play Billing.",
+    "zh": "我们的每款应用都可能提供可选的 Premium 订阅——视作品不同提供按周、按月、按年自动续订的方案，年度方案对符合条件的新订阅者提供入门免费试用——它会关闭横幅、插屏与冷启动广告，并解锁该应用特有的高级功能（例如拼图类作品中的双倍金币与每日礼物，或播客/音频类作品中的离线下载与无广告播放）。部分作品还销售一次性商品：金币包、新手礼包、存钱罐提取，以及与 Premium 广告范围相同的永久「去广告」解锁。所有商品均由 Google 通过 Google Play 结算销售和处理。"
+  },
+  "p.sec3.list.1": {
+    "en": "All payment, billing, account, and tax information is collected and processed by Google. We do not see, store, or transmit your payment method, your Google account email, or any government identifiers.",
+    "ru": "Все платёжные, биллинговые, аккаунтные и налоговые данные собирает и обрабатывает Google. Мы не видим, не храним и не передаём ваш способ оплаты, email Google-аккаунта или государственные идентификаторы.",
+    "es": "Toda la información de pago, facturación, cuenta e impuestos la recopila y procesa Google. No vemos, almacenamos ni transmitimos tu método de pago, email de Google ni identificadores oficiales.",
+    "de": "Alle Zahlungs-, Abrechnungs-, Konto- und Steuerdaten werden von Google erfasst und verarbeitet. Wir sehen, speichern und übertragen weder dein Zahlungsmittel noch deine Google-Konto-E-Mail oder amtliche Identifikatoren.",
+    "fr": "Toutes les informations de paiement, facturation, compte et fiscalité sont collectées et traitées par Google. Nous ne voyons, ne stockons, ni ne transmettons votre moyen de paiement, votre e-mail Google ou des identifiants officiels.",
+    "pt-BR": "Todas as informações de pagamento, cobrança, conta e impostos são coletadas e processadas pelo Google. Não vemos, armazenamos nem transmitimos sua forma de pagamento, o e-mail da sua conta Google ou qualquer identificador governamental.",
+    "zh": "所有支付、账单、账户与税务信息均由 Google 收集和处理。我们不会看到、存储或传输你的支付方式、Google 账号邮箱或任何政府身份标识。"
+  },
+  "p.sec3.list.2": {
+    "en": "The app receives only a non-identifying entitlement signal from Google: whether an active subscription exists for your installation (product ID and base plan ID), and which one-time products have been purchased. This signal is cached locally as described in §1a.",
+    "ru": "Приложение получает от Google только обезличенный сигнал о правах: есть ли активная подписка для вашей установки (ID продукта и базового плана) и какие разовые товары куплены. Этот сигнал кэшируется локально, как описано в §1a.",
+    "es": "La app solo recibe de Google una señal no identificadora de derechos: si existe una suscripción activa para tu instalación (ID de producto y de plan base) y qué productos únicos se han comprado. Esta señal se cachea localmente como en §1a.",
+    "de": "Die App erhält von Google nur ein nicht identifizierendes Berechtigungssignal: ob ein aktives Abo für deine Installation besteht (Produkt-ID und Basis-Plan-ID) und welche Einmal-Produkte gekauft wurden. Dieses Signal wird lokal gecached wie in §1a beschrieben.",
+    "fr": "L'app reçoit uniquement de Google un signal de droits non identifiant : l'existence d'un abonnement actif pour votre installation (ID de produit et de forfait de base) et les produits à l'unité achetés. Ce signal est mis en cache localement comme décrit en §1a.",
+    "pt-BR": "O app recebe do Google apenas um sinal de direito não identificável: se existe uma assinatura ativa para a sua instalação (ID do produto e ID do plano base) e quais produtos únicos foram comprados. Esse sinal fica em cache local, como descrito em §1a.",
+    "zh": "应用只从 Google 收到一个无法识别个人的权益信号：你的安装是否存在有效订阅（商品 ID 与基础方案 ID），以及购买了哪些一次性商品。该信号按 §1a 所述缓存在本地。"
+  },
+  "p.sec3.list.3": {
+    "en": "Subscription management, cancellation, refund requests, and renewal dates are handled entirely on Google Play. The \"Manage\" button inside the app deep-links to the Google Play subscriptions page.",
+    "ru": "Управление подпиской, отмена, запросы возврата и даты продления полностью обрабатываются на Google Play. Кнопка «Управление» в приложении ведёт на страницу подписок Google Play.",
+    "es": "La gestión, cancelación, reembolsos y fechas de renovación se gestionan íntegramente en Google Play. El botón «Gestionar» dentro de la app enlaza a la página de suscripciones de Google Play.",
+    "de": "Abo-Verwaltung, Kündigung, Erstattungsanfragen und Verlängerungstermine werden vollständig in Google Play abgewickelt. Die „Verwalten\"-Schaltfläche in der App verlinkt zur Google-Play-Abo-Seite.",
+    "fr": "La gestion de l'abonnement, l'annulation, les demandes de remboursement et les dates de renouvellement sont entièrement gérées sur Google Play. Le bouton « Gérer » dans l'app renvoie vers la page d'abonnements Google Play.",
+    "pt-BR": "Gerenciamento da assinatura, cancelamento, pedidos de reembolso e datas de renovação são tratados inteiramente no Google Play. O botão \"Gerenciar\" dentro do app leva diretamente à página de assinaturas do Google Play.",
+    "zh": "订阅管理、取消、退款申请与续订日期全部在 Google Play 中处理。应用内的「管理」按钮会直接跳转到 Google Play 订阅页面。"
+  },
+  "p.sec3.list.4": {
+    "en": "Google Play's privacy policy applies to all billing-related processing: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>",
+    "ru": "На все процессы, связанные с биллингом, распространяется политика конфиденциальности Google Play: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>",
+    "es": "La política de privacidad de Google Play se aplica a todo el procesamiento de facturación: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>",
+    "de": "Die Datenschutzerklärung von Google Play gilt für alle abrechnungsbezogenen Verarbeitungen: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>",
+    "fr": "La politique de confidentialité de Google Play s'applique à tout le traitement lié à la facturation : <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>",
+    "pt-BR": "A política de privacidade do Google Play se aplica a todo o processamento relacionado a cobrança: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>",
+    "zh": "Google Play 的隐私政策适用于所有与结算相关的处理：<a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">policies.google.com/privacy ↗</a>"
+  },
+  "p.sec4.title": {
+    "en": "Legal basis and consent (GDPR / EEA, UK, Switzerland)",
+    "ru": "Правовая основа и согласие (GDPR / ЕЭЗ, Великобритания, Швейцария)",
+    "es": "Base legal y consentimiento (GDPR / EEE, Reino Unido, Suiza)",
+    "de": "Rechtsgrundlage und Einwilligung (GDPR / EWR, UK, Schweiz)",
+    "fr": "Base légale et consentement (GDPR / EEE, Royaume-Uni, Suisse)",
+    "pt-BR": "Base legal e consentimento (GDPR / EEE, Reino Unido, Suíça)",
+    "zh": "法律依据与同意（GDPR / 欧洲经济区、英国、瑞士）"
+  },
+  "p.sec4.body": {
+    "en": "If you are located in the EEA, the UK, or Switzerland, the legal basis for advertising-related processing is your consent, collected via an IAB Transparency & Consent Framework (TCF) dialog presented when you first launch the app. You may withdraw or change your consent at any time — via the in-app privacy settings where the app provides them, or by clearing the app's data (Settings → Apps), which presents the consent dialog again on the next launch. The legal basis for processing subscription data via Google Play Billing is the performance of the contract you enter into when purchasing a subscription.",
+    "ru": "Если вы находитесь в ЕЭЗ, Великобритании или Швейцарии, правовой основой обработки рекламных данных является ваше согласие, собираемое через диалог IAB Transparency & Consent Framework (TCF) при первом запуске приложения. Отозвать или изменить согласие можно в любой момент — через настройки конфиденциальности внутри приложения, если оно их предоставляет, или очистив данные приложения (Настройки → Приложения): при следующем запуске диалог согласия будет показан снова. Правовая основа обработки данных подписки через Google Play Billing — исполнение договора, который вы заключаете при покупке подписки.",
+    "es": "Si te encuentras en el EEE, Reino Unido o Suiza, la base legal para el procesamiento publicitario es tu consentimiento, recogido mediante un diálogo IAB Transparency & Consent Framework (TCF) en el primer arranque de la app. Puedes retirar o cambiar tu consentimiento en cualquier momento — mediante los ajustes de privacidad de la app cuando estén disponibles, o borrando los datos de la app (Ajustes → Aplicaciones), lo que vuelve a mostrar el diálogo de consentimiento en el siguiente arranque. La base legal del procesamiento de datos de suscripción vía Google Play Billing es la ejecución del contrato al comprar la suscripción.",
+    "de": "Wenn du dich im EWR, Vereinigten Königreich oder in der Schweiz befindest, ist die Rechtsgrundlage für werbebezogene Verarbeitungen deine Einwilligung, eingeholt über einen IAB Transparency & Consent Framework (TCF)-Dialog beim ersten App-Start. Du kannst deine Einwilligung jederzeit widerrufen oder ändern — über die In-App-Datenschutzeinstellungen, sofern die App sie anbietet, oder durch Löschen der App-Daten (Einstellungen → Apps), wodurch der Einwilligungsdialog beim nächsten Start erneut angezeigt wird. Rechtsgrundlage der Verarbeitung von Abo-Daten via Google Play Billing ist die Erfüllung des beim Abo-Kauf geschlossenen Vertrags.",
+    "fr": "Si vous vous trouvez dans l'EEE, au Royaume-Uni ou en Suisse, la base légale du traitement publicitaire est votre consentement, recueilli via un dialogue IAB Transparency & Consent Framework (TCF) au premier lancement de l'app. Vous pouvez retirer ou modifier votre consentement à tout moment — via les réglages de confidentialité de l'app lorsqu'ils existent, ou en effaçant les données de l'app (Paramètres → Applications), ce qui réaffiche le dialogue de consentement au prochain lancement. La base légale du traitement des données d'abonnement via Google Play Billing est l'exécution du contrat conclu à l'achat de l'abonnement.",
+    "pt-BR": "Se você está no EEE, no Reino Unido ou na Suíça, a base legal para o processamento relacionado a publicidade é o seu consentimento, coletado por meio de um diálogo do IAB Transparency & Consent Framework (TCF) exibido na primeira abertura do app. Você pode retirar ou alterar seu consentimento a qualquer momento — nas configurações de privacidade dentro do app, onde o app as oferece, ou limpando os dados do app (Configurações → Apps), o que exibe o diálogo de consentimento novamente na próxima abertura. A base legal para o processamento de dados de assinatura via Google Play Billing é a execução do contrato firmado quando você compra uma assinatura.",
+    "zh": "如果你位于欧洲经济区、英国或瑞士，与广告相关的处理的法律依据是你的同意，该同意通过首次启动应用时显示的 IAB 透明度与同意框架（TCF）对话框收集。你可以随时撤回或更改同意——在应用提供的应用内隐私设置中操作，或清除应用数据（设置 → 应用），下次启动时会再次显示同意对话框。通过 Google Play 结算处理订阅数据的法律依据，是你购买订阅时所订立合同的履行。"
+  },
+  "p.sec5.title": {
+    "en": "CCPA / US state privacy laws",
+    "ru": "CCPA / законы о конфиденциальности штатов США",
+    "es": "CCPA / leyes estatales de privacidad de EE. UU.",
+    "de": "CCPA / US-Datenschutzgesetze der Bundesstaaten",
+    "fr": "CCPA / lois d'État américaines sur la confidentialité",
+    "pt-BR": "CCPA / leis estaduais de privacidade dos EUA",
+    "zh": "CCPA / 美国州级隐私法"
+  },
+  "p.sec5.body": {
+    "en": "If you are a California resident, or in another applicable US state, you have the right to opt out of the \"sale\" or \"sharing\" of your personal information for behavioral advertising. The in-app consent dialog provides this opt-out where required. Subscription processing by Google Play is not a \"sale\" of personal information.",
+    "ru": "Если вы житель Калифорнии или другого подходящего штата США, у вас есть право отказаться от «продажи» или «передачи» вашей персональной информации для поведенческой рекламы. Внутренний диалог согласия предоставляет такой опт-аут там, где это требуется. Обработка подписки через Google Play не является «продажей» персональной информации.",
+    "es": "Si resides en California u otro estado aplicable, tienes derecho a oponerte a la \"venta\" o \"compartición\" de tu información personal con fines publicitarios conductuales. El diálogo de consentimiento ofrece este opt-out donde sea necesario. El procesamiento de suscripciones por Google Play no es una \"venta\" de información personal.",
+    "de": "Wenn du in Kalifornien oder einem anderen einschlägigen US-Bundesstaat ansässig bist, hast du das Recht, dem „Verkauf\" oder „Teilen\" deiner personenbezogenen Informationen für verhaltensbasierte Werbung zu widersprechen. Der In-App-Einwilligungsdialog stellt diesen Opt-out bereit, wo erforderlich. Die Abo-Abwicklung durch Google Play ist kein „Verkauf\" personenbezogener Informationen.",
+    "fr": "Si vous êtes résident de Californie ou d'un autre État applicable, vous avez le droit de refuser la « vente » ou le « partage » de vos informations personnelles à des fins publicitaires comportementales. Le dialogue de consentement dans l'app fournit cet opt-out là où il est requis. Le traitement de l'abonnement par Google Play n'est pas une « vente » d'informations personnelles.",
+    "pt-BR": "Se você é residente da Califórnia, ou de outro estado dos EUA onde se aplique, você tem o direito de recusar a \"venda\" ou o \"compartilhamento\" das suas informações pessoais para publicidade comportamental. O diálogo de consentimento dentro do app oferece essa recusa onde exigido. O processamento de assinaturas pelo Google Play não é uma \"venda\" de informações pessoais.",
+    "zh": "如果你是加利福尼亚州居民，或位于其他适用的美国州，你有权拒绝为行为广告目的「出售」或「共享」你的个人信息。应用内的同意对话框会在法律要求的地方提供这一拒绝选项。Google Play 对订阅的处理不构成个人信息的「出售」。"
+  },
+  "p.sec6.title": {
+    "en": "Children's privacy (COPPA)",
+    "ru": "Конфиденциальность детей (COPPA)",
+    "es": "Privacidad infantil (COPPA)",
+    "de": "Datenschutz für Kinder (COPPA)",
+    "fr": "Vie privée des enfants (COPPA)",
+    "pt-BR": "Privacidade de crianças (COPPA)",
+    "zh": "儿童隐私（COPPA）"
+  },
+  "p.sec6.body": {
+    "en": "Our apps are not directed at children under 13 (or the equivalent minimum age in your jurisdiction). We do not knowingly collect personal information from children. The Premium subscription is intended for adult purchasers; in-app purchases require a Google Play account with the appropriate purchase permissions.",
+    "ru": "Наши приложения не предназначены для детей младше 13 лет (или эквивалентного минимального возраста в вашей юрисдикции). Мы сознательно не собираем персональные данные детей. Premium-подписка предназначена для взрослых покупателей; для встроенных покупок требуется Google-аккаунт с соответствующими правами.",
+    "es": "Nuestras apps no están dirigidas a menores de 13 años (o la edad mínima equivalente en tu jurisdicción). No recopilamos a sabiendas información personal de menores. La suscripción Premium está pensada para compradores adultos; las compras requieren una cuenta de Google Play con los permisos adecuados.",
+    "de": "Unsere Apps richten sich nicht an Kinder unter 13 Jahren (oder das entsprechende Mindestalter deiner Jurisdiktion). Wir erfassen nicht wissentlich personenbezogene Daten von Kindern. Das Premium-Abo richtet sich an erwachsene Käufer; In-App-Käufe erfordern ein Google-Play-Konto mit entsprechenden Berechtigungen.",
+    "fr": "Nos apps ne s'adressent pas aux enfants de moins de 13 ans (ou l'âge minimum équivalent dans votre juridiction). Nous ne collectons pas sciemment d'informations personnelles d'enfants. L'abonnement Premium est destiné à des acheteurs adultes ; les achats in-app nécessitent un compte Google Play avec les permissions adéquates.",
+    "pt-BR": "Nossos apps não são direcionados a crianças menores de 13 anos (ou a idade mínima equivalente na sua jurisdição). Não coletamos intencionalmente informações pessoais de crianças. A assinatura Premium é destinada a compradores adultos; compras no app exigem uma conta do Google Play com as permissões de compra adequadas.",
+    "zh": "我们的应用并非面向 13 岁以下儿童（或你所在司法辖区的同等最低年龄）。我们不会有意收集儿童的个人信息。Premium 订阅面向成年购买者；应用内购买需要具备相应购买权限的 Google Play 账号。"
+  },
+  "p.sec7.title": {
+    "en": "Data retention",
+    "ru": "Хранение данных",
+    "es": "Retención de datos",
+    "de": "Datenspeicherung",
+    "fr": "Conservation des données",
+    "pt-BR": "Retenção de dados",
+    "zh": "数据保留"
+  },
+  "p.sec7.body": {
+    "en": "Locally stored data described in §1a is retained on your device until you clear the app's data or uninstall the app. We do not retain personal information on our own servers. Copies made by Android's own backup service — and a Play Games cloud save, if you enabled it — live in your own Google account: remove them from Android Settings → Google → Backup, and from your Play Games account respectively. The advertising partners and Google Play retain data per their own policies.",
+    "ru": "Локально хранимые данные из §1a сохраняются на вашем устройстве до очистки данных приложения или его удаления. Мы не храним персональные данные на собственных серверах. Копии, созданные собственной службой резервного копирования Android — и облачное сохранение Play Games, если вы его включили — лежат в вашем же аккаунте Google: удалить их можно соответственно в Настройки Android → Google → Резервное копирование и в настройках вашего аккаунта Play Games. Рекламные партнёры и Google Play хранят данные согласно своим политикам.",
+    "es": "Los datos almacenados localmente descritos en §1a se conservan en tu dispositivo hasta que borres los datos de la app o la desinstales. No retenemos información personal en servidores propios. Las copias creadas por el servicio de copia de seguridad del propio Android — y el guardado en la nube de Play Games, si lo activaste — están en tu propia cuenta de Google: elimínalas desde Ajustes de Android → Google → Copia de seguridad y desde tu cuenta de Play Games, respectivamente. Los socios publicitarios y Google Play conservan los datos según sus propias políticas.",
+    "de": "Lokal gespeicherte Daten gemäß §1a bleiben auf deinem Gerät, bis du die App-Daten löschst oder die App deinstallierst. Wir bewahren keine personenbezogenen Daten auf eigenen Servern auf. Kopien, die Androids eigener Sicherungsdienst anlegt — und ein Play-Games-Cloud-Spielstand, falls du ihn aktiviert hast — liegen in deinem eigenen Google-Konto: entferne sie unter Android-Einstellungen → Google → Sicherung bzw. in deinem Play-Games-Konto. Werbepartner und Google Play speichern Daten gemäß ihren eigenen Richtlinien.",
+    "fr": "Les données stockées localement décrites en §1a sont conservées sur votre appareil jusqu'à ce que vous effaciez les données de l'app ou la désinstalliez. Nous ne conservons aucune information personnelle sur nos propres serveurs. Les copies créées par le service de sauvegarde d'Android — et une sauvegarde cloud Play Games, si vous l'avez activée — se trouvent dans votre propre compte Google : supprimez-les respectivement depuis Paramètres Android → Google → Sauvegarde et depuis votre compte Play Games. Les partenaires publicitaires et Google Play conservent les données selon leurs propres politiques.",
+    "pt-BR": "Os dados armazenados localmente descritos em §1a permanecem no seu aparelho até que você limpe os dados do app ou o desinstale. Não retemos informações pessoais em servidores próprios. As cópias feitas pelo serviço de backup do próprio Android — e um salvamento na nuvem do Play Games, se você o ativou — ficam na sua própria conta Google: remova-as em Configurações do Android → Google → Backup e na sua conta do Play Games, respectivamente. Os parceiros de publicidade e o Google Play retêm dados de acordo com as próprias políticas.",
+    "zh": "§1a 所述的本地存储数据会保留在你的设备上，直到你清除应用数据或卸载应用。我们不会在自己的服务器上保留个人信息。Android 自带备份服务生成的副本——以及你若启用了的 Play Games 云存档——保存在你自己的 Google 账号中：分别在 Android 设置 → Google → 备份 和你的 Play Games 账号中删除。广告合作方与 Google Play 按各自的政策保留数据。"
+  },
+  "p.sec8.title": {
+    "en": "Your rights",
+    "ru": "Ваши права",
+    "es": "Tus derechos",
+    "de": "Deine Rechte",
+    "fr": "Vos droits",
+    "pt-BR": "Seus direitos",
+    "zh": "你的权利"
+  },
+  "p.sec8.body": {
+    "en": "Depending on your jurisdiction, you may have the right to access, correct, delete, restrict, or port your personal data, and to lodge a complaint with a supervisory authority. Because we do not directly hold this data, requests should be directed to the advertising partner concerned, or — for billing data — to Google Play.",
+    "ru": "В зависимости от вашей юрисдикции у вас могут быть права на доступ, исправление, удаление, ограничение или перенос ваших персональных данных, а также право подать жалобу в надзорный орган. Поскольку мы напрямую этих данных не храним, запросы следует направлять соответствующему рекламному партнёру или — по данным биллинга — Google Play.",
+    "es": "Según tu jurisdicción puedes tener derecho a acceder, corregir, eliminar, restringir o portar tus datos personales, y a presentar una reclamación ante una autoridad de control. Como no almacenamos directamente estos datos, las solicitudes deben dirigirse al socio publicitario correspondiente o — para datos de facturación — a Google Play.",
+    "de": "Je nach Jurisdiktion kannst du das Recht haben, deine personenbezogenen Daten einzusehen, zu berichtigen, zu löschen, zu beschränken oder zu übertragen, sowie Beschwerde bei einer Aufsichtsbehörde einzulegen. Da wir diese Daten nicht selbst halten, sollten Anfragen an den betreffenden Werbepartner oder — für Abrechnungsdaten — an Google Play gerichtet werden.",
+    "fr": "Selon votre juridiction, vous pouvez avoir le droit d'accéder à vos données personnelles, les rectifier, les supprimer, les restreindre ou les porter, et de déposer une plainte auprès d'une autorité de contrôle. Comme nous ne détenons pas ces données directement, les demandes doivent être adressées au partenaire publicitaire concerné ou — pour les données de facturation — à Google Play.",
+    "pt-BR": "Dependendo da sua jurisdição, você pode ter o direito de acessar, corrigir, apagar, restringir ou portar seus dados pessoais, e de apresentar uma reclamação a uma autoridade de controle. Como não detemos esses dados diretamente, as solicitações devem ser dirigidas ao parceiro de publicidade em questão ou — no caso de dados de cobrança — ao Google Play.",
+    "zh": "根据你所在的司法辖区，你可能有权访问、更正、删除、限制或转移你的个人数据，并向监管机构提出投诉。由于我们并不直接持有这些数据，相关请求应提交给对应的广告合作方，或——对于结算数据——提交给 Google Play。"
+  },
+  "p.sec8.callout": {
+    "en": "To remove all locally stored data for any of our apps, uninstall the app or clear its storage from your device's settings (<em>Settings → Apps → [the app] → Storage → Clear data</em>). That clears the copy on the device; a backup Android has already taken is removed under <em>Android Settings → Google → Backup</em>, and a Play Games cloud save from your Play Games account.",
+    "ru": "Чтобы удалить все локально сохранённые данные любого из наших приложений, удалите приложение или очистите его данные в настройках устройства (<em>Настройки → Приложения → [приложение] → Память → Очистить данные</em>). Это удаляет копию на устройстве; уже сделанный бэкап Android удаляется в <em>Настройки Android → Google → Резервное копирование</em>, а облачное сохранение Play Games — в настройках вашего аккаунта Play Games.",
+    "es": "Para eliminar todos los datos almacenados localmente de cualquiera de nuestras apps, desinstálala o borra su almacenamiento desde los ajustes del dispositivo (<em>Ajustes → Aplicaciones → [la app] → Almacenamiento → Borrar datos</em>). Eso borra la copia del dispositivo; una copia de seguridad que Android ya haya hecho se elimina en <em>Ajustes de Android → Google → Copia de seguridad</em>, y el guardado en la nube de Play Games desde tu cuenta de Play Games.",
+    "de": "Um sämtliche lokal gespeicherten Daten einer unserer Apps zu entfernen, deinstalliere die App oder lösche ihren Speicher in den Geräteeinstellungen (<em>Einstellungen → Apps → [die App] → Speicher → Daten löschen</em>). Das löscht die Kopie auf dem Gerät; eine bereits von Android angelegte Sicherung entfernst du unter <em>Android-Einstellungen → Google → Sicherung</em>, einen Play-Games-Cloud-Spielstand in deinem Play-Games-Konto.",
+    "fr": "Pour supprimer toutes les données stockées localement par l'une de nos apps, désinstallez l'app ou videz son stockage depuis les paramètres de l'appareil (<em>Paramètres → Applications → [l'app] → Stockage → Effacer les données</em>). Cela efface la copie sur l'appareil ; une sauvegarde déjà réalisée par Android se supprime dans <em>Paramètres Android → Google → Sauvegarde</em>, et une sauvegarde cloud Play Games depuis votre compte Play Games.",
+    "pt-BR": "Para remover todos os dados armazenados localmente por qualquer um dos nossos apps, desinstale o app ou limpe seu armazenamento nas configurações do aparelho (<em>Configurações → Apps → [o app] → Armazenamento → Limpar dados</em>). Isso apaga a cópia no aparelho; um backup que o Android já fez é removido em <em>Configurações do Android → Google → Backup</em>, e um salvamento na nuvem do Play Games, na sua conta do Play Games.",
+    "zh": "要删除我们任一应用在本地存储的全部数据，请卸载该应用，或在设备设置中清除其存储（<em>设置 → 应用 → [该应用] → 存储 → 清除数据</em>）。这会清除设备上的副本；Android 已生成的备份可在<em>Android 设置 → Google → 备份</em>中删除，Play Games 云存档则在你的 Play Games 账号中删除。"
+  },
+  "p.sec9.title": {
+    "en": "Changes to this policy",
+    "ru": "Изменения политики",
+    "es": "Cambios a esta política",
+    "de": "Änderungen dieser Erklärung",
+    "fr": "Modifications de cette politique",
+    "pt-BR": "Alterações nesta política",
+    "zh": "本政策的变更"
+  },
+  "p.sec9.body": {
+    "en": "We may update this Privacy Policy from time to time — for example when we add new titles, change advertising partners, or update subscription mechanics. The \"Last updated\" date at the top of the page indicates when the most recent change was made. Material changes will be reflected in-app on next launch.",
+    "ru": "Мы можем периодически обновлять эту Политику конфиденциальности — например, при добавлении новых тайтлов, смене рекламных партнёров или обновлении механики подписки. Дата «Обновлено» вверху страницы указывает, когда внесено последнее изменение. Существенные изменения отражаются в приложении при следующем запуске.",
+    "es": "Podemos actualizar esta Política de Privacidad de vez en cuando — por ejemplo cuando añadamos nuevos títulos, cambiemos socios publicitarios o actualicemos la mecánica de suscripción. La fecha «Actualizado» en la parte superior indica cuándo se hizo el último cambio. Los cambios sustanciales se reflejarán en la app en el siguiente arranque.",
+    "de": "Wir können diese Datenschutzerklärung gelegentlich aktualisieren — z. B. wenn wir neue Titel hinzufügen, Werbepartner wechseln oder Abo-Mechaniken anpassen. Das Datum „Zuletzt aktualisiert\" oben gibt an, wann die letzte Änderung erfolgte. Wesentliche Änderungen werden in der App beim nächsten Start widergespiegelt.",
+    "fr": "Nous pouvons mettre à jour cette Politique de confidentialité de temps à autre — par exemple lorsque nous ajoutons de nouveaux titres, changeons de partenaires publicitaires ou mettons à jour la mécanique d'abonnement. La date « Mis à jour » en haut de la page indique quand le dernier changement a été effectué. Les changements importants sont reflétés dans l'app au prochain lancement.",
+    "pt-BR": "Podemos atualizar esta Política de Privacidade de tempos em tempos — por exemplo quando adicionamos novos títulos, mudamos de parceiros de publicidade ou atualizamos a mecânica de assinatura. A data \"Última atualização\" no topo da página indica quando a mudança mais recente foi feita. Mudanças relevantes são refletidas no app na próxima abertura.",
+    "zh": "我们可能会不时更新本隐私政策——例如新增作品、更换广告合作方或调整订阅机制时。页面顶部的「最近更新」日期表示最近一次变更的时间。重大变更会在下次启动时在应用内体现。"
+  },
+  "p.sec10.title": {
+    "en": "Contact",
+    "ru": "Контакты",
+    "es": "Contacto",
+    "de": "Kontakt",
+    "fr": "Contact",
+    "pt-BR": "Contato",
+    "zh": "联系方式"
+  },
+  "p.sec10.body": {
+    "en": "For privacy questions about any of our apps, write to us at <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a>. We try to reply within a reasonable time.",
+    "ru": "По вопросам конфиденциальности любого из наших приложений пишите на <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a>. Стараемся отвечать в разумные сроки.",
+    "es": "Para preguntas de privacidad sobre cualquiera de nuestras apps, escríbenos a <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a>. Intentamos responder en un plazo razonable.",
+    "de": "Für Datenschutzfragen zu einer unserer Apps schreib uns an <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a>. Wir versuchen, in angemessener Zeit zu antworten.",
+    "fr": "Pour toute question de confidentialité sur l'une de nos apps, écrivez-nous à <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a>. Nous essayons de répondre dans un délai raisonnable.",
+    "pt-BR": "Para dúvidas de privacidade sobre qualquer um dos nossos apps, escreva para <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a>. Tentamos responder em um prazo razoável.",
+    "zh": "关于我们任一应用的隐私问题，请发送邮件至 <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a>。我们会尽量在合理时间内回复。"
+  }
+}

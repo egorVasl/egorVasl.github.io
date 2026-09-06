@@ -71,6 +71,7 @@ function build() {
     require('./pages/home')(),
     ...live.map((g) => require('./pages/gamePage')(g)),
     require('./pages/studio')(),
+    require('./pages/privacy')(),
     require('./pages/press')(),
     require('./pages/notFound')(),
   ];
@@ -112,7 +113,7 @@ function build() {
   for (const { file, html } of rendered) fs.writeFileSync(out(file), html);
 
   // Search engines get a map of exactly what was built, nothing hand-kept.
-  const urls = [...rendered.map((r) => r.file), 'privacy-policy.html']
+  const urls = rendered.map((r) => r.file)
     .filter((f) => f !== '404.html')
     .map((f) => `  <url><loc>${layout.SITE}/${f === 'index.html' ? '' : f}</loc></url>`);
   fs.writeFileSync(out('sitemap.xml'),

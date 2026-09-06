@@ -737,6 +737,34 @@
     }
   }
 
+  /**
+   * The contents mark the section being read. A long policy is navigated by
+   * scrolling as much as by clicking, and a list of ten identical links that
+   * never responds to where you are is a list you stop trusting.
+   */
+  function initDocToc() {
+    const links = $$('.doc-toc-list a');
+    if (!links.length || !('IntersectionObserver' in window)) return;
+    const byId = new Map(links.map((a) => [a.getAttribute('href').slice(1), a]));
+    const seen = new Set();
+    const mark = () => {
+      // The topmost section still on screen is the one being read.
+      let current = null;
+      for (const id of byId.keys()) if (seen.has(id)) { current = id; break; }
+      for (const [id, a] of byId) a.setAttribute('aria-current', String(id === current));
+    };
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) seen.add(e.target.id); else seen.delete(e.target.id);
+      }
+      mark();
+    }, { rootMargin: `-${document.querySelector('.nav')?.offsetHeight || 64}px 0px -55% 0px` });
+    for (const id of byId.keys()) {
+      const sec = document.getElementById(id);
+      if (sec) io.observe(sec);
+    }
+  }
+
   function initCopy() {
     for (const btn of $$('[data-copy]')) {
       btn.addEventListener('click', async () => {
@@ -772,6 +800,7 @@
     initCounters();
     initMagnetic();
     initCopy();
+    initDocToc();
     initMotifs();
     initBoards();
     initPalettes();

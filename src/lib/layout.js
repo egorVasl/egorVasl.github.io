@@ -103,7 +103,7 @@ function nav(active) {
         ${link('nav.games', 'index.html#shelf', 'games')}
         ${link('nav.studio', 'studio.html', 'studio')}
         ${link('nav.press', 'press.html', 'press')}
-        ${link('nav.privacy', 'privacy-policy.html', 'privacy')}
+        ${link('nav.privacy', 'privacy-policy.html', 'privacy-policy')}
       </nav>
       <div class="nav-right">
         <div class="lang-wrap">
@@ -131,7 +131,7 @@ function nav(active) {
       ${link('nav.games', 'index.html#shelf', 'games')}
       ${link('nav.studio', 'studio.html', 'studio')}
       ${link('nav.press', 'press.html', 'press')}
-      ${link('nav.privacy', 'privacy-policy.html', 'privacy')}
+      ${link('nav.privacy', 'privacy-policy.html', 'privacy-policy')}
     </div>
   </header>`;
 }

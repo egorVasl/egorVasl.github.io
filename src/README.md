@@ -5,11 +5,9 @@ the change on the next build and breaks the six other languages with it.
 
 ```sh
 npm run extract   # re-read the game repos → src/data/game-data.json
-npm run build     # → index, blocklix, gridlix, studio, press, 404, sitemap, robots
+npm run build     # → index, blocklix, gridlix, studio, privacy, press, 404, sitemap, robots
 ```
 
-`privacy-policy.html` is the one exception: it is maintained by hand and the
-build never touches it.
 
 ## Where things live
 
@@ -20,6 +18,7 @@ build never touches it.
 | `src/i18n/*.json` | The dictionary, key-major: one key, seven languages side by side. |
 | `src/i18n/aliases.map.json` | New keys that point at an older key instead of copying its text. |
 | `src/pages/*.js` | One module per page; a game page assembles shared modules named by its record. |
+| `src/pages/privacy.js` | The policy. Its sections are data — the order is the only thing arranged by hand. |
 | `src/lib/` | The document shell, the markup helpers, the dictionary loader. |
 | `assets/site.css`, `assets/site.js` | Hand-written, not generated. Everything visual and everything that moves. |
 | `assets/logo.svg` | The studio mark. Nav, footer, favicon, press kit and every PNG below come from this one file. |
