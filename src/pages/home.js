@@ -5,7 +5,7 @@
  */
 const { el, tx, esc, t, i18nAttr } = require('../lib/html');
 const { sectionHead, playBadge, factGrid, chips, button, chevronDown, arrowRight } = require('../lib/layout');
-const { games, live, storeUrl, pageUrl, studioNumbers, LIVE, DEV } = require('../data/games');
+const { games, live, storeUrl, pageUrl, studioNumbers, LIVE, DEV, IDEA } = require('../data/games');
 
 const idx = (n) => String(n + 1).padStart(2, '0');
 
@@ -64,6 +64,22 @@ function openSlot(i) {
         </article>`;
 }
 
+/**
+ * One figure per status that actually has titles in it. Counting "everything
+ * not live" and calling it in-the-works was fine while the two happened to
+ * agree; it stops being true the moment the catalogue holds an idea and
+ * nothing in development.
+ */
+function counts() {
+  return [[LIVE, 'shelf.count.live'], [DEV, 'shelf.count.soon'], [IDEA, 'shelf.count.idea']]
+    .map(([status, key]) => [games.filter((g) => g.status === status).length, key])
+    .filter(([n]) => n > 0)
+    .map(([n, key]) => `
+        <span class="count-n" data-count="${n}">${n}</span>
+        ${el('span', key)}
+        <span class="count-sep" aria-hidden="true">·</span>`).join('');
+}
+
 function shelf() {
   const all = games.map(panel).join('') + openSlot(games.length);
   const dots = games.map((g, i) =>
@@ -78,13 +94,7 @@ function shelf() {
         ${el('h2', 'shelf.title', { class: 'sec-title', id: 'shelf-title' })}
         ${el('p', 'shelf.intro', { class: 'sec-intro' })}
       </div>
-      <div class="shelf-count">
-        <span class="count-n" data-count="${studioNumbers.games}">${studioNumbers.games}</span>
-        ${el('span', 'shelf.count.live')}
-        <span class="count-sep" aria-hidden="true">·</span>
-        <span class="count-n" data-count="${games.length - studioNumbers.games}">${games.length - studioNumbers.games}</span>
-        ${el('span', 'shelf.count.soon')}
-        <span class="count-sep" aria-hidden="true">·</span>
+      <div class="shelf-count">${counts()}
         <span class="count-inf" aria-hidden="true">∞</span>
         ${el('span', 'shelf.count.open')}
       </div>
@@ -171,7 +181,7 @@ function principles() {
 }
 
 function roadmapTeaser() {
-  const rows = [1, 2, 3, 4].map((i) => `
+  const rows = [1, 2, 3].map((i) => `
         <li class="road-row reveal">
           ${el('span', `roadmap.r${i}.meta`, { class: 'road-meta' })}
           <div>

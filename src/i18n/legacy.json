@@ -9,13 +9,13 @@
     "zh": "Vaslix Games — 小而耐玩的 Android 益智游戏"
   },
   "meta.description": {
-    "en": "Vaslix Games is an independent Android studio shipping small, focused apps across genres — puzzle today, audio and arcade next. Gridlix:2048 and Blocklix are both live on Google Play.",
-    "ru": "Vaslix Games — независимая Android-студия, выпускающая компактные, сфокусированные приложения в разных жанрах: сегодня пазлы, дальше аудио и аркады. Gridlix:2048 и Blocklix уже доступны в Google Play.",
-    "es": "Vaslix Games es un estudio Android independiente que crea apps pequeñas y enfocadas en varios géneros — puzzle hoy, audio y arcade después. Gridlix:2048 y Blocklix ya están en Google Play.",
-    "de": "Vaslix Games ist ein unabhängiges Android-Studio, das kleine, fokussierte Apps in verschiedenen Genres veröffentlicht — heute Puzzle, als nächstes Audio und Arcade. Gridlix:2048 und Blocklix sind beide auf Google Play.",
-    "fr": "Vaslix Games est un studio Android indépendant qui publie des apps compactes et soignées dans plusieurs genres — puzzle aujourd'hui, audio et arcade ensuite. Gridlix:2048 et Blocklix sont tous deux sur Google Play.",
-    "pt-BR": "Vaslix Games é um estúdio Android independente que publica apps compactos e cuidadosos em vários gêneros — puzzle hoje, áudio e arcade depois. Gridlix:2048 e Blocklix já estão na Google Play.",
-    "zh": "Vaslix Games 是一家独立 Android 工作室，专注开发紧凑、用心的应用，跨越多种类型——今日 Puzzle，未来音频与街机。Gridlix:2048 与 Blocklix 均已在 Google Play 上线。"
+    "en": "Vaslix Games is an independent Android studio shipping small, focused puzzle games. Gridlix:2048 and Blocklix are both live on Google Play.",
+    "ru": "Vaslix Games — независимая Android-студия, выпускающая компактные, сфокусированные головоломки. Gridlix:2048 и Blocklix уже доступны в Google Play.",
+    "es": "Vaslix Games es un estudio Android independiente que crea juegos de puzzle pequeños y enfocados. Gridlix:2048 y Blocklix ya están en Google Play.",
+    "de": "Vaslix Games ist ein unabhängiges Android-Studio, das kleine, fokussierte Puzzlespiele veröffentlicht. Gridlix:2048 und Blocklix sind beide auf Google Play.",
+    "fr": "Vaslix Games est un studio Android indépendant qui publie des jeux de puzzle compacts et soignés. Gridlix:2048 et Blocklix sont tous deux sur Google Play.",
+    "pt-BR": "Vaslix Games é um estúdio Android independente que publica jogos de puzzle compactos e cuidadosos. Gridlix:2048 e Blocklix já estão na Google Play.",
+    "zh": "Vaslix Games 是一家独立 Android 工作室，专注开发紧凑、用心的益智游戏。Gridlix:2048 与 Blocklix 均已在 Google Play 上线。"
   },
   "meta.ogTitle": {
     "en": "Vaslix Games",
@@ -252,13 +252,13 @@
     "zh": "一家有长远眼光的小工作室"
   },
   "about.lede": {
-    "en": "Vaslix Games is a one-person Android publisher with a simple thesis: <strong>small apps, made carefully, that respect your device and your attention.</strong> No accounts to sign into, no servers of ours storing your scores, no investor pressure to crank the monetisation up. Just focused puzzles today, audio and arcade titles next.",
-    "ru": "Vaslix Games — это Android-издатель из одного человека с простым принципом: <strong>небольшие приложения, сделанные аккуратно, уважающие ваше устройство и ваше внимание.</strong> Никаких аккаунтов, никаких наших серверов, хранящих ваши результаты, никакого давления инвесторов крутить монетизацию вверх. Сегодня сфокусированные пазлы, дальше аудио и аркады.",
-    "es": "Vaslix Games es un editor Android de una sola persona con una tesis simple: <strong>apps pequeñas, hechas con cuidado, que respetan tu dispositivo y tu atención.</strong> Sin cuentas, sin servidores nuestros guardando tus puntuaciones, sin presión de inversores para subir la monetización. Hoy puzzles cuidados, después audio y arcade.",
-    "de": "Vaslix Games ist ein Ein-Personen-Android-Publisher mit einer einfachen These: <strong>kleine Apps, mit Sorgfalt gebaut, die dein Gerät und deine Aufmerksamkeit respektieren.</strong> Keine Konten zum Anmelden, keine eigenen Server, die deine Scores speichern, kein Investorendruck, die Monetarisierung hochzudrehen. Heute fokussierte Puzzles, als Nächstes Audio- und Arcade-Titel.",
-    "fr": "Vaslix Games est un éditeur Android d'une seule personne avec une thèse simple : <strong>de petites apps, faites avec soin, qui respectent votre appareil et votre attention.</strong> Pas de compte à créer, pas de serveur chez nous qui stocke vos scores, aucune pression d'investisseur pour pousser la monétisation. Aujourd'hui des puzzles concentrés, ensuite des titres audio et arcade.",
-    "pt-BR": "Vaslix Games é um publisher Android de uma pessoa só com uma tese simples: <strong>apps pequenos, feitos com cuidado, que respeitam seu aparelho e sua atenção.</strong> Sem contas para entrar, sem servidores nossos guardando seus placares, sem pressão de investidor para puxar a monetização. Hoje puzzles focados, depois títulos de áudio e arcade.",
-    "zh": "Vaslix Games 是一家一人 Android 发行工作室，理念很简单：<strong>用心打造的小型应用，尊重你的设备与注意力。</strong>无需注册账号，没有我们自己的服务器保存你的成绩，没有投资人催着上调商业化。当下是专注的拼图，下一步是音频与街机。"
+    "en": "Vaslix Games is a one-person Android publisher with a simple thesis: <strong>small apps, made carefully, that respect your device and your attention.</strong> No accounts to sign into, no servers of ours storing your scores, no investor pressure to crank the monetisation up. Just focused puzzles, and more of them.",
+    "ru": "Vaslix Games — это Android-издатель из одного человека с простым принципом: <strong>небольшие приложения, сделанные аккуратно, уважающие ваше устройство и ваше внимание.</strong> Никаких аккаунтов, никаких наших серверов, хранящих ваши результаты, никакого давления инвесторов крутить монетизацию вверх. Сфокусированные головоломки — и дальше тоже они.",
+    "es": "Vaslix Games es un editor Android de una sola persona con una tesis simple: <strong>apps pequeñas, hechas con cuidado, que respetan tu dispositivo y tu atención.</strong> Sin cuentas, sin servidores nuestros guardando tus puntuaciones, sin presión de inversores para subir la monetización. Puzzles cuidados, y más de ellos.",
+    "de": "Vaslix Games ist ein Ein-Personen-Android-Publisher mit einer einfachen These: <strong>kleine Apps, mit Sorgfalt gebaut, die dein Gerät und deine Aufmerksamkeit respektieren.</strong> Keine Konten zum Anmelden, keine eigenen Server, die deine Scores speichern, kein Investorendruck, die Monetarisierung hochzudrehen. Fokussierte Puzzles, und davon mehr.",
+    "fr": "Vaslix Games est un éditeur Android d'une seule personne avec une thèse simple : <strong>de petites apps, faites avec soin, qui respectent votre appareil et votre attention.</strong> Pas de compte à créer, pas de serveur chez nous qui stocke vos scores, aucune pression d'investisseur pour pousser la monétisation. Des puzzles concentrés, et d'autres à venir.",
+    "pt-BR": "Vaslix Games é um publisher Android de uma pessoa só com uma tese simples: <strong>apps pequenos, feitos com cuidado, que respeitam seu aparelho e sua atenção.</strong> Sem contas para entrar, sem servidores nossos guardando seus placares, sem pressão de investidor para puxar a monetização. Puzzles focados, e mais deles.",
+    "zh": "Vaslix Games 是一家一人 Android 发行工作室，理念很简单：<strong>用心打造的小型应用，尊重你的设备与注意力。</strong>无需注册账号，没有我们自己的服务器保存你的成绩，没有投资人催着上调商业化。就是专注的益智游戏，以后也是。"
   },
   "about.stats.apps": {
     "en": "apps shipped",
@@ -313,15 +313,6 @@
     "fr": "Ce que nous publions",
     "pt-BR": "O que publicamos",
     "zh": "我们发布的作品"
-  },
-  "games.intro": {
-    "en": "An independent studio shipping small Android apps across genres — puzzle now, audio and arcade next. Gridlix:2048 and Blocklix are both live on Google Play; audio titles are in development.",
-    "ru": "Независимая студия, выпускающая компактные Android-приложения в разных жанрах — сегодня пазлы, дальше аудио и аркады. Gridlix:2048 и Blocklix уже доступны в Google Play; аудио-проекты в разработке.",
-    "es": "Estudio independiente que publica apps Android compactas en varios géneros — hoy puzzle, después audio y arcade. Gridlix:2048 y Blocklix ya están en Google Play; los títulos de audio están en desarrollo.",
-    "de": "Unabhängiges Studio, das kompakte Android-Apps in verschiedenen Genres veröffentlicht — heute Puzzle, als nächstes Audio und Arcade. Gridlix:2048 und Blocklix sind beide auf Google Play; Audio-Titel sind in Entwicklung.",
-    "fr": "Studio indépendant qui publie des apps Android compactes dans plusieurs genres — aujourd'hui le puzzle, ensuite l'audio et l'arcade. Gridlix:2048 et Blocklix sont tous deux sur Google Play ; les titres audio sont en développement.",
-    "pt-BR": "Estúdio independente publicando apps Android compactos em vários gêneros — hoje puzzle, depois áudio e arcade. Gridlix:2048 e Blocklix já estão na Google Play; títulos de áudio estão em desenvolvimento.",
-    "zh": "独立工作室，发布跨多种类型的紧凑 Android 应用——当下是 Puzzle，接下来是音频与街机。Gridlix:2048 与 Blocklix 均已在 Google Play 上线；音频作品正在开发中。"
   },
   "games.aria": {
     "en": "Our games",
@@ -655,60 +646,6 @@
     "fr": "Disponible sur Google Play. Puzzle 8×8 « pose et nettoie » : six niveaux de difficulté, 38 thèmes, 60 rangs, quatre boosters, missions quotidiennes et hebdomadaires, et Premium optionnel sans pub.",
     "pt-BR": "No ar na Google Play. Puzzle 8×8 de encaixar e limpar: seis níveis de dificuldade, 38 temas, 60 patentes, quatro boosters, missões diárias e semanais e Premium opcional sem anúncios.",
     "zh": "已在 Google Play 上线。8×8 放置消除拼图：六个难度等级、38 种主题、60 个段位、四种道具、每日与每周任务，以及可选的无广告 Premium。"
-  },
-  "roadmap.r3.meta": {
-    "en": "Next up",
-    "ru": "Следующее",
-    "es": "Siguiente",
-    "de": "Als Nächstes",
-    "fr": "Prochainement",
-    "pt-BR": "A seguir",
-    "zh": "下一步"
-  },
-  "roadmap.r3.title": {
-    "en": "First audio / podcast title",
-    "ru": "Первое аудио / подкаст-приложение",
-    "es": "Primer título de audio / podcast",
-    "de": "Erster Audio-/Podcast-Titel",
-    "fr": "Premier titre audio / podcast",
-    "pt-BR": "Primeiro título de áudio / podcast",
-    "zh": "首个音频 / 播客作品"
-  },
-  "roadmap.r3.desc": {
-    "en": "A focused listening app with offline downloads, queue management and the same no-account approach. Genre-agnostic catalogue.",
-    "ru": "Сфокусированный плеер с офлайн-загрузками, очередью и тем же подходом без аккаунтов. Каталог не привязан к жанру.",
-    "es": "Una app de escucha enfocada con descargas offline, gestión de cola y el mismo enfoque sin cuenta. Catálogo sin género fijo.",
-    "de": "Eine fokussierte Hör-App mit Offline-Downloads, Queue-Management und demselben Ansatz ohne Konto. Genre-unabhängiger Katalog.",
-    "fr": "Une app d'écoute concentrée avec téléchargements hors-ligne, gestion de file et la même approche sans compte. Catalogue ouvert à tous genres.",
-    "pt-BR": "Um app de escuta focado com downloads offline, gerenciamento de fila e a mesma abordagem sem conta. Catálogo aberto a qualquer gênero.",
-    "zh": "一款专注的播放应用，支持离线下载、队列管理，沿用无账号的方式。内容类型不限。"
-  },
-  "roadmap.r4.meta": {
-    "en": "Later",
-    "ru": "Позже",
-    "es": "Más adelante",
-    "de": "Später",
-    "fr": "Plus tard",
-    "pt-BR": "Mais adiante",
-    "zh": "稍后"
-  },
-  "roadmap.r4.title": {
-    "en": "Word puzzle prototype",
-    "ru": "Прототип словесного пазла",
-    "es": "Prototipo de puzzle de palabras",
-    "de": "Wortpuzzle-Prototyp",
-    "fr": "Prototype de puzzle de mots",
-    "pt-BR": "Protótipo de puzzle de palavras",
-    "zh": "文字拼图原型"
-  },
-  "roadmap.r4.desc": {
-    "en": "An idea on paper. Same shape as Gridlix: small, focused, no accounts, optional ad-free Premium.",
-    "ru": "Пока только идея на бумаге. Та же форма, что и Gridlix: маленький, сфокусированный, без аккаунтов, опциональный Premium без рекламы.",
-    "es": "Una idea sobre papel. Misma forma que Gridlix: pequeño, enfocado, sin cuentas, Premium opcional sin anuncios.",
-    "de": "Eine Idee auf Papier. Gleiche Form wie Gridlix: klein, fokussiert, ohne Konten, optionales werbefreies Premium.",
-    "fr": "Une idée sur papier. Même forme que Gridlix : petit, concentré, sans compte, Premium sans pub en option.",
-    "pt-BR": "Ideia no papel. Mesma forma do Gridlix: pequeno, focado, sem contas, Premium opcional sem anúncios.",
-    "zh": "目前只是纸上构想。形式与 Gridlix 一致：小巧、专注、无账号、可选无广告 Premium。"
   },
   "privacy.eyebrow": {
     "en": "Your data",
@@ -1053,13 +990,13 @@
     "zh": "关于工作室"
   },
   "press.aboutBody": {
-    "en": "Vaslix Games is an independent Android publisher founded in 2025. We build small, focused apps across genres — puzzle today, audio and arcade titles next — with a privacy-first stance: no accounts, no proprietary servers storing user data, no in-house analytics. Two titles are live on Google Play: Gridlix:2048 and Blocklix, an 8×8 block puzzle with six difficulty levels, 38 themes and 60 ranks, localised into 12 languages.",
-    "ru": "Vaslix Games — независимый Android-издатель, основанный в 2025 году. Мы делаем небольшие сфокусированные приложения в разных жанрах — сегодня пазлы, дальше аудио и аркады — с подходом «privacy-first»: без аккаунтов, без собственных серверов, хранящих данные пользователей, без внутренней аналитики. В Google Play выпущены две игры: Gridlix:2048 и Blocklix — пазл 8×8 с шестью уровнями сложности, 38 темами и 60 рангами, локализованный на 12 языков.",
-    "es": "Vaslix Games es un editor Android independiente fundado en 2025. Hacemos apps pequeñas y enfocadas en varios géneros — hoy puzzle, después audio y arcade — con un enfoque privacy-first: sin cuentas, sin servidores propios guardando datos de usuario, sin analítica casera. Dos títulos están en Google Play: Gridlix:2048 y Blocklix, un puzzle 8×8 con seis niveles de dificultad, 38 temas y 60 rangos, localizado a 12 idiomas.",
-    "de": "Vaslix Games ist ein unabhängiger Android-Publisher, gegründet 2025. Wir bauen kleine, fokussierte Apps in verschiedenen Genres — heute Puzzle, als Nächstes Audio- und Arcade-Titel — mit einer Privacy-First-Haltung: keine Konten, keine eigenen Server, die Nutzerdaten speichern, keine Inhouse-Analytics. Zwei Titel sind auf Google Play: Gridlix:2048 und Blocklix, ein 8×8-Blockpuzzle mit sechs Schwierigkeitsstufen, 38 Themes und 60 Rängen, lokalisiert in 12 Sprachen.",
-    "fr": "Vaslix Games est un éditeur Android indépendant fondé en 2025. Nous faisons de petites apps concentrées dans plusieurs genres — aujourd'hui le puzzle, ensuite l'audio et l'arcade — avec une approche privacy-first : pas de comptes, pas de serveurs maison stockant des données utilisateurs, pas d'analytics maison. Deux titres sont sur Google Play : Gridlix:2048 et Blocklix, un puzzle de blocs 8×8 avec six niveaux de difficulté, 38 thèmes et 60 rangs, localisé en 12 langues.",
-    "pt-BR": "Vaslix Games é um publisher Android independente fundado em 2025. Fazemos apps pequenos e focados em vários gêneros — hoje puzzle, depois áudio e arcade — com postura privacy-first: sem contas, sem servidores próprios guardando dados de usuário, sem analytics interno. Dois títulos estão na Google Play: Gridlix:2048 e Blocklix, um puzzle de blocos 8×8 com seis níveis de dificuldade, 38 temas e 60 patentes, localizado em 12 idiomas.",
-    "zh": "Vaslix Games 是一家成立于 2025 年的独立 Android 发行工作室。我们做跨类型的小型应用——当下是拼图，下一步是音频与街机——坚持隐私优先：无需账号、没有我们自己的服务器存储用户数据、没有内部分析。Google Play 上已发布两款作品：Gridlix:2048 与 Blocklix——一款 8×8 方块拼图，含六个难度等级、38 种主题与 60 个段位，已本地化为 12 种语言。"
+    "en": "Vaslix Games is an independent Android publisher founded in 2025. We build small, focused puzzle games with a privacy-first stance: no accounts, no proprietary servers storing user data, no in-house analytics. Two titles are live on Google Play: Gridlix:2048 and Blocklix, an 8×8 block puzzle with six difficulty levels, 38 themes and 60 ranks, localised into 12 languages.",
+    "ru": "Vaslix Games — независимый Android-издатель, основанный в 2025 году. Мы делаем небольшие сфокусированные головоломки с подходом «privacy-first»: без аккаунтов, без собственных серверов, хранящих данные пользователей, без внутренней аналитики. В Google Play выпущены две игры: Gridlix:2048 и Blocklix — пазл 8×8 с шестью уровнями сложности, 38 темами и 60 рангами, локализованный на 12 языков.",
+    "es": "Vaslix Games es un editor Android independiente fundado en 2025. Hacemos juegos de puzzle pequeños y enfocados con un enfoque privacy-first: sin cuentas, sin servidores propios guardando datos de usuario, sin analítica casera. Dos títulos están en Google Play: Gridlix:2048 y Blocklix, un puzzle 8×8 con seis niveles de dificultad, 38 temas y 60 rangos, localizado a 12 idiomas.",
+    "de": "Vaslix Games ist ein unabhängiger Android-Publisher, gegründet 2025. Wir bauen kleine, fokussierte Puzzlespiele mit einer Privacy-First-Haltung: keine Konten, keine eigenen Server, die Nutzerdaten speichern, keine Inhouse-Analytics. Zwei Titel sind auf Google Play: Gridlix:2048 und Blocklix, ein 8×8-Blockpuzzle mit sechs Schwierigkeitsstufen, 38 Themes und 60 Rängen, lokalisiert in 12 Sprachen.",
+    "fr": "Vaslix Games est un éditeur Android indépendant fondé en 2025. Nous faisons de petits jeux de puzzle concentrés avec une approche privacy-first : pas de comptes, pas de serveurs maison stockant des données utilisateurs, pas d'analytics maison. Deux titres sont sur Google Play : Gridlix:2048 et Blocklix, un puzzle de blocs 8×8 avec six niveaux de difficulté, 38 thèmes et 60 rangs, localisé en 12 langues.",
+    "pt-BR": "Vaslix Games é um publisher Android independente fundado em 2025. Fazemos jogos de puzzle pequenos e focados com postura privacy-first: sem contas, sem servidores próprios guardando dados de usuário, sem analytics interno. Dois títulos estão na Google Play: Gridlix:2048 e Blocklix, um puzzle de blocos 8×8 com seis níveis de dificuldade, 38 temas e 60 patentes, localizado em 12 idiomas.",
+    "zh": "Vaslix Games 是一家成立于 2025 年的独立 Android 发行工作室。我们做小而专注的益智游戏，坚持隐私优先：无需账号、没有我们自己的服务器存储用户数据、没有内部分析。Google Play 上已发布两款作品：Gridlix:2048 与 Blocklix——一款 8×8 方块拼图，含六个难度等级、38 种主题与 60 个段位，已本地化为 12 种语言。"
   },
   "press.copyBtn": {
     "en": "Copy blurb",
@@ -1492,5 +1429,32 @@
     "fr": "Les quinze familles",
     "pt-BR": "As quinze famílias",
     "zh": "十五个家族"
+  },
+  "roadmap.r3.title": {
+    "en": "Word puzzle prototype",
+    "ru": "Прототип словесного пазла",
+    "es": "Prototipo de puzzle de palabras",
+    "de": "Wortpuzzle-Prototyp",
+    "fr": "Prototype de puzzle de mots",
+    "pt-BR": "Protótipo de puzzle de palavras",
+    "zh": "文字拼图原型"
+  },
+  "roadmap.r3.desc": {
+    "en": "An idea on paper. Same shape as Gridlix: small, focused, no accounts, optional ad-free Premium.",
+    "ru": "Пока только идея на бумаге. Та же форма, что и Gridlix: маленький, сфокусированный, без аккаунтов, опциональный Premium без рекламы.",
+    "es": "Una idea sobre papel. Misma forma que Gridlix: pequeño, enfocado, sin cuentas, Premium opcional sin anuncios.",
+    "de": "Eine Idee auf Papier. Gleiche Form wie Gridlix: klein, fokussiert, ohne Konten, optionales werbefreies Premium.",
+    "fr": "Une idée sur papier. Même forme que Gridlix : petit, concentré, sans compte, Premium sans pub en option.",
+    "pt-BR": "Ideia no papel. Mesma forma do Gridlix: pequeno, focado, sem contas, Premium opcional sem anúncios.",
+    "zh": "目前只是纸上构想。形式与 Gridlix 一致：小巧、专注、无账号、可选无广告 Premium。"
+  },
+  "roadmap.r3.meta": {
+    "en": "Later",
+    "ru": "Позже",
+    "es": "Más adelante",
+    "de": "Später",
+    "fr": "Plus tard",
+    "pt-BR": "Mais adiante",
+    "zh": "稍后"
   }
 }

@@ -56,7 +56,7 @@ function principles() {
 }
 
 function roadmap() {
-  const rows = [1, 2, 3, 4].map((i) => `
+  const rows = [1, 2, 3].map((i) => `
         <li class="road-row reveal">
           ${el('span', `roadmap.r${i}.meta`, { class: 'road-meta' })}
           <div>

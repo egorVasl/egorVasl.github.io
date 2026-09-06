@@ -62,16 +62,6 @@ const games = [
     chips: 3,
   },
   {
-    id: 'audio',
-    name: 'Vaslix Audio',
-    status: DEV,
-    accent: '#0FB4C8',
-    accentDark: '#3ED8E8',
-    motif: 'waves',
-    facts: [],
-    chips: 2,
-  },
-  {
     id: 'words',
     name: 'Wordlix',
     status: IDEA,
