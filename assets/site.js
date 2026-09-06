@@ -684,8 +684,11 @@
       return;
     }
     const io = new IntersectionObserver((entries) => {
+      /* A batch that arrives together is staggered, but the stagger is capped:
+         a long page can hand over thirty elements at once, and the thirtieth
+         should not wait two seconds to appear. */
       entries.filter((e) => e.isIntersecting).forEach((e, i) => {
-        e.target.style.setProperty('--d', i);
+        e.target.style.setProperty('--d', Math.min(i, 5));
         e.target.classList.add('in');
         io.unobserve(e.target);
       });
