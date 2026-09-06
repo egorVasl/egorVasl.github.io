@@ -185,7 +185,7 @@ body.scrolled .nav {
 .theme-toggle[data-theme-state="light"] .ti-sun,
 .theme-toggle[data-theme-state="dark"] .ti-moon,
 .theme-toggle[data-theme-state="auto"] .ti-auto { display: block; }
-.menu-toggle { display: none; flex-direction: column; gap: 4px; }
+.menu-toggle { display: none; flex-direction: column; justify-content: center; align-items: center; gap: 4px; }
 .mt-bar { width: 15px; height: 2px; border-radius: 2px; background: currentColor; transition: transform 200ms var(--ease-out); }
 .menu-toggle[aria-expanded="true"] .mt-bar:first-child { transform: translateY(3px) rotate(45deg); }
 .menu-toggle[aria-expanded="true"] .mt-bar:last-child { transform: translateY(-3px) rotate(-45deg); }
