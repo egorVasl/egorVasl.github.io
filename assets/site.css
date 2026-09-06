@@ -257,8 +257,8 @@ body.theme-flipping * { transition: background-color 200ms, color 200ms, border-
 .hero-lede { margin: 20px 0 0; color: var(--tx-2); font-size: 18px; max-width: 52ch; }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 .hero-games { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
-.game-btn { min-height: 46px; padding: 0 16px 0 10px; gap: 10px; font-size: 14px; }
-.game-btn img { border-radius: 8px; }
+.game-btn { min-height: 54px; padding: 0 18px 0 10px; gap: 12px; font-size: 15px; }
+.game-btn img { width: 40px; height: 40px; border-radius: 11px; }
 .game-btn:hover { border-color: color-mix(in srgb, var(--acc) 50%, var(--bd)); }
 .scroll-cue { position: absolute; left: 50%; bottom: 26px; z-index: 1; display: grid; place-items: center; width: 40px; height: 40px; margin-left: -20px; }
 .cue-block {
@@ -314,8 +314,12 @@ body.theme-flipping * { transition: background-color 200ms, color 200ms, border-
 .panel-in { position: relative; z-index: 1; padding: 22px; display: flex; flex-direction: column; gap: 14px; min-height: 520px; }
 .panel-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .panel-idx { font: 800 12px/1 var(--font-d); letter-spacing: .12em; color: var(--mu); font-variant-numeric: tabular-nums; }
-.panel-icon { width: 72px; height: 72px; border-radius: 18px; box-shadow: var(--sh-1); }
-.panel-icon-empty { width: 72px; height: 72px; border-radius: 18px; border: 1px dashed var(--bd-2); display: block; }
+/* Store icons are full-bleed squares — the rounding is ours, applied once.
+   An icon that arrives already rounded, with transparent margins baked in,
+   gets a second smaller radius inside the first and sits adrift in its own
+   tile; both icons are masters from Play for exactly that reason. */
+.panel-icon { width: 88px; height: 88px; border-radius: 22px; box-shadow: var(--sh-1); }
+.panel-icon-empty { width: 88px; height: 88px; border-radius: 22px; border: 1px dashed var(--bd-2); display: block; }
 .panel-name { font-size: 27px; font-weight: 800; line-height: 1.05; font-variation-settings: "opsz" 48; }
 .panel-tag { margin: -6px 0 0; color: var(--tx-2); font-size: 15px; }
 .panel-foot { position: relative; z-index: 3; margin-top: auto; display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }

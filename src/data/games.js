@@ -22,7 +22,9 @@ const games = [
     name: 'Blocklix',
     status: LIVE,
     storeId: 'com.vaslix.games.blocklix',
-    icon: 'blocklix-icon.png',
+    icon: 'blocklix-icon.webp',
+    /** The same icon as PNG: what the press kit hands out. */
+    iconPng: 'blocklix-icon.png',
     accent: '#FF6FA8',
     accentDark: '#FF8FBC',
     /** Which abstract motif the shelf canvas draws for this title. */
@@ -45,6 +47,7 @@ const games = [
     status: LIVE,
     storeId: 'com.vaslix.games.gridlix',
     icon: 'gridlix-icon.webp',
+    iconPng: 'gridlix-icon.png',
     accent: '#6C5DD3',
     accentDark: '#9689E5',
     motif: 'tiles',

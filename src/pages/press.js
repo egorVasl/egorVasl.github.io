@@ -65,8 +65,9 @@ function assets() {
     ['press.assetLockup', 'assets/logo-lockup.svg', 'SVG', ' asset-wide'],
     // The dark lockup is white ink; its tile carries the background it is for.
     ['press.assetLockupDark', 'assets/logo-lockup-dark.svg', 'SVG', ' asset-wide asset-onDark'],
+    // Icons go out as PNG: a press kit is opened by people, not by browsers.
     ['press.assetBlocklix', 'blocklix-icon.png', 'PNG · 512', ''],
-    ['press.assetGridlix', 'gridlix-icon.webp', 'WEBP · 512', ''],
+    ['press.assetGridlix', 'gridlix-icon.png', 'PNG · 512', ''],
   ].map(([k, href, meta, mod]) => `
         <a class="asset reveal${mod}" href="${href}" download>
           <span class="asset-prev" style="background-image:url('${href}')" aria-hidden="true"></span>

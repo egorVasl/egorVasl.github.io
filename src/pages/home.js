@@ -109,7 +109,7 @@ function shelf() {
 function hero() {
   const buttons = live.map((g) =>
     `<a class="btn ghost game-btn" href="${pageUrl(g)}" style="--acc:${g.accent};--acc-d:${g.accentDark}">
-       <img src="${g.icon}" alt="" width="32" height="32" loading="eager" decoding="async">
+       <img src="${g.icon}" alt="" width="40" height="40" loading="eager" decoding="async">
        <span>${esc(g.name)}</span></a>`).join('');
 
   return `
