@@ -695,6 +695,39 @@ body.theme-flipping * { transition: background-color 200ms, color 200ms, border-
 }
 .callout p { margin: 0; font-size: 14.5px; }
 
+/* Where the two games differ. Narrow screens scroll it sideways rather than
+   crushing the columns; the row label stays put so a scrolled cell still says
+   what it is about. */
+.doc-table-wrap { margin: 18px 0 22px; }
+.doc-table-wrap > p { margin-bottom: 12px; }
+.doc-table {
+  width: 100%; border-collapse: collapse; font-size: 14px;
+  border: 1px solid var(--bd); border-radius: var(--r-s); overflow: hidden;
+}
+.doc-table th, .doc-table td { padding: 11px 14px; text-align: left; vertical-align: top; border-top: 1px solid var(--bd); }
+.doc-table thead th { border-top: 0; background: var(--sur-2); font: 800 12px/1.3 var(--font-b); letter-spacing: .04em; color: var(--tx); }
+.doc-table tbody th { font-weight: 700; color: var(--tx); width: 32%; }
+.doc-table tbody td { color: var(--tx-2); }
+.doc-table tbody tr:nth-child(even) { background: color-mix(in srgb, var(--sur-2) 45%, transparent); }
+@media (max-width: 620px) {
+  .doc-table-wrap { overflow-x: auto; }
+  .doc-table { min-width: 520px; }
+}
+
+/* The revision note: present, dated, and out of the way until asked for. */
+.doc-changed { margin-top: 18px; position: relative; z-index: 1; max-width: 62ch; }
+.doc-changed > summary {
+  cursor: pointer; font: 700 13px/1 var(--font-b); color: var(--tx-2);
+  padding: 9px 13px; border-radius: 999px; border: 1px solid var(--bd);
+  background: var(--sur); display: inline-flex; align-items: center; gap: 8px;
+  list-style: none; transition: border-color var(--press), color var(--press);
+}
+.doc-changed > summary::-webkit-details-marker { display: none; }
+.doc-changed > summary::before { content: "+"; font-weight: 800; color: var(--brand-2); }
+.doc-changed[open] > summary::before { content: "−"; }
+.doc-changed > summary:hover { border-color: var(--bd-2); color: var(--tx); }
+.doc-changed p { margin: 12px 0 0; color: var(--tx-2); font-size: 14.5px; line-height: 1.65; }
+
 /* Printed, this is a legal document and nothing else: no chrome, no colour,
    and every link it cites spelled out, because paper cannot be clicked. */
 @media print {

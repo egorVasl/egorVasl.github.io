@@ -40,6 +40,22 @@ const games = [
       { n: String(data.blocklix.difficulties.length), key: 'f.difficulties' },
     ],
     chips: 3,
+    /**
+     * What the policy has to say about this title specifically. The two games
+     * genuinely differ — one backs up to Google, the other does not; one sells
+     * coins, the other sells nothing but a subscription — and a policy written
+     * as if they were the same is wrong about one of them. Every value here was
+     * read out of the app's own build files and manifest.
+     */
+    privacy: {
+      backup: true,            // android:allowBackup, and what the rules allow
+      cloudSave: 'optional',   // 'optional' | 'onSignIn' | false
+      remoteConfig: true,      // Firebase Analytics and Crashlytics are in both
+      appOpenAds: true,
+      plans: ['weekly', 'monthly', 'yearly'],
+      oneTime: true,           // coin packs, starter pack, piggy bank, Remove Ads
+      privacySettings: true,   // a consent screen reachable from inside the app
+    },
   },
   {
     id: 'gridlix',
@@ -60,6 +76,15 @@ const games = [
       { n: String(data.gridlix.themes.length), key: 'f.themes' },
     ],
     chips: 3,
+    privacy: {
+      backup: false,
+      cloudSave: 'onSignIn',
+      remoteConfig: false,
+      appOpenAds: false,
+      plans: ['monthly', 'yearly'],
+      oneTime: false,
+      privacySettings: false,
+    },
   },
   {
     id: 'words',

@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title data-i18n="meta.privacy.title">Privacy Policy — Vaslix Games</title>
-<meta name="description" content="How Vaslix Games handles data across all our Android apps — games and audio/podcast titles. Plain-language summary, full policy, GDPR/CCPA/COPPA notes." data-i18n-attr="content:meta.privacy.desc">
+<meta name="description" content="How Vaslix Games handles data in Gridlix:2048 and Blocklix. Plain-language summary, the full policy, what each game stores, and GDPR/CCPA/COPPA notes." data-i18n-attr="content:meta.privacy.desc">
 <link rel="canonical" href="https://vaslixgames.com/privacy-policy.html">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://vaslixgames.com/privacy-policy.html">
 <meta property="og:title" content="Privacy Policy — Vaslix Games" data-i18n-attr="content:meta.privacy.title">
-<meta property="og:description" content="How Vaslix Games handles data across all our Android apps — games and audio/podcast titles. Plain-language summary, full policy, GDPR/CCPA/COPPA notes." data-i18n-attr="content:meta.privacy.desc">
+<meta property="og:description" content="How Vaslix Games handles data in Gridlix:2048 and Blocklix. Plain-language summary, the full policy, what each game stores, and GDPR/CCPA/COPPA notes." data-i18n-attr="content:meta.privacy.desc">
 <meta property="og:image" content="https://vaslixgames.com/assets/og/site.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=b9dd942e">
+<link rel="stylesheet" href="assets/site.css?v=86e3ca76">
 <script>/* theme and language before first paint, so nothing flashes */
 document.documentElement.classList.add('js');
 (function(){try{var t=localStorage.getItem('vaslix.theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;
@@ -79,7 +79,7 @@ var l=localStorage.getItem('vaslix.lang');if(l)document.documentElement.lang=l;}
     <div class="wrap">
       <p class="kicker" data-i18n="p.hero.eyebrow">Plain-language summary, full legal text below</p>
       <h1 class="page-h1" id="privacy-title" data-i18n="p.hero.title">Privacy Policy</h1>
-      <p class="page-lede" data-i18n="p.hero.lede">How Vaslix Games handles information across all our Android apps — games and audio/podcast titles. This policy applies the same way to every app we release, regardless of genre or format. No accounts, no servers of our own, no nonsense. <strong>Currently covers Gridlix:2048 and Blocklix, both live on Google Play; audio/podcast titles in development.</strong></p>
+      <p class="page-lede" data-i18n="p.hero.lede">How Vaslix Games handles information across our Android apps. The policy applies the same way to everything we release. No accounts, no servers of our own, no nonsense. <strong>It covers Gridlix:2048 and Blocklix, both live on Google Play — and §1 shows where the two differ.</strong></p>
       <div class="doc-chips">
         <span class="doc-chip">
           <svg class="glyph" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.2l3.2 2"/></svg>
@@ -96,6 +96,10 @@ var l=localStorage.getItem('vaslix.lang');if(l)document.documentElement.lang=l;}
           <span data-i18n="p.hero.chip.billing">Google Play Billing</span>
         </span>
       </div>
+      <details class="doc-changed">
+        <summary data-i18n="p.changed.title">What changed in this revision</summary>
+        <p data-i18n="p.changed.body">We read this policy against the source of both apps and corrected it where the two disagreed. Google AdMob is named no longer, because neither app ships it. The claim that the Android device ID is read to verify your subscription was wrong and is gone. Advertising SDKs that arrive inside the Appodeal mediation bundle — Adjust, AppsFlyer, Meta Audience Network, Sentry and Yandex AppMetrica — are now named in §2, as are the Play Install Referrer, the installed-app query and the Privacy Sandbox permissions. §1a now lists everything the apps actually store, including the coin ledger and the record of which ads you were shown. Backup and cloud save differ between the two games and are now shown per game rather than claimed for both. Audio and podcast apps are no longer described: none exist.</p>
+      </details>
     </div>
   </section>
 
@@ -107,7 +111,7 @@ var l=localStorage.getItem('vaslix.lang');if(l)document.documentElement.lang=l;}
             <span class="sum-mark" aria-hidden="true"></span>
             <div>
               <h3 data-i18n="p.summary.1.title">What stays on your device</h3>
-              <p data-i18n="p.summary.1.desc">Game state, settings, best scores, and a cached premium-status flag. None of it reaches a server of ours — Android's own backup may copy it into your own Google account (§1d).</p>
+              <p data-i18n="p.summary.1.desc">Game state, settings, best scores, your coin balance and a cached premium flag. None of it reaches a server of ours. In Blocklix, Android’s own backup may copy it into your own Google account (§1d).</p>
             </div>
           </li>
           <li class="sum-item">
@@ -121,14 +125,14 @@ var l=localStorage.getItem('vaslix.lang');if(l)document.documentElement.lang=l;}
             <span class="sum-mark" aria-hidden="true"></span>
             <div>
               <h3 data-i18n="p.summary.3.title">Ads vs Premium</h3>
-              <p data-i18n="p.summary.3.desc">Free users see banner, interstitial and occasional app-open ads via Appodeal mediation (plus Google AdMob in some titles). Premium and the one-time Remove Ads purchase turn those off. Rewarded videos are opt-in for everyone: they play only when you tap a watch-to-earn offer.</p>
+              <p data-i18n="p.summary.3.desc">Free players see banner and interstitial ads through Appodeal mediation, plus app-open ads in Blocklix. Premium — or, in Blocklix, the one-time Remove Ads purchase — turns those off. Rewarded videos are opt-in for everyone: they play only when you tap a watch-to-earn offer.</p>
             </div>
           </li>
           <li class="sum-item">
             <span class="sum-mark" aria-hidden="true"></span>
             <div>
               <h3 data-i18n="p.summary.4.title">Device identifiers</h3>
-              <p data-i18n="p.summary.4.desc">Your Google Advertising ID and Android device ID are read so ad networks can serve and frequency-cap ads, and so Google Play Billing can verify your subscription entitlement. Both IDs are resettable in Android Settings.</p>
+              <p data-i18n="p.summary.4.desc">The advertising SDKs may read your Google Advertising ID and the Android device ID to serve and frequency-cap ads. Our own code reads neither, and neither has anything to do with your subscription. Both IDs are resettable in Android Settings.</p>
             </div>
           </li></ul>
     </div>
@@ -147,45 +151,84 @@ var l=localStorage.getItem('vaslix.lang');if(l)document.documentElement.lang=l;}
         <p class="doc-num" aria-hidden="true">01</p>
         <h2 class="doc-title" id="sec-1-title" data-i18n="p.sec1.title">Information we collect</h2>
         <p data-i18n="p.sec1.intro">Our apps do not require account creation and we do not knowingly collect personal information directly. Information falls into two groups.</p>
+        
+        <div class="doc-table-wrap">
+          <p data-i18n="p.table.intro">This policy covers every app we publish, and the apps are not identical. Where they differ, they differ here — everything else in this document applies to both.</p>
+          <table class="doc-table">
+            <caption class="sr" data-i18n="p.table.title">What differs between our games</caption>
+            <thead><tr><th scope="col" data-i18n="p.table.col.what">Feature</th><th scope="col">Blocklix</th><th scope="col">Gridlix:2048</th></tr></thead>
+            <tbody>
+            <tr>
+              <th scope="row" data-i18n="p.table.row.backup">Android's own backup</th>
+              <td data-i18n="p.table.yes">Yes</td><td data-i18n="p.table.no">No</td>
+            </tr>
+            <tr>
+              <th scope="row" data-i18n="p.table.row.cloudSave">Play Games cloud save</th>
+              <td data-i18n="p.table.cloud.optional">Optional, off by default</td><td data-i18n="p.table.cloud.onSignIn">On once you sign in to Play Games</td>
+            </tr>
+            <tr>
+              <th scope="row" data-i18n="p.table.row.firebase">Google Firebase</th>
+              <td data-i18n="p.table.fb.all">Analytics, Crashlytics, Remote Config</td><td data-i18n="p.table.fb.core">Analytics, Crashlytics</td>
+            </tr>
+            <tr>
+              <th scope="row" data-i18n="p.table.row.appOpen">App-open ads</th>
+              <td data-i18n="p.table.yes">Yes</td><td data-i18n="p.table.no">No</td>
+            </tr>
+            <tr>
+              <th scope="row" data-i18n="p.table.row.plans">Subscription plans</th>
+              <td data-i18n="p.table.plans.3">Weekly, monthly, yearly</td><td data-i18n="p.table.plans.2">Monthly, yearly</td>
+            </tr>
+            <tr>
+              <th scope="row" data-i18n="p.table.row.oneTime">One-time purchases</th>
+              <td data-i18n="p.table.oneTime.yes">Coin packs, starter pack, piggy bank, Remove Ads</td><td data-i18n="p.table.no">No</td>
+            </tr>
+            <tr>
+              <th scope="row" data-i18n="p.table.row.settings">Privacy settings inside the app</th>
+              <td data-i18n="p.table.yes">Yes</td><td data-i18n="p.table.no">No</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
         <h3 class="doc-h3" data-i18n="p.sec1.h3a">1a. Stored locally on your device</h3>
-        <p data-i18n="p.sec1.body1a">Each app stores the following in a local Room/SQLite database (or an equivalent local store) on your device. We never upload it to a server of ours; Android’s own backup service may copy it into your personal Google account, as described in 1d:</p>
-        <ul class="doc-list"><li data-i18n="p.sec1.list1a.1">App-specific state — e.g. game board, score, boosters, and continues for puzzle titles; playback position, subscribed feeds, queue, and the offline download cache for podcast/audio titles</li><li data-i18n="p.sec1.list1a.2">Best-game history and best score (puzzle titles), or listening history (audio titles), kept as a local-only record</li><li data-i18n="p.sec1.list1a.3">App settings: sound on/off, haptics on/off, theme mode, playback speed, and similar per-app preferences</li><li data-i18n="p.sec1.list1a.4">A first-launch flag used to decide whether to show the welcome paywall</li><li data-i18n="p.sec1.list1a.5">A cached summary of your subscription status — active/inactive, plan, product ID, base plan ID — so the app applies your premium entitlement immediately at launch without waiting for the network</li></ul>
+        <p data-i18n="p.sec1.body1a">Each app stores the following in a local Room/SQLite database (or an equivalent local store) on your device. We never upload it to a server of ours; where Android’s own backup is enabled for the app, it may copy this into your personal Google account, as described in 1d:</p>
+        <ul class="doc-list"><li data-i18n="p.sec1.list1a.1">App-specific state: the board as you left it, your score, boosters and continues</li><li data-i18n="p.sec1.list1a.2">Your best-game history and best score, kept as a local-only record</li><li data-i18n="p.sec1.list1a.3">App settings: sound on or off, haptics on or off, theme, notifications, and similar per-app preferences</li><li data-i18n="p.sec1.list1a.4">A first-launch flag, used to send you through the onboarding the first time you open the app</li><li data-i18n="p.sec1.list1a.5">A cached summary of your subscription status — active or not, which plan, the product ID, whether the free trial has been used, and when it expires — so the app applies your entitlement at launch without waiting for the network</li><li data-i18n="p.sec1.list1a.6">Your progress and in-game economy: the coin balance and the full ledger of coin transactions, daily and weekly missions, achievements, rank progress, play streaks, unlocked themes and cosmetics, difficulty progress, each day’s Daily result and the monthly medals</li><li data-i18n="p.sec1.list1a.7">A record of the ads you were shown — which type, when, and the daily counters that pace them — and, in Gridlix:2048, the hours of the day you usually play, so a reminder notification arrives at a plausible time rather than at random</li></ul>
         <aside class="callout"><p data-i18n="p.sec1.callout"><strong>What is not stored locally:</strong> payment details, purchase tokens, and Google account identifiers. None of this leaves Google Play.</p></aside>
         <h3 class="doc-h3" data-i18n="p.sec1.h3b">1b. Collected by third parties on our behalf</h3>
         <p data-i18n="p.sec1.body1b">The third-party services described below may collect technical and advertising-related information automatically:</p>
-        <ul class="doc-list"><li data-i18n="p.sec1.list1b.1">Google Advertising ID (GAID) — read so ad networks can deliver ads, frequency-cap them, and attribute installs. While Premium or Remove Ads is active it is not used for banner, interstitial or app-open advertising; it is still processed when you explicitly choose to watch a rewarded video.</li><li data-i18n="p.sec1.list1b.2">Android device ID (SSAID) — read on every launch as a stable, app-scoped device identifier. Used by Google Play Billing to verify your subscription entitlement and by the ad mediation SDK for fraud and invalid-traffic signals. It is scoped to this app's signing key and is not linked to your Google account.</li><li data-i18n="p.sec1.list1b.3">IP address and approximate geographic location derived from it</li><li data-i18n="p.sec1.list1b.4">Device model, operating system version, language, and time zone</li><li data-i18n="p.sec1.list1b.5">App version, session timestamps, and crash diagnostics</li><li data-i18n="p.sec1.list1b.6">Aggregated, non-personally-identifying usage events — including podcast/audio playback events (episode started, completed, skipped) for audio titles, used only in aggregate form</li></ul>
+        <ul class="doc-list"><li data-i18n="p.sec1.list1b.1">Google Advertising ID (GAID) — read so ad networks can deliver ads, frequency-cap them, and attribute installs. While Premium or Remove Ads is active it is not used for banner, interstitial or app-open advertising; it is still processed when you explicitly choose to watch a rewarded video.</li><li data-i18n="p.sec1.list1b.2">Device-scoped identifiers, including the Android device ID (SSAID). Our own code reads neither this nor the Advertising ID; both may be read inside the advertising SDKs described in §2, for delivery, frequency capping and invalid-traffic signals. They play no part in your subscription — that entitlement comes from Google Play Billing directly.</li><li data-i18n="p.sec1.list1b.3">IP address and approximate geographic location derived from it</li><li data-i18n="p.sec1.list1b.4">Device model, operating system version, language, and time zone</li><li data-i18n="p.sec1.list1b.5">App version, session timestamps, and crash diagnostics</li><li data-i18n="p.sec1.list1b.6">Aggregated, non-personally-identifying usage events, used only in aggregate form</li><li data-i18n="p.sec1.list1b.7">The Play Install Referrer — how you arrived at the app’s store listing — read so an install can be attributed to the campaign that produced it</li><li data-i18n="p.sec1.list1b.8">The list of apps installed on your device that can be launched, and checks for a small set of known root-management packages. Neither is read by our code: both come from advertising SDKs bundled with the mediation, which use them for targeting and for device-integrity signals.</li><li data-i18n="p.sec1.list1b.9">Android Privacy Sandbox signals — Topics, Attribution Reporting, Protected Audience and the Ad ID service. The apps declare permissions for these so the advertising SDKs can use interest and attribution data supplied by the operating system rather than assembled by us.</li></ul>
         <aside class="callout"><p data-i18n="p.sec1.deviceIdCallout"><strong>Why we disclose this:</strong> Google Play's Data safety form requires every read of the Advertising ID and the Android device ID to be declared, regardless of whether the value leaves your device. You can reset the Advertising ID at any time from <em>Android Settings → Privacy → Ads</em>, and the Android ID is regenerated when you factory-reset the device.</p></aside>
         <h3 class="doc-h3" data-i18n="p.sec1.h3c">1c. Analytics, crash reports and remote configuration (Google Firebase)</h3>
-        <p data-i18n="p.sec1.firebase">Some of our apps (currently Blocklix) include <strong>Google Firebase Analytics</strong> and <strong>Firebase Remote Config</strong>. Firebase Analytics collects a random app-instance ID, device and OS information, and aggregated in-app events (for example "game finished", "purchase completed", "ad watched") so we can understand overall usage and balance the game economy; we do not use it to build advertising profiles. Firebase Remote Config downloads a small set of configuration values (feature flags and game-balance numbers) and sends no personal data beyond the technical request metadata. <strong>Firebase Crashlytics</strong> sends a report when the app crashes or freezes: the stack trace, the device model, the OS and app version, and a random installation identifier — enough to find the bug, and nothing you typed or played. Details: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy ↗</a>.</p>
+        <p data-i18n="p.sec1.firebase">Both apps include <strong>Google Firebase Analytics</strong> and <strong>Firebase Crashlytics</strong>; Blocklix also includes <strong>Firebase Remote Config</strong>. Analytics collects a random app-instance ID, device and OS information, and aggregated in-app events — a game finished, a purchase completed, an ad shown, together with the revenue and network name reported for that impression — so we can understand overall usage and balance the game economy. We do not use it to build advertising profiles. Remote Config downloads a small set of feature flags and game-balance numbers and sends no personal data beyond the technical request metadata. Crashlytics sends a report when the app crashes or freezes: the stack trace, the device model, the OS and app version, and a random installation identifier — enough to find the bug, and nothing you typed or played. Crashlytics is not the only error reporter present in the builds; see §2. Details: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy ↗</a>.</p>
         <h3 class="doc-h3" data-i18n="p.sec1.h3d">1d. Backup and cloud save</h3>
-        <p data-i18n="p.sec1.backup"><strong>Android's own backup is enabled for our apps.</strong> If backup is turned on for your device, Android copies the local data listed in 1a — board, scores, settings, unlocks — into your personal Google account and restores it when you reinstall on the same account or set up a new device. That copy belongs to you: Android handles and encrypts it, and we can neither read it nor delete it. You control it in <em>Android Settings → Google → Backup</em>. Separately, <strong>Blocklix includes an optional cloud save built on Google Play Games Saved Games</strong>: one save file in your own Play Games storage, so a run can follow you between devices. It never runs without a Play Games sign-in, it carries game progress only — never subscription state or purchase data — and it is served by Google, not by a server of ours. The feature ships switched off and is being enabled gradually; if you have signed in and would rather not use it, sign out of Play Games in the app.</p>
+        <p data-i18n="p.sec1.backup"><strong>Android’s own backup is enabled in Blocklix and switched off in Gridlix:2048</strong> — the table above says which is which. Where it is on, and where backup is on for your device, Android copies the local data listed in 1a into your personal Google account and restores it when you reinstall on the same account. That copy belongs to you: Android handles and encrypts it, and we can neither read it nor delete it. You control it in <em>Android Settings → Google → Backup</em>. Separately, both games have a cloud save built on Google Play Games Saved Games: one save file in your own Play Games storage, so progress can follow you between devices. It never runs without a Play Games sign-in, it carries game progress only — never subscription state or purchase data — and it is served by Google, not by a server of ours. In Blocklix it ships switched off and is being enabled gradually. In Gridlix:2048 it syncs whenever you are signed in to Play Games; that app has no sign-out of its own, so stopping it means signing out of Play Games from the Google Play Games app. Gridlix:2048 also unlocks Play Games achievements and submits your scores to two Play Games leaderboards.</p>
       </section>
 
       <section class="doc-sec" id="sec-2" aria-labelledby="sec-2-title">
         <p class="doc-num" aria-hidden="true">02</p>
         <h2 class="doc-title" id="sec-2-title" data-i18n="p.sec2.title">Advertising partners</h2>
-        <p data-i18n="p.sec2.intro">Our apps may display banner ads, occasional interstitial ads — including app-open ads when returning to the app — and rewarded video ads that you explicitly choose to watch in exchange for an in-game perk (a booster, a continue after game-over, bonus coins and similar). A Premium subscription or the one-time Remove Ads purchase turns off banner, interstitial and app-open ads; rewarded videos remain available to every user and only ever play after you tap their offer. We work with the advertising providers below, used together or independently depending on the app.</p>
+        <p data-i18n="p.sec2.intro">Our apps display banner ads, occasional interstitial ads, and rewarded video ads that you explicitly choose to watch in exchange for an in-game perk — a booster, a continue after game-over, bonus coins and similar. Blocklix also shows app-open ads when you come back to it; Gridlix:2048 does not. A Premium subscription turns off banner, interstitial and app-open ads in both games, and in Blocklix the one-time Remove Ads purchase does the same. Rewarded videos stay available to everyone and only ever play after you tap their offer.</p>
         <h3 class="doc-h3" data-i18n="p.sec2.h3a">Appodeal mediation</h3>
         <p data-i18n="p.sec2.appodeal1">We use <a href="https://www.appodeal.com/" target="_blank" rel="noopener">Appodeal</a> as our primary advertising mediation partner. Appodeal's privacy policy is at <a href="https://www.appodeal.com/privacy-policy" target="_blank" rel="noopener">appodeal.com/privacy-policy ↗</a>.</p>
         <p data-i18n="p.sec2.appodeal2">Appodeal mediates demand from a large number of advertising networks, and the active set evolves as Appodeal updates its SDK and as we change our build configuration. The current, authoritative list is published by Appodeal:</p>
         <p class="doc-link"><a href="https://www.appodeal.com/partners/" target="_blank" rel="noopener">appodeal.com/partners ↗</a></p>
         <p data-i18n="p.sec2.appodeal3">Each network on that page links to its own privacy policy. Privacy questions specific to ad personalisation can be raised directly with Appodeal at the same site.</p>
-        <h3 class="doc-h3" data-i18n="p.sec2.h3b">Google AdMob</h3>
-        <p data-i18n="p.sec2.admob">Some of our apps also serve display, native, or rewarded ads through Google AdMob directly. Google's advertising data practices are described at <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads ↗</a>, and the Google Privacy Policy is at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy ↗</a>. You can opt out of personalised Google ads at <a href="https://adssettings.google.com/" target="_blank" rel="noopener">adssettings.google.com ↗</a>.</p>
-        <aside class="callout"><p data-i18n="p.sec2.callout"><strong>Premium subscribers and Remove-Ads purchasers are not shown banner, interstitial or app-open ads.</strong> Rewarded videos are never forced on anyone — free or paying, they start only from an explicit tap on a watch-to-earn offer. Limited initialisation traffic to the ad providers may still occur on app start before the entitlement is resolved.</p></aside>
+        <h3 class="doc-h3" data-i18n="p.sec2.h3c">What ships inside the mediation SDK</h3>
+        <p data-i18n="p.sec2.bundled">The Appodeal package bundles more than ad networks. The components below are compiled into our release builds, register their own services and receivers, and are started by Appodeal rather than by our code — we neither call them nor configure them. Google Play’s Data safety form asks what is collected, not who initialised it, so they are named here in full:</p>
+        <ul class="doc-list"><li data-i18n="p.sec2.bundledList.1"><a href="https://www.adjust.com/terms/privacy-policy/" target="_blank" rel="noopener">Adjust ↗</a> — install attribution</li><li data-i18n="p.sec2.bundledList.2"><a href="https://www.appsflyer.com/legal/services-privacy-policy/" target="_blank" rel="noopener">AppsFlyer ↗</a> — install attribution, with its own install-referrer receiver</li><li data-i18n="p.sec2.bundledList.3"><a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta Audience Network ↗</a> — advertising demand and measurement</li><li data-i18n="p.sec2.bundledList.4"><a href="https://sentry.io/privacy/" target="_blank" rel="noopener">Sentry ↗</a> — error and crash reporting, sent to Appodeal’s project rather than to one of ours. It is a second crash reporter alongside Firebase Crashlytics (§1c).</li><li data-i18n="p.sec2.bundledList.5"><a href="https://yandex.com/legal/confidential/" target="_blank" rel="noopener">Yandex AppMetrica ↗</a> — analytics, arriving with the Yandex advertising adapter</li></ul>
+        <aside class="callout"><p data-i18n="p.sec2.callout"><strong>Premium subscribers — and, in Blocklix, anyone who bought Remove Ads — are not shown banner, interstitial or app-open ads.</strong> Rewarded videos are never forced on anyone: free or paying, they start only from an explicit tap on a watch-to-earn offer. Limited initialisation traffic to the ad providers still occurs when the app starts, before your entitlement has been resolved.</p></aside>
       </section>
 
       <section class="doc-sec" id="sec-3" aria-labelledby="sec-3-title">
         <p class="doc-num" aria-hidden="true">03</p>
         <h2 class="doc-title" id="sec-3-title" data-i18n="p.sec3.title">Subscriptions and in-app purchases (Google Play Billing)</h2>
-        <p data-i18n="p.sec3.intro">Each of our apps may offer an optional Premium subscription — with weekly, monthly and yearly auto-renewing plans depending on the title, and an introductory free trial on the yearly plan for eligible new subscribers — that turns off banner, interstitial and app-open ads and unlocks premium features specific to that app (for example x2 coins and a daily gift in puzzle titles, or offline downloads and ad-free playback in podcast/audio titles). Some titles also sell one-time products: coin packs, a starter bundle, a piggy-bank payout, and a permanent Remove Ads unlock with the same ad scope as Premium. Everything is sold and processed by Google through Google Play Billing.</p>
-        <ol class="doc-list"><li data-i18n="p.sec3.list.1">All payment, billing, account, and tax information is collected and processed by Google. We do not see, store, or transmit your payment method, your Google account email, or any government identifiers.</li><li data-i18n="p.sec3.list.2">The app receives only a non-identifying entitlement signal from Google: whether an active subscription exists for your installation (product ID and base plan ID), and which one-time products have been purchased. This signal is cached locally as described in §1a.</li><li data-i18n="p.sec3.list.3">Subscription management, cancellation, refund requests, and renewal dates are handled entirely on Google Play. The &quot;Manage&quot; button inside the app deep-links to the Google Play subscriptions page.</li><li data-i18n="p.sec3.list.4">Google Play's privacy policy applies to all billing-related processing: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy ↗</a></li></ol>
+        <p data-i18n="p.sec3.intro">Both apps offer an optional Premium subscription, sold and processed by Google through Google Play Billing. Blocklix offers weekly, monthly and yearly auto-renewing plans; Gridlix:2048 offers monthly and yearly. Eligible new subscribers get an introductory free trial on the yearly plan. Premium turns off banner, interstitial and app-open ads and unlocks premium features specific to that app — for example x2 coins and a daily gift. Blocklix also sells one-time products: coin packs, a starter bundle, a piggy-bank payout, and a permanent Remove Ads unlock with the same ad scope as Premium. Gridlix:2048 sells no one-time products at all.</p>
+        <ol class="doc-list"><li data-i18n="p.sec3.list.1">All payment, billing, account, and tax information is collected and processed by Google. We do not see, store, or transmit your payment method, your Google account email, or any government identifiers.</li><li data-i18n="p.sec3.list.2">The app receives only a non-identifying entitlement signal from Google: whether an active subscription exists for your installation, which product it is, and — in Blocklix — which one-time products have been purchased. This signal is cached locally as described in §1a.</li><li data-i18n="p.sec3.list.3">Subscription management, cancellation, refund requests, and renewal dates are handled entirely on Google Play. The &quot;Manage&quot; button inside the app deep-links to the Google Play subscriptions page.</li><li data-i18n="p.sec3.list.4">Google Play's privacy policy applies to all billing-related processing: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy ↗</a></li></ol>
       </section>
 
       <section class="doc-sec" id="sec-4" aria-labelledby="sec-4-title">
         <p class="doc-num" aria-hidden="true">04</p>
         <h2 class="doc-title" id="sec-4-title" data-i18n="p.sec4.title">Legal basis and consent (GDPR / EEA, UK, Switzerland)</h2>
-        <p data-i18n="p.sec4.body">If you are located in the EEA, the UK, or Switzerland, the legal basis for advertising-related processing is your consent, collected via an IAB Transparency & Consent Framework (TCF) dialog presented when you first launch the app. You may withdraw or change your consent at any time — via the in-app privacy settings where the app provides them, or by clearing the app's data (Settings → Apps), which presents the consent dialog again on the next launch. The legal basis for processing subscription data via Google Play Billing is the performance of the contract you enter into when purchasing a subscription.</p>
+        <p data-i18n="p.sec4.body">If you are located in the EEA, the UK, or Switzerland, the legal basis for advertising-related processing is your consent, collected through an IAB Transparency &amp; Consent Framework (TCF) dialog. That dialog is presented by the Appodeal mediation SDK itself, when your region requires one; we do not operate a consent platform of our own. You may withdraw or change your consent at any time. Blocklix can reopen the dialog from its in-app privacy settings; Gridlix:2048 has no such screen, so there the way is to clear the app’s data (Settings → Apps), which presents the consent dialog again on the next launch. The legal basis for processing subscription data via Google Play Billing is the performance of the contract you enter into when purchasing a subscription.</p>
       </section>
 
       <section class="doc-sec" id="sec-5" aria-labelledby="sec-5-title">
@@ -203,14 +246,14 @@ var l=localStorage.getItem('vaslix.lang');if(l)document.documentElement.lang=l;}
       <section class="doc-sec" id="sec-7" aria-labelledby="sec-7-title">
         <p class="doc-num" aria-hidden="true">07</p>
         <h2 class="doc-title" id="sec-7-title" data-i18n="p.sec7.title">Data retention</h2>
-        <p data-i18n="p.sec7.body">Locally stored data described in §1a is retained on your device until you clear the app's data or uninstall the app. We do not retain personal information on our own servers. Copies made by Android's own backup service — and a Play Games cloud save, if you enabled it — live in your own Google account: remove them from Android Settings → Google → Backup, and from your Play Games account respectively. The advertising partners and Google Play retain data per their own policies.</p>
+        <p data-i18n="p.sec7.body">Locally stored data described in §1a is retained on your device until you clear the app’s data or uninstall the app. We do not retain personal information on our own servers. Where Android’s own backup is enabled — Blocklix, not Gridlix:2048 — the copy it makes lives in your own Google account and is removed under Android Settings → Google → Backup. A Play Games cloud save lives in your Play Games account and is removed from there. The advertising partners and Google Play retain data per their own policies.</p>
       </section>
 
       <section class="doc-sec" id="sec-8" aria-labelledby="sec-8-title">
         <p class="doc-num" aria-hidden="true">08</p>
         <h2 class="doc-title" id="sec-8-title" data-i18n="p.sec8.title">Your rights</h2>
         <p data-i18n="p.sec8.body">Depending on your jurisdiction, you may have the right to access, correct, delete, restrict, or port your personal data, and to lodge a complaint with a supervisory authority. Because we do not directly hold this data, requests should be directed to the advertising partner concerned, or — for billing data — to Google Play.</p>
-        <aside class="callout"><p data-i18n="p.sec8.callout">To remove all locally stored data for any of our apps, uninstall the app or clear its storage from your device's settings (<em>Settings → Apps → [the app] → Storage → Clear data</em>). That clears the copy on the device; a backup Android has already taken is removed under <em>Android Settings → Google → Backup</em>, and a Play Games cloud save from your Play Games account.</p></aside>
+        <aside class="callout"><p data-i18n="p.sec8.callout">To remove all locally stored data for either app, uninstall it or clear its storage from your device’s settings (<em>Settings → Apps → [the app] → Storage → Clear data</em>). That clears the copy on the device. A backup Android has already taken — Blocklix only — is removed under <em>Android Settings → Google → Backup</em>, and a Play Games cloud save from your Play Games account.</p></aside>
       </section>
 
       <section class="doc-sec" id="sec-9" aria-labelledby="sec-9-title">
@@ -259,8 +302,8 @@ var l=localStorage.getItem('vaslix.lang');if(l)document.documentElement.lang=l;}
       <span class="foot-note" data-i18n="footer.builtWith">Hand-written HTML. No trackers on this site.</span>
     </div>
   </footer>
-<script src="assets/i18n.js?v=b9dd942e"></script>
+<script src="assets/i18n.js?v=86e3ca76"></script>
 
-<script src="assets/site.js?v=b9dd942e" defer></script>
+<script src="assets/site.js?v=86e3ca76" defer></script>
 </body>
 </html>
