@@ -3,8 +3,9 @@
  * because that is the only shape in which a missing translation is obvious.
  * The runtime wants the opposite, so the build flips it.
  *
- * Two sources merge: legacy.json (everything the previous site already said,
- * in all seven languages) and site.json (this site's copy). site.json wins.
+ * One file per page, plus shared.json for what every page says. A key belongs
+ * to exactly one of them; defining it twice is an error rather than a silent
+ * override, because a key in two files is a key that will be edited in one.
  */
 const fs = require('fs');
 const path = require('path');
@@ -15,19 +16,34 @@ const BASE = 'en';
 const dir = path.join(__dirname, '..', 'i18n');
 const load = (name) => JSON.parse(fs.readFileSync(path.join(dir, name), 'utf8'));
 
-// legacy.json is what the previous site already said in all seven languages;
-// every other file in src/i18n/ is this site's copy and wins on a clash.
 const parts = fs.readdirSync(dir)
-  .filter((f) => f.endsWith('.json') && f !== 'legacy.json' && f !== 'aliases.map.json')
+  .filter((f) => f.endsWith('.json') && f !== 'aliases.map.json')
   .sort();
-const dict = Object.assign({}, load('legacy.json'), ...parts.map(load));
+const dict = {};
+const home = {};
+for (const part of parts) {
+  for (const [key, row] of Object.entries(load(part))) {
+    if (home[key]) throw new Error(`i18n: "${key}" is in both ${home[key]} and ${part}`);
+    home[key] = part;
+    dict[key] = row;
+  }
+}
 
 // A new key that says exactly what an existing one says points at it rather
 // than copying it, so correcting the original corrects both.
+const aliasOf = {};
 for (const [alias, source] of Object.entries(load('aliases.map.json'))) {
   if (!dict[source]) throw new Error('i18n: alias ' + alias + ' points at missing ' + source);
   dict[alias] = dict[source];
+  (aliasOf[source] ||= []).push(alias);
 }
+
+/**
+ * Keys no page asks for at build time but the site still needs: site.js looks
+ * these up in the runtime dictionary while it is running. Delete one and the
+ * build stays green while the button loses its label.
+ */
+const RUNTIME = ['nav.theme.light', 'nav.theme.dark', 'nav.theme.auto', 'press.copied'];
 const used = new Set();
 const missing = new Set();
 
@@ -61,7 +77,12 @@ function add(key, row) {
 }
 
 const has = (key) => Object.prototype.hasOwnProperty.call(dict, key);
-const unused = () => Object.keys(dict).filter((k) => !used.has(k));
+/**
+ * A key nothing asked for. A key an alias points at counts as used when the
+ * alias was used — it is the same row — and so do the runtime-only keys above.
+ */
+const unused = () => Object.keys(dict).filter((k) =>
+  !used.has(k) && !RUNTIME.includes(k) && !(aliasOf[k] || []).some((a) => used.has(a)));
 
 /** Locale-major, the shape the browser wants. */
 function runtimeDict() {

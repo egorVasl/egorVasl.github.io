@@ -15,7 +15,7 @@ npm run build     # → index, blocklix, gridlix, studio, privacy, press, 404, s
 |---|---|
 | `src/data/games.js` | The catalogue. One record per title — this is the only place a new game is added. |
 | `src/data/game-data.json` | Facts pulled out of the game repos: palettes, difficulties, ranks, boosters, medals. Generated. |
-| `src/i18n/*.json` | The dictionary, key-major: one key, seven languages side by side. |
+| `src/i18n/*.json` | The dictionary, key-major: one key, seven languages side by side. One file per page, plus `shared.json` for what every page says. A key lives in exactly one of them. |
 | `src/i18n/aliases.map.json` | New keys that point at an older key instead of copying its text. |
 | `src/pages/*.js` | One module per page; a game page assembles shared modules named by its record. |
 | `src/pages/privacy.js` | The policy. Its sections are data — the order is the only thing arranged by hand. |
@@ -34,15 +34,23 @@ It exits non-zero, having written nothing, when
 * a key is missing from any of the seven locales, or is blank;
 * markup asks for a `data-i18n` key the dictionary does not have;
 * a link points at a file that will not exist;
-* a game record names a page module that does not exist.
+* a game record names a page module that does not exist;
+* the same key is defined in two dictionary files.
 
 A site that is right in English and wrong in Portuguese is the failure this
 guards against, so please do not weaken it.
 
+It reports unused keys but does not fail on them. Two are unused on purpose:
+`status.dev` and `shelf.count.soon` are the vocabulary for a title that is in
+development, and there is not one at the moment. A handful of keys the build
+cannot see are listed as `RUNTIME` in `src/lib/i18n.js` — `assets/site.js`
+looks those up while the page is running, so deleting one leaves the build
+green and the button unlabelled.
+
 ## Adding a game
 
 1. Add the record to `src/data/games.js` — id, name, status, accent, motif, facts.
-2. Add its strings (`g.<id>.tagline`, `g.<id>.chip.N`, …) to `src/i18n/catalogue.json`
+2. Add its strings (`g.<id>.tagline`, `g.<id>.chip.N`, …) to `src/i18n/games.json`
    in all seven languages. The build will list exactly which keys it wants.
 3. If it is live, give it `sections: [...]` naming the page modules it uses.
 

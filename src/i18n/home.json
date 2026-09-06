@@ -1,4 +1,508 @@
 {
+  "hero.kick": {
+    "en": "Independent Android studio",
+    "ru": "Независимая Android-студия",
+    "es": "Estudio Android independiente",
+    "de": "Unabhängiges Android-Studio",
+    "fr": "Studio Android indépendant",
+    "pt-BR": "Estúdio Android independente",
+    "zh": "独立 Android 工作室"
+  },
+  "hero.lede": {
+    "en": "Two puzzle games, made by one person. No accounts, no servers of ours, twelve languages — and a Premium that does exactly one thing: it removes the ads.",
+    "ru": "Две головоломки, сделанные одним человеком. Без аккаунтов, без своих серверов, двенадцать языков — и Premium, который делает ровно одно: убирает рекламу.",
+    "es": "Dos juegos de puzzle, hechos por una persona. Sin cuentas, sin servidores nuestros, doce idiomas — y un Premium que hace exactamente una cosa: quita los anuncios.",
+    "de": "Zwei Puzzlespiele, von einer Person gemacht. Keine Konten, keine eigenen Server, zwölf Sprachen — und ein Premium, das genau eines tut: Es entfernt die Werbung.",
+    "fr": "Deux jeux de puzzle, faits par une seule personne. Pas de compte, pas de serveur à nous, douze langues — et un Premium qui fait exactement une chose : il enlève les pubs.",
+    "pt-BR": "Dois jogos de puzzle, feitos por uma pessoa só. Sem contas, sem servidores nossos, doze idiomas — e um Premium que faz exatamente uma coisa: tira os anúncios.",
+    "zh": "两款益智游戏，一个人做的。没有账号，没有我们自己的服务器，十二种语言——还有一个只做一件事的 Premium：去掉广告。"
+  },
+  "hero.scroll": {
+    "en": "Scroll",
+    "ru": "Листайте",
+    "es": "Desplaza",
+    "de": "Scrollen",
+    "fr": "Défiler",
+    "pt-BR": "Role",
+    "zh": "向下滚动"
+  },
+  "roadmap.eyebrow": {
+    "en": "Roadmap",
+    "ru": "Дорожная карта",
+    "es": "Hoja de ruta",
+    "de": "Roadmap",
+    "fr": "Feuille de route",
+    "pt-BR": "Roteiro",
+    "zh": "路线图"
+  },
+  "roadmap.title": {
+    "en": "Where we're going",
+    "ru": "Куда мы идём",
+    "es": "Hacia dónde vamos",
+    "de": "Wohin wir gehen",
+    "fr": "Où nous allons",
+    "pt-BR": "Para onde vamos",
+    "zh": "我们的方向"
+  },
+  "roadmap.intro": {
+    "en": "Two shipped, one on paper. Nothing here starts moving until the thing before it is finished.",
+    "ru": "Две выпущены, одна на бумаге. Ничего здесь не трогается с места, пока не закончено предыдущее.",
+    "es": "Dos publicados, uno sobre el papel. Aquí nada arranca hasta que lo anterior está terminado.",
+    "de": "Zwei veröffentlicht, eines auf dem Papier. Nichts hier setzt sich in Bewegung, bevor das Vorherige fertig ist.",
+    "fr": "Deux jeux sortis, un sur le papier. Rien ne bouge ici tant que ce qui précède n'est pas fini.",
+    "pt-BR": "Dois lançados, um no papel. Nada aqui sai do lugar enquanto o anterior não estiver pronto.",
+    "zh": "两款已上线，一款还在纸上。前一件没做完，后一件就不会开工。"
+  },
+  "roadmap.r1.meta": {
+    "en": "Shipped · 2026",
+    "ru": "Выпущено · 2026",
+    "es": "Publicado · 2026",
+    "de": "Veröffentlicht · 2026",
+    "fr": "Sorti · 2026",
+    "pt-BR": "Lançado · 2026",
+    "zh": "已发布 · 2026"
+  },
+  "roadmap.r1.title": {
+    "en": "Gridlix:2048",
+    "ru": "Gridlix:2048",
+    "es": "Gridlix:2048",
+    "de": "Gridlix:2048",
+    "fr": "Gridlix:2048",
+    "pt-BR": "Gridlix:2048",
+    "zh": "Gridlix:2048"
+  },
+  "roadmap.r1.desc": {
+    "en": "Live on Google Play. A 4×4 merge puzzle with a Daily that is the same for everyone, monthly medals, five boosters and an optional ad-free Premium.",
+    "ru": "Доступна в Google Play. Головоломка-слияние 4×4 с ежедневной задачей, одинаковой для всех, медалями за месяц, пятью бустерами и Premium без рекламы по желанию.",
+    "es": "Disponible en Google Play. Un puzle de fusión 4×4 con un Diario igual para todos, medallas mensuales, cinco potenciadores y un Premium opcional sin anuncios.",
+    "de": "Bei Google Play erschienen. Ein 4×4-Merge-Puzzle mit einem Daily für alle, Monatsmedaillen, fünf Boostern und optionalem werbefreiem Premium.",
+    "fr": "Disponible sur Google Play. Un puzzle de fusion 4×4 avec un Quotidien identique pour tous, des médailles mensuelles, cinq boosters et un Premium sans publicité en option.",
+    "pt-BR": "Disponível no Google Play. Um quebra-cabeça de fusão 4×4 com um Diário igual para todos, medalhas mensais, cinco reforços e um Premium opcional sem anúncios.",
+    "zh": "已在 Google Play 上架。4×4 合并益智游戏，配有全球统一的每日谜题、月度奖牌、五种助力道具，以及可选的无广告 Premium。"
+  },
+  "roadmap.r2.meta": {
+    "en": "Shipped · 2026",
+    "ru": "Выпущено · 2026",
+    "es": "Publicado · 2026",
+    "de": "Veröffentlicht · 2026",
+    "fr": "Sorti · 2026",
+    "pt-BR": "Lançado · 2026",
+    "zh": "已发布 · 2026"
+  },
+  "roadmap.r2.title": {
+    "en": "Blocklix",
+    "ru": "Blocklix",
+    "es": "Blocklix",
+    "de": "Blocklix",
+    "fr": "Blocklix",
+    "pt-BR": "Blocklix",
+    "zh": "Blocklix"
+  },
+  "roadmap.r2.desc": {
+    "en": "Live on Google Play. An 8×8 drop-and-clear puzzle with six difficulty levels, 38 themes, 60 ranks, four boosters, daily and weekly missions, and an optional ad-free Premium.",
+    "ru": "Доступен в Google Play. Пазл 8×8 «положи и очищай»: шесть уровней сложности, 38 тем, 60 рангов, четыре бустера, ежедневные и недельные задания и опциональный Premium без рекламы.",
+    "es": "Disponible en Google Play. Puzzle 8×8 de colocar y limpiar: seis niveles de dificultad, 38 temas, 60 rangos, cuatro boosters, misiones diarias y semanales, y Premium opcional sin anuncios.",
+    "de": "Live auf Google Play. 8×8-Drop-and-Clear-Puzzle mit sechs Schwierigkeitsstufen, 38 Themes, 60 Rängen, vier Boostern, Tages- und Wochenmissionen und optionalem werbefreiem Premium.",
+    "fr": "Disponible sur Google Play. Puzzle 8×8 « pose et nettoie » : six niveaux de difficulté, 38 thèmes, 60 rangs, quatre boosters, missions quotidiennes et hebdomadaires, et Premium optionnel sans pub.",
+    "pt-BR": "Disponível no Google Play. Puzzle 8×8 de encaixar e limpar: seis níveis de dificuldade, 38 temas, 60 patentes, quatro reforços, missões diárias e semanais e Premium opcional sem anúncios.",
+    "zh": "已在 Google Play 上线。8×8 放置消除拼图：六个难度等级、38 种主题、60 个段位、四种道具、每日与每周任务，以及可选的无广告 Premium。"
+  },
+  "privacy.eyebrow": {
+    "en": "Your data",
+    "ru": "Ваши данные",
+    "es": "Tus datos",
+    "de": "Deine Daten",
+    "fr": "Vos données",
+    "pt-BR": "Seus dados",
+    "zh": "你的数据"
+  },
+  "privacyCta.title": {
+    "en": "We do not run a single server",
+    "ru": "У нас нет ни одного сервера",
+    "es": "No tenemos ni un solo servidor",
+    "de": "Wir betreiben keinen einzigen Server",
+    "fr": "Nous n'avons pas un seul serveur",
+    "pt-BR": "Não temos um único servidor",
+    "zh": "我们一台服务器都没有"
+  },
+  "privacyCta.text": {
+    "en": "Everything a game knows about you sits in your phone. The policy says exactly what that is, which ad networks load for a free player, and why every payment goes through Google rather than through us.",
+    "ru": "Всё, что игра знает о вас, лежит у вас в телефоне. Политика объясняет, что именно, какие рекламные сети грузятся бесплатному игроку и почему каждый платёж идёт через Google, а не через нас.",
+    "es": "Todo lo que un juego sabe de ti está en tu teléfono. La política dice exactamente qué es, qué redes publicitarias se cargan para un jugador gratuito y por qué cada pago pasa por Google y no por nosotros.",
+    "de": "Alles, was ein Spiel über dich weiß, liegt in deinem Telefon. Die Datenschutzerklärung nennt genau, was das ist, welche Werbenetzwerke für Gratis-Spieler geladen werden und warum jede Zahlung über Google läuft statt über uns.",
+    "fr": "Tout ce qu'un jeu sait de vous tient dans votre téléphone. La politique dit exactement ce que c'est, quels réseaux publicitaires se chargent pour un joueur gratuit, et pourquoi chaque paiement passe par Google et non par nous.",
+    "pt-BR": "Tudo o que um jogo sabe sobre você está no seu celular. A política diz exatamente o que é isso, quais redes de anúncios carregam para quem joga de graça e por que todo pagamento passa pelo Google, e não por nós.",
+    "zh": "游戏对你的了解，全都在你手机里。政策写清楚了那到底是什么、免费玩家会加载哪些广告网络，以及每一笔付款为什么走 Google 而不经过我们。"
+  },
+  "privacyCta.btn": {
+    "en": "Read the policy",
+    "ru": "Читать политику",
+    "es": "Leer la política",
+    "de": "Erklärung lesen",
+    "fr": "Lire la politique",
+    "pt-BR": "Ler a política",
+    "zh": "阅读政策"
+  },
+  "trust.1.title": {
+    "en": "No accounts",
+    "ru": "Без аккаунтов",
+    "es": "Sin cuentas",
+    "de": "Keine Konten",
+    "fr": "Pas de compte",
+    "pt-BR": "Sem contas",
+    "zh": "无需账号"
+  },
+  "trust.1.desc": {
+    "en": "Nothing to sign up for. Your progress never leaves the phone it was made on.",
+    "ru": "Регистрироваться негде. Прогресс не покидает телефон, на котором он набран.",
+    "es": "No hay dónde registrarse. Tu progreso no sale del teléfono donde lo hiciste.",
+    "de": "Es gibt keine Anmeldung. Dein Fortschritt verlässt nie das Telefon, auf dem er entstanden ist.",
+    "fr": "Nulle part où s'inscrire. Votre progression ne quitte jamais le téléphone où elle a été faite.",
+    "pt-BR": "Não tem onde se cadastrar. Seu progresso não sai do celular onde foi feito.",
+    "zh": "没什么可注册的。进度不会离开打出它的那台手机。"
+  },
+  "trust.2.title": {
+    "en": "No payment data stored",
+    "ru": "Без хранения платёжных данных",
+    "es": "Sin guardar datos de pago",
+    "de": "Keine Zahlungsdaten gespeichert",
+    "fr": "Aucune donnée de paiement stockée",
+    "pt-BR": "Sem dados de pagamento",
+    "zh": "不存付款数据"
+  },
+  "trust.2.desc": {
+    "en": "Google Play takes the payment. Your card never reaches us, because it never passes through us.",
+    "ru": "Платёж принимает Google Play. Ваша карта до нас не доходит — она через нас и не проходит.",
+    "es": "El pago lo cobra Google Play. Tu tarjeta nunca llega hasta nosotros, porque nunca pasa por nosotros.",
+    "de": "Die Zahlung nimmt Google Play entgegen. Deine Karte erreicht uns nie — sie läuft gar nicht erst über uns.",
+    "fr": "Google Play encaisse le paiement. Votre carte ne nous parvient jamais, parce qu'elle ne passe jamais par nous.",
+    "pt-BR": "Quem recebe o pagamento é o Google Play. Seu cartão não chega até nós — ele nem passa por aqui.",
+    "zh": "付款由 Google Play 收。你的卡到不了我们这里——它根本不经过我们。"
+  },
+  "trust.3.title": {
+    "en": "GDPR · CCPA · COPPA",
+    "ru": "GDPR · CCPA · COPPA",
+    "es": "GDPR · CCPA · COPPA",
+    "de": "GDPR · CCPA · COPPA",
+    "fr": "GDPR · CCPA · COPPA",
+    "pt-BR": "GDPR · CCPA · COPPA",
+    "zh": "GDPR · CCPA · COPPA"
+  },
+  "trust.3.desc": {
+    "en": "Consent before the first ad loads, an opt-out where the law asks for one, and a policy that names every company involved.",
+    "ru": "Согласие до того, как загрузится первая реклама, отказ там, где его требует закон, и политика, в которой названа каждая причастная компания.",
+    "es": "Consentimiento antes de que cargue el primer anuncio, un opt-out donde la ley lo exige y una política que nombra a cada empresa implicada.",
+    "de": "Einwilligung, bevor die erste Anzeige lädt, ein Opt-out, wo das Gesetz eines verlangt, und eine Datenschutzerklärung, die jede beteiligte Firma nennt.",
+    "fr": "Un consentement avant que la première pub se charge, un opt-out là où la loi en exige un, et une politique qui nomme chaque entreprise impliquée.",
+    "pt-BR": "Consentimento antes de o primeiro anúncio carregar, opt-out onde a lei exige e uma política que nomeia cada empresa envolvida.",
+    "zh": "第一条广告加载前先征得同意，法律要求的地方给出退出选项，政策里点名每一家相关公司。"
+  },
+  "trust.4.title": {
+    "en": "Premium removes ads",
+    "ru": "Premium убирает рекламу",
+    "es": "Premium quita los anuncios",
+    "de": "Premium entfernt Werbung",
+    "fr": "Premium enlève les pubs",
+    "pt-BR": "Premium tira os anúncios",
+    "zh": "Premium 去除广告"
+  },
+  "trust.4.desc": {
+    "en": "Premium switches off banners, interstitials and app-open ads. Rewarded videos stay available to everyone and start only when you tap one. That is the whole deal.",
+    "ru": "Premium выключает баннеры, межстраничную рекламу и объявления при открытии. Видео за награду остаются у всех и запускаются только по нажатию. Вот и вся сделка.",
+    "es": "Premium apaga los banners, los intersticiales y los anuncios de apertura. Los vídeos recompensados siguen ahí para todos y solo arrancan si tocas uno. Ese es todo el trato.",
+    "de": "Premium schaltet Banner, Interstitials und App-Open-Anzeigen ab. Rewarded Videos bleiben für alle verfügbar und starten nur, wenn du eines antippst. Mehr ist es nicht.",
+    "fr": "Premium coupe les bannières, les interstitiels et les pubs à l'ouverture. Les vidéos récompensées restent accessibles à tous et ne démarrent que si vous appuyez dessus. Le marché s'arrête là.",
+    "pt-BR": "O Premium desliga banners, intersticiais e anúncios app-open. Vídeos recompensados continuam disponíveis para todo mundo e só começam quando você toca em um. O trato é esse.",
+    "zh": "Premium 关掉横幅、插屏和冷启动广告。激励视频对所有人保留，只有你点了才播。就这么多。"
+  },
+  "nums.langs": {
+    "en": "languages",
+    "ru": "языков",
+    "es": "idiomas",
+    "de": "Sprachen",
+    "fr": "langues",
+    "pt-BR": "idiomas",
+    "zh": "种语言"
+  },
+  "nums.games": {
+    "en": "games on Google Play",
+    "ru": "игры в Google Play",
+    "es": "juegos en Google Play",
+    "de": "Spiele auf Google Play",
+    "fr": "jeux sur Google Play",
+    "pt-BR": "jogos no Google Play",
+    "zh": "款游戏上架 Google Play"
+  },
+  "nums.accounts": {
+    "en": "accounts required",
+    "ru": "аккаунтов нужно",
+    "es": "cuentas necesarias",
+    "de": "Konten nötig",
+    "fr": "compte requis",
+    "pt-BR": "contas necessárias",
+    "zh": "个账号需要注册"
+  },
+  "roadmap.r3.title": {
+    "en": "Wordlix",
+    "ru": "Wordlix",
+    "es": "Wordlix",
+    "de": "Wordlix",
+    "fr": "Wordlix",
+    "pt-BR": "Wordlix",
+    "zh": "Wordlix"
+  },
+  "roadmap.r3.desc": {
+    "en": "A word puzzle, still on paper. The same shape as the other two: small, offline, no account, and a Premium that only removes the ads.",
+    "ru": "Словесная головоломка, пока на бумаге. Форма та же, что у двух других: маленькая, офлайн, без аккаунта и с Premium, который только убирает рекламу.",
+    "es": "Un puzle de palabras, todavía sobre el papel. La misma forma que los otros dos: pequeño, sin conexión, sin cuenta y un Premium que solo quita los anuncios.",
+    "de": "Ein Wortpuzzle, noch auf dem Papier. Gleiche Form wie die anderen zwei: klein, offline, ohne Konto und mit einem Premium, das nur die Werbung entfernt.",
+    "fr": "Un puzzle de mots, encore sur le papier. Même forme que les deux autres : petit, hors ligne, sans compte, et un Premium qui ne fait qu'enlever les pubs.",
+    "pt-BR": "Um puzzle de palavras, ainda no papel. Mesma forma dos outros dois: pequeno, offline, sem conta e com um Premium que só tira os anúncios.",
+    "zh": "一款文字解谜，还停在纸上。形式和另外两款一样：小巧、离线、无账号，Premium 只负责去掉广告。"
+  },
+  "roadmap.r3.meta": {
+    "en": "Later",
+    "ru": "Позже",
+    "es": "Más adelante",
+    "de": "Später",
+    "fr": "Plus tard",
+    "pt-BR": "Mais adiante",
+    "zh": "稍后"
+  },
+  "shelf.count.idea": {
+    "en": "on paper",
+    "ru": "на бумаге",
+    "es": "en papel",
+    "de": "auf dem Papier",
+    "fr": "sur le papier",
+    "pt-BR": "no papel",
+    "zh": "在纸上"
+  },
+  "hero.t1": {
+    "en": "Small games.",
+    "ru": "Маленькие игры.",
+    "es": "Juegos pequeños.",
+    "de": "Kleine Spiele.",
+    "fr": "De petits jeux.",
+    "pt-BR": "Jogos pequenos.",
+    "zh": "小而精的游戏。"
+  },
+  "hero.t2": {
+    "en": "Built to last.",
+    "ru": "Надолго.",
+    "es": "Hechos para durar.",
+    "de": "Für lange gemacht.",
+    "fr": "Faits pour durer.",
+    "pt-BR": "Feitos para durar.",
+    "zh": "为长久而做。"
+  },
+  "hero.cta.studio": {
+    "en": "About the studio",
+    "ru": "О студии",
+    "es": "Sobre el estudio",
+    "de": "Über das Studio",
+    "fr": "À propos du studio",
+    "pt-BR": "Sobre o estúdio",
+    "zh": "关于工作室"
+  },
+  "shelf.eyebrow": {
+    "en": "The shelf",
+    "ru": "Полка",
+    "es": "La estantería",
+    "de": "Das Regal",
+    "fr": "L'étagère",
+    "pt-BR": "A prateleira",
+    "zh": "架子"
+  },
+  "shelf.title": {
+    "en": "Two on the shelf. Room kept for more.",
+    "ru": "Две на полке. Место оставлено под следующие.",
+    "es": "Dos en la estantería. Hay sitio para más.",
+    "de": "Zwei im Regal. Platz bleibt für mehr.",
+    "fr": "Deux sur l'étagère. La place est gardée.",
+    "pt-BR": "Dois na prateleira. O lugar dos próximos está guardado.",
+    "zh": "架上有两款，位置为后来者留着。"
+  },
+  "shelf.intro": {
+    "en": "One panel per title, in the order they were built. The last panel is empty on purpose — the shelf is sized for what comes next, not for what is already on it.",
+    "ru": "По панели на каждую игру, в порядке появления. Последняя панель пуста намеренно: полка размечена под то, что будет, а не под то, что уже стоит.",
+    "es": "Un panel por título, en el orden en que se hicieron. El último panel está vacío a propósito: la estantería está medida para lo que viene, no para lo que ya está.",
+    "de": "Ein Panel je Titel, in der Reihenfolge ihrer Entstehung. Das letzte ist absichtlich leer — das Regal ist auf das Kommende ausgelegt, nicht auf das Vorhandene.",
+    "fr": "Un panneau par titre, dans l'ordre où ils ont été faits. Le dernier est vide exprès : l'étagère est dimensionnée pour la suite, pas pour l'existant.",
+    "pt-BR": "Um painel por título, na ordem em que foram feitos. O último está vazio de propósito: a prateleira foi medida para o que vem, não para o que já está.",
+    "zh": "每款作品一块面板，按完成顺序排列。最后一块是刻意留空的——架子是按将来的作品量的，不是按现有的。"
+  },
+  "shelf.count.live": {
+    "en": "on Google Play",
+    "ru": "в Google Play",
+    "es": "en Google Play",
+    "de": "bei Google Play",
+    "fr": "sur Google Play",
+    "pt-BR": "no Google Play",
+    "zh": "已上架"
+  },
+  "shelf.count.soon": {
+    "en": "in the works",
+    "ru": "в работе",
+    "es": "en marcha",
+    "de": "in Arbeit",
+    "fr": "en cours",
+    "pt-BR": "em produção",
+    "zh": "制作中"
+  },
+  "shelf.count.open": {
+    "en": "slots kept open",
+    "ru": "мест оставлено",
+    "es": "huecos reservados",
+    "de": "Plätze bleiben frei",
+    "fr": "places réservées",
+    "pt-BR": "vagas reservadas",
+    "zh": "预留位置"
+  },
+  "shelf.railAria": {
+    "en": "The studio shelf",
+    "ru": "Полка студии",
+    "es": "La estantería del estudio",
+    "de": "Das Studio-Regal",
+    "fr": "L'étagère du studio",
+    "pt-BR": "A prateleira do estúdio",
+    "zh": "工作室的架子"
+  },
+  "shelf.prev": {
+    "en": "Previous title",
+    "ru": "Предыдущая",
+    "es": "Título anterior",
+    "de": "Vorheriger Titel",
+    "fr": "Titre précédent",
+    "pt-BR": "Título anterior",
+    "zh": "上一款"
+  },
+  "shelf.next": {
+    "en": "Next title",
+    "ru": "Следующая",
+    "es": "Título siguiente",
+    "de": "Nächster Titel",
+    "fr": "Titre suivant",
+    "pt-BR": "Próximo título",
+    "zh": "下一款"
+  },
+  "shelf.more": {
+    "en": "Open the page",
+    "ru": "Открыть страницу",
+    "es": "Abrir la página",
+    "de": "Seite öffnen",
+    "fr": "Ouvrir la page",
+    "pt-BR": "Abrir a página",
+    "zh": "打开页面"
+  },
+  "shelf.open.title": {
+    "en": "The next one lands here",
+    "ru": "Здесь встанет следующая",
+    "es": "Aquí llegará el siguiente",
+    "de": "Hier landet der nächste",
+    "fr": "Le prochain se posera ici",
+    "pt-BR": "O próximo entra aqui",
+    "zh": "下一款会落在这里"
+  },
+  "shelf.open.body": {
+    "en": "When a title is ready it takes this slot, keeps the same frame, and pushes the empty one along. Nothing about the page has to change.",
+    "ru": "Когда игра готова, она занимает это место в той же рамке и сдвигает пустое дальше. Страницу для этого переделывать не нужно.",
+    "es": "Cuando un título esté listo ocupará este hueco, con el mismo marco, y empujará el vacío una posición. La página no cambia.",
+    "de": "Ist ein Titel fertig, nimmt er diesen Platz im gleichen Rahmen ein und schiebt den leeren weiter. An der Seite ändert sich nichts.",
+    "fr": "Quand un titre est prêt, il prend cette place dans le même cadre et pousse le vide plus loin. La page ne change pas.",
+    "pt-BR": "Quando um título fica pronto, ocupa esta vaga no mesmo quadro e empurra a vazia adiante. A página não muda.",
+    "zh": "新作准备好后就占下这一格，用同一套框架，把空格再往后推。页面本身不用改。"
+  },
+  "shelf.open.meta": {
+    "en": "Not named yet",
+    "ru": "Ещё без названия",
+    "es": "Todavía sin nombre",
+    "de": "Noch ohne Namen",
+    "fr": "Pas encore nommé",
+    "pt-BR": "Ainda sem nome",
+    "zh": "尚未命名"
+  },
+  "nums.title": {
+    "en": "The studio in numbers",
+    "ru": "Студия в цифрах",
+    "es": "El estudio en cifras",
+    "de": "Das Studio in Zahlen",
+    "fr": "Le studio en chiffres",
+    "pt-BR": "O estúdio em números",
+    "zh": "数字里的工作室"
+  },
+  "nums.servers": {
+    "en": "servers of ours",
+    "ru": "своих серверов",
+    "es": "servidores propios",
+    "de": "eigene Server",
+    "fr": "serveurs à nous",
+    "pt-BR": "servidores nossos",
+    "zh": "台自有服务器"
+  },
+  "nums.person": {
+    "en": "person",
+    "ru": "человек",
+    "es": "persona",
+    "de": "Person",
+    "fr": "personne",
+    "pt-BR": "pessoa",
+    "zh": "个人"
+  },
+  "nums.since": {
+    "en": "shipping since",
+    "ru": "выпускаем с",
+    "es": "publicando desde",
+    "de": "veröffentlicht seit",
+    "fr": "publie depuis",
+    "pt-BR": "publicando desde",
+    "zh": "自何年起发布"
+  },
+  "principles.eyebrow": {
+    "en": "Principles",
+    "ru": "Принципы",
+    "es": "Principios",
+    "de": "Grundsätze",
+    "fr": "Principes",
+    "pt-BR": "Princípios",
+    "zh": "原则"
+  },
+  "principles.title": {
+    "en": "Four rules that do not move",
+    "ru": "Четыре правила, которые не двигаются",
+    "es": "Cuatro reglas que no se mueven",
+    "de": "Vier Regeln, die bleiben",
+    "fr": "Quatre règles qui ne bougent pas",
+    "pt-BR": "Quatro regras que não se mexem",
+    "zh": "四条不会动摇的规则"
+  },
+  "principles.intro": {
+    "en": "They are cheaper to keep than to explain away, and they are the reason the apps stay small.",
+    "ru": "Их дешевле соблюдать, чем оправдывать, — и именно поэтому приложения остаются маленькими.",
+    "es": "Sale más barato cumplirlas que justificarlas, y por eso las apps siguen siendo pequeñas.",
+    "de": "Sie einzuhalten ist billiger, als sie wegzuerklären — und darum bleiben die Apps klein.",
+    "fr": "Les tenir coûte moins cher que les justifier, et c'est pourquoi les applis restent petites.",
+    "pt-BR": "Sai mais barato cumpri-las do que justificá-las, e é por isso que os apps continuam pequenos.",
+    "zh": "遵守它们比为它们找借口更省事，这也是这些应用始终保持轻量的原因。"
+  },
+  "roadmap.cta": {
+    "en": "The whole roadmap",
+    "ru": "Вся дорожная карта",
+    "es": "La hoja de ruta completa",
+    "de": "Der ganze Fahrplan",
+    "fr": "La feuille de route complète",
+    "pt-BR": "O roteiro completo",
+    "zh": "完整路线图"
+  },
+  "roadmap.note": {
+    "en": "Dates are the one thing that will not be promised here. Order will.",
+    "ru": "Сроков здесь не обещают — обещают порядок.",
+    "es": "Aquí no se prometen fechas; se promete el orden.",
+    "de": "Termine werden hier nicht versprochen — die Reihenfolge schon.",
+    "fr": "Aucune date promise ici — l'ordre, oui.",
+    "pt-BR": "Datas não são prometidas aqui; a ordem é.",
+    "zh": "这里不承诺日期，只承诺顺序。"
+  },
   "hero.cta.games": {
     "en": "Our games",
     "ru": "Наши игры",

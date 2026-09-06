@@ -1,0 +1,308 @@
+{
+  "about.eyebrow": {
+    "en": "About",
+    "ru": "О студии",
+    "es": "Acerca de",
+    "de": "Über uns",
+    "fr": "À propos",
+    "pt-BR": "Sobre",
+    "zh": "关于"
+  },
+  "about.title": {
+    "en": "A small studio with a long view",
+    "ru": "Маленькая студия с длинным горизонтом",
+    "es": "Un estudio pequeño con visión a largo plazo",
+    "de": "Ein kleines Studio mit langem Atem",
+    "fr": "Un petit studio avec une vue lointaine",
+    "pt-BR": "Um estúdio pequeno com visão de longo prazo",
+    "zh": "一家有长远眼光的小工作室"
+  },
+  "about.lede": {
+    "en": "One person, two games on Google Play, no office. <strong>Small apps, made carefully, that respect your device and your attention.</strong> Nothing to sign into, nothing of yours on a server of ours, and no investor asking why the monetisation is so quiet.",
+    "ru": "Один человек, две игры в Google Play, никакого офиса. <strong>Небольшие приложения, сделанные аккуратно, уважающие ваше устройство и ваше внимание.</strong> Никуда не нужно входить, ничего вашего нет на наших серверах, и нет инвестора, который спрашивает, почему монетизация такая тихая.",
+    "es": "Una persona, dos juegos en Google Play, sin oficina. <strong>Apps pequeñas, hechas con cuidado, que respetan tu dispositivo y tu atención.</strong> Nada donde iniciar sesión, nada tuyo en un servidor nuestro y ningún inversor preguntando por qué la monetización es tan discreta.",
+    "de": "Eine Person, zwei Spiele bei Google Play, kein Büro. <strong>Kleine Apps, mit Sorgfalt gebaut, die dein Gerät und deine Aufmerksamkeit respektieren.</strong> Nichts, wo du dich anmelden müsstest, nichts von dir auf einem Server von uns und kein Investor, der fragt, warum die Monetarisierung so leise ist.",
+    "fr": "Une personne, deux jeux sur Google Play, pas de bureau. <strong>De petites apps, faites avec soin, qui respectent votre appareil et votre attention.</strong> Rien où se connecter, rien de vous sur un serveur à nous, et aucun investisseur pour demander pourquoi la monétisation est si discrète.",
+    "pt-BR": "Uma pessoa, dois jogos no Google Play, nenhum escritório. <strong>Apps pequenos, feitos com cuidado, que respeitam seu aparelho e sua atenção.</strong> Não tem onde fazer login, não tem nada seu em servidor nosso e não tem investidor perguntando por que a monetização é tão discreta.",
+    "zh": "一个人，Google Play 上两款游戏，没有办公室。<strong>用心做的小型应用，尊重你的设备和你的注意力。</strong>没有账号要登录，你的东西不在我们的服务器上，也没有投资人来问商业化为什么这么安静。"
+  },
+  "about.stats.apps": {
+    "en": "apps shipped",
+    "ru": "выпущенных приложений",
+    "es": "apps publicadas",
+    "de": "veröffentlichte Apps",
+    "fr": "apps publiées",
+    "pt-BR": "apps publicados",
+    "zh": "已发布应用"
+  },
+  "about.stats.langs": {
+    "en": "supported languages",
+    "ru": "поддерживаемых языков",
+    "es": "idiomas soportados",
+    "de": "unterstützte Sprachen",
+    "fr": "langues prises en charge",
+    "pt-BR": "idiomas suportados",
+    "zh": "支持语言"
+  },
+  "faq.eyebrow": {
+    "en": "FAQ",
+    "ru": "FAQ",
+    "es": "FAQ",
+    "de": "FAQ",
+    "fr": "FAQ",
+    "pt-BR": "FAQ",
+    "zh": "FAQ"
+  },
+  "faq.title": {
+    "en": "Common questions",
+    "ru": "Частые вопросы",
+    "es": "Preguntas frecuentes",
+    "de": "Häufige Fragen",
+    "fr": "Questions fréquentes",
+    "pt-BR": "Perguntas frequentes",
+    "zh": "常见问题"
+  },
+  "faq.q1": {
+    "en": "How do I cancel my subscription?",
+    "ru": "Как отменить подписку?",
+    "es": "¿Cómo cancelo mi suscripción?",
+    "de": "Wie kündige ich mein Abo?",
+    "fr": "Comment résilier mon abonnement ?",
+    "pt-BR": "Como cancelo minha assinatura?",
+    "zh": "如何取消订阅？"
+  },
+  "faq.a1": {
+    "en": "Cancel from <strong>Google Play → Subscriptions</strong>, or use the \"Manage\" button inside the app — it deep-links to the same page. Cancellation takes effect at the end of your current billing period.",
+    "ru": "Отменить можно в <strong>Google Play → Подписки</strong> или через кнопку «Управление» внутри приложения — она ведёт на ту же страницу. Отмена вступает в силу в конце текущего периода оплаты.",
+    "es": "Cancela desde <strong>Google Play → Suscripciones</strong>, o usa el botón «Gestionar» dentro de la app — enlaza a la misma página. La cancelación se aplica al final del período de facturación actual.",
+    "de": "Kündige in <strong>Google Play → Abos</strong> oder über die Schaltfläche „Verwalten“ in der App — sie verlinkt zur selben Seite. Die Kündigung greift am Ende deines aktuellen Abrechnungszeitraums.",
+    "fr": "Résiliez depuis <strong>Google Play → Abonnements</strong>, ou via le bouton « Gérer » dans l'app — il pointe vers la même page. La résiliation prend effet à la fin de votre période de facturation en cours.",
+    "pt-BR": "Cancele em <strong>Google Play → Assinaturas</strong> ou pelo botão «Gerenciar» dentro do app — leva à mesma página. O cancelamento entra em vigor ao final do período de cobrança atual.",
+    "zh": "在 <strong>Google Play → 订阅</strong> 中取消，或使用应用内的「管理」按钮——它会跳转到同一页面。取消会在当前计费周期结束时生效。"
+  },
+  "faq.q2": {
+    "en": "What happens to my game progress if I uninstall?",
+    "ru": "Что будет с прогрессом, если я удалю приложение?",
+    "es": "¿Qué pasa con mi progreso si desinstalo?",
+    "de": "Was passiert mit meinem Spielfortschritt beim Deinstallieren?",
+    "fr": "Que devient ma progression si je désinstalle ?",
+    "pt-BR": "O que acontece com meu progresso se eu desinstalar?",
+    "zh": "卸载应用后游戏进度怎么办？"
+  },
+  "faq.a2": {
+    "en": "Progress lives on your device. In Blocklix, Android’s own backup copies it into your Google account, so reinstalling on the same account usually brings it back; in Gridlix:2048 that backup is switched off, so there a save is lost on uninstall unless you use the Play Games cloud save. We never upload a save to a server of ours. Premium restores by itself once you reinstall and sign in to the same Google account.",
+    "ru": "Прогресс живёт на устройстве. В Blocklix собственный бэкап Android копирует его в ваш аккаунт Google, поэтому переустановка на том же аккаунте обычно всё возвращает; в Gridlix:2048 этот бэкап выключен, и там сохранение теряется при удалении — если не пользоваться облачным сохранением Play Games. На свои серверы мы сохранения не выгружаем. Premium восстанавливается сам, когда вы переустановите игру и войдёте в тот же аккаунт Google.",
+    "es": "El progreso vive en tu dispositivo. En Blocklix, la copia de seguridad propia de Android lo lleva a tu cuenta de Google, así que reinstalar con la misma cuenta suele recuperarlo; en Gridlix:2048 esa copia está desactivada, y ahí la partida se pierde al desinstalar, salvo que uses el guardado en la nube de Play Games. Nunca subimos una partida a un servidor nuestro. Premium se restaura solo en cuanto reinstalas y entras con la misma cuenta de Google.",
+    "de": "Der Fortschritt liegt auf deinem Gerät. In Blocklix kopiert ihn Androids eigenes Backup in dein Google-Konto; eine Neuinstallation mit demselben Konto holt ihn also meist zurück. In Gridlix:2048 ist dieses Backup abgeschaltet, und dort geht der Spielstand beim Deinstallieren verloren — es sei denn, du nutzt den Cloud-Spielstand von Play Games. Auf einen Server von uns laden wir Spielstände nie hoch. Premium stellt sich von selbst wieder her, sobald du neu installierst und dich mit demselben Google-Konto anmeldest.",
+    "fr": "La progression vit sur votre appareil. Dans Blocklix, le service de sauvegarde d'Android la copie dans votre compte Google, donc réinstaller avec le même compte la récupère généralement ; dans Gridlix:2048, ce service est désactivé, et la partie y est perdue à la désinstallation, sauf si vous utilisez la sauvegarde cloud de Play Games. Nous n'envoyons jamais de sauvegarde sur un serveur à nous. Premium se restaure tout seul dès que vous réinstallez et que vous vous connectez au même compte Google.",
+    "pt-BR": "O progresso fica no seu aparelho. No Blocklix, o backup do próprio Android o copia para a sua conta Google, então reinstalar com a mesma conta normalmente traz tudo de volta; no Gridlix:2048 esse backup está desligado, e ali o save se perde ao desinstalar, a não ser que você use o save na nuvem do Play Games. Nunca enviamos um save para um servidor nosso. O Premium se restaura sozinho assim que você reinstala e entra com a mesma conta Google.",
+    "zh": "进度存在你的设备上。在 Blocklix 里，Android 自带的备份会把它复制到你的 Google 账号，所以用同一账号重装通常能找回；在 Gridlix:2048 里这项备份是关闭的，卸载就等于存档丢失，除非你用 Play Games 云存档。我们从不把存档上传到自己的服务器。重装并登录同一个 Google 账号后，Premium 会自己恢复。"
+  },
+  "faq.q3": {
+    "en": "Who reads the Advertising ID?",
+    "ru": "Кто читает Advertising ID?",
+    "es": "¿Quién lee el Advertising ID?",
+    "de": "Wer liest die Advertising ID?",
+    "fr": "Qui lit l'Advertising ID ?",
+    "pt-BR": "Quem lê o Advertising ID?",
+    "zh": "谁在读取 Advertising ID？"
+  },
+  "faq.a3": {
+    "en": "Not us. Our own code never touches it — the advertising SDKs inside the app do, so that ads can be frequency-capped and installs attributed. With Premium, or the Remove Ads purchase in Blocklix, it is no longer used for banners, interstitials or app-open ads; it is still processed if you choose to watch a rewarded video. The <a href=\"./privacy-policy.html\">Privacy Policy</a> names every SDK that reads it.",
+    "ru": "Не мы. Наш собственный код его не трогает — читают рекламные SDK внутри приложения, чтобы ограничивать частоту показов и атрибутировать установки. С Premium (а в Blocklix — и с покупкой «Без рекламы») он больше не используется для баннеров, межстраничных и app-open объявлений; он всё ещё обрабатывается, если вы сами решите посмотреть видео за награду. В <a href=\"./privacy-policy.html\">Политике конфиденциальности</a> названы все SDK, которые его читают.",
+    "es": "Nosotros no. Nuestro propio código no lo toca — lo leen los SDK publicitarios que van dentro de la app, para limitar la frecuencia de los anuncios y atribuir instalaciones. Con Premium, o con la compra Quitar anuncios en Blocklix, deja de usarse para banners, intersticiales y anuncios de apertura; se sigue procesando si eliges ver un vídeo recompensado. La <a href=\"./privacy-policy.html\">Política de Privacidad</a> nombra todos los SDK que lo leen.",
+    "de": "Wir nicht. Unser eigener Code fasst sie nie an — das tun die Werbe-SDKs in der App, damit die Häufigkeit von Anzeigen begrenzt und Installationen zugeordnet werden können. Mit Premium, in Blocklix auch mit dem Kauf „Werbung entfernen“, wird sie nicht mehr für Banner, Interstitials oder App-Open-Anzeigen verwendet; verarbeitet wird sie weiterhin, wenn du dich für ein Rewarded Video entscheidest. Die <a href=\"./privacy-policy.html\">Datenschutzerklärung</a> nennt jedes SDK, das sie liest.",
+    "fr": "Pas nous. Notre propre code n'y touche jamais — ce sont les SDK publicitaires embarqués dans l'app, pour plafonner la fréquence des pubs et attribuer les installations. Avec Premium, ou l'achat Sans pub dans Blocklix, il n'est plus utilisé pour les bannières, les interstitiels ou les pubs à l'ouverture ; il reste traité si vous choisissez de regarder une vidéo récompensée. La <a href=\"./privacy-policy.html\">Politique de confidentialité</a> nomme chaque SDK qui le lit.",
+    "pt-BR": "Nós não. Nosso código nem encosta nele — quem lê são os SDKs de anúncios dentro do app, para limitar a frequência dos anúncios e atribuir instalações. Com Premium, ou com a compra Remover Anúncios no Blocklix, ele deixa de ser usado para banners, intersticiais e anúncios app-open; ainda é processado se você escolher assistir a um vídeo recompensado. A <a href=\"./privacy-policy.html\">Política de Privacidade</a> nomeia cada SDK que o lê.",
+    "zh": "不是我们。我们自己的代码从不碰它——读它的是应用里的广告 SDK，用于限制广告频次和归因安装。开通 Premium，或在 Blocklix 里购买「去广告」之后，它不再用于横幅、插屏和冷启动广告；如果你自己选择看激励视频，它仍会被处理。<a href=\"./privacy-policy.html\">隐私政策</a>里列出了读取它的每一个 SDK。"
+  },
+  "faq.q4": {
+    "en": "Which Android versions are supported?",
+    "ru": "Какие версии Android поддерживаются?",
+    "es": "¿Qué versiones de Android se soportan?",
+    "de": "Welche Android-Versionen werden unterstützt?",
+    "fr": "Quelles versions d'Android sont prises en charge ?",
+    "pt-BR": "Quais versões do Android são suportadas?",
+    "zh": "支持哪些 Android 版本？"
+  },
+  "faq.a4": {
+    "en": "Android 8.0 (API 26) and up. That is on purpose: a phone handed down twice should still run these.",
+    "ru": "Android 8.0 (API 26) и выше. Это намеренно: телефон, дважды перешедший по наследству, должен их тянуть.",
+    "es": "Android 8.0 (API 26) y superiores. Es a propósito: un teléfono heredado dos veces debe seguir moviéndolos.",
+    "de": "Android 8.0 (API 26) und höher. Das ist Absicht: Ein zweimal weitergereichtes Handy soll die Spiele noch packen.",
+    "fr": "Android 8.0 (API 26) et plus. C'est voulu : un téléphone passé deux fois de main en main doit encore les faire tourner.",
+    "pt-BR": "Android 8.0 (API 26) e superior. Isso é de propósito: um celular que já passou por duas mãos ainda tem que rodar os jogos.",
+    "zh": "Android 8.0（API 26）及以上。这是刻意的：一台转手两次的手机，也该跑得动它们。"
+  },
+  "faq.q5": {
+    "en": "Which languages do the apps support?",
+    "ru": "Какие языки поддерживаются?",
+    "es": "¿Qué idiomas soportan las apps?",
+    "de": "Welche Sprachen werden unterstützt?",
+    "fr": "Quelles langues sont prises en charge ?",
+    "pt-BR": "Quais idiomas são suportados?",
+    "zh": "应用支持哪些语言？"
+  },
+  "faq.a5": {
+    "en": "Blocklix ships in 12: English, Russian, German, Spanish, French, Italian, Japanese, Korean, Portuguese (Brazil), Turkish, Arabic and Simplified Chinese. Gridlix:2048 covers a smaller set. The system language is auto-detected on first launch and can be overridden in app settings.",
+    "ru": "Blocklix выходит на 12 языках: английский, русский, немецкий, испанский, французский, итальянский, японский, корейский, португальский (Бразилия), турецкий, арабский и упрощённый китайский. У Gridlix:2048 набор меньше. Системный язык определяется при первом запуске и переключается в настройках приложения.",
+    "es": "Blocklix llega en 12 idiomas: inglés, ruso, alemán, español, francés, italiano, japonés, coreano, portugués (Brasil), turco, árabe y chino simplificado. Gridlix:2048 cubre un conjunto menor. El idioma del sistema se detecta al primer arranque y se puede cambiar en los ajustes.",
+    "de": "Blocklix erscheint in 12 Sprachen: Englisch, Russisch, Deutsch, Spanisch, Französisch, Italienisch, Japanisch, Koreanisch, Portugiesisch (Brasilien), Türkisch, Arabisch und vereinfachtes Chinesisch. Gridlix:2048 deckt weniger ab. Die Systemsprache wird beim ersten Start erkannt und lässt sich in den App-Einstellungen ändern.",
+    "fr": "Blocklix sort en 12 langues : anglais, russe, allemand, espagnol, français, italien, japonais, coréen, portugais (Brésil), turc, arabe et chinois simplifié. Gridlix:2048 en couvre moins. La langue système est détectée au premier lancement et modifiable dans les réglages de l'app.",
+    "pt-BR": "O Blocklix sai em 12 idiomas: inglês, russo, alemão, espanhol, francês, italiano, japonês, coreano, português (Brasil), turco, árabe e chinês simplificado. O Gridlix:2048 cobre um conjunto menor. O idioma do sistema é detectado no primeiro arranque e pode ser trocado nas configurações.",
+    "zh": "Blocklix 支持 12 种语言：英语、俄语、德语、西班牙语、法语、意大利语、日语、韩语、葡萄牙语（巴西）、土耳其语、阿拉伯语和简体中文。Gridlix:2048 覆盖的语言较少。首次启动时自动识别系统语言，也可以在应用设置中切换。"
+  },
+  "faq.q6": {
+    "en": "I found a bug or want to suggest a feature.",
+    "ru": "Нашёл баг или хочу предложить функцию.",
+    "es": "Encontré un bug o quiero sugerir una función.",
+    "de": "Ich habe einen Bug gefunden oder einen Vorschlag.",
+    "fr": "J'ai trouvé un bug ou j'ai une suggestion.",
+    "pt-BR": "Achei um bug ou quero sugerir um recurso.",
+    "zh": "发现了 bug 或想提建议。"
+  },
+  "faq.a6": {
+    "en": "Write to <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> with a short description. Screenshots and device model help a lot. We read every message.",
+    "ru": "Пишите на <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> с коротким описанием. Скриншоты и модель устройства сильно помогают. Мы читаем каждое сообщение.",
+    "es": "Escribe a <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> con una breve descripción. Las capturas y el modelo del dispositivo ayudan mucho. Leemos cada mensaje.",
+    "de": "Schreib an <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> mit einer kurzen Beschreibung. Screenshots und Gerätemodell helfen sehr. Wir lesen jede Nachricht.",
+    "fr": "Écrivez à <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> avec une brève description. Les captures et le modèle d'appareil aident beaucoup. Nous lisons chaque message.",
+    "pt-BR": "Escreva para <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> com uma descrição curta. Capturas e modelo do aparelho ajudam muito. Lemos cada mensagem.",
+    "zh": "请写信到 <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a>，附上简短描述。截图和设备型号会很有帮助。我们会阅读每一条消息。"
+  },
+  "faq.q7": {
+    "en": "Will there ever be an iOS version?",
+    "ru": "Будет ли версия для iOS?",
+    "es": "¿Habrá versión para iOS?",
+    "de": "Wird es jemals eine iOS-Version geben?",
+    "fr": "Y aura-t-il une version iOS ?",
+    "pt-BR": "Haverá versão para iOS?",
+    "zh": "会有 iOS 版本吗？"
+  },
+  "faq.a7": {
+    "en": "Not on the roadmap. One person can keep two Android games updated for years; two platforms would mean neither of them got that. If the catalogue grows enough to change the arithmetic, it will be said here.",
+    "ru": "В планах нет. Один человек может годами обновлять две Android-игры; две платформы означали бы, что ни одна такого не получит. Если каталог вырастет настолько, что арифметика изменится, здесь об этом напишут.",
+    "es": "No está en la hoja de ruta. Una persona puede mantener dos juegos de Android actualizados durante años; con dos plataformas, ninguno de los dos lo tendría. Si el catálogo crece lo suficiente como para cambiar la aritmética, se dirá aquí.",
+    "de": "Nicht auf der Roadmap. Eine Person kann zwei Android-Spiele jahrelang aktuell halten; bei zwei Plattformen bekäme das keines von beiden. Wächst der Katalog so weit, dass sich die Rechnung ändert, steht es hier.",
+    "fr": "Pas dans la feuille de route. Une personne peut tenir deux jeux Android à jour pendant des années ; deux plateformes, et aucun des deux n'y aurait droit. Si le catalogue grandit assez pour changer le calcul, ce sera écrit ici.",
+    "pt-BR": "Não está no roteiro. Uma pessoa consegue manter dois jogos Android atualizados por anos; duas plataformas significariam que nenhum dos dois teria isso. Se o catálogo crescer a ponto de mudar essa conta, vai estar escrito aqui.",
+    "zh": "不在路线图上。一个人可以把两款 Android 游戏更新好几年；换成两个平台，两边都得不到这个待遇。哪天作品多到这笔账算得过来，这里会写出来。"
+  },
+  "faq.q8": {
+    "en": "Does Premium change how the game plays?",
+    "ru": "Меняет ли Premium саму игру?",
+    "es": "¿Premium cambia cómo se juega?",
+    "de": "Ändert Premium, wie sich das Spiel spielt?",
+    "fr": "Premium change-t-il la façon de jouer ?",
+    "pt-BR": "O Premium muda como o jogo se joga?",
+    "zh": "Premium 会改变游戏玩法吗？"
+  },
+  "faq.a8": {
+    "en": "No. Premium removes banners and interstitials, doubles the stars a run pays and adds a daily gift and the premium themes. Every level, rank and mission is the same for everyone.",
+    "ru": "Нет. Premium убирает баннеры и межстраничную рекламу, удваивает звёзды за партию и добавляет ежедневный подарок и премиум-темы. Уровни, ранги и задания одинаковы у всех.",
+    "es": "No. Premium quita banners e intersticiales, duplica las estrellas de cada partida y añade un regalo diario y los temas premium. Cada nivel, rango y misión es igual para todos.",
+    "de": "Nein. Premium entfernt Banner und Interstitials, verdoppelt die Sterne einer Partie und bringt ein Tagesgeschenk und die Premium-Themes. Jede Stufe, jeder Rang und jede Mission ist für alle gleich.",
+    "fr": "Non. Premium enlève bannières et interstitiels, double les étoiles d'une partie et ajoute un cadeau quotidien et les thèmes premium. Chaque niveau, rang et mission est le même pour tous.",
+    "pt-BR": "Não. O Premium tira banners e intersticiais, dobra as estrelas de cada partida e adiciona um presente diário e os temas premium. Todo nível, patente e missão é igual para todo mundo.",
+    "zh": "不会。Premium 去掉横幅和插屏广告，让每局的星星翻倍，并附带每日礼物和高级主题。每个难度、段位和任务对所有人都一样。"
+  },
+  "about.stats.people": {
+    "en": "person in the studio",
+    "ru": "человек в студии",
+    "es": "persona en el estudio",
+    "de": "Person im Studio",
+    "fr": "personne au studio",
+    "pt-BR": "pessoa no estúdio",
+    "zh": "位成员"
+  },
+  "about.stats.since": {
+    "en": "shipping since",
+    "ru": "выпускаем с",
+    "es": "publicando desde",
+    "de": "veröffentlicht seit",
+    "fr": "publie depuis",
+    "pt-BR": "publicando desde",
+    "zh": "自何年起发布"
+  },
+  "story.eyebrow": {
+    "en": "The short version",
+    "ru": "Коротко",
+    "es": "La versión corta",
+    "de": "Die kurze Fassung",
+    "fr": "La version courte",
+    "pt-BR": "A versão curta",
+    "zh": "简短版本"
+  },
+  "story.title": {
+    "en": "Why the apps stay small",
+    "ru": "Почему приложения остаются маленькими",
+    "es": "Por qué las apps siguen siendo pequeñas",
+    "de": "Warum die Apps klein bleiben",
+    "fr": "Pourquoi les applis restent petites",
+    "pt-BR": "Por que os apps continuam pequenos",
+    "zh": "为什么应用一直很小"
+  },
+  "story.p1": {
+    "en": "Vaslix Games is one person. That is not a hardship story — it is the constraint that decides everything else. A studio of one cannot maintain a login system, a server fleet and a support desk, so it does not build them, and the games are better for it.",
+    "ru": "Vaslix Games — это один человек. Это не история про трудности, а ограничение, из которого следует всё остальное. Студия из одного не потянет систему входа, парк серверов и поддержку — значит, она их не строит, и играм от этого только лучше.",
+    "es": "Vaslix Games es una persona. No es una historia de sacrificio: es la restricción de la que sale todo lo demás. Un estudio de uno no puede mantener un sistema de cuentas, una flota de servidores y un soporte, así que no los construye, y los juegos ganan con ello.",
+    "de": "Vaslix Games ist eine Person. Das ist keine Leidensgeschichte, sondern die Randbedingung, aus der alles Weitere folgt. Ein Ein-Personen-Studio kann kein Login-System, keine Serverflotte und keinen Support-Desk betreiben — also baut es sie nicht, und die Spiele werden dadurch besser.",
+    "fr": "Vaslix Games, c'est une personne. Ce n'est pas un récit de galère : c'est la contrainte dont découle tout le reste. Un studio d'une personne ne peut pas maintenir un système de comptes, une flotte de serveurs et un support — il ne les construit donc pas, et les jeux s'en portent mieux.",
+    "pt-BR": "A Vaslix Games é uma pessoa. Isso não é uma história de sacrifício: é a restrição da qual decorre todo o resto. Um estúdio de um não consegue manter sistema de login, frota de servidores e suporte — então não os constrói, e os jogos melhoram com isso.",
+    "zh": "Vaslix Games 只有一个人。这不是苦情故事，而是决定其他一切的约束条件。一人工作室维护不了登录系统、服务器集群和客服团队，所以干脆不做——游戏反而因此更好。"
+  },
+  "story.p2": {
+    "en": "What is left is the part players actually touch: the board, the timing, the feel of a piece landing. Every hour that would have gone into an account flow goes into the difficulty curve instead.",
+    "ru": "Остаётся то, чего игрок действительно касается: доска, тайминги, ощущение вставшей на место фигуры. Каждый час, который ушёл бы на регистрацию, уходит в кривую сложности.",
+    "es": "Queda lo que el jugador toca de verdad: el tablero, el ritmo, la sensación de una pieza al encajar. Cada hora que habría ido a un registro va a la curva de dificultad.",
+    "de": "Übrig bleibt, was Spielende wirklich anfassen: das Feld, das Timing, das Gefühl eines einrastenden Teils. Jede Stunde, die in einen Anmeldeprozess geflossen wäre, fließt in die Schwierigkeitskurve.",
+    "fr": "Reste ce que le joueur touche vraiment : le plateau, le rythme, la sensation d'une pièce qui se pose. Chaque heure qui serait partie dans un parcours d'inscription part dans la courbe de difficulté.",
+    "pt-BR": "Sobra o que o jogador realmente toca: o tabuleiro, o ritmo, a sensação de uma peça se encaixando. Cada hora que iria para um cadastro vai para a curva de dificuldade.",
+    "zh": "剩下的正是玩家真正接触的部分：棋盘、节奏、方块落位的手感。本会花在注册流程上的每一小时，都花进了难度曲线。"
+  },
+  "story.p3": {
+    "en": "The catalogue grows slowly and on purpose. A title ships when it is finished, gets updates for years, and never quietly turns into a service you have to log into.",
+    "ru": "Каталог растёт медленно и намеренно. Игра выходит, когда она готова, обновляется годами и никогда не превращается тихо в сервис, куда надо входить.",
+    "es": "El catálogo crece despacio y a propósito. Un título sale cuando está terminado, recibe actualizaciones durante años y nunca se convierte en silencio en un servicio con inicio de sesión.",
+    "de": "Der Katalog wächst langsam, und zwar absichtlich. Ein Titel erscheint, wenn er fertig ist, bekommt jahrelang Updates und wird nie stillschweigend zu einem Dienst mit Anmeldung.",
+    "fr": "Le catalogue grandit lentement, exprès. Un titre sort quand il est fini, reçoit des mises à jour pendant des années, et ne devient jamais en douce un service avec connexion.",
+    "pt-BR": "O catálogo cresce devagar, de propósito. Um título sai quando está pronto, recebe atualizações por anos e nunca vira em silêncio um serviço com login.",
+    "zh": "目录有意地慢慢生长。一款作品做完才发布，之后维护数年，绝不会悄悄变成一个需要登录的服务。"
+  },
+  "contact.eyebrow": {
+    "en": "Contact",
+    "ru": "Контакт",
+    "es": "Contacto",
+    "de": "Kontakt",
+    "fr": "Contact",
+    "pt-BR": "Contato",
+    "zh": "联系"
+  },
+  "contact.title": {
+    "en": "Write, and a person answers",
+    "ru": "Напишите — ответит человек",
+    "es": "Escribe y responde una persona",
+    "de": "Schreiben Sie — es antwortet ein Mensch",
+    "fr": "Écrivez, une personne répond",
+    "pt-BR": "Escreva, e uma pessoa responde",
+    "zh": "写信来，回信的是人"
+  },
+  "contact.text": {
+    "en": "Bugs, ideas, press questions and partnership offers all land in the same inbox. For anything that crashed, include your device and Android version.",
+    "ru": "Баги, идеи, вопросы прессы и предложения — всё приходит в один ящик. Если что-то упало, добавьте модель устройства и версию Android.",
+    "es": "Errores, ideas, preguntas de prensa y propuestas llegan al mismo buzón. Si algo se cerró de golpe, indica el dispositivo y la versión de Android.",
+    "de": "Fehler, Ideen, Presseanfragen und Angebote landen im selben Postfach. Bei einem Absturz bitte Gerät und Android-Version nennen.",
+    "fr": "Bugs, idées, questions presse et propositions arrivent dans la même boîte. En cas de plantage, indiquez l'appareil et la version d'Android.",
+    "pt-BR": "Bugs, ideias, dúvidas de imprensa e propostas caem na mesma caixa. Se algo travou, informe o aparelho e a versão do Android.",
+    "zh": "错误报告、想法、媒体提问和合作邀约都进同一个邮箱。若发生崩溃，请附上设备型号与 Android 版本。"
+  },
+  "contact.btn": {
+    "en": "Send an email",
+    "ru": "Написать письмо",
+    "es": "Enviar un correo",
+    "de": "E-Mail schreiben",
+    "fr": "Envoyer un e-mail",
+    "pt-BR": "Enviar um e-mail",
+    "zh": "发送邮件"
+  }
+}

@@ -1,8 +1,300 @@
 {
-  "g.blocklix.boosters.eyebrow": { "en": "Boosters", "ru": "Бустеры", "es": "Potenciadores", "de": "Booster", "fr": "Boosters", "pt-BR": "Reforços", "zh": "助力道具" },
+  "card.gridlix.desc": {
+    "en": "A 4×4 merge puzzle for Android. The Daily is seeded from the date, so every player worldwide gets the same board, graded out of three stars; a streak with shields survives a missed evening, and a finished month is worth a medal. Five boosters, three uses of each per game, five colour themes, tuned haptics, and an optional Premium that removes the ads.",
+    "ru": "Головоломка-слияние 4×4 для Android. Ежедневная задача строится из даты, поэтому доска одна и та же у всех в мире и оценивается тремя звёздами; серия со щитами переживает пропущенный вечер, а закрытый месяц стоит медали. Пять бустеров по три применения за игру, пять цветовых тем, настроенная вибрация и Premium без рекламы — по желанию.",
+    "es": "Un puzle de fusión 4×4 para Android. El Diario se genera a partir de la fecha, así que todo el mundo recibe el mismo tablero, puntuado con tres estrellas; una racha con escudos sobrevive a una noche perdida y un mes terminado vale una medalla. Cinco potenciadores con tres usos cada uno por partida, cinco temas de color, vibración ajustada y un Premium opcional sin anuncios.",
+    "de": "Ein 4×4-Merge-Puzzle für Android. Das Daily entsteht aus dem Datum, also bekommt jede und jeder weltweit dasselbe Feld, bewertet mit bis zu drei Sternen; eine Serie mit Schilden übersteht einen verpassten Abend, und ein abgeschlossener Monat bringt eine Medaille. Fünf Booster mit je drei Einsätzen pro Partie, fünf Farbthemes, abgestimmte Haptik und ein optionales werbefreies Premium.",
+    "fr": "Un puzzle de fusion 4×4 pour Android. Le Quotidien est tiré de la date : tout le monde reçoit le même plateau, noté sur trois étoiles ; une série avec boucliers survit à une soirée manquée, et un mois terminé vaut une médaille. Cinq boosters à trois usages chacun par partie, cinq thèmes de couleur, un retour haptique réglé et un Premium sans publicité en option.",
+    "pt-BR": "Um quebra-cabeça de fusão 4×4 para Android. O Diário nasce da data, então todo mundo recebe o mesmo tabuleiro, avaliado em até três estrelas; uma sequência com escudos sobrevive a uma noite perdida, e um mês concluído vale uma medalha. Cinco reforços com três usos cada por partida, cinco temas de cor, vibração ajustada e um Premium opcional sem anúncios.",
+    "zh": "一款 Android 上的 4×4 合并益智游戏。每日谜题由日期生成，全球玩家面对同一块棋盘，以三颗星评分；带护盾的连胜能扛过一个错过的晚上，完整走完一个月还能拿到奖牌。五种助力道具，每局各可用三次，五套配色主题、调校过的振动反馈，以及可选的无广告 Premium。"
+  },
+  "card.blocklix.genre": {
+    "en": "Puzzle",
+    "ru": "Пазл",
+    "es": "Puzzle",
+    "de": "Puzzle",
+    "fr": "Puzzle",
+    "pt-BR": "Puzzle",
+    "zh": "益智"
+  },
+  "card.blocklix.desc": {
+    "en": "Drop shapes into an 8×8 board, clear lines and squares, chain combos for big multipliers. Six difficulty levels, 38 themes, 60 ranks across 21 achievement chains, four boosters, daily and weekly missions with a streak chest, and a cosmetics wardrobe. Optional ad-free Premium with 2× stars and a daily gift.",
+    "ru": "Кладите фигуры на поле 8×8, очищайте линии и квадраты, собирайте комбо ради больших множителей. Шесть уровней сложности, 38 тем, 60 рангов и 21 цепочка достижений, четыре бустера, ежедневные и недельные задания со стрик-сундуком и гардероб косметики. Опциональный Premium без рекламы, с удвоением звёзд и ежедневным подарком.",
+    "es": "Coloca formas en un tablero 8×8, limpia líneas y cuadrados, encadena combos para multiplicadores grandes. Seis niveles de dificultad, 38 temas, 60 rangos en 21 cadenas de logros, cuatro boosters, misiones diarias y semanales con cofre de racha, y un vestuario de cosméticos. Premium opcional sin anuncios, con estrellas ×2 y regalo diario.",
+    "de": "Setze Formen auf ein 8×8-Feld, räume Linien und Quadrate ab, kette Combos für große Multiplikatoren. Sechs Schwierigkeitsstufen, 38 Themes, 60 Ränge in 21 Erfolgsketten, vier Booster, Tages- und Wochenmissionen mit Serien-Truhe und eine Kosmetik-Garderobe. Optionales werbefreies Premium mit 2× Sternen und einem Tagesgeschenk.",
+    "fr": "Posez des formes sur un plateau 8×8, nettoyez lignes et carrés, enchaînez les combos pour de gros multiplicateurs. Six niveaux de difficulté, 38 thèmes, 60 rangs sur 21 chaînes de succès, quatre boosters, missions quotidiennes et hebdomadaires avec coffre de série, et un vestiaire de cosmétiques. Premium optionnel sans pub, étoiles ×2 et cadeau quotidien.",
+    "pt-BR": "Coloque formas num tabuleiro 8×8, limpe linhas e quadrados, encadeie combos para multiplicadores altos. Seis níveis de dificuldade, 38 temas, 60 patentes em 21 cadeias de conquistas, quatro reforços, missões diárias e semanais com baú de sequência, e um guarda-roupa de cosméticos. Premium opcional sem anúncios, com estrelas ×2 e presente diário.",
+    "zh": "在 8×8 棋盘上放置方块，消除整行整列，连击可获得高倍数。六个难度等级、38 种主题、21 条成就链中的 60 个段位、四种道具、带连续签到宝箱的每日与每周任务，以及一套外观衣橱。可选的无广告 Premium，双倍星星与每日礼物。"
+  },
+  "how.eyebrow": {
+    "en": "How it plays",
+    "ru": "Как играется",
+    "es": "Cómo se juega",
+    "de": "So spielt es sich",
+    "fr": "Comment on joue",
+    "pt-BR": "Como se joga",
+    "zh": "怎么玩"
+  },
+  "how.title": {
+    "en": "Three moves you already know",
+    "ru": "Три хода, которые вы уже знаете",
+    "es": "Tres movimientos que ya conoces",
+    "de": "Drei Züge, die du schon kennst",
+    "fr": "Trois gestes que vous connaissez déjà",
+    "pt-BR": "Três jogadas que você já conhece",
+    "zh": "三个你早已熟悉的动作"
+  },
+  "how.intro": {
+    "en": "Blocklix is the 8×8 drop-and-clear you have seen before — tuned until every one of these feels right in the hand.",
+    "ru": "Blocklix — та самая головоломка 8×8 «положи и очисти», доведённая до состояния, когда каждый из этих трёх ходов ложится в руку.",
+    "es": "Blocklix es el 8×8 de colocar y limpiar que ya has visto — afinado hasta que cada uno de estos tres se siente bien en la mano.",
+    "de": "Blocklix ist das 8×8-Drop-and-Clear, das du schon gesehen hast — so lange abgestimmt, bis sich jeder dieser drei Züge richtig anfühlt.",
+    "fr": "Blocklix, c'est le 8×8 « pose et nettoie » que vous avez déjà vu — réglé jusqu'à ce que chacun de ces trois gestes tombe juste sous le doigt.",
+    "pt-BR": "O Blocklix é o 8×8 de encaixar e limpar que você já viu — ajustado até cada uma dessas três jogadas cair bem na mão.",
+    "zh": "Blocklix 就是你见过的那种 8×8 放置消除——只是打磨到这三个动作每一个都顺手为止。"
+  },
+  "how.s1t": {
+    "en": "Drop",
+    "ru": "Положи",
+    "es": "Coloca",
+    "de": "Ablegen",
+    "fr": "Posez",
+    "pt-BR": "Encaixe",
+    "zh": "放置"
+  },
+  "how.s1d": {
+    "en": "Three pieces at a time. Any of them can go anywhere it fits; nothing rotates, nothing falls.",
+    "ru": "Три фигуры за раз. Любая встаёт куда влезет; ничего не вращается и не падает.",
+    "es": "Tres piezas a la vez. Cualquiera va donde quepa; nada gira, nada cae.",
+    "de": "Drei Steine auf einmal. Jeder passt, wo er passt; nichts dreht sich, nichts fällt.",
+    "fr": "Trois pièces à la fois. Chacune va où elle rentre ; rien ne tourne, rien ne tombe.",
+    "pt-BR": "Três peças por vez. Qualquer uma vai onde couber; nada gira, nada cai.",
+    "zh": "一次三块。哪块放得下就放哪里；不会旋转，也不会下落。"
+  },
+  "how.s2t": {
+    "en": "Clear",
+    "ru": "Очисти",
+    "es": "Limpia",
+    "de": "Abräumen",
+    "fr": "Nettoyez",
+    "pt-BR": "Limpe",
+    "zh": "消除"
+  },
+  "how.s2d": {
+    "en": "Fill a row or a column and it vanishes. Fill both at once and the board tells you so.",
+    "ru": "Заполните строку или столбец — они исчезнут. Заполните оба сразу — доска сама об этом скажет.",
+    "es": "Llena una fila o una columna y desaparece. Llena ambas a la vez y el tablero te lo dice.",
+    "de": "Fülle eine Reihe oder Spalte, und sie verschwindet. Fülle beide zugleich, und das Feld sagt es dir.",
+    "fr": "Remplissez une ligne ou une colonne et elle disparaît. Remplissez les deux d'un coup et le plateau vous le dit.",
+    "pt-BR": "Complete uma linha ou coluna e ela some. Complete as duas de uma vez e o tabuleiro avisa.",
+    "zh": "填满一行或一列，它就消失。同时填满两者，棋盘会告诉你。"
+  },
+  "how.s3t": {
+    "en": "Combo",
+    "ru": "Комбо",
+    "es": "Combo",
+    "de": "Combo",
+    "fr": "Combo",
+    "pt-BR": "Combo",
+    "zh": "连击"
+  },
+  "how.s3d": {
+    "en": "Clear on consecutive drops and the multiplier climbs. One quiet tick warns you when a line is about to go.",
+    "ru": "Очищайте ход за ходом — множитель растёт. Один тихий тик предупреждает, что линия вот-вот уйдёт.",
+    "es": "Limpia en turnos seguidos y el multiplicador sube. Un tic discreto avisa cuando una línea está a punto de irse.",
+    "de": "Räume in aufeinanderfolgenden Zügen ab, und der Multiplikator steigt. Ein leises Ticken warnt, wenn eine Linie gleich fällt.",
+    "fr": "Nettoyez sur des coups consécutifs et le multiplicateur grimpe. Un petit tic prévient quand une ligne est sur le point de partir.",
+    "pt-BR": "Limpe em jogadas seguidas e o multiplicador sobe. Um tique discreto avisa quando uma linha está prestes a sair.",
+    "zh": "连续几步都消除，倍数就往上涨。当一条线即将消失时，会有一声轻轻的提示。"
+  },
+  "themes.eyebrow": {
+    "en": "38 themes",
+    "ru": "38 тем",
+    "es": "38 temas",
+    "de": "38 Themes",
+    "fr": "38 thèmes",
+    "pt-BR": "38 temas",
+    "zh": "38 种主题"
+  },
+  "themes.title": {
+    "en": "Every board wears a palette",
+    "ru": "У каждой доски своя палитра",
+    "es": "Cada tablero viste una paleta",
+    "de": "Jedes Feld trägt eine Palette",
+    "fr": "Chaque plateau porte une palette",
+    "pt-BR": "Cada tabuleiro veste uma paleta",
+    "zh": "每块棋盘都有自己的配色"
+  },
+  "themes.intro": {
+    "en": "Four are yours from install. The rest are earned with stars or come with Premium — and each one changes the sky, the blocks and the way a cleared line lights up.",
+    "ru": "Четыре ваши с установки. Остальные зарабатываются звёздами или приходят с Premium — и каждая меняет небо, блоки и то, как вспыхивает собранная линия.",
+    "es": "Cuatro son tuyos desde la instalación. El resto se ganan con estrellas o vienen con Premium — y cada uno cambia el cielo, los bloques y cómo se ilumina una línea limpiada.",
+    "de": "Vier gehören dir ab Installation. Der Rest wird mit Sternen verdient oder kommt mit Premium — und jedes verändert Himmel, Steine und die Art, wie eine abgeräumte Linie aufleuchtet.",
+    "fr": "Quatre sont à vous dès l'installation. Les autres se gagnent en étoiles ou viennent avec Premium — et chacun change le ciel, les blocs et la façon dont une ligne nettoyée s'allume.",
+    "pt-BR": "Quatro são seus desde a instalação. O resto se ganha com estrelas ou vem com o Premium — e cada um muda o céu, os blocos e o jeito que uma linha limpa acende.",
+    "zh": "四种从安装起就属于你。其余的用星星换取，或随 Premium 一起到来——每一种都会改变天空、方块，以及一条线被消除时点亮的方式。"
+  },
+  "themes.free": {
+    "en": "Free from install",
+    "ru": "Бесплатно с установки",
+    "es": "Gratis desde la instalación",
+    "de": "Kostenlos ab Installation",
+    "fr": "Gratuit dès l'installation",
+    "pt-BR": "Grátis desde a instalação",
+    "zh": "安装即免费"
+  },
+  "themes.tap": {
+    "en": "Tap a theme to dress the board",
+    "ru": "Нажмите на тему — доска переоденется",
+    "es": "Toca un tema para vestir el tablero",
+    "de": "Tippe ein Theme an, um das Feld einzukleiden",
+    "fr": "Touchez un thème pour habiller le plateau",
+    "pt-BR": "Toque em um tema para vestir o tabuleiro",
+    "zh": "点一下主题，给棋盘换装"
+  },
+  "diff.eyebrow": {
+    "en": "Six difficulty levels",
+    "ru": "Шесть уровней сложности",
+    "es": "Seis niveles de dificultad",
+    "de": "Sechs Schwierigkeitsstufen",
+    "fr": "Six niveaux de difficulté",
+    "pt-BR": "Seis níveis de dificuldade",
+    "zh": "六个难度等级"
+  },
+  "diff.title": {
+    "en": "Pick the length of your game",
+    "ru": "Выберите длину партии",
+    "es": "Elige la duración de tu partida",
+    "de": "Wähle die Länge deiner Partie",
+    "fr": "Choisissez la longueur de votre partie",
+    "pt-BR": "Escolha o tamanho da sua partida",
+    "zh": "选择你这一局的长度"
+  },
+  "diff.intro": {
+    "en": "Only the piece generator changes. Scoring, boards and ranks stay the same on every rung — harder just means the pieces stop helping you.",
+    "ru": "Меняется только генератор фигур. Счёт, доска и ранги одинаковы на каждой ступени — «сложнее» значит лишь, что фигуры перестают вам помогать.",
+    "es": "Solo cambia el generador de piezas. Puntuación, tablero y rangos son iguales en cada escalón — más difícil solo significa que las piezas dejan de ayudarte.",
+    "de": "Nur der Steingenerator ändert sich. Wertung, Feld und Ränge bleiben auf jeder Stufe gleich — schwerer heißt nur, dass die Steine aufhören, dir zu helfen.",
+    "fr": "Seul le générateur de pièces change. Score, plateau et rangs sont identiques à chaque palier — plus dur veut seulement dire que les pièces cessent de vous aider.",
+    "pt-BR": "Só o gerador de peças muda. Pontuação, tabuleiro e patentes são iguais em todo degrau — mais difícil só quer dizer que as peças param de ajudar você.",
+    "zh": "变化的只有出块规则。计分、棋盘和段位在每一级都一样——所谓更难，只是方块不再帮你而已。"
+  },
+  "diff.note": {
+    "en": "Higher rungs pay more stars per point. Easy pays fewer, and never pretends otherwise.",
+    "ru": "Верхние ступени платят больше звёзд за очко. Лёгкая платит меньше и не делает вид, что иначе.",
+    "es": "Los escalones altos pagan más estrellas por punto. Fácil paga menos, y nunca finge lo contrario.",
+    "de": "Höhere Stufen zahlen mehr Sterne pro Punkt. Leicht zahlt weniger und tut nie so, als wäre es anders.",
+    "fr": "Les paliers hauts paient plus d'étoiles par point. Facile en paie moins, et ne prétend jamais le contraire.",
+    "pt-BR": "Os degraus altos pagam mais estrelas por ponto. O Fácil paga menos, e nunca finge o contrário.",
+    "zh": "高难度每分给的星星更多。简单给得少，也从不假装不是这样。"
+  },
+  "road.eyebrow": {
+    "en": "The long game",
+    "ru": "Долгая игра",
+    "es": "El juego largo",
+    "de": "Das lange Spiel",
+    "fr": "Le jeu long",
+    "pt-BR": "O jogo longo",
+    "zh": "长线游戏"
+  },
+  "road.title": {
+    "en": "A road, not a treadmill",
+    "ru": "Дорога, а не беговая дорожка",
+    "es": "Un camino, no una cinta",
+    "de": "Ein Weg, kein Laufband",
+    "fr": "Une route, pas un tapis roulant",
+    "pt-BR": "Uma estrada, não uma esteira",
+    "zh": "一条路，而不是跑步机"
+  },
+  "road.intro": {
+    "en": "Everything below is earned by playing. Nothing here is sold.",
+    "ru": "Всё ниже зарабатывается игрой. Ничего из этого не продаётся.",
+    "es": "Todo lo de abajo se gana jugando. Nada de esto se vende.",
+    "de": "Alles hier unten wird erspielt. Nichts davon wird verkauft.",
+    "fr": "Tout ce qui suit se gagne en jouant. Rien ici n'est à vendre.",
+    "pt-BR": "Tudo abaixo se ganha jogando. Nada disso está à venda.",
+    "zh": "下面的一切都靠玩来获得。这里没有任何东西出售。"
+  },
+  "road.ranksT": {
+    "en": "60 ranks",
+    "ru": "60 рангов",
+    "es": "60 rangos",
+    "de": "60 Ränge",
+    "fr": "60 rangs",
+    "pt-BR": "60 patentes",
+    "zh": "60 个段位"
+  },
+  "road.ranksD": {
+    "en": "Fifteen families of four. Points are your score, weighted by the difficulty you chose.",
+    "ru": "Пятнадцать семейств по четыре ступени. Очки — ваш счёт, взвешенный выбранной сложностью.",
+    "es": "Quince familias de cuatro. Los puntos son tu puntuación, ponderada por la dificultad que elegiste.",
+    "de": "Fünfzehn Familien zu je vier. Punkte sind deine Wertung, gewichtet mit der gewählten Schwierigkeit.",
+    "fr": "Quinze familles de quatre. Les points sont votre score, pondéré par la difficulté choisie.",
+    "pt-BR": "Quinze famílias de quatro. Os pontos são a sua pontuação, ponderada pela dificuldade que você escolheu.",
+    "zh": "十五个家族，每族四阶。积分就是你的得分，按所选难度加权。"
+  },
+  "road.questsT": {
+    "en": "21 achievement chains",
+    "ru": "21 цепочка достижений",
+    "es": "21 cadenas de logros",
+    "de": "21 Erfolgsketten",
+    "fr": "21 chaînes de succès",
+    "pt-BR": "21 cadeias de conquistas",
+    "zh": "21 条成就链"
+  },
+  "road.questsD": {
+    "en": "Five steps each, from the first clear to the ones almost nobody reaches.",
+    "ru": "По пять шагов в каждой: от первой очищенной линии до тех, куда почти никто не доходит.",
+    "es": "Cinco pasos cada una, desde la primera limpieza hasta las que casi nadie alcanza.",
+    "de": "Je fünf Schritte, vom ersten Abräumen bis zu denen, die fast niemand erreicht.",
+    "fr": "Cinq étapes chacune, du premier nettoyage à celles que presque personne n'atteint.",
+    "pt-BR": "Cinco passos cada, da primeira limpeza até as que quase ninguém alcança.",
+    "zh": "每条五步，从第一次消除到几乎没人到达的那些。"
+  },
+  "road.missionsT": {
+    "en": "Daily and weekly missions",
+    "ru": "Ежедневные и недельные задания",
+    "es": "Misiones diarias y semanales",
+    "de": "Tages- und Wochenmissionen",
+    "fr": "Missions quotidiennes et hebdomadaires",
+    "pt-BR": "Missões diárias e semanais",
+    "zh": "每日与每周任务"
+  },
+  "road.missionsD": {
+    "en": "Thirteen daily kinds that scale with your rank, two weekly ones, and a chest for the week you keep at it.",
+    "ru": "Тринадцать видов дневных, растущих с вашим рангом, два недельных и сундук за неделю без пропусков.",
+    "es": "Trece tipos diarios que escalan con tu rango, dos semanales y un cofre por la semana que mantienes.",
+    "de": "Dreizehn tägliche Arten, die mit deinem Rang wachsen, zwei wöchentliche und eine Truhe für die Woche, die du durchhältst.",
+    "fr": "Treize types quotidiens qui montent avec votre rang, deux hebdomadaires et un coffre pour la semaine tenue.",
+    "pt-BR": "Treze tipos diários que crescem com sua patente, dois semanais e um baú pela semana em que você não falha.",
+    "zh": "十三类随段位成长的每日任务、两个每周任务，以及坚持一整周的宝箱。"
+  },
+  "road.families": {
+    "en": "The fifteen families",
+    "ru": "Пятнадцать семейств",
+    "es": "Las quince familias",
+    "de": "Die fünfzehn Familien",
+    "fr": "Les quinze familles",
+    "pt-BR": "As quinze famílias",
+    "zh": "十五个家族"
+  },
+  "g.blocklix.boosters.eyebrow": {
+    "en": "Boosters",
+    "ru": "Бустеры",
+    "es": "Potenciadores",
+    "de": "Booster",
+    "fr": "Boosters",
+    "pt-BR": "Reforços",
+    "zh": "助力道具"
+  },
   "g.blocklix.boosters.title": {
-    "en": "Four ways out of a bad board", "ru": "Четыре выхода из плохой доски", "es": "Cuatro salidas de un tablero malo",
-    "de": "Vier Auswege aus einem schlechten Feld", "fr": "Quatre issues à un plateau bouché", "pt-BR": "Quatro saídas de um tabuleiro ruim", "zh": "四种脱困办法"
+    "en": "Four ways out of a bad board",
+    "ru": "Четыре выхода из плохой доски",
+    "es": "Cuatro salidas de un tablero malo",
+    "de": "Vier Auswege aus einem schlechten Feld",
+    "fr": "Quatre issues à un plateau bouché",
+    "pt-BR": "Quatro saídas de um tabuleiro ruim",
+    "zh": "四种脱困办法"
   },
   "g.blocklix.boosters.intro": {
     "en": "Each one is bought with stars you earned by playing. None of them can be bought with money on its own.",
@@ -18,11 +310,19 @@
     "ru": "Звёзды приходят из сыгранных партий, миссий и рангов. Premium удваивает выплату за партию, но не продаёт бустеры напрямую.",
     "es": "Las estrellas vienen de partidas terminadas, misiones y rangos. Premium duplica lo que paga una partida; no vende los potenciadores directamente.",
     "de": "Sterne kommen aus beendeten Partien, Missionen und Rängen. Premium verdoppelt den Ertrag einer Partie, verkauft die Booster aber nicht direkt.",
-    "fr": "Les étoiles viennent des parties terminées, des missions et des rangs. Premium double ce que rapporte une partie ; il ne vend pas les boosters.",
+    "fr": "Les étoiles viennent des parties terminées, des missions et des rangs. Premium double ce que rapporte une partie ; il ne vend pas les boosters.",
     "pt-BR": "As estrelas vêm de partidas concluídas, missões e patentes. O Premium dobra o que uma partida paga; não vende os reforços diretamente.",
     "zh": "星星来自完成的对局、任务和段位。Premium 会让每局收益翻倍，但不会直接出售道具。"
   },
-  "g.blocklix.premium.eyebrow": { "en": "Premium", "ru": "Premium", "es": "Premium", "de": "Premium", "fr": "Premium", "pt-BR": "Premium", "zh": "Premium" },
+  "g.blocklix.premium.eyebrow": {
+    "en": "Premium",
+    "ru": "Premium",
+    "es": "Premium",
+    "de": "Premium",
+    "fr": "Premium",
+    "pt-BR": "Premium",
+    "zh": "Premium"
+  },
   "g.blocklix.premium.title": {
     "en": "What money changes — and what it never touches",
     "ru": "Что меняют деньги — и чего они не трогают",
@@ -82,15 +382,27 @@
     "ru": "Ролики за награду остаются добровольными для всех: они играют, только если нажать кнопку, которая их просит.",
     "es": "Los vídeos con recompensa siguen siendo voluntarios para todos: solo se reproducen si pulsas el botón que los pide.",
     "de": "Belohnte Videos bleiben für alle freiwillig: Sie laufen nur, wenn man die Schaltfläche dafür antippt.",
-    "fr": "Les vidéos récompensées restent facultatives pour tous : elles ne se lancent que si vous appuyez sur le bouton.",
+    "fr": "Les vidéos récompensées restent facultatives pour tous : elles ne se lancent que si vous appuyez sur le bouton.",
     "pt-BR": "Os vídeos premiados continuam opcionais para todos: só tocam quando você aperta o botão que os pede.",
     "zh": "激励视频对所有人都是自愿的：只有你主动点按钮才会播放。"
   },
-
-  "g.gridlix.how.eyebrow": { "en": "How it plays", "ru": "Как играется", "es": "Cómo se juega", "de": "Wie es sich spielt", "fr": "Comment ça se joue", "pt-BR": "Como se joga", "zh": "怎么玩" },
+  "g.gridlix.how.eyebrow": {
+    "en": "How it plays",
+    "ru": "Как играется",
+    "es": "Cómo se juega",
+    "de": "Wie es sich spielt",
+    "fr": "Comment ça se joue",
+    "pt-BR": "Como se joga",
+    "zh": "怎么玩"
+  },
   "g.gridlix.how.title": {
-    "en": "One gesture, all the way down", "ru": "Один жест — и до самого конца", "es": "Un solo gesto, hasta el final",
-    "de": "Eine Geste, bis ganz nach unten", "fr": "Un seul geste, jusqu'au bout", "pt-BR": "Um só gesto, até o fim", "zh": "从头到尾只有一个动作"
+    "en": "One gesture, all the way down",
+    "ru": "Один жест — и до самого конца",
+    "es": "Un solo gesto, hasta el final",
+    "de": "Eine Geste, bis ganz nach unten",
+    "fr": "Un seul geste, jusqu'au bout",
+    "pt-BR": "Um só gesto, até o fim",
+    "zh": "从头到尾只有一个动作"
   },
   "g.gridlix.how.intro": {
     "en": "There is nothing to learn beyond the swipe. Everything after that is arithmetic and nerve.",
@@ -101,7 +413,15 @@
     "pt-BR": "Não há nada a aprender além do deslize. O resto é aritmética e sangue-frio.",
     "zh": "除了滑动，没有别的要学。之后全是算术和定力。"
   },
-  "g.gridlix.how.1.t": { "en": "Swipe", "ru": "Свайп", "es": "Desliza", "de": "Wischen", "fr": "Balayez", "pt-BR": "Deslize", "zh": "滑动" },
+  "g.gridlix.how.1.t": {
+    "en": "Swipe",
+    "ru": "Свайп",
+    "es": "Desliza",
+    "de": "Wischen",
+    "fr": "Balayez",
+    "pt-BR": "Deslize",
+    "zh": "滑动"
+  },
   "g.gridlix.how.1.d": {
     "en": "One direction moves every tile on the board at once. There is no partial move.",
     "ru": "Одно направление двигает сразу все плитки. Половинчатых ходов нет.",
@@ -111,7 +431,15 @@
     "pt-BR": "Uma direção move todas as peças de uma vez. Não existe meio movimento.",
     "zh": "一个方向同时推动棋盘上所有方块，没有半步。"
   },
-  "g.gridlix.how.2.t": { "en": "Merge", "ru": "Слияние", "es": "Fusiona", "de": "Verschmelzen", "fr": "Fusionnez", "pt-BR": "Funda", "zh": "合并" },
+  "g.gridlix.how.2.t": {
+    "en": "Merge",
+    "ru": "Слияние",
+    "es": "Fusiona",
+    "de": "Verschmelzen",
+    "fr": "Fusionnez",
+    "pt-BR": "Funda",
+    "zh": "合并"
+  },
   "g.gridlix.how.2.d": {
     "en": "Two equal tiles that touch become one, worth double. A tile merges once per move.",
     "ru": "Две одинаковые соприкоснувшиеся плитки становятся одной, вдвое больше. За ход плитка сливается один раз.",
@@ -121,7 +449,15 @@
     "pt-BR": "Duas peças iguais que se tocam viram uma do dobro. Uma peça funde uma vez por jogada.",
     "zh": "两块相同且相邻的方块合成一块，数值翻倍。每步每块只合并一次。"
   },
-  "g.gridlix.how.3.t": { "en": "Reach the target", "ru": "Дойти до цели", "es": "Llega al objetivo", "de": "Das Ziel erreichen", "fr": "Atteindre l'objectif", "pt-BR": "Alcance o alvo", "zh": "达成目标" },
+  "g.gridlix.how.3.t": {
+    "en": "Reach the target",
+    "ru": "Дойти до цели",
+    "es": "Llega al objetivo",
+    "de": "Das Ziel erreichen",
+    "fr": "Atteindre l'objectif",
+    "pt-BR": "Alcance o alvo",
+    "zh": "达成目标"
+  },
   "g.gridlix.how.3.d": {
     "en": "In Endless the goal is your own record. In the Daily it is a stated tile inside a stated number of moves.",
     "ru": "В endless цель — собственный рекорд. В дейли — заданная плитка за заданное число ходов.",
@@ -131,31 +467,48 @@
     "pt-BR": "No infinito, a meta é o seu recorde. No Diário, é uma peça definida dentro de um número definido de jogadas.",
     "zh": "无尽模式里目标是你自己的纪录；每日模式里则是规定步数内做出规定的方块。"
   },
-
-  "g.gridlix.daily.eyebrow": { "en": "The Daily", "ru": "Ежедневная", "es": "El Diario", "de": "Das Daily", "fr": "Le Quotidien", "pt-BR": "O Diário", "zh": "每日谜题" },
+  "g.gridlix.daily.eyebrow": {
+    "en": "The Daily",
+    "ru": "Ежедневная",
+    "es": "El Diario",
+    "de": "Das Daily",
+    "fr": "Le Quotidien",
+    "pt-BR": "O Diário",
+    "zh": "每日谜题"
+  },
   "g.gridlix.daily.title": {
-    "en": "The same puzzle as everyone else", "ru": "Та же задача, что у всех", "es": "El mismo puzle que todos los demás",
-    "de": "Dasselbe Rätsel wie alle anderen", "fr": "Le même puzzle que tout le monde", "pt-BR": "O mesmo desafio que todo mundo", "zh": "和所有人同一道题"
+    "en": "The same puzzle as everyone else",
+    "ru": "Та же задача, что у всех",
+    "es": "El mismo puzle que todos los demás",
+    "de": "Dasselbe Rätsel wie alle anderen",
+    "fr": "Le même puzzle que tout le monde",
+    "pt-BR": "O mesmo desafio que todo mundo",
+    "zh": "和所有人同一道题"
   },
   "g.gridlix.daily.intro": {
     "en": "A dated seed builds the opening position and the whole spawn stream, so the board you are staring at is the board everyone else is staring at.",
     "ru": "Сид из даты строит стартовую позицию и весь поток новых плиток, поэтому доска перед вами — ровно та же, что у всех остальных.",
     "es": "Una semilla con la fecha construye la posición inicial y todo el flujo de fichas, así que el tablero que miras es el que miran los demás.",
     "de": "Ein Seed aus dem Datum baut die Startstellung und den gesamten Spawn-Strom — das Feld vor Ihnen ist das Feld aller anderen.",
-    "fr": "Une graine tirée de la date construit la position de départ et tout le flux de tuiles : le plateau que vous regardez est celui de tout le monde.",
+    "fr": "Une graine tirée de la date construit la position de départ et tout le flux de tuiles : le plateau que vous regardez est celui de tout le monde.",
     "pt-BR": "Uma semente com a data monta a posição inicial e todo o fluxo de peças, então o tabuleiro que você encara é o mesmo de todo mundo.",
     "zh": "以日期为种子生成开局与全部新方块序列，所以你面前的棋盘就是所有人面前的棋盘。"
   },
   "g.gridlix.daily.seed.t": {
-    "en": "One seed, one board", "ru": "Один сид — одна доска", "es": "Una semilla, un tablero",
-    "de": "Ein Seed, ein Brett", "fr": "Une graine, un plateau", "pt-BR": "Uma semente, um tabuleiro", "zh": "一个种子，一块棋盘"
+    "en": "One seed, one board",
+    "ru": "Один сид — одна доска",
+    "es": "Una semilla, un tablero",
+    "de": "Ein Seed, ein Brett",
+    "fr": "Une graine, un plateau",
+    "pt-BR": "Uma semente, um tabuleiro",
+    "zh": "一个种子，一块棋盘"
   },
   "g.gridlix.daily.seed.d": {
     "en": "The opening is played out in advance by a scripted bot, and its move count sets the par you are measured against. Several attempts a day; the best one counts.",
     "ru": "Начало заранее разыгрывает скриптовый бот, и число его ходов задаёт par, по которому вас меряют. Попыток в день несколько, зачитывается лучшая.",
     "es": "La apertura la juega de antemano un bot con guion, y su número de movimientos fija el par con el que se te mide. Varios intentos al día; cuenta el mejor.",
     "de": "Die Eröffnung spielt vorab ein Skript-Bot; seine Zugzahl setzt das Par, an dem gemessen wird. Mehrere Versuche pro Tag, der beste zählt.",
-    "fr": "L'ouverture est jouée d'avance par un bot scripté, et son nombre de coups fixe le par sur lequel vous êtes jugé. Plusieurs essais par jour ; le meilleur compte.",
+    "fr": "L'ouverture est jouée d'avance par un bot scripté, et son nombre de coups fixe le par sur lequel vous êtes jugé. Plusieurs essais par jour ; le meilleur compte.",
     "pt-BR": "A abertura é jogada de antemão por um bot roteirizado, e a contagem de jogadas dele define o par pelo qual você é medido. Várias tentativas por dia; vale a melhor.",
     "zh": "开局由脚本机器人预先走完，它的步数就是衡量你的标准杆。每天可尝试多次，取最好的一次。"
   },
@@ -186,11 +539,23 @@
     "pt-BR": "Dentro do par e sem tocar em nenhum reforço.",
     "zh": "在标准杆内完成，且全程一个道具都没用。"
   },
-
-  "g.gridlix.month.eyebrow": { "en": "The month", "ru": "Месяц", "es": "El mes", "de": "Der Monat", "fr": "Le mois", "pt-BR": "O mês", "zh": "整月" },
+  "g.gridlix.month.eyebrow": {
+    "en": "The month",
+    "ru": "Месяц",
+    "es": "El mes",
+    "de": "Der Monat",
+    "fr": "Le mois",
+    "pt-BR": "O mês",
+    "zh": "整月"
+  },
   "g.gridlix.month.title": {
-    "en": "A streak you can actually keep", "ru": "Серия, которую реально удержать", "es": "Una racha que sí puedes mantener",
-    "de": "Eine Serie, die man wirklich halten kann", "fr": "Une série que l'on peut vraiment tenir", "pt-BR": "Uma sequência que dá para manter", "zh": "真的守得住的连胜"
+    "en": "A streak you can actually keep",
+    "ru": "Серия, которую реально удержать",
+    "es": "Una racha que sí puedes mantener",
+    "de": "Eine Serie, die man wirklich halten kann",
+    "fr": "Une série que l'on peut vraiment tenir",
+    "pt-BR": "Uma sequência que dá para manter",
+    "zh": "真的守得住的连胜"
   },
   "g.gridlix.month.intro": {
     "en": "One missed evening should not erase four months. Shields absorb a miss, and the calendar keeps the whole month in view.",
@@ -201,10 +566,42 @@
     "pt-BR": "Uma noite perdida não deveria apagar quatro meses. Os escudos absorvem uma falha, e o calendário mantém o mês inteiro à vista.",
     "zh": "错过一个晚上，不该抹掉四个月。护盾会吸收一次缺席，日历把整个月都摆在眼前。"
   },
-  "g.gridlix.month.legend.done": { "en": "Played", "ru": "Сыграно", "es": "Jugado", "de": "Gespielt", "fr": "Joué", "pt-BR": "Jogado", "zh": "已完成" },
-  "g.gridlix.month.legend.shield": { "en": "Shielded", "ru": "Под щитом", "es": "Con escudo", "de": "Geschützt", "fr": "Protégé", "pt-BR": "Protegido", "zh": "护盾抵挡" },
-  "g.gridlix.month.legend.miss": { "en": "Missed", "ru": "Пропущено", "es": "Perdido", "de": "Verpasst", "fr": "Manqué", "pt-BR": "Perdido", "zh": "缺席" },
-  "g.gridlix.month.streak.t": { "en": "Shields", "ru": "Щиты", "es": "Escudos", "de": "Schilde", "fr": "Boucliers", "pt-BR": "Escudos", "zh": "护盾" },
+  "g.gridlix.month.legend.done": {
+    "en": "Played",
+    "ru": "Сыграно",
+    "es": "Jugado",
+    "de": "Gespielt",
+    "fr": "Joué",
+    "pt-BR": "Jogado",
+    "zh": "已完成"
+  },
+  "g.gridlix.month.legend.shield": {
+    "en": "Shielded",
+    "ru": "Под щитом",
+    "es": "Con escudo",
+    "de": "Geschützt",
+    "fr": "Protégé",
+    "pt-BR": "Protegido",
+    "zh": "护盾抵挡"
+  },
+  "g.gridlix.month.legend.miss": {
+    "en": "Missed",
+    "ru": "Пропущено",
+    "es": "Perdido",
+    "de": "Verpasst",
+    "fr": "Manqué",
+    "pt-BR": "Perdido",
+    "zh": "缺席"
+  },
+  "g.gridlix.month.streak.t": {
+    "en": "Shields",
+    "ru": "Щиты",
+    "es": "Escudos",
+    "de": "Schilde",
+    "fr": "Boucliers",
+    "pt-BR": "Escudos",
+    "zh": "护盾"
+  },
   "g.gridlix.month.streak.d": {
     "en": "A shield is spent automatically on the day you miss, and you earn them back by playing. The streak survives an ordinary bad week.",
     "ru": "Щит тратится автоматически в день пропуска, а зарабатывается игрой. Серия переживает обычную неудачную неделю.",
@@ -214,7 +611,15 @@
     "pt-BR": "O escudo é gasto automaticamente no dia perdido e se recupera jogando. A sequência sobrevive a uma semana ruim comum.",
     "zh": "缺席当天护盾自动消耗，之后靠继续游玩赚回。普通的糟糕一周不会终结连胜。"
   },
-  "g.gridlix.month.medals.t": { "en": "Monthly medals", "ru": "Медали за месяц", "es": "Medallas mensuales", "de": "Monatsmedaillen", "fr": "Médailles mensuelles", "pt-BR": "Medalhas mensais", "zh": "月度奖牌" },
+  "g.gridlix.month.medals.t": {
+    "en": "Monthly medals",
+    "ru": "Медали за месяц",
+    "es": "Medallas mensuales",
+    "de": "Monatsmedaillen",
+    "fr": "Médailles mensuelles",
+    "pt-BR": "Medalhas mensais",
+    "zh": "月度奖牌"
+  },
   "g.gridlix.month.medals.d": {
     "en": "Finish a month and it is graded once, kept forever, and shown in the trophy case next to your best streak.",
     "ru": "Месяц закрывается, оценивается один раз, остаётся навсегда и висит в шкафу трофеев рядом с лучшей серией.",
@@ -224,18 +629,30 @@
     "pt-BR": "Um mês concluído é avaliado uma vez, guardado para sempre e exibido na estante ao lado da sua melhor sequência.",
     "zh": "一个月结束后评定一次，永久保留，与你的最佳连胜一同陈列在奖杯柜里。"
   },
-
-  "g.gridlix.boosters.eyebrow": { "en": "Boosters", "ru": "Бустеры", "es": "Potenciadores", "de": "Booster", "fr": "Boosters", "pt-BR": "Reforços", "zh": "助力道具" },
+  "g.gridlix.boosters.eyebrow": {
+    "en": "Boosters",
+    "ru": "Бустеры",
+    "es": "Potenciadores",
+    "de": "Booster",
+    "fr": "Boosters",
+    "pt-BR": "Reforços",
+    "zh": "助力道具"
+  },
   "g.gridlix.boosters.title": {
-    "en": "Five, three uses each", "ru": "Пять штук, по три применения", "es": "Cinco, tres usos cada uno",
-    "de": "Fünf, je drei Einsätze", "fr": "Cinq, trois usages chacun", "pt-BR": "Cinco, três usos cada", "zh": "五种，各三次"
+    "en": "Five, three uses each",
+    "ru": "Пять штук, по три применения",
+    "es": "Cinco, tres usos cada uno",
+    "de": "Fünf, je drei Einsätze",
+    "fr": "Cinq, trois usages chacun",
+    "pt-BR": "Cinco, três usos cada",
+    "zh": "五种，各三次"
   },
   "g.gridlix.boosters.intro": {
     "en": "The cap is per game, not per day, so a booster is a decision inside a run rather than a resource to hoard.",
     "ru": "Лимит на партию, а не на день: бустер — решение внутри забега, а не ресурс, который копят.",
     "es": "El límite es por partida, no por día: un potenciador es una decisión dentro de la partida, no un recurso que acumular.",
     "de": "Das Limit gilt pro Partie, nicht pro Tag — ein Booster ist eine Entscheidung im Lauf, kein Vorrat.",
-    "fr": "La limite est par partie, pas par jour : un booster est une décision en cours de partie, pas une réserve.",
+    "fr": "La limite est par partie, pas par jour : un booster est une décision en cours de partie, pas une réserve.",
     "pt-BR": "O limite é por partida, não por dia: um reforço é uma decisão dentro da corrida, não um recurso para estocar.",
     "zh": "上限按每局计，而非每天，所以道具是一局之内的决定，而不是可囤积的资源。"
   },
@@ -289,15 +706,27 @@
     "ru": "Бесплатному игроку каждое применение оплачивается роликом, который он сам решает посмотреть; Premium пропускает и ролик, и счётчик. Не тронуть ни одного — третья звезда дейли.",
     "es": "Para quien juega gratis, cada uso se paga con un vídeo con recompensa que decides ver; Premium se salta el vídeo y el contador. No usar ninguno es la tercera estrella del Diario.",
     "de": "Für kostenlose Spielende wird jeder Einsatz mit einem freiwilligen Belohnungsvideo bezahlt; Premium überspringt Video und Zähler. Keinen zu benutzen ist der dritte Daily-Stern.",
-    "fr": "En version gratuite, chaque usage se paie par une vidéo récompensée que vous choisissez de regarder ; Premium saute la vidéo et le compteur. N'en utiliser aucun, c'est la troisième étoile du Quotidien.",
+    "fr": "En version gratuite, chaque usage se paie par une vidéo récompensée que vous choisissez de regarder ; Premium saute la vidéo et le compteur. N'en utiliser aucun, c'est la troisième étoile du Quotidien.",
     "pt-BR": "Para quem joga de graça, cada uso é pago com um vídeo premiado que você escolhe assistir; o Premium pula o vídeo e o contador. Não usar nenhum é a terceira estrela do Diário.",
     "zh": "免费玩家每次使用需观看一段自愿的激励视频；Premium 会跳过视频和次数限制。一个都不用，正是每日的第三颗星。"
   },
-
-  "g.gridlix.themes.eyebrow": { "en": "Palettes", "ru": "Палитры", "es": "Paletas", "de": "Paletten", "fr": "Palettes", "pt-BR": "Paletas", "zh": "配色" },
+  "g.gridlix.themes.eyebrow": {
+    "en": "Palettes",
+    "ru": "Палитры",
+    "es": "Paletas",
+    "de": "Paletten",
+    "fr": "Palettes",
+    "pt-BR": "Paletas",
+    "zh": "配色"
+  },
   "g.gridlix.themes.title": {
-    "en": "Five palettes, one board", "ru": "Пять палитр, одна доска", "es": "Cinco paletas, un tablero",
-    "de": "Fünf Paletten, ein Brett", "fr": "Cinq palettes, un plateau", "pt-BR": "Cinco paletas, um tabuleiro", "zh": "五套配色，一块棋盘"
+    "en": "Five palettes, one board",
+    "ru": "Пять палитр, одна доска",
+    "es": "Cinco paletas, un tablero",
+    "de": "Fünf Paletten, ein Brett",
+    "fr": "Cinq palettes, un plateau",
+    "pt-BR": "Cinco paletas, um tabuleiro",
+    "zh": "五套配色，一块棋盘"
   },
   "g.gridlix.themes.intro": {
     "en": "The palette changes the tiles, the accent and the glow — never a rule. These are the real colours, straight out of the app.",
@@ -308,13 +737,41 @@
     "pt-BR": "A paleta muda as peças, o acento e o brilho — nunca uma regra. Estas são as cores reais, tiradas do app.",
     "zh": "配色只改变方块、强调色与光晕，从不改变规则。这些是直接取自应用的真实颜色。"
   },
-  "g.gridlix.themes.free": { "en": "Free", "ru": "Бесплатно", "es": "Gratis", "de": "Kostenlos", "fr": "Gratuit", "pt-BR": "Grátis", "zh": "免费" },
-  "g.gridlix.themes.premium": { "en": "Premium", "ru": "Premium", "es": "Premium", "de": "Premium", "fr": "Premium", "pt-BR": "Premium", "zh": "Premium" },
-
-  "g.gridlix.premium.eyebrow": { "en": "Premium", "ru": "Premium", "es": "Premium", "de": "Premium", "fr": "Premium", "pt-BR": "Premium", "zh": "Premium" },
+  "g.gridlix.themes.free": {
+    "en": "Free",
+    "ru": "Бесплатно",
+    "es": "Gratis",
+    "de": "Kostenlos",
+    "fr": "Gratuit",
+    "pt-BR": "Grátis",
+    "zh": "免费"
+  },
+  "g.gridlix.themes.premium": {
+    "en": "Premium",
+    "ru": "Premium",
+    "es": "Premium",
+    "de": "Premium",
+    "fr": "Premium",
+    "pt-BR": "Premium",
+    "zh": "Premium"
+  },
+  "g.gridlix.premium.eyebrow": {
+    "en": "Premium",
+    "ru": "Premium",
+    "es": "Premium",
+    "de": "Premium",
+    "fr": "Premium",
+    "pt-BR": "Premium",
+    "zh": "Premium"
+  },
   "g.gridlix.premium.title": {
-    "en": "Play without the interruptions", "ru": "Играть без пауз на рекламу", "es": "Jugar sin interrupciones",
-    "de": "Spielen ohne Unterbrechungen", "fr": "Jouer sans interruptions", "pt-BR": "Jogar sem interrupções", "zh": "不被打断地玩"
+    "en": "Play without the interruptions",
+    "ru": "Играть без пауз на рекламу",
+    "es": "Jugar sin interrupciones",
+    "de": "Spielen ohne Unterbrechungen",
+    "fr": "Jouer sans interruptions",
+    "pt-BR": "Jogar sem interrupções",
+    "zh": "不被打断地玩"
   },
   "g.gridlix.premium.intro": {
     "en": "A subscription through Google Play, monthly or yearly, with a free trial on the yearly plan. Cancel from Play at any time.",

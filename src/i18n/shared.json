@@ -1,0 +1,443 @@
+{
+  "meta.title": {
+    "en": "Vaslix Games — small Android puzzle games, built to last",
+    "ru": "Vaslix Games — маленькие Android-головоломки, сделанные надолго",
+    "es": "Vaslix Games — pequeños puzzles para Android, hechos para durar",
+    "de": "Vaslix Games — kleine Android-Puzzles, gebaut, um zu bleiben",
+    "fr": "Vaslix Games — petits puzzles Android, faits pour durer",
+    "pt-BR": "Vaslix Games — pequenos puzzles Android, feitos para durar",
+    "zh": "Vaslix Games — 小而耐玩的 Android 益智游戏"
+  },
+  "meta.description": {
+    "en": "Vaslix Games is an independent Android studio shipping small, focused puzzle games. Gridlix:2048 and Blocklix are both live on Google Play.",
+    "ru": "Vaslix Games — независимая Android-студия, выпускающая компактные, сфокусированные головоломки. Gridlix:2048 и Blocklix уже доступны в Google Play.",
+    "es": "Vaslix Games es un estudio Android independiente que crea juegos de puzzle pequeños y enfocados. Gridlix:2048 y Blocklix ya están en Google Play.",
+    "de": "Vaslix Games ist ein unabhängiges Android-Studio, das kleine, fokussierte Puzzlespiele veröffentlicht. Gridlix:2048 und Blocklix sind beide auf Google Play.",
+    "fr": "Vaslix Games est un studio Android indépendant qui publie des jeux de puzzle compacts et soignés. Gridlix:2048 et Blocklix sont tous deux sur Google Play.",
+    "pt-BR": "Vaslix Games é um estúdio Android independente que publica jogos de puzzle compactos e cuidadosos. Gridlix:2048 e Blocklix já estão no Google Play.",
+    "zh": "Vaslix Games 是一家独立 Android 工作室，专注开发紧凑、用心的益智游戏。Gridlix:2048 与 Blocklix 均已在 Google Play 上线。"
+  },
+  "nav.brand": {
+    "en": "Vaslix Games",
+    "ru": "Vaslix Games",
+    "es": "Vaslix Games",
+    "de": "Vaslix Games",
+    "fr": "Vaslix Games",
+    "pt-BR": "Vaslix Games",
+    "zh": "Vaslix Games"
+  },
+  "nav.privacy": {
+    "en": "Privacy",
+    "ru": "Приватность",
+    "es": "Privacidad",
+    "de": "Datenschutz",
+    "fr": "Confidentialité",
+    "pt-BR": "Privacidade",
+    "zh": "隐私"
+  },
+  "nav.langLabel": {
+    "en": "Change language",
+    "ru": "Сменить язык",
+    "es": "Cambiar idioma",
+    "de": "Sprache ändern",
+    "fr": "Changer de langue",
+    "pt-BR": "Mudar idioma",
+    "zh": "切换语言"
+  },
+  "nav.theme.light": {
+    "en": "Switch to light theme",
+    "ru": "Включить светлую тему",
+    "es": "Cambiar a tema claro",
+    "de": "Zum hellen Theme wechseln",
+    "fr": "Passer au thème clair",
+    "pt-BR": "Mudar para tema claro",
+    "zh": "切换到浅色主题"
+  },
+  "nav.theme.dark": {
+    "en": "Switch to dark theme",
+    "ru": "Включить тёмную тему",
+    "es": "Cambiar a tema oscuro",
+    "de": "Zum dunklen Theme wechseln",
+    "fr": "Passer au thème sombre",
+    "pt-BR": "Mudar para tema escuro",
+    "zh": "切换到深色主题"
+  },
+  "nav.theme.auto": {
+    "en": "Switch to automatic theme",
+    "ru": "Включить автотему",
+    "es": "Cambiar a tema automático",
+    "de": "Zum automatischen Theme wechseln",
+    "fr": "Passer au thème automatique",
+    "pt-BR": "Mudar para tema automático",
+    "zh": "切换到自动主题"
+  },
+  "nav.games": {
+    "en": "Games",
+    "ru": "Игры",
+    "es": "Juegos",
+    "de": "Spiele",
+    "fr": "Jeux",
+    "pt-BR": "Jogos",
+    "zh": "游戏"
+  },
+  "nav.studio": {
+    "en": "Studio",
+    "ru": "Студия",
+    "es": "Estudio",
+    "de": "Studio",
+    "fr": "Studio",
+    "pt-BR": "Estúdio",
+    "zh": "工作室"
+  },
+  "nav.menu": {
+    "en": "Menu",
+    "ru": "Меню",
+    "es": "Menú",
+    "de": "Menü",
+    "fr": "Menu",
+    "pt-BR": "Menu",
+    "zh": "菜单"
+  },
+  "footer.copyright": {
+    "en": "© Vaslix Games · Independent Android studio",
+    "ru": "© Vaslix Games · Независимая Android-студия",
+    "es": "© Vaslix Games · Estudio Android independiente",
+    "de": "© Vaslix Games · Unabhängiges Android-Studio",
+    "fr": "© Vaslix Games · Studio Android indépendant",
+    "pt-BR": "© Vaslix Games · Estúdio Android independente",
+    "zh": "© Vaslix Games · 独立 Android 工作室"
+  },
+  "footer.privacyLink": {
+    "en": "Privacy Policy",
+    "ru": "Политика конфиденциальности",
+    "es": "Política de Privacidad",
+    "de": "Datenschutzerklärung",
+    "fr": "Politique de confidentialité",
+    "pt-BR": "Política de Privacidade",
+    "zh": "隐私政策"
+  },
+  "footer.made": {
+    "en": "Made in one room, played in twelve languages.",
+    "ru": "Сделано в одной комнате, играется на двенадцати языках.",
+    "es": "Hecho en una habitación, jugado en doce idiomas.",
+    "de": "In einem Zimmer gemacht, in zwölf Sprachen gespielt.",
+    "fr": "Fait dans une pièce, joué en douze langues.",
+    "pt-BR": "Feito em um quarto, jogado em doze idiomas.",
+    "zh": "在一个房间里做出来，用十二种语言玩。"
+  },
+  "nav.aria": {
+    "en": "Main navigation",
+    "ru": "Основная навигация",
+    "es": "Navegación principal",
+    "de": "Hauptnavigation",
+    "fr": "Navigation principale",
+    "pt-BR": "Navegação principal",
+    "zh": "主导航"
+  },
+  "nav.press": {
+    "en": "Press",
+    "ru": "Пресса",
+    "es": "Prensa",
+    "de": "Presse",
+    "fr": "Presse",
+    "pt-BR": "Imprensa",
+    "zh": "媒体"
+  },
+  "nav.skip": {
+    "en": "Skip to content",
+    "ru": "Перейти к содержимому",
+    "es": "Ir al contenido",
+    "de": "Zum Inhalt springen",
+    "fr": "Aller au contenu",
+    "pt-BR": "Ir para o conteúdo",
+    "zh": "跳到主要内容"
+  },
+  "cta.play": {
+    "en": "Get it on Google Play",
+    "ru": "Доступно в Google Play",
+    "es": "Disponible en Google Play",
+    "de": "Jetzt bei Google Play",
+    "fr": "Disponible sur Google Play",
+    "pt-BR": "Disponível no Google Play",
+    "zh": "在 Google Play 上获取"
+  },
+  "meta.blocklix.title": {
+    "en": "Blocklix — an 8×8 drop-and-clear puzzle | Vaslix Games",
+    "ru": "Blocklix — головоломка 8×8: клади и очищай | Vaslix Games",
+    "es": "Blocklix — un puzle 8×8 de colocar y despejar | Vaslix Games",
+    "de": "Blocklix — ein 8×8-Puzzle zum Legen und Räumen | Vaslix Games",
+    "fr": "Blocklix — un puzzle 8×8 : poser et effacer | Vaslix Games",
+    "pt-BR": "Blocklix — um quebra-cabeça 8×8 de encaixar e limpar | Vaslix Games",
+    "zh": "Blocklix — 8×8 放置消除益智游戏 | Vaslix Games"
+  },
+  "meta.blocklix.desc": {
+    "en": "Drop three pieces into an 8×8 board, clear rows and columns, chain combos. 38 themes, 60 ranks, six difficulty levels, twelve languages. No accounts.",
+    "ru": "Кладите три фигуры на поле 8×8, очищайте ряды и столбцы, собирайте комбо. 38 тем, 60 рангов, шесть сложностей, двенадцать языков. Без аккаунтов.",
+    "es": "Coloca tres piezas en un tablero de 8×8, despeja filas y columnas, encadena combos. 38 temas, 60 rangos, seis dificultades, doce idiomas. Sin cuentas.",
+    "de": "Lege drei Teile auf ein 8×8-Feld, räume Reihen und Spalten, verkette Combos. 38 Themes, 60 Ränge, sechs Schwierigkeitsgrade, zwölf Sprachen. Ohne Konto.",
+    "fr": "Posez trois pièces sur un plateau 8×8, effacez lignes et colonnes, enchaînez les combos. 38 thèmes, 60 rangs, six difficultés, douze langues. Sans compte.",
+    "pt-BR": "Encaixe três peças em um tabuleiro 8×8, limpe linhas e colunas, encadeie combos. 38 temas, 60 patentes, seis dificuldades, doze idiomas. Sem contas.",
+    "zh": "在 8×8 棋盘上放置三块方块，消除整行整列，连成连击。38 款主题、60 个段位、六种难度、十二种语言。无需账号。"
+  },
+  "meta.gridlix.title": {
+    "en": "Gridlix:2048 — one daily puzzle for everyone | Vaslix Games",
+    "ru": "Gridlix:2048 — одна ежедневная задача на всех | Vaslix Games",
+    "es": "Gridlix:2048 — un puzle diario para todos | Vaslix Games",
+    "de": "Gridlix:2048 — ein Tagesrätsel für alle | Vaslix Games",
+    "fr": "Gridlix:2048 — un puzzle quotidien pour tous | Vaslix Games",
+    "pt-BR": "Gridlix:2048 — um desafio diário igual para todos | Vaslix Games",
+    "zh": "Gridlix:2048 — 全球同一道每日谜题 | Vaslix Games"
+  },
+  "meta.gridlix.desc": {
+    "en": "A 4×4 merge puzzle with a seeded Daily that is identical for every player, streak shields, monthly medals and five boosters. Endless mode never ends.",
+    "ru": "Головоломка 4×4 со слиянием: ежедневная задача с общим сидом одинакова для всех, щиты серии, медали за месяц и пять бустеров. Endless не кончается.",
+    "es": "Un puzle de fusión 4×4 con un Diario idéntico para todos, escudos de racha, medallas mensuales y cinco potenciadores. El modo infinito no termina.",
+    "de": "Ein 4×4-Merge-Puzzle mit einem Daily, das für alle identisch ist, Serien-Schilden, Monatsmedaillen und fünf Boostern. Der Endlosmodus endet nie.",
+    "fr": "Un puzzle de fusion 4×4 avec un Quotidien identique pour tous, des boucliers de série, des médailles mensuelles et cinq boosters. Le mode infini ne finit jamais.",
+    "pt-BR": "Um quebra-cabeça de fusão 4×4 com um Diário idêntico para todos, escudos de sequência, medalhas mensais e cinco reforços. O modo infinito não acaba.",
+    "zh": "4×4 合并益智游戏：每日谜题全球统一，连胜护盾、月度奖牌与五种助力道具。无尽模式永不结束。"
+  },
+  "meta.studio.title": {
+    "en": "Studio — Vaslix Games",
+    "ru": "Студия — Vaslix Games",
+    "es": "Estudio — Vaslix Games",
+    "de": "Studio — Vaslix Games",
+    "fr": "Studio — Vaslix Games",
+    "pt-BR": "Estúdio — Vaslix Games",
+    "zh": "工作室 — Vaslix Games"
+  },
+  "meta.studio.desc": {
+    "en": "One person, small Android apps, no accounts and no servers of ours. What we build, the rules we keep, and what comes next.",
+    "ru": "Один человек, маленькие Android-приложения, без аккаунтов и без своих серверов. Что мы делаем, каких правил держимся и что дальше.",
+    "es": "Una persona, apps de Android pequeñas, sin cuentas y sin servidores propios. Qué hacemos, qué reglas mantenemos y qué viene después.",
+    "de": "Eine Person, kleine Android-Apps, keine Konten und keine eigenen Server. Was wir bauen, welche Regeln gelten und was als Nächstes kommt.",
+    "fr": "Une personne, de petites applis Android, sans comptes ni serveurs à nous. Ce que nous faisons, nos règles, et la suite.",
+    "pt-BR": "Uma pessoa, apps Android pequenos, sem contas e sem servidores nossos. O que fazemos, que regras mantemos e o que vem depois.",
+    "zh": "一个人，小而专注的 Android 应用，无账号、无自有服务器。我们在做什么、坚持什么规则、接下来做什么。"
+  },
+  "meta.press.title": {
+    "en": "Press kit — Vaslix Games",
+    "ru": "Пресс-кит — Vaslix Games",
+    "es": "Kit de prensa — Vaslix Games",
+    "de": "Pressemappe — Vaslix Games",
+    "fr": "Kit presse — Vaslix Games",
+    "pt-BR": "Kit de imprensa — Vaslix Games",
+    "zh": "媒体资料包 — Vaslix Games"
+  },
+  "meta.press.desc": {
+    "en": "Blurb, fact sheet, icons and contact for writers and partners. Answered within about five business days.",
+    "ru": "Описание, лист фактов, иконки и контакт для журналистов и партнёров. Отвечаем примерно за пять рабочих дней.",
+    "es": "Descripción, ficha de datos, iconos y contacto para medios y socios. Respondemos en unos cinco días hábiles.",
+    "de": "Kurztext, Faktenblatt, Icons und Kontakt für Presse und Partner. Antwort in etwa fünf Werktagen.",
+    "fr": "Présentation, fiche technique, icônes et contact pour la presse et les partenaires. Réponse sous environ cinq jours ouvrés.",
+    "pt-BR": "Texto padrão, ficha técnica, ícones e contato para imprensa e parceiros. Resposta em cerca de cinco dias úteis.",
+    "zh": "供媒体与合作方使用的简介、事实清单、图标与联系方式。约五个工作日内回复。"
+  },
+  "meta.notFound.title": {
+    "en": "Page not found — Vaslix Games",
+    "ru": "Страница не найдена — Vaslix Games",
+    "es": "Página no encontrada — Vaslix Games",
+    "de": "Seite nicht gefunden — Vaslix Games",
+    "fr": "Page introuvable — Vaslix Games",
+    "pt-BR": "Página não encontrada — Vaslix Games",
+    "zh": "页面未找到 — Vaslix Games"
+  },
+  "meta.notFound.desc": {
+    "en": "That address does not lead anywhere. The shelf does.",
+    "ru": "Такого адреса нет. А полка есть.",
+    "es": "Esa dirección no lleva a ninguna parte. La estantería sí.",
+    "de": "Diese Adresse führt nirgendwohin. Das Regal schon.",
+    "fr": "Cette adresse ne mène nulle part. L'étagère, si.",
+    "pt-BR": "Esse endereço não leva a lugar nenhum. A prateleira leva.",
+    "zh": "这个地址不通向任何地方，架子上却有东西。"
+  },
+  "status.live": {
+    "en": "On Google Play",
+    "ru": "В Google Play",
+    "es": "En Google Play",
+    "de": "Bei Google Play",
+    "fr": "Sur Google Play",
+    "pt-BR": "No Google Play",
+    "zh": "已上架"
+  },
+  "status.dev": {
+    "en": "In the works",
+    "ru": "В работе",
+    "es": "En marcha",
+    "de": "In Arbeit",
+    "fr": "En cours",
+    "pt-BR": "Em produção",
+    "zh": "制作中"
+  },
+  "status.idea": {
+    "en": "On paper",
+    "ru": "На бумаге",
+    "es": "Sobre el papel",
+    "de": "Auf dem Papier",
+    "fr": "Sur le papier",
+    "pt-BR": "No papel",
+    "zh": "仍在纸上"
+  },
+  "status.open": {
+    "en": "Empty slot",
+    "ru": "Пустое место",
+    "es": "Hueco libre",
+    "de": "Freier Platz",
+    "fr": "Place libre",
+    "pt-BR": "Vaga livre",
+    "zh": "空位"
+  },
+  "f.themes": {
+    "en": "themes",
+    "ru": "тем",
+    "es": "temas",
+    "de": "Themes",
+    "fr": "thèmes",
+    "pt-BR": "temas",
+    "zh": "款主题"
+  },
+  "f.ranks": {
+    "en": "ranks",
+    "ru": "рангов",
+    "es": "rangos",
+    "de": "Ränge",
+    "fr": "rangs",
+    "pt-BR": "patentes",
+    "zh": "个段位"
+  },
+  "f.difficulties": {
+    "en": "difficulty levels",
+    "ru": "сложностей",
+    "es": "dificultades",
+    "de": "Schwierigkeitsgrade",
+    "fr": "difficultés",
+    "pt-BR": "dificuldades",
+    "zh": "种难度"
+  },
+  "f.daily": {
+    "en": "graded Daily",
+    "ru": "оценка дейли",
+    "es": "Diario con estrellas",
+    "de": "bewertetes Daily",
+    "fr": "Quotidien noté",
+    "pt-BR": "Diário com estrelas",
+    "zh": "每日评星"
+  },
+  "f.boosters": {
+    "en": "boosters",
+    "ru": "бустеров",
+    "es": "potenciadores",
+    "de": "Booster",
+    "fr": "boosters",
+    "pt-BR": "reforços",
+    "zh": "种道具"
+  },
+  "f.languages": {
+    "en": "languages",
+    "ru": "языков",
+    "es": "idiomas",
+    "de": "Sprachen",
+    "fr": "langues",
+    "pt-BR": "idiomas",
+    "zh": "种语言"
+  },
+  "gp.back": {
+    "en": "All titles",
+    "ru": "Все игры",
+    "es": "Todos los títulos",
+    "de": "Alle Titel",
+    "fr": "Tous les titres",
+    "pt-BR": "Todos os títulos",
+    "zh": "全部作品"
+  },
+  "also.eyebrow": {
+    "en": "Also from the studio",
+    "ru": "Ещё у студии",
+    "es": "También del estudio",
+    "de": "Auch aus dem Studio",
+    "fr": "Aussi du studio",
+    "pt-BR": "Também do estúdio",
+    "zh": "工作室其他作品"
+  },
+  "also.title": {
+    "en": "The rest of the shelf",
+    "ru": "Остальная полка",
+    "es": "El resto de la estantería",
+    "de": "Der Rest des Regals",
+    "fr": "Le reste de l'étagère",
+    "pt-BR": "O resto da prateleira",
+    "zh": "架子上的其他"
+  },
+  "also.cta": {
+    "en": "Back to the shelf",
+    "ru": "Вернуться на полку",
+    "es": "Volver a la estantería",
+    "de": "Zurück zum Regal",
+    "fr": "Retour à l'étagère",
+    "pt-BR": "Voltar à prateleira",
+    "zh": "回到架子"
+  },
+  "footer.games": {
+    "en": "Games",
+    "ru": "Игры",
+    "es": "Juegos",
+    "de": "Spiele",
+    "fr": "Jeux",
+    "pt-BR": "Jogos",
+    "zh": "游戏"
+  },
+  "footer.gamesAria": {
+    "en": "Games",
+    "ru": "Игры",
+    "es": "Juegos",
+    "de": "Spiele",
+    "fr": "Jeux",
+    "pt-BR": "Jogos",
+    "zh": "游戏"
+  },
+  "footer.studio": {
+    "en": "Studio",
+    "ru": "Студия",
+    "es": "Estudio",
+    "de": "Studio",
+    "fr": "Studio",
+    "pt-BR": "Estúdio",
+    "zh": "工作室"
+  },
+  "footer.studioAria": {
+    "en": "Studio links",
+    "ru": "Ссылки студии",
+    "es": "Enlaces del estudio",
+    "de": "Studio-Links",
+    "fr": "Liens du studio",
+    "pt-BR": "Links do estúdio",
+    "zh": "工作室链接"
+  },
+  "footer.contactTitle": {
+    "en": "Contact",
+    "ru": "Контакт",
+    "es": "Contacto",
+    "de": "Kontakt",
+    "fr": "Contact",
+    "pt-BR": "Contato",
+    "zh": "联系"
+  },
+  "footer.replyTime": {
+    "en": "Usually answered within five business days.",
+    "ru": "Обычно отвечаем в течение пяти рабочих дней.",
+    "es": "Normalmente respondemos en cinco días hábiles.",
+    "de": "Antwort in der Regel binnen fünf Werktagen.",
+    "fr": "Réponse en général sous cinq jours ouvrés.",
+    "pt-BR": "Normalmente respondemos em cinco dias úteis.",
+    "zh": "通常五个工作日内回复。"
+  },
+  "footer.builtWith": {
+    "en": "Hand-written HTML. No trackers on this site.",
+    "ru": "HTML написан руками. Трекеров на сайте нет.",
+    "es": "HTML escrito a mano. Sin rastreadores en este sitio.",
+    "de": "Handgeschriebenes HTML. Keine Tracker auf dieser Seite.",
+    "fr": "HTML écrit à la main. Aucun traceur sur ce site.",
+    "pt-BR": "HTML escrito à mão. Sem rastreadores neste site.",
+    "zh": "手写 HTML，本站没有任何跟踪器。"
+  }
+}

@@ -1,4 +1,229 @@
 {
+  "press.eyebrow": {
+    "en": "Press kit",
+    "ru": "Пресс-кит",
+    "es": "Press kit",
+    "de": "Pressekit",
+    "fr": "Kit presse",
+    "pt-BR": "Press kit",
+    "zh": "媒体资料"
+  },
+  "press.title": {
+    "en": "For press & partners",
+    "ru": "Для прессы и партнёров",
+    "es": "Para prensa y socios",
+    "de": "Für Presse & Partner",
+    "fr": "Pour la presse et les partenaires",
+    "pt-BR": "Para imprensa e parceiros",
+    "zh": "面向媒体与合作方"
+  },
+  "press.aboutTitle": {
+    "en": "About the studio",
+    "ru": "О студии",
+    "es": "Sobre el estudio",
+    "de": "Über das Studio",
+    "fr": "À propos du studio",
+    "pt-BR": "Sobre o estúdio",
+    "zh": "关于工作室"
+  },
+  "press.aboutBody": {
+    "en": "Vaslix Games is an independent Android publisher founded in 2025. We build small, focused puzzle games with a privacy-first stance: no accounts, no proprietary servers storing user data, no in-house analytics. Two titles are live on Google Play: Gridlix:2048 and Blocklix, an 8×8 block puzzle with six difficulty levels, 38 themes and 60 ranks, localised into 12 languages.",
+    "ru": "Vaslix Games — независимый Android-издатель, основанный в 2025 году. Мы делаем небольшие сфокусированные головоломки с подходом «privacy-first»: без аккаунтов, без собственных серверов, хранящих данные пользователей, без внутренней аналитики. В Google Play выпущены две игры: Gridlix:2048 и Blocklix — пазл 8×8 с шестью уровнями сложности, 38 темами и 60 рангами, локализованный на 12 языков.",
+    "es": "Vaslix Games es un editor Android independiente fundado en 2025. Hacemos juegos de puzzle pequeños y enfocados con un enfoque privacy-first: sin cuentas, sin servidores propios guardando datos de usuario, sin analítica casera. Dos títulos están en Google Play: Gridlix:2048 y Blocklix, un puzzle 8×8 con seis niveles de dificultad, 38 temas y 60 rangos, localizado a 12 idiomas.",
+    "de": "Vaslix Games ist ein unabhängiger Android-Publisher, gegründet 2025. Wir bauen kleine, fokussierte Puzzlespiele mit einer Privacy-First-Haltung: keine Konten, keine eigenen Server, die Nutzerdaten speichern, keine Inhouse-Analytics. Zwei Titel sind auf Google Play: Gridlix:2048 und Blocklix, ein 8×8-Blockpuzzle mit sechs Schwierigkeitsstufen, 38 Themes und 60 Rängen, lokalisiert in 12 Sprachen.",
+    "fr": "Vaslix Games est un éditeur Android indépendant fondé en 2025. Nous faisons de petits jeux de puzzle concentrés avec une approche privacy-first : pas de comptes, pas de serveurs maison stockant des données utilisateurs, pas d'analytics maison. Deux titres sont sur Google Play : Gridlix:2048 et Blocklix, un puzzle de blocs 8×8 avec six niveaux de difficulté, 38 thèmes et 60 rangs, localisé en 12 langues.",
+    "pt-BR": "Vaslix Games é um publisher Android independente fundado em 2025. Fazemos jogos de puzzle pequenos e focados com postura privacy-first: sem contas, sem servidores próprios guardando dados de usuário, sem analytics interno. Dois títulos estão no Google Play: Gridlix:2048 e Blocklix, um puzzle de blocos 8×8 com seis níveis de dificuldade, 38 temas e 60 patentes, localizado em 12 idiomas.",
+    "zh": "Vaslix Games 是一家成立于 2025 年的独立 Android 发行工作室。我们做小而专注的益智游戏，坚持隐私优先：无需账号、没有我们自己的服务器存储用户数据、没有内部分析。Google Play 上已发布两款作品：Gridlix:2048 与 Blocklix——一款 8×8 方块拼图，含六个难度等级、38 种主题与 60 个段位，已本地化为 12 种语言。"
+  },
+  "press.copyBtn": {
+    "en": "Copy blurb",
+    "ru": "Скопировать текст",
+    "es": "Copiar texto",
+    "de": "Text kopieren",
+    "fr": "Copier le texte",
+    "pt-BR": "Copiar texto",
+    "zh": "复制简介"
+  },
+  "press.copied": {
+    "en": "Copied",
+    "ru": "Скопировано",
+    "es": "Copiado",
+    "de": "Kopiert",
+    "fr": "Copié",
+    "pt-BR": "Copiado",
+    "zh": "已复制"
+  },
+  "press.assetsTitle": {
+    "en": "Brand assets",
+    "ru": "Брендовые ресурсы",
+    "es": "Recursos de marca",
+    "de": "Brand-Assets",
+    "fr": "Ressources de marque",
+    "pt-BR": "Recursos de marca",
+    "zh": "品牌素材"
+  },
+  "press.assetGridlix": {
+    "en": "Gridlix:2048 icon",
+    "ru": "Иконка Gridlix:2048",
+    "es": "Icono de Gridlix:2048",
+    "de": "Gridlix:2048-Icon",
+    "fr": "Icône Gridlix:2048",
+    "pt-BR": "Ícone do Gridlix:2048",
+    "zh": "Gridlix:2048 图标"
+  },
+  "press.assetBlocklix": {
+    "en": "Blocklix icon",
+    "ru": "Иконка Blocklix",
+    "es": "Icono de Blocklix",
+    "de": "Blocklix-Icon",
+    "fr": "Icône Blocklix",
+    "pt-BR": "Ícone do Blocklix",
+    "zh": "Blocklix 图标"
+  },
+  "press.contactTitle": {
+    "en": "Press contact",
+    "ru": "Контакт для прессы",
+    "es": "Contacto de prensa",
+    "de": "Pressekontakt",
+    "fr": "Contact presse",
+    "pt-BR": "Contato de imprensa",
+    "zh": "媒体联系"
+  },
+  "press.sla": {
+    "en": "A person answers, usually within five working days. Tell us your outlet, your deadline and what you need — that is enough to get a useful reply the first time.",
+    "ru": "Отвечает человек, обычно в течение пяти рабочих дней. Напишите издание, дедлайн и что именно нужно — этого хватит, чтобы ответ пришёл полезным с первого раза.",
+    "es": "Responde una persona, normalmente en cinco días hábiles. Dinos tu medio, tu deadline y qué necesitas — con eso basta para que la primera respuesta ya sirva.",
+    "de": "Es antwortet ein Mensch, meist innerhalb von fünf Werktagen. Schreib uns dein Medium, deine Deadline und was du brauchst — das reicht für eine brauchbare Antwort schon beim ersten Mal.",
+    "fr": "Une personne répond, en général sous cinq jours ouvrés. Indiquez votre média, votre deadline et ce dont vous avez besoin — ça suffit pour que la réponse soit utile du premier coup.",
+    "pt-BR": "Quem responde é uma pessoa, normalmente em até cinco dias úteis. Diga o veículo, o prazo e o que você precisa — com isso a resposta já sai útil de primeira.",
+    "zh": "回信的是人，通常在 5 个工作日内。写清媒体、截稿时间和你要什么——这样第一封回复就能用得上。"
+  },
+  "press.lede": {
+    "en": "Everything a writer needs, in one place and free to use.",
+    "ru": "Всё, что нужно журналисту, — в одном месте и без ограничений на использование.",
+    "es": "Todo lo que necesita quien escribe, en un solo sitio y libre de usar.",
+    "de": "Alles, was die Presse braucht, an einem Ort und frei verwendbar.",
+    "fr": "Tout ce qu'il faut à la presse, au même endroit et libre d'usage.",
+    "pt-BR": "Tudo o que a imprensa precisa, em um só lugar e livre para usar.",
+    "zh": "撰稿人需要的一切，集中一处，可自由使用。"
+  },
+  "press.factsEyebrow": {
+    "en": "Fact sheet",
+    "ru": "Лист фактов",
+    "es": "Ficha de datos",
+    "de": "Faktenblatt",
+    "fr": "Fiche technique",
+    "pt-BR": "Ficha técnica",
+    "zh": "事实清单"
+  },
+  "press.factsTitle": {
+    "en": "The numbers, already checked",
+    "ru": "Цифры, уже проверенные",
+    "es": "Las cifras, ya comprobadas",
+    "de": "Die Zahlen, bereits geprüft",
+    "fr": "Les chiffres, déjà vérifiés",
+    "pt-BR": "Os números, já conferidos",
+    "zh": "已核对的数字"
+  },
+  "press.fact.studio": {
+    "en": "Studio",
+    "ru": "Студия",
+    "es": "Estudio",
+    "de": "Studio",
+    "fr": "Studio",
+    "pt-BR": "Estúdio",
+    "zh": "工作室"
+  },
+  "press.fact.founded": {
+    "en": "Founded",
+    "ru": "Основана",
+    "es": "Fundado",
+    "de": "Gegründet",
+    "fr": "Fondé",
+    "pt-BR": "Fundado",
+    "zh": "成立"
+  },
+  "press.fact.people": {
+    "en": "Team",
+    "ru": "Команда",
+    "es": "Equipo",
+    "de": "Team",
+    "fr": "Équipe",
+    "pt-BR": "Equipe",
+    "zh": "团队"
+  },
+  "press.fact.platform": {
+    "en": "Platform",
+    "ru": "Платформа",
+    "es": "Plataforma",
+    "de": "Plattform",
+    "fr": "Plateforme",
+    "pt-BR": "Plataforma",
+    "zh": "平台"
+  },
+  "press.fact.titles": {
+    "en": "Titles",
+    "ru": "Игры",
+    "es": "Títulos",
+    "de": "Titel",
+    "fr": "Titres",
+    "pt-BR": "Títulos",
+    "zh": "作品"
+  },
+  "press.fact.langs": {
+    "en": "Languages",
+    "ru": "Языки",
+    "es": "Idiomas",
+    "de": "Sprachen",
+    "fr": "Langues",
+    "pt-BR": "Idiomas",
+    "zh": "语言"
+  },
+  "press.fact.money": {
+    "en": "Business model",
+    "ru": "Модель",
+    "es": "Modelo de negocio",
+    "de": "Geschäftsmodell",
+    "fr": "Modèle économique",
+    "pt-BR": "Modelo de negócio",
+    "zh": "商业模式"
+  },
+  "press.fact.money.v": {
+    "en": "Free with ads · optional Premium through Google Play Billing",
+    "ru": "Бесплатно с рекламой · Premium по желанию через Google Play Billing",
+    "es": "Gratis con anuncios · Premium opcional mediante Google Play Billing",
+    "de": "Kostenlos mit Werbung · optionales Premium über Google Play Billing",
+    "fr": "Gratuit avec publicités · Premium optionnel via Google Play Billing",
+    "pt-BR": "Grátis com anúncios · Premium opcional via Google Play Billing",
+    "zh": "免费含广告 · 可选 Premium，通过 Google Play 结算"
+  },
+  "press.fact.contact": {
+    "en": "Contact",
+    "ru": "Контакт",
+    "es": "Contacto",
+    "de": "Kontakt",
+    "fr": "Contact",
+    "pt-BR": "Contato",
+    "zh": "联系方式"
+  },
+  "press.assetsEyebrow": {
+    "en": "Downloads",
+    "ru": "Файлы",
+    "es": "Descargas",
+    "de": "Downloads",
+    "fr": "Téléchargements",
+    "pt-BR": "Downloads",
+    "zh": "下载"
+  },
+  "press.assetsIntro": {
+    "en": "Icons and the logo exactly as they ship. Use them as they are — please do not recolour or crop them.",
+    "ru": "Иконки и логотип ровно в том виде, в каком они в сторе. Используйте как есть — пожалуйста, не перекрашивайте и не обрезайте.",
+    "es": "Iconos y logotipo tal como se publican. Úsalos tal cual: por favor, no los recolorees ni los recortes.",
+    "de": "Icons und Logo genau so, wie sie ausgeliefert werden. Bitte unverändert verwenden — nicht umfärben, nicht beschneiden.",
+    "fr": "Icônes et logo tels qu'ils sont publiés. À utiliser tels quels : merci de ne pas les recolorer ni les recadrer.",
+    "pt-BR": "Ícones e logotipo exatamente como são publicados. Use como estão — por favor, não recolora nem recorte.",
+    "zh": "图标与标志与上架版本一致。请原样使用，不要改色或裁切。"
+  },
   "press.assetMark": {
     "en": "Studio mark",
     "ru": "Марка студии",
@@ -25,23 +250,5 @@
     "fr": "Logotype pour fond sombre",
     "pt-BR": "Logotipo para fundos escuros",
     "zh": "深色背景版标志"
-  },
-  "press.assetBlocklix": {
-    "en": "Blocklix icon",
-    "ru": "Иконка Blocklix",
-    "es": "Icono de Blocklix",
-    "de": "Blocklix-Icon",
-    "fr": "Icône Blocklix",
-    "pt-BR": "Ícone do Blocklix",
-    "zh": "Blocklix 图标"
-  },
-  "press.assetGridlix": {
-    "en": "Gridlix:2048 icon",
-    "ru": "Иконка Gridlix:2048",
-    "es": "Icono de Gridlix:2048",
-    "de": "Gridlix:2048-Icon",
-    "fr": "Icône Gridlix:2048",
-    "pt-BR": "Ícone do Gridlix:2048",
-    "zh": "Gridlix:2048 图标"
   }
 }

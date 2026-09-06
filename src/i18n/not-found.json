@@ -1,0 +1,47 @@
+{
+  "nf.eyebrow": {
+    "en": "404",
+    "ru": "404",
+    "es": "404",
+    "de": "404",
+    "fr": "404",
+    "pt-BR": "404",
+    "zh": "404"
+  },
+  "nf.title": {
+    "en": "This square is empty",
+    "ru": "Эта клетка пустая",
+    "es": "Esta casilla está vacía",
+    "de": "Dieses Feld ist leer",
+    "fr": "Cette case est vide",
+    "pt-BR": "Esta casa está vazia",
+    "zh": "这一格是空的"
+  },
+  "nf.body": {
+    "en": "The address does not lead anywhere. The shelf, on the other hand, is right where you left it.",
+    "ru": "Адрес никуда не ведёт. Полка, впрочем, там же, где вы её оставили.",
+    "es": "La dirección no lleva a ninguna parte. La estantería, en cambio, sigue donde la dejaste.",
+    "de": "Die Adresse führt nirgendwohin. Das Regal steht dagegen noch genau dort.",
+    "fr": "L'adresse ne mène nulle part. L'étagère, elle, n'a pas bougé.",
+    "pt-BR": "O endereço não leva a lugar nenhum. A prateleira continua onde você a deixou.",
+    "zh": "这个地址不通向任何地方。架子倒还在原处。"
+  },
+  "nf.home": {
+    "en": "Home",
+    "ru": "На главную",
+    "es": "Inicio",
+    "de": "Startseite",
+    "fr": "Accueil",
+    "pt-BR": "Início",
+    "zh": "回到首页"
+  },
+  "nf.games": {
+    "en": "See the shelf",
+    "ru": "Смотреть полку",
+    "es": "Ver la estantería",
+    "de": "Regal ansehen",
+    "fr": "Voir l'étagère",
+    "pt-BR": "Ver a prateleira",
+    "zh": "看看架子"
+  }
+}
