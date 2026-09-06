@@ -82,7 +82,11 @@ body {
 img, svg, canvas { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; color: inherit; }
-:focus-visible { outline: 2px solid var(--brand-2); outline-offset: 3px; border-radius: 6px; }
+/* No JavaScript, no ring layer: fall back to a plain white outline. It has no
+   border-radius of its own on purpose — an outline follows the element's own
+   corners, and forcing a radius here is what turned a pill into a square. */
+:focus-visible { outline: 2px solid rgba(255,255,255,.95); outline-offset: 3px; }
+.has-ring :focus-visible, .has-ring :focus-visible:focus { outline: none; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .skip {
   position: fixed; top: 8px; left: 8px; z-index: 90; padding: 10px 16px; border-radius: 10px;
@@ -91,6 +95,57 @@ button { font: inherit; color: inherit; }
 }
 .skip:focus { transform: none; }
 @view-transition { navigation: auto; }
+
+/* ── the press ring ────────────────────────────────────────────────────────
+   Press or tab onto anything and it lights along its own edge. One layer
+   above the page copies the target's box and each of its four corners, so a
+   pill lights as a pill, a card as a card and a round toggle as a circle —
+   never as the browser's blue rectangle. White, sandwiched in a hairline of
+   ink so it still reads on a near-white page, with one bright arc running
+   around the shape. */
+@property --ring-a { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+
+.press-ring {
+  position: fixed; left: 0; top: 0; z-index: 120; pointer-events: none;
+  width: var(--rw, 0px); height: var(--rh, 0px);
+  translate: var(--rx, 0px) var(--ry, 0px);
+  border-radius: var(--c1, 8px) var(--c2, 8px) var(--c3, 8px) var(--c4, 8px);
+  opacity: 0; scale: 1.06;
+  transition: opacity 150ms var(--ease-out), scale 280ms var(--ease-spring);
+}
+.press-ring.on { opacity: 1; scale: 1; }
+/* A press is a shorter, tighter version of the same light. */
+.press-ring.press { transition-duration: 90ms, 180ms; }
+.press-ring.press.on { scale: .995; }
+
+.press-ring::before, .press-ring::after, .press-ring > i {
+  content: ""; position: absolute; border-radius: inherit;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+}
+/* the ink hairline, showing a little on both sides of the white */
+.press-ring::before { inset: 0; padding: 4px; background: rgba(23, 27, 48, .26); }
+/* the white core */
+.press-ring::after {
+  inset: 1px; padding: 2px; background: rgba(255, 255, 255, .82);
+  filter: drop-shadow(0 0 7px rgba(255, 255, 255, .5));
+}
+/* the shimmer, on the same band */
+.press-ring > i {
+  inset: 1px; padding: 2px;
+  background: conic-gradient(from var(--ring-a),
+    transparent 0 26%, rgba(255,255,255,.9) 40%, #fff 46% 50%, rgba(255,255,255,.9) 56%, transparent 70% 100%);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, .9));
+  animation: ring-shimmer 1.5s linear infinite;
+}
+.press-ring.press > i { animation-duration: .8s; }
+@keyframes ring-shimmer { to { --ring-a: 360deg; } }
+@media (prefers-reduced-motion: reduce) {
+  .press-ring { transition: opacity 100ms linear; scale: 1; }
+  .press-ring > i { animation: none; }
+  .press-ring::after { background: rgba(255, 255, 255, .96); }
+}
 
 /* ── type ──────────────────────────────────────────────────────────────── */
 h1, h2, h3 { font-family: var(--font-d); letter-spacing: -.03em; text-wrap: balance; margin: 0; }
