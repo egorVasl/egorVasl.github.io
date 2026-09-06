@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Vaslix Games">
+  <defs>
+    <linearGradient id="vx-grad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4AC8EA"/>
+      <stop offset=".5" stop-color="#4F83F5"/>
+      <stop offset="1" stop-color="#6C5DD3"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="22" fill="url(#vx-grad)"/>
+  <g fill="#fff">
+    <path transform="translate(16.03 68.18) scale(0.0518 -0.0518)" d="M721 702 472 0H258L9 702H191L365 172L540 702Z"/>
+    <path transform="translate(47.71 68.18) scale(0.0518 -0.0518)" d="M492 0 349 215 223 0H29L254 357L24 702H223L364 490L488 702H682L459 348L691 0Z"/>
+  </g>
+</svg>

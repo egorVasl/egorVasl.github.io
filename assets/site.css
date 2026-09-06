@@ -120,12 +120,16 @@ h1, h2, h3 { font-family: var(--font-d); letter-spacing: -.03em; text-wrap: bala
 }
 .nav-in { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); height: 100%; display: flex; align-items: center; gap: 18px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; font: 800 15px/1 var(--font-d); letter-spacing: -.02em; view-transition-name: brand; }
+/* The studio mark: one file behind every placement — nav, footer, favicon,
+   apple-touch, the press kit and the social cards. Its corners are in the SVG,
+   so nothing here rounds it a second time. */
 .brand-mark {
-  width: 28px; height: 28px; border-radius: 8px; background: var(--grad);
-  box-shadow: inset 0 -4px 0 rgba(0,0,0,.18), inset 0 2px 0 rgba(255,255,255,.28);
+  width: 28px; height: 28px; flex-shrink: 0;
+  filter: drop-shadow(0 4px 10px color-mix(in srgb, var(--brand-3) 32%, transparent));
   transition: transform var(--press) var(--ease-spring);
 }
 .brand:hover .brand-mark { transform: rotate(-8deg) scale(1.06); }
+.foot-mark { width: 34px; height: 34px; }
 .nav-links { display: flex; gap: 4px; margin-left: 10px; }
 .nav-links a {
   font-weight: 600; font-size: 13.5px; color: var(--tx-2); padding: 8px 12px; border-radius: 10px;
@@ -551,6 +555,17 @@ body.theme-flipping * { transition: background-color 200ms, color 200ms, border-
 .asset { display: grid; gap: 10px; padding: 18px; border: 1px solid var(--bd); border-radius: var(--r-l); background: var(--sur); box-shadow: var(--sh-1); transition: transform 220ms var(--ease-out), box-shadow 220ms var(--ease-out); }
 .asset:hover { transform: translateY(-4px); box-shadow: var(--sh-2); }
 .asset-prev { width: 56px; height: 56px; border-radius: 14px; background: var(--sur-2) center/cover no-repeat; }
+/* A logotype is five times wider than it is tall; a square tile crops it to
+   nothing, so its preview gets the whole row and fits rather than fills.
+   Each one is shown on the ground it was drawn for, in both themes — a white
+   logotype on a white tile is not a preview. */
+.asset-wide .asset-prev {
+  width: 100%; height: 56px; padding: 0 10px;
+  background-size: contain; background-position: center;
+  background-origin: content-box; background-clip: border-box;
+  background-color: #F3F5FC;
+}
+.asset-onDark .asset-prev { background-color: #0F1426; }
 .asset-name { font: 800 15px/1.2 var(--font-d); letter-spacing: -.02em; }
 .asset-meta { font: 700 11px/1 var(--font-b); letter-spacing: .1em; text-transform: uppercase; color: var(--mu); }
 

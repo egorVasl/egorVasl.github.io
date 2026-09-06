@@ -88,7 +88,7 @@ function nav(active) {
   <header class="nav">
     <div class="nav-in">
       <a class="brand" href="index.html">
-        <span class="brand-mark" aria-hidden="true"></span>
+        <img class="brand-mark" src="assets/logo.svg" alt="" width="28" height="28" decoding="async">
         <span data-i18n="nav.brand">${tx('nav.brand')}</span>
       </a>
       <nav class="nav-links" aria-label="${esc(t('nav.aria'))}" data-i18n-attr="aria-label:nav.aria">
@@ -137,7 +137,7 @@ function footer() {
   <footer class="foot">
     <div class="wrap foot-in">
       <div class="foot-brand">
-        <span class="brand-mark" aria-hidden="true"></span>
+        <img class="brand-mark foot-mark" src="assets/logo.svg" alt="" width="34" height="34" loading="lazy" decoding="async">
         <div>
           <b data-i18n="nav.brand">${tx('nav.brand')}</b>
           ${el('p', 'footer.made')}
@@ -170,9 +170,11 @@ function footer() {
 
 /**
  * A whole page. `body` is the markup between nav and footer; `accent` tints
- * the page for a single game.
+ * the page for a single game, and `ogImage` is the card people see when they
+ * share it — the studio one unless the page has earned its own.
  */
-function page({ id, titleKey, descKey, body, canonical, accent, bodyClass = '', scripts = [] }) {
+function page({ id, titleKey, descKey, body, canonical, accent, bodyClass = '',
+                scripts = [], ogImage = 'assets/og/site.png' }) {
   const title = t(titleKey), desc = t(descKey);
   const url = `${SITE}/${canonical || (id === 'home' ? '' : id + '.html')}`;
   return `<!doctype html>
@@ -187,12 +189,14 @@ function page({ id, titleKey, descKey, body, canonical, accent, bodyClass = '', 
 <meta property="og:url" content="${url}">
 <meta property="og:title" content="${esc(title)}" data-i18n-attr="content:${titleKey}">
 <meta property="og:description" content="${esc(desc)}" data-i18n-attr="content:${descKey}">
-<meta property="og:image" content="${SITE}/blocklix-icon.png">
+<meta property="og:image" content="${SITE}/${ogImage}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#F3F5FC" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0F1426" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="blocklix-icon.png">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/logo-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">

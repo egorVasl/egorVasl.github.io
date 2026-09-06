@@ -10,16 +10,18 @@
 <meta property="og:url" content="https://vaslixgames.com/press.html">
 <meta property="og:title" content="Press kit — Vaslix Games" data-i18n-attr="content:meta.press.title">
 <meta property="og:description" content="Blurb, fact sheet, icons and contact for writers and partners. Answered within about five business days." data-i18n-attr="content:meta.press.desc">
-<meta property="og:image" content="https://vaslixgames.com/blocklix-icon.png">
+<meta property="og:image" content="https://vaslixgames.com/assets/og/site.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#F3F5FC" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0F1426" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="blocklix-icon.png">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/logo-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=aa9b2258">
+<link rel="stylesheet" href="assets/site.css?v=7d97857d">
 <script>/* theme and language before first paint, so nothing flashes */
 document.documentElement.classList.add('js');
 (function(){try{var t=localStorage.getItem('vaslix.theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;
@@ -32,7 +34,7 @@ var l=localStorage.getItem('vaslix.lang');if(l)document.documentElement.lang=l;}
   <header class="nav">
     <div class="nav-in">
       <a class="brand" href="index.html">
-        <span class="brand-mark" aria-hidden="true"></span>
+        <img class="brand-mark" src="assets/logo.svg" alt="" width="28" height="28" decoding="async">
         <span data-i18n="nav.brand">Vaslix Games</span>
       </a>
       <nav class="nav-links" aria-label="Main navigation" data-i18n-attr="aria-label:nav.aria">
@@ -113,19 +115,39 @@ var l=localStorage.getItem('vaslix.lang');if(l)document.documentElement.lang=l;}
       <h2 class="sec-title" id="assets-title" data-i18n="press.assetsTitle">Brand assets</h2>
       <p class="sec-intro" data-i18n="press.assetsIntro">Icons and the logo exactly as they ship. Use them as they are — please do not recolour or crop them.</p>
       <div class="assets">
-        <a class="asset reveal" href="favicon.svg" download>
-          <span class="asset-prev" style="background-image:url('favicon.svg')" aria-hidden="true"></span>
-          <span class="asset-name" data-i18n="press.assetLogo">Vaslix logo (SVG)</span>
+        <a class="asset reveal" href="assets/logo.svg" download>
+          <span class="asset-prev" style="background-image:url('assets/logo.svg')" aria-hidden="true"></span>
+          <span class="asset-name" data-i18n="press.assetMark">Studio mark</span>
+          <span class="asset-meta">SVG</span>
+        </a>
+        <a class="asset reveal" href="assets/logo-512.png" download>
+          <span class="asset-prev" style="background-image:url('assets/logo-512.png')" aria-hidden="true"></span>
+          <span class="asset-name" data-i18n="press.assetMark">Studio mark</span>
+          <span class="asset-meta">PNG · 512</span>
+        </a>
+        <a class="asset reveal" href="assets/logo-1024.png" download>
+          <span class="asset-prev" style="background-image:url('assets/logo-1024.png')" aria-hidden="true"></span>
+          <span class="asset-name" data-i18n="press.assetMark">Studio mark</span>
+          <span class="asset-meta">PNG · 1024</span>
+        </a>
+        <a class="asset reveal asset-wide" href="assets/logo-lockup.svg" download>
+          <span class="asset-prev" style="background-image:url('assets/logo-lockup.svg')" aria-hidden="true"></span>
+          <span class="asset-name" data-i18n="press.assetLockup">Logotype</span>
+          <span class="asset-meta">SVG</span>
+        </a>
+        <a class="asset reveal asset-wide asset-onDark" href="assets/logo-lockup-dark.svg" download>
+          <span class="asset-prev" style="background-image:url('assets/logo-lockup-dark.svg')" aria-hidden="true"></span>
+          <span class="asset-name" data-i18n="press.assetLockupDark">Logotype, for dark backgrounds</span>
           <span class="asset-meta">SVG</span>
         </a>
         <a class="asset reveal" href="blocklix-icon.png" download>
           <span class="asset-prev" style="background-image:url('blocklix-icon.png')" aria-hidden="true"></span>
-          <span class="asset-name" data-i18n="press.assetBlocklix">Blocklix icon (PNG)</span>
+          <span class="asset-name" data-i18n="press.assetBlocklix">Blocklix icon</span>
           <span class="asset-meta">PNG · 512</span>
         </a>
         <a class="asset reveal" href="gridlix-icon.webp" download>
           <span class="asset-prev" style="background-image:url('gridlix-icon.webp')" aria-hidden="true"></span>
-          <span class="asset-name" data-i18n="press.assetGridlix">Gridlix icon (WebP)</span>
+          <span class="asset-name" data-i18n="press.assetGridlix">Gridlix:2048 icon</span>
           <span class="asset-meta">WEBP · 512</span>
         </a>
         <a class="asset asset-link reveal" href="https://play.google.com/store/apps/details?id=com.vaslix.games.blocklix" target="_blank" rel="noopener">
@@ -158,7 +180,7 @@ var l=localStorage.getItem('vaslix.lang');if(l)document.documentElement.lang=l;}
   <footer class="foot">
     <div class="wrap foot-in">
       <div class="foot-brand">
-        <span class="brand-mark" aria-hidden="true"></span>
+        <img class="brand-mark foot-mark" src="assets/logo.svg" alt="" width="34" height="34" loading="lazy" decoding="async">
         <div>
           <b data-i18n="nav.brand">Vaslix Games</b>
           <p data-i18n="footer.made">Made in one room, played in twelve languages.</p>
@@ -185,8 +207,8 @@ var l=localStorage.getItem('vaslix.lang');if(l)document.documentElement.lang=l;}
       <span class="foot-note" data-i18n="footer.builtWith">Hand-written HTML. No trackers on this site.</span>
     </div>
   </footer>
-<script src="assets/i18n.js?v=aa9b2258"></script>
+<script src="assets/i18n.js?v=7d97857d"></script>
 
-<script src="assets/site.js?v=aa9b2258" defer></script>
+<script src="assets/site.js?v=7d97857d" defer></script>
 </body>
 </html>

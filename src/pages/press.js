@@ -59,11 +59,16 @@ function factSheet() {
 
 function assets() {
   const items = [
-    ['press.assetLogo', 'favicon.svg', 'SVG'],
-    ['press.assetBlocklix', 'blocklix-icon.png', 'PNG · 512'],
-    ['press.assetGridlix', 'gridlix-icon.webp', 'WEBP · 512'],
-  ].map(([k, href, meta]) => `
-        <a class="asset reveal" href="${href}" download>
+    ['press.assetMark', 'assets/logo.svg', 'SVG', ''],
+    ['press.assetMark', 'assets/logo-512.png', 'PNG · 512', ''],
+    ['press.assetMark', 'assets/logo-1024.png', 'PNG · 1024', ''],
+    ['press.assetLockup', 'assets/logo-lockup.svg', 'SVG', ' asset-wide'],
+    // The dark lockup is white ink; its tile carries the background it is for.
+    ['press.assetLockupDark', 'assets/logo-lockup-dark.svg', 'SVG', ' asset-wide asset-onDark'],
+    ['press.assetBlocklix', 'blocklix-icon.png', 'PNG · 512', ''],
+    ['press.assetGridlix', 'gridlix-icon.webp', 'WEBP · 512', ''],
+  ].map(([k, href, meta, mod]) => `
+        <a class="asset reveal${mod}" href="${href}" download>
           <span class="asset-prev" style="background-image:url('${href}')" aria-hidden="true"></span>
           <span class="asset-name" data-i18n="${k}">${tx(k)}</span>
           <span class="asset-meta">${esc(meta)}</span>

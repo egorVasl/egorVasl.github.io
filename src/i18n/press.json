@@ -1,0 +1,47 @@
+{
+  "press.assetMark": {
+    "en": "Studio mark",
+    "ru": "Марка студии",
+    "es": "Marca del estudio",
+    "de": "Studio-Zeichen",
+    "fr": "Marque du studio",
+    "pt-BR": "Marca do estúdio",
+    "zh": "工作室标记"
+  },
+  "press.assetLockup": {
+    "en": "Logotype",
+    "ru": "Логотип с надписью",
+    "es": "Logotipo con texto",
+    "de": "Wortmarke",
+    "fr": "Logotype",
+    "pt-BR": "Logotipo com texto",
+    "zh": "带文字的标志"
+  },
+  "press.assetLockupDark": {
+    "en": "Logotype, for dark backgrounds",
+    "ru": "Логотип для тёмного фона",
+    "es": "Logotipo para fondos oscuros",
+    "de": "Wortmarke für dunkle Hintergründe",
+    "fr": "Logotype pour fond sombre",
+    "pt-BR": "Logotipo para fundos escuros",
+    "zh": "深色背景版标志"
+  },
+  "press.assetBlocklix": {
+    "en": "Blocklix icon",
+    "ru": "Иконка Blocklix",
+    "es": "Icono de Blocklix",
+    "de": "Blocklix-Icon",
+    "fr": "Icône Blocklix",
+    "pt-BR": "Ícone do Blocklix",
+    "zh": "Blocklix 图标"
+  },
+  "press.assetGridlix": {
+    "en": "Gridlix:2048 icon",
+    "ru": "Иконка Gridlix:2048",
+    "es": "Icono de Gridlix:2048",
+    "de": "Gridlix:2048-Icon",
+    "fr": "Icône Gridlix:2048",
+    "pt-BR": "Ícone do Gridlix:2048",
+    "zh": "Gridlix:2048 图标"
+  }
+}

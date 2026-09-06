@@ -279,6 +279,7 @@ module.exports = function gamePage(g) {
     accent: g.accent,
     bodyClass: `game-page game-${g.id}`,
     scripts: g.sections.includes('palettes') ? ['assets/game-data.js'] : [],
+    ogImage: `assets/og/${g.id}.png`,
     body,
   };
 };
