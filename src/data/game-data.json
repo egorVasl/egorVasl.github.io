@@ -1,0 +1,1445 @@
+{
+  "generated": "2026-09-06",
+  "blocklix": {
+    "id": "blocklix",
+    "applicationId": "com.vaslix.games.blocklix",
+    "languages": 12,
+    "palettes": [
+      {
+        "id": "blockblast",
+        "name": "Blocklix Original",
+        "sky": [
+          "#172450",
+          "#0E1530",
+          "#08101F",
+          "#04060F"
+        ],
+        "blocks": [
+          "#FF6FA8",
+          "#FF7728",
+          "#4FC3F7",
+          "#5EBC5A",
+          "#B658CC",
+          "#FBC830",
+          "#0FEFD8",
+          "#D74064"
+        ],
+        "free": true
+      },
+      {
+        "id": "quiet",
+        "name": "Blocklix Quiet",
+        "sky": [
+          "#101B3D",
+          "#0A1028",
+          "#060C1A",
+          "#03050C"
+        ],
+        "blocks": [
+          "#FF6FA8",
+          "#FF7728",
+          "#4FC3F7",
+          "#5EBC5A",
+          "#B658CC",
+          "#FBC830",
+          "#0FEFD8",
+          "#D74064"
+        ],
+        "free": true
+      },
+      {
+        "id": "classic",
+        "name": "Classic",
+        "sky": [
+          "#3A1266",
+          "#2A0B4A",
+          "#1A0738",
+          "#0A0420"
+        ],
+        "blocks": [
+          "#FF2D87",
+          "#FF7A1A",
+          "#2979FF",
+          "#00E676",
+          "#B845FF",
+          "#FFD60A",
+          "#00DDD7",
+          "#C42B4D"
+        ],
+        "free": true
+      },
+      {
+        "id": "neon",
+        "name": "Neon",
+        "sky": [
+          "#1D0048",
+          "#12002E",
+          "#05001A",
+          "#000008"
+        ],
+        "blocks": [
+          "#FF00C8",
+          "#FFAA00",
+          "#00E5FF",
+          "#76FF03",
+          "#D500F9",
+          "#FFEA00",
+          "#4AFDB6",
+          "#FD784E"
+        ],
+        "free": false
+      },
+      {
+        "id": "sunset",
+        "name": "Sunset",
+        "sky": [
+          "#58201A",
+          "#3E1414",
+          "#1F0708",
+          "#0E0304"
+        ],
+        "blocks": [
+          "#F50057",
+          "#FFAB40",
+          "#FF5252",
+          "#FFAB00",
+          "#FF7043",
+          "#FFD740",
+          "#A6AF13",
+          "#B9452E"
+        ],
+        "free": false
+      },
+      {
+        "id": "candy",
+        "name": "Candy",
+        "sky": [
+          "#522759",
+          "#3B1C43",
+          "#1F0F29",
+          "#0F0617"
+        ],
+        "blocks": [
+          "#F48FB1",
+          "#FFB74D",
+          "#81D4FA",
+          "#A5D6A7",
+          "#CE93D8",
+          "#FFE082",
+          "#5EB2A9",
+          "#DF714D"
+        ],
+        "free": false
+      },
+      {
+        "id": "galaxy",
+        "name": "Galaxy",
+        "sky": [
+          "#1A0B4C",
+          "#0F0530",
+          "#060119",
+          "#01000A"
+        ],
+        "blocks": [
+          "#E040FB",
+          "#FFC107",
+          "#00B8D4",
+          "#00E5FF",
+          "#7C4DFF",
+          "#FFEB3B",
+          "#2985D5",
+          "#FD883C"
+        ],
+        "free": false
+      },
+      {
+        "id": "retro",
+        "name": "Retro",
+        "sky": [
+          "#3E2610",
+          "#2B1A0A",
+          "#160C05",
+          "#080402"
+        ],
+        "blocks": [
+          "#D32F2F",
+          "#FF8F00",
+          "#1976D2",
+          "#388E3C",
+          "#6A1B9A",
+          "#FBC02D",
+          "#01B5A6",
+          "#F8666E"
+        ],
+        "free": false
+      },
+      {
+        "id": "aurora",
+        "name": "Aurora",
+        "sky": [
+          "#003048",
+          "#001E2F",
+          "#000F18",
+          "#00060A"
+        ],
+        "blocks": [
+          "#F50057",
+          "#FFAB00",
+          "#18FFFF",
+          "#76FF03",
+          "#E040FB",
+          "#FFD740",
+          "#00D0B2",
+          "#FD794D"
+        ],
+        "free": false
+      },
+      {
+        "id": "sakura",
+        "name": "Sakura Bloom",
+        "sky": [
+          "#3E2038",
+          "#2A1626",
+          "#160812",
+          "#080308"
+        ],
+        "blocks": [
+          "#F06292",
+          "#FFB74D",
+          "#90CAF9",
+          "#A5D6A7",
+          "#CE93D8",
+          "#FFE082",
+          "#5EB2A9",
+          "#CA5E3A"
+        ],
+        "free": false
+      },
+      {
+        "id": "coral",
+        "name": "Coral Reef",
+        "sky": [
+          "#0A3240",
+          "#06222B",
+          "#021318",
+          "#00080C"
+        ],
+        "blocks": [
+          "#FF7043",
+          "#FFB300",
+          "#26C6DA",
+          "#26A69A",
+          "#FF6F61",
+          "#FFD54F",
+          "#0B7999",
+          "#C84D00"
+        ],
+        "free": false
+      },
+      {
+        "id": "mint",
+        "name": "Mint Mojito",
+        "sky": [
+          "#103E30",
+          "#0A2B22",
+          "#051813",
+          "#020805"
+        ],
+        "blocks": [
+          "#FF80AB",
+          "#FFD180",
+          "#80DEEA",
+          "#69F0AE",
+          "#B388FF",
+          "#FFF59D",
+          "#14B5BB",
+          "#D3825C"
+        ],
+        "free": false
+      },
+      {
+        "id": "bubblegum",
+        "name": "Bubblegum Pop",
+        "sky": [
+          "#54103C",
+          "#3B0A2A",
+          "#1F051F",
+          "#0F020F"
+        ],
+        "blocks": [
+          "#FF4081",
+          "#FF6E40",
+          "#00E5FF",
+          "#69F0AE",
+          "#E040FB",
+          "#FFEA00",
+          "#14B5BB",
+          "#C03267"
+        ],
+        "free": false
+      },
+      {
+        "id": "cyberpunk",
+        "name": "Cyberpunk Neon",
+        "sky": [
+          "#101832",
+          "#0A0E1F",
+          "#050810",
+          "#020308"
+        ],
+        "blocks": [
+          "#FF1F8F",
+          "#FF9E40",
+          "#00FFD1",
+          "#39FF14",
+          "#7C4DFF",
+          "#F4FF00",
+          "#00CBAC",
+          "#EA6D65"
+        ],
+        "free": false
+      },
+      {
+        "id": "volcano",
+        "name": "Volcano Magma",
+        "sky": [
+          "#38110A",
+          "#1F0A05",
+          "#0E0402",
+          "#050100"
+        ],
+        "blocks": [
+          "#FF1744",
+          "#FF6F00",
+          "#FF6E40",
+          "#FFC400",
+          "#B71C1C",
+          "#FFD600",
+          "#9DCE3F",
+          "#F667A3"
+        ],
+        "free": false
+      },
+      {
+        "id": "royal",
+        "name": "Royal Velvet",
+        "sky": [
+          "#2A0F60",
+          "#1B0942",
+          "#0E0421",
+          "#04020D"
+        ],
+        "blocks": [
+          "#D81B60",
+          "#FFAB00",
+          "#5E35B1",
+          "#43A047",
+          "#7C4DFF",
+          "#FFD740",
+          "#0DC8B7",
+          "#FD794D"
+        ],
+        "free": false
+      },
+      {
+        "id": "synthwave",
+        "name": "Synthwave 84",
+        "sky": [
+          "#2A005E",
+          "#1B0040",
+          "#0E0024",
+          "#050010"
+        ],
+        "blocks": [
+          "#FF00FF",
+          "#FF8C00",
+          "#00FFFF",
+          "#00FF94",
+          "#9C27B0",
+          "#FFEA00",
+          "#30CFCF",
+          "#F05E5E"
+        ],
+        "free": false
+      },
+      {
+        "id": "arctic",
+        "name": "Arctic Frost",
+        "sky": [
+          "#0A2440",
+          "#06182B",
+          "#030C18",
+          "#01060C"
+        ],
+        "blocks": [
+          "#B388FF",
+          "#FFAB91",
+          "#4FC3F7",
+          "#80CBC4",
+          "#9FA8DA",
+          "#FFE082",
+          "#4E8DA8",
+          "#D58097"
+        ],
+        "free": false
+      },
+      {
+        "id": "watermelon",
+        "name": "Watermelon Splash",
+        "sky": [
+          "#300C1A",
+          "#1F0810",
+          "#0F040A",
+          "#050205"
+        ],
+        "blocks": [
+          "#FF3D6E",
+          "#FF7043",
+          "#80DEEA",
+          "#9CCC65",
+          "#BA68C8",
+          "#FFEE58",
+          "#18B58E",
+          "#BC2862"
+        ],
+        "free": false
+      },
+      {
+        "id": "honey",
+        "name": "Honey Amber",
+        "sky": [
+          "#2A1A10",
+          "#1A100A",
+          "#0D0805",
+          "#050302"
+        ],
+        "blocks": [
+          "#FF7043",
+          "#FFAB00",
+          "#8D6E63",
+          "#C5E1A5",
+          "#A1887F",
+          "#FFE082",
+          "#76C1A5",
+          "#BE3F06"
+        ],
+        "free": false
+      },
+      {
+        "id": "origami",
+        "name": "Origami Paper",
+        "sky": [
+          "#2E2820",
+          "#1F1B14",
+          "#100E0A",
+          "#050402"
+        ],
+        "blocks": [
+          "#EC407A",
+          "#F57C00",
+          "#1976D2",
+          "#388E3C",
+          "#7B1FA2",
+          "#F9A825",
+          "#01B5A6",
+          "#B7243C"
+        ],
+        "free": false
+      },
+      {
+        "id": "lavender",
+        "name": "Lavender Dream",
+        "sky": [
+          "#2E1E3C",
+          "#1F1428",
+          "#100A14",
+          "#06040A"
+        ],
+        "blocks": [
+          "#F8BBD0",
+          "#FFAB91",
+          "#90CAF9",
+          "#C5E1A5",
+          "#B39DDB",
+          "#FFF59D",
+          "#70BB9F",
+          "#C7748B"
+        ],
+        "free": false
+      },
+      {
+        "id": "holographic",
+        "name": "Holographic Foil",
+        "sky": [
+          "#190E34",
+          "#0F0820",
+          "#060410",
+          "#020108"
+        ],
+        "blocks": [
+          "#FF80AB",
+          "#FFCC80",
+          "#00FFFF",
+          "#00FF94",
+          "#E040FB",
+          "#FFEA00",
+          "#30CFCF",
+          "#D07E5F"
+        ],
+        "free": false
+      },
+      {
+        "id": "dragon",
+        "name": "Mythic Dragon",
+        "sky": [
+          "#341008",
+          "#1F0808",
+          "#0F0404",
+          "#050202"
+        ],
+        "blocks": [
+          "#D32F2F",
+          "#FF6E40",
+          "#2E7D32",
+          "#66BB6A",
+          "#6A1B9A",
+          "#FFD740",
+          "#0EE1CF",
+          "#FC62A1"
+        ],
+        "free": false
+      },
+      {
+        "id": "mercury",
+        "name": "Liquid Mercury",
+        "sky": [
+          "#121A24",
+          "#0A0E14",
+          "#04060A",
+          "#010204"
+        ],
+        "blocks": [
+          "#FF80AB",
+          "#FF8A65",
+          "#448AFF",
+          "#80CBC4",
+          "#B388FF",
+          "#FFE082",
+          "#619FBB",
+          "#CC577B"
+        ],
+        "free": false
+      },
+      {
+        "id": "void",
+        "name": "Cosmic Void",
+        "sky": [
+          "#0A0114",
+          "#050008",
+          "#020004",
+          "#000000"
+        ],
+        "blocks": [
+          "#E040FB",
+          "#FFD180",
+          "#5C6BC0",
+          "#80DEEA",
+          "#7C4DFF",
+          "#FFFFFF",
+          "#76ADDD",
+          "#EE9B74"
+        ],
+        "free": false
+      },
+      {
+        "id": "steampunk",
+        "name": "Steampunk",
+        "sky": [
+          "#2A1810",
+          "#1A0F08",
+          "#0D0804",
+          "#050302"
+        ],
+        "blocks": [
+          "#BF5F4A",
+          "#FF9800",
+          "#4A6572",
+          "#6D8B74",
+          "#5D4037",
+          "#FFB74D",
+          "#89B7B5",
+          "#FD787F"
+        ],
+        "free": false
+      },
+      {
+        "id": "ocean",
+        "name": "Deep Ocean",
+        "sky": [
+          "#063850",
+          "#04263A",
+          "#02182A",
+          "#010C16"
+        ],
+        "blocks": [
+          "#FF6BC1",
+          "#FF9E5C",
+          "#29B6F6",
+          "#00E5A8",
+          "#8C7BFF",
+          "#FFE47A",
+          "#81F1FE",
+          "#D7656C"
+        ],
+        "free": false
+      },
+      {
+        "id": "emerald",
+        "name": "Emerald Forest",
+        "sky": [
+          "#113E22",
+          "#0B2916",
+          "#06190D",
+          "#020C05"
+        ],
+        "blocks": [
+          "#FF7FA5",
+          "#FFA24D",
+          "#4FB6E8",
+          "#34D96E",
+          "#9B6BE8",
+          "#E8D44D",
+          "#02E8DF",
+          "#D55F59"
+        ],
+        "free": false
+      },
+      {
+        "id": "crystal",
+        "name": "Crystal Prism",
+        "sky": [
+          "#222052",
+          "#171638",
+          "#0D0C26",
+          "#050414"
+        ],
+        "blocks": [
+          "#FF9AD5",
+          "#FFC9A0",
+          "#9AD9FF",
+          "#A0FFD0",
+          "#C9A0FF",
+          "#FFF0A0",
+          "#32BCC5",
+          "#D28E8A"
+        ],
+        "free": false
+      },
+      {
+        "id": "gold",
+        "name": "Ancient Gold",
+        "sky": [
+          "#3E280A",
+          "#2A1B06",
+          "#1A1003",
+          "#0C0701"
+        ],
+        "blocks": [
+          "#E8484F",
+          "#FFB300",
+          "#3D7BE8",
+          "#4DB56A",
+          "#8E5BC9",
+          "#FFD34D",
+          "#0DD7CF",
+          "#F38968"
+        ],
+        "free": false
+      },
+      {
+        "id": "midnight",
+        "name": "Midnight City",
+        "sky": [
+          "#14204A",
+          "#0C1226",
+          "#070B1A",
+          "#03040C"
+        ],
+        "blocks": [
+          "#FF4D9E",
+          "#FF8A3D",
+          "#3DA8FF",
+          "#3DE8A0",
+          "#A05BFF",
+          "#FFE03D",
+          "#24DFF8",
+          "#CD485B"
+        ],
+        "free": false
+      },
+      {
+        "id": "jade",
+        "name": "Jade Temple",
+        "sky": [
+          "#123C32",
+          "#0D2822",
+          "#071A15",
+          "#030D0A"
+        ],
+        "blocks": [
+          "#FF7FA0",
+          "#FFA24D",
+          "#52B8D4",
+          "#3DE8B0",
+          "#B07BE8",
+          "#FFD24D",
+          "#9DF3FD",
+          "#D55F59"
+        ],
+        "free": false
+      },
+      {
+        "id": "halloween",
+        "name": "Halloween Night",
+        "sky": [
+          "#2E1244",
+          "#1F0C2E",
+          "#130720",
+          "#08030F"
+        ],
+        "blocks": [
+          "#E8383D",
+          "#FF7518",
+          "#4D7BFF",
+          "#76FF03",
+          "#9C4DFF",
+          "#FFF3B0",
+          "#0AFCD8",
+          "#FC699A"
+        ],
+        "free": false
+      },
+      {
+        "id": "christmas",
+        "name": "Christmas Frost",
+        "sky": [
+          "#103622",
+          "#0B2416",
+          "#06170D",
+          "#020B05"
+        ],
+        "blocks": [
+          "#E84D4D",
+          "#FFB300",
+          "#7AD4FF",
+          "#3DBF6E",
+          "#B05BD4",
+          "#FFF3D0",
+          "#159E9B",
+          "#E59271"
+        ],
+        "free": false
+      },
+      {
+        "id": "desert",
+        "name": "Desert Mirage",
+        "sky": [
+          "#3E200C",
+          "#2A1508",
+          "#1A0D04",
+          "#0C0602"
+        ],
+        "blocks": [
+          "#E87A6B",
+          "#FFAB4D",
+          "#2ED9C3",
+          "#A0C94D",
+          "#B0654D",
+          "#FFE082",
+          "#16AC7F",
+          "#FEC0C8"
+        ],
+        "free": false
+      },
+      {
+        "id": "sky",
+        "name": "Cotton Sky",
+        "sky": [
+          "#2C3468",
+          "#20264A",
+          "#141833",
+          "#090B1C"
+        ],
+        "blocks": [
+          "#FFA0CC",
+          "#FFC094",
+          "#94C8FF",
+          "#A0E8B8",
+          "#C2A8FF",
+          "#FFE8A0",
+          "#47B5B4",
+          "#D18584"
+        ],
+        "free": false
+      },
+      {
+        "id": "comet",
+        "name": "Comet",
+        "sky": [
+          "#13205A",
+          "#0B1440",
+          "#060B26",
+          "#020411"
+        ],
+        "blocks": [
+          "#FF5FA8",
+          "#FF8A3D",
+          "#3DC9FF",
+          "#43E97B",
+          "#9D7BFF",
+          "#FFD54A",
+          "#28F8EF",
+          "#CD485B"
+        ],
+        "free": true
+      }
+    ],
+    "difficulties": [
+      {
+        "id": "easy",
+        "name": {
+          "en": "Easy",
+          "ru": "Легко",
+          "es": "Fácil",
+          "de": "Leicht",
+          "fr": "Facile",
+          "pt-BR": "Fácil",
+          "zh": "简单"
+        },
+        "desc": {
+          "en": "Long, relaxed games. Fewer stars.",
+          "ru": "Долгие спокойные игры. Звёзд поменьше.",
+          "es": "Partidas largas y tranquilas. Menos estrellas.",
+          "de": "Lange, entspannte Spiele. Weniger Sterne.",
+          "fr": "Des parties longues et tranquilles. Moins d'étoiles.",
+          "pt-BR": "Partidas longas e tranquilas. Menos estrelas.",
+          "zh": "悠闲的长局，星星少一些。"
+        }
+      },
+      {
+        "id": "normal",
+        "name": {
+          "en": "Normal",
+          "ru": "Нормально",
+          "es": "Normal",
+          "de": "Normal",
+          "fr": "Normal",
+          "pt-BR": "Normal",
+          "zh": "普通"
+        },
+        "desc": {
+          "en": "The classic pace — about ten minutes.",
+          "ru": "Классический темп: минут десять",
+          "es": "El ritmo clásico: unos diez minutos.",
+          "de": "Klassisch — etwa zehn Minuten.",
+          "fr": "Rythme classique : dix minutes.",
+          "pt-BR": "Ritmo clássico: uns dez minutos.",
+          "zh": "经典节奏，大约十分钟。"
+        }
+      },
+      {
+        "id": "hard",
+        "name": {
+          "en": "Hard",
+          "ru": "Сложно",
+          "es": "Difícil",
+          "de": "Schwer",
+          "fr": "Difficile",
+          "pt-BR": "Difícil",
+          "zh": "困难"
+        },
+        "desc": {
+          "en": "Bigger pieces show up sooner.",
+          "ru": "Крупные фигуры приходят раньше",
+          "es": "Las piezas grandes llegan antes.",
+          "de": "Große Steine kommen früher.",
+          "fr": "Les grandes pièces arrivent plus tôt.",
+          "pt-BR": "As peças grandes chegam antes.",
+          "zh": "大方块来得更早。"
+        }
+      },
+      {
+        "id": "expert",
+        "name": {
+          "en": "Expert",
+          "ru": "Эксперт",
+          "es": "Experto",
+          "de": "Experte",
+          "fr": "Expert",
+          "pt-BR": "Especialista",
+          "zh": "专家"
+        },
+        "desc": {
+          "en": "Every new set of pieces is a puzzle.",
+          "ru": "Каждый набор фигур — задачка.",
+          "es": "Cada nueva tanda de piezas es un rompecabezas.",
+          "de": "Jedes neue Figuren-Set ist ein Rätsel.",
+          "fr": "Chaque nouvelle série de pièces est un casse-tête.",
+          "pt-BR": "Cada nova leva de peças é um quebra-cabeça.",
+          "zh": "每一批新方块都是一道谜题。"
+        }
+      },
+      {
+        "id": "master",
+        "name": {
+          "en": "Master",
+          "ru": "Мастер",
+          "es": "Maestro",
+          "de": "Meister",
+          "fr": "Maître",
+          "pt-BR": "Mestre",
+          "zh": "大师"
+        },
+        "desc": {
+          "en": "Only the sharpest survive. No easy pieces.",
+          "ru": "Только для самых цепких. Лёгких фигур не будет.",
+          "es": "Solo sobreviven los más hábiles. Nada de piezas fáciles.",
+          "de": "Nur die Besten halten durch. Keine leichten Figuren.",
+          "fr": "Seuls les plus futés survivent. Pas de pièces faciles.",
+          "pt-BR": "Só os mais afiados sobrevivem. Nada de peças fáceis.",
+          "zh": "只有高手才能活下来，没有简单方块。"
+        }
+      },
+      {
+        "id": "insane",
+        "name": {
+          "en": "Insane",
+          "ru": "Безумие",
+          "es": "Locura",
+          "de": "Wahnsinn",
+          "fr": "Démence",
+          "pt-BR": "Insanidade",
+          "zh": "疯狂"
+        },
+        "desc": {
+          "en": "Pure luck of the draw. Pieces might not fit at all.",
+          "ru": "Никаких поблажек: фигура может и не подойти.",
+          "es": "Suerte pura. Puede que las piezas ni quepan.",
+          "de": "Reines Glücksspiel. Figuren passen vielleicht gar nicht.",
+          "fr": "Pur hasard. Les pièces peuvent ne pas rentrer du tout.",
+          "pt-BR": "Pura sorte. As peças podem nem caber.",
+          "zh": "全凭运气，方块可能根本放不下。"
+        }
+      }
+    ],
+    "ranks": [
+      {
+        "id": "stone",
+        "name": {
+          "en": "Stone",
+          "ru": "Камень",
+          "es": "Piedra",
+          "de": "Stein",
+          "fr": "Pierre",
+          "pt-BR": "Pedra",
+          "zh": "岩石"
+        }
+      },
+      {
+        "id": "bronze",
+        "name": {
+          "en": "Bronze",
+          "ru": "Бронза",
+          "es": "Bronce",
+          "de": "Bronze",
+          "fr": "Bronze",
+          "pt-BR": "Bronze",
+          "zh": "青铜"
+        }
+      },
+      {
+        "id": "silver",
+        "name": {
+          "en": "Silver",
+          "ru": "Серебро",
+          "es": "Plata",
+          "de": "Silber",
+          "fr": "Argent",
+          "pt-BR": "Prata",
+          "zh": "白银"
+        }
+      },
+      {
+        "id": "gold",
+        "name": {
+          "en": "Gold",
+          "ru": "Золото",
+          "es": "Oro",
+          "de": "Gold",
+          "fr": "Or",
+          "pt-BR": "Ouro",
+          "zh": "黄金"
+        }
+      },
+      {
+        "id": "platinum",
+        "name": {
+          "en": "Platinum",
+          "ru": "Платина",
+          "es": "Platino",
+          "de": "Platin",
+          "fr": "Platine",
+          "pt-BR": "Platina",
+          "zh": "铂金"
+        }
+      },
+      {
+        "id": "emerald",
+        "name": {
+          "en": "Emerald",
+          "ru": "Изумруд",
+          "es": "Esmeralda",
+          "de": "Smaragd",
+          "fr": "Émeraude",
+          "pt-BR": "Esmeralda",
+          "zh": "祖母绿"
+        }
+      },
+      {
+        "id": "ruby",
+        "name": {
+          "en": "Ruby",
+          "ru": "Рубин",
+          "es": "Rubí",
+          "de": "Rubin",
+          "fr": "Rubis",
+          "pt-BR": "Rubi",
+          "zh": "红宝石"
+        }
+      },
+      {
+        "id": "diamond",
+        "name": {
+          "en": "Diamond",
+          "ru": "Алмаз",
+          "es": "Diamante",
+          "de": "Diamant",
+          "fr": "Diamant",
+          "pt-BR": "Diamante",
+          "zh": "钻石"
+        }
+      },
+      {
+        "id": "master",
+        "name": {
+          "en": "Master",
+          "ru": "Мастер",
+          "es": "Maestro",
+          "de": "Meister",
+          "fr": "Maître",
+          "pt-BR": "Mestre",
+          "zh": "大师"
+        }
+      },
+      {
+        "id": "grandmaster",
+        "name": {
+          "en": "Grandmaster",
+          "ru": "Грандмастер",
+          "es": "Gran Maestro",
+          "de": "Großmeister",
+          "fr": "Grand Maître",
+          "pt-BR": "Grão-Mestre",
+          "zh": "宗师"
+        }
+      },
+      {
+        "id": "legend",
+        "name": {
+          "en": "Legend",
+          "ru": "Легенда",
+          "es": "Leyenda",
+          "de": "Legende",
+          "fr": "Légende",
+          "pt-BR": "Lenda",
+          "zh": "传奇"
+        }
+      },
+      {
+        "id": "mythic",
+        "name": {
+          "en": "Mythic",
+          "ru": "Мифический",
+          "es": "Mítico",
+          "de": "Mythisch",
+          "fr": "Mythique",
+          "pt-BR": "Mítico",
+          "zh": "神话"
+        }
+      },
+      {
+        "id": "celestial",
+        "name": {
+          "en": "Celestial",
+          "ru": "Небесный",
+          "es": "Celestial",
+          "de": "Himmlisch",
+          "fr": "Céleste",
+          "pt-BR": "Celestial",
+          "zh": "天界"
+        }
+      },
+      {
+        "id": "cosmic",
+        "name": {
+          "en": "Cosmic",
+          "ru": "Космический",
+          "es": "Cósmico",
+          "de": "Kosmisch",
+          "fr": "Cosmique",
+          "pt-BR": "Cósmico",
+          "zh": "宇宙"
+        }
+      },
+      {
+        "id": "eternal",
+        "name": {
+          "en": "Eternal",
+          "ru": "Вечный",
+          "es": "Eterno",
+          "de": "Ewig",
+          "fr": "Éternel",
+          "pt-BR": "Eterno",
+          "zh": "永恒"
+        }
+      }
+    ],
+    "boosters": [
+      {
+        "id": "hammer",
+        "name": {
+          "en": "Hammer",
+          "ru": "Молот",
+          "es": "Martillo",
+          "de": "Hammer",
+          "fr": "Marteau",
+          "pt-BR": "Martelo",
+          "zh": "锤子"
+        },
+        "desc": {
+          "en": "Smashes any one block",
+          "ru": "Разбивает один любой блок на поле",
+          "es": "Rompe cualquier bloque",
+          "de": "Zertrümmert einen beliebigen Block",
+          "fr": "Casse n'importe quel bloc",
+          "pt-BR": "Quebra qualquer bloco",
+          "zh": "一锤敲掉棋盘上任意一个方块"
+        }
+      },
+      {
+        "id": "bomb",
+        "name": {
+          "en": "Bomb",
+          "ru": "Бомба",
+          "es": "Bomba",
+          "de": "Bombe",
+          "fr": "Bombe",
+          "pt-BR": "Bomba",
+          "zh": "炸弹"
+        },
+        "desc": {
+          "en": "Clears a 3×3 area instantly",
+          "ru": "Мгновенно сносит зону 3×3",
+          "es": "Despeja un área de 3×3 al instante",
+          "de": "Sprengt sofort ein 3×3-Feld frei",
+          "fr": "Fait sauter une zone 3×3 en un instant",
+          "pt-BR": "Limpa uma área 3×3 na hora",
+          "zh": "瞬间炸掉 3×3 区域"
+        }
+      },
+      {
+        "id": "lightning",
+        "name": {
+          "en": "Lightning",
+          "ru": "Молния",
+          "es": "Rayo",
+          "de": "Blitz",
+          "fr": "Éclair",
+          "pt-BR": "Raio",
+          "zh": "闪电"
+        },
+        "desc": {
+          "en": "Zaps a full row and column in one strike",
+          "ru": "Выжигает целый ряд и столбец одним ударом",
+          "es": "Fulmina una fila y una columna enteras de un solo golpe",
+          "de": "Fegt eine ganze Reihe und Spalte mit einem Schlag weg",
+          "fr": "Foudroie une ligne et une colonne entières d'un seul coup",
+          "pt-BR": "Detona uma linha e uma coluna inteiras de uma vez",
+          "zh": "一击清空整行加整列"
+        }
+      },
+      {
+        "id": "shuffle",
+        "name": {
+          "en": "Shuffle",
+          "ru": "Перемешать",
+          "es": "Mezcla",
+          "de": "Mischen",
+          "fr": "Mélange",
+          "pt-BR": "Embaralhar",
+          "zh": "洗牌"
+        },
+        "desc": {
+          "en": "Swaps your pieces for three new ones",
+          "ru": "Меняет фигуры на три новые",
+          "es": "Cambia tus piezas por tres nuevas",
+          "de": "Tauscht deine Figuren gegen drei neue",
+          "fr": "Échange tes pièces contre trois nouvelles",
+          "pt-BR": "Troca suas peças por três novas",
+          "zh": "立刻换上三块全新方块"
+        }
+      }
+    ]
+  },
+  "gridlix": {
+    "id": "gridlix",
+    "applicationId": "com.vaslix.games.gridlix",
+    "languages": 7,
+    "boardSize": 4,
+    "usesPerGame": 3,
+    "missionTypes": [
+      "COMPLETE_TODAY",
+      "REACH_STEP_BELOW",
+      "UNDER_PAR",
+      "PRISTINE",
+      "TWO_STARS",
+      "THREE_STARS",
+      "SCORE_TARGET",
+      "TWO_ATTEMPTS",
+      "NO_UNDO",
+      "MOVES_TO_SPARE"
+    ],
+    "themes": [
+      {
+        "id": "default",
+        "name": "Default",
+        "premium": false,
+        "accent": "#6C5DD3",
+        "tiles": [
+          [
+            "#E3F2FD",
+            "#4F83F5"
+          ],
+          [
+            "#BBDEFB",
+            "#2196F3"
+          ],
+          [
+            "#BBC0FB",
+            "#2136F3"
+          ],
+          [
+            "#9B82FF",
+            "#2A00D2"
+          ]
+        ]
+      },
+      {
+        "id": "ocean",
+        "name": "Ocean",
+        "premium": true,
+        "accent": "#0EA5E9",
+        "tiles": [
+          [
+            "#DBF7FF",
+            "#0EA5E9"
+          ],
+          [
+            "#BAEBFF",
+            "#0284C7"
+          ],
+          [
+            "#88DDFF",
+            "#0369A1"
+          ],
+          [
+            "#5CC8FF",
+            "#075985"
+          ]
+        ]
+      },
+      {
+        "id": "sunset",
+        "name": "Sunset",
+        "premium": true,
+        "accent": "#F97316",
+        "tiles": [
+          [
+            "#FFF1E0",
+            "#F97316"
+          ],
+          [
+            "#FFDDB8",
+            "#EA580C"
+          ],
+          [
+            "#FFC68F",
+            "#C2410C"
+          ],
+          [
+            "#FFA862",
+            "#9A3412"
+          ]
+        ]
+      },
+      {
+        "id": "forest",
+        "name": "Forest",
+        "premium": true,
+        "accent": "#20C997",
+        "tiles": [
+          [
+            "#DCFCE7",
+            "#16A34A"
+          ],
+          [
+            "#BBF7D0",
+            "#15803D"
+          ],
+          [
+            "#86EFAC",
+            "#166534"
+          ],
+          [
+            "#4ADE80",
+            "#14532D"
+          ]
+        ]
+      },
+      {
+        "id": "rose",
+        "name": "Rose",
+        "premium": true,
+        "accent": "#F43F5E",
+        "tiles": [
+          [
+            "#FDF2F8",
+            "#F43F5E"
+          ],
+          [
+            "#FCE7F3",
+            "#E11D48"
+          ],
+          [
+            "#FBCFE8",
+            "#BE123C"
+          ],
+          [
+            "#F9A8D4",
+            "#9F1239"
+          ]
+        ]
+      }
+    ],
+    "boosters": [
+      {
+        "id": "undo",
+        "name": {
+          "en": "Undo",
+          "ru": "Отмена",
+          "es": "Deshacer",
+          "de": "Zurück",
+          "fr": "Annuler",
+          "pt-BR": "Desfazer",
+          "zh": "撤销"
+        }
+      },
+      {
+        "id": "delete",
+        "name": {
+          "en": "Delete",
+          "ru": "Удалить",
+          "es": "Borrar",
+          "de": "Löschen",
+          "fr": "Supprimer",
+          "pt-BR": "Apagar",
+          "zh": "删除"
+        }
+      },
+      {
+        "id": "swap",
+        "name": {
+          "en": "Swap",
+          "ru": "Обмен",
+          "es": "Cambiar",
+          "de": "Tausch",
+          "fr": "Échange",
+          "pt-BR": "Trocar",
+          "zh": "交换"
+        }
+      },
+      {
+        "id": "value_clear",
+        "name": {
+          "en": "Cleanup",
+          "ru": "Очистка",
+          "es": "Limpieza",
+          "de": "Aufräumen",
+          "fr": "Nettoyage",
+          "pt-BR": "Limpeza",
+          "zh": "清理"
+        }
+      },
+      {
+        "id": "shuffle",
+        "name": {
+          "en": "Shuffle",
+          "ru": "Перемешать",
+          "es": "Mezclar",
+          "de": "Mischen",
+          "fr": "Mélanger",
+          "pt-BR": "Embaralhar",
+          "zh": "打乱"
+        }
+      }
+    ],
+    "medals": [
+      {
+        "id": "bronze",
+        "name": {
+          "en": "Bronze",
+          "ru": "Бронза",
+          "es": "Bronce",
+          "de": "Bronze",
+          "fr": "Bronze",
+          "pt-BR": "Bronze",
+          "zh": "铜牌"
+        }
+      },
+      {
+        "id": "silver",
+        "name": {
+          "en": "Silver",
+          "ru": "Серебро",
+          "es": "Plata",
+          "de": "Silber",
+          "fr": "Argent",
+          "pt-BR": "Prata",
+          "zh": "银牌"
+        }
+      },
+      {
+        "id": "gold",
+        "name": {
+          "en": "Gold",
+          "ru": "Золото",
+          "es": "Oro",
+          "de": "Gold",
+          "fr": "Or",
+          "pt-BR": "Ouro",
+          "zh": "金牌"
+        }
+      }
+    ]
+  }
+}

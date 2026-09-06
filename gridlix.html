@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en" data-page="gridlix">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="meta.gridlix.title">Gridlix:2048 — one daily puzzle for everyone | Vaslix Games</title>
+<meta name="description" content="A 4×4 merge puzzle with a seeded Daily that is identical for every player, streak shields, monthly medals and five boosters. Endless mode never ends." data-i18n-attr="content:meta.gridlix.desc">
+<link rel="canonical" href="https://vaslixgames.com/gridlix.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vaslixgames.com/gridlix.html">
+<meta property="og:title" content="Gridlix:2048 — one daily puzzle for everyone | Vaslix Games" data-i18n-attr="content:meta.gridlix.title">
+<meta property="og:description" content="A 4×4 merge puzzle with a seeded Daily that is identical for every player, streak shields, monthly medals and five boosters. Endless mode never ends." data-i18n-attr="content:meta.gridlix.desc">
+<meta property="og:image" content="https://vaslixgames.com/blocklix-icon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F3F5FC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1426" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="blocklix-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=cc68917d">
+<script>/* theme and language before first paint, so nothing flashes */
+document.documentElement.classList.add('js');
+(function(){try{var t=localStorage.getItem('vaslix.theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;
+var l=localStorage.getItem('vaslix.lang');if(l)document.documentElement.lang=l;}catch(e){}})();</script>
+</head>
+<body class="game-page game-gridlix" style="--acc:#6C5DD3">
+
+  <a class="skip" href="#main" data-i18n="nav.skip">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <header class="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span data-i18n="nav.brand">Vaslix Games</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation" data-i18n-attr="aria-label:nav.aria">
+        <a href="index.html#shelf" data-i18n="nav.games">Games</a>
+        <a href="studio.html" data-i18n="nav.studio">Studio</a>
+        <a href="press.html" data-i18n="nav.press">Press</a>
+        <a href="privacy-policy.html" data-i18n="nav.privacy">Privacy</a>
+      </nav>
+      <div class="nav-right">
+        <div class="lang-wrap">
+          <button class="lang-switcher" type="button" aria-haspopup="listbox" aria-expanded="false"
+             aria-label="Change language" data-i18n-attr="aria-label:nav.langLabel">
+            <span class="lang-flag" data-lang-flag>🇬🇧</span>
+            <span data-lang-code>EN</span>
+            <svg class="caret" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-menu" role="listbox"  aria-label="Change language" data-i18n-attr="aria-label:nav.langLabel"><li role="option" tabindex="0" data-lang="en" aria-selected="true"><span class="lang-flag">🇬🇧</span><span class="lang-code">EN</span><span class="lang-native">English</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg></li><li role="option" tabindex="0" data-lang="ru" aria-selected="false"><span class="lang-flag">🇷🇺</span><span class="lang-code">RU</span><span class="lang-native">Русский</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg></li><li role="option" tabindex="0" data-lang="es" aria-selected="false"><span class="lang-flag">🇪🇸</span><span class="lang-code">ES</span><span class="lang-native">Español</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg></li><li role="option" tabindex="0" data-lang="de" aria-selected="false"><span class="lang-flag">🇩🇪</span><span class="lang-code">DE</span><span class="lang-native">Deutsch</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg></li><li role="option" tabindex="0" data-lang="fr" aria-selected="false"><span class="lang-flag">🇫🇷</span><span class="lang-code">FR</span><span class="lang-native">Français</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg></li><li role="option" tabindex="0" data-lang="pt-BR" aria-selected="false"><span class="lang-flag">🇧🇷</span><span class="lang-code">PT-BR</span><span class="lang-native">Português</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg></li><li role="option" tabindex="0" data-lang="zh" aria-selected="false"><span class="lang-flag">🇨🇳</span><span class="lang-code">ZH</span><span class="lang-native">简体中文</span><svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12.5 5 5L20 6.5"/></svg></li></ul>
+        </div>
+        <button class="theme-toggle" type="button" data-theme-state="auto"
+           aria-label="Switch to automatic theme" data-i18n-attr="aria-label:nav.theme.auto">
+          <svg class="ti ti-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.4v2.2M12 19.4v2.2M4.2 12H2M22 12h-2.2M5.6 5.6 4 4M20 20l-1.6-1.6M18.4 5.6 20 4M4 20l1.6-1.6"/></svg>
+          <svg class="ti ti-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.4 8.4 0 1 0 10.2 10.2Z"/></svg>
+          <svg class="ti ti-auto" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.4"/><path d="M12 3.6v16.8a8.4 8.4 0 0 0 0-16.8Z" fill="currentColor" stroke="none"/></svg>
+        </button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"
+           aria-label="Menu" data-i18n-attr="aria-label:nav.menu">
+          <span class="mt-bar"></span><span class="mt-bar"></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="index.html#shelf" data-i18n="nav.games">Games</a>
+      <a href="studio.html" data-i18n="nav.studio">Studio</a>
+      <a href="press.html" data-i18n="nav.press">Press</a>
+      <a href="privacy-policy.html" data-i18n="nav.privacy">Privacy</a>
+    </div>
+  </header>
+<main id="main">
+
+  <section class="game-hero" aria-labelledby="game-title">
+    <canvas class="hero-art" data-motif="tiles" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <a class="back" href="index.html#shelf">
+        <span class="arrow" aria-hidden="true">←</span><span data-i18n="gp.back">All titles</span>
+      </a>
+      <div class="game-hero-in">
+        <div class="game-hero-text">
+          <div class="game-top">
+            <img class="game-icon" src="gridlix-icon.webp" alt="" width="128" height="128" decoding="async">
+            <div>
+              <h1 class="game-h1" id="game-title">Gridlix:2048</h1>
+              <div class="game-meta">
+                <span class="status status-live" data-i18n="status.live">On Google Play</span>
+                <span class="chip" data-i18n="g.gridlix.genre">Puzzle</span>
+              </div>
+            </div>
+          </div>
+          <p class="game-lede" data-i18n="g.gridlix.blurb">A 4×4 merge puzzle for Android. The Daily is seeded from the date, so every player worldwide gets the same board, graded out of three stars; a streak with shields survives a missed evening, and a finished month is worth a medal. Five boosters, three uses of each per game, five colour themes, tuned haptics, and an optional Premium that removes the ads.</p>
+          <div class="facts facts-m"><div class="fact"><b>★★★</b><span data-i18n="f.daily">graded Daily</span></div><div class="fact"><b>5</b><span data-i18n="f.boosters">boosters</span></div><div class="fact"><b>5</b><span data-i18n="f.themes">themes</span></div><div class="fact"><b>7</b><span data-i18n="f.languages">languages</span></div></div>
+          <div class="chips"><span class="chip" data-i18n="g.gridlix.chip.1">4×4 board</span><span class="chip" data-i18n="g.gridlix.chip.2">Daily + endless</span><span class="chip" data-i18n="g.gridlix.chip.3">Home-screen widget</span></div>
+          <div class="game-ctas">
+            <a class="gp-link" href="https://play.google.com/store/apps/details?id=com.vaslix.games.gridlix" target="_blank" rel="noopener"
+               aria-label="Gridlix:2048 on Google Play" data-i18n-attr="aria-label:g.gridlix.playAria"><img class="gp-badge" src="badges/google-play-en.png" width="646" height="250" alt="Get it on Google Play" data-i18n-attr="alt:cta.play" data-badge loading="lazy" decoding="async"></a>
+          </div>
+        </div>
+        <div class="game-hero-art">
+          <div class="board board-hero" data-board="merge" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec how-sec" id="how" aria-labelledby="how-title">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="g.gridlix.how.eyebrow">How it plays</p>
+      <h2 class="sec-title" id="how-title" data-i18n="g.gridlix.how.title">One gesture, all the way down</h2>
+      <p class="sec-intro" data-i18n="g.gridlix.how.intro">There is nothing to learn beyond the swipe. Everything after that is arithmetic and nerve.</p>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-n" aria-hidden="true">1</span>
+          <div class="step-demo" data-demo="merge-1" aria-hidden="true"></div>
+          <h3 data-i18n="g.gridlix.how.1.t">Swipe</h3>
+          <p data-i18n="g.gridlix.how.1.d">One direction moves every tile on the board at once. There is no partial move.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-n" aria-hidden="true">2</span>
+          <div class="step-demo" data-demo="merge-2" aria-hidden="true"></div>
+          <h3 data-i18n="g.gridlix.how.2.t">Merge</h3>
+          <p data-i18n="g.gridlix.how.2.d">Two equal tiles that touch become one, worth double. A tile merges once per move.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-n" aria-hidden="true">3</span>
+          <div class="step-demo" data-demo="merge-3" aria-hidden="true"></div>
+          <h3 data-i18n="g.gridlix.how.3.t">Reach the target</h3>
+          <p data-i18n="g.gridlix.how.3.d">In Endless the goal is your own record. In the Daily it is a stated tile inside a stated number of moves.</p>
+        </li></ol>
+    </div>
+  </section>
+
+  <section class="sec daily-sec" id="daily" aria-labelledby="daily-title">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="g.gridlix.daily.eyebrow">The Daily</p>
+      <h2 class="sec-title" id="daily-title" data-i18n="g.gridlix.daily.title">The same puzzle as everyone else</h2>
+      <p class="sec-intro" data-i18n="g.gridlix.daily.intro">A dated seed builds the opening position and the whole spawn stream, so the board you are staring at is the board everyone else is staring at.</p>
+      <div class="daily-grid">
+        <div class="daily-card reveal">
+          <h3 data-i18n="g.gridlix.daily.seed.t">One seed, one board</h3>
+          <p data-i18n="g.gridlix.daily.seed.d">The opening is played out in advance by a scripted bot, and its move count sets the par you are measured against. Several attempts a day; the best one counts.</p>
+          <div class="seed-viz" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <ul class="star-rules">
+          <li class="star-rule reveal">
+            <span class="stars" aria-hidden="true">★☆☆</span>
+            <p data-i18n="g.gridlix.daily.star.1">Reach the target tile inside the move cap.</p>
+          </li>
+          <li class="star-rule reveal">
+            <span class="stars" aria-hidden="true">★★☆</span>
+            <p data-i18n="g.gridlix.daily.star.2">Do it inside par — the bot's own move count.</p>
+          </li>
+          <li class="star-rule reveal">
+            <span class="stars" aria-hidden="true">★★★</span>
+            <p data-i18n="g.gridlix.daily.star.3">Inside par with no booster touched all game.</p>
+          </li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec month-sec" id="month" aria-labelledby="month-title">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="g.gridlix.month.eyebrow">The month</p>
+      <h2 class="sec-title" id="month-title" data-i18n="g.gridlix.month.title">A streak you can actually keep</h2>
+      <p class="sec-intro" data-i18n="g.gridlix.month.intro">One missed evening should not erase four months. Shields absorb a miss, and the calendar keeps the whole month in view.</p>
+      <div class="month-grid">
+        <div class="cal-card reveal">
+          <div class="cal" aria-hidden="true"><i class="day day-done" style="--i:0"></i><i class="day day-done" style="--i:1"></i><i class="day day-done" style="--i:2"></i><i class="day day-done" style="--i:3"></i><i class="day day-done" style="--i:4"></i><i class="day day-miss" style="--i:5"></i><i class="day day-done" style="--i:6"></i><i class="day day-done" style="--i:7"></i><i class="day day-done" style="--i:8"></i><i class="day day-shield" style="--i:9"></i><i class="day day-done" style="--i:10"></i><i class="day day-done" style="--i:11"></i><i class="day day-done" style="--i:12"></i><i class="day day-done" style="--i:13"></i><i class="day day-done" style="--i:14"></i><i class="day day-done" style="--i:15"></i><i class="day day-done" style="--i:16"></i><i class="day day-done" style="--i:17"></i><i class="day day-done" style="--i:18"></i><i class="day day-miss" style="--i:19"></i><i class="day day-done" style="--i:20"></i><i class="day day-done" style="--i:21"></i><i class="day day-done" style="--i:22"></i><i class="day day-done" style="--i:23"></i><i class="day day-shield" style="--i:24"></i><i class="day day-done" style="--i:25"></i><i class="day day-done" style="--i:26"></i><i class="day day-done" style="--i:27"></i><i class="day day-done" style="--i:28"></i><i class="day day-done" style="--i:29"></i></div>
+          <div class="cal-legend">
+            <span class="lg lg-done" data-i18n="g.gridlix.month.legend.done">Played</span>
+            <span class="lg lg-shield" data-i18n="g.gridlix.month.legend.shield">Shielded</span>
+            <span class="lg lg-miss" data-i18n="g.gridlix.month.legend.miss">Missed</span>
+          </div>
+        </div>
+        <div class="month-side">
+          <div class="side-card reveal">
+            <h3 data-i18n="g.gridlix.month.streak.t">Shields</h3>
+            <p data-i18n="g.gridlix.month.streak.d">A shield is spent automatically on the day you miss, and you earn them back by playing. The streak survives an ordinary bad week.</p>
+          </div>
+          <div class="side-card reveal">
+            <h3 data-i18n="g.gridlix.month.medals.t">Monthly medals</h3>
+            <p data-i18n="g.gridlix.month.medals.d">Finish a month and it is graded once, kept forever, and shown in the trophy case next to your best streak.</p>
+            <ul class="medals">
+            <li class="medal medal-bronze"><span data-i18n="gd.gridlix.medal.bronze">Bronze</span></li>
+            <li class="medal medal-silver"><span data-i18n="gd.gridlix.medal.silver">Silver</span></li>
+            <li class="medal medal-gold"><span data-i18n="gd.gridlix.medal.gold">Gold</span></li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec boost-sec" id="boosters" aria-labelledby="boosters-title">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="g.gridlix.boosters.eyebrow">Boosters</p>
+      <h2 class="sec-title" id="boosters-title" data-i18n="g.gridlix.boosters.title">Five, three uses each</h2>
+      <p class="sec-intro" data-i18n="g.gridlix.boosters.intro">The cap is per game, not per day, so a booster is a decision inside a run rather than a resource to hoard.</p>
+      <ul class="boosts">
+          <li class="boost reveal" style="--i:0">
+            <span class="boost-glyph boost-undo" aria-hidden="true"></span>
+            <h3 data-i18n="gd.gridlix.booster.undo.name">Undo</h3>
+            <p data-i18n="g.gridlix.boosters.undo.d">Takes back the last move, spawn included.</p>
+          </li>
+          <li class="boost reveal" style="--i:1">
+            <span class="boost-glyph boost-delete" aria-hidden="true"></span>
+            <h3 data-i18n="gd.gridlix.booster.delete.name">Delete</h3>
+            <p data-i18n="g.gridlix.boosters.delete.d">Removes one tile you point at.</p>
+          </li>
+          <li class="boost reveal" style="--i:2">
+            <span class="boost-glyph boost-swap" aria-hidden="true"></span>
+            <h3 data-i18n="gd.gridlix.booster.swap.name">Swap</h3>
+            <p data-i18n="g.gridlix.boosters.swap.d">Trades the places of two tiles.</p>
+          </li>
+          <li class="boost reveal" style="--i:3">
+            <span class="boost-glyph boost-value_clear" aria-hidden="true"></span>
+            <h3 data-i18n="gd.gridlix.booster.value_clear.name">Cleanup</h3>
+            <p data-i18n="g.gridlix.boosters.value_clear.d">Sweeps every tile of one value off the board.</p>
+          </li>
+          <li class="boost reveal" style="--i:4">
+            <span class="boost-glyph boost-shuffle" aria-hidden="true"></span>
+            <h3 data-i18n="gd.gridlix.booster.shuffle.name">Shuffle</h3>
+            <p data-i18n="g.gridlix.boosters.shuffle.d">Rearranges what is already there, without adding anything.</p>
+          </li></ul><p class="sec-note" data-i18n="g.gridlix.boosters.note">For a free player each use is paid with a rewarded video you choose to watch; Premium skips both the video and the counter. Using none is the third Daily star.</p>
+    </div>
+  </section>
+
+  <section class="sec gth-sec" id="themes" aria-labelledby="themes-title">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="g.gridlix.themes.eyebrow">Palettes</p>
+      <h2 class="sec-title" id="themes-title" data-i18n="g.gridlix.themes.title">Five palettes, one board</h2>
+      <p class="sec-intro" data-i18n="g.gridlix.themes.intro">The palette changes the tiles, the accent and the glow — never a rule. These are the real colours, straight out of the app.</p>
+      <ul class="gths">
+          <li class="gth reveal" style="--acc:#6C5DD3">
+            <span class="gth-tiles" aria-hidden="true">
+              <i style="background:#E3F2FD;color:#4F83F5">2</i><i style="background:#BBDEFB;color:#2196F3">4</i><i style="background:#BBC0FB;color:#2136F3">8</i><i style="background:#9B82FF;color:#2A00D2">16</i>
+            </span>
+            <b>Default</b>
+            <span class="gth-tag gth-free" data-i18n="g.gridlix.themes.free">Free</span>
+          </li>
+          <li class="gth reveal" style="--acc:#0EA5E9">
+            <span class="gth-tiles" aria-hidden="true">
+              <i style="background:#DBF7FF;color:#0EA5E9">2</i><i style="background:#BAEBFF;color:#0284C7">4</i><i style="background:#88DDFF;color:#0369A1">8</i><i style="background:#5CC8FF;color:#075985">16</i>
+            </span>
+            <b>Ocean</b>
+            <span class="gth-tag" data-i18n="g.gridlix.themes.premium">Premium</span>
+          </li>
+          <li class="gth reveal" style="--acc:#F97316">
+            <span class="gth-tiles" aria-hidden="true">
+              <i style="background:#FFF1E0;color:#F97316">2</i><i style="background:#FFDDB8;color:#EA580C">4</i><i style="background:#FFC68F;color:#C2410C">8</i><i style="background:#FFA862;color:#9A3412">16</i>
+            </span>
+            <b>Sunset</b>
+            <span class="gth-tag" data-i18n="g.gridlix.themes.premium">Premium</span>
+          </li>
+          <li class="gth reveal" style="--acc:#20C997">
+            <span class="gth-tiles" aria-hidden="true">
+              <i style="background:#DCFCE7;color:#16A34A">2</i><i style="background:#BBF7D0;color:#15803D">4</i><i style="background:#86EFAC;color:#166534">8</i><i style="background:#4ADE80;color:#14532D">16</i>
+            </span>
+            <b>Forest</b>
+            <span class="gth-tag" data-i18n="g.gridlix.themes.premium">Premium</span>
+          </li>
+          <li class="gth reveal" style="--acc:#F43F5E">
+            <span class="gth-tiles" aria-hidden="true">
+              <i style="background:#FDF2F8;color:#F43F5E">2</i><i style="background:#FCE7F3;color:#E11D48">4</i><i style="background:#FBCFE8;color:#BE123C">8</i><i style="background:#F9A8D4;color:#9F1239">16</i>
+            </span>
+            <b>Rose</b>
+            <span class="gth-tag" data-i18n="g.gridlix.themes.premium">Premium</span>
+          </li></ul>
+    </div>
+  </section>
+
+  <section class="sec prem-sec" id="premium" aria-labelledby="premium-title">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="g.gridlix.premium.eyebrow">Premium</p>
+      <h2 class="sec-title" id="premium-title" data-i18n="g.gridlix.premium.title">Play without the interruptions</h2>
+      <p class="sec-intro" data-i18n="g.gridlix.premium.intro">A subscription through Google Play, monthly or yearly, with a free trial on the yearly plan. Cancel from Play at any time.</p>
+      <div class="prem-card reveal">
+        <ul class="perks">
+          <li class="perk reveal">
+            <span class="perk-mark" aria-hidden="true"></span>
+            <span data-i18n="g.gridlix.premium.1">No banners and no interstitials, anywhere</span>
+          </li>
+          <li class="perk reveal">
+            <span class="perk-mark" aria-hidden="true"></span>
+            <span data-i18n="g.gridlix.premium.2">Boosters without watching anything first</span>
+          </li>
+          <li class="perk reveal">
+            <span class="perk-mark" aria-hidden="true"></span>
+            <span data-i18n="g.gridlix.premium.3">Continues when the board fills up</span>
+          </li>
+          <li class="perk reveal">
+            <span class="perk-mark" aria-hidden="true"></span>
+            <span data-i18n="g.gridlix.premium.4">The four locked palettes open up</span>
+          </li></ul>
+        <p class="sec-note" data-i18n="g.gridlix.premium.note">The Daily, its stars, the streak and the medals work exactly the same whether you pay or not.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec also-sec" id="also" aria-labelledby="also-title">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="also.eyebrow">Also from the studio</p>
+      <h2 class="sec-title" id="also-title" data-i18n="also.title">The rest of the shelf</h2>
+      
+      <div class="alsos"><a class="also reveal" href="blocklix.html" style="--acc:#FF6FA8;--acc-d:#FF8FBC">
+          <div class="also-in">
+            <img src="blocklix-icon.png" alt="" width="64" height="64" loading="lazy" decoding="async">
+            <div>
+              <b>Blocklix</b>
+              <p data-i18n="g.blocklix.tagline">Drop three pieces, clear the line, keep the combo alive.</p>
+            </div>
+            <span class="status status-live" data-i18n="status.live">On Google Play</span>
+          </div></a><div class="also also-soon reveal" style="--acc:#0FB4C8;--acc-d:#3ED8E8">
+          <div class="also-in">
+            <span class="panel-icon-empty" aria-hidden="true"></span>
+            <div>
+              <b>Vaslix Audio</b>
+              <p data-i18n="g.audio.tagline">A listening app with offline downloads and no account to make.</p>
+            </div>
+            <span class="status status-dev" data-i18n="status.dev">In the works</span>
+          </div></div><div class="also also-soon reveal" style="--acc:#5EBC5A;--acc-d:#7FD97B">
+          <div class="also-in">
+            <span class="panel-icon-empty" aria-hidden="true"></span>
+            <div>
+              <b>Wordlix</b>
+              <p data-i18n="g.words.tagline">A word puzzle, still on paper. Same shape: small, quiet, offline.</p>
+            </div>
+            <span class="status status-idea" data-i18n="status.idea">On paper</span>
+          </div></div></div>
+      <div class="sec-cta"><a class="btn ghost" href="index.html#shelf"><span data-i18n="also.cta">Back to the shelf</span></a></div>
+    </div>
+  </section>
+</main>
+
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <div class="foot-brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <div>
+          <b data-i18n="nav.brand">Vaslix Games</b>
+          <p data-i18n="footer.made">Made in one room, played in twelve languages.</p>
+        </div>
+      </div>
+      <nav class="foot-col" aria-label="Games" data-i18n-attr="aria-label:footer.gamesAria">
+        <h2 data-i18n="footer.games">Games</h2>
+        <a href="blocklix.html">Blocklix</a><a href="gridlix.html">Gridlix:2048</a>
+      </nav>
+      <nav class="foot-col" aria-label="Studio links" data-i18n-attr="aria-label:footer.studioAria">
+        <h2 data-i18n="footer.studio">Studio</h2>
+        <a href="studio.html" data-i18n="nav.studio">Studio</a>
+        <a href="press.html" data-i18n="nav.press">Press</a>
+        <a href="privacy-policy.html" data-i18n="footer.privacyLink">Privacy Policy</a>
+      </nav>
+      <div class="foot-col">
+        <h2 data-i18n="footer.contactTitle">Contact</h2>
+        <a href="mailto:vaslixofficial@protonmail.com">vaslixofficial@protonmail.com</a>
+        <p class="foot-note" data-i18n="footer.replyTime">Usually answered within five business days.</p>
+      </div>
+    </div>
+    <div class="wrap foot-bottom">
+      <span data-i18n="footer.copyright">© Vaslix Games · Independent Android studio</span>
+      <span class="foot-note" data-i18n="footer.builtWith">Hand-written HTML. No trackers on this site.</span>
+    </div>
+  </footer>
+<script src="assets/i18n.js?v=cc68917d"></script>
+
+<script src="assets/site.js?v=cc68917d" defer></script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+{
+  "nav.aria": {
+    "en": "Main navigation", "ru": "Основная навигация", "es": "Navegación principal",
+    "de": "Hauptnavigation", "fr": "Navigation principale", "pt-BR": "Navegação principal", "zh": "主导航"
+  },
+  "nav.press": {
+    "en": "Press", "ru": "Пресса", "es": "Prensa", "de": "Presse", "fr": "Presse", "pt-BR": "Imprensa", "zh": "媒体"
+  },
+  "nav.skip": {
+    "en": "Skip to content", "ru": "Перейти к содержимому", "es": "Ir al contenido",
+    "de": "Zum Inhalt springen", "fr": "Aller au contenu", "pt-BR": "Ir para o conteúdo", "zh": "跳到主要内容"
+  },
+  "cta.play": {
+    "en": "Get it on Google Play", "ru": "Доступно в Google Play", "es": "Disponible en Google Play",
+    "de": "Jetzt bei Google Play", "fr": "Disponible sur Google Play", "pt-BR": "Disponível no Google Play", "zh": "在 Google Play 上获取"
+  },
+
+  "meta.blocklix.title": {
+    "en": "Blocklix — an 8×8 drop-and-clear puzzle | Vaslix Games",
+    "ru": "Blocklix — головоломка 8×8: клади и очищай | Vaslix Games",
+    "es": "Blocklix — un puzle 8×8 de colocar y despejar | Vaslix Games",
+    "de": "Blocklix — ein 8×8-Puzzle zum Legen und Räumen | Vaslix Games",
+    "fr": "Blocklix — un puzzle 8×8 : poser et effacer | Vaslix Games",
+    "pt-BR": "Blocklix — um quebra-cabeça 8×8 de encaixar e limpar | Vaslix Games",
+    "zh": "Blocklix — 8×8 放置消除益智游戏 | Vaslix Games"
+  },
+  "meta.blocklix.desc": {
+    "en": "Drop three pieces into an 8×8 board, clear rows and columns, chain combos. 38 themes, 60 ranks, six difficulty levels, twelve languages. No accounts.",
+    "ru": "Кладите три фигуры на поле 8×8, очищайте ряды и столбцы, собирайте комбо. 38 тем, 60 рангов, шесть сложностей, двенадцать языков. Без аккаунтов.",
+    "es": "Coloca tres piezas en un tablero de 8×8, despeja filas y columnas, encadena combos. 38 temas, 60 rangos, seis dificultades, doce idiomas. Sin cuentas.",
+    "de": "Lege drei Teile auf ein 8×8-Feld, räume Reihen und Spalten, verkette Combos. 38 Themes, 60 Ränge, sechs Schwierigkeitsgrade, zwölf Sprachen. Ohne Konto.",
+    "fr": "Posez trois pièces sur un plateau 8×8, effacez lignes et colonnes, enchaînez les combos. 38 thèmes, 60 rangs, six difficultés, douze langues. Sans compte.",
+    "pt-BR": "Encaixe três peças em um tabuleiro 8×8, limpe linhas e colunas, encadeie combos. 38 temas, 60 patentes, seis dificuldades, doze idiomas. Sem contas.",
+    "zh": "在 8×8 棋盘上放置三块方块，消除整行整列，连成连击。38 款主题、60 个段位、六种难度、十二种语言。无需账号。"
+  },
+  "meta.gridlix.title": {
+    "en": "Gridlix:2048 — one daily puzzle for everyone | Vaslix Games",
+    "ru": "Gridlix:2048 — одна ежедневная задача на всех | Vaslix Games",
+    "es": "Gridlix:2048 — un puzle diario para todos | Vaslix Games",
+    "de": "Gridlix:2048 — ein Tagesrätsel für alle | Vaslix Games",
+    "fr": "Gridlix:2048 — un puzzle quotidien pour tous | Vaslix Games",
+    "pt-BR": "Gridlix:2048 — um desafio diário igual para todos | Vaslix Games",
+    "zh": "Gridlix:2048 — 全球同一道每日谜题 | Vaslix Games"
+  },
+  "meta.gridlix.desc": {
+    "en": "A 4×4 merge puzzle with a seeded Daily that is identical for every player, streak shields, monthly medals and five boosters. Endless mode never ends.",
+    "ru": "Головоломка 4×4 со слиянием: ежедневная задача с общим сидом одинакова для всех, щиты серии, медали за месяц и пять бустеров. Endless не кончается.",
+    "es": "Un puzle de fusión 4×4 con un Diario idéntico para todos, escudos de racha, medallas mensuales y cinco potenciadores. El modo infinito no termina.",
+    "de": "Ein 4×4-Merge-Puzzle mit einem Daily, das für alle identisch ist, Serien-Schilden, Monatsmedaillen und fünf Boostern. Der Endlosmodus endet nie.",
+    "fr": "Un puzzle de fusion 4×4 avec un Quotidien identique pour tous, des boucliers de série, des médailles mensuelles et cinq boosters. Le mode infini ne finit jamais.",
+    "pt-BR": "Um quebra-cabeça de fusão 4×4 com um Diário idêntico para todos, escudos de sequência, medalhas mensais e cinco reforços. O modo infinito não acaba.",
+    "zh": "4×4 合并益智游戏：每日谜题全球统一，连胜护盾、月度奖牌与五种助力道具。无尽模式永不结束。"
+  },
+  "meta.studio.title": {
+    "en": "Studio — Vaslix Games", "ru": "Студия — Vaslix Games", "es": "Estudio — Vaslix Games",
+    "de": "Studio — Vaslix Games", "fr": "Studio — Vaslix Games", "pt-BR": "Estúdio — Vaslix Games", "zh": "工作室 — Vaslix Games"
+  },
+  "meta.studio.desc": {
+    "en": "One person, small Android apps, no accounts and no servers of ours. What we build, the rules we keep, and what comes next.",
+    "ru": "Один человек, маленькие Android-приложения, без аккаунтов и без своих серверов. Что мы делаем, каких правил держимся и что дальше.",
+    "es": "Una persona, apps de Android pequeñas, sin cuentas y sin servidores propios. Qué hacemos, qué reglas mantenemos y qué viene después.",
+    "de": "Eine Person, kleine Android-Apps, keine Konten und keine eigenen Server. Was wir bauen, welche Regeln gelten und was als Nächstes kommt.",
+    "fr": "Une personne, de petites applis Android, sans comptes ni serveurs à nous. Ce que nous faisons, nos règles, et la suite.",
+    "pt-BR": "Uma pessoa, apps Android pequenos, sem contas e sem servidores nossos. O que fazemos, que regras mantemos e o que vem depois.",
+    "zh": "一个人，小而专注的 Android 应用，无账号、无自有服务器。我们在做什么、坚持什么规则、接下来做什么。"
+  },
+  "meta.press.title": {
+    "en": "Press kit — Vaslix Games", "ru": "Пресс-кит — Vaslix Games", "es": "Kit de prensa — Vaslix Games",
+    "de": "Pressemappe — Vaslix Games", "fr": "Kit presse — Vaslix Games", "pt-BR": "Kit de imprensa — Vaslix Games", "zh": "媒体资料包 — Vaslix Games"
+  },
+  "meta.press.desc": {
+    "en": "Blurb, fact sheet, icons and contact for writers and partners. Answered within about five business days.",
+    "ru": "Описание, лист фактов, иконки и контакт для журналистов и партнёров. Отвечаем примерно за пять рабочих дней.",
+    "es": "Descripción, ficha de datos, iconos y contacto para medios y socios. Respondemos en unos cinco días hábiles.",
+    "de": "Kurztext, Faktenblatt, Icons und Kontakt für Presse und Partner. Antwort in etwa fünf Werktagen.",
+    "fr": "Présentation, fiche technique, icônes et contact pour la presse et les partenaires. Réponse sous environ cinq jours ouvrés.",
+    "pt-BR": "Texto padrão, ficha técnica, ícones e contato para imprensa e parceiros. Resposta em cerca de cinco dias úteis.",
+    "zh": "供媒体与合作方使用的简介、事实清单、图标与联系方式。约五个工作日内回复。"
+  },
+  "meta.notFound.title": {
+    "en": "Page not found — Vaslix Games", "ru": "Страница не найдена — Vaslix Games", "es": "Página no encontrada — Vaslix Games",
+    "de": "Seite nicht gefunden — Vaslix Games", "fr": "Page introuvable — Vaslix Games", "pt-BR": "Página não encontrada — Vaslix Games", "zh": "页面未找到 — Vaslix Games"
+  },
+  "meta.notFound.desc": {
+    "en": "That address does not lead anywhere. The shelf does.",
+    "ru": "Такого адреса нет. А полка есть.",
+    "es": "Esa dirección no lleva a ninguna parte. La estantería sí.",
+    "de": "Diese Adresse führt nirgendwohin. Das Regal schon.",
+    "fr": "Cette adresse ne mène nulle part. L'étagère, si.",
+    "pt-BR": "Esse endereço não leva a lugar nenhum. A prateleira leva.",
+    "zh": "这个地址不通向任何地方，架子上却有东西。"
+  },
+
+  "hero.t1": {
+    "en": "Small games.", "ru": "Маленькие игры.", "es": "Juegos pequeños.",
+    "de": "Kleine Spiele.", "fr": "De petits jeux.", "pt-BR": "Jogos pequenos.", "zh": "小而精的游戏。"
+  },
+  "hero.t2": {
+    "en": "Built to last.", "ru": "Надолго.", "es": "Hechos para durar.",
+    "de": "Für lange gemacht.", "fr": "Faits pour durer.", "pt-BR": "Feitos para durar.", "zh": "为长久而做。"
+  },
+  "hero.cta.shelf": {
+    "en": "See the shelf", "ru": "Смотреть полку", "es": "Ver la estantería",
+    "de": "Regal ansehen", "fr": "Voir l'étagère", "pt-BR": "Ver a prateleira", "zh": "看看架子"
+  },
+  "hero.cta.studio": {
+    "en": "About the studio", "ru": "О студии", "es": "Sobre el estudio",
+    "de": "Über das Studio", "fr": "À propos du studio", "pt-BR": "Sobre o estúdio", "zh": "关于工作室"
+  },
+
+  "shelf.eyebrow": {
+    "en": "The shelf", "ru": "Полка", "es": "La estantería", "de": "Das Regal", "fr": "L'étagère", "pt-BR": "A prateleira", "zh": "架子"
+  },
+  "shelf.title": {
+    "en": "Two on the shelf. Room kept for more.",
+    "ru": "Две на полке. Место оставлено под следующие.",
+    "es": "Dos en la estantería. Hay sitio para más.",
+    "de": "Zwei im Regal. Platz bleibt für mehr.",
+    "fr": "Deux sur l'étagère. La place est gardée.",
+    "pt-BR": "Dois na prateleira. O lugar dos próximos está guardado.",
+    "zh": "架上有两款，位置为后来者留着。"
+  },
+  "shelf.intro": {
+    "en": "One panel per title, in the order they were built. The last panel is empty on purpose — the shelf is sized for what comes next, not for what is already on it.",
+    "ru": "По панели на каждую игру, в порядке появления. Последняя панель пуста намеренно: полка размечена под то, что будет, а не под то, что уже стоит.",
+    "es": "Un panel por título, en el orden en que se hicieron. El último panel está vacío a propósito: la estantería está medida para lo que viene, no para lo que ya está.",
+    "de": "Ein Panel je Titel, in der Reihenfolge ihrer Entstehung. Das letzte ist absichtlich leer — das Regal ist auf das Kommende ausgelegt, nicht auf das Vorhandene.",
+    "fr": "Un panneau par titre, dans l'ordre où ils ont été faits. Le dernier est vide exprès : l'étagère est dimensionnée pour la suite, pas pour l'existant.",
+    "pt-BR": "Um painel por título, na ordem em que foram feitos. O último está vazio de propósito: a prateleira foi medida para o que vem, não para o que já está.",
+    "zh": "每款作品一块面板，按完成顺序排列。最后一块是刻意留空的——架子是按将来的作品量的，不是按现有的。"
+  },
+  "shelf.count.live": {
+    "en": "on Google Play", "ru": "в Google Play", "es": "en Google Play", "de": "bei Google Play", "fr": "sur Google Play", "pt-BR": "no Google Play", "zh": "已上架"
+  },
+  "shelf.count.soon": {
+    "en": "in the works", "ru": "в работе", "es": "en marcha", "de": "in Arbeit", "fr": "en cours", "pt-BR": "em produção", "zh": "制作中"
+  },
+  "shelf.count.open": {
+    "en": "slots kept open", "ru": "мест оставлено", "es": "huecos reservados", "de": "Plätze bleiben frei", "fr": "places réservées", "pt-BR": "vagas reservadas", "zh": "预留位置"
+  },
+  "shelf.railAria": {
+    "en": "The studio shelf", "ru": "Полка студии", "es": "La estantería del estudio", "de": "Das Studio-Regal", "fr": "L'étagère du studio", "pt-BR": "A prateleira do estúdio", "zh": "工作室的架子"
+  },
+  "shelf.prev": {
+    "en": "Previous title", "ru": "Предыдущая", "es": "Título anterior", "de": "Vorheriger Titel", "fr": "Titre précédent", "pt-BR": "Título anterior", "zh": "上一款"
+  },
+  "shelf.next": {
+    "en": "Next title", "ru": "Следующая", "es": "Título siguiente", "de": "Nächster Titel", "fr": "Titre suivant", "pt-BR": "Próximo título", "zh": "下一款"
+  },
+  "shelf.more": {
+    "en": "Open the page", "ru": "Открыть страницу", "es": "Abrir la página", "de": "Seite öffnen", "fr": "Ouvrir la page", "pt-BR": "Abrir a página", "zh": "打开页面"
+  },
+  "shelf.open.title": {
+    "en": "The next one lands here", "ru": "Здесь встанет следующая", "es": "Aquí llegará el siguiente",
+    "de": "Hier landet der nächste", "fr": "Le prochain se posera ici", "pt-BR": "O próximo entra aqui", "zh": "下一款会落在这里"
+  },
+  "shelf.open.body": {
+    "en": "When a title is ready it takes this slot, keeps the same frame, and pushes the empty one along. Nothing about the page has to change.",
+    "ru": "Когда игра готова, она занимает это место в той же рамке и сдвигает пустое дальше. Страницу для этого переделывать не нужно.",
+    "es": "Cuando un título esté listo ocupará este hueco, con el mismo marco, y empujará el vacío una posición. La página no cambia.",
+    "de": "Ist ein Titel fertig, nimmt er diesen Platz im gleichen Rahmen ein und schiebt den leeren weiter. An der Seite ändert sich nichts.",
+    "fr": "Quand un titre est prêt, il prend cette place dans le même cadre et pousse le vide plus loin. La page ne change pas.",
+    "pt-BR": "Quando um título fica pronto, ocupa esta vaga no mesmo quadro e empurra a vazia adiante. A página não muda.",
+    "zh": "新作准备好后就占下这一格，用同一套框架，把空格再往后推。页面本身不用改。"
+  },
+  "shelf.open.meta": {
+    "en": "Not named yet", "ru": "Ещё без названия", "es": "Todavía sin nombre", "de": "Noch ohne Namen", "fr": "Pas encore nommé", "pt-BR": "Ainda sem nome", "zh": "尚未命名"
+  },
+
+  "status.live": {
+    "en": "On Google Play", "ru": "В Google Play", "es": "En Google Play", "de": "Bei Google Play", "fr": "Sur Google Play", "pt-BR": "No Google Play", "zh": "已上架"
+  },
+  "status.dev": {
+    "en": "In the works", "ru": "В работе", "es": "En marcha", "de": "In Arbeit", "fr": "En cours", "pt-BR": "Em produção", "zh": "制作中"
+  },
+  "status.idea": {
+    "en": "On paper", "ru": "На бумаге", "es": "Sobre el papel", "de": "Auf dem Papier", "fr": "Sur le papier", "pt-BR": "No papel", "zh": "仍在纸上"
+  },
+  "status.open": {
+    "en": "Empty slot", "ru": "Пустое место", "es": "Hueco libre", "de": "Freier Platz", "fr": "Place libre", "pt-BR": "Vaga livre", "zh": "空位"
+  },
+
+  "f.themes": { "en": "themes", "ru": "тем", "es": "temas", "de": "Themes", "fr": "thèmes", "pt-BR": "temas", "zh": "款主题" },
+  "f.ranks": { "en": "ranks", "ru": "рангов", "es": "rangos", "de": "Ränge", "fr": "rangs", "pt-BR": "patentes", "zh": "个段位" },
+  "f.difficulties": { "en": "difficulty levels", "ru": "сложностей", "es": "dificultades", "de": "Schwierigkeitsgrade", "fr": "difficultés", "pt-BR": "dificuldades", "zh": "种难度" },
+  "f.daily": { "en": "graded Daily", "ru": "оценка дейли", "es": "Diario con estrellas", "de": "bewertetes Daily", "fr": "Quotidien noté", "pt-BR": "Diário com estrelas", "zh": "每日评星" },
+  "f.boosters": { "en": "boosters", "ru": "бустеров", "es": "potenciadores", "de": "Booster", "fr": "boosters", "pt-BR": "reforços", "zh": "种道具" },
+  "f.languages": { "en": "languages", "ru": "языков", "es": "idiomas", "de": "Sprachen", "fr": "langues", "pt-BR": "idiomas", "zh": "种语言" },
+
+  "gp.back": {
+    "en": "All titles", "ru": "Все игры", "es": "Todos los títulos", "de": "Alle Titel", "fr": "Tous les titres", "pt-BR": "Todos os títulos", "zh": "全部作品"
+  },
+  "also.eyebrow": {
+    "en": "Also from the studio", "ru": "Ещё у студии", "es": "También del estudio", "de": "Auch aus dem Studio", "fr": "Aussi du studio", "pt-BR": "Também do estúdio", "zh": "工作室其他作品"
+  },
+  "also.title": {
+    "en": "The rest of the shelf", "ru": "Остальная полка", "es": "El resto de la estantería", "de": "Der Rest des Regals", "fr": "Le reste de l'étagère", "pt-BR": "O resto da prateleira", "zh": "架子上的其他"
+  },
+  "also.cta": {
+    "en": "Back to the shelf", "ru": "Вернуться на полку", "es": "Volver a la estantería", "de": "Zurück zum Regal", "fr": "Retour à l'étagère", "pt-BR": "Voltar à prateleira", "zh": "回到架子"
+  },
+
+  "nums.title": {
+    "en": "The studio in numbers", "ru": "Студия в цифрах", "es": "El estudio en cifras", "de": "Das Studio in Zahlen", "fr": "Le studio en chiffres", "pt-BR": "O estúdio em números", "zh": "数字里的工作室"
+  },
+  "nums.servers": {
+    "en": "servers of ours", "ru": "своих серверов", "es": "servidores propios", "de": "eigene Server", "fr": "serveurs à nous", "pt-BR": "servidores nossos", "zh": "台自有服务器"
+  },
+  "nums.person": {
+    "en": "person", "ru": "человек", "es": "persona", "de": "Person", "fr": "personne", "pt-BR": "pessoa", "zh": "个人"
+  },
+  "nums.since": {
+    "en": "shipping since", "ru": "выпускаем с", "es": "publicando desde", "de": "veröffentlicht seit", "fr": "publie depuis", "pt-BR": "publicando desde", "zh": "自何年起发布"
+  },
+  "about.stats.people": {
+    "en": "person in the studio", "ru": "человек в студии", "es": "persona en el estudio", "de": "Person im Studio", "fr": "personne au studio", "pt-BR": "pessoa no estúdio", "zh": "位成员"
+  },
+  "about.stats.since": {
+    "en": "shipping since", "ru": "выпускаем с", "es": "publicando desde", "de": "veröffentlicht seit", "fr": "publie depuis", "pt-BR": "publicando desde", "zh": "自何年起发布"
+  },
+
+  "principles.eyebrow": {
+    "en": "Principles", "ru": "Принципы", "es": "Principios", "de": "Grundsätze", "fr": "Principes", "pt-BR": "Princípios", "zh": "原则"
+  },
+  "principles.title": {
+    "en": "Four rules that do not move",
+    "ru": "Четыре правила, которые не двигаются",
+    "es": "Cuatro reglas que no se mueven",
+    "de": "Vier Regeln, die bleiben",
+    "fr": "Quatre règles qui ne bougent pas",
+    "pt-BR": "Quatro regras que não se mexem",
+    "zh": "四条不会动摇的规则"
+  },
+  "principles.intro": {
+    "en": "They are cheaper to keep than to explain away, and they are the reason the apps stay small.",
+    "ru": "Их дешевле соблюдать, чем оправдывать, — и именно поэтому приложения остаются маленькими.",
+    "es": "Sale más barato cumplirlas que justificarlas, y por eso las apps siguen siendo pequeñas.",
+    "de": "Sie einzuhalten ist billiger, als sie wegzuerklären — und darum bleiben die Apps klein.",
+    "fr": "Les tenir coûte moins cher que les justifier, et c'est pourquoi les applis restent petites.",
+    "pt-BR": "Sai mais barato cumpri-las do que justificá-las, e é por isso que os apps continuam pequenos.",
+    "zh": "遵守它们比为它们找借口更省事，这也是这些应用始终保持轻量的原因。"
+  },
+  "roadmap.cta": {
+    "en": "The whole roadmap", "ru": "Вся дорожная карта", "es": "La hoja de ruta completa", "de": "Der ganze Fahrplan", "fr": "La feuille de route complète", "pt-BR": "O roteiro completo", "zh": "完整路线图"
+  },
+  "roadmap.note": {
+    "en": "Dates are the one thing that will not be promised here. Order will.",
+    "ru": "Сроков здесь не обещают — обещают порядок.",
+    "es": "Aquí no se prometen fechas; se promete el orden.",
+    "de": "Termine werden hier nicht versprochen — die Reihenfolge schon.",
+    "fr": "Aucune date promise ici — l'ordre, oui.",
+    "pt-BR": "Datas não são prometidas aqui; a ordem é.",
+    "zh": "这里不承诺日期，只承诺顺序。"
+  },
+
+  "story.eyebrow": {
+    "en": "The short version", "ru": "Коротко", "es": "La versión corta", "de": "Die kurze Fassung", "fr": "La version courte", "pt-BR": "A versão curta", "zh": "简短版本"
+  },
+  "story.title": {
+    "en": "Why the apps stay small", "ru": "Почему приложения остаются маленькими", "es": "Por qué las apps siguen siendo pequeñas",
+    "de": "Warum die Apps klein bleiben", "fr": "Pourquoi les applis restent petites", "pt-BR": "Por que os apps continuam pequenos", "zh": "为什么应用一直很小"
+  },
+  "story.p1": {
+    "en": "Vaslix Games is one person. That is not a hardship story — it is the constraint that decides everything else. A studio of one cannot maintain a login system, a server fleet and a support desk, so it does not build them, and the games are better for it.",
+    "ru": "Vaslix Games — это один человек. Это не история про трудности, а ограничение, из которого следует всё остальное. Студия из одного не потянет систему входа, парк серверов и поддержку — значит, она их не строит, и играм от этого только лучше.",
+    "es": "Vaslix Games es una persona. No es una historia de sacrificio: es la restricción de la que sale todo lo demás. Un estudio de uno no puede mantener un sistema de cuentas, una flota de servidores y un soporte, así que no los construye, y los juegos ganan con ello.",
+    "de": "Vaslix Games ist eine Person. Das ist keine Leidensgeschichte, sondern die Randbedingung, aus der alles Weitere folgt. Ein Ein-Personen-Studio kann kein Login-System, keine Serverflotte und keinen Support-Desk betreiben — also baut es sie nicht, und die Spiele werden dadurch besser.",
+    "fr": "Vaslix Games, c'est une personne. Ce n'est pas un récit de galère : c'est la contrainte dont découle tout le reste. Un studio d'une personne ne peut pas maintenir un système de comptes, une flotte de serveurs et un support — il ne les construit donc pas, et les jeux s'en portent mieux.",
+    "pt-BR": "A Vaslix Games é uma pessoa. Isso não é uma história de sacrifício: é a restrição da qual decorre todo o resto. Um estúdio de um não consegue manter sistema de login, frota de servidores e suporte — então não os constrói, e os jogos melhoram com isso.",
+    "zh": "Vaslix Games 只有一个人。这不是苦情故事，而是决定其他一切的约束条件。一人工作室维护不了登录系统、服务器集群和客服团队，所以干脆不做——游戏反而因此更好。"
+  },
+  "story.p2": {
+    "en": "What is left is the part players actually touch: the board, the timing, the feel of a piece landing. Every hour that would have gone into an account flow goes into the difficulty curve instead.",
+    "ru": "Остаётся то, чего игрок действительно касается: доска, тайминги, ощущение вставшей на место фигуры. Каждый час, который ушёл бы на регистрацию, уходит в кривую сложности.",
+    "es": "Queda lo que el jugador toca de verdad: el tablero, el ritmo, la sensación de una pieza al encajar. Cada hora que habría ido a un registro va a la curva de dificultad.",
+    "de": "Übrig bleibt, was Spielende wirklich anfassen: das Feld, das Timing, das Gefühl eines einrastenden Teils. Jede Stunde, die in einen Anmeldeprozess geflossen wäre, fließt in die Schwierigkeitskurve.",
+    "fr": "Reste ce que le joueur touche vraiment : le plateau, le rythme, la sensation d'une pièce qui se pose. Chaque heure qui serait partie dans un parcours d'inscription part dans la courbe de difficulté.",
+    "pt-BR": "Sobra o que o jogador realmente toca: o tabuleiro, o ritmo, a sensação de uma peça se encaixando. Cada hora que iria para um cadastro vai para a curva de dificuldade.",
+    "zh": "剩下的正是玩家真正接触的部分：棋盘、节奏、方块落位的手感。本会花在注册流程上的每一小时，都花进了难度曲线。"
+  },
+  "story.p3": {
+    "en": "The catalogue grows slowly and on purpose. A title ships when it is finished, gets updates for years, and never quietly turns into a service you have to log into.",
+    "ru": "Каталог растёт медленно и намеренно. Игра выходит, когда она готова, обновляется годами и никогда не превращается тихо в сервис, куда надо входить.",
+    "es": "El catálogo crece despacio y a propósito. Un título sale cuando está terminado, recibe actualizaciones durante años y nunca se convierte en silencio en un servicio con inicio de sesión.",
+    "de": "Der Katalog wächst langsam, und zwar absichtlich. Ein Titel erscheint, wenn er fertig ist, bekommt jahrelang Updates und wird nie stillschweigend zu einem Dienst mit Anmeldung.",
+    "fr": "Le catalogue grandit lentement, exprès. Un titre sort quand il est fini, reçoit des mises à jour pendant des années, et ne devient jamais en douce un service avec connexion.",
+    "pt-BR": "O catálogo cresce devagar, de propósito. Um título sai quando está pronto, recebe atualizações por anos e nunca vira em silêncio um serviço com login.",
+    "zh": "目录有意地慢慢生长。一款作品做完才发布，之后维护数年，绝不会悄悄变成一个需要登录的服务。"
+  },
+
+  "contact.eyebrow": {
+    "en": "Contact", "ru": "Контакт", "es": "Contacto", "de": "Kontakt", "fr": "Contact", "pt-BR": "Contato", "zh": "联系"
+  },
+  "contact.title": {
+    "en": "Write, and a person answers", "ru": "Напишите — ответит человек", "es": "Escribe y responde una persona",
+    "de": "Schreiben Sie — es antwortet ein Mensch", "fr": "Écrivez, une personne répond", "pt-BR": "Escreva, e uma pessoa responde", "zh": "写信来，回信的是人"
+  },
+  "contact.text": {
+    "en": "Bugs, ideas, press questions and partnership offers all land in the same inbox. For anything that crashed, include your device and Android version.",
+    "ru": "Баги, идеи, вопросы прессы и предложения — всё приходит в один ящик. Если что-то упало, добавьте модель устройства и версию Android.",
+    "es": "Errores, ideas, preguntas de prensa y propuestas llegan al mismo buzón. Si algo se cerró de golpe, indica el dispositivo y la versión de Android.",
+    "de": "Fehler, Ideen, Presseanfragen und Angebote landen im selben Postfach. Bei einem Absturz bitte Gerät und Android-Version nennen.",
+    "fr": "Bugs, idées, questions presse et propositions arrivent dans la même boîte. En cas de plantage, indiquez l'appareil et la version d'Android.",
+    "pt-BR": "Bugs, ideias, dúvidas de imprensa e propostas caem na mesma caixa. Se algo travou, informe o aparelho e a versão do Android.",
+    "zh": "错误报告、想法、媒体提问和合作邀约都进同一个邮箱。若发生崩溃，请附上设备型号与 Android 版本。"
+  },
+  "contact.btn": {
+    "en": "Send an email", "ru": "Написать письмо", "es": "Enviar un correo", "de": "E-Mail schreiben", "fr": "Envoyer un e-mail", "pt-BR": "Enviar um e-mail", "zh": "发送邮件"
+  },
+
+  "footer.games": { "en": "Games", "ru": "Игры", "es": "Juegos", "de": "Spiele", "fr": "Jeux", "pt-BR": "Jogos", "zh": "游戏" },
+  "footer.gamesAria": { "en": "Games", "ru": "Игры", "es": "Juegos", "de": "Spiele", "fr": "Jeux", "pt-BR": "Jogos", "zh": "游戏" },
+  "footer.studio": { "en": "Studio", "ru": "Студия", "es": "Estudio", "de": "Studio", "fr": "Studio", "pt-BR": "Estúdio", "zh": "工作室" },
+  "footer.studioAria": {
+    "en": "Studio links", "ru": "Ссылки студии", "es": "Enlaces del estudio", "de": "Studio-Links", "fr": "Liens du studio", "pt-BR": "Links do estúdio", "zh": "工作室链接"
+  },
+  "footer.contactTitle": { "en": "Contact", "ru": "Контакт", "es": "Contacto", "de": "Kontakt", "fr": "Contact", "pt-BR": "Contato", "zh": "联系" },
+  "footer.replyTime": {
+    "en": "Usually answered within five business days.",
+    "ru": "Обычно отвечаем в течение пяти рабочих дней.",
+    "es": "Normalmente respondemos en cinco días hábiles.",
+    "de": "Antwort in der Regel binnen fünf Werktagen.",
+    "fr": "Réponse en général sous cinq jours ouvrés.",
+    "pt-BR": "Normalmente respondemos em cinco dias úteis.",
+    "zh": "通常五个工作日内回复。"
+  },
+  "footer.builtWith": {
+    "en": "Hand-written HTML. No trackers on this site.",
+    "ru": "HTML написан руками. Трекеров на сайте нет.",
+    "es": "HTML escrito a mano. Sin rastreadores en este sitio.",
+    "de": "Handgeschriebenes HTML. Keine Tracker auf dieser Seite.",
+    "fr": "HTML écrit à la main. Aucun traceur sur ce site.",
+    "pt-BR": "HTML escrito à mão. Sem rastreadores neste site.",
+    "zh": "手写 HTML，本站没有任何跟踪器。"
+  },
+
+  "nf.eyebrow": { "en": "404", "ru": "404", "es": "404", "de": "404", "fr": "404", "pt-BR": "404", "zh": "404" },
+  "nf.title": {
+    "en": "This square is empty", "ru": "Эта клетка пустая", "es": "Esta casilla está vacía",
+    "de": "Dieses Feld ist leer", "fr": "Cette case est vide", "pt-BR": "Esta casa está vazia", "zh": "这一格是空的"
+  },
+  "nf.body": {
+    "en": "The address does not lead anywhere. The shelf, on the other hand, is right where you left it.",
+    "ru": "Адрес никуда не ведёт. Полка, впрочем, там же, где вы её оставили.",
+    "es": "La dirección no lleva a ninguna parte. La estantería, en cambio, sigue donde la dejaste.",
+    "de": "Die Adresse führt nirgendwohin. Das Regal steht dagegen noch genau dort.",
+    "fr": "L'adresse ne mène nulle part. L'étagère, elle, n'a pas bougé.",
+    "pt-BR": "O endereço não leva a lugar nenhum. A prateleira continua onde você a deixou.",
+    "zh": "这个地址不通向任何地方。架子倒还在原处。"
+  },
+  "nf.home": { "en": "Home", "ru": "На главную", "es": "Inicio", "de": "Startseite", "fr": "Accueil", "pt-BR": "Início", "zh": "回到首页" },
+  "nf.games": { "en": "See the shelf", "ru": "Смотреть полку", "es": "Ver la estantería", "de": "Regal ansehen", "fr": "Voir l'étagère", "pt-BR": "Ver a prateleira", "zh": "看看架子" }
+}

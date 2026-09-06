@@ -1,0 +1,1496 @@
+{
+  "meta.title": {
+    "en": "Vaslix Games — small Android puzzle games, built to last",
+    "ru": "Vaslix Games — маленькие Android-головоломки, сделанные надолго",
+    "es": "Vaslix Games — pequeños puzzles para Android, hechos para durar",
+    "de": "Vaslix Games — kleine Android-Puzzles, gebaut, um zu bleiben",
+    "fr": "Vaslix Games — petits puzzles Android, faits pour durer",
+    "pt-BR": "Vaslix Games — pequenos puzzles Android, feitos para durar",
+    "zh": "Vaslix Games — 小而耐玩的 Android 益智游戏"
+  },
+  "meta.description": {
+    "en": "Vaslix Games is an independent Android studio shipping small, focused apps across genres — puzzle today, audio and arcade next. Gridlix:2048 and Blocklix are both live on Google Play.",
+    "ru": "Vaslix Games — независимая Android-студия, выпускающая компактные, сфокусированные приложения в разных жанрах: сегодня пазлы, дальше аудио и аркады. Gridlix:2048 и Blocklix уже доступны в Google Play.",
+    "es": "Vaslix Games es un estudio Android independiente que crea apps pequeñas y enfocadas en varios géneros — puzzle hoy, audio y arcade después. Gridlix:2048 y Blocklix ya están en Google Play.",
+    "de": "Vaslix Games ist ein unabhängiges Android-Studio, das kleine, fokussierte Apps in verschiedenen Genres veröffentlicht — heute Puzzle, als nächstes Audio und Arcade. Gridlix:2048 und Blocklix sind beide auf Google Play.",
+    "fr": "Vaslix Games est un studio Android indépendant qui publie des apps compactes et soignées dans plusieurs genres — puzzle aujourd'hui, audio et arcade ensuite. Gridlix:2048 et Blocklix sont tous deux sur Google Play.",
+    "pt-BR": "Vaslix Games é um estúdio Android independente que publica apps compactos e cuidadosos em vários gêneros — puzzle hoje, áudio e arcade depois. Gridlix:2048 e Blocklix já estão na Google Play.",
+    "zh": "Vaslix Games 是一家独立 Android 工作室，专注开发紧凑、用心的应用，跨越多种类型——今日 Puzzle，未来音频与街机。Gridlix:2048 与 Blocklix 均已在 Google Play 上线。"
+  },
+  "meta.ogTitle": {
+    "en": "Vaslix Games",
+    "ru": "Vaslix Games",
+    "es": "Vaslix Games",
+    "de": "Vaslix Games",
+    "fr": "Vaslix Games",
+    "pt-BR": "Vaslix Games",
+    "zh": "Vaslix Games"
+  },
+  "meta.ogDesc": {
+    "en": "Independent Android studio. Small, focused games across genres.",
+    "ru": "Независимая Android-студия. Небольшие, сфокусированные игры в разных жанрах.",
+    "es": "Estudio Android independiente. Juegos pequeños y enfocados en varios géneros.",
+    "de": "Unabhängiges Android-Studio. Kleine, fokussierte Spiele über Genres hinweg.",
+    "fr": "Studio Android indépendant. Petits jeux concentrés, tous genres.",
+    "pt-BR": "Estúdio Android independente. Pequenos jogos focados, em vários gêneros.",
+    "zh": "独立 Android 工作室。小巧、专注的游戏，跨越多种类型。"
+  },
+  "nav.brand": {
+    "en": "Vaslix Games",
+    "ru": "Vaslix Games",
+    "es": "Vaslix Games",
+    "de": "Vaslix Games",
+    "fr": "Vaslix Games",
+    "pt-BR": "Vaslix Games",
+    "zh": "Vaslix Games"
+  },
+  "nav.contact": {
+    "en": "Contact",
+    "ru": "Контакты",
+    "es": "Contacto",
+    "de": "Kontakt",
+    "fr": "Contact",
+    "pt-BR": "Contato",
+    "zh": "联系"
+  },
+  "nav.privacy": {
+    "en": "Privacy",
+    "ru": "Приватность",
+    "es": "Privacidad",
+    "de": "Datenschutz",
+    "fr": "Confidentialité",
+    "pt-BR": "Privacidade",
+    "zh": "隐私"
+  },
+  "nav.langLabel": {
+    "en": "Change language",
+    "ru": "Сменить язык",
+    "es": "Cambiar idioma",
+    "de": "Sprache ändern",
+    "fr": "Changer de langue",
+    "pt-BR": "Mudar idioma",
+    "zh": "切换语言"
+  },
+  "nav.theme.light": {
+    "en": "Switch to light theme",
+    "ru": "Включить светлую тему",
+    "es": "Cambiar a tema claro",
+    "de": "Zum hellen Theme wechseln",
+    "fr": "Passer au thème clair",
+    "pt-BR": "Mudar para tema claro",
+    "zh": "切换到浅色主题"
+  },
+  "nav.theme.dark": {
+    "en": "Switch to dark theme",
+    "ru": "Включить тёмную тему",
+    "es": "Cambiar a tema oscuro",
+    "de": "Zum dunklen Theme wechseln",
+    "fr": "Passer au thème sombre",
+    "pt-BR": "Mudar para tema escuro",
+    "zh": "切换到深色主题"
+  },
+  "nav.theme.auto": {
+    "en": "Switch to automatic theme",
+    "ru": "Включить автотему",
+    "es": "Cambiar a tema automático",
+    "de": "Zum automatischen Theme wechseln",
+    "fr": "Passer au thème automatique",
+    "pt-BR": "Mudar para tema automático",
+    "zh": "切换到自动主题"
+  },
+  "nav.games": {
+    "en": "Games",
+    "ru": "Игры",
+    "es": "Juegos",
+    "de": "Spiele",
+    "fr": "Jeux",
+    "pt-BR": "Jogos",
+    "zh": "游戏"
+  },
+  "nav.play": {
+    "en": "How it plays",
+    "ru": "Как играется",
+    "es": "Cómo se juega",
+    "de": "So spielt es sich",
+    "fr": "Comment on joue",
+    "pt-BR": "Como se joga",
+    "zh": "怎么玩"
+  },
+  "nav.themes": {
+    "en": "Themes",
+    "ru": "Темы",
+    "es": "Temas",
+    "de": "Themes",
+    "fr": "Thèmes",
+    "pt-BR": "Temas",
+    "zh": "主题"
+  },
+  "nav.studio": {
+    "en": "Studio",
+    "ru": "Студия",
+    "es": "Estudio",
+    "de": "Studio",
+    "fr": "Studio",
+    "pt-BR": "Estúdio",
+    "zh": "工作室"
+  },
+  "nav.menu": {
+    "en": "Menu",
+    "ru": "Меню",
+    "es": "Menú",
+    "de": "Menü",
+    "fr": "Menu",
+    "pt-BR": "Menu",
+    "zh": "菜单"
+  },
+  "hero.h1": {
+    "en": "Vaslix Games",
+    "ru": "Vaslix Games",
+    "es": "Vaslix Games",
+    "de": "Vaslix Games",
+    "fr": "Vaslix Games",
+    "pt-BR": "Vaslix Games",
+    "zh": "Vaslix Games"
+  },
+  "hero.tagline": {
+    "en": "Small Android games. Focused, fast, built to last.",
+    "ru": "Небольшие Android-игры. Сфокусированные, быстрые, сделанные надолго.",
+    "es": "Pequeños juegos Android. Enfocados, rápidos, hechos para durar.",
+    "de": "Kleine Android-Spiele. Fokussiert, schnell, gebaut um zu bleiben.",
+    "fr": "Petits jeux Android. Concentrés, rapides, faits pour durer.",
+    "pt-BR": "Pequenos jogos Android. Focados, rápidos, feitos para durar.",
+    "zh": "Android 小游戏。专注、迅捷、经得起时间。"
+  },
+  "hero.kick": {
+    "en": "Independent Android studio",
+    "ru": "Независимая Android-студия",
+    "es": "Estudio Android independiente",
+    "de": "Unabhängiges Android-Studio",
+    "fr": "Studio Android indépendant",
+    "pt-BR": "Estúdio Android independente",
+    "zh": "独立 Android 工作室"
+  },
+  "hero.h1a": {
+    "en": "Drop.",
+    "ru": "Положи.",
+    "es": "Coloca.",
+    "de": "Ablegen.",
+    "fr": "Posez.",
+    "pt-BR": "Encaixe.",
+    "zh": "放置。"
+  },
+  "hero.h1b": {
+    "en": "Clear.",
+    "ru": "Очисти.",
+    "es": "Limpia.",
+    "de": "Abräumen.",
+    "fr": "Nettoyez.",
+    "pt-BR": "Limpe.",
+    "zh": "消除。"
+  },
+  "hero.h1c": {
+    "en": "Combo.",
+    "ru": "Комбо.",
+    "es": "Combo.",
+    "de": "Combo.",
+    "fr": "Combo.",
+    "pt-BR": "Combo.",
+    "zh": "连击。"
+  },
+  "hero.lede": {
+    "en": "Two focused puzzle games from a one-person studio. No accounts, no servers of ours, twelve languages — and a Premium that only ever removes the ads.",
+    "ru": "Две сфокусированные головоломки от студии одного человека. Без аккаунтов, без своих серверов, двенадцать языков — и Premium, который только убирает рекламу.",
+    "es": "Dos puzzles enfocados de un estudio de una sola persona. Sin cuentas, sin servidores nuestros, doce idiomas — y un Premium que solo quita los anuncios.",
+    "de": "Zwei fokussierte Puzzles aus einem Ein-Personen-Studio. Keine Konten, keine eigenen Server, zwölf Sprachen — und ein Premium, das nur die Werbung entfernt.",
+    "fr": "Deux puzzles concentrés d'un studio d'une seule personne. Pas de compte, pas de serveur à nous, douze langues — et un Premium qui ne fait qu'enlever les pubs.",
+    "pt-BR": "Dois puzzles focados de um estúdio de uma pessoa só. Sem contas, sem servidores nossos, doze idiomas — e um Premium que só tira os anúncios.",
+    "zh": "来自一人工作室的两款专注益智游戏。无需账号，没有我们的服务器，十二种语言——还有一个只负责去掉广告的 Premium。"
+  },
+  "hero.boardAria": {
+    "en": "A Blocklix board playing itself",
+    "ru": "Доска Blocklix играет сама",
+    "es": "Un tablero de Blocklix jugando solo",
+    "de": "Ein Blocklix-Feld spielt sich selbst",
+    "fr": "Un plateau Blocklix qui joue tout seul",
+    "pt-BR": "Um tabuleiro do Blocklix jogando sozinho",
+    "zh": "一块自动演示的 Blocklix 棋盘"
+  },
+  "hero.scroll": {
+    "en": "Scroll",
+    "ru": "Листайте",
+    "es": "Desplaza",
+    "de": "Scrollen",
+    "fr": "Défiler",
+    "pt-BR": "Role",
+    "zh": "向下滚动"
+  },
+  "about.aria": {
+    "en": "About Vaslix Games",
+    "ru": "О студии Vaslix Games",
+    "es": "Sobre Vaslix Games",
+    "de": "Über Vaslix Games",
+    "fr": "À propos de Vaslix Games",
+    "pt-BR": "Sobre a Vaslix Games",
+    "zh": "关于 Vaslix Games"
+  },
+  "about.eyebrow": {
+    "en": "About",
+    "ru": "О студии",
+    "es": "Acerca de",
+    "de": "Über uns",
+    "fr": "À propos",
+    "pt-BR": "Sobre",
+    "zh": "关于"
+  },
+  "about.title": {
+    "en": "A small studio with a long view",
+    "ru": "Маленькая студия с длинным горизонтом",
+    "es": "Un estudio pequeño con visión a largo plazo",
+    "de": "Ein kleines Studio mit langem Atem",
+    "fr": "Un petit studio avec une vue lointaine",
+    "pt-BR": "Um estúdio pequeno com visão de longo prazo",
+    "zh": "一家有长远眼光的小工作室"
+  },
+  "about.lede": {
+    "en": "Vaslix Games is a one-person Android publisher with a simple thesis: <strong>small apps, made carefully, that respect your device and your attention.</strong> No accounts to sign into, no servers of ours storing your scores, no investor pressure to crank the monetisation up. Just focused puzzles today, audio and arcade titles next.",
+    "ru": "Vaslix Games — это Android-издатель из одного человека с простым принципом: <strong>небольшие приложения, сделанные аккуратно, уважающие ваше устройство и ваше внимание.</strong> Никаких аккаунтов, никаких наших серверов, хранящих ваши результаты, никакого давления инвесторов крутить монетизацию вверх. Сегодня сфокусированные пазлы, дальше аудио и аркады.",
+    "es": "Vaslix Games es un editor Android de una sola persona con una tesis simple: <strong>apps pequeñas, hechas con cuidado, que respetan tu dispositivo y tu atención.</strong> Sin cuentas, sin servidores nuestros guardando tus puntuaciones, sin presión de inversores para subir la monetización. Hoy puzzles cuidados, después audio y arcade.",
+    "de": "Vaslix Games ist ein Ein-Personen-Android-Publisher mit einer einfachen These: <strong>kleine Apps, mit Sorgfalt gebaut, die dein Gerät und deine Aufmerksamkeit respektieren.</strong> Keine Konten zum Anmelden, keine eigenen Server, die deine Scores speichern, kein Investorendruck, die Monetarisierung hochzudrehen. Heute fokussierte Puzzles, als Nächstes Audio- und Arcade-Titel.",
+    "fr": "Vaslix Games est un éditeur Android d'une seule personne avec une thèse simple : <strong>de petites apps, faites avec soin, qui respectent votre appareil et votre attention.</strong> Pas de compte à créer, pas de serveur chez nous qui stocke vos scores, aucune pression d'investisseur pour pousser la monétisation. Aujourd'hui des puzzles concentrés, ensuite des titres audio et arcade.",
+    "pt-BR": "Vaslix Games é um publisher Android de uma pessoa só com uma tese simples: <strong>apps pequenos, feitos com cuidado, que respeitam seu aparelho e sua atenção.</strong> Sem contas para entrar, sem servidores nossos guardando seus placares, sem pressão de investidor para puxar a monetização. Hoje puzzles focados, depois títulos de áudio e arcade.",
+    "zh": "Vaslix Games 是一家一人 Android 发行工作室，理念很简单：<strong>用心打造的小型应用，尊重你的设备与注意力。</strong>无需注册账号，没有我们自己的服务器保存你的成绩，没有投资人催着上调商业化。当下是专注的拼图，下一步是音频与街机。"
+  },
+  "about.stats.apps": {
+    "en": "apps shipped",
+    "ru": "выпущенных приложений",
+    "es": "apps publicadas",
+    "de": "veröffentlichte Apps",
+    "fr": "apps publiées",
+    "pt-BR": "apps publicados",
+    "zh": "已发布应用"
+  },
+  "about.stats.langs": {
+    "en": "supported languages",
+    "ru": "поддерживаемых языков",
+    "es": "idiomas soportados",
+    "de": "unterstützte Sprachen",
+    "fr": "langues prises en charge",
+    "pt-BR": "idiomas suportados",
+    "zh": "支持语言"
+  },
+  "about.stats.trackers": {
+    "en": "first-party trackers",
+    "ru": "своих трекеров",
+    "es": "trackers propios",
+    "de": "eigene Tracker",
+    "fr": "trackers maison",
+    "pt-BR": "trackers próprios",
+    "zh": "自有追踪器"
+  },
+  "about.stats.billing": {
+    "en": "via Google Play Billing",
+    "ru": "через Google Play Billing",
+    "es": "vía Google Play Billing",
+    "de": "über Google Play Billing",
+    "fr": "via Google Play Billing",
+    "pt-BR": "via Google Play Billing",
+    "zh": "通过 Google Play Billing"
+  },
+  "games.eyebrow": {
+    "en": "Our games",
+    "ru": "Наши игры",
+    "es": "Nuestros juegos",
+    "de": "Unsere Spiele",
+    "fr": "Nos jeux",
+    "pt-BR": "Nossos jogos",
+    "zh": "我们的游戏"
+  },
+  "games.title": {
+    "en": "What we ship",
+    "ru": "Что мы выпускаем",
+    "es": "Lo que publicamos",
+    "de": "Was wir veröffentlichen",
+    "fr": "Ce que nous publions",
+    "pt-BR": "O que publicamos",
+    "zh": "我们发布的作品"
+  },
+  "games.intro": {
+    "en": "An independent studio shipping small Android apps across genres — puzzle now, audio and arcade next. Gridlix:2048 and Blocklix are both live on Google Play; audio titles are in development.",
+    "ru": "Независимая студия, выпускающая компактные Android-приложения в разных жанрах — сегодня пазлы, дальше аудио и аркады. Gridlix:2048 и Blocklix уже доступны в Google Play; аудио-проекты в разработке.",
+    "es": "Estudio independiente que publica apps Android compactas en varios géneros — hoy puzzle, después audio y arcade. Gridlix:2048 y Blocklix ya están en Google Play; los títulos de audio están en desarrollo.",
+    "de": "Unabhängiges Studio, das kompakte Android-Apps in verschiedenen Genres veröffentlicht — heute Puzzle, als nächstes Audio und Arcade. Gridlix:2048 und Blocklix sind beide auf Google Play; Audio-Titel sind in Entwicklung.",
+    "fr": "Studio indépendant qui publie des apps Android compactes dans plusieurs genres — aujourd'hui le puzzle, ensuite l'audio et l'arcade. Gridlix:2048 et Blocklix sont tous deux sur Google Play ; les titres audio sont en développement.",
+    "pt-BR": "Estúdio independente publicando apps Android compactos em vários gêneros — hoje puzzle, depois áudio e arcade. Gridlix:2048 e Blocklix já estão na Google Play; títulos de áudio estão em desenvolvimento.",
+    "zh": "独立工作室，发布跨多种类型的紧凑 Android 应用——当下是 Puzzle，接下来是音频与街机。Gridlix:2048 与 Blocklix 均已在 Google Play 上线；音频作品正在开发中。"
+  },
+  "games.aria": {
+    "en": "Our games",
+    "ru": "Наши игры",
+    "es": "Nuestros juegos",
+    "de": "Unsere Spiele",
+    "fr": "Nos jeux",
+    "pt-BR": "Nossos jogos",
+    "zh": "我们的游戏"
+  },
+  "card.gridlix.iconAlt": {
+    "en": "Gridlix:2048 app icon",
+    "ru": "Иконка приложения Gridlix:2048",
+    "es": "Icono de la app Gridlix:2048",
+    "de": "Gridlix:2048 App-Symbol",
+    "fr": "Icône de l'app Gridlix:2048",
+    "pt-BR": "Ícone do app Gridlix:2048",
+    "zh": "Gridlix:2048 应用图标"
+  },
+  "card.gridlix.genre": {
+    "en": "Puzzle",
+    "ru": "Пазл",
+    "es": "Puzzle",
+    "de": "Puzzle",
+    "fr": "Puzzle",
+    "pt-BR": "Puzzle",
+    "zh": "益智"
+  },
+  "card.gridlix.status": {
+    "en": "Live",
+    "ru": "Доступен",
+    "es": "Disponible",
+    "de": "Verfügbar",
+    "fr": "Disponible",
+    "pt-BR": "Disponível",
+    "zh": "已上线"
+  },
+  "card.gridlix.title": {
+    "en": "Gridlix:2048",
+    "ru": "Gridlix:2048",
+    "es": "Gridlix:2048",
+    "de": "Gridlix:2048",
+    "fr": "Gridlix:2048",
+    "pt-BR": "Gridlix:2048",
+    "zh": "Gridlix:2048"
+  },
+  "card.gridlix.desc": {
+    "en": "A 4×4 merge puzzle for Android. Four named boosters — Undo, Delete, Shuffle, Spawn — and a Continue when the board fills. Five color themes, tuned haptics and sound, and an optional ad-free Premium that refreshes your boosters.",
+    "ru": "Пазл-слияние 4×4 для Android. Четыре именных бустера — Откат, Удаление, Перемешать, Спавн — и Продолжение, когда доска заполнится. Пять цветовых тем, выверенные тактильные отклики и звук, опциональная Premium-подписка без рекламы, обновляющая ваши бустеры.",
+    "es": "Un puzzle de fusión 4×4 para Android. Cuatro boosters con nombre — Deshacer, Borrar, Barajar, Aparecer — y un Continue cuando el tablero se llena. Cinco temas de color, hápticos y sonido ajustados, y un Premium opcional sin anuncios que recarga tus boosters.",
+    "de": "Ein 4×4-Merge-Puzzle für Android. Vier benannte Booster — Rückgängig, Löschen, Mischen, Spawn — und ein Continue, wenn das Brett voll ist. Fünf Farbthemes, fein abgestimmte Haptik und Sound, und ein optionales werbefreies Premium, das deine Booster auffrischt.",
+    "fr": "Un puzzle de fusion 4×4 pour Android. Quatre boosters nommés — Annuler, Supprimer, Mélanger, Apparaître — et un Continue quand le plateau se remplit. Cinq thèmes de couleur, retours haptiques et son réglés, et un Premium optionnel sans pub qui recharge vos boosters.",
+    "pt-BR": "Um puzzle de fusão 4×4 para Android. Quatro boosters nomeados — Desfazer, Apagar, Embaralhar, Surgir — e um Continue quando o tabuleiro enche. Cinco temas de cor, hápticos e som ajustados, e um Premium opcional sem anúncios que recarrega seus boosters.",
+    "zh": "Android 上的 4×4 合并 Puzzle。四个具名加成——撤销、删除、洗牌、生成——以及棋盘填满时的 Continue。五种配色主题，精心调校的振动与声音，可选无广告 Premium，并会刷新你的加成。"
+  },
+  "card.gridlix.feat.1": {
+    "en": "Android 8+",
+    "ru": "Android 8+",
+    "es": "Android 8+",
+    "de": "Android 8+",
+    "fr": "Android 8+",
+    "pt-BR": "Android 8+",
+    "zh": "Android 8+"
+  },
+  "card.gridlix.feat.2": {
+    "en": "5 themes",
+    "ru": "5 тем",
+    "es": "5 temas",
+    "de": "5 Themes",
+    "fr": "5 thèmes",
+    "pt-BR": "5 temas",
+    "zh": "5 种主题"
+  },
+  "card.gridlix.feat.3": {
+    "en": "Sound + haptics",
+    "ru": "Звук + тактильные",
+    "es": "Sonido + hápticos",
+    "de": "Sound + Haptik",
+    "fr": "Son + haptique",
+    "pt-BR": "Som + hápticos",
+    "zh": "声音 + 振动"
+  },
+  "card.gridlix.feat.4": {
+    "en": "Premium · ad-free",
+    "ru": "Premium · без рекламы",
+    "es": "Premium · sin anuncios",
+    "de": "Premium · werbefrei",
+    "fr": "Premium · sans pub",
+    "pt-BR": "Premium · sem anúncios",
+    "zh": "Premium · 无广告"
+  },
+  "card.gridlix.badge": {
+    "en": "./badges/google-play-en.png",
+    "ru": "./badges/google-play-ru.png",
+    "es": "./badges/google-play-es.png",
+    "de": "./badges/google-play-de.png",
+    "fr": "./badges/google-play-fr.png",
+    "pt-BR": "./badges/google-play-pt-BR.png",
+    "zh": "./badges/google-play-zh.png"
+  },
+  "card.gridlix.badgeAlt": {
+    "en": "Get it on Google Play",
+    "ru": "Доступно в Google Play",
+    "es": "Disponible en Google Play",
+    "de": "Jetzt bei Google Play",
+    "fr": "Disponible sur Google Play",
+    "pt-BR": "Disponível no Google Play",
+    "zh": "现已上架 Google Play"
+  },
+  "card.gridlix.playAria": {
+    "en": "Gridlix:2048 on Google Play",
+    "ru": "Gridlix:2048 в Google Play",
+    "es": "Gridlix:2048 en Google Play",
+    "de": "Gridlix:2048 bei Google Play",
+    "fr": "Gridlix:2048 sur Google Play",
+    "pt-BR": "Gridlix:2048 no Google Play",
+    "zh": "在 Google Play 上获取 Gridlix:2048"
+  },
+  "card.blocklix.iconAlt": {
+    "en": "Blocklix app icon",
+    "ru": "Иконка приложения Blocklix",
+    "es": "Icono de la app Blocklix",
+    "de": "Blocklix App-Symbol",
+    "fr": "Icône de l'app Blocklix",
+    "pt-BR": "Ícone do app Blocklix",
+    "zh": "Blocklix 应用图标"
+  },
+  "card.blocklix.genre": {
+    "en": "Puzzle",
+    "ru": "Пазл",
+    "es": "Puzzle",
+    "de": "Puzzle",
+    "fr": "Puzzle",
+    "pt-BR": "Puzzle",
+    "zh": "益智"
+  },
+  "card.blocklix.status": {
+    "en": "Live",
+    "ru": "Доступен",
+    "es": "Disponible",
+    "de": "Verfügbar",
+    "fr": "Disponible",
+    "pt-BR": "Disponível",
+    "zh": "已上线"
+  },
+  "card.blocklix.title": {
+    "en": "Blocklix",
+    "ru": "Blocklix",
+    "es": "Blocklix",
+    "de": "Blocklix",
+    "fr": "Blocklix",
+    "pt-BR": "Blocklix",
+    "zh": "Blocklix"
+  },
+  "card.blocklix.desc": {
+    "en": "Drop shapes into an 8×8 board, clear lines and squares, chain combos for big multipliers. Six difficulty levels, 38 themes, 60 ranks across 21 achievement chains, four boosters, daily and weekly missions with a streak chest, and a cosmetics wardrobe. Optional ad-free Premium with 2× stars and a daily gift.",
+    "ru": "Кладите фигуры на поле 8×8, очищайте линии и квадраты, собирайте комбо ради больших множителей. Шесть уровней сложности, 38 тем, 60 рангов и 21 цепочка достижений, четыре бустера, ежедневные и недельные задания со стрик-сундуком и гардероб косметики. Опциональный Premium без рекламы, с удвоением звёзд и ежедневным подарком.",
+    "es": "Coloca formas en un tablero 8×8, limpia líneas y cuadrados, encadena combos para multiplicadores grandes. Seis niveles de dificultad, 38 temas, 60 rangos en 21 cadenas de logros, cuatro boosters, misiones diarias y semanales con cofre de racha, y un vestuario de cosméticos. Premium opcional sin anuncios, con estrellas ×2 y regalo diario.",
+    "de": "Setze Formen auf ein 8×8-Feld, räume Linien und Quadrate ab, kette Combos für große Multiplikatoren. Sechs Schwierigkeitsstufen, 38 Themes, 60 Ränge in 21 Erfolgsketten, vier Booster, Tages- und Wochenmissionen mit Serien-Truhe und eine Kosmetik-Garderobe. Optionales werbefreies Premium mit 2× Sternen und einem Tagesgeschenk.",
+    "fr": "Posez des formes sur un plateau 8×8, nettoyez lignes et carrés, enchaînez les combos pour de gros multiplicateurs. Six niveaux de difficulté, 38 thèmes, 60 rangs sur 21 chaînes de succès, quatre boosters, missions quotidiennes et hebdomadaires avec coffre de série, et un vestiaire de cosmétiques. Premium optionnel sans pub, étoiles ×2 et cadeau quotidien.",
+    "pt-BR": "Coloque formas num tabuleiro 8×8, limpe linhas e quadrados, encadeie combos para multiplicadores altos. Seis níveis de dificuldade, 38 temas, 60 patentes em 21 cadeias de conquistas, quatro boosters, missões diárias e semanais com baú de sequência, e um guarda-roupa de cosméticos. Premium opcional sem anúncios, com estrelas ×2 e presente diário.",
+    "zh": "在 8×8 棋盘上放置方块，消除整行整列，连击可获得高倍数。六个难度等级、38 种主题、21 条成就链中的 60 个段位、四种道具、带连续签到宝箱的每日与每周任务，以及一套外观衣橱。可选的无广告 Premium，双倍星星与每日礼物。"
+  },
+  "card.blocklix.feat.1": {
+    "en": "Android 8+",
+    "ru": "Android 8+",
+    "es": "Android 8+",
+    "de": "Android 8+",
+    "fr": "Android 8+",
+    "pt-BR": "Android 8+",
+    "zh": "Android 8+"
+  },
+  "card.blocklix.feat.2": {
+    "en": "38 themes",
+    "ru": "38 тем",
+    "es": "38 temas",
+    "de": "38 Themes",
+    "fr": "38 thèmes",
+    "pt-BR": "38 temas",
+    "zh": "38 种主题"
+  },
+  "card.blocklix.feat.3": {
+    "en": "60 ranks",
+    "ru": "60 рангов",
+    "es": "60 rangos",
+    "de": "60 Ränge",
+    "fr": "60 rangs",
+    "pt-BR": "60 patentes",
+    "zh": "60 个段位"
+  },
+  "card.blocklix.feat.4": {
+    "en": "6 difficulties",
+    "ru": "6 сложностей",
+    "es": "6 dificultades",
+    "de": "6 Schwierigkeiten",
+    "fr": "6 difficultés",
+    "pt-BR": "6 dificuldades",
+    "zh": "6 个难度"
+  },
+  "card.blocklix.feat.5": {
+    "en": "Premium · 2× stars",
+    "ru": "Premium · ×2 звёзд",
+    "es": "Premium · estrellas ×2",
+    "de": "Premium · 2× Sterne",
+    "fr": "Premium · étoiles ×2",
+    "pt-BR": "Premium · estrelas ×2",
+    "zh": "Premium · 双倍星星"
+  },
+  "card.blocklix.badge": {
+    "en": "./badges/google-play-en.png",
+    "ru": "./badges/google-play-ru.png",
+    "es": "./badges/google-play-es.png",
+    "de": "./badges/google-play-de.png",
+    "fr": "./badges/google-play-fr.png",
+    "pt-BR": "./badges/google-play-pt-BR.png",
+    "zh": "./badges/google-play-zh.png"
+  },
+  "card.blocklix.badgeAlt": {
+    "en": "Get it on Google Play",
+    "ru": "Доступно в Google Play",
+    "es": "Disponible en Google Play",
+    "de": "Jetzt bei Google Play",
+    "fr": "Disponible sur Google Play",
+    "pt-BR": "Disponível no Google Play",
+    "zh": "现已上架 Google Play"
+  },
+  "card.blocklix.playAria": {
+    "en": "Blocklix on Google Play",
+    "ru": "Blocklix в Google Play",
+    "es": "Blocklix en Google Play",
+    "de": "Blocklix bei Google Play",
+    "fr": "Blocklix sur Google Play",
+    "pt-BR": "Blocklix no Google Play",
+    "zh": "在 Google Play 上获取 Blocklix"
+  },
+  "card.cta": {
+    "en": "Open on Google Play",
+    "ru": "Открыть в Google Play",
+    "es": "Abrir en Google Play",
+    "de": "Bei Google Play öffnen",
+    "fr": "Ouvrir sur Google Play",
+    "pt-BR": "Abrir na Google Play",
+    "zh": "在 Google Play 打开"
+  },
+  "roadmap.aria": {
+    "en": "Roadmap",
+    "ru": "Дорожная карта",
+    "es": "Hoja de ruta",
+    "de": "Roadmap",
+    "fr": "Feuille de route",
+    "pt-BR": "Roteiro",
+    "zh": "路线图"
+  },
+  "roadmap.eyebrow": {
+    "en": "Roadmap",
+    "ru": "Дорожная карта",
+    "es": "Hoja de ruta",
+    "de": "Roadmap",
+    "fr": "Feuille de route",
+    "pt-BR": "Roteiro",
+    "zh": "路线图"
+  },
+  "roadmap.title": {
+    "en": "Where we're going",
+    "ru": "Куда мы идём",
+    "es": "Hacia dónde vamos",
+    "de": "Wohin wir gehen",
+    "fr": "Où nous allons",
+    "pt-BR": "Para onde vamos",
+    "zh": "我们的方向"
+  },
+  "roadmap.intro": {
+    "en": "No promises on dates, but here's the working order. Things move when they're ready and not before.",
+    "ru": "Без обещаний по датам, но порядок работы такой. Релиз происходит, когда готово, и не раньше.",
+    "es": "Sin promesas de fechas, pero este es el orden de trabajo. Cada cosa sale cuando está lista, no antes.",
+    "de": "Keine Datumsversprechen, aber das ist die Arbeitsreihenfolge. Releases kommen, wenn sie fertig sind, und nicht früher.",
+    "fr": "Pas de promesses sur les dates, mais voici l'ordre de travail. Une sortie arrive quand elle est prête, pas avant.",
+    "pt-BR": "Sem promessa de datas, mas esta é a ordem do trabalho. Cada coisa sai quando está pronta, não antes.",
+    "zh": "不承诺日期，但工作顺序如下。准备好了才发布，绝不提前。"
+  },
+  "roadmap.r1.meta": {
+    "en": "Shipped · 2026",
+    "ru": "Выпущено · 2026",
+    "es": "Publicado · 2026",
+    "de": "Veröffentlicht · 2026",
+    "fr": "Publié · 2026",
+    "pt-BR": "Publicado · 2026",
+    "zh": "已发布 · 2026"
+  },
+  "roadmap.r1.title": {
+    "en": "Gridlix:2048",
+    "ru": "Gridlix:2048",
+    "es": "Gridlix:2048",
+    "de": "Gridlix:2048",
+    "fr": "Gridlix:2048",
+    "pt-BR": "Gridlix:2048",
+    "zh": "Gridlix:2048"
+  },
+  "roadmap.r1.desc": {
+    "en": "Live on Google Play. A 4×4 merge puzzle with five themes, four named boosters and an optional ad-free Premium.",
+    "ru": "Доступен в Google Play. Пазл-слияние 4×4 с пятью темами, четырьмя именованными бустерами и опциональным Premium без рекламы.",
+    "es": "Disponible en Google Play. Puzzle de fusión 4×4 con cinco temas, cuatro boosters con nombre y un Premium opcional sin anuncios.",
+    "de": "Live auf Google Play. Ein 4×4-Merge-Puzzle mit fünf Themes, vier benannten Boostern und einem optionalen werbefreien Premium.",
+    "fr": "Disponible sur Google Play. Un puzzle de fusion 4×4 avec cinq thèmes, quatre boosters nommés et un Premium sans pub en option.",
+    "pt-BR": "Ao vivo no Google Play. Um puzzle de fusão 4×4 com cinco temas, quatro boosters nomeados e um Premium opcional sem anúncios.",
+    "zh": "已在 Google Play 上线。4×4 合并拼图，五种主题、四个具名加成，可选无广告 Premium。"
+  },
+  "roadmap.r2.meta": {
+    "en": "Shipped · 2026",
+    "ru": "Выпущен · 2026",
+    "es": "Publicado · 2026",
+    "de": "Veröffentlicht · 2026",
+    "fr": "Sorti · 2026",
+    "pt-BR": "Lançado · 2026",
+    "zh": "已发布 · 2026"
+  },
+  "roadmap.r2.title": {
+    "en": "Blocklix",
+    "ru": "Blocklix",
+    "es": "Blocklix",
+    "de": "Blocklix",
+    "fr": "Blocklix",
+    "pt-BR": "Blocklix",
+    "zh": "Blocklix"
+  },
+  "roadmap.r2.desc": {
+    "en": "Live on Google Play. An 8×8 drop-and-clear puzzle with six difficulty levels, 38 themes, 60 ranks, four boosters, daily and weekly missions, and an optional ad-free Premium.",
+    "ru": "Доступен в Google Play. Пазл 8×8 «положи и очищай»: шесть уровней сложности, 38 тем, 60 рангов, четыре бустера, ежедневные и недельные задания и опциональный Premium без рекламы.",
+    "es": "Disponible en Google Play. Puzzle 8×8 de colocar y limpiar: seis niveles de dificultad, 38 temas, 60 rangos, cuatro boosters, misiones diarias y semanales, y Premium opcional sin anuncios.",
+    "de": "Live auf Google Play. 8×8-Drop-and-Clear-Puzzle mit sechs Schwierigkeitsstufen, 38 Themes, 60 Rängen, vier Boostern, Tages- und Wochenmissionen und optionalem werbefreiem Premium.",
+    "fr": "Disponible sur Google Play. Puzzle 8×8 « pose et nettoie » : six niveaux de difficulté, 38 thèmes, 60 rangs, quatre boosters, missions quotidiennes et hebdomadaires, et Premium optionnel sans pub.",
+    "pt-BR": "No ar na Google Play. Puzzle 8×8 de encaixar e limpar: seis níveis de dificuldade, 38 temas, 60 patentes, quatro boosters, missões diárias e semanais e Premium opcional sem anúncios.",
+    "zh": "已在 Google Play 上线。8×8 放置消除拼图：六个难度等级、38 种主题、60 个段位、四种道具、每日与每周任务，以及可选的无广告 Premium。"
+  },
+  "roadmap.r3.meta": {
+    "en": "Next up",
+    "ru": "Следующее",
+    "es": "Siguiente",
+    "de": "Als Nächstes",
+    "fr": "Prochainement",
+    "pt-BR": "A seguir",
+    "zh": "下一步"
+  },
+  "roadmap.r3.title": {
+    "en": "First audio / podcast title",
+    "ru": "Первое аудио / подкаст-приложение",
+    "es": "Primer título de audio / podcast",
+    "de": "Erster Audio-/Podcast-Titel",
+    "fr": "Premier titre audio / podcast",
+    "pt-BR": "Primeiro título de áudio / podcast",
+    "zh": "首个音频 / 播客作品"
+  },
+  "roadmap.r3.desc": {
+    "en": "A focused listening app with offline downloads, queue management and the same no-account approach. Genre-agnostic catalogue.",
+    "ru": "Сфокусированный плеер с офлайн-загрузками, очередью и тем же подходом без аккаунтов. Каталог не привязан к жанру.",
+    "es": "Una app de escucha enfocada con descargas offline, gestión de cola y el mismo enfoque sin cuenta. Catálogo sin género fijo.",
+    "de": "Eine fokussierte Hör-App mit Offline-Downloads, Queue-Management und demselben Ansatz ohne Konto. Genre-unabhängiger Katalog.",
+    "fr": "Une app d'écoute concentrée avec téléchargements hors-ligne, gestion de file et la même approche sans compte. Catalogue ouvert à tous genres.",
+    "pt-BR": "Um app de escuta focado com downloads offline, gerenciamento de fila e a mesma abordagem sem conta. Catálogo aberto a qualquer gênero.",
+    "zh": "一款专注的播放应用，支持离线下载、队列管理，沿用无账号的方式。内容类型不限。"
+  },
+  "roadmap.r4.meta": {
+    "en": "Later",
+    "ru": "Позже",
+    "es": "Más adelante",
+    "de": "Später",
+    "fr": "Plus tard",
+    "pt-BR": "Mais adiante",
+    "zh": "稍后"
+  },
+  "roadmap.r4.title": {
+    "en": "Word puzzle prototype",
+    "ru": "Прототип словесного пазла",
+    "es": "Prototipo de puzzle de palabras",
+    "de": "Wortpuzzle-Prototyp",
+    "fr": "Prototype de puzzle de mots",
+    "pt-BR": "Protótipo de puzzle de palavras",
+    "zh": "文字拼图原型"
+  },
+  "roadmap.r4.desc": {
+    "en": "An idea on paper. Same shape as Gridlix: small, focused, no accounts, optional ad-free Premium.",
+    "ru": "Пока только идея на бумаге. Та же форма, что и Gridlix: маленький, сфокусированный, без аккаунтов, опциональный Premium без рекламы.",
+    "es": "Una idea sobre papel. Misma forma que Gridlix: pequeño, enfocado, sin cuentas, Premium opcional sin anuncios.",
+    "de": "Eine Idee auf Papier. Gleiche Form wie Gridlix: klein, fokussiert, ohne Konten, optionales werbefreies Premium.",
+    "fr": "Une idée sur papier. Même forme que Gridlix : petit, concentré, sans compte, Premium sans pub en option.",
+    "pt-BR": "Ideia no papel. Mesma forma do Gridlix: pequeno, focado, sem contas, Premium opcional sem anúncios.",
+    "zh": "目前只是纸上构想。形式与 Gridlix 一致：小巧、专注、无账号、可选无广告 Premium。"
+  },
+  "privacy.eyebrow": {
+    "en": "Your data",
+    "ru": "Ваши данные",
+    "es": "Tus datos",
+    "de": "Deine Daten",
+    "fr": "Vos données",
+    "pt-BR": "Seus dados",
+    "zh": "你的数据"
+  },
+  "privacy.title": {
+    "en": "Privacy is a feature, not a page",
+    "ru": "Приватность — функция, а не страница",
+    "es": "La privacidad es una función, no una página",
+    "de": "Datenschutz ist eine Funktion, keine Seite",
+    "fr": "La confidentialité est une fonctionnalité, pas une page",
+    "pt-BR": "Privacidade é um recurso, não uma página",
+    "zh": "隐私是一项功能，而不是一个页面"
+  },
+  "privacyCta.aria": {
+    "en": "Read our Privacy Policy",
+    "ru": "Открыть Политику конфиденциальности",
+    "es": "Leer nuestra Política de Privacidad",
+    "de": "Unsere Datenschutzerklärung lesen",
+    "fr": "Lire notre Politique de confidentialité",
+    "pt-BR": "Ler nossa Política de Privacidade",
+    "zh": "阅读我们的隐私政策"
+  },
+  "privacyCta.title": {
+    "en": "Read our Privacy Policy",
+    "ru": "Прочитать Политику конфиденциальности",
+    "es": "Lee nuestra Política de Privacidad",
+    "de": "Lies unsere Datenschutzerklärung",
+    "fr": "Lisez notre Politique de confidentialité",
+    "pt-BR": "Leia nossa Política de Privacidade",
+    "zh": "阅读我们的隐私政策"
+  },
+  "privacyCta.text": {
+    "en": "See exactly what we store, how Google Play Billing handles purchases, and which ad networks load for free users. Applies to every title we publish.",
+    "ru": "Посмотрите, что именно мы храним, как Google Play Billing обрабатывает покупки и какие рекламные сети загружаются для бесплатных пользователей. Действует для каждого нашего приложения.",
+    "es": "Mira exactamente qué guardamos, cómo Google Play Billing gestiona las compras y qué redes publicitarias se cargan para usuarios gratuitos. Aplica a cada título que publicamos.",
+    "de": "Sieh dir genau an, was wir speichern, wie Google Play Billing Käufe abwickelt und welche Werbenetzwerke für Free-Nutzer geladen werden. Gilt für jeden Titel, den wir veröffentlichen.",
+    "fr": "Voyez exactement ce que nous stockons, comment Google Play Billing gère les achats et quels réseaux publicitaires se chargent pour les utilisateurs gratuits. S'applique à chaque titre que nous publions.",
+    "pt-BR": "Veja exatamente o que armazenamos, como o Google Play Billing trata as compras e quais redes de anúncios são carregadas para usuários gratuitos. Vale para todos os títulos que publicamos.",
+    "zh": "完整了解我们本地存储了什么、Google Play Billing 如何处理购买、为免费用户加载哪些广告网络。适用于我们发布的每一款作品。"
+  },
+  "privacyCta.btn": {
+    "en": "Open policy",
+    "ru": "Открыть политику",
+    "es": "Abrir política",
+    "de": "Erklärung öffnen",
+    "fr": "Ouvrir la politique",
+    "pt-BR": "Abrir política",
+    "zh": "打开政策"
+  },
+  "trust.1.title": {
+    "en": "No accounts",
+    "ru": "Без аккаунтов",
+    "es": "Sin cuentas",
+    "de": "Keine Konten",
+    "fr": "Pas de compte",
+    "pt-BR": "Sem contas",
+    "zh": "无需账号"
+  },
+  "trust.1.desc": {
+    "en": "No sign-up. Your progress stays on your device.",
+    "ru": "Без регистрации. Ваш прогресс остаётся на устройстве.",
+    "es": "Sin registro. Tu progreso vive en tu dispositivo.",
+    "de": "Keine Anmeldung. Dein Fortschritt bleibt auf deinem Gerät.",
+    "fr": "Aucune inscription. Votre progression reste sur l'appareil.",
+    "pt-BR": "Sem cadastro. Seu progresso fica no seu dispositivo.",
+    "zh": "不需要注册。你的进度只留在设备上。"
+  },
+  "trust.2.title": {
+    "en": "No payment data stored",
+    "ru": "Без хранения платёжных данных",
+    "es": "Sin guardar datos de pago",
+    "de": "Keine Zahlungsdaten gespeichert",
+    "fr": "Aucune donnée de paiement stockée",
+    "pt-BR": "Sem dados de pagamento",
+    "zh": "不存付款数据"
+  },
+  "trust.2.desc": {
+    "en": "Payments run through Google Play. We never see your card.",
+    "ru": "Платежи идут через Google Play. Мы никогда не видим вашу карту.",
+    "es": "Los pagos pasan por Google Play. Nunca vemos tu tarjeta.",
+    "de": "Zahlungen laufen über Google Play. Wir sehen deine Karte nie.",
+    "fr": "Les paiements passent par Google Play. Nous ne voyons jamais votre carte.",
+    "pt-BR": "Pagamentos passam pelo Google Play. Nunca vemos seu cartão.",
+    "zh": "全部付款走 Google Play，我们看不到你的银行卡。"
+  },
+  "trust.3.title": {
+    "en": "GDPR · CCPA · COPPA",
+    "ru": "GDPR · CCPA · COPPA",
+    "es": "GDPR · CCPA · COPPA",
+    "de": "GDPR · CCPA · COPPA",
+    "fr": "GDPR · CCPA · COPPA",
+    "pt-BR": "GDPR · CCPA · COPPA",
+    "zh": "GDPR · CCPA · COPPA"
+  },
+  "trust.3.desc": {
+    "en": "Consent, opt-outs, and data rights, aligned to the standards.",
+    "ru": "Согласия, отказы и права на данные — по стандартам.",
+    "es": "Consentimientos, opt-outs y derechos sobre los datos, alineados a los estándares.",
+    "de": "Einwilligungen, Opt-outs und Datenrechte — am Standard ausgerichtet.",
+    "fr": "Consentements, opt-outs et droits sur les données — alignés aux standards.",
+    "pt-BR": "Consentimentos, opt-outs e direitos sobre os dados — alinhados aos padrões.",
+    "zh": "授权、退出与数据权利，按主流标准对齐。"
+  },
+  "trust.4.title": {
+    "en": "Premium removes ads",
+    "ru": "Premium убирает рекламу",
+    "es": "Premium quita los anuncios",
+    "de": "Premium entfernt Werbung",
+    "fr": "Premium enlève les pubs",
+    "pt-BR": "Premium tira os anúncios",
+    "zh": "Premium 去除广告"
+  },
+  "trust.4.desc": {
+    "en": "Banners, interstitials and app-open ads switch off for Premium and Remove Ads. Rewarded videos stay opt-in for everyone — they only play when you tap one.",
+    "ru": "Баннеры, межстраничные и app-open отключаются для Premium и покупки «Без рекламы». Видео за награду остаются добровольными для всех — они запускаются только по вашему нажатию.",
+    "es": "Banners, intersticiales y app-open se desactivan con Premium y con Quitar Anuncios. Los vídeos con recompensa siguen siendo opcionales para todos: solo se reproducen si los tocas.",
+    "de": "Banner, Interstitials und App-Open-Anzeigen sind mit Premium und mit „Werbung entfernen“ aus. Rewarded Videos bleiben für alle freiwillig — sie laufen nur, wenn du sie antippst.",
+    "fr": "Bannières, interstitiels et pubs à l'ouverture sont coupés avec Premium et l'achat Sans pub. Les vidéos récompensées restent facultatives pour tous : elles ne démarrent que si vous les lancez.",
+    "pt-BR": "Banners, intersticiais e app-open desligam com Premium e com Remover Anúncios. Vídeos recompensados continuam opcionais para todos — só tocam quando você toca neles.",
+    "zh": "开通 Premium 或购买「去广告」后，横幅、插屏与冷启动广告都会关闭。激励视频对所有人都是自愿的——只有你主动点击才会播放。"
+  },
+  "trust.aria": {
+    "en": "Privacy commitments",
+    "ru": "Обязательства по конфиденциальности",
+    "es": "Compromisos de privacidad",
+    "de": "Datenschutz-Versprechen",
+    "fr": "Engagements de confidentialité",
+    "pt-BR": "Compromissos de privacidade",
+    "zh": "隐私承诺"
+  },
+  "faq.aria": {
+    "en": "FAQ",
+    "ru": "Частые вопросы",
+    "es": "Preguntas frecuentes",
+    "de": "Häufige Fragen",
+    "fr": "Questions fréquentes",
+    "pt-BR": "Perguntas frequentes",
+    "zh": "常见问题"
+  },
+  "faq.eyebrow": {
+    "en": "FAQ",
+    "ru": "FAQ",
+    "es": "FAQ",
+    "de": "FAQ",
+    "fr": "FAQ",
+    "pt-BR": "FAQ",
+    "zh": "FAQ"
+  },
+  "faq.title": {
+    "en": "Common questions",
+    "ru": "Частые вопросы",
+    "es": "Preguntas frecuentes",
+    "de": "Häufige Fragen",
+    "fr": "Questions fréquentes",
+    "pt-BR": "Perguntas frequentes",
+    "zh": "常见问题"
+  },
+  "faq.q1": {
+    "en": "How do I cancel my subscription?",
+    "ru": "Как отменить подписку?",
+    "es": "¿Cómo cancelo mi suscripción?",
+    "de": "Wie kündige ich mein Abo?",
+    "fr": "Comment résilier mon abonnement ?",
+    "pt-BR": "Como cancelo minha assinatura?",
+    "zh": "如何取消订阅？"
+  },
+  "faq.a1": {
+    "en": "Cancel from <strong>Google Play → Subscriptions</strong>, or use the \"Manage\" button inside the app — it deep-links to the same page. Cancellation takes effect at the end of your current billing period.",
+    "ru": "Отменить можно в <strong>Google Play → Подписки</strong> или через кнопку «Управление» внутри приложения — она ведёт на ту же страницу. Отмена вступает в силу в конце текущего периода оплаты.",
+    "es": "Cancela desde <strong>Google Play → Suscripciones</strong>, o usa el botón «Gestionar» dentro de la app — enlaza a la misma página. La cancelación se aplica al final del período de facturación actual.",
+    "de": "Kündige in <strong>Google Play → Abos</strong> oder über die Schaltfläche „Verwalten\" in der App — sie verlinkt zur selben Seite. Die Kündigung greift am Ende deines aktuellen Abrechnungszeitraums.",
+    "fr": "Résiliez depuis <strong>Google Play → Abonnements</strong>, ou via le bouton « Gérer » dans l'app — il pointe vers la même page. La résiliation prend effet à la fin de votre période de facturation en cours.",
+    "pt-BR": "Cancele em <strong>Google Play → Assinaturas</strong> ou pelo botão «Gerenciar» dentro do app — leva à mesma página. O cancelamento entra em vigor ao final do período de cobrança atual.",
+    "zh": "在 <strong>Google Play → 订阅</strong> 中取消，或使用应用内的「管理」按钮——它会跳转到同一页面。取消会在当前计费周期结束时生效。"
+  },
+  "faq.q2": {
+    "en": "What happens to my game progress if I uninstall?",
+    "ru": "Что будет с прогрессом, если я удалю приложение?",
+    "es": "¿Qué pasa con mi progreso si desinstalo?",
+    "de": "Was passiert mit meinem Spielfortschritt beim Deinstallieren?",
+    "fr": "Que devient ma progression si je désinstalle ?",
+    "pt-BR": "O que acontece com meu progresso se eu desinstalar?",
+    "zh": "卸载应用后游戏进度怎么办？"
+  },
+  "faq.a2": {
+    "en": "Progress lives on your device, and Android's own backup service copies it into your Google account — so reinstalling on the same account usually brings it back. We never upload your save to a server of ours. Blocklix also has an optional cloud save on Google Play Games, rolling out gradually. Premium restores automatically once you reinstall and sign in to the same Google account.",
+    "ru": "Прогресс хранится на устройстве, а собственная служба резервного копирования Android копирует его в ваш аккаунт Google — поэтому переустановка на том же аккаунте обычно возвращает его. На свои серверы мы сохранения не выгружаем. В Blocklix есть ещё необязательное облачное сохранение через Google Play Games, оно включается постепенно. Premium-статус восстанавливается автоматически при переустановке и входе в тот же аккаунт Google.",
+    "es": "El progreso vive en tu dispositivo, y el servicio de copia de seguridad del propio Android lo copia a tu cuenta de Google — así que reinstalar con la misma cuenta suele recuperarlo. No subimos partidas a ningún servidor nuestro. Blocklix además tiene un guardado en la nube opcional vía Google Play Games, en despliegue gradual. El estado Premium se restaura automáticamente al reinstalar y entrar con la misma cuenta de Google.",
+    "de": "Der Fortschritt liegt auf deinem Gerät, und Androids eigener Sicherungsdienst kopiert ihn in dein Google-Konto — eine Neuinstallation mit demselben Konto holt ihn also meist zurück. Auf einen Server von uns laden wir Spielstände nicht hoch. Blocklix hat zusätzlich einen optionalen Cloud-Spielstand über Google Play Games, der schrittweise aktiviert wird. Der Premium-Status wird beim Neuinstallieren mit demselben Google-Konto automatisch wiederhergestellt.",
+    "fr": "La progression vit sur votre appareil, et le service de sauvegarde d'Android la copie dans votre compte Google — réinstaller avec le même compte la récupère donc généralement. Nous n'envoyons pas les sauvegardes sur un serveur à nous. Blocklix propose en plus une sauvegarde cloud facultative via Google Play Games, déployée progressivement. Le statut Premium est restauré automatiquement à la réinstallation avec le même compte Google.",
+    "pt-BR": "O progresso fica no seu aparelho, e o serviço de backup do próprio Android o copia para a sua conta Google — então reinstalar com a mesma conta normalmente traz tudo de volta. Não enviamos saves para nenhum servidor nosso. O Blocklix ainda tem um save na nuvem opcional via Google Play Games, sendo liberado gradualmente. O status Premium é restaurado automaticamente ao reinstalar e entrar com a mesma conta Google.",
+    "zh": "进度保存在你的设备上，Android 自带的备份服务会把它复制到你的 Google 账号——所以用同一账号重新安装通常能找回。我们不会把存档上传到我们自己的服务器。Blocklix 另外提供基于 Google Play Games 的可选云存档，正在逐步开放。重新安装并使用同一 Google 账号登录后，Premium 状态会自动恢复。"
+  },
+  "faq.q3": {
+    "en": "Why do you ask for the Advertising ID?",
+    "ru": "Зачем вам Advertising ID?",
+    "es": "¿Por qué piden el Advertising ID?",
+    "de": "Warum fragt ihr nach der Advertising ID?",
+    "fr": "Pourquoi demander l'Advertising ID ?",
+    "pt-BR": "Por que vocês pedem o Advertising ID?",
+    "zh": "为什么要读取广告 ID？"
+  },
+  "faq.a3": {
+    "en": "So ad networks can frequency-cap and serve relevant ads, and attribute installs. With Premium or the Remove Ads purchase it is no longer used for banners, interstitials or app-open ads; it is still processed if you choose to watch a rewarded video. Full details in the <a href=\"./privacy-policy.html\">Privacy Policy</a>.",
+    "ru": "Чтобы рекламные сети ограничивали частоту показов, показывали релевантную рекламу и атрибутировали установки. С Premium или покупкой «Без рекламы» он больше не используется для баннеров, межстраничных и app-open; он всё ещё обрабатывается, если вы сами решите посмотреть видео за награду. Подробнее — в <a href=\"./privacy-policy.html\">Политике конфиденциальности</a>.",
+    "es": "Para que las redes publicitarias limiten la frecuencia, sirvan anuncios relevantes y atribuyan instalaciones. Con Premium o la compra de Quitar Anuncios deja de usarse para banners, intersticiales y app-open; se sigue procesando si eliges ver un vídeo con recompensa. Detalles en la <a href=\"./privacy-policy.html\">Política de Privacidad</a>.",
+    "de": "Damit Werbenetzwerke die Häufigkeit begrenzen, relevante Werbung ausspielen und Installationen zuordnen können. Mit Premium oder dem Kauf „Werbung entfernen“ wird sie nicht mehr für Banner, Interstitials oder App-Open-Anzeigen verwendet; sie wird weiterhin verarbeitet, wenn du dich für ein Rewarded Video entscheidest. Details in der <a href=\"./privacy-policy.html\">Datenschutzerklärung</a>.",
+    "fr": "Pour que les régies limitent la fréquence, diffusent des pubs pertinentes et attribuent les installations. Avec Premium ou l'achat Sans pub, il n'est plus utilisé pour les bannières, interstitiels ou pubs à l'ouverture ; il reste traité si vous choisissez de regarder une vidéo récompensée. Détails dans la <a href=\"./privacy-policy.html\">Politique de confidentialité</a>.",
+    "pt-BR": "Para que as redes de anúncios limitem a frequência, exibam anúncios relevantes e atribuam instalações. Com Premium ou a compra Remover Anúncios ele deixa de ser usado para banners, intersticiais e app-open; ainda é processado se você escolher assistir a um vídeo recompensado. Detalhes na <a href=\"./privacy-policy.html\">Política de Privacidade</a>.",
+    "zh": "用于让广告网络做频次限制、投放更相关的广告并归因安装。开通 Premium 或购买「去广告」后，它不再用于横幅、插屏与冷启动广告；如果你主动选择观看激励视频，它仍会被处理。详情见<a href=\"./privacy-policy.html\">隐私政策</a>。"
+  },
+  "faq.q4": {
+    "en": "Which Android versions are supported?",
+    "ru": "Какие версии Android поддерживаются?",
+    "es": "¿Qué versiones de Android se soportan?",
+    "de": "Welche Android-Versionen werden unterstützt?",
+    "fr": "Quelles versions d'Android sont prises en charge ?",
+    "pt-BR": "Quais versões do Android são suportadas?",
+    "zh": "支持哪些 Android 版本？"
+  },
+  "faq.a4": {
+    "en": "Android 8.0 (API 26) and above. We target older devices on purpose so the games are still playable on hand-me-down phones.",
+    "ru": "Android 8.0 (API 26) и выше. Мы намеренно целимся в старые устройства, чтобы игры были доступны на «вторых руках».",
+    "es": "Android 8.0 (API 26) y superiores. Apuntamos deliberadamente a dispositivos antiguos para que los juegos sigan funcionando en teléfonos de segunda mano.",
+    "de": "Android 8.0 (API 26) und höher. Wir zielen bewusst auch auf ältere Geräte, damit die Spiele auf gebrauchten Handys spielbar bleiben.",
+    "fr": "Android 8.0 (API 26) et plus. Nous visons délibérément les appareils plus anciens pour que les jeux restent jouables sur les téléphones de seconde main.",
+    "pt-BR": "Android 8.0 (API 26) e superior. Miramos aparelhos mais antigos de propósito, para que os jogos continuem jogáveis em celulares de segunda mão.",
+    "zh": "Android 8.0（API 26）及以上。我们刻意兼容更老的设备，让游戏在二手手机上也能玩。"
+  },
+  "faq.q5": {
+    "en": "Which languages do the apps support?",
+    "ru": "Какие языки поддерживаются?",
+    "es": "¿Qué idiomas soportan las apps?",
+    "de": "Welche Sprachen werden unterstützt?",
+    "fr": "Quelles langues sont prises en charge ?",
+    "pt-BR": "Quais idiomas são suportados?",
+    "zh": "应用支持哪些语言？"
+  },
+  "faq.a5": {
+    "en": "Blocklix ships in 12: English, Russian, German, Spanish, French, Italian, Japanese, Korean, Portuguese (Brazil), Turkish, Arabic and Simplified Chinese. Gridlix:2048 covers a smaller set. The system language is auto-detected on first launch and can be overridden in app settings.",
+    "ru": "Blocklix выходит на 12 языках: английский, русский, немецкий, испанский, французский, итальянский, японский, корейский, португальский (Бразилия), турецкий, арабский и упрощённый китайский. У Gridlix:2048 набор меньше. Системный язык определяется при первом запуске и переключается в настройках приложения.",
+    "es": "Blocklix llega en 12 idiomas: inglés, ruso, alemán, español, francés, italiano, japonés, coreano, portugués (Brasil), turco, árabe y chino simplificado. Gridlix:2048 cubre un conjunto menor. El idioma del sistema se detecta al primer arranque y se puede cambiar en los ajustes.",
+    "de": "Blocklix erscheint in 12 Sprachen: Englisch, Russisch, Deutsch, Spanisch, Französisch, Italienisch, Japanisch, Koreanisch, Portugiesisch (Brasilien), Türkisch, Arabisch und vereinfachtes Chinesisch. Gridlix:2048 deckt weniger ab. Die Systemsprache wird beim ersten Start erkannt und lässt sich in den App-Einstellungen ändern.",
+    "fr": "Blocklix sort en 12 langues : anglais, russe, allemand, espagnol, français, italien, japonais, coréen, portugais (Brésil), turc, arabe et chinois simplifié. Gridlix:2048 en couvre moins. La langue système est détectée au premier lancement et modifiable dans les réglages de l'app.",
+    "pt-BR": "O Blocklix sai em 12 idiomas: inglês, russo, alemão, espanhol, francês, italiano, japonês, coreano, português (Brasil), turco, árabe e chinês simplificado. O Gridlix:2048 cobre um conjunto menor. O idioma do sistema é detectado no primeiro arranque e pode ser trocado nas configurações.",
+    "zh": "Blocklix 支持 12 种语言：英语、俄语、德语、西班牙语、法语、意大利语、日语、韩语、葡萄牙语（巴西）、土耳其语、阿拉伯语和简体中文。Gridlix:2048 覆盖的语言较少。首次启动时自动识别系统语言，也可以在应用设置中切换。"
+  },
+  "faq.q6": {
+    "en": "I found a bug or want to suggest a feature.",
+    "ru": "Нашёл баг или хочу предложить функцию.",
+    "es": "Encontré un bug o quiero sugerir una función.",
+    "de": "Ich habe einen Bug gefunden oder einen Vorschlag.",
+    "fr": "J'ai trouvé un bug ou j'ai une suggestion.",
+    "pt-BR": "Achei um bug ou quero sugerir um recurso.",
+    "zh": "发现了 bug 或想提建议。"
+  },
+  "faq.a6": {
+    "en": "Write to <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> with a short description. Screenshots and device model help a lot. We read every message.",
+    "ru": "Пишите на <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> с коротким описанием. Скриншоты и модель устройства сильно помогают. Мы читаем каждое сообщение.",
+    "es": "Escribe a <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> con una breve descripción. Las capturas y el modelo del dispositivo ayudan mucho. Leemos cada mensaje.",
+    "de": "Schreib an <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> mit einer kurzen Beschreibung. Screenshots und Gerätemodell helfen sehr. Wir lesen jede Nachricht.",
+    "fr": "Écrivez à <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> avec une brève description. Les captures et le modèle d'appareil aident beaucoup. Nous lisons chaque message.",
+    "pt-BR": "Escreva para <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a> com uma descrição curta. Capturas e modelo do aparelho ajudam muito. Lemos cada mensagem.",
+    "zh": "请写信到 <a href=\"mailto:vaslixofficial@protonmail.com\">vaslixofficial@protonmail.com</a>，附上简短描述。截图和设备型号会很有帮助。我们会阅读每一条消息。"
+  },
+  "faq.q7": {
+    "en": "Will there ever be an iOS version?",
+    "ru": "Будет ли версия для iOS?",
+    "es": "¿Habrá versión para iOS?",
+    "de": "Wird es jemals eine iOS-Version geben?",
+    "fr": "Y aura-t-il une version iOS ?",
+    "pt-BR": "Haverá versão para iOS?",
+    "zh": "会有 iOS 版本吗？"
+  },
+  "faq.a7": {
+    "en": "Not on the current roadmap. We're a one-person studio and Android lets us ship and update faster. We may revisit once the catalogue grows.",
+    "ru": "В текущей дорожной карте — нет. Мы — студия из одного человека, и Android позволяет выпускать и обновлять быстрее. Возможно, вернёмся к вопросу, когда каталог вырастет.",
+    "es": "No está en la hoja de ruta actual. Somos un estudio de una persona y Android nos permite publicar y actualizar más rápido. Quizá lo revisemos cuando el catálogo crezca.",
+    "de": "Nicht auf der aktuellen Roadmap. Wir sind ein Ein-Personen-Studio, und Android erlaubt uns schnellere Releases und Updates. Wir denken vielleicht neu darüber nach, wenn der Katalog wächst.",
+    "fr": "Pas dans la feuille de route actuelle. Nous sommes un studio d'une personne et Android nous permet de publier et mettre à jour plus vite. Nous y reviendrons peut-être quand le catalogue grandira.",
+    "pt-BR": "Não está no roteiro atual. Somos um estúdio de uma pessoa e o Android nos permite lançar e atualizar mais rápido. Talvez revisitemos quando o catálogo crescer.",
+    "zh": "当前路线图中没有。我们是一人工作室，Android 让我们能更快地发布和更新。等作品库扩大后可能会重新考虑。"
+  },
+  "faq.q8": {
+    "en": "Does Premium change how the game plays?",
+    "ru": "Меняет ли Premium саму игру?",
+    "es": "¿Premium cambia cómo se juega?",
+    "de": "Ändert Premium, wie sich das Spiel spielt?",
+    "fr": "Premium change-t-il la façon de jouer ?",
+    "pt-BR": "O Premium muda como o jogo se joga?",
+    "zh": "Premium 会改变游戏玩法吗？"
+  },
+  "faq.a8": {
+    "en": "No. Premium removes banners and interstitials, doubles the stars a run pays and adds a daily gift and the premium themes. Every level, rank and mission is the same for everyone.",
+    "ru": "Нет. Premium убирает баннеры и межстраничную рекламу, удваивает звёзды за партию и добавляет ежедневный подарок и премиум-темы. Уровни, ранги и задания одинаковы у всех.",
+    "es": "No. Premium quita banners e intersticiales, duplica las estrellas de cada partida y añade un regalo diario y los temas premium. Cada nivel, rango y misión es igual para todos.",
+    "de": "Nein. Premium entfernt Banner und Interstitials, verdoppelt die Sterne einer Partie und bringt ein Tagesgeschenk und die Premium-Themes. Jede Stufe, jeder Rang und jede Mission ist für alle gleich.",
+    "fr": "Non. Premium enlève bannières et interstitiels, double les étoiles d'une partie et ajoute un cadeau quotidien et les thèmes premium. Chaque niveau, rang et mission est le même pour tous.",
+    "pt-BR": "Não. O Premium tira banners e intersticiais, dobra as estrelas de cada partida e adiciona um presente diário e os temas premium. Todo nível, patente e missão é igual para todo mundo.",
+    "zh": "不会。Premium 去掉横幅和插屏广告，让每局的星星翻倍，并附带每日礼物和高级主题。每个难度、段位和任务对所有人都一样。"
+  },
+  "press.aria": {
+    "en": "Press kit",
+    "ru": "Пресс-кит",
+    "es": "Press kit",
+    "de": "Pressekit",
+    "fr": "Kit presse",
+    "pt-BR": "Press kit",
+    "zh": "媒体资料"
+  },
+  "press.eyebrow": {
+    "en": "Press kit",
+    "ru": "Пресс-кит",
+    "es": "Press kit",
+    "de": "Pressekit",
+    "fr": "Kit presse",
+    "pt-BR": "Press kit",
+    "zh": "媒体资料"
+  },
+  "press.title": {
+    "en": "For press & partners",
+    "ru": "Для прессы и партнёров",
+    "es": "Para prensa y socios",
+    "de": "Für Presse & Partner",
+    "fr": "Pour la presse et les partenaires",
+    "pt-BR": "Para imprensa e parceiros",
+    "zh": "面向媒体与合作方"
+  },
+  "press.aboutTitle": {
+    "en": "About the studio",
+    "ru": "О студии",
+    "es": "Sobre el estudio",
+    "de": "Über das Studio",
+    "fr": "À propos du studio",
+    "pt-BR": "Sobre o estúdio",
+    "zh": "关于工作室"
+  },
+  "press.aboutBody": {
+    "en": "Vaslix Games is an independent Android publisher founded in 2025. We build small, focused apps across genres — puzzle today, audio and arcade titles next — with a privacy-first stance: no accounts, no proprietary servers storing user data, no in-house analytics. Two titles are live on Google Play: Gridlix:2048 and Blocklix, an 8×8 block puzzle with six difficulty levels, 38 themes and 60 ranks, localised into 12 languages.",
+    "ru": "Vaslix Games — независимый Android-издатель, основанный в 2025 году. Мы делаем небольшие сфокусированные приложения в разных жанрах — сегодня пазлы, дальше аудио и аркады — с подходом «privacy-first»: без аккаунтов, без собственных серверов, хранящих данные пользователей, без внутренней аналитики. В Google Play выпущены две игры: Gridlix:2048 и Blocklix — пазл 8×8 с шестью уровнями сложности, 38 темами и 60 рангами, локализованный на 12 языков.",
+    "es": "Vaslix Games es un editor Android independiente fundado en 2025. Hacemos apps pequeñas y enfocadas en varios géneros — hoy puzzle, después audio y arcade — con un enfoque privacy-first: sin cuentas, sin servidores propios guardando datos de usuario, sin analítica casera. Dos títulos están en Google Play: Gridlix:2048 y Blocklix, un puzzle 8×8 con seis niveles de dificultad, 38 temas y 60 rangos, localizado a 12 idiomas.",
+    "de": "Vaslix Games ist ein unabhängiger Android-Publisher, gegründet 2025. Wir bauen kleine, fokussierte Apps in verschiedenen Genres — heute Puzzle, als Nächstes Audio- und Arcade-Titel — mit einer Privacy-First-Haltung: keine Konten, keine eigenen Server, die Nutzerdaten speichern, keine Inhouse-Analytics. Zwei Titel sind auf Google Play: Gridlix:2048 und Blocklix, ein 8×8-Blockpuzzle mit sechs Schwierigkeitsstufen, 38 Themes und 60 Rängen, lokalisiert in 12 Sprachen.",
+    "fr": "Vaslix Games est un éditeur Android indépendant fondé en 2025. Nous faisons de petites apps concentrées dans plusieurs genres — aujourd'hui le puzzle, ensuite l'audio et l'arcade — avec une approche privacy-first : pas de comptes, pas de serveurs maison stockant des données utilisateurs, pas d'analytics maison. Deux titres sont sur Google Play : Gridlix:2048 et Blocklix, un puzzle de blocs 8×8 avec six niveaux de difficulté, 38 thèmes et 60 rangs, localisé en 12 langues.",
+    "pt-BR": "Vaslix Games é um publisher Android independente fundado em 2025. Fazemos apps pequenos e focados em vários gêneros — hoje puzzle, depois áudio e arcade — com postura privacy-first: sem contas, sem servidores próprios guardando dados de usuário, sem analytics interno. Dois títulos estão na Google Play: Gridlix:2048 e Blocklix, um puzzle de blocos 8×8 com seis níveis de dificuldade, 38 temas e 60 patentes, localizado em 12 idiomas.",
+    "zh": "Vaslix Games 是一家成立于 2025 年的独立 Android 发行工作室。我们做跨类型的小型应用——当下是拼图，下一步是音频与街机——坚持隐私优先：无需账号、没有我们自己的服务器存储用户数据、没有内部分析。Google Play 上已发布两款作品：Gridlix:2048 与 Blocklix——一款 8×8 方块拼图，含六个难度等级、38 种主题与 60 个段位，已本地化为 12 种语言。"
+  },
+  "press.copyBtn": {
+    "en": "Copy blurb",
+    "ru": "Скопировать текст",
+    "es": "Copiar texto",
+    "de": "Text kopieren",
+    "fr": "Copier le texte",
+    "pt-BR": "Copiar texto",
+    "zh": "复制简介"
+  },
+  "press.copied": {
+    "en": "Copied",
+    "ru": "Скопировано",
+    "es": "Copiado",
+    "de": "Kopiert",
+    "fr": "Copié",
+    "pt-BR": "Copiado",
+    "zh": "已复制"
+  },
+  "press.assetsTitle": {
+    "en": "Brand assets",
+    "ru": "Брендовые ресурсы",
+    "es": "Recursos de marca",
+    "de": "Brand-Assets",
+    "fr": "Ressources de marque",
+    "pt-BR": "Recursos de marca",
+    "zh": "品牌素材"
+  },
+  "press.assetLogo": {
+    "en": "Vaslix logo (SVG)",
+    "ru": "Логотип Vaslix (SVG)",
+    "es": "Logo Vaslix (SVG)",
+    "de": "Vaslix-Logo (SVG)",
+    "fr": "Logo Vaslix (SVG)",
+    "pt-BR": "Logo Vaslix (SVG)",
+    "zh": "Vaslix Logo（SVG）"
+  },
+  "press.assetGridlix": {
+    "en": "Gridlix icon (WebP)",
+    "ru": "Иконка Gridlix (WebP)",
+    "es": "Icono Gridlix (WebP)",
+    "de": "Gridlix-Icon (WebP)",
+    "fr": "Icône Gridlix (WebP)",
+    "pt-BR": "Ícone Gridlix (WebP)",
+    "zh": "Gridlix 图标（WebP）"
+  },
+  "press.assetBlocklix": {
+    "en": "Blocklix icon (PNG)",
+    "ru": "Иконка Blocklix (PNG)",
+    "es": "Icono Blocklix (PNG)",
+    "de": "Blocklix-Icon (PNG)",
+    "fr": "Icône Blocklix (PNG)",
+    "pt-BR": "Ícone Blocklix (PNG)",
+    "zh": "Blocklix 图标（PNG）"
+  },
+  "press.contactTitle": {
+    "en": "Press contact",
+    "ru": "Контакт для прессы",
+    "es": "Contacto de prensa",
+    "de": "Pressekontakt",
+    "fr": "Contact presse",
+    "pt-BR": "Contato de imprensa",
+    "zh": "媒体联系"
+  },
+  "press.sla": {
+    "en": "Reply within ~5 business days. Include your outlet, deadline, and what you need.",
+    "ru": "Отвечаем в течение ~5 рабочих дней. Укажите издание, дедлайн и что именно нужно.",
+    "es": "Respondemos en ~5 días hábiles. Incluye tu medio, deadline y lo que necesitas.",
+    "de": "Wir antworten innerhalb von ~5 Werktagen. Bitte Medium, Deadline und Anfrage angeben.",
+    "fr": "Réponse sous ~5 jours ouvrés. Précisez votre média, deadline et ce dont vous avez besoin.",
+    "pt-BR": "Respondemos em ~5 dias úteis. Inclua veículo, prazo e o que precisa.",
+    "zh": "5 个工作日内回复。请注明媒体、截稿时间与所需内容。"
+  },
+  "footer.copyright": {
+    "en": "© Vaslix Games · Independent Android studio",
+    "ru": "© Vaslix Games · Независимая Android-студия",
+    "es": "© Vaslix Games · Estudio Android independiente",
+    "de": "© Vaslix Games · Unabhängiges Android-Studio",
+    "fr": "© Vaslix Games · Studio Android indépendant",
+    "pt-BR": "© Vaslix Games · Estúdio Android independente",
+    "zh": "© Vaslix Games · 独立 Android 工作室"
+  },
+  "footer.home": {
+    "en": "Home",
+    "ru": "Главная",
+    "es": "Inicio",
+    "de": "Startseite",
+    "fr": "Accueil",
+    "pt-BR": "Início",
+    "zh": "首页"
+  },
+  "footer.privacyLink": {
+    "en": "Privacy Policy",
+    "ru": "Политика конфиденциальности",
+    "es": "Política de Privacidad",
+    "de": "Datenschutzerklärung",
+    "fr": "Politique de confidentialité",
+    "pt-BR": "Política de Privacidade",
+    "zh": "隐私政策"
+  },
+  "footer.contact": {
+    "en": "Contact",
+    "ru": "Контакты",
+    "es": "Contacto",
+    "de": "Kontakt",
+    "fr": "Contact",
+    "pt-BR": "Contato",
+    "zh": "联系"
+  },
+  "footer.made": {
+    "en": "Made in one room, played in twelve languages.",
+    "ru": "Сделано в одной комнате, играется на двенадцати языках.",
+    "es": "Hecho en una habitación, jugado en doce idiomas.",
+    "de": "In einem Zimmer gemacht, in zwölf Sprachen gespielt.",
+    "fr": "Fait dans une pièce, joué en douze langues.",
+    "pt-BR": "Feito em um quarto, jogado em doze idiomas.",
+    "zh": "在一个房间里做出来，用十二种语言玩。"
+  },
+  "nums.diff": {
+    "en": "difficulty levels",
+    "ru": "уровней сложности",
+    "es": "niveles de dificultad",
+    "de": "Schwierigkeitsstufen",
+    "fr": "niveaux de difficulté",
+    "pt-BR": "níveis de dificuldade",
+    "zh": "个难度等级"
+  },
+  "nums.themes": {
+    "en": "themes",
+    "ru": "тем",
+    "es": "temas",
+    "de": "Themes",
+    "fr": "thèmes",
+    "pt-BR": "temas",
+    "zh": "种主题"
+  },
+  "nums.ranks": {
+    "en": "ranks",
+    "ru": "рангов",
+    "es": "rangos",
+    "de": "Ränge",
+    "fr": "rangs",
+    "pt-BR": "patentes",
+    "zh": "个段位"
+  },
+  "nums.langs": {
+    "en": "languages",
+    "ru": "языков",
+    "es": "idiomas",
+    "de": "Sprachen",
+    "fr": "langues",
+    "pt-BR": "idiomas",
+    "zh": "种语言"
+  },
+  "nums.games": {
+    "en": "games on Google Play",
+    "ru": "игры в Google Play",
+    "es": "juegos en Google Play",
+    "de": "Spiele auf Google Play",
+    "fr": "jeux sur Google Play",
+    "pt-BR": "jogos na Google Play",
+    "zh": "款游戏上架 Google Play"
+  },
+  "nums.accounts": {
+    "en": "accounts required",
+    "ru": "аккаунтов нужно",
+    "es": "cuentas necesarias",
+    "de": "Konten nötig",
+    "fr": "compte requis",
+    "pt-BR": "contas necessárias",
+    "zh": "个账号需要注册"
+  },
+  "how.eyebrow": {
+    "en": "How it plays",
+    "ru": "Как играется",
+    "es": "Cómo se juega",
+    "de": "So spielt es sich",
+    "fr": "Comment on joue",
+    "pt-BR": "Como se joga",
+    "zh": "怎么玩"
+  },
+  "how.title": {
+    "en": "Three moves you already know",
+    "ru": "Три хода, которые вы уже знаете",
+    "es": "Tres movimientos que ya conoces",
+    "de": "Drei Züge, die du schon kennst",
+    "fr": "Trois gestes que vous connaissez déjà",
+    "pt-BR": "Três jogadas que você já conhece",
+    "zh": "三个你早已熟悉的动作"
+  },
+  "how.intro": {
+    "en": "Blocklix is the 8×8 drop-and-clear you have seen before — tuned until every one of these feels right in the hand.",
+    "ru": "Blocklix — та самая головоломка 8×8 «положи и очисти», доведённая до состояния, когда каждый из этих трёх ходов ложится в руку.",
+    "es": "Blocklix es el 8×8 de colocar y limpiar que ya has visto — afinado hasta que cada uno de estos tres se siente bien en la mano.",
+    "de": "Blocklix ist das 8×8-Drop-and-Clear, das du schon gesehen hast — so lange abgestimmt, bis sich jeder dieser drei Züge richtig anfühlt.",
+    "fr": "Blocklix, c'est le 8×8 « pose et nettoie » que vous avez déjà vu — réglé jusqu'à ce que chacun de ces trois gestes tombe juste sous le doigt.",
+    "pt-BR": "O Blocklix é o 8×8 de encaixar e limpar que você já viu — ajustado até cada uma dessas três jogadas cair bem na mão.",
+    "zh": "Blocklix 就是你见过的那种 8×8 放置消除——只是打磨到这三个动作每一个都顺手为止。"
+  },
+  "how.s1t": {
+    "en": "Drop",
+    "ru": "Положи",
+    "es": "Coloca",
+    "de": "Ablegen",
+    "fr": "Posez",
+    "pt-BR": "Encaixe",
+    "zh": "放置"
+  },
+  "how.s1d": {
+    "en": "Three pieces at a time. Any of them can go anywhere it fits; nothing rotates, nothing falls.",
+    "ru": "Три фигуры за раз. Любая встаёт куда влезет; ничего не вращается и не падает.",
+    "es": "Tres piezas a la vez. Cualquiera va donde quepa; nada gira, nada cae.",
+    "de": "Drei Steine auf einmal. Jeder passt, wo er passt; nichts dreht sich, nichts fällt.",
+    "fr": "Trois pièces à la fois. Chacune va où elle rentre ; rien ne tourne, rien ne tombe.",
+    "pt-BR": "Três peças por vez. Qualquer uma vai onde couber; nada gira, nada cai.",
+    "zh": "一次三块。哪块放得下就放哪里；不会旋转，也不会下落。"
+  },
+  "how.s2t": {
+    "en": "Clear",
+    "ru": "Очисти",
+    "es": "Limpia",
+    "de": "Abräumen",
+    "fr": "Nettoyez",
+    "pt-BR": "Limpe",
+    "zh": "消除"
+  },
+  "how.s2d": {
+    "en": "Fill a row or a column and it vanishes. Fill both at once and the board tells you so.",
+    "ru": "Заполните строку или столбец — они исчезнут. Заполните оба сразу — доска сама об этом скажет.",
+    "es": "Llena una fila o una columna y desaparece. Llena ambas a la vez y el tablero te lo dice.",
+    "de": "Fülle eine Reihe oder Spalte, und sie verschwindet. Fülle beide zugleich, und das Feld sagt es dir.",
+    "fr": "Remplissez une ligne ou une colonne et elle disparaît. Remplissez les deux d'un coup et le plateau vous le dit.",
+    "pt-BR": "Complete uma linha ou coluna e ela some. Complete as duas de uma vez e o tabuleiro avisa.",
+    "zh": "填满一行或一列，它就消失。同时填满两者，棋盘会告诉你。"
+  },
+  "how.s3t": {
+    "en": "Combo",
+    "ru": "Комбо",
+    "es": "Combo",
+    "de": "Combo",
+    "fr": "Combo",
+    "pt-BR": "Combo",
+    "zh": "连击"
+  },
+  "how.s3d": {
+    "en": "Clear on consecutive drops and the multiplier climbs. One quiet tick warns you when a line is about to go.",
+    "ru": "Очищайте ход за ходом — множитель растёт. Один тихий тик предупреждает, что линия вот-вот уйдёт.",
+    "es": "Limpia en turnos seguidos y el multiplicador sube. Un tic discreto avisa cuando una línea está a punto de irse.",
+    "de": "Räume in aufeinanderfolgenden Zügen ab, und der Multiplikator steigt. Ein leises Ticken warnt, wenn eine Linie gleich fällt.",
+    "fr": "Nettoyez sur des coups consécutifs et le multiplicateur grimpe. Un petit tic prévient quand une ligne est sur le point de partir.",
+    "pt-BR": "Limpe em jogadas seguidas e o multiplicador sobe. Um tique discreto avisa quando uma linha está prestes a sair.",
+    "zh": "连续几步都消除，倍数就往上涨。当一条线即将消失时，会有一声轻轻的提示。"
+  },
+  "themes.eyebrow": {
+    "en": "38 themes",
+    "ru": "38 тем",
+    "es": "38 temas",
+    "de": "38 Themes",
+    "fr": "38 thèmes",
+    "pt-BR": "38 temas",
+    "zh": "38 种主题"
+  },
+  "themes.title": {
+    "en": "Every board wears a palette",
+    "ru": "У каждой доски своя палитра",
+    "es": "Cada tablero viste una paleta",
+    "de": "Jedes Feld trägt eine Palette",
+    "fr": "Chaque plateau porte une palette",
+    "pt-BR": "Cada tabuleiro veste uma paleta",
+    "zh": "每块棋盘都有自己的配色"
+  },
+  "themes.intro": {
+    "en": "Four are yours from install. The rest are earned with stars or come with Premium — and each one changes the sky, the blocks and the way a cleared line lights up.",
+    "ru": "Четыре ваши с установки. Остальные зарабатываются звёздами или приходят с Premium — и каждая меняет небо, блоки и то, как вспыхивает собранная линия.",
+    "es": "Cuatro son tuyos desde la instalación. El resto se ganan con estrellas o vienen con Premium — y cada uno cambia el cielo, los bloques y cómo se ilumina una línea limpiada.",
+    "de": "Vier gehören dir ab Installation. Der Rest wird mit Sternen verdient oder kommt mit Premium — und jedes verändert Himmel, Steine und die Art, wie eine abgeräumte Linie aufleuchtet.",
+    "fr": "Quatre sont à vous dès l'installation. Les autres se gagnent en étoiles ou viennent avec Premium — et chacun change le ciel, les blocs et la façon dont une ligne nettoyée s'allume.",
+    "pt-BR": "Quatro são seus desde a instalação. O resto se ganha com estrelas ou vem com o Premium — e cada um muda o céu, os blocos e o jeito que uma linha limpa acende.",
+    "zh": "四种从安装起就属于你。其余的用星星换取，或随 Premium 一起到来——每一种都会改变天空、方块，以及一条线被消除时点亮的方式。"
+  },
+  "themes.free": {
+    "en": "Free from install",
+    "ru": "Бесплатно с установки",
+    "es": "Gratis desde la instalación",
+    "de": "Kostenlos ab Installation",
+    "fr": "Gratuit dès l'installation",
+    "pt-BR": "Grátis desde a instalação",
+    "zh": "安装即免费"
+  },
+  "themes.tap": {
+    "en": "Tap a theme to dress the board",
+    "ru": "Нажмите на тему — доска переоденется",
+    "es": "Toca un tema para vestir el tablero",
+    "de": "Tippe ein Theme an, um das Feld einzukleiden",
+    "fr": "Touchez un thème pour habiller le plateau",
+    "pt-BR": "Toque em um tema para vestir o tabuleiro",
+    "zh": "点一下主题，给棋盘换装"
+  },
+  "themes.of": {
+    "en": "of",
+    "ru": "из",
+    "es": "de",
+    "de": "von",
+    "fr": "sur",
+    "pt-BR": "de",
+    "zh": "/"
+  },
+  "diff.eyebrow": {
+    "en": "Six difficulty levels",
+    "ru": "Шесть уровней сложности",
+    "es": "Seis niveles de dificultad",
+    "de": "Sechs Schwierigkeitsstufen",
+    "fr": "Six niveaux de difficulté",
+    "pt-BR": "Seis níveis de dificuldade",
+    "zh": "六个难度等级"
+  },
+  "diff.title": {
+    "en": "Pick the length of your game",
+    "ru": "Выберите длину партии",
+    "es": "Elige la duración de tu partida",
+    "de": "Wähle die Länge deiner Partie",
+    "fr": "Choisissez la longueur de votre partie",
+    "pt-BR": "Escolha o tamanho da sua partida",
+    "zh": "选择你这一局的长度"
+  },
+  "diff.intro": {
+    "en": "Only the piece generator changes. Scoring, boards and ranks stay the same on every rung — harder just means the pieces stop helping you.",
+    "ru": "Меняется только генератор фигур. Счёт, доска и ранги одинаковы на каждой ступени — «сложнее» значит лишь, что фигуры перестают вам помогать.",
+    "es": "Solo cambia el generador de piezas. Puntuación, tablero y rangos son iguales en cada escalón — más difícil solo significa que las piezas dejan de ayudarte.",
+    "de": "Nur der Steingenerator ändert sich. Wertung, Feld und Ränge bleiben auf jeder Stufe gleich — schwerer heißt nur, dass die Steine aufhören, dir zu helfen.",
+    "fr": "Seul le générateur de pièces change. Score, plateau et rangs sont identiques à chaque palier — plus dur veut seulement dire que les pièces cessent de vous aider.",
+    "pt-BR": "Só o gerador de peças muda. Pontuação, tabuleiro e patentes são iguais em todo degrau — mais difícil só quer dizer que as peças param de ajudar você.",
+    "zh": "变化的只有出块规则。计分、棋盘和段位在每一级都一样——所谓更难，只是方块不再帮你而已。"
+  },
+  "diff.note": {
+    "en": "Higher rungs pay more stars per point. Easy pays fewer, and never pretends otherwise.",
+    "ru": "Верхние ступени платят больше звёзд за очко. Лёгкая платит меньше и не делает вид, что иначе.",
+    "es": "Los escalones altos pagan más estrellas por punto. Fácil paga menos, y nunca finge lo contrario.",
+    "de": "Höhere Stufen zahlen mehr Sterne pro Punkt. Leicht zahlt weniger und tut nie so, als wäre es anders.",
+    "fr": "Les paliers hauts paient plus d'étoiles par point. Facile en paie moins, et ne prétend jamais le contraire.",
+    "pt-BR": "Os degraus altos pagam mais estrelas por ponto. O Fácil paga menos, e nunca finge o contrário.",
+    "zh": "高难度每分给的星星更多。简单给得少，也从不假装不是这样。"
+  },
+  "road.eyebrow": {
+    "en": "The long game",
+    "ru": "Долгая игра",
+    "es": "El juego largo",
+    "de": "Das lange Spiel",
+    "fr": "Le jeu long",
+    "pt-BR": "O jogo longo",
+    "zh": "长线游戏"
+  },
+  "road.title": {
+    "en": "A road, not a treadmill",
+    "ru": "Дорога, а не беговая дорожка",
+    "es": "Un camino, no una cinta",
+    "de": "Ein Weg, kein Laufband",
+    "fr": "Une route, pas un tapis roulant",
+    "pt-BR": "Uma estrada, não uma esteira",
+    "zh": "一条路，而不是跑步机"
+  },
+  "road.intro": {
+    "en": "Everything below is earned by playing. Nothing here is sold.",
+    "ru": "Всё ниже зарабатывается игрой. Ничего из этого не продаётся.",
+    "es": "Todo lo de abajo se gana jugando. Nada de esto se vende.",
+    "de": "Alles hier unten wird erspielt. Nichts davon wird verkauft.",
+    "fr": "Tout ce qui suit se gagne en jouant. Rien ici n'est à vendre.",
+    "pt-BR": "Tudo abaixo se ganha jogando. Nada disso está à venda.",
+    "zh": "下面的一切都靠玩来获得。这里没有任何东西出售。"
+  },
+  "road.ranksT": {
+    "en": "60 ranks",
+    "ru": "60 рангов",
+    "es": "60 rangos",
+    "de": "60 Ränge",
+    "fr": "60 rangs",
+    "pt-BR": "60 patentes",
+    "zh": "60 个段位"
+  },
+  "road.ranksD": {
+    "en": "Fifteen families of four. Points are your score, weighted by the difficulty you chose.",
+    "ru": "Пятнадцать семейств по четыре ступени. Очки — ваш счёт, взвешенный выбранной сложностью.",
+    "es": "Quince familias de cuatro. Los puntos son tu puntuación, ponderada por la dificultad que elegiste.",
+    "de": "Fünfzehn Familien zu je vier. Punkte sind deine Wertung, gewichtet mit der gewählten Schwierigkeit.",
+    "fr": "Quinze familles de quatre. Les points sont votre score, pondéré par la difficulté choisie.",
+    "pt-BR": "Quinze famílias de quatro. Os pontos são a sua pontuação, ponderada pela dificuldade que você escolheu.",
+    "zh": "十五个家族，每族四阶。积分就是你的得分，按所选难度加权。"
+  },
+  "road.questsT": {
+    "en": "21 achievement chains",
+    "ru": "21 цепочка достижений",
+    "es": "21 cadenas de logros",
+    "de": "21 Erfolgsketten",
+    "fr": "21 chaînes de succès",
+    "pt-BR": "21 cadeias de conquistas",
+    "zh": "21 条成就链"
+  },
+  "road.questsD": {
+    "en": "Five steps each, from the first clear to the ones almost nobody reaches.",
+    "ru": "По пять шагов в каждой: от первой очищенной линии до тех, куда почти никто не доходит.",
+    "es": "Cinco pasos cada una, desde la primera limpieza hasta las que casi nadie alcanza.",
+    "de": "Je fünf Schritte, vom ersten Abräumen bis zu denen, die fast niemand erreicht.",
+    "fr": "Cinq étapes chacune, du premier nettoyage à celles que presque personne n'atteint.",
+    "pt-BR": "Cinco passos cada, da primeira limpeza até as que quase ninguém alcança.",
+    "zh": "每条五步，从第一次消除到几乎没人到达的那些。"
+  },
+  "road.missionsT": {
+    "en": "Daily and weekly missions",
+    "ru": "Ежедневные и недельные задания",
+    "es": "Misiones diarias y semanales",
+    "de": "Tages- und Wochenmissionen",
+    "fr": "Missions quotidiennes et hebdomadaires",
+    "pt-BR": "Missões diárias e semanais",
+    "zh": "每日与每周任务"
+  },
+  "road.missionsD": {
+    "en": "Thirteen daily kinds that scale with your rank, two weekly ones, and a chest for the week you keep at it.",
+    "ru": "Тринадцать видов дневных, растущих с вашим рангом, два недельных и сундук за неделю без пропусков.",
+    "es": "Trece tipos diarios que escalan con tu rango, dos semanales y un cofre por la semana que mantienes.",
+    "de": "Dreizehn tägliche Arten, die mit deinem Rang wachsen, zwei wöchentliche und eine Truhe für die Woche, die du durchhältst.",
+    "fr": "Treize types quotidiens qui montent avec votre rang, deux hebdomadaires et un coffre pour la semaine tenue.",
+    "pt-BR": "Treze tipos diários que crescem com sua patente, dois semanais e um baú pela semana em que você não falha.",
+    "zh": "十三类随段位成长的每日任务、两个每周任务，以及坚持一整周的宝箱。"
+  },
+  "road.families": {
+    "en": "The fifteen families",
+    "ru": "Пятнадцать семейств",
+    "es": "Las quince familias",
+    "de": "Die fünfzehn Familien",
+    "fr": "Les quinze familles",
+    "pt-BR": "As quinze famílias",
+    "zh": "十五个家族"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "vaslix-games-site",
+  "private": true,
+  "description": "vaslixgames.com — the studio site. Static, no dependencies.",
+  "scripts": {
+    "build": "node src/build-site.js",
+    "extract": "node src/extract-game-data.js"
+  }
+}

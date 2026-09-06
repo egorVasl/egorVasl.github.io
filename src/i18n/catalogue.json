@@ -1,0 +1,117 @@
+{
+  "g.blocklix.tagline": {
+    "en": "Drop three pieces, clear the line, keep the combo alive.",
+    "ru": "Кладёшь три фигуры, линия исчезает, комбо не должно оборваться.",
+    "es": "Coloca tres piezas, despeja la línea, mantén vivo el combo.",
+    "de": "Drei Teile legen, die Linie räumen, die Combo am Leben halten.",
+    "fr": "Posez trois pièces, effacez la ligne, gardez le combo en vie.",
+    "pt-BR": "Encaixe três peças, limpe a linha, mantenha o combo vivo.",
+    "zh": "放下三块，消掉一行，别让连击断掉。"
+  },
+  "g.blocklix.chip.1": { "en": "8×8 board", "ru": "Доска 8×8", "es": "Tablero 8×8", "de": "8×8-Feld", "fr": "Plateau 8×8", "pt-BR": "Tabuleiro 8×8", "zh": "8×8 棋盘" },
+  "g.blocklix.chip.2": { "en": "Plays offline", "ru": "Играет офлайн", "es": "Juega sin conexión", "de": "Läuft offline", "fr": "Joue hors ligne", "pt-BR": "Joga offline", "zh": "离线可玩" },
+  "g.blocklix.chip.3": { "en": "No account", "ru": "Без аккаунта", "es": "Sin cuenta", "de": "Ohne Konto", "fr": "Sans compte", "pt-BR": "Sem conta", "zh": "无需账号" },
+  "g.blocklix.playAria": {
+    "en": "Blocklix on Google Play", "ru": "Blocklix в Google Play", "es": "Blocklix en Google Play",
+    "de": "Blocklix bei Google Play", "fr": "Blocklix sur Google Play", "pt-BR": "Blocklix no Google Play", "zh": "在 Google Play 查看 Blocklix"
+  },
+  "g.blocklix.openAria": {
+    "en": "Open the Blocklix page", "ru": "Открыть страницу Blocklix", "es": "Abrir la página de Blocklix",
+    "de": "Die Blocklix-Seite öffnen", "fr": "Ouvrir la page de Blocklix", "pt-BR": "Abrir a página do Blocklix", "zh": "打开 Blocklix 页面"
+  },
+
+  "g.gridlix.tagline": {
+    "en": "One board, one daily puzzle — the same one for everyone.",
+    "ru": "Одна доска, одна ежедневная задача — одна на всех.",
+    "es": "Un tablero, un puzle diario: el mismo para todos.",
+    "de": "Ein Brett, ein Tagesrätsel — für alle dasselbe.",
+    "fr": "Un plateau, un puzzle quotidien — le même pour tous.",
+    "pt-BR": "Um tabuleiro, um desafio diário — o mesmo para todos.",
+    "zh": "一块棋盘，一道每日谜题——全世界同一道。"
+  },
+  "g.gridlix.chip.1": { "en": "4×4 board", "ru": "Доска 4×4", "es": "Tablero 4×4", "de": "4×4-Feld", "fr": "Plateau 4×4", "pt-BR": "Tabuleiro 4×4", "zh": "4×4 棋盘" },
+  "g.gridlix.chip.2": { "en": "Daily + endless", "ru": "Дейли и endless", "es": "Diario + infinito", "de": "Daily + Endlos", "fr": "Quotidien + infini", "pt-BR": "Diário + infinito", "zh": "每日 + 无尽" },
+  "g.gridlix.chip.3": { "en": "Home-screen widget", "ru": "Виджет на экране", "es": "Widget en la pantalla", "de": "Widget für den Startbildschirm", "fr": "Widget d'accueil", "pt-BR": "Widget na tela inicial", "zh": "桌面小组件" },
+  "g.gridlix.playAria": {
+    "en": "Gridlix:2048 on Google Play", "ru": "Gridlix:2048 в Google Play", "es": "Gridlix:2048 en Google Play",
+    "de": "Gridlix:2048 bei Google Play", "fr": "Gridlix:2048 sur Google Play", "pt-BR": "Gridlix:2048 no Google Play", "zh": "在 Google Play 查看 Gridlix:2048"
+  },
+  "g.gridlix.openAria": {
+    "en": "Open the Gridlix:2048 page", "ru": "Открыть страницу Gridlix:2048", "es": "Abrir la página de Gridlix:2048",
+    "de": "Die Gridlix:2048-Seite öffnen", "fr": "Ouvrir la page de Gridlix:2048", "pt-BR": "Abrir a página do Gridlix:2048", "zh": "打开 Gridlix:2048 页面"
+  },
+
+  "g.audio.tagline": {
+    "en": "A listening app with offline downloads and no account to make.",
+    "ru": "Приложение для слушания с офлайн-загрузками и без регистрации.",
+    "es": "Una app para escuchar con descargas sin conexión y sin cuenta que crear.",
+    "de": "Eine Hör-App mit Offline-Downloads und ohne Kontozwang.",
+    "fr": "Une appli d'écoute avec téléchargements hors ligne et sans compte à créer.",
+    "pt-BR": "Um app de escuta com downloads offline e sem conta para criar.",
+    "zh": "一个可离线下载、无需注册的收听应用。"
+  },
+  "g.audio.chip.1": { "en": "Audio", "ru": "Аудио", "es": "Audio", "de": "Audio", "fr": "Audio", "pt-BR": "Áudio", "zh": "音频" },
+  "g.audio.chip.2": { "en": "Offline first", "ru": "Сначала офлайн", "es": "Primero sin conexión", "de": "Offline zuerst", "fr": "Hors ligne d'abord", "pt-BR": "Offline em primeiro lugar", "zh": "离线优先" },
+  "g.audio.when": {
+    "en": "Next on the bench", "ru": "Следующее в работе", "es": "Lo siguiente en el banco",
+    "de": "Als Nächstes auf der Werkbank", "fr": "Prochain sur l'établi", "pt-BR": "Próximo na bancada", "zh": "下一个开工"
+  },
+
+  "g.words.tagline": {
+    "en": "A word puzzle, still on paper. Same shape: small, quiet, offline.",
+    "ru": "Словесная головоломка, пока на бумаге. Та же форма: маленькая, тихая, офлайн.",
+    "es": "Un puzle de palabras, aún sobre el papel. La misma forma: pequeño, silencioso, sin conexión.",
+    "de": "Ein Worträtsel, noch auf dem Papier. Dieselbe Form: klein, leise, offline.",
+    "fr": "Un puzzle de mots, encore sur le papier. Même forme : petit, silencieux, hors ligne.",
+    "pt-BR": "Um quebra-cabeça de palavras, ainda no papel. Mesma forma: pequeno, silencioso, offline.",
+    "zh": "一款文字益智游戏，仍停留在纸上。同样的形态：小、安静、离线。"
+  },
+  "g.words.chip.1": { "en": "Word puzzle", "ru": "Слова", "es": "Palabras", "de": "Worträtsel", "fr": "Mots", "pt-BR": "Palavras", "zh": "文字游戏" },
+  "g.words.chip.2": { "en": "Prototype", "ru": "Прототип", "es": "Prototipo", "de": "Prototyp", "fr": "Prototype", "pt-BR": "Protótipo", "zh": "原型" },
+  "g.words.when": {
+    "en": "After the audio app", "ru": "После аудио-приложения", "es": "Después de la app de audio",
+    "de": "Nach der Audio-App", "fr": "Après l'appli audio", "pt-BR": "Depois do app de áudio", "zh": "音频应用之后"
+  },
+
+  "press.lede": {
+    "en": "Everything a writer needs, in one place and free to use.",
+    "ru": "Всё, что нужно журналисту, — в одном месте и без ограничений на использование.",
+    "es": "Todo lo que necesita quien escribe, en un solo sitio y libre de usar.",
+    "de": "Alles, was die Presse braucht, an einem Ort und frei verwendbar.",
+    "fr": "Tout ce qu'il faut à la presse, au même endroit et libre d'usage.",
+    "pt-BR": "Tudo o que a imprensa precisa, em um só lugar e livre para usar.",
+    "zh": "撰稿人需要的一切，集中一处，可自由使用。"
+  },
+  "press.factsEyebrow": { "en": "Fact sheet", "ru": "Лист фактов", "es": "Ficha de datos", "de": "Faktenblatt", "fr": "Fiche technique", "pt-BR": "Ficha técnica", "zh": "事实清单" },
+  "press.factsTitle": {
+    "en": "The numbers, already checked", "ru": "Цифры, уже проверенные", "es": "Las cifras, ya comprobadas",
+    "de": "Die Zahlen, bereits geprüft", "fr": "Les chiffres, déjà vérifiés", "pt-BR": "Os números, já conferidos", "zh": "已核对的数字"
+  },
+  "press.fact.studio": { "en": "Studio", "ru": "Студия", "es": "Estudio", "de": "Studio", "fr": "Studio", "pt-BR": "Estúdio", "zh": "工作室" },
+  "press.fact.founded": { "en": "Founded", "ru": "Основана", "es": "Fundado", "de": "Gegründet", "fr": "Fondé", "pt-BR": "Fundado", "zh": "成立" },
+  "press.fact.people": { "en": "Team", "ru": "Команда", "es": "Equipo", "de": "Team", "fr": "Équipe", "pt-BR": "Equipe", "zh": "团队" },
+  "press.fact.platform": { "en": "Platform", "ru": "Платформа", "es": "Plataforma", "de": "Plattform", "fr": "Plateforme", "pt-BR": "Plataforma", "zh": "平台" },
+  "press.fact.titles": { "en": "Titles", "ru": "Игры", "es": "Títulos", "de": "Titel", "fr": "Titres", "pt-BR": "Títulos", "zh": "作品" },
+  "press.fact.langs": { "en": "Languages", "ru": "Языки", "es": "Idiomas", "de": "Sprachen", "fr": "Langues", "pt-BR": "Idiomas", "zh": "语言" },
+  "press.fact.money": { "en": "Business model", "ru": "Модель", "es": "Modelo de negocio", "de": "Geschäftsmodell", "fr": "Modèle économique", "pt-BR": "Modelo de negócio", "zh": "商业模式" },
+  "press.fact.money.v": {
+    "en": "Free with ads · optional Premium through Google Play Billing",
+    "ru": "Бесплатно с рекламой · Premium по желанию через Google Play Billing",
+    "es": "Gratis con anuncios · Premium opcional mediante Google Play Billing",
+    "de": "Kostenlos mit Werbung · optionales Premium über Google Play Billing",
+    "fr": "Gratuit avec publicités · Premium optionnel via Google Play Billing",
+    "pt-BR": "Grátis com anúncios · Premium opcional via Google Play Billing",
+    "zh": "免费含广告 · 可选 Premium，通过 Google Play 结算"
+  },
+  "press.fact.contact": { "en": "Contact", "ru": "Контакт", "es": "Contacto", "de": "Kontakt", "fr": "Contact", "pt-BR": "Contato", "zh": "联系方式" },
+  "press.assetsEyebrow": { "en": "Downloads", "ru": "Файлы", "es": "Descargas", "de": "Downloads", "fr": "Téléchargements", "pt-BR": "Downloads", "zh": "下载" },
+  "press.assetsIntro": {
+    "en": "Icons and the logo exactly as they ship. Use them as they are — please do not recolour or crop them.",
+    "ru": "Иконки и логотип ровно в том виде, в каком они в сторе. Используйте как есть — пожалуйста, не перекрашивайте и не обрезайте.",
+    "es": "Iconos y logotipo tal como se publican. Úsalos tal cual: por favor, no los recolorees ni los recortes.",
+    "de": "Icons und Logo genau so, wie sie ausgeliefert werden. Bitte unverändert verwenden — nicht umfärben, nicht beschneiden.",
+    "fr": "Icônes et logo tels qu'ils sont publiés. À utiliser tels quels : merci de ne pas les recolorer ni les recadrer.",
+    "pt-BR": "Ícones e logotipo exatamente como são publicados. Use como estão — por favor, não recolora nem recorte.",
+    "zh": "图标与标志与上架版本一致。请原样使用，不要改色或裁切。"
+  }
+}
