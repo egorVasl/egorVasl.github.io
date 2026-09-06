@@ -86,7 +86,7 @@ button { font: inherit; color: inherit; }
    border-radius of its own on purpose — an outline follows the element's own
    corners, and forcing a radius here is what turned a pill into a square. */
 :focus-visible { outline: 2px solid rgba(255,255,255,.95); outline-offset: 3px; }
-.has-ring :focus-visible, .has-ring :focus-visible:focus { outline: none; }
+.has-press :focus-visible, .has-press :focus-visible:focus { outline: none; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .skip {
   position: fixed; top: 8px; left: 8px; z-index: 90; padding: 10px 16px; border-radius: 10px;
@@ -96,55 +96,46 @@ button { font: inherit; color: inherit; }
 .skip:focus { transform: none; }
 @view-transition { navigation: auto; }
 
-/* ── the press ring ────────────────────────────────────────────────────────
-   Press or tab onto anything and it lights along its own edge. One layer
-   above the page copies the target's box and each of its four corners, so a
-   pill lights as a pill, a card as a card and a round toggle as a circle —
-   never as the browser's blue rectangle. White, sandwiched in a hairline of
-   ink so it still reads on a near-white page, with one bright arc running
-   around the shape. */
-@property --ring-a { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
-
-.press-ring {
+/* ── the press fill ───────────────────────────────────────────────────────
+   Press or tab onto anything and the thing itself lights up. One layer above
+   the page takes the target's box and its four corners exactly, so the light
+   fills a pill as a pill and a card as a card — no rectangle, no outline. A
+   wash keyed to the page's ink marks the press on any surface, light or dark,
+   and a white sheen runs across it, the same light the buttons already carry
+   on hover. */
+.press-fill {
   position: fixed; left: 0; top: 0; z-index: 120; pointer-events: none;
   width: var(--rw, 0px); height: var(--rh, 0px);
   translate: var(--rx, 0px) var(--ry, 0px);
-  border-radius: var(--c1, 8px) var(--c2, 8px) var(--c3, 8px) var(--c4, 8px);
-  opacity: 0; scale: 1.06;
-  transition: opacity 150ms var(--ease-out), scale 280ms var(--ease-spring);
+  border-radius: var(--c1, 0) var(--c2, 0) var(--c3, 0) var(--c4, 0);
+  overflow: hidden;          /* the sheen is cut to the shape, nothing spills */
+  opacity: 0;
+  transition: opacity 200ms var(--ease-out);
 }
-.press-ring.on { opacity: 1; scale: 1; }
-/* A press is a shorter, tighter version of the same light. */
-.press-ring.press { transition-duration: 90ms, 180ms; }
-.press-ring.press.on { scale: .995; }
+.press-fill.on { opacity: 1; }
+.press-fill.press { transition-duration: 70ms; }
 
-.press-ring::before, .press-ring::after, .press-ring > i {
-  content: ""; position: absolute; border-radius: inherit;
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor; mask-composite: exclude;
+/* The wash: the page's own ink at a whisper, so it darkens a white button and
+   lightens a dark one without ever picking a colour of its own. */
+.press-fill::before {
+  content: ""; position: absolute; inset: 0;
+  background: color-mix(in srgb, var(--tx) 18%, transparent);
 }
-/* the ink hairline, showing a little on both sides of the white */
-.press-ring::before { inset: 0; padding: 4px; background: rgba(23, 27, 48, .26); }
-/* the white core */
-.press-ring::after {
-  inset: 1px; padding: 2px; background: rgba(255, 255, 255, .82);
-  filter: drop-shadow(0 0 7px rgba(255, 255, 255, .5));
+/* The sheen: one white band crossing the face, over and over while held. */
+.press-fill > i {
+  position: absolute; inset: -30% -70%;
+  background: linear-gradient(105deg,
+    transparent 30%, rgba(255,255,255,.34) 42%, rgba(255,255,255,.95) 50%, rgba(255,255,255,.34) 58%, transparent 70%);
+  animation: press-sheen 1.4s var(--ease-out) infinite;
 }
-/* the shimmer, on the same band */
-.press-ring > i {
-  inset: 1px; padding: 2px;
-  background: conic-gradient(from var(--ring-a),
-    transparent 0 26%, rgba(255,255,255,.9) 40%, #fff 46% 50%, rgba(255,255,255,.9) 56%, transparent 70% 100%);
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, .9));
-  animation: ring-shimmer 1.5s linear infinite;
+.press-fill.press > i { animation-duration: .75s; }
+@keyframes press-sheen {
+  from { transform: translateX(-62%); }
+  to   { transform: translateX(62%); }
 }
-.press-ring.press > i { animation-duration: .8s; }
-@keyframes ring-shimmer { to { --ring-a: 360deg; } }
 @media (prefers-reduced-motion: reduce) {
-  .press-ring { transition: opacity 100ms linear; scale: 1; }
-  .press-ring > i { animation: none; }
-  .press-ring::after { background: rgba(255, 255, 255, .96); }
+  .press-fill { transition: opacity 100ms linear; }
+  .press-fill > i { animation: none; transform: none; opacity: .5; }
 }
 
 /* ── type ──────────────────────────────────────────────────────────────── */

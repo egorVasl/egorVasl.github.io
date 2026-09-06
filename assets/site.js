@@ -1198,51 +1198,47 @@
   }
 
   /**
-   * Press and focus, drawn as one ring.
+   * Press and focus, drawn as one fill.
    *
    * The browser's own highlight is a rectangle in its own blue, and it knows
    * nothing about a pill, a circle or a card. This copies the target's box and
    * each of its four corners onto a single layer above the page, so the light
-   * traces the shape of the thing that was actually pressed. It follows the
-   * target while it is lit, which matters here: a button sinks when pressed
-   * and leans toward the cursor, and the ring has to go with it.
+   * fills the shape of the thing that was actually pressed — no outline, just
+   * the face lighting up. It follows the target while it is lit, which matters
+   * here: a button sinks when pressed and leans toward the cursor, and the
+   * light has to go with it.
    */
-  function initPressRing() {
+  function initPressFill() {
     const SEL = 'a[href], button, summary, [role="button"], [role="listbox"] li, ' +
                 '.panel, input, select, textarea';
-    const PAD = 3;
 
-    const ring = document.createElement('div');
-    ring.className = 'press-ring';
-    ring.setAttribute('aria-hidden', 'true');
-    ring.appendChild(document.createElement('i'));
-    document.body.appendChild(ring);
-    // Tells the stylesheet the ring is live, so the fallback outline stands down.
-    document.documentElement.classList.add('has-ring');
+    const fill = document.createElement('div');
+    fill.className = 'press-fill';
+    fill.setAttribute('aria-hidden', 'true');
+    fill.appendChild(document.createElement('i'));
+    document.body.appendChild(fill);
+    // Tells the stylesheet the layer is live, so the fallback outline stands down.
+    document.documentElement.classList.add('has-press');
 
     let target = null, held = false, raf = 0;
 
-    /** A corner of the ring is the target's corner plus the gap it sits out at. */
-    const grow = (v) => String(v).split(' ')
-      .map((part) => (part.endsWith('px') ? (parseFloat(part) + PAD).toFixed(1) + 'px' : part))
-      .join(' ');
-
+    /** The fill sits exactly on the target, so it takes its corners as they are. */
     function corners(el) {
       const cs = getComputedStyle(el);
-      ring.style.setProperty('--c1', grow(cs.borderTopLeftRadius));
-      ring.style.setProperty('--c2', grow(cs.borderTopRightRadius));
-      ring.style.setProperty('--c3', grow(cs.borderBottomRightRadius));
-      ring.style.setProperty('--c4', grow(cs.borderBottomLeftRadius));
+      fill.style.setProperty('--c1', cs.borderTopLeftRadius);
+      fill.style.setProperty('--c2', cs.borderTopRightRadius);
+      fill.style.setProperty('--c3', cs.borderBottomRightRadius);
+      fill.style.setProperty('--c4', cs.borderBottomLeftRadius);
     }
 
     function place() {
       if (!target) return;
       const r = target.getBoundingClientRect();
       if (!r.width && !r.height) { hide(); return; }
-      ring.style.setProperty('--rx', (r.left - PAD).toFixed(1) + 'px');
-      ring.style.setProperty('--ry', (r.top - PAD).toFixed(1) + 'px');
-      ring.style.setProperty('--rw', (r.width + PAD * 2).toFixed(1) + 'px');
-      ring.style.setProperty('--rh', (r.height + PAD * 2).toFixed(1) + 'px');
+      fill.style.setProperty('--rx', r.left.toFixed(1) + 'px');
+      fill.style.setProperty('--ry', r.top.toFixed(1) + 'px');
+      fill.style.setProperty('--rw', r.width.toFixed(1) + 'px');
+      fill.style.setProperty('--rh', r.height.toFixed(1) + 'px');
     }
 
     function follow() {
@@ -1253,18 +1249,18 @@
 
     function show(el, pressed) {
       target = el;
-      ring.classList.toggle('press', !!pressed);
+      fill.classList.toggle('press', !!pressed);
       corners(el);
       place();
-      // The lit class lands a frame later, so the scale has something to run from.
-      requestAnimationFrame(() => { if (target === el) ring.classList.add('on'); });
+      // The lit class lands a frame later, so the fade has something to run from.
+      requestAnimationFrame(() => { if (target === el) fill.classList.add('on'); });
       if (!raf) raf = requestAnimationFrame(follow);
     }
 
     function hide() {
       target = null;
       held = false;
-      ring.classList.remove('on');
+      fill.classList.remove('on');
       if (raf) { cancelAnimationFrame(raf); raf = 0; }
     }
 
@@ -1283,8 +1279,8 @@
 
     const release = () => {
       held = false;
-      // A keyboard ring outlives the pointer; a press does not.
-      if (ring.classList.contains('press')) hide();
+      // A keyboard light outlives the pointer; a press does not.
+      if (fill.classList.contains('press')) hide();
     };
     addEventListener('pointerup', release, true);
     addEventListener('pointercancel', release, true);
@@ -1300,10 +1296,10 @@
     document.addEventListener('focusout', () => { if (!held) hide(); });
 
     // Scrolling ends a press — the finger was going somewhere else. A keyboard
-    // ring just keeps up with its target.
+    // light just keeps up with its target.
     addEventListener('scroll', () => {
       if (!target) return;
-      if (ring.classList.contains('press')) hide(); else place();
+      if (fill.classList.contains('press')) hide(); else place();
     }, { passive: true, capture: true });
     addEventListener('resize', place);
   }
@@ -1313,7 +1309,7 @@
     initLang();
     initTheme();
     initMenu();
-    initPressRing();
+    initPressFill();
     initProgress();
     initReveal();
     initCounters();
